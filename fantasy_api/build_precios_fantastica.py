@@ -34,6 +34,7 @@ Uso:
 import difflib
 import glob
 import json
+import math
 import os
 import re
 import sys
@@ -135,6 +136,14 @@ def normalize_tokens(name: str) -> list[str]:
         tok = tok.rstrip(".")
         tokens.append(SURNAME_ABBREVIATIONS.get(tok, tok))
     return tokens
+
+
+def round_price(value: float) -> int:
+    """Los precios Fantástica son siempre enteros. Un puñado de celdas del Excel
+    quedaron con la media sin redondear de varios votos (p.ej. 20.428571... = 143/7):
+    parece el resultado de una fórmula de promedio a la que nunca se le aplicó ROUND()
+    antes de convertirla a valor. Redondeo normal (mitad hacia arriba, no bancario)."""
+    return math.floor(value + 0.5)
 
 
 def token_score(e_tokens: list[str], c_tokens: list[str]) -> float:
@@ -252,7 +261,7 @@ def main() -> None:
 
     price_by_id, unmatched = match_records(records, players)
 
-    output = {str(pid): round(price, 2) for pid, price in sorted(price_by_id.items())}
+    output = {str(pid): round_price(price) for pid, price in sorted(price_by_id.items())}
 
     out_path = os.path.join(DATA_DIR, "precios_fantastica.json")
     with open(out_path, "w", encoding="utf-8") as f:
