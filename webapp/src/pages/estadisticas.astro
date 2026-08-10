@@ -142,7 +142,7 @@ const sections = [
     <p class="mt-1 text-sm text-slate-400">Basado en el catálogo completo de {summaries.length} jugadores</p>
   </div>
 
-  <nav aria-label="Secciones" class="mb-6 -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 lg:hidden">
+  <nav id="stats-mobile-nav" aria-label="Secciones" class="mb-6 -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 lg:hidden">
     {
       sections.map((s) => (
         <a
@@ -381,9 +381,15 @@ const sections = [
       link.classList.toggle("text-emerald-400", isActive);
       link.classList.toggle(baseClass, !isActive);
     }
-    // el pill activo del nav móvil se desplaza a la vista
-    const mobileActive = document.querySelector<HTMLElement>(`[data-stats-nav-link][data-section="${id}"]`);
-    mobileActive?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    // Centrar el pill activo dentro del nav móvil, sin tocar el scroll vertical
+    // de la página: scrollIntoView con block:"nearest" arrastraba la página entera
+    // hacia arriba en cuanto el nav (que no es sticky) quedaba fuera de vista.
+    const mobileNav = document.getElementById("stats-mobile-nav");
+    const mobileActive = mobileNav?.querySelector<HTMLElement>(`[data-section="${id}"]`);
+    if (mobileNav && mobileActive) {
+      const target = mobileActive.offsetLeft - mobileNav.clientWidth / 2 + mobileActive.clientWidth / 2;
+      mobileNav.scrollTo({ left: target, behavior: "smooth" });
+    }
   }
 
   // Arriba del todo no hay scroll aún que dispare el observer, así que se marca
