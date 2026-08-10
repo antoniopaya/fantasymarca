@@ -9,6 +9,7 @@ import ScatterPlot from "../components/charts/ScatterPlot.astro";
 import {
   getAllPlayerSummaries,
   getTeams,
+  getNextGameweek,
   formatMoney,
   playerPhotoUrl,
   teamLogoUrl,
@@ -32,31 +33,51 @@ const topLastSeason = byLastSeason.slice(0, 10);
 const maxLastSeasonPoints = topLastSeason[0]?.lastSeason?.points ?? 1;
 const lastSeasonLabel = topLastSeason[0]?.lastSeason?.season ?? "";
 
-const scatterPoints = byLastSeason
-  .filter((s) => (s.lastSeason?.points ?? 0) > 0)
+const currentSeasonLabel = getNextGameweek().season ?? "26/27";
+const scatterSeasons = [
+  { key: "lastSeason", label: `Temporada ${lastSeasonLabel}` },
+  { key: "current", label: `Temporada actual (${currentSeasonLabel})` },
+];
+
+// Solo jugadores con precio Fantástica: es el precio que de verdad usamos, el de
+// mercado ya se muestra en su propia sección.
+const scatterPlayers = summaries
+  .filter((s) => s.precioFantastica !== null)
   .map((s) => ({
-    x: s.lastSeason?.points ?? 0,
-    y: Math.round((s.value / 1_000_000) * 100) / 100,
-    label: s.name,
+    id: s.id,
+    name: s.name,
+    teamName: s.team_name,
+    photoUrl: playerPhotoUrl(s.id),
+    position: s.position,
+    price: Math.round(((s.precioFantastica as number) / 1_000_000) * 100) / 100,
+    pointsBySeason: {
+      current: s.points,
+      lastSeason: s.lastSeason?.points ?? null,
+    },
     href: url(`/jugadores/${s.id}`),
   }));
 
 // --- Posiciones ---
+// El nº de jugadores por posición cuenta el catálogo entero (no depende del precio);
+// el precio medio solo puede salir de los que sí tienen precio Fantástica.
 const positionStats = ([1, 2, 3, 4] as const).map((position) => {
   const group = summaries.filter((s) => s.position === position);
-  const totalValue = group.reduce((sum, s) => sum + s.value, 0);
+  const priced = group.filter((s) => s.precioFantastica !== null);
+  const totalFantastica = priced.reduce((sum, s) => sum + (s.precioFantastica as number), 0);
   return {
     position,
     count: group.length,
-    avgValue: group.length ? totalValue / group.length : 0,
+    avgFantastica: priced.length ? totalFantastica / priced.length : 0,
     color: POSITION_COLORS[position],
   };
 });
 
-// --- Valor ---
-const byValue = [...summaries].sort((a, b) => b.value - a.value);
-const topValue = byValue.slice(0, 10);
-const maxValue = topValue[0]?.value ?? 1;
+// --- Precio Fantástica ---
+const byFantastica = summaries
+  .filter((s) => s.precioFantastica !== null)
+  .sort((a, b) => (b.precioFantastica as number) - (a.precioFantastica as number));
+const topFantastica = byFantastica.slice(0, 10);
+const maxFantastica = topFantastica[0]?.precioFantastica ?? 1;
 
 const byClause = [...summaries].sort((a, b) => b.clauseValue - a.clauseValue);
 const topClause = byClause.slice(0, 10);
@@ -74,34 +95,38 @@ const fallers = summaries
   .slice(0, 6);
 const maxFall = Math.abs(fallers[0]?.weeklyChange ?? -1);
 
-const valueBuckets = [
-  { label: "<5M", min: 0, max: 5_000_000 },
-  { label: "5-10M", min: 5_000_000, max: 10_000_000 },
-  { label: "10-20M", min: 10_000_000, max: 20_000_000 },
-  { label: "20-40M", min: 20_000_000, max: 40_000_000 },
-  { label: "40-60M", min: 40_000_000, max: 60_000_000 },
-  { label: "60M+", min: 60_000_000, max: Infinity },
+const pricedSummaries = summaries.filter((s) => s.precioFantastica !== null);
+const fantasticaBuckets = [
+  { label: "<12M", min: 0, max: 12_000_000 },
+  { label: "12-15M", min: 12_000_000, max: 15_000_000 },
+  { label: "15-18M", min: 15_000_000, max: 18_000_000 },
+  { label: "18-21M", min: 18_000_000, max: 21_000_000 },
+  { label: "21-24M", min: 21_000_000, max: 24_000_000 },
+  { label: "24M+", min: 24_000_000, max: Infinity },
 ].map((bucket) => ({
   label: bucket.label,
-  count: summaries.filter((s) => s.value >= bucket.min && s.value < bucket.max).length,
+  count: pricedSummaries.filter((s) => (s.precioFantastica as number) >= bucket.min && (s.precioFantastica as number) < bucket.max)
+    .length,
 }));
 
 const teamTotals = teams
   .map((team) => {
     const squad = summaries.filter((s) => s.id_team === team.id);
-    const totalValue = squad.reduce((sum, s) => sum + s.value, 0);
-    const avgValue = squad.length ? totalValue / squad.length : 0;
-    return { team, totalValue, avgValue, count: squad.length };
+    const priced = squad.filter((s) => s.precioFantastica !== null);
+    const totalFantastica = priced.reduce((sum, s) => sum + (s.precioFantastica as number), 0);
+    const avgFantastica = priced.length ? totalFantastica / priced.length : 0;
+    return { team, totalFantastica, avgFantastica, count: squad.length };
   })
-  .sort((a, b) => b.totalValue - a.totalValue);
-const maxTeamValue = teamTotals[0]?.totalValue ?? 1;
+  .sort((a, b) => b.totalFantastica - a.totalFantastica);
+const maxTeamFantastica = teamTotals[0]?.totalFantastica ?? 1;
 
 // Índice de la sidebar: mismo id/orden que las secciones de más abajo.
+// El gráfico precio-vs-puntos va primero: es el más útil para decidir fichajes.
 const sections = [
+  { id: "valor-vs-puntos", label: "Precio vs. puntos" },
   { id: "puntos", label: "Puntos" },
-  { id: "valor-vs-puntos", label: "Valor vs. puntos" },
   { id: "posiciones", label: "Posiciones" },
-  { id: "distribucion-valor", label: "Distribución de valor" },
+  { id: "distribucion-valor", label: "Distribución de precios" },
   { id: "mas-valiosos", label: "Más valiosos" },
   { id: "clausulas", label: "Cláusulas" },
   { id: "subidas", label: "Subidas de valor" },
@@ -111,7 +136,7 @@ const sections = [
 ];
 ---
 
-<Layout title="Estadísticas" description="Puntos, valor de mercado, cláusulas y rankings en Fantasy Marca">
+<Layout title="Estadísticas" description="Puntos, precio Fantástica, valor de mercado y cláusulas en Fantasy Marca">
   <div class="mb-8">
     <h1 class="text-3xl font-black text-white">Estadísticas y análisis</h1>
     <p class="mt-1 text-sm text-slate-400">Basado en el catálogo completo de {summaries.length} jugadores</p>
@@ -153,6 +178,20 @@ const sections = [
     </nav>
 
     <div class="min-w-0">
+      <section id="valor-vs-puntos" class="mb-10 scroll-mt-24">
+        <h2 class="mb-4 text-xl font-bold text-white">Precio Fantástica vs. puntos</h2>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+          <ScatterPlot
+            players={scatterPlayers}
+            seasons={scatterSeasons}
+            defaultSeasonKey="lastSeason"
+            yLabel="Precio Fantástica (M€)"
+            positionColors={POSITION_COLORS}
+            positionNames={POSITION_NAMES}
+          />
+        </div>
+      </section>
+
       <section id="puntos" class="mb-10 scroll-mt-24">
         <h2 class="mb-4 text-xl font-bold text-white">Mejores de la {lastSeasonLabel} (puntos)</h2>
         <p class="mb-4 text-sm text-slate-500">
@@ -172,13 +211,6 @@ const sections = [
         />
       </section>
 
-      <section id="valor-vs-puntos" class="mb-10 scroll-mt-24">
-        <h2 class="mb-4 text-xl font-bold text-white">Valor de mercado vs. puntos ({lastSeasonLabel})</h2>
-        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
-          <ScatterPlot points={scatterPoints} xLabel="Puntos temporada anterior" yLabel="Valor (M€)" />
-        </div>
-      </section>
-
       <section id="posiciones" class="mb-10 scroll-mt-24">
         <h2 class="mb-4 text-xl font-bold text-white">Distribución por posición</h2>
         <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -191,14 +223,14 @@ const sections = [
             />
           </div>
           <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-            <p class="mb-4 text-sm font-medium text-slate-400">Valor medio por posición</p>
+            <p class="mb-4 text-sm font-medium text-slate-400">Precio Fantástica medio por posición</p>
             <CategoryBarChart
-              title="Valor medio por posición"
+              title="Precio Fantástica medio por posición"
               bars={positionStats.map((s) => ({
                 label: POSITION_NAMES[s.position].slice(0, 3).toUpperCase(),
-                value: s.avgValue,
+                value: s.avgFantastica,
                 color: s.color,
-                valueLabel: formatMoney(s.avgValue),
+                valueLabel: formatMoney(s.avgFantastica),
               }))}
             />
           </div>
@@ -206,22 +238,22 @@ const sections = [
       </section>
 
       <section id="distribucion-valor" class="mb-10 scroll-mt-24">
-        <h2 class="mb-4 text-xl font-bold text-white">Distribución de valores de mercado</h2>
+        <h2 class="mb-4 text-xl font-bold text-white">Distribución de precios Fantástica</h2>
         <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
-          <Histogram buckets={valueBuckets} title="Distribución de valores de mercado" />
+          <Histogram buckets={fantasticaBuckets} title="Distribución de precios Fantástica" />
         </div>
       </section>
 
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
         <section id="mas-valiosos" class="scroll-mt-24">
-          <h2 class="mb-4 text-xl font-bold text-white">Jugadores más valiosos</h2>
+          <h2 class="mb-4 text-xl font-bold text-white">Mayor precio Fantástica</h2>
           <RankingList
-            items={topValue.map((p) => ({
+            items={topFantastica.map((p) => ({
               key: p.id,
               label: p.name,
               sublabel: p.team_name,
-              valueLabel: formatMoney(p.value),
-              barPercent: pct(p.value, maxValue),
+              valueLabel: formatMoney(p.precioFantastica as number),
+              barPercent: pct(p.precioFantastica as number, maxFantastica),
               href: url(`/jugadores/${p.id}`),
               imageUrl: playerPhotoUrl(p.id),
             }))}
@@ -293,7 +325,7 @@ const sections = [
       </div>
 
       <section id="equipos" class="mt-10 scroll-mt-24">
-        <h2 class="mb-4 text-xl font-bold text-white">Valor total de plantilla por equipo</h2>
+        <h2 class="mb-4 text-xl font-bold text-white">Precio Fantástica total de plantilla por equipo</h2>
         <div class="space-y-2">
           {
             teamTotals.map((t, index) => (
@@ -303,13 +335,13 @@ const sections = [
                 <div class="min-w-0 flex-1">
                   <div class="flex items-center justify-between gap-2">
                     <p class="truncate text-sm font-medium text-white">{t.team.name}</p>
-                    <p class="shrink-0 text-sm font-bold text-white">{formatMoney(t.totalValue)}</p>
+                    <p class="shrink-0 text-sm font-bold text-white">{formatMoney(t.totalFantastica)}</p>
                   </div>
                   <p class="text-xs text-slate-500">
-                    {t.count} jugadores · media {formatMoney(t.avgValue)}
+                    {t.count} jugadores · media {formatMoney(t.avgFantastica)}
                   </p>
                   <div class="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-800">
-                    <div class="h-full rounded-full bg-emerald-500" style={`width:${Math.max(pct(t.totalValue, maxTeamValue), 3)}%`} />
+                    <div class="h-full rounded-full bg-emerald-500" style={`width:${Math.max(pct(t.totalFantastica, maxTeamFantastica), 3)}%`} />
                   </div>
                 </div>
               </div>

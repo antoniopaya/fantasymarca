@@ -1,100 +1,263 @@
 ---
-interface Point {
-  x: number;
-  y: number;
+interface ScatterPlayer {
+  id: number;
+  name: string;
+  teamName: string;
+  photoUrl: string;
+  position: number;
+  price: number;
+  pointsBySeason: Record<string, number | null>;
+  href: string;
+}
+
+interface Season {
+  key: string;
   label: string;
-  href?: string;
 }
 
 interface Props {
-  points: Point[];
-  xLabel: string;
+  players: ScatterPlayer[];
+  seasons: Season[];
+  defaultSeasonKey: string;
   yLabel: string;
-  color?: string;
+  positionColors: Record<number, string>;
+  positionNames: Record<number, string>;
 }
 
-const { points, xLabel, yLabel, color = "#10b981" } = Astro.props;
+const { players, seasons, defaultSeasonKey, yLabel, positionColors, positionNames } = Astro.props;
 
-const width = 560;
-const height = 320;
-const padding = { top: 16, right: 16, bottom: 36, left: 44 };
-const plotWidth = width - padding.left - padding.right;
-const plotHeight = height - padding.top - padding.bottom;
-
-const maxX = Math.max(...points.map((p) => p.x), 1);
-const maxY = Math.max(...points.map((p) => p.y), 1);
-
-function niceMax(value: number): number {
-  const magnitude = 10 ** Math.floor(Math.log10(value || 1));
-  return Math.ceil(value / magnitude) * magnitude;
-}
-
-const xMax = niceMax(maxX);
-const yMax = niceMax(maxY);
-
-function scaleX(x: number): number {
-  return padding.left + (x / xMax) * plotWidth;
-}
-function scaleY(y: number): number {
-  return padding.top + plotHeight - (y / yMax) * plotHeight;
-}
-
-const yTicks = [0, 0.25, 0.5, 0.75, 1].map((f) => Math.round(yMax * f));
-const xTicks = [0, 0.25, 0.5, 0.75, 1].map((f) => Math.round(xMax * f));
+const width = 900;
+const height = 520;
+const padding = { top: 16, right: 16, bottom: 40, left: 48 };
 ---
 
-<svg viewBox={`0 0 ${width} ${height}`} width="100%" height={height} role="img" aria-label={`${yLabel} frente a ${xLabel}`}>
-  {
-    yTicks.map((t) => (
-      <g>
-        <line x1={padding.left} y1={scaleY(t)} x2={width - padding.right} y2={scaleY(t)} stroke="#2c2c2a" stroke-width="1" />
-        <text x={padding.left - 8} y={scaleY(t) + 3} text-anchor="end" class="fill-slate-500" font-size="9">
-          {t}
-        </text>
-      </g>
-    ))
-  }
-  {
-    xTicks.map((t) => (
-      <text x={scaleX(t)} y={height - padding.bottom + 16} text-anchor="middle" class="fill-slate-500" font-size="9">
-        {t}
-      </text>
-    ))
-  }
-  <line
-    x1={padding.left}
-    y1={height - padding.bottom}
-    x2={width - padding.right}
-    y2={height - padding.bottom}
-    stroke="#383835"
-    stroke-width="1"
-  />
-  <text x={width / 2} y={height - 4} text-anchor="middle" class="fill-slate-500" font-size="10">
-    {xLabel}
-  </text>
-  <text
-    x={-(height / 2)}
-    y="12"
-    text-anchor="middle"
-    transform="rotate(-90)"
-    class="fill-slate-500"
-    font-size="10"
-  >
-    {yLabel}
-  </text>
+<div class="space-y-3">
+  <div class="flex flex-wrap items-center justify-between gap-3">
+    <div class="flex flex-wrap items-center gap-4">
+      {
+        Object.entries(positionNames).map(([position, name]) => (
+          <button
+            type="button"
+            data-legend-toggle
+            data-position={position}
+            class="legend-toggle flex items-center gap-1.5 rounded-full px-1.5 py-1 text-xs text-slate-400 transition-colors hover:bg-white/5"
+          >
+            <span
+              class="legend-dot h-2.5 w-2.5 shrink-0 rounded-full transition-opacity"
+              style={`background-color:${positionColors[Number(position)]}`}
+            />
+            {name}
+          </button>
+        ))
+      }
+    </div>
+    <select
+      id="scatter-season"
+      class="rounded-lg border border-white/10 bg-slate-950/60 px-3 py-1.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
+    >
+      {seasons.map((s) => <option value={s.key} selected={s.key === defaultSeasonKey}>{s.label}</option>)}
+    </select>
+  </div>
 
-  {
-    points.map((p) => {
-      const cx = scaleX(p.x);
-      const cy = scaleY(p.y);
-      const dot = (
-        <circle cx={cx} cy={cy} r="4" fill={color} fill-opacity="0.75" stroke="#1a1a19" stroke-width="1.5">
-          <title>
-            {p.label}: {p.x} pts, {p.y} M€
-          </title>
-        </circle>
-      );
-      return p.href ? <a href={p.href}>{dot}</a> : dot;
-    })
+  <div class="relative">
+    <svg
+      id="scatter-svg"
+      viewBox={`0 0 ${width} ${height}`}
+      width="100%"
+      role="img"
+      aria-label={`${yLabel} frente a puntos`}
+      style={`aspect-ratio:${width}/${height}`}
+    />
+    <p id="scatter-empty" class="hidden py-16 text-center text-sm text-slate-500">
+      Todavía no hay puntos para esta temporada.
+    </p>
+    <div
+      id="scatter-tooltip"
+      class="pointer-events-none absolute z-10 hidden w-56 rounded-xl border border-white/10 bg-slate-950/95 p-3 shadow-xl"
+    >
+      <div class="flex items-center gap-2.5">
+        <img id="scatter-tooltip-photo" src="" alt="" class="h-10 w-10 shrink-0 rounded-full bg-slate-800 object-cover" />
+        <div class="min-w-0">
+          <p id="scatter-tooltip-name" class="truncate text-sm font-semibold text-white" />
+          <p id="scatter-tooltip-team" class="truncate text-xs text-slate-500" />
+        </div>
+      </div>
+      <div class="mt-2 flex items-center justify-between text-xs">
+        <span class="text-slate-400">Puntos</span>
+        <span id="scatter-tooltip-points" class="font-semibold text-white" />
+      </div>
+      <div class="flex items-center justify-between text-xs">
+        <span class="text-slate-400">Precio Fantástica</span>
+        <span id="scatter-tooltip-price" class="font-semibold text-white" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ players, seasons, defaultSeasonKey, yLabel, positionColors, width, height, padding }}>
+  const svg = document.getElementById("scatter-svg");
+  const emptyState = document.getElementById("scatter-empty");
+  const seasonSelect = document.getElementById("scatter-season");
+  const legendButtons = Array.from(document.querySelectorAll("[data-legend-toggle]"));
+  const tooltip = document.getElementById("scatter-tooltip");
+  const tooltipPhoto = document.getElementById("scatter-tooltip-photo");
+  const tooltipName = document.getElementById("scatter-tooltip-name");
+  const tooltipTeam = document.getElementById("scatter-tooltip-team");
+  const tooltipPoints = document.getElementById("scatter-tooltip-points");
+  const tooltipPrice = document.getElementById("scatter-tooltip-price");
+  const hiddenPositions = new Set();
+  const container = svg.parentElement;
+
+  const plotWidth = width - padding.left - padding.right;
+  const plotHeight = height - padding.top - padding.bottom;
+  const svgNS = "http://www.w3.org/2000/svg";
+
+  function niceMax(value) {
+    const magnitude = 10 ** Math.floor(Math.log10(value || 1));
+    return Math.ceil((value || 1) / magnitude) * magnitude;
   }
-</svg>
+
+  function scaleX(x, xMax) {
+    return padding.left + (x / xMax) * plotWidth;
+  }
+  function scaleY(y, yMax) {
+    return padding.top + plotHeight - (y / yMax) * plotHeight;
+  }
+
+  function el(tag, attrs) {
+    const node = document.createElementNS(svgNS, tag);
+    for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, String(value));
+    return node;
+  }
+
+  function showTooltip(p, clientX, clientY) {
+    const rect = container.getBoundingClientRect();
+    tooltipPhoto.src = p.photoUrl;
+    tooltipPhoto.alt = p.name;
+    tooltipName.textContent = p.name;
+    tooltipTeam.textContent = p.teamName;
+    tooltipPoints.textContent = String(p._pointsValue);
+    tooltipPrice.textContent = `${p.price.toFixed(2)} M€`;
+
+    tooltip.classList.remove("hidden");
+    const tooltipWidth = tooltip.offsetWidth || 224;
+    const tooltipHeight = tooltip.offsetHeight || 96;
+    let left = clientX - rect.left + 14;
+    let top = clientY - rect.top - tooltipHeight - 14;
+    if (left + tooltipWidth > rect.width) left = clientX - rect.left - tooltipWidth - 14;
+    if (top < 0) top = clientY - rect.top + 14;
+    tooltip.style.left = `${left}px`;
+    tooltip.style.top = `${top}px`;
+  }
+
+  function hideTooltip() {
+    tooltip.classList.add("hidden");
+  }
+
+  function render(seasonKey) {
+    svg.innerHTML = "";
+    const withSeason = players
+      .map((p) => ({ ...p, _pointsValue: p.pointsBySeason[seasonKey] }))
+      .filter((p) => typeof p._pointsValue === "number" && p._pointsValue > 0);
+    const visible = withSeason.filter((p) => !hiddenPositions.has(p.position));
+
+    if (withSeason.length === 0 || visible.length === 0) {
+      emptyState.textContent =
+        withSeason.length === 0
+          ? "Todavía no hay puntos para esta temporada."
+          : "Sin jugadores con las posiciones seleccionadas en la leyenda.";
+      emptyState.classList.remove("hidden");
+      svg.classList.add("hidden");
+      hideTooltip();
+      return;
+    }
+    emptyState.classList.add("hidden");
+    svg.classList.remove("hidden");
+
+    const xMax = niceMax(Math.max(...visible.map((p) => p._pointsValue)));
+    const yMax = niceMax(Math.max(...visible.map((p) => p.price)));
+    const ticks = [0, 0.25, 0.5, 0.75, 1];
+
+    const seasonLabel = seasons.find((s) => s.key === seasonKey)?.label ?? "";
+
+    for (const f of ticks) {
+      const t = Math.round(yMax * f);
+      const y = scaleY(t, yMax);
+      svg.appendChild(el("line", { x1: padding.left, y1: y, x2: width - padding.right, y2: y, stroke: "#2c2c2a", "stroke-width": 1 }));
+      const label = el("text", { x: padding.left - 8, y: y + 3, "text-anchor": "end", class: "fill-slate-500", "font-size": 11 });
+      label.textContent = String(t);
+      svg.appendChild(label);
+    }
+    for (const f of ticks) {
+      const t = Math.round(xMax * f);
+      const label = el("text", { x: scaleX(t, xMax), y: height - padding.bottom + 18, "text-anchor": "middle", class: "fill-slate-500", "font-size": 11 });
+      label.textContent = String(t);
+      svg.appendChild(label);
+    }
+    svg.appendChild(
+      el("line", {
+        x1: padding.left,
+        y1: height - padding.bottom,
+        x2: width - padding.right,
+        y2: height - padding.bottom,
+        stroke: "#383835",
+        "stroke-width": 1,
+      })
+    );
+    const xLabelEl = el("text", { x: width / 2, y: height - 6, "text-anchor": "middle", class: "fill-slate-500", "font-size": 12 });
+    xLabelEl.textContent = `Puntos (${seasonLabel})`;
+    svg.appendChild(xLabelEl);
+    const yLabelEl = el("text", {
+      x: -(height / 2),
+      y: 14,
+      "text-anchor": "middle",
+      transform: "rotate(-90)",
+      class: "fill-slate-500",
+      "font-size": 12,
+    });
+    yLabelEl.textContent = yLabel;
+    svg.appendChild(yLabelEl);
+
+    for (const p of visible) {
+      const cx = scaleX(p._pointsValue, xMax);
+      const cy = scaleY(p.price, yMax);
+      const link = el("a", { href: p.href });
+      const dot = el("circle", {
+        cx,
+        cy,
+        r: 5,
+        fill: positionColors[p.position] ?? "#64748b",
+        "fill-opacity": 0.8,
+        stroke: "#1a1a19",
+        "stroke-width": 1.5,
+        style: "cursor:pointer",
+      });
+      dot.addEventListener("mouseenter", (e) => showTooltip(p, e.clientX, e.clientY));
+      dot.addEventListener("mousemove", (e) => showTooltip(p, e.clientX, e.clientY));
+      dot.addEventListener("mouseleave", hideTooltip);
+      link.appendChild(dot);
+      svg.appendChild(link);
+    }
+  }
+
+  function updateLegendStyles() {
+    for (const btn of legendButtons) {
+      const isHidden = hiddenPositions.has(Number(btn.dataset.position));
+      btn.classList.toggle("opacity-40", isHidden);
+      btn.querySelector(".legend-dot").style.opacity = isHidden ? "0.3" : "1";
+    }
+  }
+
+  for (const btn of legendButtons) {
+    btn.addEventListener("click", () => {
+      const position = Number(btn.dataset.position);
+      if (hiddenPositions.has(position)) hiddenPositions.delete(position);
+      else hiddenPositions.add(position);
+      updateLegendStyles();
+      render(seasonSelect.value);
+    });
+  }
+
+  seasonSelect.addEventListener("change", () => render(seasonSelect.value));
+  render(defaultSeasonKey);
+</script>
