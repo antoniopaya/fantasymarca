@@ -1,0 +1,81 @@
+---
+interface Segment {
+  label: string;
+  value: number;
+  color: string;
+}
+
+interface Props {
+  segments: Segment[];
+  centerLabel?: string;
+  centerValue?: string;
+}
+
+const { segments, centerLabel, centerValue } = Astro.props;
+
+const total = segments.reduce((sum, s) => sum + s.value, 0);
+const radius = 60;
+const strokeWidth = 22;
+const circumference = 2 * Math.PI * radius;
+
+let cumulative = 0;
+const arcs = segments.map((s) => {
+  const fraction = total > 0 ? s.value / total : 0;
+  const dash = fraction * circumference;
+  const offset = -((cumulative / total) * circumference || 0);
+  cumulative += s.value;
+  return { ...s, fraction, dash, offset };
+});
+---
+
+<div class="flex flex-col items-center gap-6 sm:flex-row sm:items-center">
+  <div class="relative shrink-0">
+    <svg viewBox="0 0 140 140" width="160" height="160" role="img" aria-label="Distribución de jugadores por posición">
+      <circle cx="70" cy="70" r={radius} fill="none" stroke="var(--chart-track, #2c2c2a)" stroke-width={strokeWidth} />
+      {
+        arcs.map((arc) => (
+          <circle
+            cx="70"
+            cy="70"
+            r={radius}
+            fill="none"
+            stroke={arc.color}
+            stroke-width={strokeWidth}
+            stroke-dasharray={`${arc.dash} ${circumference - arc.dash}`}
+            stroke-dashoffset={arc.offset}
+            transform="rotate(-90 70 70)"
+            stroke-linecap="butt"
+          >
+            <title>
+              {arc.label}: {arc.value} ({(arc.fraction * 100).toFixed(0)}%)
+            </title>
+          </circle>
+        ))
+      }
+    </svg>
+    {
+      (centerLabel || centerValue) && (
+        <div class="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
+          {centerValue && <span class="text-xl font-bold text-white">{centerValue}</span>}
+          {centerLabel && <span class="text-xs text-slate-500">{centerLabel}</span>}
+        </div>
+      )
+    }
+  </div>
+
+  <ul class="w-full space-y-2">
+    {
+      arcs.map((arc) => (
+        <li class="flex items-center justify-between gap-3 text-sm">
+          <span class="flex min-w-0 items-center gap-2">
+            <span class="h-2.5 w-2.5 shrink-0 rounded-full" style={`background-color:${arc.color}`} />
+            <span class="truncate text-slate-300">{arc.label}</span>
+          </span>
+          <span class="shrink-0 font-semibold text-white">
+            {arc.value} <span class="font-normal text-slate-500">({(arc.fraction * 100).toFixed(0)}%)</span>
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</div>

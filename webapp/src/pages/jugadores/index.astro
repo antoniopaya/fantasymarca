@@ -1,0 +1,168 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PlayerCard from "../../components/PlayerCard.astro";
+import { getAllPlayerSummaries, getTeams, formatMoney, POSITION_NAMES, playerPhotoUrl, teamLogoUrl } from "../../lib/data";
+
+const players = [...getAllPlayerSummaries()].sort((a, b) => b.value - a.value);
+const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<Layout title="Jugadores" description="Busca, filtra y ordena jugadores de LaLiga Fantasy por nombre, equipo, posición o valor.">
+  <div class="mb-8">
+    <h1 class="text-3xl font-black text-white">Buscar jugadores</h1>
+    <p class="mt-1 text-sm text-slate-400">{players.length} jugadores en el catálogo</p>
+  </div>
+
+  <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+    <div class="relative flex-1">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <circle cx="11" cy="11" r="8" />
+        <path stroke-linecap="round" d="m21 21-4.3-4.3" />
+      </svg>
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Buscar por nombre..."
+        autocomplete="off"
+        class="w-full rounded-xl border border-white/10 bg-slate-900/60 py-2.5 pl-10 pr-4 text-sm text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
+      />
+    </div>
+    <select
+      id="team-filter"
+      class="rounded-xl border border-white/10 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
+    >
+      <option value="0">Todos los equipos</option>
+      {teams.map((team) => <option value={team.id}>{team.name}</option>)}
+    </select>
+    <select
+      id="position-filter"
+      class="rounded-xl border border-white/10 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
+    >
+      <option value="0">Todas las posiciones</option>
+      {Object.entries(POSITION_NAMES).map(([value, label]) => <option value={value}>{label}</option>)}
+    </select>
+    <select
+      id="sort-select"
+      class="rounded-xl border border-white/10 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
+    >
+      <option value="value_desc">Valor: mayor a menor</option>
+      <option value="value_asc">Valor: menor a mayor</option>
+      <option value="fantastica_desc">Fantástica: mayor a menor</option>
+      <option value="fantastica_asc">Fantástica: menor a mayor</option>
+      <option value="clause_desc">Cláusula: mayor a menor</option>
+      <option value="points_desc">Puntos: mayor a menor</option>
+      <option value="name_asc">Nombre: A-Z</option>
+    </select>
+  </div>
+
+  <p id="results-count" class="mb-4 text-sm text-slate-500">{players.length} jugadores</p>
+
+  <div id="players-grid" class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      players.map((player) => (
+        <div
+          data-player-card
+          data-name={player.name.toLowerCase()}
+          data-team={player.id_team}
+          data-position={player.position}
+          data-value={player.value}
+          data-fantastica={player.precioFantastica ?? -1}
+          data-clause={player.clauseValue}
+          data-points={player.points}
+        >
+          <PlayerCard
+            id={player.id}
+            name={player.name}
+            teamName={player.team_name}
+            position={player.position}
+            photoUrl={playerPhotoUrl(player.id)}
+            teamLogoUrl={teamLogoUrl(player.id_team)}
+            valueLabel={formatMoney(player.value)}
+            precioFantasticaLabel={player.precioFantastica ? formatMoney(player.precioFantastica) : undefined}
+          />
+        </div>
+      ))
+    }
+  </div>
+
+  <p id="no-results" class="hidden py-12 text-center text-slate-500">
+    No se han encontrado jugadores con esos filtros.
+  </p>
+
+  <script>
+    const input = document.getElementById("search-input") as HTMLInputElement;
+    const teamSelect = document.getElementById("team-filter") as HTMLSelectElement;
+    const positionSelect = document.getElementById("position-filter") as HTMLSelectElement;
+    const sortSelect = document.getElementById("sort-select") as HTMLSelectElement;
+    const countEl = document.getElementById("results-count") as HTMLElement;
+    const noResults = document.getElementById("no-results") as HTMLElement;
+    const grid = document.getElementById("players-grid") as HTMLElement;
+    const cards = Array.from(grid.querySelectorAll<HTMLElement>("[data-player-card]"));
+
+    const diacriticsPattern = new RegExp(
+      `[${String.fromCharCode(0x0300)}-${String.fromCharCode(0x036f)}]`,
+      "g"
+    );
+
+    function normalize(text: string): string {
+      return text.normalize("NFD").replace(diacriticsPattern, "").toLowerCase();
+    }
+
+    function applyFilters() {
+      const query = normalize(input.value.trim());
+      const team = teamSelect.value;
+      const position = positionSelect.value;
+      let visible = 0;
+
+      cards.forEach((card) => {
+        const matchesName = card.dataset.name ? normalize(card.dataset.name).includes(query) : true;
+        const matchesTeam = team === "0" || card.dataset.team === team;
+        const matchesPosition = position === "0" || card.dataset.position === position;
+        const show = matchesName && matchesTeam && matchesPosition;
+        card.classList.toggle("hidden", !show);
+        if (show) visible++;
+      });
+
+      countEl.textContent = `${visible} jugador${visible === 1 ? "" : "es"}`;
+      noResults.classList.toggle("hidden", visible !== 0);
+    }
+
+    function applySort() {
+      const mode = sortSelect.value;
+      const sorted = [...cards].sort((a, b) => {
+        switch (mode) {
+          case "value_asc":
+            return parseFloat(a.dataset.value ?? "0") - parseFloat(b.dataset.value ?? "0");
+          case "fantastica_desc":
+            return parseFloat(b.dataset.fantastica ?? "-1") - parseFloat(a.dataset.fantastica ?? "-1");
+          case "fantastica_asc":
+            return parseFloat(a.dataset.fantastica ?? "-1") - parseFloat(b.dataset.fantastica ?? "-1");
+          case "clause_desc":
+            return parseFloat(b.dataset.clause ?? "0") - parseFloat(a.dataset.clause ?? "0");
+          case "points_desc":
+            return parseFloat(b.dataset.points ?? "0") - parseFloat(a.dataset.points ?? "0");
+          case "name_asc":
+            return (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "");
+          case "value_desc":
+          default:
+            return parseFloat(b.dataset.value ?? "0") - parseFloat(a.dataset.value ?? "0");
+        }
+      });
+      sorted.forEach((card, i) => {
+        card.style.order = String(i);
+      });
+    }
+
+    input.addEventListener("input", applyFilters);
+    teamSelect.addEventListener("change", applyFilters);
+    positionSelect.addEventListener("change", applyFilters);
+    sortSelect.addEventListener("change", applySort);
+  </script>
+</Layout>

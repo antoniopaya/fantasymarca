@@ -1,0 +1,100 @@
+---
+interface Point {
+  x: number;
+  y: number;
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  points: Point[];
+  xLabel: string;
+  yLabel: string;
+  color?: string;
+}
+
+const { points, xLabel, yLabel, color = "#10b981" } = Astro.props;
+
+const width = 560;
+const height = 320;
+const padding = { top: 16, right: 16, bottom: 36, left: 44 };
+const plotWidth = width - padding.left - padding.right;
+const plotHeight = height - padding.top - padding.bottom;
+
+const maxX = Math.max(...points.map((p) => p.x), 1);
+const maxY = Math.max(...points.map((p) => p.y), 1);
+
+function niceMax(value: number): number {
+  const magnitude = 10 ** Math.floor(Math.log10(value || 1));
+  return Math.ceil(value / magnitude) * magnitude;
+}
+
+const xMax = niceMax(maxX);
+const yMax = niceMax(maxY);
+
+function scaleX(x: number): number {
+  return padding.left + (x / xMax) * plotWidth;
+}
+function scaleY(y: number): number {
+  return padding.top + plotHeight - (y / yMax) * plotHeight;
+}
+
+const yTicks = [0, 0.25, 0.5, 0.75, 1].map((f) => Math.round(yMax * f));
+const xTicks = [0, 0.25, 0.5, 0.75, 1].map((f) => Math.round(xMax * f));
+---
+
+<svg viewBox={`0 0 ${width} ${height}`} width="100%" height={height} role="img" aria-label={`${yLabel} frente a ${xLabel}`}>
+  {
+    yTicks.map((t) => (
+      <g>
+        <line x1={padding.left} y1={scaleY(t)} x2={width - padding.right} y2={scaleY(t)} stroke="#2c2c2a" stroke-width="1" />
+        <text x={padding.left - 8} y={scaleY(t) + 3} text-anchor="end" class="fill-slate-500" font-size="9">
+          {t}
+        </text>
+      </g>
+    ))
+  }
+  {
+    xTicks.map((t) => (
+      <text x={scaleX(t)} y={height - padding.bottom + 16} text-anchor="middle" class="fill-slate-500" font-size="9">
+        {t}
+      </text>
+    ))
+  }
+  <line
+    x1={padding.left}
+    y1={height - padding.bottom}
+    x2={width - padding.right}
+    y2={height - padding.bottom}
+    stroke="#383835"
+    stroke-width="1"
+  />
+  <text x={width / 2} y={height - 4} text-anchor="middle" class="fill-slate-500" font-size="10">
+    {xLabel}
+  </text>
+  <text
+    x={-(height / 2)}
+    y="12"
+    text-anchor="middle"
+    transform="rotate(-90)"
+    class="fill-slate-500"
+    font-size="10"
+  >
+    {yLabel}
+  </text>
+
+  {
+    points.map((p) => {
+      const cx = scaleX(p.x);
+      const cy = scaleY(p.y);
+      const dot = (
+        <circle cx={cx} cy={cy} r="4" fill={color} fill-opacity="0.75" stroke="#1a1a19" stroke-width="1.5">
+          <title>
+            {p.label}: {p.x} pts, {p.y} M€
+          </title>
+        </circle>
+      );
+      return p.href ? <a href={p.href}>{dot}</a> : dot;
+    })
+  }
+</svg>

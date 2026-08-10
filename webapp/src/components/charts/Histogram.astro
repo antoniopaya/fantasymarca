@@ -1,0 +1,58 @@
+---
+interface Bucket {
+  label: string;
+  count: number;
+}
+
+interface Props {
+  buckets: Bucket[];
+  title: string;
+  color?: string;
+}
+
+const { buckets, title, color = "#10b981" } = Astro.props;
+
+const width = 560;
+const height = 220;
+const paddingBottom = 30;
+const paddingTop = 20;
+const paddingX = 8;
+const plotHeight = height - paddingBottom - paddingTop;
+const maxCount = Math.max(...buckets.map((b) => b.count), 1);
+const slot = (width - paddingX * 2) / buckets.length;
+const barWidth = Math.min(slot - 10, 48);
+---
+
+<svg viewBox={`0 0 ${width} ${height}`} width="100%" height={height} role="img" aria-label={title}>
+  <line x1={paddingX} y1={height - paddingBottom} x2={width - paddingX} y2={height - paddingBottom} stroke="#383835" stroke-width="1" />
+  {
+    buckets.map((bucket, i) => {
+      const barHeight = (bucket.count / maxCount) * plotHeight;
+      const x = paddingX + i * slot + (slot - barWidth) / 2;
+      const y = height - paddingBottom - barHeight;
+      return (
+        <g>
+          <rect x={x} y={y} width={barWidth} height={Math.max(barHeight, 2)} rx="4" fill={color}>
+            <title>
+              {bucket.label}: {bucket.count} jugadores
+            </title>
+          </rect>
+          {bucket.count > 0 && (
+            <text x={x + barWidth / 2} y={y - 6} text-anchor="middle" class="fill-slate-300" font-size="11">
+              {bucket.count}
+            </text>
+          )}
+          <text
+            x={x + barWidth / 2}
+            y={height - paddingBottom + 16}
+            text-anchor="middle"
+            class="fill-slate-500"
+            font-size="10"
+          >
+            {bucket.label}
+          </text>
+        </g>
+      );
+    })
+  }
+</svg>

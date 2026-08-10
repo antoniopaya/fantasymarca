@@ -1,0 +1,64 @@
+---
+interface Item {
+  key: string | number;
+  label: string;
+  sublabel?: string;
+  valueLabel: string;
+  barPercent: number;
+  href?: string;
+  imageUrl?: string;
+  accent?: "positive" | "negative";
+}
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+
+const accentText: Record<string, string> = {
+  positive: "text-emerald-400",
+  negative: "text-rose-400",
+};
+
+const accentBar: Record<string, string> = {
+  positive: "bg-emerald-500",
+  negative: "bg-rose-500",
+};
+---
+
+<div class="space-y-2">
+  {
+    items.map((item, index) => {
+      const Tag = item.href ? "a" : "div";
+      return (
+        <Tag
+          href={item.href}
+          class={`flex items-center gap-3 rounded-xl border border-white/10 bg-slate-900/60 p-3 transition-colors ${
+            item.href ? "hover:border-emerald-500/30 hover:bg-slate-900" : ""
+          }`}
+        >
+          <span class="w-5 shrink-0 text-center text-sm font-bold text-slate-600">{index + 1}</span>
+          {item.imageUrl && (
+            <img src={item.imageUrl} alt="" class="h-8 w-8 shrink-0 rounded-full bg-slate-800 object-cover" loading="lazy" />
+          )}
+          <div class="min-w-0 flex-1">
+            <div class="flex items-center justify-between gap-2">
+              <p class="truncate text-sm font-medium text-white">{item.label}</p>
+              <p class={`shrink-0 text-sm font-bold ${item.accent ? accentText[item.accent] : "text-white"}`}>
+                {item.valueLabel}
+              </p>
+            </div>
+            {item.sublabel && <p class="truncate text-xs text-slate-500">{item.sublabel}</p>}
+            <div class="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-800">
+              <div
+                class={`h-full rounded-full ${item.accent ? accentBar[item.accent] : "bg-emerald-500"}`}
+                style={`width:${Math.max(item.barPercent, 3)}%`}
+              />
+            </div>
+          </div>
+        </Tag>
+      );
+    })
+  }
+</div>

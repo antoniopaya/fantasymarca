@@ -1,0 +1,59 @@
+---
+interface Bar {
+  label: string;
+  value: number;
+  color: string;
+  valueLabel: string;
+}
+
+interface Props {
+  bars: Bar[];
+  title: string;
+}
+
+const { bars, title } = Astro.props;
+
+const width = 320;
+const height = 190;
+const paddingBottom = 28;
+const paddingTop = 24;
+const plotHeight = height - paddingBottom - paddingTop;
+const maxValue = Math.max(...bars.map((b) => b.value), 1);
+const barWidth = 24;
+const gap = (width - bars.length * barWidth) / (bars.length + 1);
+---
+
+<svg viewBox={`0 0 ${width} ${height}`} width="100%" height={height} role="img" aria-label={title}>
+  <line
+    x1="0"
+    y1={height - paddingBottom}
+    x2={width}
+    y2={height - paddingBottom}
+    stroke="#383835"
+    stroke-width="1"
+  />
+  {
+    bars.map((bar, i) => {
+      const barHeight = (bar.value / maxValue) * plotHeight;
+      const x = gap + i * (barWidth + gap);
+      const y = height - paddingBottom - barHeight;
+      return (
+        <g>
+          <rect x={x} y={y} width={barWidth} height={Math.max(barHeight, 2)} rx="4" fill={bar.color} />
+          <text x={x + barWidth / 2} y={y - 6} text-anchor="middle" class="fill-slate-300" font-size="10">
+            {bar.valueLabel}
+          </text>
+          <text
+            x={x + barWidth / 2}
+            y={height - paddingBottom + 14}
+            text-anchor="middle"
+            class="fill-slate-500"
+            font-size="10"
+          >
+            {bar.label}
+          </text>
+        </g>
+      );
+    })
+  }
+</svg>

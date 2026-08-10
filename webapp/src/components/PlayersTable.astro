@@ -1,0 +1,230 @@
+---
+import { POSITION_SHORT, teamLogoUrl, formatMoney, url } from "../lib/data";
+import type { PlayerSummary, Team } from "../lib/data";
+
+interface Props {
+  players: PlayerSummary[];
+  teams: Team[];
+}
+
+const { players, teams } = Astro.props;
+const sortedTeams = [...teams].sort((a, b) => a.name.localeCompare(b.name));
+const initialOrder = [...players].sort((a, b) => b.value - a.value);
+
+const columns = [
+  { key: "points", label: "Puntos" },
+  { key: "avg", label: "Media" },
+  { key: "lastSeasonPoints", label: "Pts. temp. ant." },
+  { key: "value", label: "Valor" },
+  { key: "precioFantastica", label: "Precio Fantástica" },
+  { key: "clauseValue", label: "Cláusula" },
+  { key: "weeklyChange", label: "Cambio semana" },
+] as const;
+---
+
+<div class="space-y-4">
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+    <div class="relative flex-1">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <circle cx="11" cy="11" r="8" />
+        <path stroke-linecap="round" d="m21 21-4.3-4.3" />
+      </svg>
+      <input
+        id="stats-search"
+        type="text"
+        placeholder="Buscar jugador..."
+        autocomplete="off"
+        class="w-full rounded-xl border border-white/10 bg-slate-900/60 py-2.5 pl-10 pr-4 text-sm text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
+      />
+    </div>
+    <select
+      id="stats-team-filter"
+      class="rounded-xl border border-white/10 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
+    >
+      <option value="0">Todos los equipos</option>
+      {sortedTeams.map((team) => <option value={team.id}>{team.name}</option>)}
+    </select>
+    <select
+      id="stats-position-filter"
+      class="rounded-xl border border-white/10 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
+    >
+      <option value="0">Todas las posiciones</option>
+      <option value="1">Portero</option>
+      <option value="2">Defensa</option>
+      <option value="3">Centrocampista</option>
+      <option value="4">Delantero</option>
+    </select>
+  </div>
+
+  <p id="stats-count" class="text-sm text-slate-500">{players.length} jugadores</p>
+
+  <div class="overflow-x-auto rounded-xl border border-white/10">
+    <table class="w-full min-w-[980px] text-sm">
+      <thead>
+        <tr class="border-b border-white/10 bg-slate-900/80 text-left text-xs uppercase tracking-wide text-slate-500">
+          <th class="w-10 px-3 py-2">#</th>
+          <th class="px-3 py-2">Jugador</th>
+          <th class="px-3 py-2">Equipo</th>
+          <th class="px-3 py-2">Pos</th>
+          {
+            columns.map((col) => (
+              <th
+                class="cursor-pointer select-none whitespace-nowrap px-3 py-2 hover:text-white"
+                data-sort-key={col.key}
+              >
+                <span class="inline-flex items-center gap-1">
+                  {col.label}
+                  <span class="sort-arrow text-[10px] opacity-0">▼</span>
+                </span>
+              </th>
+            ))
+          }
+        </tr>
+      </thead>
+      <tbody id="stats-tbody">
+        {
+          initialOrder.map((p) => (
+            <tr
+              data-row
+              data-name={p.name.toLowerCase()}
+              data-team={p.id_team}
+              data-position={p.position}
+              data-value={p.value}
+              data-preciofantastica={p.precioFantastica ?? -1}
+              data-clausevalue={p.clauseValue}
+              data-points={p.points}
+              data-avg={p.avg}
+              data-lastseasonpoints={p.lastSeason?.points ?? -1}
+              data-weeklychange={p.weeklyChange}
+              class="border-b border-white/5 hover:bg-white/5"
+            >
+              <td class="row-rank px-3 py-2 text-slate-600" />
+              <td class="px-3 py-2">
+                <a href={url(`/jugadores/${p.id}`)} class="font-medium text-white hover:text-emerald-400">
+                  {p.name}
+                </a>
+              </td>
+              <td class="px-3 py-2 text-slate-400">
+                <span class="inline-flex items-center gap-1.5 whitespace-nowrap">
+                  <img src={teamLogoUrl(p.id_team)} alt="" class="h-4 w-4 object-contain" loading="lazy" />
+                  {p.team_name}
+                </span>
+              </td>
+              <td class="px-3 py-2 text-slate-400">{POSITION_SHORT[p.position]}</td>
+              <td class="px-3 py-2 font-semibold text-white">{p.points}</td>
+              <td class="px-3 py-2 text-slate-400">{p.avg}</td>
+              <td class="px-3 py-2 text-slate-400">{p.lastSeason ? p.lastSeason.points : "—"}</td>
+              <td class="px-3 py-2 text-white">{formatMoney(p.value)}</td>
+              <td class="px-3 py-2 text-white">{p.precioFantastica ? formatMoney(p.precioFantastica) : "—"}</td>
+              <td class="px-3 py-2 text-white">{formatMoney(p.clauseValue)}</td>
+              <td
+                class={`px-3 py-2 font-medium whitespace-nowrap ${
+                  p.weeklyChange > 0 ? "text-emerald-400" : p.weeklyChange < 0 ? "text-rose-400" : "text-slate-500"
+                }`}
+              >
+                {p.weeklyChange === 0 ? "—" : `${p.weeklyChange > 0 ? "▲" : "▼"} ${formatMoney(Math.abs(p.weeklyChange))}`}
+              </td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <p id="stats-no-results" class="hidden py-8 text-center text-slate-500">Sin resultados con esos filtros.</p>
+</div>
+
+<script>
+  const tbody = document.getElementById("stats-tbody") as HTMLTableSectionElement;
+  const rows = Array.from(tbody.querySelectorAll<HTMLTableRowElement>("[data-row]"));
+  const searchInput = document.getElementById("stats-search") as HTMLInputElement;
+  const teamSelect = document.getElementById("stats-team-filter") as HTMLSelectElement;
+  const positionSelect = document.getElementById("stats-position-filter") as HTMLSelectElement;
+  const countEl = document.getElementById("stats-count") as HTMLElement;
+  const noResults = document.getElementById("stats-no-results") as HTMLElement;
+  const headers = Array.from(document.querySelectorAll<HTMLTableCellElement>("[data-sort-key]"));
+
+  const diacriticsPattern = new RegExp(`[${String.fromCharCode(0x0300)}-${String.fromCharCode(0x036f)}]`, "g");
+
+  function normalize(text: string): string {
+    return text.normalize("NFD").replace(diacriticsPattern, "").toLowerCase();
+  }
+
+  function updateRanks() {
+    let rank = 0;
+    for (const row of rows) {
+      if (!row.classList.contains("hidden")) {
+        rank++;
+        const cell = row.querySelector<HTMLElement>(".row-rank");
+        if (cell) cell.textContent = String(rank);
+      }
+    }
+  }
+
+  function applyFilters() {
+    const query = normalize(searchInput.value.trim());
+    const team = teamSelect.value;
+    const position = positionSelect.value;
+    let visible = 0;
+
+    for (const row of rows) {
+      const matchesName = normalize(row.dataset.name ?? "").includes(query);
+      const matchesTeam = team === "0" || row.dataset.team === team;
+      const matchesPosition = position === "0" || row.dataset.position === position;
+      const show = matchesName && matchesTeam && matchesPosition;
+      row.classList.toggle("hidden", !show);
+      if (show) visible++;
+    }
+
+    countEl.textContent = `${visible} jugador${visible === 1 ? "" : "es"}`;
+    noResults.classList.toggle("hidden", visible !== 0);
+    updateRanks();
+  }
+
+  function setSortIndicator(key: string, dir: "asc" | "desc") {
+    for (const h of headers) {
+      const arrow = h.querySelector<HTMLElement>(".sort-arrow");
+      if (!arrow) continue;
+      if (h.dataset.sortKey === key) {
+        arrow.textContent = dir === "asc" ? "▲" : "▼";
+        arrow.classList.remove("opacity-0");
+      } else {
+        arrow.classList.add("opacity-0");
+      }
+    }
+  }
+
+  let currentSort = { key: "value", dir: "desc" as "asc" | "desc" };
+
+  function sortBy(key: string) {
+    const dir = currentSort.key === key && currentSort.dir === "desc" ? "asc" : "desc";
+    currentSort = { key, dir };
+
+    rows.sort((a, b) => {
+      const av = parseFloat(a.dataset[key.toLowerCase()] ?? "0");
+      const bv = parseFloat(b.dataset[key.toLowerCase()] ?? "0");
+      return dir === "asc" ? av - bv : bv - av;
+    });
+    for (const row of rows) tbody.appendChild(row);
+
+    setSortIndicator(key, dir);
+    updateRanks();
+  }
+
+  for (const h of headers) {
+    h.addEventListener("click", () => sortBy(h.dataset.sortKey ?? ""));
+  }
+  searchInput.addEventListener("input", applyFilters);
+  teamSelect.addEventListener("change", applyFilters);
+  positionSelect.addEventListener("change", applyFilters);
+
+  setSortIndicator("value", "desc");
+  updateRanks();
+</script>

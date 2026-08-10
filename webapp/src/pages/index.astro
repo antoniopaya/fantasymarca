@@ -1,0 +1,134 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MatchCard from "../components/MatchCard.astro";
+import PlayerCard from "../components/PlayerCard.astro";
+import {
+  getPlayers,
+  getTeams,
+  getNextGameweek,
+  getMatches,
+  getAllPlayerSummaries,
+  formatMoney,
+  playerPhotoUrl,
+  teamLogoUrl,
+  url,
+} from "../lib/data";
+
+const players = getPlayers();
+const teams = getTeams();
+const nextGameweek = getNextGameweek();
+
+let previewMatches: ReturnType<typeof getMatches> = [];
+let loadError: string | null = null;
+try {
+  previewMatches = getMatches(nextGameweek.number).slice(0, 3);
+} catch (err) {
+  loadError = err instanceof Error ? err.message : String(err);
+}
+
+const topPlayers = [...getAllPlayerSummaries()].sort((a, b) => b.value - a.value).slice(0, 5);
+
+const stats = [
+  { label: "Jugadores", value: players.length },
+  { label: "Equipos", value: teams.length },
+  { label: "Próxima jornada", value: nextGameweek.name },
+];
+---
+
+<Layout title="Inicio">
+  <section class="flex flex-col items-center gap-6 py-10 text-center sm:py-16">
+    <span class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1 text-xs font-medium text-emerald-400">
+      Temporada {nextGameweek.season ?? "26/27"}
+    </span>
+    <h1 class="max-w-2xl text-4xl font-black tracking-tight text-white sm:text-5xl">
+      Tu panel de <span class="text-emerald-400">Fantasy Marca</span>
+    </h1>
+    <p class="max-w-xl text-balance text-slate-400">
+      Consulta los partidos de la próxima jornada, busca jugadores y revisa sus estadísticas y valor de mercado en
+      un único sitio.
+    </p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a
+        href={url("/jornada")}
+        class="rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/20 transition-transform hover:-translate-y-0.5 hover:bg-emerald-400"
+      >
+        Ver próxima jornada
+      </a>
+      <a
+        href={url("/jugadores")}
+        class="rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-slate-100 transition-colors hover:bg-white/5"
+      >
+        Buscar jugadores
+      </a>
+      <a
+        href={url("/estadisticas")}
+        class="rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-slate-100 transition-colors hover:bg-white/5"
+      >
+        Ver estadísticas
+      </a>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+    {
+      stats.map((stat) => (
+        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6 text-center">
+          <p class="text-3xl font-bold text-white">{stat.value}</p>
+          <p class="mt-1 text-sm text-slate-400">{stat.label}</p>
+        </div>
+      ))
+    }
+  </section>
+
+  <section class="mt-14">
+    <div class="mb-4 flex items-center justify-between">
+      <h2 class="text-xl font-bold text-white">Próximos partidos &middot; {nextGameweek.name}</h2>
+      <a href={url("/jornada")} class="text-sm font-medium text-emerald-400 hover:text-emerald-300">Ver todos &rarr;</a>
+    </div>
+
+    {
+      loadError ? (
+        <p class="rounded-xl border border-rose-500/30 bg-rose-500/10 p-4 text-sm text-rose-300">
+          No se pudo cargar la jornada: {loadError}
+        </p>
+      ) : (
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {previewMatches.map((game) => (
+            <MatchCard
+              home={game.home}
+              away={game.away}
+              homeLogoUrl={game.homeLogoUrl}
+              awayLogoUrl={game.awayLogoUrl}
+              dateText={game.date.text}
+              goalsHome={game.goals_home}
+              goalsAway={game.goals_away}
+              status={game.status}
+            />
+          ))}
+        </div>
+      )
+    }
+  </section>
+
+  <section class="mt-14">
+    <div class="mb-4 flex items-center justify-between">
+      <h2 class="text-xl font-bold text-white">Jugadores más valiosos</h2>
+      <a href={url("/estadisticas")} class="text-sm font-medium text-emerald-400 hover:text-emerald-300">Ver estadísticas &rarr;</a>
+    </div>
+    <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+      {
+        topPlayers.map((p) => (
+          <PlayerCard
+            id={p.id}
+            name={p.name}
+            teamName={p.team_name}
+            position={p.position}
+            photoUrl={playerPhotoUrl(p.id)}
+            teamLogoUrl={teamLogoUrl(p.id_team)}
+            valueLabel={formatMoney(p.value)}
+          />
+        ))
+      }
+    </div>
+  </section>
+</Layout>

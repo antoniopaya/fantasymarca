@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { url } from "../lib/data";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description = "Panel de Fantasy Marca: jornadas, jugadores y estadísticas." } = Astro.props;
+const fullTitle = title ? `${title} · FantasyMarca` : "FantasyMarca";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href={url("/favicon.svg")} />
+    <meta name="description" content={description} />
+    <title>{fullTitle}</title>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100">
+    <div class="bg-grid pointer-events-none fixed inset-0 -z-10"></div>
+    <Navbar />
+    <main class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

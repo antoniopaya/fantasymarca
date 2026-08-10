@@ -1,0 +1,72 @@
+---
+import { url } from "../lib/data";
+
+const navItems = [
+  { href: url("/"), label: "Inicio", match: "/" },
+  { href: url("/jornada"), label: "Próxima jornada", match: "/jornada" },
+  { href: url("/jugadores"), label: "Jugadores", match: "/jugadores" },
+  { href: url("/crear-once"), label: "Crear once", match: "/crear-once" },
+  { href: url("/estadisticas"), label: "Estadísticas", match: "/estadisticas" },
+];
+
+// No fiarse de si Astro.url.pathname incluye o no el `base` configurado (varía
+// entre dev/build): se le quita a mano antes de comparar contra `match`.
+const baseStripped = import.meta.env.BASE_URL.replace(/\/$/, "");
+const currentPath = Astro.url.pathname.startsWith(baseStripped)
+  ? Astro.url.pathname.slice(baseStripped.length) || "/"
+  : Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+    <a href={url("/")} class="flex items-center gap-2 text-lg font-bold tracking-tight text-white">
+      <span
+        class="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-400 to-emerald-600 text-sm font-black text-slate-950 shadow-lg shadow-emerald-500/20"
+      >
+        FM
+      </span>
+      <span>
+        Fantasy<span class="text-emerald-400">Marca</span>
+      </span>
+    </a>
+
+    <div class="hidden items-center gap-1 sm:flex">
+      {
+        navItems.map((item) => {
+          const isActive = item.match === "/" ? currentPath === "/" : currentPath.startsWith(item.match);
+          return (
+            <a
+              href={item.href}
+              class={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                isActive
+                  ? "bg-emerald-500/10 text-emerald-400"
+                  : "text-slate-300 hover:bg-white/5 hover:text-white"
+              }`}
+            >
+              {item.label}
+            </a>
+          );
+        })
+      }
+    </div>
+
+    <details class="relative sm:hidden">
+      <summary
+        class="flex h-9 w-9 cursor-pointer list-none items-center justify-center rounded-lg border border-white/10 text-slate-200 [&::-webkit-details-marker]:hidden"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </summary>
+      <div class="absolute right-0 mt-2 w-48 rounded-xl border border-white/10 bg-slate-900 p-2 shadow-xl">
+        {
+          navItems.map((item) => (
+            <a href={item.href} class="block rounded-lg px-3 py-2 text-sm text-slate-200 hover:bg-white/5">
+              {item.label}
+            </a>
+          ))
+        }
+      </div>
+    </details>
+  </nav>
+</header>

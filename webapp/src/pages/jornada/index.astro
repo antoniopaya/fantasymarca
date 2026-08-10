@@ -1,0 +1,15 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import GameweekView from "../../components/GameweekView.astro";
+import { getGameweeks, getNextGameweek, getMatches } from "../../lib/data";
+
+const gameweeks = getGameweeks();
+const selected = getNextGameweek();
+const matches = getMatches(selected.number);
+const prevGw = gameweeks.find((gw) => gw.number === selected.number - 1);
+const nextGw = gameweeks.find((gw) => gw.number === selected.number + 1);
+---
+
+<Layout title="Próxima jornada" description={`Partidos de la ${selected.name}`}>
+  <GameweekView selected={selected} matches={matches} gameweeks={gameweeks} isNext prevGw={prevGw} nextGw={nextGw} />
+</Layout>

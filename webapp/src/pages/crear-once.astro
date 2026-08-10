@@ -1,0 +1,395 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  getAllPlayerSummaries,
+  playerPhotoUrl,
+  teamLogoUrl,
+  POSITION_SHORT,
+  POSITION_COLORS,
+  formatMoney,
+} from "../lib/data";
+
+// Solo entran jugadores con precio Fantástica: es el único precio que cuenta
+// para el tope de 180M, así que uno sin precio no se puede valorar ni incluir.
+const players = getAllPlayerSummaries()
+  .filter((p) => p.precioFantastica !== null)
+  .map((p) => ({
+    id: p.id,
+    name: p.name,
+    teamName: p.team_name,
+    position: p.position,
+    price: p.precioFantastica as number,
+    photoUrl: playerPhotoUrl(p.id),
+    teamLogoUrl: teamLogoUrl(p.id_team),
+  }));
+
+const FORMATIONS = [
+  { key: "3-4-3", def: 3, mid: 4, fwd: 3 },
+  { key: "3-5-2", def: 3, mid: 5, fwd: 2 },
+  { key: "4-3-3", def: 4, mid: 3, fwd: 3 },
+  { key: "4-4-2", def: 4, mid: 4, fwd: 2 },
+  { key: "4-5-1", def: 4, mid: 5, fwd: 1 },
+  { key: "5-3-2", def: 5, mid: 3, fwd: 2 },
+  { key: "5-4-1", def: 5, mid: 4, fwd: 1 },
+];
+const DEFAULT_FORMATION = "4-3-3";
+
+const MAX_BUDGET = 180_000_000;
+const MAX_CAPTAIN_PRICE = 18_000_000;
+---
+
+<Layout
+  title="Crear once"
+  description="Monta tu once con la táctica que quieras, sin superar los 180M€ de precio Fantástica."
+>
+  <div class="mb-6">
+    <h1 class="text-3xl font-black text-white">Crear once</h1>
+    <p class="mt-1 text-sm text-slate-400">
+      Máximo {formatMoney(MAX_BUDGET)} en precio Fantástica · el capitán debe costar menos de {formatMoney(MAX_CAPTAIN_PRICE)}
+    </p>
+  </div>
+
+  <div class="mb-6 flex flex-wrap gap-2" id="formation-selector">
+    {
+      FORMATIONS.map((f) => (
+        <button
+          type="button"
+          data-formation={f.key}
+          class="formation-btn rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+        >
+          {f.key}
+        </button>
+      ))
+    }
+  </div>
+
+  <div class="mb-6 rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+    <div class="flex flex-wrap items-center justify-between gap-2 text-sm">
+      <span class="font-medium text-white">
+        Presupuesto: <span id="budget-used">0.00</span> / {formatMoney(MAX_BUDGET).replace(" M€", "")} M€
+      </span>
+      <span class="text-slate-400" id="budget-remaining">Quedan {formatMoney(MAX_BUDGET)} disponibles</span>
+    </div>
+    <div class="mt-2 h-2 overflow-hidden rounded-full bg-slate-800">
+      <div id="budget-bar" class="h-full w-0 rounded-full bg-emerald-500 transition-all"></div>
+    </div>
+    <div class="mt-3 flex flex-wrap items-center gap-4 text-sm text-slate-400">
+      <span id="slots-status">0 / 11 jugadores</span>
+      <span id="captain-status">Sin capitán elegido</span>
+    </div>
+  </div>
+
+  <section id="pitch" class="space-y-3 rounded-2xl border border-white/10 bg-gradient-to-b from-emerald-950/30 to-slate-900/60 p-4 sm:p-6"></section>
+
+  <p class="mt-4 text-xs text-slate-500">
+    Los jugadores sin precio Fantástica todavía (fichajes muy recientes que Marca no ha dado de alta) no aparecen en el buscador.
+  </p>
+
+  <div
+    id="picker-backdrop"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4"
+  >
+    <div class="flex max-h-[80vh] w-full max-w-md flex-col rounded-2xl border border-white/10 bg-slate-900 p-4 shadow-2xl">
+      <div class="mb-3 flex items-center justify-between">
+        <h2 id="picker-title" class="text-lg font-bold text-white">Elegir jugador</h2>
+        <button type="button" id="picker-close" class="rounded-lg p-1 text-slate-400 hover:bg-white/10 hover:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <input
+        id="picker-search"
+        type="text"
+        placeholder="Buscar jugador..."
+        autocomplete="off"
+        class="mb-3 w-full rounded-xl border border-white/10 bg-slate-950/60 px-3 py-2 text-sm text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
+      />
+      <button
+        type="button"
+        id="picker-remove"
+        class="mb-2 hidden rounded-xl border border-rose-500/30 bg-rose-500/10 px-3 py-2 text-sm font-medium text-rose-300 hover:bg-rose-500/20"
+      >
+        Quitar jugador de este puesto
+      </button>
+      <ul id="picker-list" class="min-h-0 flex-1 space-y-1 overflow-y-auto"></ul>
+    </div>
+  </div>
+
+  <script define:vars={{ players, FORMATIONS, DEFAULT_FORMATION, MAX_BUDGET, MAX_CAPTAIN_PRICE, POSITION_SHORT, POSITION_COLORS }}>
+    const playersById = new Map(players.map((p) => [p.id, p]));
+
+    const state = {
+      formationKey: DEFAULT_FORMATION,
+      slots: [],
+      captainId: null,
+    };
+    let activeSlotId = null;
+
+    function formatMoneyClient(value) {
+      return `${(value / 1_000_000).toFixed(2)} M€`;
+    }
+
+    function buildSlots(formationKey, previousSlots) {
+      const f = FORMATIONS.find((x) => x.key === formationKey);
+      const counts = { 1: 1, 2: f.def, 3: f.mid, 4: f.fwd };
+      const slots = [];
+      for (const position of [1, 2, 3, 4]) {
+        const carried = (previousSlots || []).filter((s) => s.position === position);
+        for (let i = 0; i < counts[position]; i++) {
+          slots.push({
+            id: `${position}-${i}`,
+            position,
+            playerId: carried[i] ? carried[i].playerId : null,
+          });
+        }
+      }
+      return slots;
+    }
+
+    function usedIds(excludeSlotId) {
+      return new Set(
+        state.slots.filter((s) => s.playerId !== null && s.id !== excludeSlotId).map((s) => s.playerId)
+      );
+    }
+
+    function totalCost(excludeSlotId) {
+      let total = 0;
+      for (const slot of state.slots) {
+        if (slot.id === excludeSlotId || slot.playerId === null) continue;
+        total += playersById.get(slot.playerId).price;
+      }
+      return total;
+    }
+
+    const diacriticsPattern = new RegExp(`[${String.fromCharCode(0x0300)}-${String.fromCharCode(0x036f)}]`, "g");
+
+    function normalize(text) {
+      return text.normalize("NFD").replace(diacriticsPattern, "").toLowerCase();
+    }
+
+    function slotCard(slot) {
+      const player = slot.playerId !== null ? playersById.get(slot.playerId) : null;
+      const label = POSITION_SHORT[slot.position] ?? "?";
+      const color = POSITION_COLORS[slot.position] ?? "#64748b";
+
+      if (!player) {
+        return `
+          <button type="button" data-slot="${slot.id}" data-action="open"
+            class="flex h-24 w-20 flex-col items-center justify-center gap-1 rounded-xl border-2 border-dashed border-white/15 text-slate-400 transition-colors hover:border-emerald-500/50 hover:text-emerald-400 sm:h-28 sm:w-24">
+            <span class="text-2xl leading-none">+</span>
+            <span class="text-[10px] font-semibold uppercase tracking-wide">${label}</span>
+          </button>`;
+      }
+
+      const isCaptain = state.captainId === player.id;
+      const captainEligible = player.price < MAX_CAPTAIN_PRICE;
+
+      return `
+        <div class="relative flex h-24 w-20 flex-col items-center rounded-xl border border-white/10 bg-slate-900/80 pt-1.5 sm:h-28 sm:w-24" data-slot="${slot.id}">
+          <button type="button" data-slot="${slot.id}" data-action="remove"
+            class="absolute -right-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-rose-500 text-[10px] font-bold text-white hover:bg-rose-400">
+            ×
+          </button>
+          <button type="button" data-slot="${slot.id}" data-action="captain" ${captainEligible ? "" : "disabled"}
+            title="${captainEligible ? "Nombrar capitán" : `Debe costar menos de ${formatMoneyClient(MAX_CAPTAIN_PRICE)} para ser capitán`}"
+            class="absolute -left-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${
+              isCaptain
+                ? "bg-amber-400 text-slate-950"
+                : captainEligible
+                  ? "bg-slate-700 text-slate-300 hover:bg-amber-400/80 hover:text-slate-950"
+                  : "cursor-not-allowed bg-slate-800 text-slate-600"
+            }">
+            C
+          </button>
+          <button type="button" data-slot="${slot.id}" data-action="open" class="flex flex-1 flex-col items-center px-1 text-center">
+            <div class="relative h-10 w-10 overflow-hidden rounded-full bg-slate-800">
+              <img src="${player.photoUrl}" alt="" class="h-full w-full object-cover" loading="lazy" />
+              <img src="${player.teamLogoUrl}" alt="" class="absolute -bottom-0.5 -right-0.5 h-4 w-4 rounded-full bg-slate-950 p-0.5" />
+            </div>
+            <span class="mt-1 line-clamp-1 w-full text-[11px] font-medium leading-tight text-white">${player.name}</span>
+            <span class="text-[10px] font-semibold" style="color:${color}">${formatMoneyClient(player.price)}</span>
+          </button>
+        </div>`;
+    }
+
+    function render() {
+      // el capitán tiene que seguir en el 11 y seguir siendo elegible
+      if (state.captainId !== null) {
+        const stillIn = state.slots.some((s) => s.playerId === state.captainId);
+        const player = playersById.get(state.captainId);
+        if (!stillIn || !player || player.price >= MAX_CAPTAIN_PRICE) {
+          state.captainId = null;
+        }
+      }
+
+      const rows = [
+        { role: "Portero", position: 1 },
+        { role: "Defensas", position: 2 },
+        { role: "Centrocampistas", position: 3 },
+        { role: "Delanteros", position: 4 },
+      ];
+
+      const pitch = document.getElementById("pitch");
+      pitch.innerHTML = rows
+        .map((row) => {
+          const slots = state.slots.filter((s) => s.position === row.position);
+          return `
+            <div>
+              <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">${row.role}</p>
+              <div class="flex flex-wrap justify-center gap-3">
+                ${slots.map(slotCard).join("")}
+              </div>
+            </div>`;
+        })
+        .join("");
+
+      const filled = state.slots.filter((s) => s.playerId !== null);
+      const cost = totalCost(null);
+      const pct = Math.min(100, (cost / MAX_BUDGET) * 100);
+      const overBudget = cost > MAX_BUDGET;
+
+      document.getElementById("budget-used").textContent = (cost / 1_000_000).toFixed(2);
+      document.getElementById("budget-remaining").textContent = overBudget
+        ? `Superado por ${formatMoneyClient(cost - MAX_BUDGET)}`
+        : `Quedan ${formatMoneyClient(MAX_BUDGET - cost)} disponibles`;
+      document.getElementById("budget-remaining").className = overBudget ? "text-rose-400" : "text-slate-400";
+
+      const bar = document.getElementById("budget-bar");
+      bar.style.width = `${pct}%`;
+      bar.className = `h-full rounded-full transition-all ${overBudget ? "bg-rose-500" : "bg-emerald-500"}`;
+
+      document.getElementById("slots-status").textContent = `${filled.length} / ${state.slots.length} jugadores`;
+
+      const captainStatus = document.getElementById("captain-status");
+      captainStatus.textContent = state.captainId
+        ? `Capitán: ${playersById.get(state.captainId).name}`
+        : "Sin capitán elegido";
+      captainStatus.className = state.captainId ? "text-emerald-400" : "text-slate-400";
+
+      for (const btn of document.querySelectorAll(".formation-btn")) {
+        const active = btn.dataset.formation === state.formationKey;
+        btn.classList.toggle("bg-emerald-500/10", active);
+        btn.classList.toggle("text-emerald-400", active);
+        btn.classList.toggle("border-emerald-500/40", active);
+      }
+    }
+
+    function openPicker(slotId) {
+      activeSlotId = slotId;
+      const slot = state.slots.find((s) => s.id === slotId);
+      const label = { 1: "portero", 2: "defensa", 3: "centrocampista", 4: "delantero" }[slot.position];
+      document.getElementById("picker-title").textContent = `Elegir ${label}`;
+      document.getElementById("picker-search").value = "";
+      document.getElementById("picker-remove").classList.toggle("hidden", slot.playerId === null);
+      renderPickerList("");
+      document.getElementById("picker-backdrop").classList.remove("hidden");
+      document.getElementById("picker-backdrop").classList.add("flex");
+      document.getElementById("picker-search").focus();
+    }
+
+    function closePicker() {
+      activeSlotId = null;
+      document.getElementById("picker-backdrop").classList.add("hidden");
+      document.getElementById("picker-backdrop").classList.remove("flex");
+    }
+
+    function renderPickerList(query) {
+      const slot = state.slots.find((s) => s.id === activeSlotId);
+      const used = usedIds(activeSlotId);
+      const remaining = MAX_BUDGET - totalCost(activeSlotId);
+      const q = normalize(query.trim());
+
+      const candidates = players
+        .filter((p) => p.position === slot.position && !used.has(p.id))
+        .filter((p) => !q || normalize(p.name).includes(q))
+        .sort((a, b) => b.price - a.price);
+
+      const list = document.getElementById("picker-list");
+      if (candidates.length === 0) {
+        list.innerHTML = `<li class="p-3 text-center text-sm text-slate-500">Sin resultados.</li>`;
+        return;
+      }
+
+      list.innerHTML = candidates
+        .map((p) => {
+          const affordable = p.price <= remaining || p.id === slot.playerId;
+          return `
+            <li>
+              <button type="button" data-pick="${p.id}" ${affordable ? "" : "disabled"}
+                class="flex w-full items-center gap-3 rounded-xl px-2 py-2 text-left ${
+                  affordable ? "hover:bg-white/5" : "cursor-not-allowed opacity-40"
+                }">
+                <img src="${p.photoUrl}" alt="" class="h-9 w-9 shrink-0 rounded-full bg-slate-800 object-cover" loading="lazy" />
+                <span class="min-w-0 flex-1">
+                  <span class="block truncate text-sm font-medium text-white">${p.name}</span>
+                  <span class="block truncate text-xs text-slate-500">${p.teamName}</span>
+                </span>
+                <span class="shrink-0 text-sm font-semibold ${affordable ? "text-emerald-400" : "text-rose-400"}">
+                  ${formatMoneyClient(p.price)}
+                </span>
+              </button>
+            </li>`;
+        })
+        .join("");
+    }
+
+    document.getElementById("formation-selector").addEventListener("click", (e) => {
+      const btn = e.target.closest(".formation-btn");
+      if (!btn) return;
+      state.slots = buildSlots(btn.dataset.formation, state.slots);
+      state.formationKey = btn.dataset.formation;
+      render();
+    });
+
+    document.getElementById("pitch").addEventListener("click", (e) => {
+      const btn = e.target.closest("button[data-slot]");
+      if (!btn) return;
+      const slot = state.slots.find((s) => s.id === btn.dataset.slot);
+      const action = btn.dataset.action;
+
+      if (action === "open") {
+        openPicker(slot.id);
+      } else if (action === "remove") {
+        if (state.captainId === slot.playerId) state.captainId = null;
+        slot.playerId = null;
+        render();
+      } else if (action === "captain") {
+        state.captainId = state.captainId === slot.playerId ? null : slot.playerId;
+        render();
+      }
+    });
+
+    document.getElementById("picker-list").addEventListener("click", (e) => {
+      const btn = e.target.closest("button[data-pick]");
+      if (!btn || btn.disabled) return;
+      const slot = state.slots.find((s) => s.id === activeSlotId);
+      slot.playerId = Number(btn.dataset.pick);
+      closePicker();
+      render();
+    });
+
+    document.getElementById("picker-remove").addEventListener("click", () => {
+      const slot = state.slots.find((s) => s.id === activeSlotId);
+      if (state.captainId === slot.playerId) state.captainId = null;
+      slot.playerId = null;
+      closePicker();
+      render();
+    });
+
+    document.getElementById("picker-search").addEventListener("input", (e) => {
+      renderPickerList(e.target.value);
+    });
+
+    document.getElementById("picker-close").addEventListener("click", closePicker);
+    document.getElementById("picker-backdrop").addEventListener("click", (e) => {
+      if (e.target.id === "picker-backdrop") closePicker();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closePicker();
+    });
+
+    state.slots = buildSlots(state.formationKey, []);
+    render();
+  </script>
+</Layout>

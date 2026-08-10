@@ -1,0 +1,276 @@
+---
+import Layout from "../layouts/Layout.astro";
+import RankingList from "../components/RankingList.astro";
+import PlayersTable from "../components/PlayersTable.astro";
+import DonutChart from "../components/charts/DonutChart.astro";
+import CategoryBarChart from "../components/charts/CategoryBarChart.astro";
+import Histogram from "../components/charts/Histogram.astro";
+import ScatterPlot from "../components/charts/ScatterPlot.astro";
+import {
+  getAllPlayerSummaries,
+  getTeams,
+  formatMoney,
+  playerPhotoUrl,
+  teamLogoUrl,
+  POSITION_NAMES,
+  POSITION_COLORS,
+  url,
+} from "../lib/data";
+
+const summaries = getAllPlayerSummaries();
+const teams = getTeams();
+
+function pct(value: number, max: number): number {
+  return max > 0 ? (value / max) * 100 : 0;
+}
+
+// --- Puntos: lo primero, es lo que de verdad importa para jugar bien ---
+const byLastSeason = summaries
+  .filter((s) => s.lastSeason !== null)
+  .sort((a, b) => (b.lastSeason?.points ?? 0) - (a.lastSeason?.points ?? 0));
+const topLastSeason = byLastSeason.slice(0, 10);
+const maxLastSeasonPoints = topLastSeason[0]?.lastSeason?.points ?? 1;
+const lastSeasonLabel = topLastSeason[0]?.lastSeason?.season ?? "";
+
+const scatterPoints = byLastSeason
+  .filter((s) => (s.lastSeason?.points ?? 0) > 0)
+  .map((s) => ({
+    x: s.lastSeason?.points ?? 0,
+    y: Math.round((s.value / 1_000_000) * 100) / 100,
+    label: s.name,
+    href: url(`/jugadores/${s.id}`),
+  }));
+
+// --- Posiciones ---
+const positionStats = ([1, 2, 3, 4] as const).map((position) => {
+  const group = summaries.filter((s) => s.position === position);
+  const totalValue = group.reduce((sum, s) => sum + s.value, 0);
+  return {
+    position,
+    count: group.length,
+    avgValue: group.length ? totalValue / group.length : 0,
+    color: POSITION_COLORS[position],
+  };
+});
+
+// --- Valor ---
+const byValue = [...summaries].sort((a, b) => b.value - a.value);
+const topValue = byValue.slice(0, 10);
+const maxValue = topValue[0]?.value ?? 1;
+
+const byClause = [...summaries].sort((a, b) => b.clauseValue - a.clauseValue);
+const topClause = byClause.slice(0, 10);
+const maxClause = topClause[0]?.clauseValue ?? 1;
+
+const risers = summaries
+  .filter((s) => s.weeklyChange > 0)
+  .sort((a, b) => b.weeklyChange - a.weeklyChange)
+  .slice(0, 6);
+const maxRise = risers[0]?.weeklyChange ?? 1;
+
+const fallers = summaries
+  .filter((s) => s.weeklyChange < 0)
+  .sort((a, b) => a.weeklyChange - b.weeklyChange)
+  .slice(0, 6);
+const maxFall = Math.abs(fallers[0]?.weeklyChange ?? -1);
+
+const valueBuckets = [
+  { label: "<5M", min: 0, max: 5_000_000 },
+  { label: "5-10M", min: 5_000_000, max: 10_000_000 },
+  { label: "10-20M", min: 10_000_000, max: 20_000_000 },
+  { label: "20-40M", min: 20_000_000, max: 40_000_000 },
+  { label: "40-60M", min: 40_000_000, max: 60_000_000 },
+  { label: "60M+", min: 60_000_000, max: Infinity },
+].map((bucket) => ({
+  label: bucket.label,
+  count: summaries.filter((s) => s.value >= bucket.min && s.value < bucket.max).length,
+}));
+
+const teamTotals = teams
+  .map((team) => {
+    const squad = summaries.filter((s) => s.id_team === team.id);
+    const totalValue = squad.reduce((sum, s) => sum + s.value, 0);
+    const avgValue = squad.length ? totalValue / squad.length : 0;
+    return { team, totalValue, avgValue, count: squad.length };
+  })
+  .sort((a, b) => b.totalValue - a.totalValue);
+const maxTeamValue = teamTotals[0]?.totalValue ?? 1;
+---
+
+<Layout title="Estadísticas" description="Puntos, valor de mercado, cláusulas y rankings en Fantasy Marca">
+  <div class="mb-8">
+    <h1 class="text-3xl font-black text-white">Estadísticas y análisis</h1>
+    <p class="mt-1 text-sm text-slate-400">Basado en el catálogo completo de {summaries.length} jugadores</p>
+  </div>
+
+  <section class="mb-10">
+    <h2 class="mb-4 text-xl font-bold text-white">Mejores de la {lastSeasonLabel} (puntos)</h2>
+    <p class="mb-4 text-sm text-slate-500">
+      La temporada 26/27 no ha empezado — en cuanto se jueguen jornadas y actualices los datos, esta sección
+      pasará a mostrar los puntos de la temporada actual.
+    </p>
+    <RankingList
+      items={topLastSeason.map((p) => ({
+        key: p.id,
+        label: p.name,
+        sublabel: `${p.team_name} · media ${p.lastSeason?.avg.toFixed(2)}`,
+        valueLabel: `${p.lastSeason?.points} pts`,
+        barPercent: pct(p.lastSeason?.points ?? 0, maxLastSeasonPoints),
+        href: url(`/jugadores/${p.id}`),
+        imageUrl: playerPhotoUrl(p.id),
+      }))}
+    />
+  </section>
+
+  <section class="mb-10">
+    <h2 class="mb-4 text-xl font-bold text-white">Valor de mercado vs. puntos ({lastSeasonLabel})</h2>
+    <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+      <ScatterPlot points={scatterPoints} xLabel="Puntos temporada anterior" yLabel="Valor (M€)" />
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="mb-4 text-xl font-bold text-white">Distribución por posición</h2>
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
+        <p class="mb-4 text-sm font-medium text-slate-400">Jugadores por posición</p>
+        <DonutChart
+          segments={positionStats.map((s) => ({ label: POSITION_NAMES[s.position], value: s.count, color: s.color }))}
+          centerValue={String(summaries.length)}
+          centerLabel="jugadores"
+        />
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
+        <p class="mb-4 text-sm font-medium text-slate-400">Valor medio por posición</p>
+        <CategoryBarChart
+          title="Valor medio por posición"
+          bars={positionStats.map((s) => ({
+            label: POSITION_NAMES[s.position].slice(0, 3).toUpperCase(),
+            value: s.avgValue,
+            color: s.color,
+            valueLabel: formatMoney(s.avgValue),
+          }))}
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="mb-4 text-xl font-bold text-white">Distribución de valores de mercado</h2>
+    <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+      <Histogram buckets={valueBuckets} title="Distribución de valores de mercado" />
+    </div>
+  </section>
+
+  <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+    <section>
+      <h2 class="mb-4 text-xl font-bold text-white">Jugadores más valiosos</h2>
+      <RankingList
+        items={topValue.map((p) => ({
+          key: p.id,
+          label: p.name,
+          sublabel: p.team_name,
+          valueLabel: formatMoney(p.value),
+          barPercent: pct(p.value, maxValue),
+          href: url(`/jugadores/${p.id}`),
+          imageUrl: playerPhotoUrl(p.id),
+        }))}
+      />
+    </section>
+
+    <section>
+      <h2 class="mb-4 text-xl font-bold text-white">Cláusulas más altas</h2>
+      <RankingList
+        items={topClause.map((p) => ({
+          key: p.id,
+          label: p.name,
+          sublabel: p.team_name,
+          valueLabel: formatMoney(p.clauseValue),
+          barPercent: pct(p.clauseValue, maxClause),
+          href: url(`/jugadores/${p.id}`),
+          imageUrl: playerPhotoUrl(p.id),
+        }))}
+      />
+    </section>
+
+    <section>
+      <h2 class="mb-4 text-xl font-bold text-white">Mayor subida de valor (semana)</h2>
+      {
+        risers.length === 0 ? (
+          <p class="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-500">
+            Nadie ha subido de valor esta semana todavía.
+          </p>
+        ) : (
+          <RankingList
+            items={risers.map((p) => ({
+              key: p.id,
+              label: p.name,
+              sublabel: p.team_name,
+              valueLabel: `▲ ${formatMoney(p.weeklyChange)}`,
+              barPercent: pct(p.weeklyChange, maxRise),
+              href: url(`/jugadores/${p.id}`),
+              imageUrl: playerPhotoUrl(p.id),
+              accent: "positive" as const,
+            }))}
+          />
+        )
+      }
+    </section>
+
+    <section>
+      <h2 class="mb-4 text-xl font-bold text-white">Mayor caída de valor (semana)</h2>
+      {
+        fallers.length === 0 ? (
+          <p class="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-500">
+            Nadie ha bajado de valor esta semana todavía.
+          </p>
+        ) : (
+          <RankingList
+            items={fallers.map((p) => ({
+              key: p.id,
+              label: p.name,
+              sublabel: p.team_name,
+              valueLabel: `▼ ${formatMoney(Math.abs(p.weeklyChange))}`,
+              barPercent: pct(Math.abs(p.weeklyChange), maxFall),
+              href: url(`/jugadores/${p.id}`),
+              imageUrl: playerPhotoUrl(p.id),
+              accent: "negative" as const,
+            }))}
+          />
+        )
+      }
+    </section>
+  </div>
+
+  <section class="mt-10">
+    <h2 class="mb-4 text-xl font-bold text-white">Valor total de plantilla por equipo</h2>
+    <div class="space-y-2">
+      {
+        teamTotals.map((t, index) => (
+          <div class="flex items-center gap-3 rounded-xl border border-white/10 bg-slate-900/60 p-3">
+            <span class="w-5 shrink-0 text-center text-sm font-bold text-slate-600">{index + 1}</span>
+            <img src={teamLogoUrl(t.team.id)} alt="" class="h-8 w-8 shrink-0 object-contain" loading="lazy" />
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center justify-between gap-2">
+                <p class="truncate text-sm font-medium text-white">{t.team.name}</p>
+                <p class="shrink-0 text-sm font-bold text-white">{formatMoney(t.totalValue)}</p>
+              </div>
+              <p class="text-xs text-slate-500">
+                {t.count} jugadores · media {formatMoney(t.avgValue)}
+              </p>
+              <div class="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-800">
+                <div class="h-full rounded-full bg-emerald-500" style={`width:${Math.max(pct(t.totalValue, maxTeamValue), 3)}%`} />
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mt-10">
+    <h2 class="mb-4 text-xl font-bold text-white">Todos los jugadores</h2>
+    <p class="mb-4 text-sm text-slate-500">Busca, filtra por equipo/posición y ordena cualquier columna haciendo clic en la cabecera.</p>
+    <PlayersTable players={summaries} teams={teams} />
+  </section>
+</Layout>
