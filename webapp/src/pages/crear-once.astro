@@ -42,11 +42,29 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
   title="Crear once"
   description="Monta tu once con la táctica que quieras, sin superar los 180M€ de precio Fantástica."
 >
-  <div class="mb-6">
-    <h1 class="text-3xl font-black text-white">Crear once</h1>
-    <p class="mt-1 text-sm text-slate-400">
-      Máximo {formatMoney(MAX_BUDGET)} en precio Fantástica · el capitán debe costar menos de {formatMoney(MAX_CAPTAIN_PRICE)}
-    </p>
+  <div class="mb-6 flex flex-wrap items-start justify-between gap-3">
+    <div>
+      <h1 class="text-3xl font-black text-white">Crear once</h1>
+      <p class="mt-1 text-sm text-slate-400">
+        Máximo {formatMoney(MAX_BUDGET)} en precio Fantástica · el capitán debe costar menos de {formatMoney(MAX_CAPTAIN_PRICE)}
+      </p>
+    </div>
+    <div class="flex shrink-0 gap-2">
+      <button
+        type="button"
+        id="share-whatsapp"
+        class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-medium text-emerald-400 transition-colors hover:bg-emerald-500/20"
+      >
+        Compartir por WhatsApp
+      </button>
+      <button
+        type="button"
+        id="clear-team"
+        class="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-400 transition-colors hover:border-rose-500/40 hover:text-rose-300"
+      >
+        Vaciar equipo
+      </button>
+    </div>
   </div>
 
   <div class="mb-6 flex flex-wrap gap-2" id="formation-selector">
@@ -118,6 +136,7 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
 
   <script define:vars={{ players, FORMATIONS, DEFAULT_FORMATION, MAX_BUDGET, MAX_CAPTAIN_PRICE, POSITION_SHORT, POSITION_COLORS }}>
     const playersById = new Map(players.map((p) => [p.id, p]));
+    const STORAGE_KEY = "fantasymarca:crear-once";
 
     const state = {
       formationKey: DEFAULT_FORMATION,
@@ -128,6 +147,46 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
 
     function formatMoneyClient(value) {
       return `${(value / 1_000_000).toFixed(2)} M€`;
+    }
+
+    // Descarta cualquier jugador guardado que ya no exista en el catálogo actual
+    // (p.ej. si en una actualización de datos se queda sin precio Fantástica).
+    function sanitizeSavedSlots(rawSlots) {
+      if (!Array.isArray(rawSlots)) return [];
+      return rawSlots
+        .filter((s) => s && typeof s.position === "number")
+        .map((s) => ({
+          id: String(s.id ?? ""),
+          position: s.position,
+          playerId: typeof s.playerId === "number" && playersById.has(s.playerId) ? s.playerId : null,
+        }));
+    }
+
+    function loadSavedState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        const formationKey = FORMATIONS.some((f) => f.key === parsed.formationKey) ? parsed.formationKey : DEFAULT_FORMATION;
+        return {
+          formationKey,
+          slots: sanitizeSavedSlots(parsed.slots),
+          captainId: typeof parsed.captainId === "number" ? parsed.captainId : null,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem(
+          STORAGE_KEY,
+          JSON.stringify({ formationKey: state.formationKey, slots: state.slots, captainId: state.captainId })
+        );
+      } catch {
+        // Modo privado, cuota llena, etc.: si no se puede guardar, se sigue usando la app sin más.
+      }
     }
 
     function buildSlots(formationKey, previousSlots) {
@@ -213,6 +272,13 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
         </div>`;
     }
 
+    const POSITION_ROWS = [
+      { role: "Portero", position: 1 },
+      { role: "Defensas", position: 2 },
+      { role: "Centrocampistas", position: 3 },
+      { role: "Delanteros", position: 4 },
+    ];
+
     function render() {
       // el capitán tiene que seguir en el 11 y seguir siendo elegible
       if (state.captainId !== null) {
@@ -223,12 +289,7 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
         }
       }
 
-      const rows = [
-        { role: "Portero", position: 1 },
-        { role: "Defensas", position: 2 },
-        { role: "Centrocampistas", position: 3 },
-        { role: "Delanteros", position: 4 },
-      ];
+      const rows = POSITION_ROWS;
 
       const pitch = document.getElementById("pitch");
       pitch.innerHTML = rows
@@ -273,6 +334,8 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
         btn.classList.toggle("text-emerald-400", active);
         btn.classList.toggle("border-emerald-500/40", active);
       }
+
+      saveState();
     }
 
     function openPicker(slotId) {
@@ -389,7 +452,45 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       if (e.key === "Escape") closePicker();
     });
 
-    state.slots = buildSlots(state.formationKey, []);
+    document.getElementById("clear-team").addEventListener("click", () => {
+      if (!confirm("¿Vaciar el once actual?")) return;
+      state.captainId = null;
+      state.slots = buildSlots(state.formationKey, []);
+      render();
+    });
+
+    function buildWhatsAppMessage() {
+      const groups = POSITION_ROWS.map((row) => {
+        const names = state.slots
+          .filter((s) => s.position === row.position && s.playerId !== null)
+          .map((s) => {
+            const player = playersById.get(s.playerId);
+            return state.captainId === player.id ? `${player.name} (c)` : player.name;
+          });
+        return { role: row.role, names };
+      }).filter((g) => g.names.length > 0);
+
+      return groups.map((g) => `*${g.role}*\n${g.names.join("\n")}`).join("\n\n");
+    }
+
+    document.getElementById("share-whatsapp").addEventListener("click", () => {
+      const filled = state.slots.filter((s) => s.playerId !== null);
+      if (filled.length === 0) {
+        alert("Elige al menos un jugador antes de compartir.");
+        return;
+      }
+      const text = buildWhatsAppMessage();
+      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+    });
+
+    const saved = loadSavedState();
+    if (saved) {
+      state.formationKey = saved.formationKey;
+      state.slots = buildSlots(saved.formationKey, saved.slots);
+      state.captainId = saved.captainId;
+    } else {
+      state.slots = buildSlots(state.formationKey, []);
+    }
     render();
   </script>
 </Layout>

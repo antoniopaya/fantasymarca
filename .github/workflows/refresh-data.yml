@@ -1,0 +1,56 @@
+name: Refresh Fantasy Marca data
+
+# Antes esto se corría a mano 1-2 veces por semana (ver fantasy_api/main.py).
+# Lunes y jueves cubre "después del fin de semana de partidos" y "antes de la
+# siguiente jornada", que es cuando más cambian valores/cláusulas/calendario.
+on:
+  schedule:
+    - cron: "0 7 * * 1,4"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install curl_cffi
+
+      - name: Write credentials
+        # Nunca interpolar el secret directamente en el script de shell: se pasa
+        # por env y se escribe con json.dump para no depender de escaping manual.
+        env:
+          X_AUTH: ${{ secrets.FANTASY_X_AUTH }}
+          REFRESH_TOKEN: ${{ secrets.FANTASY_REFRESH_TOKEN }}
+        run: |
+          python -c "
+          import json, os
+          with open('fantasy_api/auth_store.json', 'w', encoding='utf-8') as f:
+              json.dump({'x_auth': os.environ['X_AUTH'], 'refresh_token': os.environ['REFRESH_TOKEN']}, f)
+          "
+
+      - name: Run main.py
+        working-directory: fantasy_api
+        run: python main.py
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add webapp/public/data
+          if git diff --cached --quiet; then
+            echo "Sin cambios en los datos."
+          else
+            git commit -m "Actualiza datos de fantasy.marca.com [automated]"
+            git push
+          fi

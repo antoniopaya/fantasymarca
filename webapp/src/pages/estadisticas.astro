@@ -79,6 +79,28 @@ const byFantastica = summaries
 const topFantastica = byFantastica.slice(0, 10);
 const maxFantastica = topFantastica[0]?.precioFantastica ?? 1;
 
+// --- Gangas: el mercado ya paga mucho más de lo que cuesta en la liga ---
+const bargains = byFantastica
+  .filter((s) => s.value > (s.precioFantastica as number))
+  .map((s) => ({
+    ...s,
+    bargainPct: ((s.value - (s.precioFantastica as number)) / (s.precioFantastica as number)) * 100,
+  }))
+  .sort((a, b) => b.bargainPct - a.bargainPct)
+  .slice(0, 10);
+const maxBargainPct = bargains[0]?.bargainPct ?? 1;
+
+// --- Ratio puntos/precio: rendimiento por millón pagado en la liga ---
+const valueForMoney = byFantastica
+  .filter((s) => (s.lastSeason?.points ?? 0) > 0)
+  .map((s) => ({
+    ...s,
+    ratio: (s.lastSeason?.points ?? 0) / ((s.precioFantastica as number) / 1_000_000),
+  }))
+  .sort((a, b) => b.ratio - a.ratio)
+  .slice(0, 10);
+const maxRatio = valueForMoney[0]?.ratio ?? 1;
+
 const byClause = [...summaries].sort((a, b) => b.clauseValue - a.clauseValue);
 const topClause = byClause.slice(0, 10);
 const maxClause = topClause[0]?.clauseValue ?? 1;
@@ -124,10 +146,12 @@ const maxTeamFantastica = teamTotals[0]?.totalFantastica ?? 1;
 // El gráfico precio-vs-puntos va primero: es el más útil para decidir fichajes.
 const sections = [
   { id: "valor-vs-puntos", label: "Precio vs. puntos" },
+  { id: "gangas", label: "Gangas" },
   { id: "puntos", label: "Puntos" },
   { id: "posiciones", label: "Posiciones" },
   { id: "distribucion-valor", label: "Distribución de precios" },
   { id: "mas-valiosos", label: "Más valiosos" },
+  { id: "ratio-puntos-precio", label: "Ratio puntos/precio" },
   { id: "clausulas", label: "Cláusulas" },
   { id: "subidas", label: "Subidas de valor" },
   { id: "bajadas", label: "Bajadas de valor" },
@@ -190,6 +214,34 @@ const sections = [
             positionNames={POSITION_NAMES}
           />
         </div>
+      </section>
+
+      <section id="gangas" class="mb-10 scroll-mt-24">
+        <h2 class="mb-4 text-xl font-bold text-white">Gangas</h2>
+        <p class="mb-4 text-sm text-slate-500">
+          Jugadores cuyo valor de mercado ya está muy por encima de lo que cuestan en la liga: la mejor relación
+          calidad-precio para fichar en tu once.
+        </p>
+        {
+          bargains.length === 0 ? (
+            <p class="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-500">
+              Ahora mismo nadie cuesta menos en la liga de lo que vale en el mercado.
+            </p>
+          ) : (
+            <RankingList
+              items={bargains.map((p) => ({
+                key: p.id,
+                label: p.name,
+                sublabel: `${p.team_name} · Fantástica ${formatMoney(p.precioFantastica as number)} · Mercado ${formatMoney(p.value)}`,
+                valueLabel: `▲ ${p.bargainPct.toFixed(0)}%`,
+                barPercent: pct(p.bargainPct, maxBargainPct),
+                href: url(`/jugadores/${p.id}`),
+                imageUrl: playerPhotoUrl(p.id),
+                accent: "positive" as const,
+              }))}
+            />
+          )
+        }
       </section>
 
       <section id="puntos" class="mb-10 scroll-mt-24">
@@ -258,6 +310,29 @@ const sections = [
               imageUrl: playerPhotoUrl(p.id),
             }))}
           />
+        </section>
+
+        <section id="ratio-puntos-precio" class="scroll-mt-24">
+          <h2 class="mb-4 text-xl font-bold text-white">Ratio puntos/precio</h2>
+          {
+            valueForMoney.length === 0 ? (
+              <p class="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-500">
+                Todavía no hay puntos de la {lastSeasonLabel} para calcular el ratio.
+              </p>
+            ) : (
+              <RankingList
+                items={valueForMoney.map((p) => ({
+                  key: p.id,
+                  label: p.name,
+                  sublabel: `${p.team_name} · ${p.lastSeason?.points} pts · ${formatMoney(p.precioFantastica as number)}`,
+                  valueLabel: `${p.ratio.toFixed(1)} pts/M€`,
+                  barPercent: pct(p.ratio, maxRatio),
+                  href: url(`/jugadores/${p.id}`),
+                  imageUrl: playerPhotoUrl(p.id),
+                }))}
+              />
+            )
+          }
         </section>
 
         <section id="clausulas" class="scroll-mt-24">

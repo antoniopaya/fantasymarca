@@ -61,6 +61,18 @@ const columns = [
       <option value="3">Centrocampista</option>
       <option value="4">Delantero</option>
     </select>
+    <select
+      id="stats-price-filter"
+      class="rounded-xl border border-white/10 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
+    >
+      <option value="all">Cualquier precio Fantástica</option>
+      <option value="0-12000000">&lt;12M€</option>
+      <option value="12000000-15000000">12-15M€</option>
+      <option value="15000000-18000000">15-18M€</option>
+      <option value="18000000-21000000">18-21M€</option>
+      <option value="21000000-24000000">21-24M€</option>
+      <option value="24000000-999000000">24M€+</option>
+    </select>
   </div>
 
   <p id="stats-count" class="text-sm text-slate-500">{players.length} jugadores</p>
@@ -147,6 +159,7 @@ const columns = [
   const searchInput = document.getElementById("stats-search") as HTMLInputElement;
   const teamSelect = document.getElementById("stats-team-filter") as HTMLSelectElement;
   const positionSelect = document.getElementById("stats-position-filter") as HTMLSelectElement;
+  const priceSelect = document.getElementById("stats-price-filter") as HTMLSelectElement;
   const countEl = document.getElementById("stats-count") as HTMLElement;
   const noResults = document.getElementById("stats-no-results") as HTMLElement;
   const headers = Array.from(document.querySelectorAll<HTMLTableCellElement>("[data-sort-key]"));
@@ -172,13 +185,16 @@ const columns = [
     const query = normalize(searchInput.value.trim());
     const team = teamSelect.value;
     const position = positionSelect.value;
+    const priceRange = priceSelect.value === "all" ? null : priceSelect.value.split("-").map(Number);
     let visible = 0;
 
     for (const row of rows) {
       const matchesName = normalize(row.dataset.name ?? "").includes(query);
       const matchesTeam = team === "0" || row.dataset.team === team;
       const matchesPosition = position === "0" || row.dataset.position === position;
-      const show = matchesName && matchesTeam && matchesPosition;
+      const price = parseFloat(row.dataset.preciofantastica ?? "-1");
+      const matchesPrice = !priceRange || (price >= priceRange[0] && price < priceRange[1]);
+      const show = matchesName && matchesTeam && matchesPosition && matchesPrice;
       row.classList.toggle("hidden", !show);
       if (show) visible++;
     }
@@ -224,6 +240,7 @@ const columns = [
   searchInput.addEventListener("input", applyFilters);
   teamSelect.addEventListener("change", applyFilters);
   positionSelect.addEventListener("change", applyFilters);
+  priceSelect.addEventListener("change", applyFilters);
 
   setSortIndicator("value", "desc");
   updateRanks();
