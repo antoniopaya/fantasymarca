@@ -24,46 +24,99 @@ function scaleY(v: number): number {
   return padding.top + plotHeight - ((v - minV) / range) * plotHeight;
 }
 
-const linePath = values.map((v, i) => `${i === 0 ? "M" : "L"} ${scaleX(i).toFixed(1)} ${scaleY(v).toFixed(1)}`).join(" ");
+const linePath = values
+  .map(
+    (v, i) =>
+      `${i === 0 ? "M" : "L"} ${scaleX(i).toFixed(1)} ${scaleY(v).toFixed(1)}`,
+  )
+  .join(" ");
 const baseline = height - padding.bottom;
 const areaPath = `${linePath} L ${scaleX(values.length - 1).toFixed(1)} ${baseline} L ${scaleX(0).toFixed(1)} ${baseline} Z`;
 
 const yTicks = [minV, (minV + maxV) / 2, maxV];
 const lastIndex = values.length - 1;
 
-const chartData = points.map((p) => ({ date: p.date, value: Math.round((p.value / 1_000_000) * 100) / 100 }));
+const chartData = points.map((p) => ({
+  date: p.date,
+  value: Math.round((p.value / 1_000_000) * 100) / 100,
+}));
 ---
 
 <div class="line-chart relative" data-points={JSON.stringify(chartData)}>
-  <svg viewBox={`0 0 ${width} ${height}`} width="100%" height={height} class="overflow-visible">
+  <svg
+    viewBox={`0 0 ${width} ${height}`}
+    width="100%"
+    height={height}
+    class="overflow-visible"
+  >
     {
       yTicks.map((t) => (
         <g>
-          <line x1={padding.left} y1={scaleY(t)} x2={width - padding.right} y2={scaleY(t)} stroke="#2c2c2a" stroke-width="1" />
-          <text x={padding.left - 8} y={scaleY(t) + 3} text-anchor="end" font-size="9" class="fill-slate-500">
+          <line
+            x1={padding.left}
+            y1={scaleY(t)}
+            x2={width - padding.right}
+            y2={scaleY(t)}
+            stroke="#2c2c2a"
+            stroke-width="1"
+          />
+          <text
+            x={padding.left - 8}
+            y={scaleY(t) + 3}
+            text-anchor="end"
+            font-size="9"
+            class="fill-slate-500"
+          >
             {t.toFixed(0)}M
           </text>
         </g>
       ))
     }
-    <path d={areaPath} fill={color} fill-opacity="0.1" stroke="none" />
-    <path d={linePath} fill="none" stroke={color} stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
-    <circle cx={scaleX(lastIndex)} cy={scaleY(values[lastIndex])} r="4" fill={color} stroke="#1a1a19" stroke-width="1.5" />
+    <path d={areaPath} fill={color} fill-opacity="0.1" stroke="none"></path>
+    <path
+      d={linePath}
+      fill="none"
+      stroke={color}
+      stroke-width="2"
+      stroke-linejoin="round"
+      stroke-linecap="round"></path>
+    <circle
+      cx={scaleX(lastIndex)}
+      cy={scaleY(values[lastIndex])}
+      r="4"
+      fill={color}
+      stroke="#1a1a19"
+      stroke-width="1.5"></circle>
 
-    <line class="crosshair-line" x1="0" y1={padding.top} x2="0" y2={baseline} stroke="#898781" stroke-width="1" opacity="0" />
-    <circle class="crosshair-dot" r="4" fill={color} stroke="#1a1a19" stroke-width="1.5" opacity="0" />
+    <line
+      class="crosshair-line"
+      x1="0"
+      y1={padding.top}
+      x2="0"
+      y2={baseline}
+      stroke="#898781"
+      stroke-width="1"
+      opacity="0"></line>
+    <circle
+      class="crosshair-dot"
+      r="4"
+      fill={color}
+      stroke="#1a1a19"
+      stroke-width="1.5"
+      opacity="0"></circle>
     <rect
       class="hover-target"
       x={padding.left}
       y={padding.top}
       width={plotWidth}
       height={plotHeight}
-      fill="transparent"
-    />
+      fill="transparent"></rect>
   </svg>
-  <div class="chart-tooltip pointer-events-none absolute hidden rounded-lg border border-white/10 bg-slate-900 px-2.5 py-1.5 text-xs shadow-lg">
-    <p class="tooltip-date text-slate-400" />
-    <p class="tooltip-value font-semibold text-white" />
+  <div
+    class="chart-tooltip pointer-events-none absolute hidden rounded-lg border border-white/10 bg-slate-900 px-2.5 py-1.5 text-xs shadow-lg"
+  >
+    <p class="tooltip-date text-slate-400"></p>
+    <p class="tooltip-value font-semibold text-white"></p>
   </div>
 </div>
 
@@ -75,8 +128,12 @@ const chartData = points.map((p) => ({ date: p.date, value: Math.round((p.value 
 
     const svg = chart.querySelector("svg") as SVGSVGElement;
     const hoverTarget = chart.querySelector(".hover-target") as SVGRectElement;
-    const crosshairLine = chart.querySelector(".crosshair-line") as SVGLineElement;
-    const crosshairDot = chart.querySelector(".crosshair-dot") as SVGCircleElement;
+    const crosshairLine = chart.querySelector(
+      ".crosshair-line",
+    ) as SVGLineElement;
+    const crosshairDot = chart.querySelector(
+      ".crosshair-dot",
+    ) as SVGCircleElement;
     const tooltip = chart.querySelector(".chart-tooltip") as HTMLElement;
     const tooltipDate = chart.querySelector(".tooltip-date") as HTMLElement;
     const tooltipValue = chart.querySelector(".tooltip-value") as HTMLElement;
@@ -107,7 +164,8 @@ const chartData = points.map((p) => ({ date: p.date, value: Math.round((p.value 
       if (!point) return;
 
       const px = rectX + (index / Math.max(data.length - 1, 1)) * rectWidth;
-      const py = rectY + rectHeight - ((point.value - minV) / range) * rectHeight;
+      const py =
+        rectY + rectHeight - ((point.value - minV) / range) * rectHeight;
 
       crosshairLine.setAttribute("x1", String(px));
       crosshairLine.setAttribute("x2", String(px));
@@ -123,7 +181,7 @@ const chartData = points.map((p) => ({ date: p.date, value: Math.round((p.value 
       const bounds = chart.getBoundingClientRect();
       const svgBounds = svg.getBoundingClientRect();
       const ratio = svgBounds.width / svg.viewBox.baseVal.width;
-      const left = (px * ratio) + (svgBounds.left - bounds.left);
+      const left = px * ratio + (svgBounds.left - bounds.left);
       tooltip.style.left = `${Math.min(Math.max(left, 40), bounds.width - 40)}px`;
       tooltip.style.top = "0px";
     }
@@ -134,7 +192,9 @@ const chartData = points.map((p) => ({ date: p.date, value: Math.round((p.value 
       tooltip.classList.add("hidden");
     }
 
-    hoverTarget.addEventListener("mousemove", (e) => handleMove(e.clientX, e.clientY));
+    hoverTarget.addEventListener("mousemove", (e) =>
+      handleMove(e.clientX, e.clientY),
+    );
     hoverTarget.addEventListener("mouseleave", hide);
     hoverTarget.addEventListener(
       "touchmove",
@@ -142,7 +202,7 @@ const chartData = points.map((p) => ({ date: p.date, value: Math.round((p.value 
         const touch = e.touches[0];
         if (touch) handleMove(touch.clientX, touch.clientY);
       },
-      { passive: true }
+      { passive: true },
     );
     hoverTarget.addEventListener("touchend", hide);
   });

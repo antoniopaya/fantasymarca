@@ -11,5 +11,12 @@ const nextGw = gameweeks.find((gw) => gw.number === selected.number + 1);
 ---
 
 <Layout title="Próxima jornada" description={`Partidos de la ${selected.name}`}>
-  <GameweekView selected={selected} matches={matches} gameweeks={gameweeks} isNext prevGw={prevGw} nextGw={nextGw} />
+  <GameweekView
+    selected={selected}
+    matches={matches}
+    gameweeks={gameweeks}
+    isNext
+    prevGw={prevGw}
+    nextGw={nextGw}
+  />
 </Layout>

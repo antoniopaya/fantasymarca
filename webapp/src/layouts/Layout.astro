@@ -9,7 +9,10 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Panel de Fantasy Marca: jornadas, jugadores y estadísticas." } = Astro.props;
+const {
+  title,
+  description = "Panel de Fantasy Marca: jornadas, jugadores y estadísticas.",
+} = Astro.props;
 const fullTitle = title ? `${title} · FantasyMarca` : "FantasyMarca";
 ---
 

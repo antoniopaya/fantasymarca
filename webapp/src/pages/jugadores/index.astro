@@ -1,37 +1,49 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import PlayerCard from "../../components/PlayerCard.astro";
-import { getAllPlayerSummaries, getTeams, formatMoney, POSITION_NAMES, playerPhotoUrl, teamLogoUrl } from "../../lib/data";
+import {
+  getAllPlayerSummaries,
+  getTeams,
+  formatMoney,
+  POSITION_NAMES,
+  playerPhotoUrl,
+  teamLogoUrl,
+} from "../../lib/data";
 
 const players = [...getAllPlayerSummaries()].sort((a, b) => b.value - a.value);
 const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
 ---
 
-<Layout title="Jugadores" description="Busca, filtra y ordena jugadores de LaLiga Fantasy por nombre, equipo, posición o valor.">
+<Layout
+  title="Jugadores"
+  description="Busca, filtra y ordena jugadores de LaLiga Fantasy por nombre, equipo, posición o valor."
+>
   <div class="mb-8">
     <h1 class="text-3xl font-black text-white">Buscar jugadores</h1>
-    <p class="mt-1 text-sm text-slate-400">{players.length} jugadores en el catálogo</p>
+    <p class="mt-1 text-sm text-slate-400">
+      {players.length} jugadores en el catálogo
+    </p>
   </div>
 
   <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
     <div class="relative flex-1">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500"
+        class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-slate-500"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
         stroke-width="2"
       >
-        <circle cx="11" cy="11" r="8" />
-        <path stroke-linecap="round" d="m21 21-4.3-4.3" />
+        <circle cx="11" cy="11" r="8"></circle>
+        <path stroke-linecap="round" d="m21 21-4.3-4.3"></path>
       </svg>
       <input
         id="search-input"
         type="text"
         placeholder="Buscar por nombre..."
         autocomplete="off"
-        class="w-full rounded-xl border border-white/10 bg-slate-900/60 py-2.5 pl-10 pr-4 text-sm text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
+        class="w-full rounded-xl border border-white/10 bg-slate-900/60 py-2.5 pr-4 pl-10 text-sm text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
       />
     </div>
     <select
@@ -46,7 +58,11 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       class="rounded-xl border border-white/10 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
     >
       <option value="0">Todas las posiciones</option>
-      {Object.entries(POSITION_NAMES).map(([value, label]) => <option value={value}>{label}</option>)}
+      {
+        Object.entries(POSITION_NAMES).map(([value, label]) => (
+          <option value={value}>{label}</option>
+        ))
+      }
     </select>
     <select
       id="sort-select"
@@ -62,9 +78,14 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
     </select>
   </div>
 
-  <p id="results-count" class="mb-4 text-sm text-slate-500">{players.length} jugadores</p>
+  <p id="results-count" class="mb-4 text-sm text-slate-500">
+    {players.length} jugadores
+  </p>
 
-  <div id="players-grid" class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+  <div
+    id="players-grid"
+    class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3"
+  >
     {
       players.map((player) => (
         <div
@@ -85,7 +106,11 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
             photoUrl={playerPhotoUrl(player.id)}
             teamLogoUrl={teamLogoUrl(player.id_team)}
             valueLabel={formatMoney(player.value)}
-            precioFantasticaLabel={player.precioFantastica ? formatMoney(player.precioFantastica) : undefined}
+            precioFantasticaLabel={
+              player.precioFantastica
+                ? formatMoney(player.precioFantastica)
+                : undefined
+            }
           />
         </div>
       ))
@@ -98,17 +123,25 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
 
   <script>
     const input = document.getElementById("search-input") as HTMLInputElement;
-    const teamSelect = document.getElementById("team-filter") as HTMLSelectElement;
-    const positionSelect = document.getElementById("position-filter") as HTMLSelectElement;
-    const sortSelect = document.getElementById("sort-select") as HTMLSelectElement;
+    const teamSelect = document.getElementById(
+      "team-filter",
+    ) as HTMLSelectElement;
+    const positionSelect = document.getElementById(
+      "position-filter",
+    ) as HTMLSelectElement;
+    const sortSelect = document.getElementById(
+      "sort-select",
+    ) as HTMLSelectElement;
     const countEl = document.getElementById("results-count") as HTMLElement;
     const noResults = document.getElementById("no-results") as HTMLElement;
     const grid = document.getElementById("players-grid") as HTMLElement;
-    const cards = Array.from(grid.querySelectorAll<HTMLElement>("[data-player-card]"));
+    const cards = Array.from(
+      grid.querySelectorAll<HTMLElement>("[data-player-card]"),
+    );
 
     const diacriticsPattern = new RegExp(
       `[${String.fromCharCode(0x0300)}-${String.fromCharCode(0x036f)}]`,
-      "g"
+      "g",
     );
 
     function normalize(text: string): string {
@@ -122,9 +155,12 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       let visible = 0;
 
       cards.forEach((card) => {
-        const matchesName = card.dataset.name ? normalize(card.dataset.name).includes(query) : true;
+        const matchesName = card.dataset.name
+          ? normalize(card.dataset.name).includes(query)
+          : true;
         const matchesTeam = team === "0" || card.dataset.team === team;
-        const matchesPosition = position === "0" || card.dataset.position === position;
+        const matchesPosition =
+          position === "0" || card.dataset.position === position;
         const show = matchesName && matchesTeam && matchesPosition;
         card.classList.toggle("hidden", !show);
         if (show) visible++;
@@ -139,20 +175,38 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       const sorted = [...cards].sort((a, b) => {
         switch (mode) {
           case "value_asc":
-            return parseFloat(a.dataset.value ?? "0") - parseFloat(b.dataset.value ?? "0");
+            return (
+              parseFloat(a.dataset.value ?? "0") -
+              parseFloat(b.dataset.value ?? "0")
+            );
           case "fantastica_desc":
-            return parseFloat(b.dataset.fantastica ?? "-1") - parseFloat(a.dataset.fantastica ?? "-1");
+            return (
+              parseFloat(b.dataset.fantastica ?? "-1") -
+              parseFloat(a.dataset.fantastica ?? "-1")
+            );
           case "fantastica_asc":
-            return parseFloat(a.dataset.fantastica ?? "-1") - parseFloat(b.dataset.fantastica ?? "-1");
+            return (
+              parseFloat(a.dataset.fantastica ?? "-1") -
+              parseFloat(b.dataset.fantastica ?? "-1")
+            );
           case "clause_desc":
-            return parseFloat(b.dataset.clause ?? "0") - parseFloat(a.dataset.clause ?? "0");
+            return (
+              parseFloat(b.dataset.clause ?? "0") -
+              parseFloat(a.dataset.clause ?? "0")
+            );
           case "points_desc":
-            return parseFloat(b.dataset.points ?? "0") - parseFloat(a.dataset.points ?? "0");
+            return (
+              parseFloat(b.dataset.points ?? "0") -
+              parseFloat(a.dataset.points ?? "0")
+            );
           case "name_asc":
             return (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "");
           case "value_desc":
           default:
-            return parseFloat(b.dataset.value ?? "0") - parseFloat(a.dataset.value ?? "0");
+            return (
+              parseFloat(b.dataset.value ?? "0") -
+              parseFloat(a.dataset.value ?? "0")
+            );
         }
       });
       sorted.forEach((card, i) => {

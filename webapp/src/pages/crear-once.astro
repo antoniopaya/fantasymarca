@@ -46,7 +46,8 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
     <div>
       <h1 class="text-3xl font-black text-white">Crear once</h1>
       <p class="mt-1 text-sm text-slate-400">
-        Máximo {formatMoney(MAX_BUDGET)} en precio Fantástica · el capitán debe costar menos de {formatMoney(MAX_CAPTAIN_PRICE)}
+        Máximo {formatMoney(MAX_BUDGET)} en precio Fantástica · el capitán debe costar
+        menos de {formatMoney(MAX_CAPTAIN_PRICE)}
       </p>
     </div>
     <div class="flex shrink-0 gap-2">
@@ -84,12 +85,20 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
   <div class="mb-6 rounded-2xl border border-white/10 bg-slate-900/60 p-4">
     <div class="flex flex-wrap items-center justify-between gap-2 text-sm">
       <span class="font-medium text-white">
-        Presupuesto: <span id="budget-used">0.00</span> / {formatMoney(MAX_BUDGET).replace(" M€", "")} M€
+        Presupuesto: <span id="budget-used">0.00</span> / {
+          formatMoney(MAX_BUDGET).replace(" M€", "")
+        } M€
       </span>
-      <span class="text-slate-400" id="budget-remaining">Quedan {formatMoney(MAX_BUDGET)} disponibles</span>
+      <span class="text-slate-400" id="budget-remaining"
+        >Quedan {formatMoney(MAX_BUDGET)} disponibles</span
+      >
     </div>
     <div class="mt-2 h-2 overflow-hidden rounded-full bg-slate-800">
-      <div id="budget-bar" class="h-full w-0 rounded-full bg-emerald-500 transition-all"></div>
+      <div
+        id="budget-bar"
+        class="h-full w-0 rounded-full bg-emerald-500 transition-all"
+      >
+      </div>
     </div>
     <div class="mt-3 flex flex-wrap items-center gap-4 text-sm text-slate-400">
       <span id="slots-status">0 / 11 jugadores</span>
@@ -97,22 +106,45 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
     </div>
   </div>
 
-  <section id="pitch" class="space-y-3 rounded-2xl border border-white/10 bg-gradient-to-b from-emerald-950/30 to-slate-900/60 p-4 sm:p-6"></section>
+  <section
+    id="pitch"
+    class="space-y-3 rounded-2xl border border-white/10 bg-gradient-to-b from-emerald-950/30 to-slate-900/60 p-4 sm:p-6"
+  >
+  </section>
 
   <p class="mt-4 text-xs text-slate-500">
-    Los jugadores sin precio Fantástica todavía (fichajes muy recientes que Marca no ha dado de alta) no aparecen en el buscador.
+    Los jugadores sin precio Fantástica todavía (fichajes muy recientes que
+    Marca no ha dado de alta) no aparecen en el buscador.
   </p>
 
   <div
     id="picker-backdrop"
     class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4"
   >
-    <div class="flex max-h-[80vh] w-full max-w-md flex-col rounded-2xl border border-white/10 bg-slate-900 p-4 shadow-2xl">
+    <div
+      class="flex max-h-[80vh] w-full max-w-md flex-col rounded-2xl border border-white/10 bg-slate-900 p-4 shadow-2xl"
+    >
       <div class="mb-3 flex items-center justify-between">
-        <h2 id="picker-title" class="text-lg font-bold text-white">Elegir jugador</h2>
-        <button type="button" id="picker-close" class="rounded-lg p-1 text-slate-400 hover:bg-white/10 hover:text-white">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        <h2 id="picker-title" class="text-lg font-bold text-white">
+          Elegir jugador
+        </h2>
+        <button
+          type="button"
+          id="picker-close"
+          class="rounded-lg p-1 text-slate-400 hover:bg-white/10 hover:text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
@@ -130,11 +162,22 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       >
         Quitar jugador de este puesto
       </button>
-      <ul id="picker-list" class="min-h-0 flex-1 space-y-1 overflow-y-auto"></ul>
+      <ul id="picker-list" class="min-h-0 flex-1 space-y-1 overflow-y-auto">
+      </ul>
     </div>
   </div>
 
-  <script define:vars={{ players, FORMATIONS, DEFAULT_FORMATION, MAX_BUDGET, MAX_CAPTAIN_PRICE, POSITION_SHORT, POSITION_COLORS }}>
+  <script
+    define:vars={{
+      players,
+      FORMATIONS,
+      DEFAULT_FORMATION,
+      MAX_BUDGET,
+      MAX_CAPTAIN_PRICE,
+      POSITION_SHORT,
+      POSITION_COLORS,
+    }}
+  >
     const playersById = new Map(players.map((p) => [p.id, p]));
     const STORAGE_KEY = "fantasymarca:crear-once";
 
@@ -158,7 +201,10 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
         .map((s) => ({
           id: String(s.id ?? ""),
           position: s.position,
-          playerId: typeof s.playerId === "number" && playersById.has(s.playerId) ? s.playerId : null,
+          playerId:
+            typeof s.playerId === "number" && playersById.has(s.playerId)
+              ? s.playerId
+              : null,
         }));
     }
 
@@ -167,11 +213,16 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
         const raw = localStorage.getItem(STORAGE_KEY);
         if (!raw) return null;
         const parsed = JSON.parse(raw);
-        const formationKey = FORMATIONS.some((f) => f.key === parsed.formationKey) ? parsed.formationKey : DEFAULT_FORMATION;
+        const formationKey = FORMATIONS.some(
+          (f) => f.key === parsed.formationKey,
+        )
+          ? parsed.formationKey
+          : DEFAULT_FORMATION;
         return {
           formationKey,
           slots: sanitizeSavedSlots(parsed.slots),
-          captainId: typeof parsed.captainId === "number" ? parsed.captainId : null,
+          captainId:
+            typeof parsed.captainId === "number" ? parsed.captainId : null,
         };
       } catch {
         return null;
@@ -182,7 +233,11 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       try {
         localStorage.setItem(
           STORAGE_KEY,
-          JSON.stringify({ formationKey: state.formationKey, slots: state.slots, captainId: state.captainId })
+          JSON.stringify({
+            formationKey: state.formationKey,
+            slots: state.slots,
+            captainId: state.captainId,
+          }),
         );
       } catch {
         // Modo privado, cuota llena, etc.: si no se puede guardar, se sigue usando la app sin más.
@@ -194,7 +249,9 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       const counts = { 1: 1, 2: f.def, 3: f.mid, 4: f.fwd };
       const slots = [];
       for (const position of [1, 2, 3, 4]) {
-        const carried = (previousSlots || []).filter((s) => s.position === position);
+        const carried = (previousSlots || []).filter(
+          (s) => s.position === position,
+        );
         for (let i = 0; i < counts[position]; i++) {
           slots.push({
             id: `${position}-${i}`,
@@ -208,7 +265,9 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
 
     function usedIds(excludeSlotId) {
       return new Set(
-        state.slots.filter((s) => s.playerId !== null && s.id !== excludeSlotId).map((s) => s.playerId)
+        state.slots
+          .filter((s) => s.playerId !== null && s.id !== excludeSlotId)
+          .map((s) => s.playerId),
       );
     }
 
@@ -221,14 +280,18 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       return total;
     }
 
-    const diacriticsPattern = new RegExp(`[${String.fromCharCode(0x0300)}-${String.fromCharCode(0x036f)}]`, "g");
+    const diacriticsPattern = new RegExp(
+      `[${String.fromCharCode(0x0300)}-${String.fromCharCode(0x036f)}]`,
+      "g",
+    );
 
     function normalize(text) {
       return text.normalize("NFD").replace(diacriticsPattern, "").toLowerCase();
     }
 
     function slotCard(slot) {
-      const player = slot.playerId !== null ? playersById.get(slot.playerId) : null;
+      const player =
+        slot.playerId !== null ? playersById.get(slot.playerId) : null;
       const label = POSITION_SHORT[slot.position] ?? "?";
       const color = POSITION_COLORS[slot.position] ?? "#64748b";
 
@@ -310,23 +373,30 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       const pct = Math.min(100, (cost / MAX_BUDGET) * 100);
       const overBudget = cost > MAX_BUDGET;
 
-      document.getElementById("budget-used").textContent = (cost / 1_000_000).toFixed(2);
+      document.getElementById("budget-used").textContent = (
+        cost / 1_000_000
+      ).toFixed(2);
       document.getElementById("budget-remaining").textContent = overBudget
         ? `Superado por ${formatMoneyClient(cost - MAX_BUDGET)}`
         : `Quedan ${formatMoneyClient(MAX_BUDGET - cost)} disponibles`;
-      document.getElementById("budget-remaining").className = overBudget ? "text-rose-400" : "text-slate-400";
+      document.getElementById("budget-remaining").className = overBudget
+        ? "text-rose-400"
+        : "text-slate-400";
 
       const bar = document.getElementById("budget-bar");
       bar.style.width = `${pct}%`;
       bar.className = `h-full rounded-full transition-all ${overBudget ? "bg-rose-500" : "bg-emerald-500"}`;
 
-      document.getElementById("slots-status").textContent = `${filled.length} / ${state.slots.length} jugadores`;
+      document.getElementById("slots-status").textContent =
+        `${filled.length} / ${state.slots.length} jugadores`;
 
       const captainStatus = document.getElementById("captain-status");
       captainStatus.textContent = state.captainId
         ? `Capitán: ${playersById.get(state.captainId).name}`
         : "Sin capitán elegido";
-      captainStatus.className = state.captainId ? "text-emerald-400" : "text-slate-400";
+      captainStatus.className = state.captainId
+        ? "text-emerald-400"
+        : "text-slate-400";
 
       for (const btn of document.querySelectorAll(".formation-btn")) {
         const active = btn.dataset.formation === state.formationKey;
@@ -341,10 +411,17 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
     function openPicker(slotId) {
       activeSlotId = slotId;
       const slot = state.slots.find((s) => s.id === slotId);
-      const label = { 1: "portero", 2: "defensa", 3: "centrocampista", 4: "delantero" }[slot.position];
+      const label = {
+        1: "portero",
+        2: "defensa",
+        3: "centrocampista",
+        4: "delantero",
+      }[slot.position];
       document.getElementById("picker-title").textContent = `Elegir ${label}`;
       document.getElementById("picker-search").value = "";
-      document.getElementById("picker-remove").classList.toggle("hidden", slot.playerId === null);
+      document
+        .getElementById("picker-remove")
+        .classList.toggle("hidden", slot.playerId === null);
       renderPickerList("");
       document.getElementById("picker-backdrop").classList.remove("hidden");
       document.getElementById("picker-backdrop").classList.add("flex");
@@ -381,7 +458,9 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
             <li>
               <button type="button" data-pick="${p.id}" ${affordable ? "" : "disabled"}
                 class="flex w-full items-center gap-3 rounded-xl px-2 py-2 text-left ${
-                  affordable ? "hover:bg-white/5" : "cursor-not-allowed opacity-40"
+                  affordable
+                    ? "hover:bg-white/5"
+                    : "cursor-not-allowed opacity-40"
                 }">
                 <img src="${p.photoUrl}" alt="" class="h-9 w-9 shrink-0 rounded-full bg-slate-800 object-cover" loading="lazy" />
                 <span class="min-w-0 flex-1">
@@ -397,13 +476,15 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
         .join("");
     }
 
-    document.getElementById("formation-selector").addEventListener("click", (e) => {
-      const btn = e.target.closest(".formation-btn");
-      if (!btn) return;
-      state.slots = buildSlots(btn.dataset.formation, state.slots);
-      state.formationKey = btn.dataset.formation;
-      render();
-    });
+    document
+      .getElementById("formation-selector")
+      .addEventListener("click", (e) => {
+        const btn = e.target.closest(".formation-btn");
+        if (!btn) return;
+        state.slots = buildSlots(btn.dataset.formation, state.slots);
+        state.formationKey = btn.dataset.formation;
+        render();
+      });
 
     document.getElementById("pitch").addEventListener("click", (e) => {
       const btn = e.target.closest("button[data-slot]");
@@ -418,7 +499,8 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
         slot.playerId = null;
         render();
       } else if (action === "captain") {
-        state.captainId = state.captainId === slot.playerId ? null : slot.playerId;
+        state.captainId =
+          state.captainId === slot.playerId ? null : slot.playerId;
         render();
       }
     });
@@ -444,10 +526,14 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       renderPickerList(e.target.value);
     });
 
-    document.getElementById("picker-close").addEventListener("click", closePicker);
-    document.getElementById("picker-backdrop").addEventListener("click", (e) => {
-      if (e.target.id === "picker-backdrop") closePicker();
-    });
+    document
+      .getElementById("picker-close")
+      .addEventListener("click", closePicker);
+    document
+      .getElementById("picker-backdrop")
+      .addEventListener("click", (e) => {
+        if (e.target.id === "picker-backdrop") closePicker();
+      });
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closePicker();
     });
@@ -465,12 +551,16 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
           .filter((s) => s.position === row.position && s.playerId !== null)
           .map((s) => {
             const player = playersById.get(s.playerId);
-            return state.captainId === player.id ? `${player.name} (c)` : player.name;
+            return state.captainId === player.id
+              ? `${player.name} (c)`
+              : player.name;
           });
         return { role: row.role, names };
       }).filter((g) => g.names.length > 0);
 
-      return groups.map((g) => `*${g.role}*\n${g.names.join("\n")}`).join("\n\n");
+      return groups
+        .map((g) => `*${g.role}*\n${g.names.join("\n")}`)
+        .join("\n\n");
     }
 
     document.getElementById("share-whatsapp").addEventListener("click", () => {
@@ -480,7 +570,11 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
         return;
       }
       const text = buildWhatsAppMessage();
-      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+      window.open(
+        `https://wa.me/?text=${encodeURIComponent(text)}`,
+        "_blank",
+        "noopener",
+      );
     });
 
     const saved = loadSavedState();

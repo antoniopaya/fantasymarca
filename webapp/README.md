@@ -1,43 +1,30 @@
-# Astro Starter Kit: Minimal
+# FantasyMarca — webapp
 
-```sh
-npm create astro@latest -- --template minimal
+Sitio Astro + Tailwind, 100% estático. Para qué es esto y de dónde salen los
+datos de `public/data/`, ver el [README de la raíz del repo](../README.md).
+
+## Estructura
+
+```
+src/pages/         una carpeta/archivo por ruta (file-based routing de Astro)
+src/components/    componentes .astro, incluidos los gráficos (src/components/charts/)
+src/layouts/       Layout.astro envuelve todas las páginas (nav, footer, <head>)
+src/lib/data.ts    toda la lectura de datos (fs.readFileSync sobre public/data/)
+public/data/       JSON generados por fantasy_api/ (no se tocan a mano)
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Comandos
 
-## 🚀 Project Structure
+| Comando                | Qué hace                                                   |
+| :--------------------- | :--------------------------------------------------------- |
+| `npm install`          | Instala dependencias                                       |
+| `npm run dev`          | Servidor de desarrollo en `localhost:4321`                 |
+| `npm run build`        | Build de producción a `./dist/`                            |
+| `npm run preview`      | Sirve el build de `./dist/` en local, antes de desplegar   |
+| `npm run lint`         | ESLint (`.astro` + `.ts`, incluye reglas de accesibilidad) |
+| `npm run format`       | Prettier — reformatea en sitio                             |
+| `npm run format:check` | Prettier en modo comprobación (lo que corre en CI)         |
+| `npm run astro check`  | Type-check de Astro/TypeScript                             |
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+`npm run lint`, `format:check` y `astro check` son exactamente lo que corre
+`.github/workflows/verify.yml` en cada push/PR.

@@ -24,7 +24,14 @@ interface Props {
   positionNames: Record<number, string>;
 }
 
-const { players, seasons, defaultSeasonKey, yLabel, positionColors, positionNames } = Astro.props;
+const {
+  players,
+  seasons,
+  defaultSeasonKey,
+  yLabel,
+  positionColors,
+  positionNames,
+} = Astro.props;
 
 const width = 900;
 const height = 520;
@@ -55,7 +62,13 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
       id="scatter-season"
       class="rounded-lg border border-white/10 bg-slate-950/60 px-3 py-1.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
     >
-      {seasons.map((s) => <option value={s.key} selected={s.key === defaultSeasonKey}>{s.label}</option>)}
+      {
+        seasons.map((s) => (
+          <option value={s.key} selected={s.key === defaultSeasonKey}>
+            {s.label}
+          </option>
+        ))
+      }
     </select>
   </div>
 
@@ -66,9 +79,11 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
       width="100%"
       role="img"
       aria-label={`${yLabel} frente a puntos`}
-      style={`aspect-ratio:${width}/${height}`}
-    />
-    <p id="scatter-empty" class="hidden py-16 text-center text-sm text-slate-500">
+      style={`aspect-ratio:${width}/${height}`}></svg>
+    <p
+      id="scatter-empty"
+      class="hidden py-16 text-center text-sm text-slate-500"
+    >
       Todavía no hay puntos para esta temporada.
     </p>
     <div
@@ -76,29 +91,54 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
       class="pointer-events-none absolute z-10 hidden w-56 rounded-xl border border-white/10 bg-slate-950/95 p-3 shadow-xl"
     >
       <div class="flex items-center gap-2.5">
-        <img id="scatter-tooltip-photo" src="" alt="" class="h-10 w-10 shrink-0 rounded-full bg-slate-800 object-cover" />
+        <img
+          id="scatter-tooltip-photo"
+          src=""
+          alt=""
+          class="h-10 w-10 shrink-0 rounded-full bg-slate-800 object-cover"
+        />
         <div class="min-w-0">
-          <p id="scatter-tooltip-name" class="truncate text-sm font-semibold text-white" />
-          <p id="scatter-tooltip-team" class="truncate text-xs text-slate-500" />
+          <p
+            id="scatter-tooltip-name"
+            class="truncate text-sm font-semibold text-white"
+          >
+          </p>
+          <p id="scatter-tooltip-team" class="truncate text-xs text-slate-500">
+          </p>
         </div>
       </div>
       <div class="mt-2 flex items-center justify-between text-xs">
         <span class="text-slate-400">Puntos</span>
-        <span id="scatter-tooltip-points" class="font-semibold text-white" />
+        <span id="scatter-tooltip-points" class="font-semibold text-white"
+        ></span>
       </div>
       <div class="flex items-center justify-between text-xs">
         <span class="text-slate-400">Precio Fantástica</span>
-        <span id="scatter-tooltip-price" class="font-semibold text-white" />
+        <span id="scatter-tooltip-price" class="font-semibold text-white"
+        ></span>
       </div>
     </div>
   </div>
 </div>
 
-<script define:vars={{ players, seasons, defaultSeasonKey, yLabel, positionColors, width, height, padding }}>
+<script
+  define:vars={{
+    players,
+    seasons,
+    defaultSeasonKey,
+    yLabel,
+    positionColors,
+    width,
+    height,
+    padding,
+  }}
+>
   const svg = document.getElementById("scatter-svg");
   const emptyState = document.getElementById("scatter-empty");
   const seasonSelect = document.getElementById("scatter-season");
-  const legendButtons = Array.from(document.querySelectorAll("[data-legend-toggle]"));
+  const legendButtons = Array.from(
+    document.querySelectorAll("[data-legend-toggle]"),
+  );
   const tooltip = document.getElementById("scatter-tooltip");
   const tooltipPhoto = document.getElementById("scatter-tooltip-photo");
   const tooltipName = document.getElementById("scatter-tooltip-name");
@@ -126,7 +166,8 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
 
   function el(tag, attrs) {
     const node = document.createElementNS(svgNS, tag);
-    for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, String(value));
+    for (const [key, value] of Object.entries(attrs))
+      node.setAttribute(key, String(value));
     return node;
   }
 
@@ -144,7 +185,8 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
     const tooltipHeight = tooltip.offsetHeight || 96;
     let left = clientX - rect.left + 14;
     let top = clientY - rect.top - tooltipHeight - 14;
-    if (left + tooltipWidth > rect.width) left = clientX - rect.left - tooltipWidth - 14;
+    if (left + tooltipWidth > rect.width)
+      left = clientX - rect.left - tooltipWidth - 14;
     if (top < 0) top = clientY - rect.top + 14;
     tooltip.style.left = `${left}px`;
     tooltip.style.top = `${top}px`;
@@ -183,14 +225,35 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
     for (const f of ticks) {
       const t = Math.round(yMax * f);
       const y = scaleY(t, yMax);
-      svg.appendChild(el("line", { x1: padding.left, y1: y, x2: width - padding.right, y2: y, stroke: "#2c2c2a", "stroke-width": 1 }));
-      const label = el("text", { x: padding.left - 8, y: y + 3, "text-anchor": "end", class: "fill-slate-500", "font-size": 11 });
+      svg.appendChild(
+        el("line", {
+          x1: padding.left,
+          y1: y,
+          x2: width - padding.right,
+          y2: y,
+          stroke: "#2c2c2a",
+          "stroke-width": 1,
+        }),
+      );
+      const label = el("text", {
+        x: padding.left - 8,
+        y: y + 3,
+        "text-anchor": "end",
+        class: "fill-slate-500",
+        "font-size": 11,
+      });
       label.textContent = String(t);
       svg.appendChild(label);
     }
     for (const f of ticks) {
       const t = Math.round(xMax * f);
-      const label = el("text", { x: scaleX(t, xMax), y: height - padding.bottom + 18, "text-anchor": "middle", class: "fill-slate-500", "font-size": 11 });
+      const label = el("text", {
+        x: scaleX(t, xMax),
+        y: height - padding.bottom + 18,
+        "text-anchor": "middle",
+        class: "fill-slate-500",
+        "font-size": 11,
+      });
       label.textContent = String(t);
       svg.appendChild(label);
     }
@@ -202,9 +265,15 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
         y2: height - padding.bottom,
         stroke: "#383835",
         "stroke-width": 1,
-      })
+      }),
     );
-    const xLabelEl = el("text", { x: width / 2, y: height - 6, "text-anchor": "middle", class: "fill-slate-500", "font-size": 12 });
+    const xLabelEl = el("text", {
+      x: width / 2,
+      y: height - 6,
+      "text-anchor": "middle",
+      class: "fill-slate-500",
+      "font-size": 12,
+    });
     xLabelEl.textContent = `Puntos (${seasonLabel})`;
     svg.appendChild(xLabelEl);
     const yLabelEl = el("text", {
@@ -232,8 +301,12 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
         "stroke-width": 1.5,
         style: "cursor:pointer",
       });
-      dot.addEventListener("mouseenter", (e) => showTooltip(p, e.clientX, e.clientY));
-      dot.addEventListener("mousemove", (e) => showTooltip(p, e.clientX, e.clientY));
+      dot.addEventListener("mouseenter", (e) =>
+        showTooltip(p, e.clientX, e.clientY),
+      );
+      dot.addEventListener("mousemove", (e) =>
+        showTooltip(p, e.clientX, e.clientY),
+      );
       dot.addEventListener("mouseleave", hideTooltip);
       link.appendChild(dot);
       svg.appendChild(link);

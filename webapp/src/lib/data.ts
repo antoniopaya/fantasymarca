@@ -58,7 +58,12 @@ export interface PlayerDetail {
     previousValue: number;
     team: { id: number; name: string; logoUrl: string };
     clause: { floor: number; value: number; multiplier: number };
-    bio: { age: number; country: { flag: string; country: string }; height: number; weight: number | null };
+    bio: {
+      age: number;
+      country: { flag: string; country: string };
+      height: number;
+      weight: number | null;
+    };
     clausesRanking: number;
   };
   player_extra: { matches: number; goals: number; cards: number };
@@ -161,7 +166,9 @@ export function getGameweeks(): Gameweek[] {
  * porque main.py/build_catalog.py regeneran players.json entero cada vez.
  */
 export function getPreciosFantastica(): Record<string, number> {
-  preciosFantasticaCache ??= loadJson<Record<string, number>>("precios_fantastica.json");
+  preciosFantasticaCache ??= loadJson<Record<string, number>>(
+    "precios_fantastica.json",
+  );
   return preciosFantasticaCache;
 }
 
@@ -181,7 +188,10 @@ export function getPlayerById(id: number): Player | undefined {
 /** La próxima jornada sin empezar; si no queda ninguna, la última de la temporada. */
 export function getNextGameweek(): Gameweek {
   const gameweeks = getGameweeks();
-  return gameweeks.find((gw) => gw.status === "unstarted") ?? gameweeks[gameweeks.length - 1];
+  return (
+    gameweeks.find((gw) => gw.status === "unstarted") ??
+    gameweeks[gameweeks.length - 1]
+  );
 }
 
 export function getMatches(gameweekNumber: number): Match[] {
@@ -212,13 +222,18 @@ export function getAllPlayerSummaries(): PlayerSummary[] {
       team_name: catalogEntry.team_name,
       photoUrl: detail.player.photoUrl,
       value: detail.player.value,
-      weeklyChange: weekly?.change ?? detail.player.value - detail.player.previousValue,
+      weeklyChange:
+        weekly?.change ?? detail.player.value - detail.player.previousValue,
       clauseValue: detail.player.clause.value,
       clausesRanking: detail.player.clausesRanking,
       points: detail.player.points,
       avg: detail.player.avg,
       lastSeason: lastSeasonEntry
-        ? { season: lastSeasonEntry.season, points: lastSeasonEntry.points, avg: lastSeasonEntry.avg }
+        ? {
+            season: lastSeasonEntry.season,
+            points: lastSeasonEntry.points,
+            avg: lastSeasonEntry.avg,
+          }
         : null,
       precioFantastica: getPrecioFantastica(catalogEntry.id),
     };

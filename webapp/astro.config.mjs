@@ -1,7 +1,7 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
 
 // Sitio 100% estático: los datos vienen de public/data/*.json, generados aparte
 // por fantasy_api/main.py. No hace falta adapter ni SSR.
@@ -11,8 +11,8 @@ import tailwindcss from '@tailwindcss/vite';
 // runner de Actions, así que en local (`astro dev`/`astro build` a mano) el sitio
 // se sigue sirviendo en la raíz sin tener que tocar nada.
 export default defineConfig({
-  base: process.env.GITHUB_ACTIONS ? '/fantasymarca/' : '/',
+  base: process.env.GITHUB_ACTIONS ? "/fantasymarca/" : "/",
   vite: {
-    plugins: [tailwindcss()]
-  }
+    plugins: [tailwindcss()],
+  },
 });

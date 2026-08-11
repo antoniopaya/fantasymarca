@@ -12,7 +12,16 @@ interface Props {
   precioFantasticaLabel?: string;
 }
 
-const { id, name, teamName, position, photoUrl, teamLogoUrl, valueLabel, precioFantasticaLabel } = Astro.props;
+const {
+  id,
+  name,
+  teamName,
+  position,
+  photoUrl,
+  teamLogoUrl,
+  valueLabel,
+  precioFantasticaLabel,
+} = Astro.props;
 const positionColor = POSITION_COLORS[position];
 ---
 
@@ -20,10 +29,17 @@ const positionColor = POSITION_COLORS[position];
   href={url(`/jugadores/${id}`)}
   class="group flex items-center gap-3 rounded-xl border border-white/10 bg-slate-900/60 p-3 transition-all hover:-translate-y-0.5 hover:border-emerald-500/40 hover:bg-slate-900"
 >
-  <div class="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-slate-800">
+  <div
+    class="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-slate-800"
+  >
     {
       photoUrl && (
-        <img src={photoUrl} alt={name} class="h-full w-full object-cover" loading="lazy" />
+        <img
+          src={photoUrl}
+          alt={name}
+          class="h-full w-full object-cover"
+          loading="lazy"
+        />
       )
     }
     {
@@ -31,20 +47,24 @@ const positionColor = POSITION_COLORS[position];
         <img
           src={teamLogoUrl}
           alt={teamName}
-          class="absolute -bottom-1 -right-1 h-5 w-5 rounded-full bg-slate-950 p-0.5 ring-1 ring-slate-700"
+          class="absolute -right-1 -bottom-1 h-5 w-5 rounded-full bg-slate-950 p-0.5 ring-1 ring-slate-700"
         />
       )
     }
   </div>
   <div class="min-w-0 flex-1">
-    <p class="truncate font-medium text-white group-hover:text-emerald-400">{name}</p>
+    <p class="truncate font-medium text-white group-hover:text-emerald-400">
+      {name}
+    </p>
     <p class="truncate text-xs text-slate-400">
       {teamName}
       {valueLabel && <span class="text-slate-600"> · {valueLabel}</span>}
     </p>
     {
       precioFantasticaLabel && (
-        <p class="truncate text-xs text-emerald-400/80">Fantástica: {precioFantasticaLabel}</p>
+        <p class="truncate text-xs text-emerald-400/80">
+          Fantástica: {precioFantasticaLabel}
+        </p>
       )
     }
   </div>

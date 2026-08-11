@@ -35,14 +35,31 @@ const upcoming = detail?.points.slice(0, 6) ?? [];
 const valueDiff = player ? player.value - player.previousValue : 0;
 
 const precioFantastica = getPrecioFantastica(playerId);
-const vsFantastica = player && precioFantastica ? player.value - precioFantastica : 0;
-const vsFantasticaPct = precioFantastica ? (vsFantastica / precioFantastica) * 100 : 0;
+const vsFantastica =
+  player && precioFantastica ? player.value - precioFantastica : 0;
+const vsFantasticaPct = precioFantastica
+  ? (vsFantastica / precioFantastica) * 100
+  : 0;
 ---
 
-<Layout title={catalogEntry.name} description={`Estadísticas y valor de mercado de ${catalogEntry.name}`}>
-  <a href={url("/jugadores")} class="mb-6 inline-flex items-center gap-1 text-sm font-medium text-slate-400 hover:text-emerald-400">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+<Layout
+  title={catalogEntry.name}
+  description={`Estadísticas y valor de mercado de ${catalogEntry.name}`}
+>
+  <a
+    href={url("/jugadores")}
+    class="mb-6 inline-flex items-center gap-1 text-sm font-medium text-slate-400 hover:text-emerald-400"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-4 w-4"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"
+      ></path>
     </svg>
     Volver a jugadores
   </a>
@@ -56,11 +73,15 @@ const vsFantasticaPct = precioFantastica ? (vsFantastica / precioFantastica) * 1
       <div class="space-y-8">
         <section class="flex flex-col items-center gap-5 rounded-2xl border border-white/10 bg-slate-900/60 p-6 sm:flex-row sm:items-start">
           <div class="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl bg-slate-800">
-            <img src={player.photoUrl} alt={player.name} class="h-full w-full object-cover" />
+            <img
+              src={player.photoUrl}
+              alt={player.name}
+              class="h-full w-full object-cover"
+            />
             <img
               src={teamLogoUrl(player.team.id)}
               alt={player.team.name}
-              class="absolute -bottom-1.5 -right-1.5 h-8 w-8 rounded-full bg-slate-950 p-1 ring-2 ring-slate-700"
+              class="absolute -right-1.5 -bottom-1.5 h-8 w-8 rounded-full bg-slate-950 p-1 ring-2 ring-slate-700"
             />
           </div>
 
@@ -80,32 +101,45 @@ const vsFantasticaPct = precioFantastica ? (vsFantastica / precioFantastica) * 1
               </span>
               <span>{player.bio.age} años</span>
               <span>{player.bio.height} cm</span>
-              {player.status && <span class="text-rose-400">{player.status}</span>}
+              {player.status && (
+                <span class="text-rose-400">{player.status}</span>
+              )}
             </div>
           </div>
         </section>
 
         <section class="grid grid-cols-2 gap-4 sm:grid-cols-5">
           <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-            <p class="text-xs uppercase tracking-wide text-slate-500">Valor de mercado</p>
-            <p class="mt-1 text-xl font-bold text-white">{formatMoney(player.value)}</p>
+            <p class="text-xs tracking-wide text-slate-500 uppercase">
+              Valor de mercado
+            </p>
+            <p class="mt-1 text-xl font-bold text-white">
+              {formatMoney(player.value)}
+            </p>
             {valueDiff !== 0 && (
-              <p class={`mt-1 text-xs font-medium ${valueDiff > 0 ? "text-emerald-400" : "text-rose-400"}`}>
+              <p
+                class={`mt-1 text-xs font-medium ${valueDiff > 0 ? "text-emerald-400" : "text-rose-400"}`}
+              >
                 {valueDiff > 0 ? "▲" : "▼"} {formatMoney(Math.abs(valueDiff))}
               </p>
             )}
           </div>
           <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-            <p class="text-xs uppercase tracking-wide text-slate-500">Precio Fantástica</p>
+            <p class="text-xs tracking-wide text-slate-500 uppercase">
+              Precio Fantástica
+            </p>
             {precioFantastica ? (
               <>
-                <p class="mt-1 text-xl font-bold text-white">{formatMoney(precioFantastica)}</p>
+                <p class="mt-1 text-xl font-bold text-white">
+                  {formatMoney(precioFantastica)}
+                </p>
                 {vsFantastica !== 0 && (
                   <p
                     class={`mt-1 text-xs font-medium ${vsFantastica > 0 ? "text-emerald-400" : "text-rose-400"}`}
                     title="Diferencia entre el valor de mercado actual y este precio de consenso"
                   >
-                    Mercado {vsFantastica > 0 ? "▲" : "▼"} {Math.abs(vsFantasticaPct).toFixed(0)}%
+                    Mercado {vsFantastica > 0 ? "▲" : "▼"}{" "}
+                    {Math.abs(vsFantasticaPct).toFixed(0)}%
                   </p>
                 )}
               </>
@@ -114,18 +148,28 @@ const vsFantasticaPct = precioFantastica ? (vsFantastica / precioFantastica) * 1
             )}
           </div>
           <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-            <p class="text-xs uppercase tracking-wide text-slate-500">Cláusula</p>
-            <p class="mt-1 text-xl font-bold text-white">{formatMoney(player.clause.value)}</p>
-            <p class="mt-1 text-xs text-slate-500">x{player.clause.multiplier}</p>
+            <p class="text-xs tracking-wide text-slate-500 uppercase">
+              Cláusula
+            </p>
+            <p class="mt-1 text-xl font-bold text-white">
+              {formatMoney(player.clause.value)}
+            </p>
+            <p class="mt-1 text-xs text-slate-500">
+              x{player.clause.multiplier}
+            </p>
           </div>
           <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-            <p class="text-xs uppercase tracking-wide text-slate-500">Puntos</p>
+            <p class="text-xs tracking-wide text-slate-500 uppercase">Puntos</p>
             <p class="mt-1 text-xl font-bold text-white">{player.points}</p>
             <p class="mt-1 text-xs text-slate-500">Media {player.avg}</p>
           </div>
           <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
-            <p class="text-xs uppercase tracking-wide text-slate-500">Ranking cláusulas</p>
-            <p class="mt-1 text-xl font-bold text-white">#{player.clausesRanking}</p>
+            <p class="text-xs tracking-wide text-slate-500 uppercase">
+              Ranking cláusulas
+            </p>
+            <p class="mt-1 text-xl font-bold text-white">
+              #{player.clausesRanking}
+            </p>
           </div>
         </section>
 
@@ -151,8 +195,10 @@ const vsFantasticaPct = precioFantastica ? (vsFantastica / precioFantastica) * 1
             <div class="mb-4 flex items-center justify-between">
               <h2 class="text-xl font-bold text-white">Evolución del valor</h2>
               <p class="text-xs text-slate-500">
-                Máx {formatMoney(detail.values_chart.max.value)} ({detail.values_chart.max.date}) · Mín{" "}
-                {formatMoney(detail.values_chart.min.value)} ({detail.values_chart.min.date})
+                Máx {formatMoney(detail.values_chart.max.value)} (
+                {detail.values_chart.max.date}) · Mín{" "}
+                {formatMoney(detail.values_chart.min.value)} (
+                {detail.values_chart.min.date})
               </p>
             </div>
             <LineChart points={detail.values_chart.points} />
@@ -164,10 +210,19 @@ const vsFantasticaPct = precioFantastica ? (vsFantastica / precioFantastica) * 1
           <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {upcoming.map((gw) => (
               <div class="flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-slate-900/60 p-4 text-center">
-                <span class="text-xs font-semibold text-slate-500">{gw.shortName}</span>
-                <img src={gw.rivalLogoUrl} alt="rival" class="h-8 w-8 object-contain" />
+                <span class="text-xs font-semibold text-slate-500">
+                  {gw.shortName}
+                </span>
+                <img
+                  src={gw.rivalLogoUrl}
+                  alt="rival"
+                  class="h-8 w-8 object-contain"
+                />
                 <span class="text-xs text-slate-500">
-                  {new Date(gw.startDate).toLocaleDateString("es-ES", { day: "numeric", month: "short" })}
+                  {new Date(gw.startDate).toLocaleDateString("es-ES", {
+                    day: "numeric",
+                    month: "short",
+                  })}
                 </span>
                 <span class="text-sm font-bold text-white">
                   {gw.points.points === null ? "—" : gw.points.points}
@@ -179,11 +234,13 @@ const vsFantasticaPct = precioFantastica ? (vsFantastica / precioFantastica) * 1
 
         {detail && detail.points_history.length > 0 && (
           <section>
-            <h2 class="mb-4 text-xl font-bold text-white">Temporadas anteriores</h2>
+            <h2 class="mb-4 text-xl font-bold text-white">
+              Temporadas anteriores
+            </h2>
             <div class="overflow-x-auto rounded-xl border border-white/10">
               <table class="w-full min-w-[420px] text-sm">
                 <thead>
-                  <tr class="border-b border-white/10 bg-slate-900/80 text-left text-xs uppercase tracking-wide text-slate-500">
+                  <tr class="border-b border-white/10 bg-slate-900/80 text-left text-xs tracking-wide text-slate-500 uppercase">
                     <th class="px-3 py-2">Temporada</th>
                     <th class="px-3 py-2">Puntos</th>
                     <th class="px-3 py-2">Media</th>
@@ -193,10 +250,16 @@ const vsFantasticaPct = precioFantastica ? (vsFantastica / precioFantastica) * 1
                 <tbody>
                   {detail.points_history.map((season) => (
                     <tr class="border-b border-white/5">
-                      <td class="px-3 py-2 font-medium text-white">{season.season}</td>
+                      <td class="px-3 py-2 font-medium text-white">
+                        {season.season}
+                      </td>
                       <td class="px-3 py-2 text-white">{season.points}</td>
-                      <td class="px-3 py-2 text-slate-400">{season.avg.toFixed(2)}</td>
-                      <td class="px-3 py-2 text-slate-400">J{season.last_gameweek}</td>
+                      <td class="px-3 py-2 text-slate-400">
+                        {season.avg.toFixed(2)}
+                      </td>
+                      <td class="px-3 py-2 text-slate-400">
+                        J{season.last_gameweek}
+                      </td>
                     </tr>
                   ))}
                 </tbody>

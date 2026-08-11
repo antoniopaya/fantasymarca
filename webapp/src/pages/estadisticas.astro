@@ -63,7 +63,10 @@ const scatterPlayers = summaries
 const positionStats = ([1, 2, 3, 4] as const).map((position) => {
   const group = summaries.filter((s) => s.position === position);
   const priced = group.filter((s) => s.precioFantastica !== null);
-  const totalFantastica = priced.reduce((sum, s) => sum + (s.precioFantastica as number), 0);
+  const totalFantastica = priced.reduce(
+    (sum, s) => sum + (s.precioFantastica as number),
+    0,
+  );
   return {
     position,
     count: group.length,
@@ -75,7 +78,9 @@ const positionStats = ([1, 2, 3, 4] as const).map((position) => {
 // --- Precio Fantástica ---
 const byFantastica = summaries
   .filter((s) => s.precioFantastica !== null)
-  .sort((a, b) => (b.precioFantastica as number) - (a.precioFantastica as number));
+  .sort(
+    (a, b) => (b.precioFantastica as number) - (a.precioFantastica as number),
+  );
 const topFantastica = byFantastica.slice(0, 10);
 const maxFantastica = topFantastica[0]?.precioFantastica ?? 1;
 
@@ -84,7 +89,10 @@ const bargains = byFantastica
   .filter((s) => s.value > (s.precioFantastica as number))
   .map((s) => ({
     ...s,
-    bargainPct: ((s.value - (s.precioFantastica as number)) / (s.precioFantastica as number)) * 100,
+    bargainPct:
+      ((s.value - (s.precioFantastica as number)) /
+        (s.precioFantastica as number)) *
+      100,
   }))
   .sort((a, b) => b.bargainPct - a.bargainPct)
   .slice(0, 10);
@@ -95,7 +103,9 @@ const valueForMoney = byFantastica
   .filter((s) => (s.lastSeason?.points ?? 0) > 0)
   .map((s) => ({
     ...s,
-    ratio: (s.lastSeason?.points ?? 0) / ((s.precioFantastica as number) / 1_000_000),
+    ratio:
+      (s.lastSeason?.points ?? 0) /
+      ((s.precioFantastica as number) / 1_000_000),
   }))
   .sort((a, b) => b.ratio - a.ratio)
   .slice(0, 10);
@@ -127,15 +137,21 @@ const fantasticaBuckets = [
   { label: "24M+", min: 24_000_000, max: Infinity },
 ].map((bucket) => ({
   label: bucket.label,
-  count: pricedSummaries.filter((s) => (s.precioFantastica as number) >= bucket.min && (s.precioFantastica as number) < bucket.max)
-    .length,
+  count: pricedSummaries.filter(
+    (s) =>
+      (s.precioFantastica as number) >= bucket.min &&
+      (s.precioFantastica as number) < bucket.max,
+  ).length,
 }));
 
 const teamTotals = teams
   .map((team) => {
     const squad = summaries.filter((s) => s.id_team === team.id);
     const priced = squad.filter((s) => s.precioFantastica !== null);
-    const totalFantastica = priced.reduce((sum, s) => sum + (s.precioFantastica as number), 0);
+    const totalFantastica = priced.reduce(
+      (sum, s) => sum + (s.precioFantastica as number),
+      0,
+    );
     const avgFantastica = priced.length ? totalFantastica / priced.length : 0;
     return { team, totalFantastica, avgFantastica, count: squad.length };
   })
@@ -160,13 +176,22 @@ const sections = [
 ];
 ---
 
-<Layout title="Estadísticas" description="Puntos, precio Fantástica, valor de mercado y cláusulas en Fantasy Marca">
+<Layout
+  title="Estadísticas"
+  description="Puntos, precio Fantástica, valor de mercado y cláusulas en Fantasy Marca"
+>
   <div class="mb-8">
     <h1 class="text-3xl font-black text-white">Estadísticas y análisis</h1>
-    <p class="mt-1 text-sm text-slate-400">Basado en el catálogo completo de {summaries.length} jugadores</p>
+    <p class="mt-1 text-sm text-slate-400">
+      Basado en el catálogo completo de {summaries.length} jugadores
+    </p>
   </div>
 
-  <nav id="stats-mobile-nav" aria-label="Secciones" class="mb-6 -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 lg:hidden">
+  <nav
+    id="stats-mobile-nav"
+    aria-label="Secciones"
+    class="-mx-4 mb-6 flex gap-2 overflow-x-auto px-4 pb-1 lg:hidden"
+  >
     {
       sections.map((s) => (
         <a
@@ -174,7 +199,7 @@ const sections = [
           data-stats-nav-link
           data-section={s.id}
           data-base-class="text-slate-300"
-          class="stats-nav-link shrink-0 whitespace-nowrap rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+          class="stats-nav-link shrink-0 rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
         >
           {s.label}
         </a>
@@ -203,7 +228,9 @@ const sections = [
 
     <div class="min-w-0">
       <section id="valor-vs-puntos" class="mb-10 scroll-mt-24">
-        <h2 class="mb-4 text-xl font-bold text-white">Precio Fantástica vs. puntos</h2>
+        <h2 class="mb-4 text-xl font-bold text-white">
+          Precio Fantástica vs. puntos
+        </h2>
         <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
           <ScatterPlot
             players={scatterPlayers}
@@ -219,13 +246,15 @@ const sections = [
       <section id="gangas" class="mb-10 scroll-mt-24">
         <h2 class="mb-4 text-xl font-bold text-white">Gangas</h2>
         <p class="mb-4 text-sm text-slate-500">
-          Jugadores cuyo valor de mercado ya está muy por encima de lo que cuestan en la liga: la mejor relación
-          calidad-precio para fichar en tu once.
+          Jugadores cuyo valor de mercado ya está muy por encima de lo que
+          cuestan en la liga: la mejor relación calidad-precio para fichar en tu
+          once.
         </p>
         {
           bargains.length === 0 ? (
             <p class="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-500">
-              Ahora mismo nadie cuesta menos en la liga de lo que vale en el mercado.
+              Ahora mismo nadie cuesta menos en la liga de lo que vale en el
+              mercado.
             </p>
           ) : (
             <RankingList
@@ -245,10 +274,13 @@ const sections = [
       </section>
 
       <section id="puntos" class="mb-10 scroll-mt-24">
-        <h2 class="mb-4 text-xl font-bold text-white">Mejores de la {lastSeasonLabel} (puntos)</h2>
+        <h2 class="mb-4 text-xl font-bold text-white">
+          Mejores de la {lastSeasonLabel} (puntos)
+        </h2>
         <p class="mb-4 text-sm text-slate-500">
-          La temporada 26/27 no ha empezado — en cuanto se jueguen jornadas y actualices los datos, esta sección
-          pasará a mostrar los puntos de la temporada actual.
+          La temporada 26/27 no ha empezado — en cuanto se jueguen jornadas y
+          actualices los datos, esta sección pasará a mostrar los puntos de la
+          temporada actual.
         </p>
         <RankingList
           items={topLastSeason.map((p) => ({
@@ -264,18 +296,28 @@ const sections = [
       </section>
 
       <section id="posiciones" class="mb-10 scroll-mt-24">
-        <h2 class="mb-4 text-xl font-bold text-white">Distribución por posición</h2>
+        <h2 class="mb-4 text-xl font-bold text-white">
+          Distribución por posición
+        </h2>
         <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-            <p class="mb-4 text-sm font-medium text-slate-400">Jugadores por posición</p>
+            <p class="mb-4 text-sm font-medium text-slate-400">
+              Jugadores por posición
+            </p>
             <DonutChart
-              segments={positionStats.map((s) => ({ label: POSITION_NAMES[s.position], value: s.count, color: s.color }))}
+              segments={positionStats.map((s) => ({
+                label: POSITION_NAMES[s.position],
+                value: s.count,
+                color: s.color,
+              }))}
               centerValue={String(summaries.length)}
               centerLabel="jugadores"
             />
           </div>
           <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-            <p class="mb-4 text-sm font-medium text-slate-400">Precio Fantástica medio por posición</p>
+            <p class="mb-4 text-sm font-medium text-slate-400">
+              Precio Fantástica medio por posición
+            </p>
             <CategoryBarChart
               title="Precio Fantástica medio por posición"
               bars={positionStats.map((s) => ({
@@ -290,15 +332,22 @@ const sections = [
       </section>
 
       <section id="distribucion-valor" class="mb-10 scroll-mt-24">
-        <h2 class="mb-4 text-xl font-bold text-white">Distribución de precios Fantástica</h2>
+        <h2 class="mb-4 text-xl font-bold text-white">
+          Distribución de precios Fantástica
+        </h2>
         <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
-          <Histogram buckets={fantasticaBuckets} title="Distribución de precios Fantástica" />
+          <Histogram
+            buckets={fantasticaBuckets}
+            title="Distribución de precios Fantástica"
+          />
         </div>
       </section>
 
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
         <section id="mas-valiosos" class="scroll-mt-24">
-          <h2 class="mb-4 text-xl font-bold text-white">Mayor precio Fantástica</h2>
+          <h2 class="mb-4 text-xl font-bold text-white">
+            Mayor precio Fantástica
+          </h2>
           <RankingList
             items={topFantastica.map((p) => ({
               key: p.id,
@@ -317,7 +366,8 @@ const sections = [
           {
             valueForMoney.length === 0 ? (
               <p class="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-500">
-                Todavía no hay puntos de la {lastSeasonLabel} para calcular el ratio.
+                Todavía no hay puntos de la {lastSeasonLabel} para calcular el
+                ratio.
               </p>
             ) : (
               <RankingList
@@ -351,7 +401,9 @@ const sections = [
         </section>
 
         <section id="subidas" class="scroll-mt-24">
-          <h2 class="mb-4 text-xl font-bold text-white">Mayor subida de valor (semana)</h2>
+          <h2 class="mb-4 text-xl font-bold text-white">
+            Mayor subida de valor (semana)
+          </h2>
           {
             risers.length === 0 ? (
               <p class="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-500">
@@ -375,7 +427,9 @@ const sections = [
         </section>
 
         <section id="bajadas" class="scroll-mt-24">
-          <h2 class="mb-4 text-xl font-bold text-white">Mayor caída de valor (semana)</h2>
+          <h2 class="mb-4 text-xl font-bold text-white">
+            Mayor caída de valor (semana)
+          </h2>
           {
             fallers.length === 0 ? (
               <p class="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-500">
@@ -400,23 +454,39 @@ const sections = [
       </div>
 
       <section id="equipos" class="mt-10 scroll-mt-24">
-        <h2 class="mb-4 text-xl font-bold text-white">Precio Fantástica total de plantilla por equipo</h2>
+        <h2 class="mb-4 text-xl font-bold text-white">
+          Precio Fantástica total de plantilla por equipo
+        </h2>
         <div class="space-y-2">
           {
             teamTotals.map((t, index) => (
               <div class="flex items-center gap-3 rounded-xl border border-white/10 bg-slate-900/60 p-3">
-                <span class="w-5 shrink-0 text-center text-sm font-bold text-slate-600">{index + 1}</span>
-                <img src={teamLogoUrl(t.team.id)} alt="" class="h-8 w-8 shrink-0 object-contain" loading="lazy" />
+                <span class="w-5 shrink-0 text-center text-sm font-bold text-slate-600">
+                  {index + 1}
+                </span>
+                <img
+                  src={teamLogoUrl(t.team.id)}
+                  alt=""
+                  class="h-8 w-8 shrink-0 object-contain"
+                  loading="lazy"
+                />
                 <div class="min-w-0 flex-1">
                   <div class="flex items-center justify-between gap-2">
-                    <p class="truncate text-sm font-medium text-white">{t.team.name}</p>
-                    <p class="shrink-0 text-sm font-bold text-white">{formatMoney(t.totalFantastica)}</p>
+                    <p class="truncate text-sm font-medium text-white">
+                      {t.team.name}
+                    </p>
+                    <p class="shrink-0 text-sm font-bold text-white">
+                      {formatMoney(t.totalFantastica)}
+                    </p>
                   </div>
                   <p class="text-xs text-slate-500">
                     {t.count} jugadores · media {formatMoney(t.avgFantastica)}
                   </p>
                   <div class="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-800">
-                    <div class="h-full rounded-full bg-emerald-500" style={`width:${Math.max(pct(t.totalFantastica, maxTeamFantastica), 3)}%`} />
+                    <div
+                      class="h-full rounded-full bg-emerald-500"
+                      style={`width:${Math.max(pct(t.totalFantastica, maxTeamFantastica), 3)}%`}
+                    />
                   </div>
                 </div>
               </div>
@@ -427,7 +497,10 @@ const sections = [
 
       <section id="todos" class="mt-10 scroll-mt-24">
         <h2 class="mb-4 text-xl font-bold text-white">Todos los jugadores</h2>
-        <p class="mb-4 text-sm text-slate-500">Busca, filtra por equipo/posición y ordena cualquier columna haciendo clic en la cabecera.</p>
+        <p class="mb-4 text-sm text-slate-500">
+          Busca, filtra por equipo/posición y ordena cualquier columna haciendo
+          clic en la cabecera.
+        </p>
         <PlayersTable players={summaries} teams={teams} />
       </section>
     </div>
@@ -435,11 +508,17 @@ const sections = [
 </Layout>
 
 <script>
-  const links = Array.from(document.querySelectorAll<HTMLAnchorElement>("[data-stats-nav-link]"));
+  const links = Array.from(
+    document.querySelectorAll<HTMLAnchorElement>("[data-stats-nav-link]"),
+  );
 
   // Ambos navs (pills en móvil, sidebar en escritorio) apuntan a las mismas
   // secciones, así que solo hace falta observar cada <section> una vez.
-  const sectionIds = new Set(links.map((link) => link.dataset.section).filter((id): id is string => !!id));
+  const sectionIds = new Set(
+    links
+      .map((link) => link.dataset.section)
+      .filter((id): id is string => !!id),
+  );
   const sectionEls = Array.from(sectionIds)
     .map((id) => document.getElementById(id))
     .filter((el): el is HTMLElement => el !== null);
@@ -460,9 +539,14 @@ const sections = [
     // de la página: scrollIntoView con block:"nearest" arrastraba la página entera
     // hacia arriba en cuanto el nav (que no es sticky) quedaba fuera de vista.
     const mobileNav = document.getElementById("stats-mobile-nav");
-    const mobileActive = mobileNav?.querySelector<HTMLElement>(`[data-section="${id}"]`);
+    const mobileActive = mobileNav?.querySelector<HTMLElement>(
+      `[data-section="${id}"]`,
+    );
     if (mobileNav && mobileActive) {
-      const target = mobileActive.offsetLeft - mobileNav.clientWidth / 2 + mobileActive.clientWidth / 2;
+      const target =
+        mobileActive.offsetLeft -
+        mobileNav.clientWidth / 2 +
+        mobileActive.clientWidth / 2;
       mobileNav.scrollTo({ left: target, behavior: "smooth" });
     }
   }
@@ -477,7 +561,7 @@ const sections = [
         if (entry.isIntersecting) setActive(entry.target.id);
       }
     },
-    { rootMargin: "-96px 0px -75% 0px", threshold: 0 }
+    { rootMargin: "-96px 0px -75% 0px", threshold: 0 },
   );
 
   for (const el of sectionEls) observer.observe(el);

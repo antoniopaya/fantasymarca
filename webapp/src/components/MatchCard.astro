@@ -10,15 +10,35 @@ interface Props {
   status: string;
 }
 
-const { home, away, homeLogoUrl, awayLogoUrl, dateText, goalsHome, goalsAway, status } = Astro.props;
+const {
+  home,
+  away,
+  homeLogoUrl,
+  awayLogoUrl,
+  dateText,
+  goalsHome,
+  goalsAway,
+  status,
+} = Astro.props;
 const isFixture = status === "fixture";
 ---
 
-<div class="rounded-xl border border-white/10 bg-slate-900/60 p-4 transition-colors hover:border-emerald-500/30">
-  <p class="mb-3 text-center text-xs font-medium uppercase tracking-wide text-slate-500">{dateText}</p>
+<div
+  class="rounded-xl border border-white/10 bg-slate-900/60 p-4 transition-colors hover:border-emerald-500/30"
+>
+  <p
+    class="mb-3 text-center text-xs font-medium tracking-wide text-slate-500 uppercase"
+  >
+    {dateText}
+  </p>
   <div class="flex items-center justify-between gap-2">
     <div class="flex flex-1 flex-col items-center gap-2 text-center">
-      <img src={homeLogoUrl} alt={home} class="h-10 w-10 object-contain" loading="lazy" />
+      <img
+        src={homeLogoUrl}
+        alt={home}
+        class="h-10 w-10 object-contain"
+        loading="lazy"
+      />
       <span class="text-sm font-medium text-slate-100">{home}</span>
     </div>
 
@@ -35,7 +55,12 @@ const isFixture = status === "fixture";
     </div>
 
     <div class="flex flex-1 flex-col items-center gap-2 text-center">
-      <img src={awayLogoUrl} alt={away} class="h-10 w-10 object-contain" loading="lazy" />
+      <img
+        src={awayLogoUrl}
+        alt={away}
+        class="h-10 w-10 object-contain"
+        loading="lazy"
+      />
       <span class="text-sm font-medium text-slate-100">{away}</span>
     </div>
   </div>

@@ -1,0 +1,48 @@
+name: Verify webapp
+
+# Red de seguridad independiente del despliegue (deploy.yml): aquí solo se
+# comprueba que el código compila, sin tocar Pages ni artefactos. Corre en
+# cualquier rama (incluida la que empuja refresh-data.yml) y en PRs.
+on:
+  push:
+    paths:
+      - "webapp/**"
+      - ".github/workflows/verify.yml"
+  pull_request:
+    paths:
+      - "webapp/**"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: webapp/package-lock.json
+
+      - name: Install dependencies
+        working-directory: webapp
+        run: npm ci
+
+      - name: Lint
+        working-directory: webapp
+        run: npm run lint
+
+      - name: Format check
+        working-directory: webapp
+        run: npm run format:check
+
+      - name: Type-check
+        working-directory: webapp
+        run: npx astro check
+
+      - name: Build
+        working-directory: webapp
+        run: npm run build

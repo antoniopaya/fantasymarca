@@ -4,7 +4,9 @@ import GameweekView from "../../components/GameweekView.astro";
 import { getGameweeks, getNextGameweek, getMatches, url } from "../../lib/data";
 
 export function getStaticPaths() {
-  return getGameweeks().map((gw) => ({ params: { number: String(gw.number) } }));
+  return getGameweeks().map((gw) => ({
+    params: { number: String(gw.number) },
+  }));
 }
 
 const { number } = Astro.params;
@@ -17,11 +19,29 @@ const isNext = selected.id === getNextGameweek().id;
 ---
 
 <Layout title={selected.name} description={`Partidos de la ${selected.name}`}>
-  <a href={url("/jornada")} class="mb-6 inline-flex items-center gap-1 text-sm font-medium text-slate-400 hover:text-emerald-400">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+  <a
+    href={url("/jornada")}
+    class="mb-6 inline-flex items-center gap-1 text-sm font-medium text-slate-400 hover:text-emerald-400"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-4 w-4"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"
+      ></path>
     </svg>
     Próxima jornada
   </a>
-  <GameweekView selected={selected} matches={matches} gameweeks={gameweeks} isNext={isNext} prevGw={prevGw} nextGw={nextGw} />
+  <GameweekView
+    selected={selected}
+    matches={matches}
+    gameweeks={gameweeks}
+    isNext={isNext}
+    prevGw={prevGw}
+    nextGw={nextGw}
+  />
 </Layout>

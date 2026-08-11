@@ -27,21 +27,21 @@ const columns = [
     <div class="relative flex-1">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500"
+        class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-slate-500"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
         stroke-width="2"
       >
-        <circle cx="11" cy="11" r="8" />
-        <path stroke-linecap="round" d="m21 21-4.3-4.3" />
+        <circle cx="11" cy="11" r="8"></circle>
+        <path stroke-linecap="round" d="m21 21-4.3-4.3"></path>
       </svg>
       <input
         id="stats-search"
         type="text"
         placeholder="Buscar jugador..."
         autocomplete="off"
-        class="w-full rounded-xl border border-white/10 bg-slate-900/60 py-2.5 pl-10 pr-4 text-sm text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
+        class="w-full rounded-xl border border-white/10 bg-slate-900/60 py-2.5 pr-4 pl-10 text-sm text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
       />
     </div>
     <select
@@ -75,12 +75,16 @@ const columns = [
     </select>
   </div>
 
-  <p id="stats-count" class="text-sm text-slate-500">{players.length} jugadores</p>
+  <p id="stats-count" class="text-sm text-slate-500">
+    {players.length} jugadores
+  </p>
 
   <div class="overflow-x-auto rounded-xl border border-white/10">
     <table class="w-full min-w-[980px] text-sm">
       <thead>
-        <tr class="border-b border-white/10 bg-slate-900/80 text-left text-xs uppercase tracking-wide text-slate-500">
+        <tr
+          class="border-b border-white/10 bg-slate-900/80 text-left text-xs tracking-wide text-slate-500 uppercase"
+        >
           <th class="w-10 px-3 py-2">#</th>
           <th class="px-3 py-2">Jugador</th>
           <th class="px-3 py-2">Equipo</th>
@@ -88,7 +92,7 @@ const columns = [
           {
             columns.map((col) => (
               <th
-                class="cursor-pointer select-none whitespace-nowrap px-3 py-2 hover:text-white"
+                class="cursor-pointer px-3 py-2 whitespace-nowrap select-none hover:text-white"
                 data-sort-key={col.key}
               >
                 <span class="inline-flex items-center gap-1">
@@ -119,29 +123,49 @@ const columns = [
             >
               <td class="row-rank px-3 py-2 text-slate-600" />
               <td class="px-3 py-2">
-                <a href={url(`/jugadores/${p.id}`)} class="font-medium text-white hover:text-emerald-400">
+                <a
+                  href={url(`/jugadores/${p.id}`)}
+                  class="font-medium text-white hover:text-emerald-400"
+                >
                   {p.name}
                 </a>
               </td>
               <td class="px-3 py-2 text-slate-400">
                 <span class="inline-flex items-center gap-1.5 whitespace-nowrap">
-                  <img src={teamLogoUrl(p.id_team)} alt="" class="h-4 w-4 object-contain" loading="lazy" />
+                  <img
+                    src={teamLogoUrl(p.id_team)}
+                    alt=""
+                    class="h-4 w-4 object-contain"
+                    loading="lazy"
+                  />
                   {p.team_name}
                 </span>
               </td>
-              <td class="px-3 py-2 text-slate-400">{POSITION_SHORT[p.position]}</td>
+              <td class="px-3 py-2 text-slate-400">
+                {POSITION_SHORT[p.position]}
+              </td>
               <td class="px-3 py-2 font-semibold text-white">{p.points}</td>
               <td class="px-3 py-2 text-slate-400">{p.avg}</td>
-              <td class="px-3 py-2 text-slate-400">{p.lastSeason ? p.lastSeason.points : "—"}</td>
+              <td class="px-3 py-2 text-slate-400">
+                {p.lastSeason ? p.lastSeason.points : "—"}
+              </td>
               <td class="px-3 py-2 text-white">{formatMoney(p.value)}</td>
-              <td class="px-3 py-2 text-white">{p.precioFantastica ? formatMoney(p.precioFantastica) : "—"}</td>
+              <td class="px-3 py-2 text-white">
+                {p.precioFantastica ? formatMoney(p.precioFantastica) : "—"}
+              </td>
               <td class="px-3 py-2 text-white">{formatMoney(p.clauseValue)}</td>
               <td
                 class={`px-3 py-2 font-medium whitespace-nowrap ${
-                  p.weeklyChange > 0 ? "text-emerald-400" : p.weeklyChange < 0 ? "text-rose-400" : "text-slate-500"
+                  p.weeklyChange > 0
+                    ? "text-emerald-400"
+                    : p.weeklyChange < 0
+                      ? "text-rose-400"
+                      : "text-slate-500"
                 }`}
               >
-                {p.weeklyChange === 0 ? "—" : `${p.weeklyChange > 0 ? "▲" : "▼"} ${formatMoney(Math.abs(p.weeklyChange))}`}
+                {p.weeklyChange === 0
+                  ? "—"
+                  : `${p.weeklyChange > 0 ? "▲" : "▼"} ${formatMoney(Math.abs(p.weeklyChange))}`}
               </td>
             </tr>
           ))
@@ -150,21 +174,40 @@ const columns = [
     </table>
   </div>
 
-  <p id="stats-no-results" class="hidden py-8 text-center text-slate-500">Sin resultados con esos filtros.</p>
+  <p id="stats-no-results" class="hidden py-8 text-center text-slate-500">
+    Sin resultados con esos filtros.
+  </p>
 </div>
 
 <script>
-  const tbody = document.getElementById("stats-tbody") as HTMLTableSectionElement;
-  const rows = Array.from(tbody.querySelectorAll<HTMLTableRowElement>("[data-row]"));
-  const searchInput = document.getElementById("stats-search") as HTMLInputElement;
-  const teamSelect = document.getElementById("stats-team-filter") as HTMLSelectElement;
-  const positionSelect = document.getElementById("stats-position-filter") as HTMLSelectElement;
-  const priceSelect = document.getElementById("stats-price-filter") as HTMLSelectElement;
+  const tbody = document.getElementById(
+    "stats-tbody",
+  ) as HTMLTableSectionElement;
+  const rows = Array.from(
+    tbody.querySelectorAll<HTMLTableRowElement>("[data-row]"),
+  );
+  const searchInput = document.getElementById(
+    "stats-search",
+  ) as HTMLInputElement;
+  const teamSelect = document.getElementById(
+    "stats-team-filter",
+  ) as HTMLSelectElement;
+  const positionSelect = document.getElementById(
+    "stats-position-filter",
+  ) as HTMLSelectElement;
+  const priceSelect = document.getElementById(
+    "stats-price-filter",
+  ) as HTMLSelectElement;
   const countEl = document.getElementById("stats-count") as HTMLElement;
   const noResults = document.getElementById("stats-no-results") as HTMLElement;
-  const headers = Array.from(document.querySelectorAll<HTMLTableCellElement>("[data-sort-key]"));
+  const headers = Array.from(
+    document.querySelectorAll<HTMLTableCellElement>("[data-sort-key]"),
+  );
 
-  const diacriticsPattern = new RegExp(`[${String.fromCharCode(0x0300)}-${String.fromCharCode(0x036f)}]`, "g");
+  const diacriticsPattern = new RegExp(
+    `[${String.fromCharCode(0x0300)}-${String.fromCharCode(0x036f)}]`,
+    "g",
+  );
 
   function normalize(text: string): string {
     return text.normalize("NFD").replace(diacriticsPattern, "").toLowerCase();
@@ -185,16 +228,22 @@ const columns = [
     const query = normalize(searchInput.value.trim());
     const team = teamSelect.value;
     const position = positionSelect.value;
-    const priceRange = priceSelect.value === "all" ? null : priceSelect.value.split("-").map(Number);
+    const priceRange =
+      priceSelect.value === "all"
+        ? null
+        : priceSelect.value.split("-").map(Number);
     let visible = 0;
 
     for (const row of rows) {
       const matchesName = normalize(row.dataset.name ?? "").includes(query);
       const matchesTeam = team === "0" || row.dataset.team === team;
-      const matchesPosition = position === "0" || row.dataset.position === position;
+      const matchesPosition =
+        position === "0" || row.dataset.position === position;
       const price = parseFloat(row.dataset.preciofantastica ?? "-1");
-      const matchesPrice = !priceRange || (price >= priceRange[0] && price < priceRange[1]);
-      const show = matchesName && matchesTeam && matchesPosition && matchesPrice;
+      const matchesPrice =
+        !priceRange || (price >= priceRange[0] && price < priceRange[1]);
+      const show =
+        matchesName && matchesTeam && matchesPosition && matchesPrice;
       row.classList.toggle("hidden", !show);
       if (show) visible++;
     }
@@ -220,7 +269,8 @@ const columns = [
   let currentSort = { key: "value", dir: "desc" as "asc" | "desc" };
 
   function sortBy(key: string) {
-    const dir = currentSort.key === key && currentSort.dir === "desc" ? "asc" : "desc";
+    const dir =
+      currentSort.key === key && currentSort.dir === "desc" ? "asc" : "desc";
     currentSort = { key, dir };
 
     rows.sort((a, b) => {
