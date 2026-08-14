@@ -84,11 +84,15 @@ export interface PlayerDetail {
     last_gameweek: number;
   }>;
   values: Array<{ time: string; value: number; change: number }>;
-  values_chart: {
-    points: Array<{ value: number; date: string }>;
-    max: { value: number; date: string };
-    min: { value: number; date: string };
-  };
+  // Marca devuelve `[]` (no un objeto) cuando el jugador no tiene histórico de
+  // valor todavía (fichajes recién dados de alta, sin ninguna variación registrada).
+  values_chart:
+    | {
+        points: Array<{ value: number; date: string }>;
+        max: { value: number; date: string };
+        min: { value: number; date: string };
+      }
+    | [];
 }
 
 export interface PlayerSummary {

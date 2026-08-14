@@ -190,7 +190,7 @@ const vsFantasticaPct = precioFantastica
           </section>
         )}
 
-        {detail?.values_chart && (
+        {detail && !Array.isArray(detail.values_chart) && (
           <section class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
             <div class="mb-4 flex items-center justify-between">
               <h2 class="text-xl font-bold text-white">Evolución del valor</h2>
