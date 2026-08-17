@@ -5,17 +5,17 @@
     "position": 4,
     "points": 0,
     "avg": 0,
-    "status": "doubt",
+    "status": "injury",
     "id_competition": 1,
     "injury": {
-      "category": "doubt",
+      "category": "injury",
       "description": "Fractura de peroné",
-      "duration": "Duda esta jornada"
+      "duration": "Baja esta jornada"
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70927.png?version=20260619115321",
     "isFavorite": 0,
-    "value": 2554000,
-    "previousValue": 2664000,
+    "value": 2114000,
+    "previousValue": 2318000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2554000,
+      "floor": 2114000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3831000,
+      "value": 3171000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2554000,
+      "price": 2114000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 179,
       "weight": null
     },
-    "clausesRanking": 394
+    "clausesRanking": 393
   },
   "id": 70927,
   "player_extra": {
@@ -92,8 +92,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302752,
+        "id_player": 70927,
+        "category": "injury",
+        "description": "Fractura de peroné",
+        "duration": "Baja esta jornada",
+        "since": "2026-08-15 09:54:38",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     },
     {
@@ -656,21 +665,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2664000,
-      "change": -110000,
-      "sign": -110
+      "value": 2318000,
+      "change": -204000,
+      "sign": -204
     },
     {
       "time": "Una semana",
-      "value": 3626000,
-      "change": -1072000,
-      "sign": "-1.072.000"
+      "value": 3137000,
+      "change": -1023000,
+      "sign": "-1.023.000"
     },
     {
       "time": "Un mes",
-      "value": 1722000,
-      "change": 832000,
-      "sign": 832
+      "value": 2014000,
+      "change": 100000,
+      "sign": 100
     }
   ],
   "values_chart": {
@@ -898,6 +907,18 @@
       {
         "value": 2554000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 2491000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 2318000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 2114000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -913,28 +934,28 @@
     "70927": {
       "id": 70927,
       "id_team": 1490,
-      "id_match": 37160,
-      "id_gameweek": 3968,
-      "id_home": 1490,
-      "id_away": 20,
+      "id_match": 37951,
+      "id_gameweek": 4043,
+      "id_home": 9,
+      "id_away": 1490,
       "date": {
-        "ts": 1786892400,
-        "text": "dom 17:00",
+        "ts": 1787506200,
+        "text": "dom 19:30",
         "format": "EEE H:mm",
         "splitted": {
           "date": "dom",
-          "time": "17:00",
+          "time": "19:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
-      "away": "Villarreal",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+      "home": "Getafe",
+      "away": "Racing de Santander",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,

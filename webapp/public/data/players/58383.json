@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/58383.png?version=20260619095827",
     "isFavorite": 0,
-    "value": 24170000,
-    "previousValue": 24753000,
+    "value": 22461000,
+    "previousValue": 23024000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 24170000,
+      "floor": 22461000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 36255000,
+      "value": 33691500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 24170000,
+      "price": 22461000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 190,
       "weight": null
     },
-    "clausesRanking": 422
+    "clausesRanking": null
   },
   "id": 58383,
   "player_extra": {
@@ -92,8 +92,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302614,
+        "id_player": 58383,
+        "category": "injury",
+        "description": "Rotura de ligamento y menisco",
+        "duration": "Baja indefinida",
+        "since": "2026-08-07 18:35:20",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
     {
@@ -673,43 +682,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 24753000,
-      "change": -583000,
-      "sign": -583
+      "value": 23024000,
+      "change": -563000,
+      "sign": -563
     },
     {
       "time": "Una semana",
-      "value": 28005000,
-      "change": -3835000,
-      "sign": "-3.835.000"
+      "value": 26624000,
+      "change": -4163000,
+      "sign": "-4.163.000"
     },
     {
       "time": "Un mes",
-      "value": 28075000,
-      "change": -3905000,
-      "sign": "-3.905.000"
+      "value": 27903000,
+      "change": -5442000,
+      "sign": "-5.442.000"
     },
     {
       "time": "Un año",
-      "value": 22735000,
-      "change": 1435000,
-      "sign": "+1.435.000"
+      "value": 22918000,
+      "change": -457000,
+      "sign": -457
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 22735000,
-        "date": "14 ago 2025"
-      },
-      {
-        "value": 22808000,
-        "date": "15 ago 2025"
-      },
-      {
-        "value": 22852000,
-        "date": "16 ago 2025"
-      },
       {
         "value": 22918000,
         "date": "17 ago 2025"
@@ -997,6 +994,18 @@
       {
         "value": 24170000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 23614000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 23024000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 22461000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -1004,24 +1013,24 @@
       "date": "20 jun 2026"
     },
     "min": {
-      "value": 22735000,
-      "date": "14 ago 2025"
+      "value": 22461000,
+      "date": "17 ago 2026"
     }
   },
   "next_match": {
     "58383": {
       "id": 58383,
       "id_team": 9,
-      "id_match": 37155,
-      "id_gameweek": 3968,
-      "id_home": 48,
-      "id_away": 9,
+      "id_match": 37951,
+      "id_gameweek": 4043,
+      "id_home": 9,
+      "id_away": 1490,
       "date": {
-        "ts": 1786815000,
-        "text": "sáb 19:30",
+        "ts": 1787506200,
+        "text": "dom 19:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
+          "date": "dom",
           "time": "19:30",
           "format": "EEE"
         }
@@ -1029,11 +1038,11 @@
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Getafe",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Getafe",
+      "away": "Racing de Santander",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,

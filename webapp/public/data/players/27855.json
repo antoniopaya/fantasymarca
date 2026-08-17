@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/27855.png?version=20251006021002",
     "isFavorite": 0,
-    "value": 2364000,
-    "previousValue": 2518000,
+    "value": 1987000,
+    "previousValue": 2111000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2364000,
+      "floor": 1987000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 2,
-      "shield2WeeksSku": "shield_t2_2w",
-      "shield1MonthSku": "shield_t2_1m",
-      "value": 3546000,
+      "tier": 1,
+      "shield2WeeksSku": "shield_t1_2w",
+      "shield1MonthSku": "shield_t1_1m",
+      "value": 2980500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2364000,
+      "price": 1987000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 188,
       "weight": null
     },
-    "clausesRanking": 6
+    "clausesRanking": 24
   },
   "id": 27855,
   "player_extra": {
@@ -665,43 +665,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2518000,
-      "change": -154000,
-      "sign": -154
+      "value": 2111000,
+      "change": -124000,
+      "sign": -124
     },
     {
       "time": "Una semana",
-      "value": 2224000,
-      "change": 140000,
-      "sign": 140
+      "value": 2505000,
+      "change": -518000,
+      "sign": -518
     },
     {
       "time": "Un mes",
-      "value": 362000,
-      "change": 2002000,
-      "sign": "+2.002.000"
+      "value": 363000,
+      "change": 1624000,
+      "sign": "+1.624.000"
     },
     {
       "time": "Un año",
-      "value": 6056000,
-      "change": -3692000,
-      "sign": "-3.692.000"
+      "value": 5628000,
+      "change": -3641000,
+      "sign": "-3.641.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 6056000,
-        "date": "14 ago 2025"
-      },
-      {
-        "value": 5987000,
-        "date": "15 ago 2025"
-      },
-      {
-        "value": 5818000,
-        "date": "16 ago 2025"
-      },
       {
         "value": 5628000,
         "date": "17 ago 2025"
@@ -2153,11 +2141,23 @@
       {
         "value": 2364000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 2238000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 2111000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 1987000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
-      "value": 6056000,
-      "date": "14 ago 2025"
+      "value": 5628000,
+      "date": "17 ago 2025"
     },
     "min": {
       "value": 329000,
@@ -2174,12 +2174,12 @@
       "id_away": 16,
       "date": {
         "ts": 1787338800,
-        "text": "21 ago 21:00",
-        "format": "d MMM H:mm",
+        "text": "vie 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "21 ago",
+          "date": "vie",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",

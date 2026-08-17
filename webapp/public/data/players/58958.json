@@ -3,15 +3,15 @@
     "id": 58958,
     "name": "Pelayo Fernández",
     "position": 2,
-    "points": 0,
-    "avg": 0,
+    "points": 2,
+    "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/58958.png?version=20240702134805",
     "isFavorite": 0,
-    "value": 329000,
-    "previousValue": 486000,
+    "value": 334000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 334000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 193,
       "weight": null
     },
-    "clausesRanking": 439
+    "clausesRanking": 425
   },
   "id": 58958,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,14 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
     {
@@ -650,6 +652,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 2,
+      "avg": 2,
+      "id_team": 14,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+    },
+    {
       "season": "25/26",
       "points": 3,
       "avg": 3,
@@ -669,43 +679,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 486000,
-      "change": -157000,
-      "sign": -157
+      "value": 329000,
+      "change": 5000,
+      "sign": 5
     },
     {
       "time": "Una semana",
-      "value": 509000,
-      "change": -180000,
-      "sign": -180
+      "value": 369000,
+      "change": -35000,
+      "sign": -35
     },
     {
       "time": "Un mes",
-      "value": 329000,
-      "change": 0,
-      "sign": 0
+      "value": 445000,
+      "change": -111000,
+      "sign": -111
     },
     {
       "time": "Un año",
-      "value": 404000,
-      "change": -75000,
-      "sign": -75
+      "value": 449000,
+      "change": -115000,
+      "sign": -115
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 404000,
-        "date": "14 ago 2025"
-      },
-      {
-        "value": 329000,
-        "date": "15 ago 2025"
-      },
-      {
-        "value": 413000,
-        "date": "16 ago 2025"
-      },
       {
         "value": 449000,
         "date": "17 ago 2025"
@@ -941,6 +939,18 @@
       {
         "value": 329000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 329000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 329000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 334000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -956,28 +966,28 @@
     "58958": {
       "id": 58958,
       "id_team": 14,
-      "id_match": 37161,
-      "id_gameweek": 3968,
-      "id_home": 17,
-      "id_away": 14,
+      "id_match": 37954,
+      "id_gameweek": 4043,
+      "id_home": 14,
+      "id_away": 48,
       "date": {
-        "ts": 1786822200,
-        "text": "sáb 21:30",
+        "ts": 1787252400,
+        "text": "jue 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "21:30",
+          "date": "jue",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Rayo Vallecano",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Alavés",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
@@ -989,8 +999,9 @@
   },
   "away": {
     "58958": {
-      "points": 0,
-      "avg": 0
+      "id": 58958,
+      "points": 2,
+      "avg": 2
     }
   },
   "owners": [],

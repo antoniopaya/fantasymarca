@@ -3,15 +3,15 @@
     "id": 5916,
     "name": "Jon Guridi",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 9,
+    "avg": 9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/5916.png?version=20251006024331",
     "isFavorite": 0,
-    "value": 6893000,
-    "previousValue": 6668000,
+    "value": 7756000,
+    "previousValue": 7420000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6893000,
+      "floor": 7756000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 10339500,
+      "value": 11634000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6893000,
+      "price": 7756000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 179,
       "weight": 64
     },
-    "clausesRanking": 41
+    "clausesRanking": 15
   },
   "id": 5916,
   "player_extra": {
-    "matches": 0,
-    "goals": 0,
-    "cards": 0
+    "matches": 1,
+    "goals": 1,
+    "cards": 1
   },
   "points": [
     {
@@ -84,12 +84,16 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 9,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out",
+        "penalty"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
     {
@@ -650,6 +654,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 9,
+      "avg": 9,
+      "id_team": 17,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+    },
+    {
       "season": "25/26",
       "points": 73,
       "avg": 2.6071,
@@ -677,43 +689,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 6668000,
-      "change": 225000,
-      "sign": 225
+      "value": 7420000,
+      "change": 336000,
+      "sign": 336
     },
     {
       "time": "Una semana",
-      "value": 5402000,
-      "change": 1491000,
-      "sign": "+1.491.000"
+      "value": 6003000,
+      "change": 1753000,
+      "sign": "+1.753.000"
     },
     {
       "time": "Un mes",
-      "value": 1626000,
-      "change": 5267000,
-      "sign": "+5.267.000"
+      "value": 2189000,
+      "change": 5567000,
+      "sign": "+5.567.000"
     },
     {
       "time": "Un año",
-      "value": 6357000,
-      "change": 536000,
-      "sign": 536
+      "value": 6827000,
+      "change": 929000,
+      "sign": 929
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 6357000,
-        "date": "14 ago 2025"
-      },
-      {
-        "value": 6547000,
-        "date": "15 ago 2025"
-      },
-      {
-        "value": 6689000,
-        "date": "16 ago 2025"
-      },
       {
         "value": 6827000,
         "date": "17 ago 2025"
@@ -2165,6 +2165,18 @@
       {
         "value": 6893000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 7133000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 7420000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 7756000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -2180,35 +2192,36 @@
     "5916": {
       "id": 5916,
       "id_team": 17,
-      "id_match": 37161,
-      "id_gameweek": 3968,
-      "id_home": 17,
-      "id_away": 14,
+      "id_match": 37947,
+      "id_gameweek": 4043,
+      "id_home": 1,
+      "id_away": 17,
       "date": {
-        "ts": 1786822200,
-        "text": "sáb 21:30",
+        "ts": 1787410800,
+        "text": "sáb 17:00",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "21:30",
+          "time": "17:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Rayo Vallecano",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Athletic Club",
+      "away": "Sevilla",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,
   "home": {
     "5916": {
-      "points": 0,
-      "avg": 0
+      "id": 5916,
+      "points": 9,
+      "avg": 9
     }
   },
   "away": {

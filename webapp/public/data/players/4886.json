@@ -3,15 +3,15 @@
     "id": 4886,
     "name": "Asier Villalibre",
     "position": 4,
-    "points": 0,
-    "avg": 0,
+    "points": 1,
+    "avg": 1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4886.png?version=20260619115232",
     "isFavorite": 0,
-    "value": 10400000,
-    "previousValue": 10037000,
+    "value": 11450000,
+    "previousValue": 11137000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 10400000,
+      "floor": 11450000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 15600000,
+      "value": 17175000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 10400000,
+      "price": 11450000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": 80
     },
-    "clausesRanking": 28
+    "clausesRanking": 42
   },
   "id": 4886,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,14 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     },
     {
@@ -650,6 +652,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 1,
+      "avg": 1,
+      "id_team": 1490,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+    },
+    {
       "season": "24/25",
       "points": 34,
       "avg": 2.125,
@@ -669,21 +679,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 10037000,
-      "change": 363000,
-      "sign": 363
+      "value": 11137000,
+      "change": 313000,
+      "sign": 313
     },
     {
       "time": "Una semana",
-      "value": 7974000,
-      "change": 2426000,
-      "sign": "+2.426.000"
+      "value": 8950000,
+      "change": 2500000,
+      "sign": "+2.500.000"
     },
     {
       "time": "Un mes",
-      "value": 3841000,
-      "change": 6559000,
-      "sign": "+6.559.000"
+      "value": 4336000,
+      "change": 7114000,
+      "sign": "+7.114.000"
     }
   ],
   "values_chart": {
@@ -915,11 +925,23 @@
       {
         "value": 10400000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 10786000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 11137000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 11450000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
-      "value": 10400000,
-      "date": "14 ago 2026"
+      "value": 11450000,
+      "date": "17 ago 2026"
     },
     "min": {
       "value": 2437000,
@@ -930,35 +952,36 @@
     "4886": {
       "id": 4886,
       "id_team": 1490,
-      "id_match": 37160,
-      "id_gameweek": 3968,
-      "id_home": 1490,
-      "id_away": 20,
+      "id_match": 37951,
+      "id_gameweek": 4043,
+      "id_home": 9,
+      "id_away": 1490,
       "date": {
-        "ts": 1786892400,
-        "text": "dom 17:00",
+        "ts": 1787506200,
+        "text": "dom 19:30",
         "format": "EEE H:mm",
         "splitted": {
           "date": "dom",
-          "time": "17:00",
+          "time": "19:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
-      "away": "Villarreal",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+      "home": "Getafe",
+      "away": "Racing de Santander",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,
   "home": {
     "4886": {
-      "points": 0,
-      "avg": 0
+      "id": 4886,
+      "points": 1,
+      "avg": 1
     }
   },
   "away": {

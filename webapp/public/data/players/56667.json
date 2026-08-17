@@ -5,13 +5,17 @@
     "position": 1,
     "points": 0,
     "avg": 0,
-    "status": null,
+    "status": "other",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "other",
+      "description": "No convocado",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/56667.png?version=20260619103421",
     "isFavorite": 0,
-    "value": 353000,
-    "previousValue": 335000,
+    "value": 513000,
+    "previousValue": 365000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -45,15 +49,15 @@
       "percentage": 50
     },
     "market": {
-      "id": 1673348521,
-      "isPublic": 1,
-      "price": 353000,
-      "loanable": 0
+      "id": null,
+      "isPublic": null,
+      "price": 513000,
+      "loanable": null
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": 353000,
+      "input": null,
       "barter": [],
       "type": null,
       "days": null
@@ -68,7 +72,7 @@
       "height": 187,
       "weight": null
     },
-    "clausesRanking": 445
+    "clausesRanking": 383
   },
   "id": 56667,
   "player_extra": {
@@ -88,8 +92,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302734,
+        "id_player": 56667,
+        "category": "other",
+        "description": "No convocado",
+        "duration": "Baja esta jornada",
+        "since": "2026-08-14 20:29:00",
+        "until": null,
+        "status": "No convocado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
     {
@@ -652,21 +665,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 335000,
-      "change": 18000,
-      "sign": 18
+      "value": 365000,
+      "change": 148000,
+      "sign": 148
     },
     {
       "time": "Una semana",
-      "value": 497000,
-      "change": -144000,
-      "sign": -144
+      "value": 397000,
+      "change": 116000,
+      "sign": 116
     },
     {
       "time": "Un mes",
-      "value": 329000,
-      "change": 24000,
-      "sign": 24
+      "value": 473000,
+      "change": 40000,
+      "sign": 40
     }
   ],
   "values_chart": {
@@ -894,6 +907,18 @@
       {
         "value": 353000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 368000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 365000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 513000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -909,28 +934,28 @@
     "56667": {
       "id": 56667,
       "id_team": 17,
-      "id_match": 37161,
-      "id_gameweek": 3968,
-      "id_home": 17,
-      "id_away": 14,
+      "id_match": 37947,
+      "id_gameweek": 4043,
+      "id_home": 1,
+      "id_away": 17,
       "date": {
-        "ts": 1786822200,
-        "text": "sáb 21:30",
+        "ts": 1787410800,
+        "text": "sáb 17:00",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "21:30",
+          "time": "17:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Rayo Vallecano",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Athletic Club",
+      "away": "Sevilla",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,

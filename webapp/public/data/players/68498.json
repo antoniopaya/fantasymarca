@@ -3,15 +3,15 @@
     "id": 68498,
     "name": "Zaid Romero",
     "position": 2,
-    "points": 0,
-    "avg": 0,
+    "points": 4,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68498.png?version=20260117124556",
     "isFavorite": 0,
-    "value": 22939000,
-    "previousValue": 22897000,
+    "value": 22817000,
+    "previousValue": 23017000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 22939000,
+      "floor": 22817000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 34408500,
+      "value": 34225500,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 22939000,
-      "loanable": null
+      "id": 1682858803,
+      "isPublic": 1,
+      "price": 22817000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 22817000,
       "barter": [],
       "type": null,
       "days": null
@@ -68,11 +68,11 @@
       "height": 192,
       "weight": null
     },
-    "clausesRanking": 390
+    "clausesRanking": 306
   },
   "id": 68498,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,12 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
     {
@@ -650,6 +650,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 4,
+      "avg": 4,
+      "id_team": 9,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+    },
+    {
       "season": "25/26",
       "points": 108,
       "avg": 7.2,
@@ -661,21 +669,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 22897000,
-      "change": 42000,
-      "sign": 42
+      "value": 23017000,
+      "change": -200000,
+      "sign": -200
     },
     {
       "time": "Una semana",
-      "value": 22021000,
-      "change": 918000,
-      "sign": 918
+      "value": 22476000,
+      "change": 341000,
+      "sign": 341
     },
     {
       "time": "Un mes",
-      "value": 15313000,
-      "change": 7626000,
-      "sign": "+7.626.000"
+      "value": 16143000,
+      "change": 6674000,
+      "sign": "+6.674.000"
     }
   ],
   "values_chart": {
@@ -1451,11 +1459,23 @@
       {
         "value": 22939000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 23024000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 23017000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 22817000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
-      "value": 22939000,
-      "date": "14 ago 2026"
+      "value": 23024000,
+      "date": "15 ago 2026"
     },
     "min": {
       "value": 329000,
@@ -1466,16 +1486,16 @@
     "68498": {
       "id": 68498,
       "id_team": 9,
-      "id_match": 37155,
-      "id_gameweek": 3968,
-      "id_home": 48,
-      "id_away": 9,
+      "id_match": 37951,
+      "id_gameweek": 4043,
+      "id_home": 9,
+      "id_away": 1490,
       "date": {
-        "ts": 1786815000,
-        "text": "sáb 19:30",
+        "ts": 1787506200,
+        "text": "dom 19:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
+          "date": "dom",
           "time": "19:30",
           "format": "EEE"
         }
@@ -1483,11 +1503,11 @@
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Alavés",
-      "away": "Getafe",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Getafe",
+      "away": "Racing de Santander",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,
@@ -1499,8 +1519,9 @@
   },
   "away": {
     "68498": {
-      "points": 0,
-      "avg": 0
+      "id": 68498,
+      "points": 4,
+      "avg": 4
     }
   },
   "owners": [],

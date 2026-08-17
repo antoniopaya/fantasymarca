@@ -3,15 +3,15 @@
     "id": 53098,
     "name": "Alberto Moleiro",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 5,
+    "avg": 5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/53098.png?version=20251006020600",
     "isFavorite": 0,
-    "value": 47691000,
-    "previousValue": 47798000,
+    "value": 47079000,
+    "previousValue": 47336000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 47691000,
+      "floor": 47079000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 71536500,
+      "value": 70618500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 47691000,
+      "price": 47079000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 172,
       "weight": null
     },
-    "clausesRanking": 343
+    "clausesRanking": 355
   },
   "id": 53098,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,15 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
     {
@@ -650,6 +653,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 5,
+      "avg": 5,
+      "id_team": 20,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+    },
+    {
       "season": "25/26",
       "points": 216,
       "avg": 5.8378,
@@ -677,43 +688,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 47798000,
-      "change": -107000,
-      "sign": -107
+      "value": 47336000,
+      "change": -257000,
+      "sign": -257
     },
     {
       "time": "Una semana",
-      "value": 48716000,
-      "change": -1025000,
-      "sign": "-1.025.000"
+      "value": 48237000,
+      "change": -1158000,
+      "sign": "-1.158.000"
     },
     {
       "time": "Un mes",
-      "value": 53253000,
-      "change": -5562000,
-      "sign": "-5.562.000"
+      "value": 52606000,
+      "change": -5527000,
+      "sign": "-5.527.000"
     },
     {
       "time": "Un año",
-      "value": 39908000,
-      "change": 7783000,
-      "sign": "+7.783.000"
+      "value": 38347000,
+      "change": 8732000,
+      "sign": "+8.732.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 39908000,
-        "date": "14 ago 2025"
-      },
-      {
-        "value": 39563000,
-        "date": "15 ago 2025"
-      },
-      {
-        "value": 39113000,
-        "date": "16 ago 2025"
-      },
       {
         "value": 38347000,
         "date": "17 ago 2025"
@@ -2165,6 +2164,18 @@
       {
         "value": 47691000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 47492000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 47336000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 47079000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -2180,12 +2191,12 @@
     "53098": {
       "id": 53098,
       "id_team": 20,
-      "id_match": 37160,
-      "id_gameweek": 3968,
-      "id_home": 1490,
+      "id_match": 37948,
+      "id_gameweek": 4043,
+      "id_home": 2,
       "id_away": 20,
       "date": {
-        "ts": 1786892400,
+        "ts": 1787497200,
         "text": "dom 17:00",
         "format": "EEE H:mm",
         "splitted": {
@@ -2195,12 +2206,12 @@
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
+      "home": "Atlético",
       "away": "Villarreal",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
@@ -2213,8 +2224,9 @@
   },
   "away": {
     "53098": {
-      "points": 0,
-      "avg": 0
+      "id": 53098,
+      "points": 5,
+      "avg": 5
     }
   },
   "owners": [],

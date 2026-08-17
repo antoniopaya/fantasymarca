@@ -3,15 +3,15 @@
     "id": 28779,
     "name": "Iván Romero",
     "position": 4,
-    "points": 0,
-    "avg": 0,
+    "points": 3,
+    "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/28779.png?version=20250613151854",
     "isFavorite": 0,
-    "value": 21801000,
-    "previousValue": 21546000,
+    "value": 22324000,
+    "previousValue": 22215000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 21801000,
+      "floor": 22324000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 32701500,
+      "value": 33486000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 21801000,
+      "price": 22324000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 172,
       "weight": null
     },
-    "clausesRanking": 14
+    "clausesRanking": 179
   },
   "id": 28779,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,14 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
     {
@@ -650,6 +652,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 3,
+      "avg": 3,
+      "id_team": 12,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+    },
+    {
       "season": "25/26",
       "points": 143,
       "avg": 4.4688,
@@ -661,43 +671,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 21546000,
-      "change": 255000,
-      "sign": 255
+      "value": 22215000,
+      "change": 109000,
+      "sign": 109
     },
     {
       "time": "Una semana",
-      "value": 18666000,
-      "change": 3135000,
-      "sign": "+3.135.000"
+      "value": 20853000,
+      "change": 1471000,
+      "sign": "+1.471.000"
     },
     {
       "time": "Un mes",
-      "value": 9746000,
-      "change": 12055000,
-      "sign": "+12.055.000"
+      "value": 10235000,
+      "change": 12089000,
+      "sign": "+12.089.000"
     },
     {
       "time": "Un año",
-      "value": 563000,
-      "change": 21238000,
-      "sign": "+21.238.000"
+      "value": 1101000,
+      "change": 21223000,
+      "sign": "+21.223.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 563000,
-        "date": "14 ago 2025"
-      },
-      {
-        "value": 712000,
-        "date": "15 ago 2025"
-      },
-      {
-        "value": 877000,
-        "date": "16 ago 2025"
-      },
       {
         "value": 1101000,
         "date": "17 ago 2025"
@@ -2149,6 +2147,18 @@
       {
         "value": 21801000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 22017000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 22215000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 22324000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -2156,35 +2166,35 @@
       "date": "26 oct 2025"
     },
     "min": {
-      "value": 563000,
-      "date": "14 ago 2025"
+      "value": 1101000,
+      "date": "17 ago 2025"
     }
   },
   "next_match": {
     "28779": {
       "id": 28779,
       "id_team": 12,
-      "id_match": 37157,
-      "id_gameweek": 3968,
-      "id_home": 8,
+      "id_match": 37953,
+      "id_gameweek": 4043,
+      "id_home": 50,
       "id_away": 12,
       "date": {
-        "ts": 1786899600,
-        "text": "dom 19:00",
-        "format": "EEE H:mm",
+        "ts": 1787592600,
+        "text": "24 ago 19:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "19:00",
-          "format": "EEE"
+          "date": "24 ago",
+          "time": "19:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
+      "home": "Osasuna",
       "away": "Levante",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
@@ -2197,8 +2207,9 @@
   },
   "away": {
     "28779": {
-      "points": 0,
-      "avg": 0
+      "id": 28779,
+      "points": 3,
+      "avg": 3
     }
   },
   "owners": [],

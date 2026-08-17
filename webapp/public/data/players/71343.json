@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71343.png?version=20260714104654",
     "isFavorite": 0,
-    "value": 5564000,
-    "previousValue": 5627000,
+    "value": 5251000,
+    "previousValue": 5376000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5564000,
+      "floor": 5251000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8346000,
+      "value": 7876500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5564000,
+      "price": 5251000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 180
+    "clausesRanking": 269
   },
   "id": 71343,
   "player_extra": {
@@ -652,15 +652,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5627000,
-      "change": -63000,
-      "sign": -63
+      "value": 5376000,
+      "change": -125000,
+      "sign": -125
     },
     {
       "time": "Una semana",
-      "value": 5419000,
-      "change": 145000,
-      "sign": 145
+      "value": 5653000,
+      "change": -402000,
+      "sign": -402
+    },
+    {
+      "time": "Un mes",
+      "value": 3349000,
+      "change": 1902000,
+      "sign": "+1.902.000"
     }
   ],
   "values_chart": {
@@ -788,6 +794,18 @@
       {
         "value": 5564000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 5489000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 5376000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 5251000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -809,12 +827,12 @@
       "id_away": 23,
       "date": {
         "ts": 1786993200,
-        "text": "lun 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "lun",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

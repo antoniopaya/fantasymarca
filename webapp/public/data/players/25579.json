@@ -3,15 +3,15 @@
     "id": 25579,
     "name": "Oriol Rey",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 4,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/25579.png?version=20250613152155",
     "isFavorite": 0,
-    "value": 448000,
-    "previousValue": 413000,
+    "value": 626000,
+    "previousValue": 511000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 448000,
+      "price": 626000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 447
+    "clausesRanking": 255
   },
   "id": 25579,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,12 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
     {
@@ -650,6 +650,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 4,
+      "avg": 4,
+      "id_team": 12,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+    },
+    {
       "season": "25/26",
       "points": 58,
       "avg": 2.9,
@@ -661,43 +669,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 413000,
-      "change": 35000,
-      "sign": 35
+      "value": 511000,
+      "change": 115000,
+      "sign": 115
     },
     {
       "time": "Una semana",
-      "value": 357000,
-      "change": 91000,
-      "sign": 91
+      "value": 432000,
+      "change": 194000,
+      "sign": 194
     },
     {
       "time": "Un mes",
-      "value": 389000,
-      "change": 59000,
-      "sign": 59
+      "value": 329000,
+      "change": 297000,
+      "sign": 297
     },
     {
       "time": "Un año",
-      "value": 4084000,
-      "change": -3636000,
-      "sign": "-3.636.000"
+      "value": 4006000,
+      "change": -3380000,
+      "sign": "-3.380.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 4084000,
-        "date": "14 ago 2025"
-      },
-      {
-        "value": 4156000,
-        "date": "15 ago 2025"
-      },
-      {
-        "value": 4142000,
-        "date": "16 ago 2025"
-      },
       {
         "value": 4006000,
         "date": "17 ago 2025"
@@ -2149,6 +2145,18 @@
       {
         "value": 448000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 505000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 511000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 626000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -2164,27 +2172,27 @@
     "25579": {
       "id": 25579,
       "id_team": 12,
-      "id_match": 37157,
-      "id_gameweek": 3968,
-      "id_home": 8,
+      "id_match": 37953,
+      "id_gameweek": 4043,
+      "id_home": 50,
       "id_away": 12,
       "date": {
-        "ts": 1786899600,
-        "text": "dom 19:00",
-        "format": "EEE H:mm",
+        "ts": 1787592600,
+        "text": "24 ago 19:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "19:00",
-          "format": "EEE"
+          "date": "24 ago",
+          "time": "19:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
+      "home": "Osasuna",
       "away": "Levante",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
@@ -2197,8 +2205,9 @@
   },
   "away": {
     "25579": {
-      "points": 0,
-      "avg": 0
+      "id": 25579,
+      "points": 4,
+      "avg": 4
     }
   },
   "owners": [],

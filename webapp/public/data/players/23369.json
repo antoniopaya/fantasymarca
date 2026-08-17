@@ -3,15 +3,15 @@
     "id": 23369,
     "name": "Juan Foyth",
     "position": 2,
-    "points": 0,
-    "avg": 0,
+    "points": 3,
+    "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/23369.png?version=20231222225448",
     "isFavorite": 0,
-    "value": 4900000,
-    "previousValue": 4702000,
+    "value": 5518000,
+    "previousValue": 5288000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4900000,
+      "floor": 5518000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7350000,
+      "value": 8277000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4900000,
+      "price": 5518000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 187,
       "weight": 77
     },
-    "clausesRanking": 9
+    "clausesRanking": 12
   },
   "id": 23369,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -84,12 +84,14 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
     {
@@ -650,6 +652,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 3,
+      "avg": 3,
+      "id_team": 20,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+    },
+    {
       "season": "25/26",
       "points": 62,
       "avg": 4.7692,
@@ -677,43 +687,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4702000,
-      "change": 198000,
-      "sign": 198
+      "value": 5288000,
+      "change": 230000,
+      "sign": 230
     },
     {
       "time": "Una semana",
-      "value": 3205000,
-      "change": 1695000,
-      "sign": "+1.695.000"
+      "value": 4143000,
+      "change": 1375000,
+      "sign": "+1.375.000"
     },
     {
       "time": "Un mes",
-      "value": 546000,
-      "change": 4354000,
-      "sign": "+4.354.000"
+      "value": 646000,
+      "change": 4872000,
+      "sign": "+4.872.000"
     },
     {
       "time": "Un año",
-      "value": 30398000,
-      "change": -25498000,
-      "sign": "-25.498.000"
+      "value": 29958000,
+      "change": -24440000,
+      "sign": "-24.440.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 30398000,
-        "date": "14 ago 2025"
-      },
-      {
-        "value": 30381000,
-        "date": "15 ago 2025"
-      },
-      {
-        "value": 30253000,
-        "date": "16 ago 2025"
-      },
       {
         "value": 29958000,
         "date": "17 ago 2025"
@@ -2165,6 +2163,18 @@
       {
         "value": 4900000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 5101000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 5288000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 5518000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -2180,12 +2190,12 @@
     "23369": {
       "id": 23369,
       "id_team": 20,
-      "id_match": 37160,
-      "id_gameweek": 3968,
-      "id_home": 1490,
+      "id_match": 37948,
+      "id_gameweek": 4043,
+      "id_home": 2,
       "id_away": 20,
       "date": {
-        "ts": 1786892400,
+        "ts": 1787497200,
         "text": "dom 17:00",
         "format": "EEE H:mm",
         "splitted": {
@@ -2195,12 +2205,12 @@
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
+      "home": "Atlético",
       "away": "Villarreal",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
@@ -2213,8 +2223,9 @@
   },
   "away": {
     "23369": {
-      "points": 0,
-      "avg": 0
+      "id": 23369,
+      "points": 3,
+      "avg": 3
     }
   },
   "owners": [],

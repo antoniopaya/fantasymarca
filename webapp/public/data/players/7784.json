@@ -3,15 +3,15 @@
     "id": 7784,
     "name": "Unai Núñez",
     "position": 2,
-    "points": 0,
-    "avg": 0,
+    "points": 9,
+    "avg": 9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/7784.png?version=20260124075202",
     "isFavorite": 0,
-    "value": 3494000,
-    "previousValue": 3273000,
+    "value": 4300000,
+    "previousValue": 3961000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3494000,
+      "floor": 4300000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 5241000,
+      "value": 6450000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3494000,
+      "price": 4300000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 7784,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,12 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 9,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
     {
@@ -650,6 +650,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 9,
+      "avg": 9,
+      "id_team": 8,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+    },
+    {
       "season": "25/26",
       "points": 47,
       "avg": 3.6154,
@@ -677,21 +685,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 3273000,
-      "change": 221000,
-      "sign": 221
+      "value": 3961000,
+      "change": 339000,
+      "sign": 339
     },
     {
       "time": "Una semana",
-      "value": 2149000,
-      "change": 1345000,
-      "sign": "+1.345.000"
+      "value": 2666000,
+      "change": 1634000,
+      "sign": "+1.634.000"
     },
     {
       "time": "Un mes",
-      "value": 470000,
-      "change": 3024000,
-      "sign": "+3.024.000"
+      "value": 519000,
+      "change": 3781000,
+      "sign": "+3.781.000"
     }
   ],
   "values_chart": {
@@ -1503,6 +1511,18 @@
       {
         "value": 3494000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 3705000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 3961000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 4300000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -1518,17 +1538,17 @@
     "7784": {
       "id": 7784,
       "id_team": 8,
-      "id_match": 37157,
-      "id_gameweek": 3968,
+      "id_match": 37950,
+      "id_gameweek": 4043,
       "id_home": 8,
-      "id_away": 12,
+      "id_away": 15,
       "date": {
-        "ts": 1786899600,
-        "text": "dom 19:00",
+        "ts": 1787427000,
+        "text": "sáb 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "19:00",
+          "date": "sáb",
+          "time": "21:30",
           "format": "EEE"
         }
       },
@@ -1536,17 +1556,18 @@
       "confirmed": null,
       "minute": null,
       "home": "Espanyol",
-      "away": "Levante",
+      "away": "Real Madrid",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
   "home": {
     "7784": {
-      "points": 0,
-      "avg": 0
+      "id": 7784,
+      "points": 9,
+      "avg": 9
     }
   },
   "away": {

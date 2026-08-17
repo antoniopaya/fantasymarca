@@ -5,13 +5,17 @@
     "position": 2,
     "points": 0,
     "avg": 0,
-    "status": null,
+    "status": "doubt",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "doubt",
+      "description": "Molestias",
+      "duration": "Duda esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22471.png?version=20250204161316",
     "isFavorite": 0,
-    "value": 363000,
-    "previousValue": 403000,
+    "value": 329000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -47,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 363000,
+      "price": 329000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 411
+    "clausesRanking": 440
   },
   "id": 22471,
   "player_extra": {
@@ -677,43 +681,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 403000,
-      "change": -40000,
-      "sign": -40
+      "value": 329000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Una semana",
-      "value": 368000,
-      "change": -5000,
-      "sign": -5
+      "value": 586000,
+      "change": -257000,
+      "sign": -257
     },
     {
       "time": "Un mes",
-      "value": 329000,
-      "change": 34000,
-      "sign": 34
+      "value": 537000,
+      "change": -208000,
+      "sign": -208
     },
     {
       "time": "Un año",
-      "value": 481000,
-      "change": -118000,
-      "sign": -118
+      "value": 370000,
+      "change": -41000,
+      "sign": -41
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 481000,
-        "date": "14 ago 2025"
-      },
-      {
-        "value": 540000,
-        "date": "15 ago 2025"
-      },
-      {
-        "value": 534000,
-        "date": "16 ago 2025"
-      },
       {
         "value": 370000,
         "date": "17 ago 2025"
@@ -2165,6 +2157,18 @@
       {
         "value": 363000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 354000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 329000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 329000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -2186,12 +2190,12 @@
       "id_away": 16,
       "date": {
         "ts": 1787338800,
-        "text": "21 ago 21:00",
-        "format": "d MMM H:mm",
+        "text": "vie 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "21 ago",
+          "date": "vie",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",

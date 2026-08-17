@@ -3,15 +3,15 @@
     "id": 56924,
     "name": "Etta Eyong",
     "position": 4,
-    "points": 0,
-    "avg": 0,
+    "points": 2,
+    "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/56924.png?version=20251031185323",
     "isFavorite": 0,
-    "value": 10741000,
-    "previousValue": 10312000,
+    "value": 12015000,
+    "previousValue": 11584000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 10741000,
+      "floor": 12015000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 16111500,
+      "value": 18022500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 10741000,
+      "price": 12015000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 181,
       "weight": null
     },
-    "clausesRanking": 14
+    "clausesRanking": 22
   },
   "id": 56924,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,14 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
     {
@@ -650,6 +652,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 2,
+      "avg": 2,
+      "id_team": 12,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+    },
+    {
       "season": "25/26",
       "points": 107,
       "avg": 3.5667,
@@ -685,43 +695,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 10312000,
-      "change": 429000,
-      "sign": 429
+      "value": 11584000,
+      "change": 431000,
+      "sign": 431
     },
     {
       "time": "Una semana",
-      "value": 7961000,
-      "change": 2780000,
-      "sign": "+2.780.000"
+      "value": 9096000,
+      "change": 2919000,
+      "sign": "+2.919.000"
     },
     {
       "time": "Un mes",
-      "value": 2996000,
-      "change": 7745000,
-      "sign": "+7.745.000"
+      "value": 3524000,
+      "change": 8491000,
+      "sign": "+8.491.000"
     },
     {
       "time": "Un año",
-      "value": 5532000,
-      "change": 5209000,
-      "sign": "+5.209.000"
+      "value": 6324000,
+      "change": 5691000,
+      "sign": "+5.691.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 5532000,
-        "date": "14 ago 2025"
-      },
-      {
-        "value": 5768000,
-        "date": "15 ago 2025"
-      },
-      {
-        "value": 6036000,
-        "date": "16 ago 2025"
-      },
       {
         "value": 6324000,
         "date": "17 ago 2025"
@@ -2173,6 +2171,18 @@
       {
         "value": 10741000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 11169000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 11584000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 12015000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -2188,27 +2198,27 @@
     "56924": {
       "id": 56924,
       "id_team": 12,
-      "id_match": 37157,
-      "id_gameweek": 3968,
-      "id_home": 8,
+      "id_match": 37953,
+      "id_gameweek": 4043,
+      "id_home": 50,
       "id_away": 12,
       "date": {
-        "ts": 1786899600,
-        "text": "dom 19:00",
-        "format": "EEE H:mm",
+        "ts": 1787592600,
+        "text": "24 ago 19:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "19:00",
-          "format": "EEE"
+          "date": "24 ago",
+          "time": "19:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
+      "home": "Osasuna",
       "away": "Levante",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
@@ -2221,8 +2231,9 @@
   },
   "away": {
     "56924": {
-      "points": 0,
-      "avg": 0
+      "id": 56924,
+      "points": 2,
+      "avg": 2
     }
   },
   "owners": [],

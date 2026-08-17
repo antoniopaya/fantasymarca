@@ -3,15 +3,15 @@
     "id": 68606,
     "name": "Ángel Pérez",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 6,
+    "avg": 6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68606.png?version=20260323141026",
     "isFavorite": 0,
-    "value": 19732000,
-    "previousValue": 19306000,
+    "value": 20472000,
+    "previousValue": 20303000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 19732000,
+      "floor": 20472000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 29598000,
+      "value": 30708000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 19732000,
+      "price": 20472000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 201
+    "clausesRanking": 209
   },
   "id": 68606,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,14 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
     {
@@ -650,6 +652,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 6,
+      "avg": 6,
+      "id_team": 48,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+    },
+    {
       "season": "25/26",
       "points": 72,
       "avg": 4.5,
@@ -661,21 +671,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 19306000,
-      "change": 426000,
-      "sign": 426
+      "value": 20303000,
+      "change": 169000,
+      "sign": 169
     },
     {
       "time": "Una semana",
-      "value": 16062000,
-      "change": 3670000,
-      "sign": "+3.670.000"
+      "value": 17671000,
+      "change": 2801000,
+      "sign": "+2.801.000"
     },
     {
       "time": "Un mes",
-      "value": 9047000,
-      "change": 10685000,
-      "sign": "+10.685.000"
+      "value": 9624000,
+      "change": 10848000,
+      "sign": "+10.848.000"
     }
   ],
   "values_chart": {
@@ -1475,11 +1485,23 @@
       {
         "value": 19732000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 20160000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 20303000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 20472000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
-      "value": 19732000,
-      "date": "14 ago 2026"
+      "value": 20472000,
+      "date": "17 ago 2026"
     },
     "min": {
       "value": 329000,
@@ -1490,35 +1512,36 @@
     "68606": {
       "id": 68606,
       "id_team": 48,
-      "id_match": 37155,
-      "id_gameweek": 3968,
-      "id_home": 48,
-      "id_away": 9,
+      "id_match": 37954,
+      "id_gameweek": 4043,
+      "id_home": 14,
+      "id_away": 48,
       "date": {
-        "ts": 1786815000,
-        "text": "sáb 19:30",
+        "ts": 1787252400,
+        "text": "jue 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "19:30",
+          "date": "jue",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Alavés",
-      "away": "Getafe",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Alavés",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
   "home": {
     "68606": {
-      "points": 0,
-      "avg": 0
+      "id": 68606,
+      "points": 6,
+      "avg": 6
     }
   },
   "away": {

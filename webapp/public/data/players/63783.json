@@ -5,13 +5,17 @@
     "position": 2,
     "points": 0,
     "avg": 0,
-    "status": null,
+    "status": "other",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "other",
+      "description": "No convocado",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/63783.png?version=20250613112719",
     "isFavorite": 0,
-    "value": 368000,
-    "previousValue": 499000,
+    "value": 436000,
+    "previousValue": 477000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -47,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 368000,
+      "price": 436000,
       "loanable": null
     },
     "bid": {
@@ -89,7 +93,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
     {
@@ -652,9 +656,9 @@
   "values": [
     {
       "time": "Un día",
-      "value": 499000,
-      "change": -131000,
-      "sign": -131
+      "value": 477000,
+      "change": -41000,
+      "sign": -41
     }
   ],
   "values_chart": {
@@ -674,6 +678,18 @@
       {
         "value": 368000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 353000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 477000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 436000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -681,35 +697,35 @@
       "date": "11 ago 2026"
     },
     "min": {
-      "value": 368000,
-      "date": "14 ago 2026"
+      "value": 353000,
+      "date": "15 ago 2026"
     }
   },
   "next_match": {
     "63783": {
       "id": 63783,
       "id_team": 12,
-      "id_match": 37157,
-      "id_gameweek": 3968,
-      "id_home": 8,
+      "id_match": 37953,
+      "id_gameweek": 4043,
+      "id_home": 50,
       "id_away": 12,
       "date": {
-        "ts": 1786899600,
-        "text": "dom 19:00",
-        "format": "EEE H:mm",
+        "ts": 1787592600,
+        "text": "24 ago 19:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "19:00",
-          "format": "EEE"
+          "date": "24 ago",
+          "time": "19:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
+      "home": "Osasuna",
       "away": "Levante",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },

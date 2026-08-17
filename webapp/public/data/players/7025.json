@@ -3,15 +3,15 @@
     "id": 7025,
     "name": "Marko Dmitrović",
     "position": 1,
-    "points": 0,
-    "avg": 0,
+    "points": 7,
+    "avg": 7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/7025.png?version=20251003195646",
     "isFavorite": 0,
-    "value": 28219000,
-    "previousValue": 28163000,
+    "value": 27987000,
+    "previousValue": 28123000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 28219000,
+      "floor": 27987000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 42328500,
+      "value": 41980500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 28219000,
+      "price": 27987000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 194,
       "weight": 94
     },
-    "clausesRanking": 251
+    "clausesRanking": 270
   },
   "id": 7025,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,12 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
     {
@@ -650,6 +650,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 7,
+      "avg": 7,
+      "id_team": 8,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+    },
+    {
       "season": "25/26",
       "points": 164,
       "avg": 4.4324,
@@ -677,43 +685,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 28163000,
-      "change": 56000,
-      "sign": 56
+      "value": 28123000,
+      "change": -136000,
+      "sign": -136
     },
     {
       "time": "Una semana",
-      "value": 27142000,
-      "change": 1077000,
-      "sign": "+1.077.000"
+      "value": 27667000,
+      "change": 320000,
+      "sign": 320
     },
     {
       "time": "Un mes",
-      "value": 21906000,
-      "change": 6313000,
-      "sign": "+6.313.000"
+      "value": 22323000,
+      "change": 5664000,
+      "sign": "+5.664.000"
     },
     {
       "time": "Un año",
-      "value": 22969000,
-      "change": 5250000,
-      "sign": "+5.250.000"
+      "value": 22783000,
+      "change": 5204000,
+      "sign": "+5.204.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 22969000,
-        "date": "14 ago 2025"
-      },
-      {
-        "value": 22950000,
-        "date": "15 ago 2025"
-      },
-      {
-        "value": 22932000,
-        "date": "16 ago 2025"
-      },
       {
         "value": 22783000,
         "date": "17 ago 2025"
@@ -2165,6 +2161,18 @@
       {
         "value": 28219000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 28209000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 28123000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 27987000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -2180,35 +2188,36 @@
     "7025": {
       "id": 7025,
       "id_team": 8,
-      "id_match": 37157,
-      "id_gameweek": 3968,
+      "id_match": 37950,
+      "id_gameweek": 4043,
       "id_home": 8,
-      "id_away": 12,
+      "id_away": 15,
       "date": {
-        "ts": 1786899600,
-        "text": "dom 19:00",
+        "ts": 1787427000,
+        "text": "sáb 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "19:00",
+          "date": "sáb",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Espanyol",
-      "away": "Levante",
+      "away": "Real Madrid",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
   "home": {
     "7025": {
-      "points": 0,
-      "avg": 0
+      "id": 7025,
+      "points": 7,
+      "avg": 7
     }
   },
   "away": {

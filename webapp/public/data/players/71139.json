@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71139.png?version=20260707174927",
     "isFavorite": 0,
-    "value": 2106000,
-    "previousValue": 1870000,
+    "value": 2465000,
+    "previousValue": 2332000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2106000,
+      "floor": 2465000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3159000,
+      "value": 3697500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2106000,
+      "price": 2465000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 193,
       "weight": null
     },
-    "clausesRanking": 52
+    "clausesRanking": 58
   },
   "id": 71139,
   "player_extra": {
@@ -652,21 +652,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1870000,
-      "change": 236000,
-      "sign": 236
+      "value": 2332000,
+      "change": 133000,
+      "sign": 133
     },
     {
       "time": "Una semana",
-      "value": 1102000,
-      "change": 1004000,
-      "sign": "+1.004.000"
+      "value": 1348000,
+      "change": 1117000,
+      "sign": "+1.117.000"
     },
     {
       "time": "Un mes",
-      "value": 569000,
-      "change": 1537000,
-      "sign": "+1.537.000"
+      "value": 372000,
+      "change": 2093000,
+      "sign": "+2.093.000"
     }
   ],
   "values_chart": {
@@ -822,11 +822,23 @@
       {
         "value": 2106000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 2228000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 2332000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 2465000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
-      "value": 2106000,
-      "date": "14 ago 2026"
+      "value": 2465000,
+      "date": "17 ago 2026"
     },
     "min": {
       "value": 329000,
@@ -843,16 +855,16 @@
       "id_away": 23,
       "date": {
         "ts": 1786993200,
-        "text": "lun 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "lun",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Deportivo da Coruña",
       "away": "Elche",

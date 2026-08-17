@@ -3,15 +3,15 @@
     "id": 28612,
     "name": "Mathew Ryan",
     "position": 1,
-    "points": 0,
-    "avg": 0,
+    "points": 3,
+    "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/28612.png?version=20250829183411",
     "isFavorite": 0,
-    "value": 23489000,
-    "previousValue": 23368000,
+    "value": 23612000,
+    "previousValue": 23635000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 23489000,
+      "floor": 23612000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 35233500,
+      "value": 35418000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 23489000,
+      "price": 23612000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 184,
       "weight": 82
     },
-    "clausesRanking": 186
+    "clausesRanking": 199
   },
   "id": 28612,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,12 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
     {
@@ -650,6 +650,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 3,
+      "avg": 3,
+      "id_team": 12,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+    },
+    {
       "season": "25/26",
       "points": 166,
       "avg": 4.6111,
@@ -661,15 +669,15 @@
   "values": [
     {
       "time": "Un día",
-      "value": 23368000,
-      "change": 121000,
-      "sign": 121
+      "value": 23635000,
+      "change": -23000,
+      "sign": -23
     },
     {
       "time": "Una semana",
-      "value": 22752000,
-      "change": 737000,
-      "sign": 737
+      "value": 23103000,
+      "change": 509000,
+      "sign": 509
     }
   ],
   "values_chart": {
@@ -1949,6 +1957,18 @@
       {
         "value": 23489000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 23553000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 23635000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 23612000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -1964,27 +1984,27 @@
     "28612": {
       "id": 28612,
       "id_team": 12,
-      "id_match": 37157,
-      "id_gameweek": 3968,
-      "id_home": 8,
+      "id_match": 37953,
+      "id_gameweek": 4043,
+      "id_home": 50,
       "id_away": 12,
       "date": {
-        "ts": 1786899600,
-        "text": "dom 19:00",
-        "format": "EEE H:mm",
+        "ts": 1787592600,
+        "text": "24 ago 19:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "19:00",
-          "format": "EEE"
+          "date": "24 ago",
+          "time": "19:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
+      "home": "Osasuna",
       "away": "Levante",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
@@ -1997,8 +2017,9 @@
   },
   "away": {
     "28612": {
-      "points": 0,
-      "avg": 0
+      "id": 28612,
+      "points": 3,
+      "avg": 3
     }
   },
   "owners": [],

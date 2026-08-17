@@ -3,15 +3,15 @@
     "id": 5920,
     "name": "Carles Aleñá",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 1,
+    "avg": 1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/5920.png?version=20251006024230",
     "isFavorite": 0,
-    "value": 5596000,
-    "previousValue": 5431000,
+    "value": 5810000,
+    "previousValue": 5820000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5596000,
+      "floor": 5810000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8394000,
+      "value": 8715000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5596000,
+      "price": 5810000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 180,
       "weight": 73
     },
-    "clausesRanking": 119
+    "clausesRanking": 117
   },
   "id": 5920,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,14 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
     {
@@ -650,6 +652,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 1,
+      "avg": 1,
+      "id_team": 48,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+    },
+    {
       "season": "25/26",
       "points": 113,
       "avg": 3.3235,
@@ -685,43 +695,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5431000,
-      "change": 165000,
-      "sign": 165
+      "value": 5820000,
+      "change": -10000,
+      "sign": -10
     },
     {
       "time": "Una semana",
-      "value": 4594000,
-      "change": 1002000,
-      "sign": "+1.002.000"
+      "value": 4982000,
+      "change": 828000,
+      "sign": 828
     },
     {
       "time": "Un mes",
-      "value": 1157000,
-      "change": 4439000,
-      "sign": "+4.439.000"
+      "value": 1426000,
+      "change": 4384000,
+      "sign": "+4.384.000"
     },
     {
       "time": "Un año",
-      "value": 5514000,
-      "change": 82000,
-      "sign": 82
+      "value": 6014000,
+      "change": -204000,
+      "sign": -204
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 5514000,
-        "date": "14 ago 2025"
-      },
-      {
-        "value": 5688000,
-        "date": "15 ago 2025"
-      },
-      {
-        "value": 5820000,
-        "date": "16 ago 2025"
-      },
       {
         "value": 6014000,
         "date": "17 ago 2025"
@@ -2173,6 +2171,18 @@
       {
         "value": 5596000,
         "date": "14 ago 2026"
+      },
+      {
+        "value": 5752000,
+        "date": "15 ago 2026"
+      },
+      {
+        "value": 5820000,
+        "date": "16 ago 2026"
+      },
+      {
+        "value": 5810000,
+        "date": "17 ago 2026"
       }
     ],
     "max": {
@@ -2188,35 +2198,36 @@
     "5920": {
       "id": 5920,
       "id_team": 48,
-      "id_match": 37155,
-      "id_gameweek": 3968,
-      "id_home": 48,
-      "id_away": 9,
+      "id_match": 37954,
+      "id_gameweek": 4043,
+      "id_home": 14,
+      "id_away": 48,
       "date": {
-        "ts": 1786815000,
-        "text": "sáb 19:30",
+        "ts": 1787252400,
+        "text": "jue 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "19:30",
+          "date": "jue",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Getafe",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Alavés",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
   "home": {
     "5920": {
-      "points": 0,
-      "avg": 0
+      "id": 5920,
+      "points": 1,
+      "avg": 1
     }
   },
   "away": {
