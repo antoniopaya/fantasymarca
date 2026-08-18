@@ -1,5 +1,11 @@
 ---
-import { POSITION_SHORT, teamLogoUrl, formatMoney, url } from "../lib/data";
+import {
+  POSITION_SHORT,
+  PLAYER_STATUS_LABELS,
+  teamLogoUrl,
+  formatMoney,
+  url,
+} from "../lib/data";
 import type { PlayerSummary, Team } from "../lib/data";
 
 interface Props {
@@ -40,6 +46,7 @@ const columns = [
         id="stats-search"
         type="text"
         placeholder="Buscar jugador..."
+        aria-label="Buscar jugador"
         autocomplete="off"
         class="w-full rounded-xl border border-white/10 bg-slate-900/60 py-2.5 pr-4 pl-10 text-sm text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
       />
@@ -85,20 +92,25 @@ const columns = [
         <tr
           class="border-b border-white/10 bg-slate-900/80 text-left text-xs tracking-wide text-slate-500 uppercase"
         >
-          <th class="w-10 px-3 py-2">#</th>
-          <th class="px-3 py-2">Jugador</th>
-          <th class="px-3 py-2">Equipo</th>
-          <th class="px-3 py-2">Pos</th>
+          <th scope="col" class="w-10 px-3 py-2"> # </th>
+          <th scope="col" class="px-3 py-2"> Jugador </th>
+          <th scope="col" class="px-3 py-2"> Equipo </th>
+          <th scope="col" class="px-3 py-2"> Pos </th>
           {
             columns.map((col) => (
               <th
-                class="cursor-pointer px-3 py-2 whitespace-nowrap select-none hover:text-white"
+                scope="col"
+                aria-sort="none"
+                class="px-3 py-2 whitespace-nowrap"
                 data-sort-key={col.key}
               >
-                <span class="inline-flex items-center gap-1">
+                <button
+                  type="button"
+                  class="inline-flex cursor-pointer items-center gap-1 tracking-wide text-inherit uppercase select-none hover:text-white"
+                >
                   {col.label}
                   <span class="sort-arrow text-[10px] opacity-0">▼</span>
-                </span>
+                </button>
               </th>
             ))
           }
@@ -121,7 +133,7 @@ const columns = [
               data-weeklychange={p.weeklyChange}
               class="border-b border-white/5 hover:bg-white/5"
             >
-              <td class="row-rank px-3 py-2 text-slate-600" />
+              <td class="row-rank px-3 py-2 text-slate-500" />
               <td class="px-3 py-2">
                 <a
                   href={url(`/jugadores/${p.id}`)}
@@ -129,6 +141,15 @@ const columns = [
                 >
                   {p.name}
                 </a>
+                {p.status && (
+                  <span
+                    class="ml-1 inline-flex h-3.5 w-3.5 items-center justify-center rounded-full bg-rose-500 text-[9px] font-bold text-white"
+                    title={PLAYER_STATUS_LABELS[p.status] ?? "Baja"}
+                    aria-label={PLAYER_STATUS_LABELS[p.status] ?? "Baja"}
+                  >
+                    !
+                  </span>
+                )}
               </td>
               <td class="px-3 py-2 text-slate-400">
                 <span class="inline-flex items-center gap-1.5 whitespace-nowrap">
@@ -201,7 +222,7 @@ const columns = [
   const countEl = document.getElementById("stats-count") as HTMLElement;
   const noResults = document.getElementById("stats-no-results") as HTMLElement;
   const headers = Array.from(
-    document.querySelectorAll<HTMLTableCellElement>("[data-sort-key]"),
+    document.querySelectorAll<HTMLTableCellElement>("th[data-sort-key]"),
   );
 
   const diacriticsPattern = new RegExp(
@@ -260,8 +281,10 @@ const columns = [
       if (h.dataset.sortKey === key) {
         arrow.textContent = dir === "asc" ? "▲" : "▼";
         arrow.classList.remove("opacity-0");
+        h.setAttribute("aria-sort", dir === "asc" ? "ascending" : "descending");
       } else {
         arrow.classList.add("opacity-0");
+        h.setAttribute("aria-sort", "none");
       }
     }
   }
@@ -285,7 +308,9 @@ const columns = [
   }
 
   for (const h of headers) {
-    h.addEventListener("click", () => sortBy(h.dataset.sortKey ?? ""));
+    h.querySelector("button")?.addEventListener("click", () =>
+      sortBy(h.dataset.sortKey ?? ""),
+    );
   }
   searchInput.addEventListener("input", applyFilters);
   teamSelect.addEventListener("change", applyFilters);

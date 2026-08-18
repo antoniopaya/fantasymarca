@@ -2,9 +2,14 @@
 interface Props {
   points: Array<{ value: number; date: string }>;
   color?: string;
+  title?: string;
 }
 
-const { points, color = "#10b981" } = Astro.props;
+const {
+  points,
+  color = "#10b981",
+  title = "Evolución del valor de mercado",
+} = Astro.props;
 
 const width = 600;
 const height = 220;
@@ -47,6 +52,8 @@ const chartData = points.map((p) => ({
     viewBox={`0 0 ${width} ${height}`}
     width="100%"
     height={height}
+    role="img"
+    aria-label={title}
     class="overflow-visible"
   >
     {
@@ -110,10 +117,14 @@ const chartData = points.map((p) => ({
       y={padding.top}
       width={plotWidth}
       height={plotHeight}
-      fill="transparent"></rect>
+      tabindex="0"
+      aria-label="Explorar la evolución del valor con las flechas izquierda y derecha"
+      fill="transparent"
+      style="outline-offset: 2px;"></rect>
   </svg>
   <div
     class="chart-tooltip pointer-events-none absolute hidden rounded-lg border border-white/10 bg-slate-900 px-2.5 py-1.5 text-xs shadow-lg"
+    aria-live="polite"
   >
     <p class="tooltip-date text-slate-400"></p>
     <p class="tooltip-value font-semibold text-white"></p>
@@ -156,12 +167,12 @@ const chartData = points.map((p) => ({
       return { x: local.x, y: local.y };
     }
 
-    function handleMove(clientX: number, clientY: number) {
-      const { x } = svgPoint(clientX, clientY);
-      const fraction = Math.min(Math.max((x - rectX) / rectWidth, 0), 1);
-      const index = Math.round(fraction * (data.length - 1));
+    let currentIndex = data.length - 1;
+
+    function renderIndex(index: number) {
       const point = data[index];
       if (!point) return;
+      currentIndex = index;
 
       const px = rectX + (index / Math.max(data.length - 1, 1)) * rectWidth;
       const py =
@@ -186,6 +197,12 @@ const chartData = points.map((p) => ({
       tooltip.style.top = "0px";
     }
 
+    function handleMove(clientX: number, clientY: number) {
+      const { x } = svgPoint(clientX, clientY);
+      const fraction = Math.min(Math.max((x - rectX) / rectWidth, 0), 1);
+      renderIndex(Math.round(fraction * (data.length - 1)));
+    }
+
     function hide() {
       crosshairLine.setAttribute("opacity", "0");
       crosshairDot.setAttribute("opacity", "0");
@@ -205,5 +222,19 @@ const chartData = points.map((p) => ({
       { passive: true },
     );
     hoverTarget.addEventListener("touchend", hide);
+
+    // Con ratón/touch el índice sale de la posición del puntero; con teclado
+    // no hay puntero, así que se navega punto a punto con las flechas.
+    hoverTarget.addEventListener("focus", () => renderIndex(currentIndex));
+    hoverTarget.addEventListener("blur", hide);
+    hoverTarget.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        renderIndex(Math.max(0, currentIndex - 1));
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        renderIndex(Math.min(data.length - 1, currentIndex + 1));
+      }
+    });
   });
 </script>

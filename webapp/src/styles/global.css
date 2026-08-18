@@ -1,7 +1,18 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
+/* El slate-500 por defecto de Tailwind da 4.23:1 sobre nuestro fondo slate-950
+   (rgb(2,6,24)) — no llega al 4.5:1 que exige WCAG AA para texto normal, y es
+   el tono que usamos en casi toda la app para texto secundario. Se sube un
+   poco la luminosidad (medido con canvas 2D en el propio sitio) hasta 5.13:1
+   sin cambiar el resto de la paleta. */
+@theme {
+  --color-slate-500: oklch(0.6 0.046 257.417);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {

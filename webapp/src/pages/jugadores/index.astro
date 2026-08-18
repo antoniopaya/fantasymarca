@@ -25,7 +25,9 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
     </p>
   </div>
 
-  <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+  <div
+    class="sticky top-[61px] z-10 -mx-4 mb-6 flex flex-col gap-3 border-b border-white/10 bg-slate-950/95 px-4 py-3 backdrop-blur-md sm:flex-row sm:items-center"
+  >
     <div class="relative flex-1">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +43,8 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       <input
         id="search-input"
         type="text"
-        placeholder="Buscar por nombre..."
+        placeholder="Buscar por nombre o equipo..."
+        aria-label="Buscar jugador por nombre o equipo"
         autocomplete="off"
         class="w-full rounded-xl border border-white/10 bg-slate-900/60 py-2.5 pr-4 pl-10 text-sm text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
       />
@@ -76,6 +79,14 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       <option value="points_desc">Puntos: mayor a menor</option>
       <option value="name_asc">Nombre: A-Z</option>
     </select>
+    <button
+      type="button"
+      id="favorites-toggle"
+      aria-pressed="false"
+      class="rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+    >
+      ☆ Favoritos
+    </button>
   </div>
 
   <p id="results-count" class="mb-4 text-sm text-slate-500">
@@ -90,7 +101,9 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       players.map((player) => (
         <div
           data-player-card
+          data-id={player.id}
           data-name={player.name.toLowerCase()}
+          data-team-name={player.team_name.toLowerCase()}
           data-team={player.id_team}
           data-position={player.position}
           data-value={player.value}
@@ -111,6 +124,7 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
                 ? formatMoney(player.precioFantastica)
                 : undefined
             }
+            status={player.status}
           />
         </div>
       ))
@@ -132,12 +146,27 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
     const sortSelect = document.getElementById(
       "sort-select",
     ) as HTMLSelectElement;
+    const favoritesToggle = document.getElementById(
+      "favorites-toggle",
+    ) as HTMLButtonElement;
     const countEl = document.getElementById("results-count") as HTMLElement;
     const noResults = document.getElementById("no-results") as HTMLElement;
     const grid = document.getElementById("players-grid") as HTMLElement;
     const cards = Array.from(
       grid.querySelectorAll<HTMLElement>("[data-player-card]"),
     );
+
+    const FAVORITES_KEY = "fantasymarca:favoritos";
+    let favoritesOnly = false;
+
+    function loadFavoriteIds(): Set<number> {
+      try {
+        const raw = localStorage.getItem(FAVORITES_KEY);
+        return new Set(raw ? JSON.parse(raw) : []);
+      } catch {
+        return new Set();
+      }
+    }
 
     const diacriticsPattern = new RegExp(
       `[${String.fromCharCode(0x0300)}-${String.fromCharCode(0x036f)}]`,
@@ -148,26 +177,52 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       return text.normalize("NFD").replace(diacriticsPattern, "").toLowerCase();
     }
 
+    // Los filtros se reflejan en la URL (reemplazando la entrada del
+    // historial, no una nueva por cada tecla) para poder recargar, volver
+    // atrás o compartir un enlace ya filtrado.
+    function updateQueryParams() {
+      const params = new URLSearchParams();
+      if (input.value.trim()) params.set("q", input.value.trim());
+      if (teamSelect.value !== "0") params.set("equipo", teamSelect.value);
+      if (positionSelect.value !== "0")
+        params.set("posicion", positionSelect.value);
+      if (sortSelect.value !== "value_desc")
+        params.set("orden", sortSelect.value);
+      if (favoritesOnly) params.set("favoritos", "1");
+      const qs = params.toString();
+      window.history.replaceState(
+        null,
+        "",
+        qs ? `?${qs}` : window.location.pathname,
+      );
+    }
+
     function applyFilters() {
       const query = normalize(input.value.trim());
       const team = teamSelect.value;
       const position = positionSelect.value;
+      const favoriteIds = favoritesOnly ? loadFavoriteIds() : null;
       let visible = 0;
 
       cards.forEach((card) => {
-        const matchesName = card.dataset.name
-          ? normalize(card.dataset.name).includes(query)
-          : true;
+        const matchesQuery =
+          !query ||
+          normalize(card.dataset.name ?? "").includes(query) ||
+          normalize(card.dataset.teamName ?? "").includes(query);
         const matchesTeam = team === "0" || card.dataset.team === team;
         const matchesPosition =
           position === "0" || card.dataset.position === position;
-        const show = matchesName && matchesTeam && matchesPosition;
+        const matchesFavorite =
+          !favoriteIds || favoriteIds.has(Number(card.dataset.id));
+        const show =
+          matchesQuery && matchesTeam && matchesPosition && matchesFavorite;
         card.classList.toggle("hidden", !show);
         if (show) visible++;
       });
 
       countEl.textContent = `${visible} jugador${visible === 1 ? "" : "es"}`;
       noResults.classList.toggle("hidden", visible !== 0);
+      updateQueryParams();
     }
 
     function applySort() {
@@ -209,14 +264,43 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
             );
         }
       });
-      sorted.forEach((card, i) => {
-        card.style.order = String(i);
-      });
+      // Reordenar el DOM de verdad (no solo `style.order`): si no, el orden de
+      // tabulación y el de un lector de pantalla quedan desincronizados del
+      // orden visual que ve alguien con ratón.
+      for (const card of sorted) grid.appendChild(card);
+      updateQueryParams();
+    }
+
+    function setFavoritesOnly(value: boolean) {
+      favoritesOnly = value;
+      favoritesToggle.setAttribute("aria-pressed", String(value));
+      favoritesToggle.textContent = value ? "★ Favoritos" : "☆ Favoritos";
+      favoritesToggle.classList.toggle("text-amber-400", value);
+      favoritesToggle.classList.toggle("border-amber-400/40", value);
     }
 
     input.addEventListener("input", applyFilters);
     teamSelect.addEventListener("change", applyFilters);
     positionSelect.addEventListener("change", applyFilters);
     sortSelect.addEventListener("change", applySort);
+    favoritesToggle.addEventListener("click", () => {
+      setFavoritesOnly(!favoritesOnly);
+      applyFilters();
+    });
+    // Si se marca/desmarca una estrella desde una tarjeta mientras el filtro
+    // "solo favoritos" está activo, la lista visible se actualiza sola.
+    document.addEventListener("favorites-changed", () => {
+      if (favoritesOnly) applyFilters();
+    });
+
+    // Restaura filtros desde la URL (recarga, atrás, o enlace compartido).
+    const initialParams = new URLSearchParams(window.location.search);
+    input.value = initialParams.get("q") ?? "";
+    teamSelect.value = initialParams.get("equipo") ?? "0";
+    positionSelect.value = initialParams.get("posicion") ?? "0";
+    sortSelect.value = initialParams.get("orden") ?? "value_desc";
+    setFavoritesOnly(initialParams.get("favoritos") === "1");
+    applyFilters();
+    applySort();
   </script>
 </Layout>

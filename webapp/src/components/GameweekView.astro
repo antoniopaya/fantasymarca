@@ -14,12 +14,43 @@ interface Props {
 
 const { selected, matches, gameweeks, isNext, prevGw, nextGw } = Astro.props;
 
-const groups = new Map<string, Match[]>();
-for (const match of matches) {
-  const dayKey = match.date.text.split(" ").slice(0, 2).join(" ");
-  const list = groups.get(dayKey) ?? [];
-  list.push(match);
-  groups.set(dayKey, list);
+// `date.text` no sirve para agrupar por día: para partidos futuros trae la hora
+// pegada ("sáb 21:00", así que dos partidos del mismo sábado a horas distintas
+// acababan en grupos distintos) y para partidos ya jugados es literalmente
+// "Fin". Se agrupa por el `ts` real en huso horario de España, que es donde se
+// juega la liga sea cual sea el huso del servidor que hace el build.
+const MADRID_TZ = "Europe/Madrid";
+const dayKeyFormatter = new Intl.DateTimeFormat("en-CA", {
+  timeZone: MADRID_TZ,
+});
+const dayLabelFormatter = new Intl.DateTimeFormat("es-ES", {
+  timeZone: MADRID_TZ,
+  weekday: "long",
+  day: "numeric",
+  month: "long",
+});
+
+const sortedMatches = [...matches].sort((a, b) => a.date.ts - b.date.ts);
+
+// Cuenta atrás al primer partido sin empezar de esta jornada, solo tiene
+// sentido en la página de "próxima jornada".
+const firstKickoffTs = isNext
+  ? (sortedMatches.find((m) => m.status === "fixture")?.date.ts ?? null)
+  : null;
+
+const groups = new Map<string, { label: string; matches: Match[] }>();
+for (const match of sortedMatches) {
+  const date = new Date(match.date.ts * 1000);
+  const dayKey = dayKeyFormatter.format(date);
+  const existing = groups.get(dayKey);
+  if (existing) {
+    existing.matches.push(match);
+  } else {
+    groups.set(dayKey, {
+      label: dayLabelFormatter.format(date),
+      matches: [match],
+    });
+  }
 }
 ---
 
@@ -36,6 +67,15 @@ for (const match of matches) {
       }
     </div>
     <p class="text-sm text-slate-400">Temporada {selected.season}</p>
+    {
+      firstKickoffTs !== null && (
+        <p
+          id="kickoff-countdown"
+          data-kickoff-ts={firstKickoffTs}
+          class="mt-1 text-sm font-medium text-emerald-400"
+        />
+      )
+    }
   </div>
   <div class="flex items-center gap-2">
     <select
@@ -105,10 +145,10 @@ for (const match of matches) {
     </p>
   ) : (
     <div class="space-y-8">
-      {Array.from(groups.entries()).map(([day, dayMatches]) => (
+      {Array.from(groups.values()).map(({ label, matches: dayMatches }) => (
         <div>
           <h3 class="mb-3 text-xs font-semibold tracking-wide text-slate-500 uppercase">
-            {day}
+            {label}
           </h3>
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {dayMatches.map((game) => (
@@ -121,6 +161,8 @@ for (const match of matches) {
                 goalsHome={game.goals_home}
                 goalsAway={game.goals_away}
                 status={game.status}
+                homeTeamId={game.id_home}
+                awayTeamId={game.id_away}
               />
             ))}
           </div>
@@ -136,4 +178,62 @@ for (const match of matches) {
   jump.addEventListener("change", () => {
     window.location.href = `${base}/jornada/${jump.value}`;
   });
+
+  const countdownEl = document.getElementById("kickoff-countdown");
+  if (countdownEl) {
+    const kickoffMs = Number(countdownEl.dataset.kickoffTs) * 1000;
+
+    const updateCountdown = () => {
+      const diff = kickoffMs - Date.now();
+      if (diff <= 0) {
+        countdownEl.textContent = "El primer partido ya ha empezado";
+        clearInterval(interval);
+        return;
+      }
+      const totalSeconds = Math.floor(diff / 1000);
+      const days = Math.floor(totalSeconds / 86_400);
+      const hours = Math.floor((totalSeconds % 86_400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      const parts =
+        days > 0
+          ? [`${days}d`, `${hours}h`]
+          : [`${hours}h`, `${minutes}m`, `${seconds}s`];
+      countdownEl.textContent = `Empieza en ${parts.join(" ")}`;
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+  }
+
+  // Resalta los partidos en los que juega algún equipo de la convocatoria
+  // activa de "Crear once" (mismo localStorage, ver crear-once.astro). Si no
+  // hay ninguna convocatoria guardada o localStorage no está disponible, no
+  // se resalta nada.
+  function getMyTeamIds(): Set<number> {
+    try {
+      const activeId = localStorage.getItem("fantasymarca:crear-once:active");
+      const raw = localStorage.getItem("fantasymarca:crear-once:lineups");
+      if (!activeId || !raw) return new Set();
+      const lineups = JSON.parse(raw);
+      const teamIds = lineups[activeId]?.teamIds;
+      return new Set(Array.isArray(teamIds) ? teamIds : []);
+    } catch {
+      return new Set();
+    }
+  }
+
+  const myTeamIds = getMyTeamIds();
+  if (myTeamIds.size > 0) {
+    document
+      .querySelectorAll<HTMLElement>("[data-match-card]")
+      .forEach((card) => {
+        const home = Number(card.dataset.homeTeam);
+        const away = Number(card.dataset.awayTeam);
+        if (myTeamIds.has(home) || myTeamIds.has(away)) {
+          card.classList.add("ring-2", "ring-emerald-500/50");
+          card.title = "Juega uno de los equipos de tu once";
+        }
+      });
+  }
 </script>

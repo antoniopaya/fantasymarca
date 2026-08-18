@@ -112,7 +112,17 @@ export interface PlayerSummary {
   lastSeason: { season: string; points: number; avg: number } | null;
   /** Precio de consenso de la liga (ver precios_fantastica.json), null si el jugador no está en el Excel. */
   precioFantastica: number | null;
+  /** injury/doubt/red/other, o null si no hay ninguna incidencia (ver PLAYER_STATUS_LABELS). */
+  status: string | null;
 }
+
+/** Etiqueta legible para PlayerSummary.status, para badges/tooltips en los listados. */
+export const PLAYER_STATUS_LABELS: Record<string, string> = {
+  injury: "Lesionado",
+  doubt: "Duda",
+  red: "Sancionado",
+  other: "Baja",
+};
 
 export const POSITION_NAMES: Record<number, string> = {
   1: "Portero",
@@ -240,6 +250,7 @@ export function getAllPlayerSummaries(): PlayerSummary[] {
           }
         : null,
       precioFantastica: getPrecioFantastica(catalogEntry.id),
+      status: detail.player.status,
     };
   });
 

@@ -26,11 +26,34 @@ const fullTitle = title ? `${title} · FantasyMarca` : "FantasyMarca";
     <title>{fullTitle}</title>
   </head>
   <body class="min-h-screen bg-slate-950 text-slate-100">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[100] focus:rounded-full focus:bg-emerald-500 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-slate-950"
+    >
+      Saltar al contenido
+    </a>
     <div class="bg-grid pointer-events-none fixed inset-0 -z-10"></div>
     <Navbar />
-    <main class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+    <main id="main-content" class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
       <slot />
     </main>
     <Footer />
+    <script>
+      // Todas las fotos de jugador/escudo salen del CDN de fantasy.marca.com:
+      // si un jugador nuevo o un escudo todavía no está dado de alta ahí, la
+      // imagen rompe. En vez de repetir un onerror en cada <img> (y arrastrar
+      // el aviso de accesibilidad de "listener en elemento no interactivo"),
+      // un único listener delegado en document cubre cualquier imagen de la
+      // página. `error` no burbujea, así que hace falta la fase de captura.
+      document.addEventListener(
+        "error",
+        (event) => {
+          if (event.target instanceof HTMLImageElement) {
+            event.target.style.opacity = "0";
+          }
+        },
+        true,
+      );
+    </script>
   </body>
 </html>

@@ -47,6 +47,7 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
             type="button"
             data-legend-toggle
             data-position={position}
+            aria-pressed="true"
             class="legend-toggle flex items-center gap-1.5 rounded-full px-1.5 py-1 text-xs text-slate-400 transition-colors hover:bg-white/5"
           >
             <span
@@ -173,6 +174,7 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
 
   function showTooltip(p, clientX, clientY) {
     const rect = container.getBoundingClientRect();
+    tooltipPhoto.style.opacity = "1";
     tooltipPhoto.src = p.photoUrl;
     tooltipPhoto.alt = p.name;
     tooltipName.textContent = p.name;
@@ -290,7 +292,10 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
     for (const p of visible) {
       const cx = scaleX(p._pointsValue, xMax);
       const cy = scaleY(p.price, yMax);
-      const link = el("a", { href: p.href });
+      const link = el("a", {
+        href: p.href,
+        "aria-label": `${p.name} (${p.teamName}): ${p._pointsValue} puntos, ${p.price.toFixed(2)} M€`,
+      });
       const dot = el("circle", {
         cx,
         cy,
@@ -308,6 +313,13 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
         showTooltip(p, e.clientX, e.clientY),
       );
       dot.addEventListener("mouseleave", hideTooltip);
+      // Cada punto es un enlace real: además del ratón, hay que enseñar el
+      // tooltip al llegar por teclado (focus) y ocultarlo al salir (blur).
+      link.addEventListener("focus", () => {
+        const r = dot.getBoundingClientRect();
+        showTooltip(p, r.left + r.width / 2, r.top + r.height / 2);
+      });
+      link.addEventListener("blur", hideTooltip);
       link.appendChild(dot);
       svg.appendChild(link);
     }
@@ -318,6 +330,7 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
       const isHidden = hiddenPositions.has(Number(btn.dataset.position));
       btn.classList.toggle("opacity-40", isHidden);
       btn.querySelector(".legend-dot").style.opacity = isHidden ? "0.3" : "1";
+      btn.setAttribute("aria-pressed", String(!isHidden));
     }
   }
 

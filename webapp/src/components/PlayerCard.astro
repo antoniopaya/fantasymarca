@@ -1,5 +1,10 @@
 ---
-import { POSITION_SHORT, POSITION_COLORS, url } from "../lib/data";
+import {
+  POSITION_SHORT,
+  POSITION_COLORS,
+  PLAYER_STATUS_LABELS,
+  url,
+} from "../lib/data";
 
 interface Props {
   id: number;
@@ -10,6 +15,7 @@ interface Props {
   teamLogoUrl?: string;
   valueLabel?: string;
   precioFantasticaLabel?: string;
+  status?: string | null;
 }
 
 const {
@@ -21,57 +27,140 @@ const {
   teamLogoUrl,
   valueLabel,
   precioFantasticaLabel,
+  status,
 } = Astro.props;
 const positionColor = POSITION_COLORS[position];
+const statusLabel = status ? (PLAYER_STATUS_LABELS[status] ?? "Baja") : null;
 ---
 
-<a
-  href={url(`/jugadores/${id}`)}
-  class="group flex items-center gap-3 rounded-xl border border-white/10 bg-slate-900/60 p-3 transition-all hover:-translate-y-0.5 hover:border-emerald-500/40 hover:bg-slate-900"
->
-  <div
-    class="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-slate-800"
+<div class="group relative">
+  <a
+    href={url(`/jugadores/${id}`)}
+    class="flex items-center gap-3 rounded-xl border border-white/10 bg-slate-900/60 p-3 transition-all hover:-translate-y-0.5 hover:border-emerald-500/40 hover:bg-slate-900"
   >
-    {
-      photoUrl && (
-        <img
-          src={photoUrl}
-          alt={name}
-          class="h-full w-full object-cover"
-          loading="lazy"
-        />
-      )
-    }
-    {
-      teamLogoUrl && (
-        <img
-          src={teamLogoUrl}
-          alt={teamName}
-          class="absolute -right-1 -bottom-1 h-5 w-5 rounded-full bg-slate-950 p-0.5 ring-1 ring-slate-700"
-        />
-      )
-    }
-  </div>
-  <div class="min-w-0 flex-1">
-    <p class="truncate font-medium text-white group-hover:text-emerald-400">
-      {name}
-    </p>
-    <p class="truncate text-xs text-slate-400">
-      {teamName}
-      {valueLabel && <span class="text-slate-600"> · {valueLabel}</span>}
-    </p>
-    {
-      precioFantasticaLabel && (
-        <p class="truncate text-xs text-emerald-400/80">
-          Fantástica: {precioFantasticaLabel}
-        </p>
-      )
-    }
-  </div>
-  <span
-    class="shrink-0 rounded-md px-2 py-1 text-xs font-semibold"
-    style={`background-color:${positionColor}26; color:${positionColor}`}
+    <div
+      class="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-slate-800"
+    >
+      {
+        photoUrl && (
+          <img
+            src={photoUrl}
+            alt={name}
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+        )
+      }
+      {
+        teamLogoUrl && (
+          <img
+            src={teamLogoUrl}
+            alt={teamName}
+            class="absolute -right-1 -bottom-1 h-5 w-5 rounded-full bg-slate-950 p-0.5 ring-1 ring-slate-700"
+          />
+        )
+      }
+      {
+        statusLabel && (
+          <span
+            class="absolute -top-1 -left-1 flex h-4 w-4 items-center justify-center rounded-full bg-rose-500 text-[10px] font-bold text-white ring-1 ring-slate-950"
+            title={statusLabel}
+            aria-label={statusLabel}
+          >
+            !
+          </span>
+        )
+      }
+    </div>
+    <div class="min-w-0 flex-1">
+      <p class="truncate font-medium text-white group-hover:text-emerald-400">
+        {name}
+      </p>
+      <p class="truncate text-xs text-slate-400">
+        {teamName}
+        {valueLabel && <span class="text-slate-500"> · {valueLabel}</span>}
+      </p>
+      {
+        precioFantasticaLabel && (
+          <p class="truncate text-xs text-emerald-400/80">
+            Fantástica: {precioFantasticaLabel}
+          </p>
+        )
+      }
+    </div>
+    <span
+      class="shrink-0 rounded-md px-2 py-1 text-xs font-semibold"
+      style={`background-color:${positionColor}26; color:${positionColor}`}
+    >
+      {POSITION_SHORT[position] ?? "?"}
+    </span>
+  </a>
+  <button
+    type="button"
+    data-favorite-toggle
+    data-player-id={id}
+    aria-label={`Marcar a ${name} como favorito`}
+    aria-pressed="false"
+    class="absolute top-2 right-2 flex h-6 w-6 items-center justify-center rounded-full bg-slate-950/80 text-sm text-slate-500 transition-colors hover:text-amber-400"
   >
-    {POSITION_SHORT[position] ?? "?"}
-  </span>
-</a>
+    ☆
+  </button>
+</div>
+
+<script>
+  const FAVORITES_KEY = "fantasymarca:favoritos";
+
+  function loadFavorites(): Set<number> {
+    try {
+      const raw = localStorage.getItem(FAVORITES_KEY);
+      return new Set(raw ? JSON.parse(raw) : []);
+    } catch {
+      return new Set();
+    }
+  }
+
+  function saveFavorites(ids: Set<number>) {
+    try {
+      localStorage.setItem(FAVORITES_KEY, JSON.stringify([...ids]));
+    } catch {
+      // localStorage no disponible (modo privado, cuota llena...)
+    }
+  }
+
+  function paintStar(btn: HTMLElement, isFavorite: boolean) {
+    btn.textContent = isFavorite ? "★" : "☆";
+    btn.classList.toggle("text-amber-400", isFavorite);
+    btn.classList.toggle("text-slate-500", !isFavorite);
+    btn.setAttribute("aria-pressed", String(isFavorite));
+  }
+
+  function paintAllStars() {
+    const favorites = loadFavorites();
+    document
+      .querySelectorAll<HTMLElement>("[data-favorite-toggle]")
+      .forEach((btn) => {
+        paintStar(btn, favorites.has(Number(btn.dataset.playerId)));
+      });
+  }
+
+  // Un único listener delegado cubre todas las tarjetas de la página, se use
+  // el componente una vez o cien (Inicio, Jugadores...). El botón es hermano
+  // del <a> de la tarjeta, no va anidado dentro: un <button> dentro de un
+  // <a> es HTML inválido y confunde el foco por teclado.
+  document.addEventListener("click", (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLElement>(
+      "[data-favorite-toggle]",
+    );
+    if (!btn) return;
+    e.preventDefault();
+    const id = Number(btn.dataset.playerId);
+    const favorites = loadFavorites();
+    if (favorites.has(id)) favorites.delete(id);
+    else favorites.add(id);
+    saveFavorites(favorites);
+    paintAllStars();
+    document.dispatchEvent(new CustomEvent("favorites-changed"));
+  });
+
+  paintAllStars();
+</script>

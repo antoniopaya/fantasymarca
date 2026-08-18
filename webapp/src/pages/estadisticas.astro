@@ -98,6 +98,18 @@ const bargains = byFantastica
   .slice(0, 10);
 const maxBargainPct = bargains[0]?.bargainPct ?? 1;
 
+// --- Sobrevalorados: lo inverso de las gangas, pagas en la liga mucho más de
+// lo que el jugador vale de verdad en el mercado ---
+const overvalued = byFantastica
+  .filter((s) => s.value > 0 && (s.precioFantastica as number) > s.value)
+  .map((s) => ({
+    ...s,
+    overvaluedPct: (((s.precioFantastica as number) - s.value) / s.value) * 100,
+  }))
+  .sort((a, b) => b.overvaluedPct - a.overvaluedPct)
+  .slice(0, 10);
+const maxOvervaluedPct = overvalued[0]?.overvaluedPct ?? 1;
+
 // --- Ratio puntos/precio: rendimiento por millón pagado en la liga ---
 const valueForMoney = byFantastica
   .filter((s) => (s.lastSeason?.points ?? 0) > 0)
@@ -163,6 +175,7 @@ const maxTeamFantastica = teamTotals[0]?.totalFantastica ?? 1;
 const sections = [
   { id: "valor-vs-puntos", label: "Precio vs. puntos" },
   { id: "gangas", label: "Gangas" },
+  { id: "sobrevalorados", label: "Sobrevalorados" },
   { id: "puntos", label: "Puntos" },
   { id: "posiciones", label: "Posiciones" },
   { id: "distribucion-valor", label: "Distribución de precios" },
@@ -267,6 +280,36 @@ const sections = [
                 href: url(`/jugadores/${p.id}`),
                 imageUrl: playerPhotoUrl(p.id),
                 accent: "positive" as const,
+              }))}
+            />
+          )
+        }
+      </section>
+
+      <section id="sobrevalorados" class="mb-10 scroll-mt-24">
+        <h2 class="mb-4 text-xl font-bold text-white">Sobrevalorados</h2>
+        <p class="mb-4 text-sm text-slate-500">
+          Al revés que las gangas: jugadores por los que se paga en la liga
+          mucho más de lo que valen de verdad en el mercado — a evitar en tu
+          once.
+        </p>
+        {
+          overvalued.length === 0 ? (
+            <p class="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-500">
+              Ahora mismo nadie cuesta en la liga más de lo que vale en el
+              mercado.
+            </p>
+          ) : (
+            <RankingList
+              items={overvalued.map((p) => ({
+                key: p.id,
+                label: p.name,
+                sublabel: `${p.team_name} · Fantástica ${formatMoney(p.precioFantastica as number)} · Mercado ${formatMoney(p.value)}`,
+                valueLabel: `▼ ${p.overvaluedPct.toFixed(0)}%`,
+                barPercent: pct(p.overvaluedPct, maxOvervaluedPct),
+                href: url(`/jugadores/${p.id}`),
+                imageUrl: playerPhotoUrl(p.id),
+                accent: "negative" as const,
               }))}
             />
           )
@@ -461,7 +504,7 @@ const sections = [
           {
             teamTotals.map((t, index) => (
               <div class="flex items-center gap-3 rounded-xl border border-white/10 bg-slate-900/60 p-3">
-                <span class="w-5 shrink-0 text-center text-sm font-bold text-slate-600">
+                <span class="w-5 shrink-0 text-center text-sm font-bold text-slate-500">
                   {index + 1}
                 </span>
                 <img

@@ -2,10 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import {
   getAllPlayerSummaries,
+  getNextGameweek,
+  getMatches,
   playerPhotoUrl,
   teamLogoUrl,
   POSITION_SHORT,
   POSITION_COLORS,
+  PLAYER_STATUS_LABELS,
   formatMoney,
 } from "../lib/data";
 
@@ -17,10 +20,13 @@ const players = getAllPlayerSummaries()
     id: p.id,
     name: p.name,
     teamName: p.team_name,
+    id_team: p.id_team,
     position: p.position,
     price: p.precioFantastica as number,
     photoUrl: playerPhotoUrl(p.id),
     teamLogoUrl: teamLogoUrl(p.id_team),
+    status: p.status,
+    lastSeasonAvg: p.lastSeason?.avg ?? null,
   }));
 
 const FORMATIONS = [
@@ -36,6 +42,23 @@ const DEFAULT_FORMATION = "4-3-3";
 
 const MAX_BUDGET = 180_000_000;
 const MAX_CAPTAIN_PRICE = 18_000_000;
+
+// Para el resumen de "próximos rivales": qué equipo le toca a cada equipo en
+// la próxima jornada, con su escudo, para poder cruzarlo con los equipos
+// presentes en el once.
+const nextGameweek = getNextGameweek();
+let nextGwMatches: ReturnType<typeof getMatches> = [];
+try {
+  nextGwMatches = getMatches(nextGameweek.number);
+} catch {
+  nextGwMatches = [];
+}
+const TEAM_NEXT_OPPONENT: Record<number, { name: string; logoUrl: string }> =
+  {};
+for (const m of nextGwMatches) {
+  TEAM_NEXT_OPPONENT[m.id_home] = { name: m.away, logoUrl: m.awayLogoUrl };
+  TEAM_NEXT_OPPONENT[m.id_away] = { name: m.home, logoUrl: m.homeLogoUrl };
+}
 ---
 
 <Layout
@@ -50,17 +73,26 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
         menos de {formatMoney(MAX_CAPTAIN_PRICE)}
       </p>
     </div>
-    <div class="flex shrink-0 gap-2">
+    <div class="flex shrink-0 flex-wrap gap-2">
       <button
         type="button"
         id="share-whatsapp"
-        class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-medium text-emerald-400 transition-colors hover:bg-emerald-500/20"
+        class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-medium text-emerald-400 transition-colors hover:bg-emerald-500/20 disabled:pointer-events-none disabled:opacity-40"
       >
         Compartir por WhatsApp
       </button>
       <button
         type="button"
+        id="undo-btn"
+        disabled
+        class="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-400 transition-colors hover:bg-white/5 hover:text-white disabled:pointer-events-none disabled:opacity-40"
+      >
+        Deshacer
+      </button>
+      <button
+        type="button"
         id="clear-team"
+        data-confirming="false"
         class="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-400 transition-colors hover:border-rose-500/40 hover:text-rose-300"
       >
         Vaciar equipo
@@ -68,12 +100,50 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
     </div>
   </div>
 
-  <div class="mb-6 flex flex-wrap gap-2" id="formation-selector">
+  <div
+    id="add-player-notice"
+    class="mb-6 hidden rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-300"
+  >
+  </div>
+
+  <div class="mb-6 flex flex-wrap items-center gap-2">
+    <label for="lineup-select" class="text-xs font-medium text-slate-500">
+      Convocatoria:
+    </label>
+    <select
+      id="lineup-select"
+      class="rounded-full border border-white/10 bg-slate-900/60 px-3 py-1.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
+    >
+    </select>
+    <button
+      type="button"
+      id="lineup-new"
+      class="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+    >
+      + Nueva
+    </button>
+    <button
+      type="button"
+      id="lineup-delete"
+      data-confirming="false"
+      class="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-400 transition-colors hover:border-rose-500/40 hover:text-rose-300 disabled:pointer-events-none disabled:opacity-40"
+    >
+      Eliminar
+    </button>
+  </div>
+
+  <div
+    class="mb-6 flex flex-wrap gap-2"
+    id="formation-selector"
+    role="group"
+    aria-label="Formación"
+  >
     {
       FORMATIONS.map((f) => (
         <button
           type="button"
           data-formation={f.key}
+          aria-pressed={f.key === DEFAULT_FORMATION ? "true" : "false"}
           class="formation-btn rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
         >
           {f.key}
@@ -103,6 +173,9 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
     <div class="mt-3 flex flex-wrap items-center gap-4 text-sm text-slate-400">
       <span id="slots-status">0 / 11 jugadores</span>
       <span id="captain-status">Sin capitán elegido</span>
+      <span id="estimated-points"
+        >Sin datos suficientes para estimar puntos</span
+      >
     </div>
   </div>
 
@@ -112,6 +185,25 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
   >
   </section>
 
+  <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+      <p
+        class="mb-3 text-xs font-semibold tracking-wide text-slate-500 uppercase"
+      >
+        Equipos representados
+      </p>
+      <div id="team-summary" class="flex flex-wrap gap-3"></div>
+    </div>
+    <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+      <p
+        class="mb-3 text-xs font-semibold tracking-wide text-slate-500 uppercase"
+      >
+        Rivales de la {nextGameweek.name}
+      </p>
+      <div id="rivals-summary" class="flex flex-wrap gap-3"></div>
+    </div>
+  </div>
+
   <p class="mt-4 text-xs text-slate-500">
     Los jugadores sin precio Fantástica todavía (fichajes muy recientes que
     Marca no ha dado de alta) no aparecen en el buscador.
@@ -119,6 +211,9 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
 
   <div
     id="picker-backdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="picker-title"
     class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4"
   >
     <div
@@ -152,6 +247,7 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
         id="picker-search"
         type="text"
         placeholder="Buscar jugador..."
+        aria-label="Buscar jugador"
         autocomplete="off"
         class="mb-3 w-full rounded-xl border border-white/10 bg-slate-950/60 px-3 py-2 text-sm text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
       />
@@ -176,10 +272,21 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       MAX_CAPTAIN_PRICE,
       POSITION_SHORT,
       POSITION_COLORS,
+      PLAYER_STATUS_LABELS,
+      TEAM_NEXT_OPPONENT,
     }}
   >
     const playersById = new Map(players.map((p) => [p.id, p]));
-    const STORAGE_KEY = "fantasymarca:crear-once";
+    const LINEUPS_KEY = "fantasymarca:crear-once:lineups";
+    const ACTIVE_KEY = "fantasymarca:crear-once:active";
+    const LEGACY_KEY = "fantasymarca:crear-once";
+
+    const POSITION_LABEL_LOWER = {
+      1: "portero",
+      2: "defensa",
+      3: "centrocampista",
+      4: "delantero",
+    };
 
     const state = {
       formationKey: DEFAULT_FORMATION,
@@ -187,6 +294,8 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       captainId: null,
     };
     let activeSlotId = null;
+    let lastTrigger = null;
+    let lastSnapshot = null;
 
     function formatMoneyClient(value) {
       return `${(value / 1_000_000).toFixed(2)} M€`;
@@ -208,40 +317,116 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
         }));
     }
 
-    function loadSavedState() {
+    // --- Convocatorias guardadas (varias onces, no solo una) ---------------
+
+    function loadAllLineups() {
       try {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (!raw) return null;
-        const parsed = JSON.parse(raw);
-        const formationKey = FORMATIONS.some(
-          (f) => f.key === parsed.formationKey,
-        )
-          ? parsed.formationKey
-          : DEFAULT_FORMATION;
-        return {
-          formationKey,
-          slots: sanitizeSavedSlots(parsed.slots),
-          captainId:
-            typeof parsed.captainId === "number" ? parsed.captainId : null,
-        };
+        const raw = localStorage.getItem(LINEUPS_KEY);
+        if (raw) return JSON.parse(raw);
       } catch {
-        return null;
+        // localStorage no disponible (modo privado, etc.)
       }
+      // Migración desde la versión anterior, que solo guardaba un once bajo
+      // LEGACY_KEY: se convierte en la primera convocatoria con nombre.
+      try {
+        const legacyRaw = localStorage.getItem(LEGACY_KEY);
+        if (legacyRaw) {
+          const legacy = JSON.parse(legacyRaw);
+          localStorage.removeItem(LEGACY_KEY);
+          return {
+            [String(Date.now())]: {
+              name: "Convocatoria 1",
+              formationKey: legacy.formationKey,
+              slots: legacy.slots,
+              captainId: legacy.captainId,
+            },
+          };
+        }
+      } catch {
+        // convocatoria legacy corrupta: se ignora
+      }
+      return {};
     }
 
-    function saveState() {
+    const lineups = loadAllLineups();
+
+    function saveAllLineups() {
       try {
-        localStorage.setItem(
-          STORAGE_KEY,
-          JSON.stringify({
-            formationKey: state.formationKey,
-            slots: state.slots,
-            captainId: state.captainId,
-          }),
-        );
+        localStorage.setItem(LINEUPS_KEY, JSON.stringify(lineups));
       } catch {
         // Modo privado, cuota llena, etc.: si no se puede guardar, se sigue usando la app sin más.
       }
+    }
+
+    function setActiveLineupId(id) {
+      activeLineupId = id;
+      try {
+        localStorage.setItem(ACTIVE_KEY, id);
+      } catch {
+        // localStorage no disponible
+      }
+    }
+
+    function ensureActiveLineup() {
+      let id = null;
+      try {
+        id = localStorage.getItem(ACTIVE_KEY);
+      } catch {
+        // localStorage no disponible
+      }
+      if (id && lineups[id]) return id;
+      const ids = Object.keys(lineups);
+      if (ids.length > 0) return ids[0];
+      const newId = String(Date.now());
+      lineups[newId] = {
+        name: "Convocatoria 1",
+        formationKey: DEFAULT_FORMATION,
+        slots: [],
+        captainId: null,
+      };
+      return newId;
+    }
+
+    let activeLineupId = ensureActiveLineup();
+    saveAllLineups();
+
+    function applyLineup(id) {
+      const lineup = lineups[id] ?? {
+        formationKey: DEFAULT_FORMATION,
+        slots: [],
+        captainId: null,
+      };
+      state.formationKey = FORMATIONS.some((f) => f.key === lineup.formationKey)
+        ? lineup.formationKey
+        : DEFAULT_FORMATION;
+      state.slots = buildSlots(
+        state.formationKey,
+        sanitizeSavedSlots(lineup.slots),
+      );
+      state.captainId =
+        typeof lineup.captainId === "number" ? lineup.captainId : null;
+      lastSnapshot = null;
+    }
+
+    function saveState() {
+      // teamIds va aparte (no solo playerId) para que otras páginas (el
+      // calendario de la jornada) puedan saber qué equipos juegan sin tener
+      // que cargar el catálogo completo de jugadores.
+      const teamIds = [
+        ...new Set(
+          state.slots
+            .filter((s) => s.playerId !== null)
+            .map((s) => playersById.get(s.playerId).id_team),
+        ),
+      ];
+      lineups[activeLineupId] = {
+        name: lineups[activeLineupId]?.name ?? "Convocatoria",
+        formationKey: state.formationKey,
+        slots: state.slots,
+        captainId: state.captainId,
+        teamIds,
+      };
+      saveAllLineups();
     }
 
     function buildSlots(formationKey, previousSlots) {
@@ -289,15 +474,23 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       return text.normalize("NFD").replace(diacriticsPattern, "").toLowerCase();
     }
 
+    function statusBadge(player, sizeClass) {
+      if (!player.status) return "";
+      const label = PLAYER_STATUS_LABELS[player.status] ?? "Baja";
+      return `<span class="absolute left-0 top-0 flex ${sizeClass} items-center justify-center rounded-br-md bg-rose-500 text-[8px] font-bold text-white" title="${label}" aria-label="${label}">!</span>`;
+    }
+
     function slotCard(slot) {
       const player =
         slot.playerId !== null ? playersById.get(slot.playerId) : null;
       const label = POSITION_SHORT[slot.position] ?? "?";
+      const positionLower = POSITION_LABEL_LOWER[slot.position] ?? "jugador";
       const color = POSITION_COLORS[slot.position] ?? "#64748b";
 
       if (!player) {
         return `
           <button type="button" data-slot="${slot.id}" data-action="open"
+            aria-label="Elegir ${positionLower}"
             class="flex h-24 w-20 flex-col items-center justify-center gap-1 rounded-xl border-2 border-dashed border-white/15 text-slate-400 transition-colors hover:border-emerald-500/50 hover:text-emerald-400 sm:h-28 sm:w-24">
             <span class="text-2xl leading-none">+</span>
             <span class="text-[10px] font-semibold uppercase tracking-wide">${label}</span>
@@ -306,21 +499,27 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
 
       const isCaptain = state.captainId === player.id;
       const captainEligible = player.price < MAX_CAPTAIN_PRICE;
+      const captainTitle = isCaptain
+        ? `Quitar a ${player.name} como capitán`
+        : captainEligible
+          ? `Nombrar capitán a ${player.name}`
+          : `${player.name} no puede ser capitán: debe costar menos de ${formatMoneyClient(MAX_CAPTAIN_PRICE)}`;
 
       return `
         <div class="relative flex h-24 w-20 flex-col items-center rounded-xl border border-white/10 bg-slate-900/80 pt-1.5 sm:h-28 sm:w-24" data-slot="${slot.id}">
           <button type="button" data-slot="${slot.id}" data-action="remove"
+            aria-label="Quitar a ${player.name} del equipo"
             class="absolute -right-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-rose-500 text-[10px] font-bold text-white hover:bg-rose-400">
             ×
           </button>
           <button type="button" data-slot="${slot.id}" data-action="captain" ${captainEligible ? "" : "disabled"}
-            title="${captainEligible ? "Nombrar capitán" : `Debe costar menos de ${formatMoneyClient(MAX_CAPTAIN_PRICE)} para ser capitán`}"
+            title="${captainTitle}" aria-label="${captainTitle}"
             class="absolute -left-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${
               isCaptain
                 ? "bg-amber-400 text-slate-950"
                 : captainEligible
                   ? "bg-slate-700 text-slate-300 hover:bg-amber-400/80 hover:text-slate-950"
-                  : "cursor-not-allowed bg-slate-800 text-slate-600"
+                  : "cursor-not-allowed bg-slate-800 text-slate-500"
             }">
             C
           </button>
@@ -328,6 +527,7 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
             <div class="relative h-10 w-10 overflow-hidden rounded-full bg-slate-800">
               <img src="${player.photoUrl}" alt="" class="h-full w-full object-cover" loading="lazy" />
               <img src="${player.teamLogoUrl}" alt="" class="absolute -bottom-0.5 -right-0.5 h-4 w-4 rounded-full bg-slate-950 p-0.5" />
+              ${statusBadge(player, "h-3.5 w-3.5")}
             </div>
             <span class="mt-1 line-clamp-1 w-full text-[11px] font-medium leading-tight text-white">${player.name}</span>
             <span class="text-[10px] font-semibold" style="color:${color}">${formatMoneyClient(player.price)}</span>
@@ -341,6 +541,80 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       { role: "Centrocampistas", position: 3 },
       { role: "Delanteros", position: 4 },
     ];
+
+    function renderTeamSummary() {
+      const counts = new Map();
+      for (const slot of state.slots) {
+        if (slot.playerId === null) continue;
+        const player = playersById.get(slot.playerId);
+        const entry = counts.get(player.id_team) ?? {
+          count: 0,
+          teamName: player.teamName,
+          teamLogoUrl: player.teamLogoUrl,
+        };
+        entry.count++;
+        counts.set(player.id_team, entry);
+      }
+      const entries = Array.from(counts.values()).sort(
+        (a, b) => b.count - a.count,
+      );
+      document.getElementById("team-summary").innerHTML =
+        entries.length === 0
+          ? `<p class="text-xs text-slate-500">Todavía no has fichado a nadie.</p>`
+          : entries
+              .map(
+                (e) => `
+            <div class="relative" title="${e.teamName}: ${e.count} jugador${e.count === 1 ? "" : "es"}">
+              <img src="${e.teamLogoUrl}" alt="${e.teamName}" class="h-9 w-9 rounded-full bg-slate-800 object-contain p-1" />
+              <span class="absolute -right-1 -bottom-1 flex h-4 w-4 items-center justify-center rounded-full bg-emerald-500 text-[10px] font-bold text-slate-950 ring-1 ring-slate-950">${e.count}</span>
+            </div>`,
+              )
+              .join("");
+    }
+
+    function renderRivalsSummary() {
+      const teamIds = new Set();
+      for (const slot of state.slots) {
+        if (slot.playerId === null) continue;
+        teamIds.add(playersById.get(slot.playerId).id_team);
+      }
+      const container = document.getElementById("rivals-summary");
+      if (teamIds.size === 0) {
+        container.innerHTML = `<p class="text-xs text-slate-500">Todavía no has fichado a nadie.</p>`;
+        return;
+      }
+      const rivals = Array.from(teamIds)
+        .map((id) => TEAM_NEXT_OPPONENT[id])
+        .filter(Boolean);
+      container.innerHTML =
+        rivals.length === 0
+          ? `<p class="text-xs text-slate-500">Sin partidos programados todavía para esta jornada.</p>`
+          : rivals
+              .map(
+                (r) => `
+            <div title="Rival: ${r.name}">
+              <img src="${r.logoUrl}" alt="${r.name}" class="h-9 w-9 rounded-full bg-slate-800 object-contain p-1" />
+            </div>`,
+              )
+              .join("");
+    }
+
+    // Estimación simple: suma de la media de puntos de la temporada anterior
+    // de cada titular. No modela el doble de puntos del capitán porque esta
+    // liga privada no tiene esa regla confirmada en ningún sitio.
+    function renderEstimatedPoints() {
+      const filled = state.slots
+        .filter((s) => s.playerId !== null)
+        .map((s) => playersById.get(s.playerId));
+      const withAvg = filled.filter((p) => p.lastSeasonAvg !== null);
+      const label = document.getElementById("estimated-points");
+      if (withAvg.length === 0) {
+        label.textContent = "Sin datos suficientes para estimar puntos";
+        return;
+      }
+      const total = withAvg.reduce((sum, p) => sum + p.lastSeasonAvg, 0);
+      label.textContent = `≈ ${total.toFixed(0)} pts esperados (según la temporada anterior)`;
+    }
 
     function render() {
       // el capitán tiene que seguir en el 11 y seguir siendo elegible
@@ -403,20 +677,59 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
         btn.classList.toggle("bg-emerald-500/10", active);
         btn.classList.toggle("text-emerald-400", active);
         btn.classList.toggle("border-emerald-500/40", active);
+        btn.setAttribute("aria-pressed", String(active));
       }
+
+      document.getElementById("share-whatsapp").disabled = filled.length === 0;
+
+      renderTeamSummary();
+      renderRivalsSummary();
+      renderEstimatedPoints();
 
       saveState();
     }
 
-    function openPicker(slotId) {
+    function snapshotForUndo() {
+      lastSnapshot = {
+        formationKey: state.formationKey,
+        slots: state.slots.map((s) => ({ ...s })),
+        captainId: state.captainId,
+      };
+      updateUndoButton();
+    }
+
+    function updateUndoButton() {
+      document.getElementById("undo-btn").disabled = lastSnapshot === null;
+    }
+
+    // Mientras el selector está abierto, el resto de la página se marca
+    // `inert`: así ni el ratón ni Tab pueden llegar a la navbar/formación de
+    // fondo ni al enlace "saltar al contenido" (evita tener que reimplementar
+    // un trap de foco a mano) y un lector de pantalla deja de verla. Se
+    // recorren los hijos de <body> en vez de fijar selectores concretos
+    // (header/footer/...) para que cubra cualquier cosa que haya alrededor.
+    function setBackgroundInert(isInert) {
+      const backdrop = document.getElementById("picker-backdrop");
+      for (const child of document.body.children) {
+        if (child.contains(backdrop)) {
+          for (const grandchild of child.children) {
+            if (grandchild === backdrop) continue;
+            if (isInert) grandchild.setAttribute("inert", "");
+            else grandchild.removeAttribute("inert");
+          }
+        } else if (isInert) {
+          child.setAttribute("inert", "");
+        } else {
+          child.removeAttribute("inert");
+        }
+      }
+    }
+
+    function openPicker(slotId, triggerEl) {
       activeSlotId = slotId;
+      lastTrigger = triggerEl ?? null;
       const slot = state.slots.find((s) => s.id === slotId);
-      const label = {
-        1: "portero",
-        2: "defensa",
-        3: "centrocampista",
-        4: "delantero",
-      }[slot.position];
+      const label = POSITION_LABEL_LOWER[slot.position] ?? "jugador";
       document.getElementById("picker-title").textContent = `Elegir ${label}`;
       document.getElementById("picker-search").value = "";
       document
@@ -425,13 +738,19 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       renderPickerList("");
       document.getElementById("picker-backdrop").classList.remove("hidden");
       document.getElementById("picker-backdrop").classList.add("flex");
+      setBackgroundInert(true);
       document.getElementById("picker-search").focus();
     }
 
     function closePicker() {
+      const backdrop = document.getElementById("picker-backdrop");
+      if (backdrop.classList.contains("hidden")) return;
       activeSlotId = null;
-      document.getElementById("picker-backdrop").classList.add("hidden");
-      document.getElementById("picker-backdrop").classList.remove("flex");
+      backdrop.classList.add("hidden");
+      backdrop.classList.remove("flex");
+      setBackgroundInert(false);
+      lastTrigger?.focus();
+      lastTrigger = null;
     }
 
     function renderPickerList(query) {
@@ -462,7 +781,14 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
                     ? "hover:bg-white/5"
                     : "cursor-not-allowed opacity-40"
                 }">
-                <img src="${p.photoUrl}" alt="" class="h-9 w-9 shrink-0 rounded-full bg-slate-800 object-cover" loading="lazy" />
+                <div class="relative h-9 w-9 shrink-0">
+                  <img src="${p.photoUrl}" alt="" class="h-full w-full rounded-full bg-slate-800 object-cover" loading="lazy" />
+                  ${
+                    p.status
+                      ? `<span class="absolute -right-1 -top-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-rose-500 text-[8px] font-bold text-white ring-1 ring-slate-900" title="${PLAYER_STATUS_LABELS[p.status] ?? "Baja"}" aria-label="${PLAYER_STATUS_LABELS[p.status] ?? "Baja"}">!</span>`
+                      : ""
+                  }
+                </div>
                 <span class="min-w-0 flex-1">
                   <span class="block truncate text-sm font-medium text-white">${p.name}</span>
                   <span class="block truncate text-xs text-slate-500">${p.teamName}</span>
@@ -481,6 +807,7 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       .addEventListener("click", (e) => {
         const btn = e.target.closest(".formation-btn");
         if (!btn) return;
+        snapshotForUndo();
         state.slots = buildSlots(btn.dataset.formation, state.slots);
         state.formationKey = btn.dataset.formation;
         render();
@@ -493,8 +820,9 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       const action = btn.dataset.action;
 
       if (action === "open") {
-        openPicker(slot.id);
+        openPicker(slot.id, btn);
       } else if (action === "remove") {
+        snapshotForUndo();
         if (state.captainId === slot.playerId) state.captainId = null;
         slot.playerId = null;
         render();
@@ -509,6 +837,7 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       const btn = e.target.closest("button[data-pick]");
       if (!btn || btn.disabled) return;
       const slot = state.slots.find((s) => s.id === activeSlotId);
+      snapshotForUndo();
       slot.playerId = Number(btn.dataset.pick);
       closePicker();
       render();
@@ -516,6 +845,7 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
 
     document.getElementById("picker-remove").addEventListener("click", () => {
       const slot = state.slots.find((s) => s.id === activeSlotId);
+      snapshotForUndo();
       if (state.captainId === slot.playerId) state.captainId = null;
       slot.playerId = null;
       closePicker();
@@ -538,12 +868,131 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       if (e.key === "Escape") closePicker();
     });
 
-    document.getElementById("clear-team").addEventListener("click", () => {
-      if (!confirm("¿Vaciar el once actual?")) return;
-      state.captainId = null;
-      state.slots = buildSlots(state.formationKey, []);
+    document.getElementById("undo-btn").addEventListener("click", () => {
+      if (!lastSnapshot) return;
+      state.formationKey = lastSnapshot.formationKey;
+      state.slots = lastSnapshot.slots;
+      state.captainId = lastSnapshot.captainId;
+      lastSnapshot = null;
+      updateUndoButton();
       render();
     });
+
+    const clearTeamBtn = document.getElementById("clear-team");
+    let clearConfirmTimer = null;
+
+    function resetClearTeamButton() {
+      if (clearConfirmTimer) clearTimeout(clearConfirmTimer);
+      clearConfirmTimer = null;
+      clearTeamBtn.dataset.confirming = "false";
+      clearTeamBtn.textContent = "Vaciar equipo";
+      clearTeamBtn.classList.remove(
+        "border-rose-500/60",
+        "bg-rose-500/10",
+        "text-rose-300",
+      );
+    }
+
+    // En vez de un confirm() nativo (que desentona con el resto de la UI),
+    // el propio botón pide confirmación: un segundo clic en los próximos 3s
+    // vacía el equipo, si no, vuelve solo a su estado normal.
+    clearTeamBtn.addEventListener("click", () => {
+      if (clearTeamBtn.dataset.confirming === "true") {
+        resetClearTeamButton();
+        snapshotForUndo();
+        state.captainId = null;
+        state.slots = buildSlots(state.formationKey, []);
+        render();
+        return;
+      }
+      clearTeamBtn.dataset.confirming = "true";
+      clearTeamBtn.textContent = "¿Seguro? Confirmar";
+      clearTeamBtn.classList.add(
+        "border-rose-500/60",
+        "bg-rose-500/10",
+        "text-rose-300",
+      );
+      clearConfirmTimer = setTimeout(resetClearTeamButton, 3000);
+    });
+    clearTeamBtn.addEventListener("blur", resetClearTeamButton);
+
+    // --- Selector de convocatorias -----------------------------------------
+
+    const lineupSelect = document.getElementById("lineup-select");
+    const lineupNewBtn = document.getElementById("lineup-new");
+    const lineupDeleteBtn = document.getElementById("lineup-delete");
+
+    function renderLineupSelect() {
+      const ids = Object.keys(lineups);
+      lineupSelect.innerHTML = ids
+        .map(
+          (id) =>
+            `<option value="${id}" ${id === activeLineupId ? "selected" : ""}>${lineups[id].name}</option>`,
+        )
+        .join("");
+      lineupDeleteBtn.disabled = ids.length <= 1;
+    }
+
+    lineupSelect.addEventListener("change", () => {
+      setActiveLineupId(lineupSelect.value);
+      applyLineup(activeLineupId);
+      updateUndoButton();
+      render();
+    });
+
+    lineupNewBtn.addEventListener("click", () => {
+      const id = String(Date.now());
+      lineups[id] = {
+        name: `Convocatoria ${Object.keys(lineups).length + 1}`,
+        formationKey: DEFAULT_FORMATION,
+        slots: [],
+        captainId: null,
+      };
+      saveAllLineups();
+      setActiveLineupId(id);
+      applyLineup(activeLineupId);
+      renderLineupSelect();
+      updateUndoButton();
+      render();
+    });
+
+    let deleteLineupTimer = null;
+
+    function resetDeleteLineupButton() {
+      if (deleteLineupTimer) clearTimeout(deleteLineupTimer);
+      deleteLineupTimer = null;
+      lineupDeleteBtn.dataset.confirming = "false";
+      lineupDeleteBtn.textContent = "Eliminar";
+      lineupDeleteBtn.classList.remove(
+        "border-rose-500/60",
+        "bg-rose-500/10",
+        "text-rose-300",
+      );
+    }
+
+    lineupDeleteBtn.addEventListener("click", () => {
+      if (Object.keys(lineups).length <= 1) return;
+      if (lineupDeleteBtn.dataset.confirming === "true") {
+        resetDeleteLineupButton();
+        delete lineups[activeLineupId];
+        saveAllLineups();
+        setActiveLineupId(Object.keys(lineups)[0]);
+        applyLineup(activeLineupId);
+        renderLineupSelect();
+        updateUndoButton();
+        render();
+        return;
+      }
+      lineupDeleteBtn.dataset.confirming = "true";
+      lineupDeleteBtn.textContent = "¿Seguro? Confirmar";
+      lineupDeleteBtn.classList.add(
+        "border-rose-500/60",
+        "bg-rose-500/10",
+        "text-rose-300",
+      );
+      deleteLineupTimer = setTimeout(resetDeleteLineupButton, 3000);
+    });
+    lineupDeleteBtn.addEventListener("blur", resetDeleteLineupButton);
 
     function buildWhatsAppMessage() {
       const groups = POSITION_ROWS.map((row) => {
@@ -564,11 +1013,10 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
     }
 
     document.getElementById("share-whatsapp").addEventListener("click", () => {
+      // El botón ya se deshabilita en render() cuando no hay jugadores; esto
+      // es solo una salvaguarda.
       const filled = state.slots.filter((s) => s.playerId !== null);
-      if (filled.length === 0) {
-        alert("Elige al menos un jugador antes de compartir.");
-        return;
-      }
+      if (filled.length === 0) return;
       const text = buildWhatsAppMessage();
       window.open(
         `https://wa.me/?text=${encodeURIComponent(text)}`,
@@ -577,14 +1025,55 @@ const MAX_CAPTAIN_PRICE = 18_000_000;
       );
     });
 
-    const saved = loadSavedState();
-    if (saved) {
-      state.formationKey = saved.formationKey;
-      state.slots = buildSlots(saved.formationKey, saved.slots);
-      state.captainId = saved.captainId;
-    } else {
-      state.slots = buildSlots(state.formationKey, []);
+    // Llegada desde el botón "Añadir a mi once" de la ficha de un jugador
+    // (jugadores/[id].astro), vía ?add=<id>.
+    function showAddPlayerNotice(message) {
+      const el = document.getElementById("add-player-notice");
+      el.textContent = message;
+      el.classList.remove("hidden");
     }
+
+    function tryAddPlayerFromQuery() {
+      const params = new URLSearchParams(window.location.search);
+      const addId = params.get("add");
+      if (!addId) return;
+      // Se limpia el parámetro de la URL para que un simple refresco no repita la acción.
+      window.history.replaceState(null, "", window.location.pathname);
+
+      const player = playersById.get(Number(addId));
+      if (!player) {
+        showAddPlayerNotice(
+          "Ese jugador no tiene precio Fantástica todavía y no se puede fichar.",
+        );
+        return;
+      }
+      const freeSlot = state.slots.find(
+        (s) => s.position === player.position && s.playerId === null,
+      );
+      if (!freeSlot) {
+        const positionLower =
+          POSITION_LABEL_LOWER[player.position] ?? "esa posición";
+        showAddPlayerNotice(
+          `Ya tienes completos los puestos de ${positionLower}. Quita a alguien antes de fichar a ${player.name}.`,
+        );
+        return;
+      }
+      const remaining = MAX_BUDGET - totalCost(null);
+      if (player.price > remaining) {
+        showAddPlayerNotice(
+          `Fichar a ${player.name} (${formatMoneyClient(player.price)}) superaría tu presupuesto de ${formatMoneyClient(MAX_BUDGET)}.`,
+        );
+        return;
+      }
+      snapshotForUndo();
+      freeSlot.playerId = player.id;
+      render();
+    }
+
+    renderLineupSelect();
+    applyLineup(activeLineupId);
+    tryAddPlayerFromQuery();
+    updateUndoButton();
     render();
   </script>
 </Layout>

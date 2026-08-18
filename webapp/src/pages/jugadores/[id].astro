@@ -6,6 +6,7 @@ import {
   getPlayerById,
   getPlayerDetail,
   getPrecioFantastica,
+  getAllPlayerSummaries,
   formatMoney,
   POSITION_NAMES,
   teamLogoUrl,
@@ -40,6 +41,35 @@ const vsFantastica =
 const vsFantasticaPct = precioFantastica
   ? (vsFantastica / precioFantastica) * 100
   : 0;
+
+// Comparador: cualquier otro jugador de la misma posición, con las mismas
+// métricas que ya se muestran arriba para poder ponerlas lado a lado.
+const currentPlayerStats = player
+  ? {
+      name: player.name,
+      value: player.value,
+      precioFantastica,
+      clauseValue: player.clause.value,
+      points: player.points,
+      avg: player.avg,
+    }
+  : null;
+
+const comparisonCandidates = player
+  ? getAllPlayerSummaries()
+      .filter((p) => p.position === catalogEntry.position && p.id !== playerId)
+      .map((p) => ({
+        id: p.id,
+        name: p.name,
+        teamName: p.team_name,
+        value: p.value,
+        precioFantastica: p.precioFantastica,
+        clauseValue: p.clauseValue,
+        points: p.points,
+        avg: p.avg,
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name))
+  : [];
 ---
 
 <Layout
@@ -105,6 +135,15 @@ const vsFantasticaPct = precioFantastica
                 <span class="text-rose-400">{player.status}</span>
               )}
             </div>
+
+            {precioFantastica !== null && (
+              <a
+                href={url(`/crear-once?add=${player.id}`)}
+                class="mt-4 inline-flex items-center gap-1.5 rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/20 transition-transform hover:-translate-y-0.5 hover:bg-emerald-400"
+              >
+                + Añadir a mi once
+              </a>
+            )}
           </div>
         </section>
 
@@ -201,7 +240,10 @@ const vsFantasticaPct = precioFantastica
                 {detail.values_chart.min.date})
               </p>
             </div>
-            <LineChart points={detail.values_chart.points} />
+            <LineChart
+              points={detail.values_chart.points}
+              title={`Evolución del valor de mercado de ${catalogEntry.name}`}
+            />
           </section>
         )}
 
@@ -267,6 +309,27 @@ const vsFantasticaPct = precioFantastica
             </div>
           </section>
         )}
+
+        {comparisonCandidates.length > 0 && (
+          <section class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
+            <h2 class="mb-4 text-xl font-bold text-white">
+              Comparar con otro{" "}
+              {POSITION_NAMES[catalogEntry.position]?.toLowerCase()}
+            </h2>
+            <select
+              id="compare-select"
+              class="w-full max-w-sm rounded-xl border border-white/10 bg-slate-950/60 px-3 py-2 text-sm text-white focus:border-emerald-500/50 focus:outline-none sm:w-auto"
+            >
+              <option value="">Elige un jugador...</option>
+              {comparisonCandidates.map((c) => (
+                <option value={c.id}>
+                  {c.name} ({c.teamName})
+                </option>
+              ))}
+            </select>
+            <div id="compare-result" class="mt-4 hidden overflow-x-auto" />
+          </section>
+        )}
       </div>
     ) : (
       <p class="rounded-xl border border-white/10 bg-slate-900/60 p-6 text-center text-slate-400">
@@ -274,4 +337,60 @@ const vsFantasticaPct = precioFantastica
       </p>
     )
   }
+
+  <script define:vars={{ comparisonCandidates, currentPlayerStats }}>
+    if (currentPlayerStats) {
+      const candidatesById = new Map(
+        comparisonCandidates.map((c) => [c.id, c]),
+      );
+
+      function formatMoneyClient(value) {
+        return value === null || value === undefined
+          ? "—"
+          : `${(value / 1_000_000).toFixed(2)} M€`;
+      }
+
+      function metricRow(label, a, b, formatter) {
+        const aFmt = formatter(a);
+        const bFmt = formatter(b);
+        const aWins = a !== null && b !== null && a > b;
+        const bWins = a !== null && b !== null && b > a;
+        return `
+          <tr class="border-b border-white/5">
+            <td class="px-3 py-2 text-slate-400">${label}</td>
+            <td class="px-3 py-2 text-right font-semibold ${aWins ? "text-emerald-400" : "text-white"}">${aFmt}</td>
+            <td class="px-3 py-2 text-right font-semibold ${bWins ? "text-emerald-400" : "text-white"}">${bFmt}</td>
+          </tr>`;
+      }
+
+      const select = document.getElementById("compare-select");
+      const result = document.getElementById("compare-result");
+
+      select.addEventListener("change", () => {
+        const candidate = candidatesById.get(Number(select.value));
+        if (!candidate) {
+          result.classList.add("hidden");
+          return;
+        }
+        result.innerHTML = `
+          <table class="w-full min-w-[420px] text-sm">
+            <thead>
+              <tr class="border-b border-white/10 text-left text-xs tracking-wide text-slate-500 uppercase">
+                <th class="px-3 py-2"></th>
+                <th class="px-3 py-2 text-right">${currentPlayerStats.name}</th>
+                <th class="px-3 py-2 text-right">${candidate.name}</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${metricRow("Valor de mercado", currentPlayerStats.value, candidate.value, formatMoneyClient)}
+              ${metricRow("Precio Fantástica", currentPlayerStats.precioFantastica, candidate.precioFantastica, formatMoneyClient)}
+              ${metricRow("Cláusula", currentPlayerStats.clauseValue, candidate.clauseValue, formatMoneyClient)}
+              ${metricRow("Puntos", currentPlayerStats.points, candidate.points, (v) => String(v))}
+              ${metricRow("Media", currentPlayerStats.avg, candidate.avg, (v) => v.toFixed(2))}
+            </tbody>
+          </table>`;
+        result.classList.remove("hidden");
+      });
+    }
+  </script>
 </Layout>
