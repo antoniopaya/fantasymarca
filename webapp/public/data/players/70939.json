@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70939.png?version=20260621102855",
     "isFavorite": 0,
-    "value": 32809000,
-    "previousValue": 32918000,
+    "value": 31680000,
+    "previousValue": 32210000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 32809000,
+      "floor": 31680000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 49213500,
+      "value": 47520000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 32809000,
+      "price": 31680000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 169,
       "weight": null
     },
-    "clausesRanking": 267
+    "clausesRanking": 287
   },
   "id": 70939,
   "player_extra": {
@@ -88,12 +88,21 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": null,
+        "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302502,
+        "id_player": 70939,
+        "category": "injury",
+        "description": "Pubalgia",
+        "duration": "Baja esta jornada",
+        "since": "2026-07-30 18:11:22",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
     {
@@ -656,21 +665,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 32918000,
-      "change": -109000,
-      "sign": -109
+      "value": 32210000,
+      "change": -530000,
+      "sign": -530
     },
     {
       "time": "Una semana",
-      "value": 32144000,
-      "change": 665000,
-      "sign": 665
+      "value": 33119000,
+      "change": -1439000,
+      "sign": "-1.439.000"
     },
     {
       "time": "Un mes",
-      "value": 22913000,
-      "change": 9896000,
-      "sign": "+9.896.000"
+      "value": 23790000,
+      "change": 7890000,
+      "sign": "+7.890.000"
     }
   ],
   "values_chart": {
@@ -902,6 +911,18 @@
       {
         "value": 32809000,
         "date": "17 ago 2026"
+      },
+      {
+        "value": 32523000,
+        "date": "18 ago 2026"
+      },
+      {
+        "value": 32210000,
+        "date": "19 ago 2026"
+      },
+      {
+        "value": 31680000,
+        "date": "20 ago 2026"
       }
     ],
     "max": {

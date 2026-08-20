@@ -3,19 +3,15 @@
     "id": 54900,
     "name": "Carlos Dotor",
     "position": 3,
-    "points": 0,
-    "avg": 0,
-    "status": "injury",
+    "points": 6,
+    "avg": 6,
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "injury",
-      "description": "Lesión de rodilla",
-      "duration": "Baja hasta finales de Agosto"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/54900.png?version=20260621195143",
     "isFavorite": 0,
-    "value": 2855000,
-    "previousValue": 3072000,
+    "value": 2544000,
+    "previousValue": 2434000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2855000,
+      "floor": 2544000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 4282500,
+      "value": 3816000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2855000,
+      "price": 2544000,
       "loanable": null
     },
     "bid": {
@@ -72,11 +68,11 @@
       "height": 180,
       "weight": 68
     },
-    "clausesRanking": null
+    "clausesRanking": 396
   },
   "id": 54900,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -88,12 +84,14 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
     {
@@ -654,6 +652,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 6,
+      "avg": 6,
+      "id_team": 13,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+    },
+    {
       "season": "23/24",
       "points": 32,
       "avg": 1.8824,
@@ -665,21 +671,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 3072000,
-      "change": -217000,
-      "sign": -217
+      "value": 2434000,
+      "change": 110000,
+      "sign": 110
     },
     {
       "time": "Una semana",
-      "value": 3849000,
-      "change": -994000,
-      "sign": -994
+      "value": 3823000,
+      "change": -1279000,
+      "sign": "-1.279.000"
     },
     {
       "time": "Un mes",
-      "value": 368000,
-      "change": 2487000,
-      "sign": "+2.487.000"
+      "value": 355000,
+      "change": 2189000,
+      "sign": "+2.189.000"
     }
   ],
   "values_chart": {
@@ -911,6 +917,18 @@
       {
         "value": 2855000,
         "date": "17 ago 2026"
+      },
+      {
+        "value": 2622000,
+        "date": "18 ago 2026"
+      },
+      {
+        "value": 2434000,
+        "date": "19 ago 2026"
+      },
+      {
+        "value": 2544000,
+        "date": "20 ago 2026"
       }
     ],
     "max": {
@@ -926,28 +944,28 @@
     "54900": {
       "id": 54900,
       "id_team": 13,
-      "id_match": 37151,
-      "id_gameweek": 3968,
-      "id_home": 2,
-      "id_away": 13,
+      "id_match": 37952,
+      "id_gameweek": 4043,
+      "id_home": 13,
+      "id_away": 6,
       "date": {
-        "ts": 1787166000,
-        "text": "mié 21:00",
+        "ts": 1787599800,
+        "text": "lun 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "21:00",
+          "date": "lun",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Atlético",
-      "away": "Málaga",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "home": "Málaga",
+      "away": "Deportivo da Coruña",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,
@@ -959,8 +977,9 @@
   },
   "away": {
     "54900": {
-      "points": 0,
-      "avg": 0
+      "id": 54900,
+      "points": 6,
+      "avg": 6
     }
   },
   "owners": [],

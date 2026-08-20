@@ -3,15 +3,15 @@
     "id": 29222,
     "name": "Giuliano Simeone",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 2,
+    "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/29222.png?version=20251003193744",
     "isFavorite": 0,
-    "value": 31708000,
-    "previousValue": 31441000,
+    "value": 31721000,
+    "previousValue": 31876000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 31708000,
+      "floor": 31721000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 47562000,
+      "value": 47581500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 31708000,
+      "price": 31721000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 173,
       "weight": null
     },
-    "clausesRanking": 216
+    "clausesRanking": 218
   },
   "id": 29222,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,14 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
     {
@@ -650,6 +652,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 2,
+      "avg": 2,
+      "id_team": 2,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+    },
+    {
       "season": "25/26",
       "points": 156,
       "avg": 5.0323,
@@ -677,43 +687,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 31441000,
-      "change": 267000,
-      "sign": 267
+      "value": 31876000,
+      "change": -155000,
+      "sign": -155
     },
     {
       "time": "Una semana",
-      "value": 29517000,
-      "change": 2191000,
-      "sign": "+2.191.000"
+      "value": 30626000,
+      "change": 1095000,
+      "sign": "+1.095.000"
     },
     {
       "time": "Un mes",
-      "value": 21896000,
-      "change": 9812000,
-      "sign": "+9.812.000"
+      "value": 22611000,
+      "change": 9110000,
+      "sign": "+9.110.000"
     },
     {
       "time": "Un año",
-      "value": 38781000,
-      "change": -7073000,
-      "sign": "-7.073.000"
+      "value": 37781000,
+      "change": -6060000,
+      "sign": "-6.060.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 38781000,
-        "date": "17 ago 2025"
-      },
-      {
-        "value": 38645000,
-        "date": "18 ago 2025"
-      },
-      {
-        "value": 38176000,
-        "date": "19 ago 2025"
-      },
       {
         "value": 37781000,
         "date": "20 ago 2025"
@@ -2165,6 +2163,18 @@
       {
         "value": 31708000,
         "date": "17 ago 2026"
+      },
+      {
+        "value": 31754000,
+        "date": "18 ago 2026"
+      },
+      {
+        "value": 31876000,
+        "date": "19 ago 2026"
+      },
+      {
+        "value": 31721000,
+        "date": "20 ago 2026"
       }
     ],
     "max": {
@@ -2180,17 +2190,17 @@
     "29222": {
       "id": 29222,
       "id_team": 2,
-      "id_match": 37151,
-      "id_gameweek": 3968,
+      "id_match": 37948,
+      "id_gameweek": 4043,
       "id_home": 2,
-      "id_away": 13,
+      "id_away": 20,
       "date": {
-        "ts": 1787166000,
-        "text": "mié 21:00",
+        "ts": 1787497200,
+        "text": "dom 17:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "21:00",
+          "date": "dom",
+          "time": "17:00",
           "format": "EEE"
         }
       },
@@ -2198,17 +2208,18 @@
       "confirmed": 0,
       "minute": null,
       "home": "Atlético",
-      "away": "Málaga",
+      "away": "Villarreal",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "29222": {
-      "points": 0,
-      "avg": 0
+      "id": 29222,
+      "points": 2,
+      "avg": 2
     }
   },
   "away": {

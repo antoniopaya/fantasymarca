@@ -3,15 +3,15 @@
     "id": 71010,
     "name": "Ángel Recio",
     "position": 2,
-    "points": 0,
-    "avg": 0,
+    "points": 3,
+    "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71010.png?version=20260621195317",
     "isFavorite": 0,
-    "value": 414000,
-    "previousValue": 526000,
+    "value": 405000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 414000,
+      "price": 405000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 296
+    "clausesRanking": 284
   },
   "id": 71010,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,12 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
     {
@@ -648,25 +648,34 @@
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   ],
-  "points_history": [],
+  "points_history": [
+    {
+      "season": "26/27",
+      "points": 3,
+      "avg": 3,
+      "id_team": 13,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+    }
+  ],
   "values": [
     {
       "time": "Un día",
-      "value": 526000,
-      "change": -112000,
-      "sign": -112
+      "value": 329000,
+      "change": 76000,
+      "sign": 76
     },
     {
       "time": "Una semana",
-      "value": 431000,
-      "change": -17000,
-      "sign": -17
+      "value": 474000,
+      "change": -69000,
+      "sign": -69
     },
     {
       "time": "Un mes",
-      "value": 405000,
-      "change": 9000,
-      "sign": 9
+      "value": 329000,
+      "change": 76000,
+      "sign": 76
     }
   ],
   "values_chart": {
@@ -898,6 +907,18 @@
       {
         "value": 414000,
         "date": "17 ago 2026"
+      },
+      {
+        "value": 344000,
+        "date": "18 ago 2026"
+      },
+      {
+        "value": 329000,
+        "date": "19 ago 2026"
+      },
+      {
+        "value": 405000,
+        "date": "20 ago 2026"
       }
     ],
     "max": {
@@ -913,28 +934,28 @@
     "71010": {
       "id": 71010,
       "id_team": 13,
-      "id_match": 37151,
-      "id_gameweek": 3968,
-      "id_home": 2,
-      "id_away": 13,
+      "id_match": 37952,
+      "id_gameweek": 4043,
+      "id_home": 13,
+      "id_away": 6,
       "date": {
-        "ts": 1787166000,
-        "text": "mié 21:00",
+        "ts": 1787599800,
+        "text": "lun 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "21:00",
+          "date": "lun",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
-      "home": "Atlético",
-      "away": "Málaga",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "home": "Málaga",
+      "away": "Deportivo da Coruña",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,
@@ -946,8 +967,9 @@
   },
   "away": {
     "71010": {
-      "points": 0,
-      "avg": 0
+      "id": 71010,
+      "points": 3,
+      "avg": 3
     }
   },
   "owners": [],

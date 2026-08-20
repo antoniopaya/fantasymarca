@@ -14,7 +14,7 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/63867.png?version=20250617095658",
     "isFavorite": 0,
-    "value": 417000,
+    "value": 413000,
     "previousValue": 329000,
     "videoFrame": null,
     "team": {
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 417000,
+      "price": 413000,
       "loanable": null
     },
     "bid": {
@@ -88,12 +88,21 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": null,
+        "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 301799,
+        "id_player": 63867,
+        "category": "injury",
+        "description": "Artroscopia",
+        "duration": "Baja esta jornada",
+        "since": "2026-05-29 12:05:03",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
     {
@@ -666,42 +675,30 @@
     {
       "time": "Un día",
       "value": 329000,
-      "change": 88000,
-      "sign": 88
+      "change": 84000,
+      "sign": 84
     },
     {
       "time": "Una semana",
-      "value": 456000,
-      "change": -39000,
-      "sign": -39
+      "value": 329000,
+      "change": 84000,
+      "sign": 84
     },
     {
       "time": "Un mes",
-      "value": 343000,
-      "change": 74000,
-      "sign": 74
+      "value": 525000,
+      "change": -112000,
+      "sign": -112
     },
     {
       "time": "Un año",
-      "value": 405000,
-      "change": 12000,
-      "sign": 12
+      "value": 340000,
+      "change": 73000,
+      "sign": 73
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 405000,
-        "date": "17 ago 2025"
-      },
-      {
-        "value": 329000,
-        "date": "18 ago 2025"
-      },
-      {
-        "value": 453000,
-        "date": "19 ago 2025"
-      },
       {
         "value": 340000,
         "date": "20 ago 2025"
@@ -2153,6 +2150,18 @@
       {
         "value": 417000,
         "date": "17 ago 2026"
+      },
+      {
+        "value": 453000,
+        "date": "18 ago 2026"
+      },
+      {
+        "value": 329000,
+        "date": "19 ago 2026"
+      },
+      {
+        "value": 413000,
+        "date": "20 ago 2026"
       }
     ],
     "max": {
