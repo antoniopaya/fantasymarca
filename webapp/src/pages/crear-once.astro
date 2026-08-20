@@ -101,7 +101,7 @@ for (const m of nextGwMatches) {
   </div>
 
   <div
-    id="add-player-notice"
+    id="page-notice"
     class="mb-6 hidden rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-300"
   >
   </div>
@@ -130,6 +130,15 @@ for (const m of nextGwMatches) {
     >
       Eliminar
     </button>
+  </div>
+
+  <div class="mb-6 rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+    <p
+      class="mb-3 text-xs font-semibold tracking-wide text-slate-500 uppercase"
+    >
+      Cambios de jornada
+    </p>
+    <div id="changes-panel"></div>
   </div>
 
   <div
@@ -296,6 +305,9 @@ for (const m of nextGwMatches) {
     let activeSlotId = null;
     let lastTrigger = null;
     let lastSnapshot = null;
+    // Cambios permitidos entre jornada y jornada (3, 6 u 11): null cuando no
+    // se está en modo cambios. Ver startChangesMode/computeChangesUsed.
+    let changesMode = null;
 
     function formatMoneyClient(value) {
       return `${(value / 1_000_000).toFixed(2)} M€`;
@@ -315,6 +327,25 @@ for (const m of nextGwMatches) {
               ? s.playerId
               : null,
         }));
+    }
+
+    // Valida un changesMode guardado (puede venir de localStorage corrupto o
+    // de una convocatoria sin cambios activos).
+    function sanitizeChangesMode(raw) {
+      if (!raw || typeof raw.limit !== "number" || !raw.base) return null;
+      if (!Array.isArray(raw.base.slots)) return null;
+      return {
+        limit: raw.limit,
+        base: {
+          formationKey:
+            typeof raw.base.formationKey === "string"
+              ? raw.base.formationKey
+              : DEFAULT_FORMATION,
+          slots: sanitizeSavedSlots(raw.base.slots),
+          captainId:
+            typeof raw.base.captainId === "number" ? raw.base.captainId : null,
+        },
+      };
     }
 
     // --- Convocatorias guardadas (varias onces, no solo una) ---------------
@@ -405,6 +436,7 @@ for (const m of nextGwMatches) {
       );
       state.captainId =
         typeof lineup.captainId === "number" ? lineup.captainId : null;
+      changesMode = sanitizeChangesMode(lineup.changesMode);
       lastSnapshot = null;
     }
 
@@ -425,6 +457,7 @@ for (const m of nextGwMatches) {
         slots: state.slots,
         captainId: state.captainId,
         teamIds,
+        changesMode,
       };
       saveAllLineups();
     }
@@ -504,9 +537,14 @@ for (const m of nextGwMatches) {
         : captainEligible
           ? `Nombrar capitán a ${player.name}`
           : `${player.name} no puede ser capitán: debe costar menos de ${formatMoneyClient(MAX_CAPTAIN_PRICE)}`;
+      const isNew = isNewInChangesMode(player.id);
 
       return `
-        <div class="relative flex h-24 w-20 flex-col items-center rounded-xl border border-white/10 bg-slate-900/80 pt-1.5 sm:h-28 sm:w-24" data-slot="${slot.id}">
+        <div class="relative flex h-24 w-20 flex-col items-center rounded-xl border pt-1.5 sm:h-28 sm:w-24 ${
+          isNew
+            ? "border-emerald-500/60 bg-emerald-500/10 ring-2 ring-emerald-500/30"
+            : "border-white/10 bg-slate-900/80"
+        }" data-slot="${slot.id}" ${isNew ? 'title="Nuevo desde el último once"' : ""}>
           <button type="button" data-slot="${slot.id}" data-action="remove"
             aria-label="Quitar a ${player.name} del equipo"
             class="absolute -right-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-rose-500 text-[10px] font-bold text-white hover:bg-rose-400">
@@ -616,6 +654,201 @@ for (const m of nextGwMatches) {
       label.textContent = `≈ ${total.toFixed(0)} pts esperados (según la temporada anterior)`;
     }
 
+    // --- Cambios entre jornada y jornada (3, 6 u 11) ------------------------
+    // "changesMode.base" es el once tal cual estaba al pulsar el número de
+    // cambios: se compara por jugador (no por hueco) para que un cambio de
+    // formación a mitad de sesión no rompa la cuenta.
+
+    const CHANGE_LIMIT_OPTIONS = [3, 6, 11];
+
+    function computeChangesUsed() {
+      if (!changesMode) return 0;
+      const baseIds = changesMode.base.slots
+        .filter((s) => s.playerId !== null)
+        .map((s) => s.playerId);
+      const currentIds = new Set(
+        state.slots.filter((s) => s.playerId !== null).map((s) => s.playerId),
+      );
+      return baseIds.filter((id) => !currentIds.has(id)).length;
+    }
+
+    // Empareja cada jugador que sale con uno que entra (por orden de
+    // aparición) para el mensaje de WhatsApp: "jugador viejo - jugador nuevo".
+    function computeChangesDiff() {
+      if (!changesMode) return [];
+      const baseIds = changesMode.base.slots
+        .filter((s) => s.playerId !== null)
+        .map((s) => s.playerId);
+      const currentIds = state.slots
+        .filter((s) => s.playerId !== null)
+        .map((s) => s.playerId);
+      const baseSet = new Set(baseIds);
+      const currentSet = new Set(currentIds);
+      const removed = baseIds.filter((id) => !currentSet.has(id));
+      const added = currentIds.filter((id) => !baseSet.has(id));
+      const pairs = [];
+      for (let i = 0; i < Math.max(removed.length, added.length); i++) {
+        pairs.push({ out: removed[i] ?? null, in: added[i] ?? null });
+      }
+      return pairs;
+    }
+
+    function isNewInChangesMode(playerId) {
+      if (!changesMode) return false;
+      return !changesMode.base.slots.some((s) => s.playerId === playerId);
+    }
+
+    function startChangesMode(limit) {
+      changesMode = {
+        limit,
+        base: {
+          formationKey: state.formationKey,
+          slots: state.slots.map((s) => ({ ...s })),
+          captainId: state.captainId,
+        },
+      };
+      render();
+    }
+
+    // Deshace toda la sesión de cambios, no solo el último: vuelve al once
+    // exacto de antes de pulsar 3/6/11 cambios. Es destructivo (no pasa por
+    // el "Deshacer" general) así que el propio botón pide confirmación, igual
+    // que "Vaciar equipo".
+    function cancelChangesMode() {
+      if (!changesMode) return;
+      state.formationKey = changesMode.base.formationKey;
+      state.slots = buildSlots(state.formationKey, changesMode.base.slots);
+      state.captainId = changesMode.base.captainId;
+      changesMode = null;
+      lastSnapshot = null;
+      updateUndoButton();
+      render();
+    }
+
+    // Cierra la sesión de cambios pero mantiene el once actual (queda listo
+    // para la siguiente jornada, cuando se vuelva a pulsar 3/6/11 cambios).
+    function finishChangesMode() {
+      changesMode = null;
+      render();
+    }
+
+    // Solo se reconstruyen los botones cuando se entra o se sale del modo
+    // cambios (cambia la estructura); mientras se está dentro, cada edición
+    // actualiza solo el número del contador — si no, quien navegue por
+    // teclado perdería el foco en "Cancelar cambios" con cada ficha que mueva.
+    let changesPanelMode = null;
+
+    function renderChangesPanelStructure() {
+      const container = document.getElementById("changes-panel");
+      if (!changesMode) {
+        container.innerHTML = `
+          <div role="group" aria-label="Cambios permitidos" class="flex flex-wrap items-center gap-2">
+            ${CHANGE_LIMIT_OPTIONS.map(
+              (n) => `
+              <button type="button" data-changes-limit="${n}"
+                class="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white">
+                ${n} cambios
+              </button>`,
+            ).join("")}
+          </div>
+          <p class="mt-2 text-xs text-slate-500">
+            Elige cuántos cambios puedes hacer respecto al once de la jornada
+            pasada — se guarda el once actual como punto de partida.
+          </p>`;
+        changesPanelMode = "idle";
+        return;
+      }
+      container.innerHTML = `
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <span id="changes-counter" class="text-sm font-medium text-white">
+            Cambios: 0 / ${changesMode.limit}
+          </span>
+          <div class="flex gap-2">
+            <button type="button" id="changes-cancel" data-confirming="false"
+              class="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-400 transition-colors hover:border-rose-500/40 hover:text-rose-300">
+              Cancelar cambios
+            </button>
+            <button type="button" id="changes-finish"
+              class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-medium text-emerald-400 transition-colors hover:bg-emerald-500/20">
+              Terminar cambios
+            </button>
+          </div>
+        </div>
+        <p class="mt-2 text-xs text-slate-500">
+          Los jugadores nuevos respecto al once de la jornada pasada aparecen
+          marcados en verde en el campo.
+        </p>`;
+      changesPanelMode = "active";
+      updateChangesCounter();
+    }
+
+    function updateChangesCounter() {
+      if (!changesMode) return;
+      const counter = document.getElementById("changes-counter");
+      if (!counter) return;
+      const used = computeChangesUsed();
+      const overLimit = used > changesMode.limit;
+      counter.textContent = `Cambios: ${used} / ${changesMode.limit}`;
+      counter.className = `text-sm font-medium ${overLimit ? "text-rose-400" : "text-white"}`;
+    }
+
+    function renderChangesPanel() {
+      const desiredMode = changesMode ? "active" : "idle";
+      if (desiredMode !== changesPanelMode) renderChangesPanelStructure();
+      else updateChangesCounter();
+    }
+
+    let cancelChangesTimer = null;
+
+    function resetCancelChangesButton() {
+      const btn = document.getElementById("changes-cancel");
+      if (!btn) return;
+      if (cancelChangesTimer) clearTimeout(cancelChangesTimer);
+      cancelChangesTimer = null;
+      btn.dataset.confirming = "false";
+      btn.textContent = "Cancelar cambios";
+      btn.classList.remove(
+        "border-rose-500/60",
+        "bg-rose-500/10",
+        "text-rose-300",
+      );
+    }
+
+    document.getElementById("changes-panel").addEventListener("click", (e) => {
+      const limitBtn = e.target.closest("[data-changes-limit]");
+      if (limitBtn) {
+        startChangesMode(Number(limitBtn.dataset.changesLimit));
+        return;
+      }
+      const cancelBtn = e.target.closest("#changes-cancel");
+      if (cancelBtn) {
+        if (cancelBtn.dataset.confirming === "true") {
+          resetCancelChangesButton();
+          cancelChangesMode();
+          return;
+        }
+        cancelBtn.dataset.confirming = "true";
+        cancelBtn.textContent = "¿Seguro? Confirmar";
+        cancelBtn.classList.add(
+          "border-rose-500/60",
+          "bg-rose-500/10",
+          "text-rose-300",
+        );
+        cancelChangesTimer = setTimeout(resetCancelChangesButton, 3000);
+        return;
+      }
+      if (e.target.closest("#changes-finish")) {
+        finishChangesMode();
+      }
+    });
+    // `blur` no burbujea; `focusout` sí, así que es lo único que funciona
+    // con un botón que se recrea dinámicamente en vez de existir siempre.
+    document
+      .getElementById("changes-panel")
+      .addEventListener("focusout", (e) => {
+        if (e.target.id === "changes-cancel") resetCancelChangesButton();
+      });
+
     function render() {
       // el capitán tiene que seguir en el 11 y seguir siendo elegible
       if (state.captainId !== null) {
@@ -685,6 +918,7 @@ for (const m of nextGwMatches) {
       renderTeamSummary();
       renderRivalsSummary();
       renderEstimatedPoints();
+      renderChangesPanel();
 
       saveState();
     }
@@ -994,7 +1228,28 @@ for (const m of nextGwMatches) {
     });
     lineupDeleteBtn.addEventListener("blur", resetDeleteLineupButton);
 
+    function showNotice(message) {
+      const el = document.getElementById("page-notice");
+      el.textContent = message;
+      el.classList.remove("hidden");
+    }
+
+    // Con cambios activos, el mensaje muestra solo las sustituciones (formato
+    // que pide la liga: "jugador viejo - jugador nuevo") en vez del once
+    // completo agrupado por puesto.
     function buildWhatsAppMessage() {
+      if (changesMode) {
+        const lines = computeChangesDiff().map(({ out, in: inId }) => {
+          const outName = out !== null ? playersById.get(out).name : "—";
+          const inName = inId !== null ? playersById.get(inId).name : "—";
+          return `${outName} - ${inName}`;
+        });
+        if (state.captainId !== null) {
+          lines.push(`${playersById.get(state.captainId).name} (c)`);
+        }
+        return lines.join("\n");
+      }
+
       const groups = POSITION_ROWS.map((row) => {
         const names = state.slots
           .filter((s) => s.position === row.position && s.playerId !== null)
@@ -1018,6 +1273,12 @@ for (const m of nextGwMatches) {
       const filled = state.slots.filter((s) => s.playerId !== null);
       if (filled.length === 0) return;
       const text = buildWhatsAppMessage();
+      if (!text.trim()) {
+        showNotice(
+          "Todavía no hay cambios que compartir: mueve algún jugador primero.",
+        );
+        return;
+      }
       window.open(
         `https://wa.me/?text=${encodeURIComponent(text)}`,
         "_blank",
@@ -1027,12 +1288,6 @@ for (const m of nextGwMatches) {
 
     // Llegada desde el botón "Añadir a mi once" de la ficha de un jugador
     // (jugadores/[id].astro), vía ?add=<id>.
-    function showAddPlayerNotice(message) {
-      const el = document.getElementById("add-player-notice");
-      el.textContent = message;
-      el.classList.remove("hidden");
-    }
-
     function tryAddPlayerFromQuery() {
       const params = new URLSearchParams(window.location.search);
       const addId = params.get("add");
@@ -1042,7 +1297,7 @@ for (const m of nextGwMatches) {
 
       const player = playersById.get(Number(addId));
       if (!player) {
-        showAddPlayerNotice(
+        showNotice(
           "Ese jugador no tiene precio Fantástica todavía y no se puede fichar.",
         );
         return;
@@ -1053,14 +1308,14 @@ for (const m of nextGwMatches) {
       if (!freeSlot) {
         const positionLower =
           POSITION_LABEL_LOWER[player.position] ?? "esa posición";
-        showAddPlayerNotice(
+        showNotice(
           `Ya tienes completos los puestos de ${positionLower}. Quita a alguien antes de fichar a ${player.name}.`,
         );
         return;
       }
       const remaining = MAX_BUDGET - totalCost(null);
       if (player.price > remaining) {
-        showAddPlayerNotice(
+        showNotice(
           `Fichar a ${player.name} (${formatMoneyClient(player.price)}) superaría tu presupuesto de ${formatMoneyClient(MAX_BUDGET)}.`,
         );
         return;
