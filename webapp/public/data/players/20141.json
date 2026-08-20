@@ -3,15 +3,15 @@
     "id": 20141,
     "name": "Germán Valera",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 4,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/20141.png?version=20251006022918",
     "isFavorite": 0,
-    "value": 28921000,
-    "previousValue": 29109000,
+    "value": 27949000,
+    "previousValue": 28306000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 28921000,
+      "floor": 27949000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 43381500,
+      "value": 41923500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 28921000,
+      "price": 27949000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 444
+    "clausesRanking": 422
   },
   "id": 20141,
   "player_extra": {
@@ -84,12 +84,14 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": 2,
-        "isLive": true
+        "points": 4,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
     {
@@ -650,6 +652,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 4,
+      "avg": 4,
+      "id_team": 23,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+    },
+    {
       "season": "25/26",
       "points": 202,
       "avg": 5.6111,
@@ -669,43 +679,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 29109000,
-      "change": -188000,
-      "sign": -188
+      "value": 28306000,
+      "change": -357000,
+      "sign": -357
     },
     {
       "time": "Una semana",
-      "value": 30484000,
-      "change": -1563000,
-      "sign": "-1.563.000"
+      "value": 29744000,
+      "change": -1795000,
+      "sign": "-1.795.000"
     },
     {
       "time": "Un mes",
-      "value": 37276000,
-      "change": -8355000,
-      "sign": "-8.355.000"
+      "value": 36150000,
+      "change": -8201000,
+      "sign": "-8.201.000"
     },
     {
       "time": "Un año",
-      "value": 4301000,
-      "change": 24620000,
-      "sign": "+24.620.000"
+      "value": 4583000,
+      "change": 23366000,
+      "sign": "+23.366.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 4301000,
-        "date": "17 ago 2025"
-      },
-      {
-        "value": 4261000,
-        "date": "18 ago 2025"
-      },
-      {
-        "value": 4392000,
-        "date": "19 ago 2025"
-      },
       {
         "value": 4583000,
         "date": "20 ago 2025"
@@ -2157,6 +2155,18 @@
       {
         "value": 28921000,
         "date": "17 ago 2026"
+      },
+      {
+        "value": 28606000,
+        "date": "18 ago 2026"
+      },
+      {
+        "value": 28306000,
+        "date": "19 ago 2026"
+      },
+      {
+        "value": 27949000,
+        "date": "20 ago 2026"
       }
     ],
     "max": {
@@ -2164,8 +2174,8 @@
       "date": "1 mar 2026"
     },
     "min": {
-      "value": 4261000,
-      "date": "18 ago 2025"
+      "value": 4583000,
+      "date": "20 ago 2025"
     }
   },
   "next_match": {
@@ -2187,7 +2197,7 @@
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Elche",
       "away": "Barcelona",
@@ -2205,8 +2215,9 @@
   },
   "away": {
     "20141": {
-      "points": 0,
-      "avg": 0
+      "id": 20141,
+      "points": 4,
+      "avg": 4
     }
   },
   "owners": [],

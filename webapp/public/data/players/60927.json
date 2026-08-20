@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60927.png?version=20260621200950",
     "isFavorite": 0,
-    "value": 4510000,
-    "previousValue": 4695000,
+    "value": 4006000,
+    "previousValue": 4167000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4510000,
+      "floor": 4006000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6765000,
+      "value": 6009000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4510000,
+      "price": 4006000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 258
+    "clausesRanking": 348
   },
   "id": 60927,
   "player_extra": {
@@ -92,8 +92,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302756,
+        "id_player": 60927,
+        "category": "injury",
+        "description": "Lesión en el sóleo",
+        "duration": "Baja hasta principios de Septiembre",
+        "since": "2026-08-15 10:03:49",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
     {
@@ -665,21 +674,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4695000,
-      "change": -185000,
-      "sign": -185
+      "value": 4167000,
+      "change": -161000,
+      "sign": -161
     },
     {
       "time": "Una semana",
-      "value": 4808000,
-      "change": -298000,
-      "sign": -298
+      "value": 5019000,
+      "change": -1013000,
+      "sign": "-1.013.000"
     },
     {
       "time": "Un mes",
-      "value": 1545000,
-      "change": 2965000,
-      "sign": "+2.965.000"
+      "value": 2052000,
+      "change": 1954000,
+      "sign": "+1.954.000"
     }
   ],
   "values_chart": {
@@ -911,6 +920,18 @@
       {
         "value": 4510000,
         "date": "17 ago 2026"
+      },
+      {
+        "value": 4370000,
+        "date": "18 ago 2026"
+      },
+      {
+        "value": 4167000,
+        "date": "19 ago 2026"
+      },
+      {
+        "value": 4006000,
+        "date": "20 ago 2026"
       }
     ],
     "max": {
@@ -926,28 +947,28 @@
     "60927": {
       "id": 60927,
       "id_team": 13,
-      "id_match": 37151,
-      "id_gameweek": 3968,
-      "id_home": 2,
-      "id_away": 13,
+      "id_match": 37952,
+      "id_gameweek": 4043,
+      "id_home": 13,
+      "id_away": 6,
       "date": {
-        "ts": 1787166000,
-        "text": "mié 21:00",
+        "ts": 1787599800,
+        "text": "lun 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "21:00",
+          "date": "lun",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Atlético",
-      "away": "Málaga",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "home": "Málaga",
+      "away": "Deportivo da Coruña",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,

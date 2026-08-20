@@ -3,15 +3,15 @@
     "id": 70943,
     "name": "David Mella",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 2,
+    "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70943.png?version=20260621101933",
     "isFavorite": 0,
-    "value": 7470000,
-    "previousValue": 7353000,
+    "value": 7605000,
+    "previousValue": 7623000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 7470000,
+      "floor": 7605000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 11205000,
+      "value": 11407500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 7470000,
+      "price": 7605000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 169,
       "weight": null
     },
-    "clausesRanking": 173
+    "clausesRanking": 177
   },
   "id": 70943,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,14 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
     {
@@ -648,25 +650,34 @@
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   ],
-  "points_history": [],
+  "points_history": [
+    {
+      "season": "26/27",
+      "points": 2,
+      "avg": 2,
+      "id_team": 6,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+    }
+  ],
   "values": [
     {
       "time": "Un día",
-      "value": 7353000,
-      "change": 117000,
-      "sign": 117
+      "value": 7623000,
+      "change": -18000,
+      "sign": -18
     },
     {
       "time": "Una semana",
-      "value": 6557000,
-      "change": 913000,
-      "sign": 913
+      "value": 6976000,
+      "change": 629000,
+      "sign": 629
     },
     {
       "time": "Un mes",
-      "value": 4072000,
-      "change": 3398000,
-      "sign": "+3.398.000"
+      "value": 4234000,
+      "change": 3371000,
+      "sign": "+3.371.000"
     }
   ],
   "values_chart": {
@@ -898,11 +909,23 @@
       {
         "value": 7470000,
         "date": "17 ago 2026"
+      },
+      {
+        "value": 7576000,
+        "date": "18 ago 2026"
+      },
+      {
+        "value": 7623000,
+        "date": "19 ago 2026"
+      },
+      {
+        "value": 7605000,
+        "date": "20 ago 2026"
       }
     ],
     "max": {
-      "value": 7470000,
-      "date": "17 ago 2026"
+      "value": 7623000,
+      "date": "19 ago 2026"
     },
     "min": {
       "value": 2670000,
@@ -940,8 +963,9 @@
   "starter": false,
   "home": {
     "70943": {
-      "points": 0,
-      "avg": 0
+      "id": 70943,
+      "points": 2,
+      "avg": 2
     }
   },
   "away": {

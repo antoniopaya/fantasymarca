@@ -3,15 +3,15 @@
     "id": 68716,
     "name": "Buba Sangaré",
     "position": 2,
-    "points": 0,
-    "avg": 0,
+    "points": 4,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68716.png?version=20260323141411",
     "isFavorite": 0,
-    "value": 4962000,
-    "previousValue": 4859000,
+    "value": 5159000,
+    "previousValue": 5098000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4962000,
+      "floor": 5159000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7443000,
+      "value": 7738500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4962000,
+      "price": 5159000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 82
+    "clausesRanking": 109
   },
   "id": 68716,
   "player_extra": {
@@ -84,12 +84,12 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": 2,
-        "isLive": true
+        "points": 4,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
     {
@@ -650,6 +650,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 4,
+      "avg": 4,
+      "id_team": 23,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+    },
+    {
       "season": "25/26",
       "points": 25,
       "avg": 2.0833,
@@ -661,21 +669,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4859000,
-      "change": 103000,
-      "sign": 103
+      "value": 5098000,
+      "change": 61000,
+      "sign": 61
     },
     {
       "time": "Una semana",
-      "value": 3970000,
-      "change": 992000,
-      "sign": 992
+      "value": 4533000,
+      "change": 626000,
+      "sign": 626
     },
     {
       "time": "Un mes",
-      "value": 714000,
-      "change": 4248000,
-      "sign": "+4.248.000"
+      "value": 566000,
+      "change": 4593000,
+      "sign": "+4.593.000"
     }
   ],
   "values_chart": {
@@ -1463,11 +1471,23 @@
       {
         "value": 4962000,
         "date": "17 ago 2026"
+      },
+      {
+        "value": 5043000,
+        "date": "18 ago 2026"
+      },
+      {
+        "value": 5098000,
+        "date": "19 ago 2026"
+      },
+      {
+        "value": 5159000,
+        "date": "20 ago 2026"
       }
     ],
     "max": {
-      "value": 4962000,
-      "date": "17 ago 2026"
+      "value": 5159000,
+      "date": "20 ago 2026"
     },
     "min": {
       "value": 329000,
@@ -1493,7 +1513,7 @@
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Elche",
       "away": "Barcelona",
@@ -1511,8 +1531,9 @@
   },
   "away": {
     "68716": {
-      "points": 0,
-      "avg": 0
+      "id": 68716,
+      "points": 4,
+      "avg": 4
     }
   },
   "owners": [],

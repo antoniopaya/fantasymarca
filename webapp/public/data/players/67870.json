@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/67870.png?version=20251006104849",
     "isFavorite": 0,
-    "value": 425000,
-    "previousValue": 377000,
+    "value": 329000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 425000,
+      "price": 329000,
       "loanable": null
     },
     "bid": {
@@ -88,12 +88,21 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": null,
+        "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302686,
+        "id_player": 67870,
+        "category": "injury",
+        "description": "Molestias",
+        "duration": "Baja esta jornada",
+        "since": "2026-08-10 21:44:05",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
     {
@@ -665,21 +674,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 377000,
-      "change": 48000,
-      "sign": 48
+      "value": 329000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Una semana",
-      "value": 335000,
-      "change": 90000,
-      "sign": 90
+      "value": 381000,
+      "change": -52000,
+      "sign": -52
     },
     {
       "time": "Un mes",
-      "value": 489000,
-      "change": -64000,
-      "sign": -64
+      "value": 347000,
+      "change": -18000,
+      "sign": -18
     }
   ],
   "values_chart": {
@@ -1947,6 +1956,18 @@
       {
         "value": 425000,
         "date": "17 ago 2026"
+      },
+      {
+        "value": 397000,
+        "date": "18 ago 2026"
+      },
+      {
+        "value": 329000,
+        "date": "19 ago 2026"
+      },
+      {
+        "value": 329000,
+        "date": "20 ago 2026"
       }
     ],
     "max": {
