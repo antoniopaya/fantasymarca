@@ -3,15 +3,15 @@
     "id": 60218,
     "name": "Peio Canales",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 7,
+    "avg": 7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60218.png?version=20260619120854",
     "isFavorite": 0,
-    "value": 4750000,
-    "previousValue": 4813000,
+    "value": 4896000,
+    "previousValue": 4700000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4750000,
+      "floor": 4896000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7125000,
+      "value": 7344000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4750000,
+      "price": 4896000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 164
+    "clausesRanking": 44
   },
   "id": 60218,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -99,12 +99,12 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
     {
@@ -650,6 +650,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 7,
+      "avg": 7,
+      "id_team": 1,
+      "last_gameweek": 2,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+    },
+    {
       "season": "24/25",
       "points": 25,
       "avg": 3.125,
@@ -661,21 +669,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4813000,
-      "change": -63000,
-      "sign": -63
+      "value": 4700000,
+      "change": 196000,
+      "sign": 196
     },
     {
       "time": "Una semana",
-      "value": 4655000,
-      "change": 95000,
-      "sign": 95
+      "value": 4908000,
+      "change": -12000,
+      "sign": -12
     },
     {
       "time": "Un mes",
-      "value": 3231000,
-      "change": 1519000,
-      "sign": "+1.519.000"
+      "value": 3029000,
+      "change": 1867000,
+      "sign": "+1.867.000"
     }
   ],
   "values_chart": {
@@ -931,6 +939,22 @@
       {
         "value": 4750000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 4626000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 4527000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 4700000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 4896000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
@@ -946,35 +970,36 @@
     "60218": {
       "id": 60218,
       "id_team": 1,
-      "id_match": 37947,
-      "id_gameweek": 4043,
-      "id_home": 1,
-      "id_away": 17,
+      "id_match": 37158,
+      "id_gameweek": 3968,
+      "id_home": 3,
+      "id_away": 1,
       "date": {
-        "ts": 1787410800,
-        "text": "sáb 17:00",
+        "ts": 1787857200,
+        "text": "jue 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "17:00",
+          "date": "jue",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Sevilla",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Barcelona",
+      "away": "Athletic Club",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
   "home": {
     "60218": {
-      "points": 0,
-      "avg": 0
+      "id": 60218,
+      "points": 7,
+      "avg": 7
     }
   },
   "away": {

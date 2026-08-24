@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/64199.png?version=20250709145149",
     "isFavorite": 0,
-    "value": 457000,
-    "previousValue": 369000,
+    "value": 429000,
+    "previousValue": 350000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 457000,
+      "price": 429000,
       "loanable": null
     },
     "bid": {
@@ -107,8 +107,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302498,
+        "id_player": 64199,
+        "category": "injury",
+        "description": "Rotura de ligamento cruzado",
+        "duration": "Baja hasta Enero",
+        "since": "2026-07-30 18:09:14",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
     {
@@ -656,47 +665,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 369000,
-      "change": 88000,
-      "sign": 88
+      "value": 350000,
+      "change": 79000,
+      "sign": 79
     },
     {
       "time": "Una semana",
       "value": 329000,
-      "change": 128000,
-      "sign": 128
+      "change": 100000,
+      "sign": 100
     },
     {
       "time": "Un mes",
       "value": 329000,
-      "change": 128000,
-      "sign": 128
+      "change": 100000,
+      "sign": 100
     },
     {
       "time": "Un año",
-      "value": 393000,
-      "change": 64000,
-      "sign": 64
+      "value": 329000,
+      "change": 100000,
+      "sign": 100
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 393000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 329000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 449000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 331000,
-        "date": "23 ago 2025"
-      },
       {
         "value": 329000,
         "date": "24 ago 2025"
@@ -2144,6 +2137,22 @@
       {
         "value": 457000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 473000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 509000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 350000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 429000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
@@ -2159,28 +2168,28 @@
     "64199": {
       "id": 64199,
       "id_team": 1,
-      "id_match": 37947,
-      "id_gameweek": 4043,
-      "id_home": 1,
-      "id_away": 17,
+      "id_match": 37158,
+      "id_gameweek": 3968,
+      "id_home": 3,
+      "id_away": 1,
       "date": {
-        "ts": 1787410800,
-        "text": "sáb 17:00",
+        "ts": 1787857200,
+        "text": "jue 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "17:00",
+          "date": "jue",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Sevilla",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Barcelona",
+      "away": "Athletic Club",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,

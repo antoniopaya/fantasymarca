@@ -3,15 +3,15 @@
     "id": 28784,
     "name": "José Ángel Carmona",
     "position": 2,
-    "points": 0,
-    "avg": 0,
+    "points": 2,
+    "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/28784.png?version=20251228214145",
     "isFavorite": 0,
-    "value": 3908000,
-    "previousValue": 4058000,
+    "value": 3127000,
+    "previousValue": 3243000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3908000,
+      "floor": 3127000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 5862000,
+      "value": 4690500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3908000,
+      "price": 3127000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 365
+    "clausesRanking": 437
   },
   "id": 28784,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -99,12 +99,14 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
     {
@@ -650,6 +652,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 2,
+      "avg": 2,
+      "id_team": 17,
+      "last_gameweek": 2,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+    },
+    {
       "season": "25/26",
       "points": 112,
       "avg": 3.2,
@@ -677,47 +687,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4058000,
-      "change": -150000,
-      "sign": -150
+      "value": 3243000,
+      "change": -116000,
+      "sign": -116
     },
     {
       "time": "Una semana",
-      "value": 4689000,
-      "change": -781000,
-      "sign": -781
+      "value": 4390000,
+      "change": -1263000,
+      "sign": "-1.263.000"
     },
     {
       "time": "Un mes",
-      "value": 1991000,
-      "change": 1917000,
-      "sign": "+1.917.000"
+      "value": 2433000,
+      "change": 694000,
+      "sign": 694
     },
     {
       "time": "Un año",
-      "value": 6748000,
-      "change": -2840000,
-      "sign": "-2.840.000"
+      "value": 7260000,
+      "change": -4133000,
+      "sign": "-4.133.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 6748000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 6913000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 7077000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 7187000,
-        "date": "23 ago 2025"
-      },
       {
         "value": 7260000,
         "date": "24 ago 2025"
@@ -2165,6 +2159,22 @@
       {
         "value": 3908000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 3716000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 3470000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 3243000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 3127000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
@@ -2180,28 +2190,28 @@
     "28784": {
       "id": 28784,
       "id_team": 17,
-      "id_match": 37947,
-      "id_gameweek": 4043,
-      "id_home": 1,
-      "id_away": 17,
+      "id_match": 37966,
+      "id_gameweek": 4044,
+      "id_home": 17,
+      "id_away": 2,
       "date": {
-        "ts": 1787410800,
-        "text": "sáb 17:00",
+        "ts": 1788031800,
+        "text": "sáb 21:30",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "17:00",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Sevilla",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Sevilla",
+      "away": "Atlético",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     }
   },
   "starter": false,
@@ -2213,8 +2223,9 @@
   },
   "away": {
     "28784": {
-      "points": 0,
-      "avg": 0
+      "id": 28784,
+      "points": 2,
+      "avg": 2
     }
   },
   "owners": [],

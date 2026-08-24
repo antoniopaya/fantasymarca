@@ -3,15 +3,15 @@
     "id": 523868,
     "name": "Robbie Ure",
     "position": 4,
-    "points": 5,
-    "avg": 5,
+    "points": 7,
+    "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/523868.png?version=20260811120619",
     "isFavorite": 0,
-    "value": 5521000,
-    "previousValue": 5307000,
+    "value": 6463000,
+    "previousValue": 6229000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5521000,
+      "floor": 6463000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 2,
-      "shield2WeeksSku": "shield_t2_2w",
-      "shield1MonthSku": "shield_t2_1m",
-      "value": 8281500,
+      "tier": 3,
+      "shield2WeeksSku": "shield_t3_2w",
+      "shield1MonthSku": "shield_t3_1m",
+      "value": 9694500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5521000,
+      "price": 6463000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 189,
       "weight": null
     },
-    "clausesRanking": 37
+    "clausesRanking": 39
   },
   "id": 523868,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -101,12 +101,12 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
     {
@@ -653,25 +653,25 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 5,
-      "avg": 5,
+      "points": 7,
+      "avg": 3.5,
       "id_team": 17,
-      "last_gameweek": 1,
+      "last_gameweek": 2,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 5307000,
-      "change": 214000,
-      "sign": 214
+      "value": 6229000,
+      "change": 234000,
+      "sign": 234
     },
     {
       "time": "Una semana",
-      "value": 4274000,
-      "change": 1247000,
-      "sign": "+1.247.000"
+      "value": 4900000,
+      "change": 1563000,
+      "sign": "+1.563.000"
     }
   ],
   "values_chart": {
@@ -711,11 +711,27 @@
       {
         "value": 5521000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 5749000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 5987000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 6229000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 6463000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
-      "value": 5521000,
-      "date": "20 ago 2026"
+      "value": 6463000,
+      "date": "24 ago 2026"
     },
     "min": {
       "value": 4128000,
@@ -726,28 +742,28 @@
     "523868": {
       "id": 523868,
       "id_team": 17,
-      "id_match": 37947,
-      "id_gameweek": 4043,
-      "id_home": 1,
-      "id_away": 17,
+      "id_match": 37966,
+      "id_gameweek": 4044,
+      "id_home": 17,
+      "id_away": 2,
       "date": {
-        "ts": 1787410800,
-        "text": "sáb 17:00",
+        "ts": 1788031800,
+        "text": "sáb 21:30",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "17:00",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Sevilla",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Sevilla",
+      "away": "Atlético",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     }
   },
   "starter": false,
@@ -760,8 +776,9 @@
   },
   "away": {
     "523868": {
-      "points": 0,
-      "avg": 0
+      "id": 523868,
+      "points": 2,
+      "avg": 2
     }
   },
   "owners": [],

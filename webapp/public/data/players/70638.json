@@ -3,15 +3,15 @@
     "id": 70638,
     "name": "Anthony Gordon",
     "position": 4,
-    "points": 0,
-    "avg": 0,
+    "points": 12,
+    "avg": 12,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70638.png?version=20260603151304",
     "isFavorite": 0,
-    "value": 43810000,
-    "previousValue": 44021000,
+    "value": 43190000,
+    "previousValue": 43206000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 43810000,
+      "floor": 43190000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 65715000,
+      "value": 64785000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 43810000,
+      "price": 43190000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 296
+    "clausesRanking": 221
   },
   "id": 70638,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -99,12 +99,16 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 12,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in",
+        "assist",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
     {
@@ -648,25 +652,34 @@
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   ],
-  "points_history": [],
+  "points_history": [
+    {
+      "season": "26/27",
+      "points": 12,
+      "avg": 12,
+      "id_team": 3,
+      "last_gameweek": 2,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+    }
+  ],
   "values": [
     {
       "time": "Un día",
-      "value": 44021000,
-      "change": -211000,
-      "sign": -211
+      "value": 43206000,
+      "change": -16000,
+      "sign": -16
     },
     {
       "time": "Una semana",
-      "value": 44838000,
-      "change": -1028000,
-      "sign": "-1.028.000"
+      "value": 44283000,
+      "change": -1093000,
+      "sign": "-1.093.000"
     },
     {
       "time": "Un mes",
-      "value": 46403000,
-      "change": -2593000,
-      "sign": "-2.593.000"
+      "value": 46585000,
+      "change": -3395000,
+      "sign": "-3.395.000"
     }
   ],
   "values_chart": {
@@ -982,6 +995,22 @@
       {
         "value": 43810000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 43637000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 43376000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 43206000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 43190000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
@@ -989,36 +1018,36 @@
       "date": "4 jun 2026"
     },
     "min": {
-      "value": 43810000,
-      "date": "20 ago 2026"
+      "value": 43190000,
+      "date": "24 ago 2026"
     }
   },
   "next_match": {
     "70638": {
       "id": 70638,
       "id_team": 3,
-      "id_match": 37949,
-      "id_gameweek": 4043,
-      "id_home": 23,
-      "id_away": 3,
+      "id_match": 37158,
+      "id_gameweek": 3968,
+      "id_home": 3,
+      "id_away": 1,
       "date": {
-        "ts": 1787513400,
-        "text": "dom 21:30",
+        "ts": 1787857200,
+        "text": "jue 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "21:30",
+          "date": "jue",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
-      "home": "Elche",
-      "away": "Barcelona",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "home": "Barcelona",
+      "away": "Athletic Club",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
@@ -1030,8 +1059,9 @@
   },
   "away": {
     "70638": {
-      "points": 0,
-      "avg": 0
+      "id": 70638,
+      "points": 12,
+      "avg": 12
     }
   },
   "owners": [],

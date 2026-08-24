@@ -5,17 +5,13 @@
     "position": 3,
     "points": 0,
     "avg": 0,
-    "status": "injury",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "injury",
-      "description": "Molestias",
-      "duration": "Baja esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65669.png?version=20250831090633",
     "isFavorite": 0,
-    "value": 1570000,
-    "previousValue": 1904000,
+    "value": 568000,
+    "previousValue": 900000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1570000,
+      "floor": 666666.6666666666,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2355000,
+      "value": 1000000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1570000,
+      "price": 568000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +68,7 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 374
+    "clausesRanking": null
   },
   "id": 65669,
   "player_extra": {
@@ -92,16 +88,7 @@
         "isLive": false
       },
       "events": null,
-      "injury": {
-        "id": 302754,
-        "id_player": 65669,
-        "category": "injury",
-        "description": "Molestias",
-        "duration": "Baja esta jornada",
-        "since": "2026-08-15 10:00:19",
-        "until": null,
-        "status": "Lesionado"
-      },
+      "injury": null,
       "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -117,7 +104,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     },
     {
@@ -674,21 +661,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1904000,
-      "change": -334000,
-      "sign": -334
+      "value": 900000,
+      "change": -332000,
+      "sign": -332
     },
     {
       "time": "Una semana",
-      "value": 3007000,
-      "change": -1437000,
-      "sign": "-1.437.000"
+      "value": 2335000,
+      "change": -1767000,
+      "sign": "-1.767.000"
     },
     {
       "time": "Un mes",
-      "value": 371000,
-      "change": 1199000,
-      "sign": "+1.199.000"
+      "value": 394000,
+      "change": 174000,
+      "sign": 174
     }
   ],
   "values_chart": {
@@ -2112,6 +2099,22 @@
       {
         "value": 1570000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 1306000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 1103000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 900000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 568000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
@@ -2127,28 +2130,28 @@
     "65669": {
       "id": 65669,
       "id_team": 23,
-      "id_match": 37949,
-      "id_gameweek": 4043,
-      "id_home": 23,
-      "id_away": 3,
+      "id_match": 37964,
+      "id_gameweek": 4044,
+      "id_home": 1490,
+      "id_away": 23,
       "date": {
-        "ts": 1787513400,
-        "text": "dom 21:30",
+        "ts": 1787936400,
+        "text": "vie 19:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "21:30",
+          "date": "vie",
+          "time": "19:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Elche",
-      "away": "Barcelona",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "home": "Racing de Santander",
+      "away": "Elche",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   },
   "starter": false,

@@ -3,15 +3,15 @@
     "id": 61092,
     "name": "Tajon Buchanan",
     "position": 3,
-    "points": 1,
-    "avg": 1,
+    "points": 8,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/61092.png?version=20250201122704",
     "isFavorite": 0,
-    "value": 20127000,
-    "previousValue": 20518000,
+    "value": 18749000,
+    "previousValue": 18530000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 20127000,
+      "floor": 18749000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 30190500,
+      "value": 28123500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 20127000,
+      "price": 18749000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 446
+    "clausesRanking": 316
   },
   "id": 61092,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -101,12 +101,14 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
     {
@@ -653,10 +655,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 1,
-      "avg": 1,
+      "points": 8,
+      "avg": 4,
       "id_team": 20,
-      "last_gameweek": 1,
+      "last_gameweek": 2,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     },
     {
@@ -679,47 +681,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 20518000,
-      "change": -391000,
-      "sign": -391
+      "value": 18530000,
+      "change": 219000,
+      "sign": 219
     },
     {
       "time": "Una semana",
-      "value": 21907000,
-      "change": -1780000,
-      "sign": "-1.780.000"
+      "value": 21146000,
+      "change": -2397000,
+      "sign": "-2.397.000"
     },
     {
       "time": "Un mes",
-      "value": 14483000,
-      "change": 5644000,
-      "sign": "+5.644.000"
+      "value": 16058000,
+      "change": 2691000,
+      "sign": "+2.691.000"
     },
     {
       "time": "Un año",
-      "value": 4613000,
-      "change": 15514000,
-      "sign": "+15.514.000"
+      "value": 5168000,
+      "change": 13581000,
+      "sign": "+13.581.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 4613000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 4775000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 4940000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 5075000,
-        "date": "23 ago 2025"
-      },
       {
         "value": 5168000,
         "date": "24 ago 2025"
@@ -2167,6 +2153,22 @@
       {
         "value": 20127000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 19719000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 19066000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 18530000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 18749000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
@@ -2174,35 +2176,35 @@
       "date": "22 feb 2026"
     },
     "min": {
-      "value": 4613000,
-      "date": "20 ago 2025"
+      "value": 5168000,
+      "date": "24 ago 2025"
     }
   },
   "next_match": {
     "61092": {
       "id": 61092,
       "id_team": 20,
-      "id_match": 37948,
-      "id_gameweek": 4043,
-      "id_home": 2,
+      "id_match": 37958,
+      "id_gameweek": 4044,
+      "id_home": 48,
       "id_away": 20,
       "date": {
-        "ts": 1787497200,
-        "text": "dom 17:00",
+        "ts": 1787945400,
+        "text": "vie 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "17:00",
+          "date": "vie",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Atlético",
+      "home": "Alavés",
       "away": "Villarreal",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
@@ -2216,8 +2218,8 @@
   "away": {
     "61092": {
       "id": 61092,
-      "points": 1,
-      "avg": 1
+      "points": 8,
+      "avg": 4
     }
   },
   "owners": [],

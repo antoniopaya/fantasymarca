@@ -3,15 +3,15 @@
     "id": 609,
     "name": "David Soria",
     "position": 1,
-    "points": 2,
-    "avg": 2,
+    "points": 16,
+    "avg": 8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/609.png?version=20251003195901",
     "isFavorite": 0,
-    "value": 35591000,
-    "previousValue": 36004000,
+    "value": 34677000,
+    "previousValue": 34710000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 35591000,
+      "floor": 34677000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 53386500,
+      "value": 52015500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 35591000,
+      "price": 34677000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 609,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -99,12 +99,14 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 14,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "saved_penalty"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
     {
@@ -651,10 +653,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 2,
-      "avg": 2,
+      "points": 16,
+      "avg": 8,
       "id_team": 9,
-      "last_gameweek": 1,
+      "last_gameweek": 2,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
     {
@@ -685,47 +687,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 36004000,
-      "change": -413000,
-      "sign": -413
+      "value": 34710000,
+      "change": -33000,
+      "sign": -33
     },
     {
       "time": "Una semana",
-      "value": 37818000,
-      "change": -2227000,
-      "sign": "-2.227.000"
+      "value": 36660000,
+      "change": -1983000,
+      "sign": "-1.983.000"
     },
     {
       "time": "Un mes",
-      "value": 39667000,
-      "change": -4076000,
-      "sign": "-4.076.000"
+      "value": 38973000,
+      "change": -4296000,
+      "sign": "-4.296.000"
     },
     {
       "time": "Un año",
-      "value": 27622000,
-      "change": 7969000,
-      "sign": "+7.969.000"
+      "value": 28444000,
+      "change": 6233000,
+      "sign": "+6.233.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 27622000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 27947000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 28146000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 28327000,
-        "date": "23 ago 2025"
-      },
       {
         "value": 28444000,
         "date": "24 ago 2025"
@@ -2173,6 +2159,22 @@
       {
         "value": 35591000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 35358000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 34952000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 34710000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 34677000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
@@ -2188,35 +2190,36 @@
     "609": {
       "id": 609,
       "id_team": 9,
-      "id_match": 37951,
-      "id_gameweek": 4043,
-      "id_home": 9,
-      "id_away": 1490,
+      "id_match": 37962,
+      "id_gameweek": 4044,
+      "id_home": 50,
+      "id_away": 9,
       "date": {
-        "ts": 1787506200,
-        "text": "dom 19:30",
-        "format": "EEE H:mm",
+        "ts": 1788197400,
+        "text": "31 ago 19:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
+          "date": "31 ago",
           "time": "19:30",
-          "format": "EEE"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Racing de Santander",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Osasuna",
+      "away": "Getafe",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,
   "home": {
     "609": {
-      "points": 0,
-      "avg": 0
+      "id": 609,
+      "points": 14,
+      "avg": 14
     }
   },
   "away": {

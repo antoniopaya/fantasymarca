@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/55439.png?version=20260805081935",
     "isFavorite": 0,
-    "value": 2896000,
-    "previousValue": 2740000,
+    "value": 3406000,
+    "previousValue": 3365000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2896000,
+      "floor": 3406000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 4344000,
+      "value": 5109000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2896000,
+      "price": 3406000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 181,
       "weight": null
     },
-    "clausesRanking": 79
+    "clausesRanking": 108
   },
   "id": 55439,
   "player_extra": {
@@ -104,7 +104,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
     {
@@ -669,41 +669,25 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2740000,
-      "change": 156000,
-      "sign": 156
+      "value": 3365000,
+      "change": 41000,
+      "sign": 41
     },
     {
       "time": "Una semana",
-      "value": 1701000,
-      "change": 1195000,
-      "sign": "+1.195.000"
+      "value": 2484000,
+      "change": 922000,
+      "sign": 922
     },
     {
       "time": "Un año",
-      "value": 329000,
-      "change": 2567000,
-      "sign": "+2.567.000"
+      "value": 353000,
+      "change": 3053000,
+      "sign": "+3.053.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 329000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 329000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 329000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 329000,
-        "date": "23 ago 2025"
-      },
       {
         "value": 353000,
         "date": "24 ago 2025"
@@ -811,11 +795,27 @@
       {
         "value": 2896000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 3054000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 3239000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 3365000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 3406000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
-      "value": 2896000,
-      "date": "20 ago 2026"
+      "value": 3406000,
+      "date": "24 ago 2026"
     },
     "min": {
       "value": 329000,
@@ -826,28 +826,28 @@
     "55439": {
       "id": 55439,
       "id_team": 5,
-      "id_match": 37956,
-      "id_gameweek": 4043,
-      "id_home": 19,
-      "id_away": 5,
+      "id_match": 37152,
+      "id_gameweek": 3968,
+      "id_home": 5,
+      "id_away": 50,
       "date": {
-        "ts": 1787419800,
-        "text": "sáb 19:30",
+        "ts": 1787855400,
+        "text": "jue 20:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "19:30",
+          "date": "jue",
+          "time": "20:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Valencia",
-      "away": "Celta",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "home": "Celta",
+      "away": "Osasuna",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,

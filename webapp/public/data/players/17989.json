@@ -3,15 +3,15 @@
     "id": 17989,
     "name": "Jorge de Frutos",
     "position": 3,
-    "points": 2,
-    "avg": 2,
+    "points": 9,
+    "avg": 4.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/17989.png?version=20251004225553",
     "isFavorite": 0,
-    "value": 36432000,
-    "previousValue": 36921000,
+    "value": 34635000,
+    "previousValue": 35116000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 36432000,
+      "floor": 34635000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 54648000,
+      "value": 51952500,
       "percentage": 50
     },
     "market": {
-      "id": 1692541358,
-      "isPublic": 1,
-      "price": 36432000,
-      "loanable": 0
+      "id": null,
+      "isPublic": null,
+      "price": 34635000,
+      "loanable": null
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": 36432000,
+      "input": null,
       "barter": [],
       "type": null,
       "days": null
@@ -68,11 +68,11 @@
       "height": 173,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 428
   },
   "id": 17989,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -99,12 +99,14 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
     {
@@ -651,10 +653,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 2,
-      "avg": 2,
+      "points": 9,
+      "avg": 4.5,
       "id_team": 14,
-      "last_gameweek": 1,
+      "last_gameweek": 2,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
     {
@@ -685,47 +687,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 36921000,
-      "change": -489000,
-      "sign": -489
+      "value": 35116000,
+      "change": -481000,
+      "sign": -481
     },
     {
       "time": "Una semana",
-      "value": 38923000,
-      "change": -2491000,
-      "sign": "-2.491.000"
+      "value": 38030000,
+      "change": -3395000,
+      "sign": "-3.395.000"
     },
     {
       "time": "Un mes",
-      "value": 38747000,
-      "change": -2315000,
-      "sign": "-2.315.000"
+      "value": 38352000,
+      "change": -3717000,
+      "sign": "-3.717.000"
     },
     {
       "time": "Un año",
-      "value": 27006000,
-      "change": 9426000,
-      "sign": "+9.426.000"
+      "value": 29124000,
+      "change": 5511000,
+      "sign": "+5.511.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 27006000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 27560000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 28073000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 28586000,
-        "date": "23 ago 2025"
-      },
       {
         "value": 29124000,
         "date": "24 ago 2025"
@@ -2173,6 +2159,22 @@
       {
         "value": 36432000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 35980000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 35629000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 35116000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 34635000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
@@ -2180,43 +2182,44 @@
       "date": "18 mar 2026"
     },
     "min": {
-      "value": 27006000,
-      "date": "20 ago 2025"
+      "value": 29124000,
+      "date": "24 ago 2025"
     }
   },
   "next_match": {
     "17989": {
       "id": 17989,
       "id_team": 14,
-      "id_match": 37954,
-      "id_gameweek": 4043,
-      "id_home": 14,
-      "id_away": 48,
+      "id_match": 37960,
+      "id_gameweek": 4044,
+      "id_home": 3,
+      "id_away": 14,
       "date": {
-        "ts": 1787252400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1788204600,
+        "text": "31 ago 21:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "31 ago",
+          "time": "21:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Alavés",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "home": "Barcelona",
+      "away": "Rayo Vallecano",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,
   "home": {
     "17989": {
-      "points": 0,
-      "avg": 0
+      "id": 17989,
+      "points": 7,
+      "avg": 7
     }
   },
   "away": {

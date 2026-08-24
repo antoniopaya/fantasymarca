@@ -3,15 +3,15 @@
     "id": 65476,
     "name": "Clemens Riedel",
     "position": 2,
-    "points": 7,
-    "avg": 7,
+    "points": 10,
+    "avg": 5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65476.png?version=20250826090602",
     "isFavorite": 0,
-    "value": 5318000,
-    "previousValue": 5151000,
+    "value": 6041000,
+    "previousValue": 5859000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5318000,
+      "floor": 6041000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 2,
-      "shield2WeeksSku": "shield_t2_2w",
-      "shield1MonthSku": "shield_t2_1m",
-      "value": 7977000,
+      "tier": 3,
+      "shield2WeeksSku": "shield_t3_2w",
+      "shield1MonthSku": "shield_t3_1m",
+      "value": 9061500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5318000,
+      "price": 6041000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 72
+    "clausesRanking": 56
   },
   "id": 65476,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -99,12 +99,15 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
     {
@@ -651,10 +654,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 7,
-      "avg": 7,
+      "points": 10,
+      "avg": 5,
       "id_team": 8,
-      "last_gameweek": 1,
+      "last_gameweek": 2,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
     {
@@ -669,21 +672,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5151000,
-      "change": 167000,
-      "sign": 167
+      "value": 5859000,
+      "change": 182000,
+      "sign": 182
     },
     {
       "time": "Una semana",
-      "value": 4528000,
-      "change": 790000,
-      "sign": 790
+      "value": 4830000,
+      "change": 1211000,
+      "sign": "+1.211.000"
     },
     {
       "time": "Un mes",
-      "value": 847000,
-      "change": 4471000,
-      "sign": "+4.471.000"
+      "value": 1440000,
+      "change": 4601000,
+      "sign": "+4.601.000"
     }
   ],
   "values_chart": {
@@ -2127,6 +2130,22 @@
       {
         "value": 5318000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 5485000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 5675000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 5859000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 6041000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
@@ -2142,36 +2161,36 @@
     "65476": {
       "id": 65476,
       "id_team": 8,
-      "id_match": 37950,
-      "id_gameweek": 4043,
-      "id_home": 8,
-      "id_away": 15,
+      "id_match": 37965,
+      "id_gameweek": 4044,
+      "id_home": 16,
+      "id_away": 8,
       "date": {
-        "ts": 1787427000,
-        "text": "sáb 21:30",
+        "ts": 1788022800,
+        "text": "sáb 19:00",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "21:30",
+          "time": "19:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
-      "away": "Real Madrid",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Real Sociedad",
+      "away": "Espanyol",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,
   "home": {
     "65476": {
       "id": 65476,
-      "points": 7,
-      "avg": 7
+      "points": 10,
+      "avg": 5
     }
   },
   "away": {

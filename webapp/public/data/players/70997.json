@@ -9,13 +9,13 @@
     "id_competition": 1,
     "injury": {
       "category": "injury",
-      "description": "Molestias",
-      "duration": "Baja esta jornada"
+      "description": "Rotura de menisco",
+      "duration": "Baja indefinida"
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70997.png?version=20260621195207",
     "isFavorite": 0,
-    "value": 329000,
-    "previousValue": 329000,
+    "value": 335000,
+    "previousValue": 493000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 335000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 167,
       "weight": null
     },
-    "clausesRanking": 324
+    "clausesRanking": null
   },
   "id": 70997,
   "player_extra": {
@@ -92,16 +92,7 @@
         "isLive": false
       },
       "events": null,
-      "injury": {
-        "id": 302689,
-        "id_player": 70997,
-        "category": "injury",
-        "description": "Molestias",
-        "duration": "Baja esta jornada",
-        "since": "2026-08-10 21:52:01",
-        "until": null,
-        "status": "Lesionado"
-      },
+      "injury": null,
       "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -665,21 +656,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 0,
-      "sign": 0
+      "value": 493000,
+      "change": -158000,
+      "sign": -158
     },
     {
       "time": "Una semana",
-      "value": 365000,
-      "change": -36000,
-      "sign": -36
+      "value": 465000,
+      "change": -130000,
+      "sign": -130
     },
     {
       "time": "Un mes",
-      "value": 329000,
-      "change": 0,
-      "sign": 0
+      "value": 490000,
+      "change": -155000,
+      "sign": -155
     }
   ],
   "values_chart": {
@@ -923,6 +914,22 @@
       {
         "value": 329000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 361000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 401000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 493000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 335000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
@@ -944,12 +951,12 @@
       "id_away": 6,
       "date": {
         "ts": 1787599800,
-        "text": "lun 21:30",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:30",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "lun",
+          "date": "Hoy",
           "time": "21:30",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

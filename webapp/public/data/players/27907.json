@@ -5,17 +5,13 @@
     "position": 3,
     "points": 0,
     "avg": 0,
-    "status": "red",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "red",
-      "description": "Roja directa",
-      "duration": "Baja esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/27907.png?version=20250613152455",
     "isFavorite": 0,
-    "value": 405000,
-    "previousValue": 397000,
+    "value": 715000,
+    "previousValue": 619000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 666666.6666666666,
+      "floor": 715000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1000000,
+      "value": 1072500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 405000,
+      "price": 715000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +68,7 @@
       "height": 173,
       "weight": null
     },
-    "clausesRanking": 230
+    "clausesRanking": 147
   },
   "id": 27907,
   "player_extra": {
@@ -92,16 +88,7 @@
         "isLive": false
       },
       "events": null,
-      "injury": {
-        "id": 302514,
-        "id_player": 27907,
-        "category": "red",
-        "description": "Roja directa",
-        "duration": "Baja esta jornada",
-        "since": "2026-07-30 18:19:29",
-        "until": null,
-        "status": "Sancionado"
-      },
+      "injury": null,
       "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -674,47 +661,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 397000,
-      "change": 8000,
-      "sign": 8
+      "value": 619000,
+      "change": 96000,
+      "sign": 96
     },
     {
       "time": "Una semana",
-      "value": 384000,
-      "change": 21000,
-      "sign": 21
+      "value": 446000,
+      "change": 269000,
+      "sign": 269
     },
     {
       "time": "Un mes",
-      "value": 429000,
-      "change": -24000,
-      "sign": -24
+      "value": 393000,
+      "change": 322000,
+      "sign": 322
     },
     {
       "time": "Un año",
-      "value": 5045000,
-      "change": -4640000,
-      "sign": "-4.640.000"
+      "value": 5609000,
+      "change": -4894000,
+      "sign": "-4.894.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 5045000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 5208000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 5368000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 5479000,
-        "date": "23 ago 2025"
-      },
       {
         "value": 5609000,
         "date": "24 ago 2025"
@@ -2162,6 +2133,22 @@
       {
         "value": 405000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 467000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 568000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 619000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 715000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
@@ -2183,12 +2170,12 @@
       "id_away": 12,
       "date": {
         "ts": 1787592600,
-        "text": "lun 19:30",
-        "format": "EEE H:mm",
+        "text": "Hoy 19:30",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "lun",
+          "date": "Hoy",
           "time": "19:30",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

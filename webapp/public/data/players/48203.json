@@ -3,15 +3,15 @@
     "id": 48203,
     "name": "Ramón Terrats",
     "position": 3,
-    "points": 4,
-    "avg": 4,
+    "points": 14,
+    "avg": 7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/48203.png?version=20250204152625",
     "isFavorite": 0,
-    "value": 7541000,
-    "previousValue": 7316000,
+    "value": 8615000,
+    "previousValue": 8271000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 7541000,
+      "floor": 8615000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 11311500,
+      "value": 12922500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 7541000,
+      "price": 8615000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 179,
       "weight": null
     },
-    "clausesRanking": 36
+    "clausesRanking": 46
   },
   "id": 48203,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -99,12 +99,14 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 10,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
     {
@@ -651,10 +653,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 4,
-      "avg": 4,
+      "points": 14,
+      "avg": 7,
       "id_team": 9,
-      "last_gameweek": 1,
+      "last_gameweek": 2,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
     {
@@ -693,47 +695,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 7316000,
-      "change": 225000,
-      "sign": 225
+      "value": 8271000,
+      "change": 344000,
+      "sign": 344
     },
     {
       "time": "Una semana",
-      "value": 5968000,
-      "change": 1573000,
-      "sign": "+1.573.000"
+      "value": 6868000,
+      "change": 1747000,
+      "sign": "+1.747.000"
     },
     {
       "time": "Un mes",
-      "value": 1673000,
-      "change": 5868000,
-      "sign": "+5.868.000"
+      "value": 2281000,
+      "change": 6334000,
+      "sign": "+6.334.000"
     },
     {
       "time": "Un año",
-      "value": 17847000,
-      "change": -10306000,
-      "sign": "-10.306.000"
+      "value": 17236000,
+      "change": -8621000,
+      "sign": "-8.621.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 17847000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 17847000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 17782000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 17534000,
-        "date": "23 ago 2025"
-      },
       {
         "value": 17236000,
         "date": "24 ago 2025"
@@ -2181,11 +2167,27 @@
       {
         "value": 7541000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 7782000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 8034000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 8271000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 8615000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
-      "value": 17847000,
-      "date": "21 ago 2025"
+      "value": 17236000,
+      "date": "24 ago 2025"
     },
     "min": {
       "value": 329000,
@@ -2196,35 +2198,36 @@
     "48203": {
       "id": 48203,
       "id_team": 9,
-      "id_match": 37951,
-      "id_gameweek": 4043,
-      "id_home": 9,
-      "id_away": 1490,
+      "id_match": 37962,
+      "id_gameweek": 4044,
+      "id_home": 50,
+      "id_away": 9,
       "date": {
-        "ts": 1787506200,
-        "text": "dom 19:30",
-        "format": "EEE H:mm",
+        "ts": 1788197400,
+        "text": "31 ago 19:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
+          "date": "31 ago",
           "time": "19:30",
-          "format": "EEE"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Racing de Santander",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Osasuna",
+      "away": "Getafe",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,
   "home": {
     "48203": {
-      "points": 0,
-      "avg": 0
+      "id": 48203,
+      "points": 10,
+      "avg": 10
     }
   },
   "away": {

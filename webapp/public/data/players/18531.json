@@ -3,15 +3,15 @@
     "id": 18531,
     "name": "Aleix Febas",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 7,
+    "avg": 7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/18531.png?version=20250617223016",
     "isFavorite": 0,
-    "value": 30250000,
-    "previousValue": 30636000,
+    "value": 29435000,
+    "previousValue": 29311000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 30250000,
+      "floor": 29435000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 45375000,
+      "value": 44152500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 30250000,
+      "price": 29435000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 168,
       "weight": 57
     },
-    "clausesRanking": 434
+    "clausesRanking": null
   },
   "id": 18531,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -99,12 +99,14 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
     {
@@ -650,6 +652,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 7,
+      "avg": 7,
+      "id_team": 5,
+      "last_gameweek": 2,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+    },
+    {
       "season": "25/26",
       "points": 177,
       "avg": 4.9167,
@@ -661,47 +671,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 30636000,
-      "change": -386000,
-      "sign": -386
+      "value": 29311000,
+      "change": 124000,
+      "sign": 124
     },
     {
       "time": "Una semana",
-      "value": 32474000,
-      "change": -2224000,
-      "sign": "-2.224.000"
+      "value": 31507000,
+      "change": -2072000,
+      "sign": "-2.072.000"
     },
     {
       "time": "Un mes",
-      "value": 37805000,
-      "change": -7555000,
-      "sign": "-7.555.000"
+      "value": 36964000,
+      "change": -7529000,
+      "sign": "-7.529.000"
     },
     {
       "time": "Un año",
-      "value": 5350000,
-      "change": 24900000,
-      "sign": "+24.900.000"
+      "value": 6027000,
+      "change": 23408000,
+      "sign": "+23.408.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 5350000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 5535000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 5716000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 5870000,
-        "date": "23 ago 2025"
-      },
       {
         "value": 6027000,
         "date": "24 ago 2025"
@@ -2149,6 +2143,22 @@
       {
         "value": 30250000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 29946000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 29474000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 29311000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 29435000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
@@ -2156,36 +2166,36 @@
       "date": "23 ene 2026"
     },
     "min": {
-      "value": 5350000,
-      "date": "20 ago 2025"
+      "value": 6027000,
+      "date": "24 ago 2025"
     }
   },
   "next_match": {
     "18531": {
       "id": 18531,
       "id_team": 5,
-      "id_match": 37956,
-      "id_gameweek": 4043,
-      "id_home": 19,
-      "id_away": 5,
+      "id_match": 37152,
+      "id_gameweek": 3968,
+      "id_home": 5,
+      "id_away": 50,
       "date": {
-        "ts": 1787419800,
-        "text": "sáb 19:30",
+        "ts": 1787855400,
+        "text": "jue 20:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "19:30",
+          "date": "jue",
+          "time": "20:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Valencia",
-      "away": "Celta",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "home": "Celta",
+      "away": "Osasuna",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
@@ -2197,8 +2207,9 @@
   },
   "away": {
     "18531": {
-      "points": 0,
-      "avg": 0
+      "id": 18531,
+      "points": 7,
+      "avg": 7
     }
   },
   "owners": [],

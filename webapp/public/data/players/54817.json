@@ -3,15 +3,15 @@
     "id": 54817,
     "name": "Arda Güler",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 10,
+    "avg": 10,
     "status": null,
     "id_competition": 1,
     "injury": [],
-    "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/54817.png?version=20251228214306",
+    "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/54817.png?version=20260823083059",
     "isFavorite": 0,
-    "value": 40102000,
-    "previousValue": 40165000,
+    "value": 40563000,
+    "previousValue": 40339000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 40102000,
+      "floor": 40563000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 60153000,
+      "value": 60844500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 40102000,
+      "price": 40563000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 176,
       "weight": null
     },
-    "clausesRanking": 311
+    "clausesRanking": 135
   },
   "id": 54817,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -99,12 +99,15 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 10,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
     {
@@ -650,6 +653,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 10,
+      "avg": 10,
+      "id_team": 15,
+      "last_gameweek": 2,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+    },
+    {
       "season": "25/26",
       "points": 199,
       "avg": 6.0303,
@@ -677,47 +688,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 40165000,
-      "change": -63000,
-      "sign": -63
+      "value": 40339000,
+      "change": 224000,
+      "sign": 224
     },
     {
       "time": "Una semana",
-      "value": 40109000,
-      "change": -7000,
-      "sign": -7
+      "value": 39950000,
+      "change": 613000,
+      "sign": 613
     },
     {
       "time": "Un mes",
-      "value": 37145000,
-      "change": 2957000,
-      "sign": "+2.957.000"
+      "value": 38392000,
+      "change": 2171000,
+      "sign": "+2.171.000"
     },
     {
       "time": "Un año",
-      "value": 41479000,
-      "change": -1377000,
-      "sign": "-1.377.000"
+      "value": 42058000,
+      "change": -1495000,
+      "sign": "-1.495.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 41479000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 41652000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 41800000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 41953000,
-        "date": "23 ago 2025"
-      },
       {
         "value": 42058000,
         "date": "24 ago 2025"
@@ -2165,6 +2160,22 @@
       {
         "value": 40102000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 40028000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 39904000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 40339000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 40563000,
+        "date": "24 ago 2026"
       }
     ],
     "max": {
@@ -2180,28 +2191,28 @@
     "54817": {
       "id": 54817,
       "id_team": 15,
-      "id_match": 37950,
-      "id_gameweek": 4043,
-      "id_home": 8,
-      "id_away": 15,
+      "id_match": 37159,
+      "id_gameweek": 3968,
+      "id_home": 15,
+      "id_away": 16,
       "date": {
-        "ts": 1787427000,
-        "text": "sáb 21:30",
+        "ts": 1787770800,
+        "text": "mié 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "21:30",
+          "date": "mié",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
-      "away": "Real Madrid",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Real Madrid",
+      "away": "Real Sociedad",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   },
   "starter": false,
@@ -2213,8 +2224,9 @@
   },
   "away": {
     "54817": {
-      "points": 0,
-      "avg": 0
+      "id": 54817,
+      "points": 10,
+      "avg": 10
     }
   },
   "owners": [],
