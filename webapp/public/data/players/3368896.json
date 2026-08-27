@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3368896.png?version=20260823140726",
     "isFavorite": 0,
-    "value": 691000,
-    "previousValue": null,
+    "value": 436000,
+    "previousValue": 554000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 691000,
+      "floor": 666666.6666666666,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1036500,
+      "value": 1000000,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 691000,
-      "loanable": null
+      "id": 1714897622,
+      "isPublic": 1,
+      "price": 436000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 436000,
       "barter": [],
       "type": null,
       "days": null
@@ -156,7 +156,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -649,12 +649,31 @@
     }
   ],
   "points_history": [],
-  "values": [],
+  "values": [
+    {
+      "time": "Un día",
+      "value": 554000,
+      "change": -118000,
+      "sign": -118
+    }
+  ],
   "values_chart": {
     "points": [
       {
         "value": 691000,
         "date": "24 ago 2026"
+      },
+      {
+        "value": 661000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 554000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 436000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
@@ -662,8 +681,8 @@
       "date": "24 ago 2026"
     },
     "min": {
-      "value": 691000,
-      "date": "24 ago 2026"
+      "value": 436000,
+      "date": "27 ago 2026"
     }
   },
   "next_match": {
@@ -676,12 +695,12 @@
       "id_away": 1,
       "date": {
         "ts": 1787857200,
-        "text": "jue 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "jue",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

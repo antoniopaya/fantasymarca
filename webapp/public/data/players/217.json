@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/217.png?version=20251006015048",
     "isFavorite": 0,
-    "value": 501000,
-    "previousValue": 329000,
+    "value": 329000,
+    "previousValue": 429000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -49,15 +49,15 @@
       "percentage": 50
     },
     "market": {
-      "id": 1705296014,
-      "isPublic": 1,
-      "price": 501000,
-      "loanable": 0
+      "id": null,
+      "isPublic": null,
+      "price": 329000,
+      "loanable": null
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": 501000,
+      "input": null,
       "barter": [],
       "type": null,
       "days": null
@@ -72,7 +72,7 @@
       "height": 183,
       "weight": 79
     },
-    "clausesRanking": 419
+    "clausesRanking": 387
   },
   "id": 217,
   "player_extra": {
@@ -92,8 +92,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302512,
+        "id_player": 217,
+        "category": "injury",
+        "description": "Artroscopia",
+        "duration": "Baja esta jornada",
+        "since": "2026-07-30 18:16:48",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
     {
@@ -169,7 +178,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -690,43 +699,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 172000,
-      "sign": 172
+      "value": 429000,
+      "change": -100000,
+      "sign": -100
     },
     {
       "time": "Una semana",
-      "value": 329000,
-      "change": 172000,
-      "sign": 172
+      "value": 543000,
+      "change": -214000,
+      "sign": -214
     },
     {
       "time": "Un mes",
-      "value": 1189000,
-      "change": -688000,
-      "sign": -688
+      "value": 1552000,
+      "change": -1223000,
+      "sign": "-1.223.000"
     },
     {
       "time": "Un año",
-      "value": 8597000,
-      "change": -8096000,
-      "sign": "-8.096.000"
+      "value": 8924000,
+      "change": -8595000,
+      "sign": "-8.595.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 8597000,
-        "date": "24 ago 2025"
-      },
-      {
-        "value": 8660000,
-        "date": "25 ago 2025"
-      },
-      {
-        "value": 8760000,
-        "date": "26 ago 2025"
-      },
       {
         "value": 8924000,
         "date": "27 ago 2025"
@@ -2178,6 +2175,18 @@
       {
         "value": 501000,
         "date": "24 ago 2026"
+      },
+      {
+        "value": 392000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 429000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 329000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
@@ -2193,28 +2202,28 @@
     "217": {
       "id": 217,
       "id_team": 19,
-      "id_match": 37162,
-      "id_gameweek": 3968,
-      "id_home": 19,
-      "id_away": 4,
+      "id_match": 37959,
+      "id_gameweek": 4044,
+      "id_home": 6,
+      "id_away": 19,
       "date": {
-        "ts": 1787684400,
-        "text": "mar 21:00",
+        "ts": 1788111000,
+        "text": "dom 19:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mar",
-          "time": "21:00",
+          "date": "dom",
+          "time": "19:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Valencia",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,

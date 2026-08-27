@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/49296.png?version=20251004225250",
     "isFavorite": 0,
-    "value": 2055000,
-    "previousValue": 1944000,
+    "value": 2147000,
+    "previousValue": 2138000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2055000,
+      "floor": 2147000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3082500,
+      "value": 3220500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2055000,
+      "price": 2147000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 176,
       "weight": null
     },
-    "clausesRanking": 364
+    "clausesRanking": 220
   },
   "id": 49296,
   "player_extra": {
@@ -161,7 +161,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -690,43 +690,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1944000,
-      "change": 111000,
-      "sign": 111
+      "value": 2138000,
+      "change": 9000,
+      "sign": 9
     },
     {
       "time": "Una semana",
-      "value": 1406000,
-      "change": 649000,
-      "sign": 649
+      "value": 1556000,
+      "change": 591000,
+      "sign": 591
     },
     {
       "time": "Un mes",
-      "value": 586000,
-      "change": 1469000,
-      "sign": "+1.469.000"
+      "value": 704000,
+      "change": 1443000,
+      "sign": "+1.443.000"
     },
     {
       "time": "Un año",
-      "value": 2287000,
-      "change": -232000,
-      "sign": -232
+      "value": 2145000,
+      "change": 2000,
+      "sign": 2
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 2287000,
-        "date": "24 ago 2025"
-      },
-      {
-        "value": 2256000,
-        "date": "25 ago 2025"
-      },
-      {
-        "value": 2164000,
-        "date": "26 ago 2025"
-      },
       {
         "value": 2145000,
         "date": "27 ago 2025"
@@ -2178,6 +2166,18 @@
       {
         "value": 2055000,
         "date": "24 ago 2026"
+      },
+      {
+        "value": 2081000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 2138000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 2147000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
@@ -2199,16 +2199,16 @@
       "id_away": 14,
       "date": {
         "ts": 1788204600,
-        "text": "31 ago 21:30",
-        "format": "d MMM H:mm",
+        "text": "lun 21:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "31 ago",
+          "date": "lun",
           "time": "21:30",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Barcelona",
       "away": "Rayo Vallecano",

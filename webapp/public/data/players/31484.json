@@ -3,15 +3,15 @@
     "id": 31484,
     "name": "Eduardo Camavinga",
     "position": 3,
-    "points": 1,
+    "points": 2,
     "avg": 1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/31484.png?version=20251003184013",
     "isFavorite": 0,
-    "value": 10513000,
-    "previousValue": 10456000,
+    "value": 9892000,
+    "previousValue": 10163000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 10513000,
+      "floor": 9892000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 4,
-      "shield2WeeksSku": "shield_t4_2w",
-      "shield1MonthSku": "shield_t4_1m",
-      "value": 15769500,
+      "tier": 3,
+      "shield2WeeksSku": "shield_t3_2w",
+      "shield1MonthSku": "shield_t3_1m",
+      "value": 14838000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 10513000,
+      "price": 9892000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 145
+    "clausesRanking": 187
   },
   "id": 31484,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -84,12 +84,15 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
     {
@@ -158,7 +161,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -653,7 +656,7 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 1,
+      "points": 2,
       "avg": 1,
       "id_team": 15,
       "last_gameweek": 2,
@@ -687,43 +690,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 10456000,
-      "change": 57000,
-      "sign": 57
+      "value": 10163000,
+      "change": -271000,
+      "sign": -271
     },
     {
       "time": "Una semana",
-      "value": 9352000,
-      "change": 1161000,
-      "sign": "+1.161.000"
+      "value": 9846000,
+      "change": 46000,
+      "sign": 46
     },
     {
       "time": "Un mes",
-      "value": 5765000,
-      "change": 4748000,
-      "sign": "+4.748.000"
+      "value": 6188000,
+      "change": 3704000,
+      "sign": "+3.704.000"
     },
     {
       "time": "Un año",
-      "value": 14292000,
-      "change": -3779000,
-      "sign": "-3.779.000"
+      "value": 13310000,
+      "change": -3418000,
+      "sign": "-3.418.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 14292000,
-        "date": "24 ago 2025"
-      },
-      {
-        "value": 13896000,
-        "date": "25 ago 2025"
-      },
-      {
-        "value": 13442000,
-        "date": "26 ago 2025"
-      },
       {
         "value": 13310000,
         "date": "27 ago 2025"
@@ -2175,6 +2166,18 @@
       {
         "value": 10513000,
         "date": "24 ago 2026"
+      },
+      {
+        "value": 10402000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 10163000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 9892000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
@@ -2190,17 +2193,17 @@
     "31484": {
       "id": 31484,
       "id_team": 15,
-      "id_match": 37159,
-      "id_gameweek": 3968,
+      "id_match": 37963,
+      "id_gameweek": 4044,
       "id_home": 15,
-      "id_away": 16,
+      "id_away": 13,
       "date": {
-        "ts": 1787770800,
-        "text": "mié 21:00",
+        "ts": 1788102000,
+        "text": "dom 17:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "21:00",
+          "date": "dom",
+          "time": "17:00",
           "format": "EEE"
         }
       },
@@ -2208,17 +2211,18 @@
       "confirmed": null,
       "minute": null,
       "home": "Real Madrid",
-      "away": "Real Sociedad",
+      "away": "Málaga",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,
   "home": {
     "31484": {
-      "points": 0,
-      "avg": 0
+      "id": 31484,
+      "points": 1,
+      "avg": 1
     }
   },
   "away": {

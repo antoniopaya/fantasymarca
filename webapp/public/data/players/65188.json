@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65188.png?version=20250818161450",
     "isFavorite": 0,
-    "value": 1343000,
-    "previousValue": 1379000,
+    "value": 1016000,
+    "previousValue": 1098000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1343000,
+      "floor": 1016000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2014500,
+      "value": 1524000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1343000,
+      "price": 1016000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 179,
       "weight": null
     },
-    "clausesRanking": 289
+    "clausesRanking": 319
   },
   "id": 65188,
   "player_extra": {
@@ -92,8 +92,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302462,
+        "id_player": 65188,
+        "category": "injury",
+        "description": "Esguince de rodilla",
+        "duration": "Baja hasta Septiembre",
+        "since": "2026-07-27 10:17:04",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
     {
@@ -169,7 +178,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -674,43 +683,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1379000,
-      "change": -36000,
-      "sign": -36
+      "value": 1098000,
+      "change": -82000,
+      "sign": -82
     },
     {
       "time": "Una semana",
-      "value": 2086000,
-      "change": -743000,
-      "sign": -743
+      "value": 1786000,
+      "change": -770000,
+      "sign": -770
     },
     {
       "time": "Un mes",
-      "value": 5116000,
-      "change": -3773000,
-      "sign": "-3.773.000"
+      "value": 5278000,
+      "change": -4262000,
+      "sign": "-4.262.000"
     },
     {
       "time": "Un año",
-      "value": 562000,
-      "change": 781000,
-      "sign": 781
+      "value": 462000,
+      "change": 554000,
+      "sign": 554
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 562000,
-        "date": "24 ago 2025"
-      },
-      {
-        "value": 536000,
-        "date": "25 ago 2025"
-      },
-      {
-        "value": 478000,
-        "date": "26 ago 2025"
-      },
       {
         "value": 462000,
         "date": "27 ago 2025"
@@ -1766,6 +1763,18 @@
       {
         "value": 1343000,
         "date": "24 ago 2026"
+      },
+      {
+        "value": 1216000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 1098000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 1016000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
@@ -1781,17 +1790,17 @@
     "65188": {
       "id": 65188,
       "id_team": 15,
-      "id_match": 37159,
-      "id_gameweek": 3968,
+      "id_match": 37963,
+      "id_gameweek": 4044,
       "id_home": 15,
-      "id_away": 16,
+      "id_away": 13,
       "date": {
-        "ts": 1787770800,
-        "text": "mié 21:00",
+        "ts": 1788102000,
+        "text": "dom 17:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "21:00",
+          "date": "dom",
+          "time": "17:00",
           "format": "EEE"
         }
       },
@@ -1799,10 +1808,10 @@
       "confirmed": null,
       "minute": null,
       "home": "Real Madrid",
-      "away": "Real Sociedad",
+      "away": "Málaga",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,

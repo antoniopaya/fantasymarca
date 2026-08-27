@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/55439.png?version=20260805081935",
     "isFavorite": 0,
-    "value": 3406000,
-    "previousValue": 3365000,
+    "value": 3212000,
+    "previousValue": 3299000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3406000,
+      "floor": 3212000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 5109000,
+      "value": 4818000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3406000,
+      "price": 3212000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 181,
       "weight": null
     },
-    "clausesRanking": 108
+    "clausesRanking": 149
   },
   "id": 55439,
   "player_extra": {
@@ -156,7 +156,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -669,37 +669,25 @@
   "values": [
     {
       "time": "Un día",
-      "value": 3365000,
-      "change": 41000,
-      "sign": 41
+      "value": 3299000,
+      "change": -87000,
+      "sign": -87
     },
     {
       "time": "Una semana",
-      "value": 2484000,
-      "change": 922000,
-      "sign": 922
+      "value": 2896000,
+      "change": 316000,
+      "sign": 316
     },
     {
       "time": "Un año",
-      "value": 353000,
-      "change": 3053000,
-      "sign": "+3.053.000"
+      "value": 329000,
+      "change": 2883000,
+      "sign": "+2.883.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 353000,
-        "date": "24 ago 2025"
-      },
-      {
-        "value": 441000,
-        "date": "25 ago 2025"
-      },
-      {
-        "value": 377000,
-        "date": "26 ago 2025"
-      },
       {
         "value": 329000,
         "date": "27 ago 2025"
@@ -811,11 +799,23 @@
       {
         "value": 3406000,
         "date": "24 ago 2026"
+      },
+      {
+        "value": 3411000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 3299000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 3212000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
-      "value": 3406000,
-      "date": "24 ago 2026"
+      "value": 3411000,
+      "date": "25 ago 2026"
     },
     "min": {
       "value": 329000,
@@ -832,12 +832,12 @@
       "id_away": 50,
       "date": {
         "ts": 1787855400,
-        "text": "jue 20:30",
-        "format": "EEE H:mm",
+        "text": "Hoy 20:30",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "jue",
+          "date": "Hoy",
           "time": "20:30",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
