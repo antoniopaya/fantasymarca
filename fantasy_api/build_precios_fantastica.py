@@ -85,36 +85,55 @@ SURNAME_ABBREVIATIONS = {
 # para marcar explícitamente "sin contrapartida en el catálogo, no forzar match".
 # Revisado a mano para el Excel "Listado Jugadores 26-27" (ver histórico del repo).
 MANUAL_OVERRIDES = {
-    ("Racing Santander", "Portero", "Laro Gómez"): None,
-    ("Villarreal", "Portero", "Péter Gulácsi"): None,
-    ("Celta", "Defensa", "Abdoulaye Faye"): None,
-    ("Racing Santander", "Defensa", "P. Felipe"): None,
-    ("Racing Santander", "Defensa", "P. Ramón"): None,
-    ("Español", "Defensa", "Roger Hinojo"): None,
-    ("Español", "Defensa", "Unai Núñez"): None,
-    ("Málaga", "Defensa", "J. Salinas"): None,
-    ("Getafe", "Defensa", "Sazonov"): None,
-    ("Elche", "Medio", "J. Morcillo"): None,
-    ("Elche", "Delantero", "Fer Niño"): None,
-    ("Elche", "Delantero", "U. Konare"): None,
-    ("Osasuna", "Delantero", "Dubasin"): None,
-    ("Rayo Vallecano", "Defensa", "Kumbulla"): None,
-    ("Sevilla", "Medio", "Miguel Sierra"): None,
+    # Estos 25 estaban a `None` (sin contrapartida) porque en su momento el
+    # catálogo de fantasy.marca.com todavía no había dado de alta a estos
+    # jugadores; main.py ya los tiene ahora y el emparejamiento automático
+    # los encuentra con score perfecto, así que se fija el id explícito en
+    # vez de dejarlo a merced de que la próxima regeneración del catálogo
+    # no cambie el orden de los candidatos.
+    ("Racing Santander", "Portero", "Laro Gómez"): 71638,
+    ("Villarreal", "Portero", "Péter Gulácsi"): 71649,
+    ("Celta", "Defensa", "Abdoulaye Faye"): 71642,
+    ("Racing Santander", "Defensa", "P. Felipe"): 71791,
+    ("Racing Santander", "Defensa", "P. Ramón"): 60858,
+    ("Español", "Defensa", "Roger Hinojo"): 71623,
+    ("Español", "Defensa", "Unai Núñez"): 7784,
+    ("Málaga", "Defensa", "J. Salinas"): 64038,
+    ("Getafe", "Defensa", "Sazonov"): 71790,
+    ("Elche", "Medio", "J. Morcillo"): 70150,
+    ("Elche", "Delantero", "Fer Niño"): 20449,
+    ("Elche", "Delantero", "U. Konare"): 71794,
+    ("Osasuna", "Delantero", "Dubasin"): 48210,
+    ("Rayo Vallecano", "Defensa", "Kumbulla"): 59532,
+    ("Sevilla", "Medio", "Miguel Sierra"): 71640,
+    ("Levante", "Portero", "Mathew Ryan"): 28612,
+    ("Barcelona", "Medio", "Jesse Bisiwu"): 71622,
+    ("Athletic", "Medio", "Generabarrena"): 71639,  # "Generabarrena" = Beñat Gerenabarrena, único candidato con score alto
+    ("Celta", "Portero", "A. Bayindir"): 78393,  # "A. Bayindir" = Altay Bayındır (la ı turca no afecta al id)
+    ("Racing Santander", "Delantero", "Yassir Zabiri"): 71616,
+    ("Celta", "Medio", "Hugo Glez."): 55439,
+    ("Dep. Coruña", "Defensa", "Angeliño"): 71795,
+    ("Sevilla", "Portero", "Fran Glez."): 62910,
+    ("Levante", "Delantero", "Yanis Musuayi"): 71633,
+    ("Sevilla", "Defensa", "Julio Díaz"): 69744,
+    # Estos, en cambio, se revisaron a mano y de verdad no tienen contrapartida
+    # clara en el catálogo actual (o el mejor candidato tiene un score demasiado
+    # bajo para forzarlo) — se dejan fuera a propósito.
     ("Sevilla", "Medio", "P. Mercado"): None,
-    ("Levante", "Portero", "Mathew Ryan"): None,
-    ("Barcelona", "Medio", "Jesse Bisiwu"): None,
-    ("Athletic", "Medio", "Generabarrena"): None,
-    ("Celta", "Portero", "A. Bayindir"): None,
-    ("Racing Santander", "Delantero", "Yassir Zabiri"): None,
-    ("Celta", "Medio", "Hugo Glez."): None,
-    ("Dep. Coruña", "Defensa", "Angeliño"): None,
-    ("Sevilla", "Portero", "Fran Glez."): None,
-    ("Levante", "Delantero", "Yanis Musuayi"): None,
-    ("Sevilla", "Defensa", "Julio Díaz"): None,
     # Error de columna en el propio Excel: esta fila cae bajo el bloque de
     # "R. Madrid" pero el nombre solo existe en el catálogo como delantero
     # del Levante (id 63780), que si no se queda sin precio.
     ("R. Madrid", "Delantero", "Carlos Espí"): 63780,
+}
+
+# Precio dado a mano por el usuario para jugadores que ni siquiera aparecen
+# en el Excel bajo ningún nombre razonable (alta demasiado reciente para que
+# la liga los haya incluido en el reparto todavía). id de fantasy.marca.com
+# -> precio en millones de euros. Se aplica después del emparejamiento con el
+# Excel, así que sobrevive a que un futuro cambio en el Excel no los toque.
+EXTRA_PRICES: dict[int, float] = {
+    616: 18,  # Rodri Hernández (Barcelona)
+    28774: 14,  # Julen Agirrezabala (Racing de Santander)
 }
 
 
@@ -190,6 +209,20 @@ def parse_excel(path: str) -> list[dict]:
     return records
 
 
+
+# Sin este mínimo, un equipo con más candidatos del catálogo que filas en el
+# Excel para ese hueco (típico cuando llega un fichaje nuevo) acaba
+# emparejando lo que sea con lo que sea aunque el score sea pésimo: se
+# comprobó en vivo y estaba poniendo el precio de Nahuel Molina a Dani
+# Martínez, el de Ronald Araújo a Álvaro Cortés, etc. (todos con score
+# 0.20-0.50). El valor 0.7 se calibró a mano contra esos falsos positivos
+# reales y contra aciertos legítimos que puntúan bajo por cómo compara el
+# algoritmo apodos/abreviaturas poco habituales ("Vinicius Jr." vs
+# "Vinícius Júnior" = 0.75, "Alex Balde" vs "Alejandro Balde" = 0.83):
+# separa limpiamente ambos grupos.
+MIN_AUTO_MATCH_SCORE = 0.7
+
+
 def match_records(records: list[dict], players: list[dict]) -> tuple[dict, list[dict]]:
     players_by_group = {}
     for p in players:
@@ -236,6 +269,8 @@ def match_records(records: list[dict], players: list[dict]) -> tuple[dict, list[
 
         claimed_records, claimed_players = set(), set()
         for score, idx, player_id in pairs:
+            if score < MIN_AUTO_MATCH_SCORE:
+                break  # pairs va de mayor a menor score: a partir de aquí todo es peor todavía
             if idx in claimed_records or player_id in claimed_players:
                 continue
             claimed_records.add(idx)
@@ -260,6 +295,15 @@ def main() -> None:
         players = json.load(f)
 
     price_by_id, unmatched = match_records(records, players)
+
+    for player_id, price in EXTRA_PRICES.items():
+        if player_id in price_by_id:
+            print(
+                f"Aviso: EXTRA_PRICES pisa un precio ya asignado por el Excel para el id {player_id} "
+                f"({price_by_id[player_id]} -> {price})",
+                file=sys.stderr,
+            )
+        price_by_id[player_id] = price
 
     output = {str(pid): round_price(price) for pid, price in sorted(price_by_id.items())}
 
