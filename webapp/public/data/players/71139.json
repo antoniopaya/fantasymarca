@@ -3,15 +3,15 @@
     "id": 71139,
     "name": "Bright Ede",
     "position": 2,
-    "points": 5,
-    "avg": 5,
+    "points": 7,
+    "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71139.png?version=20260707174927",
     "isFavorite": 0,
-    "value": 3165000,
-    "previousValue": 2910000,
+    "value": 4622000,
+    "previousValue": 4495000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3165000,
+      "floor": 4622000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 4747500,
+      "value": 6933000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3165000,
+      "price": 4622000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 193,
       "weight": null
     },
-    "clausesRanking": 24
+    "clausesRanking": 53
   },
   "id": 71139,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -99,12 +99,14 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
     {
@@ -156,7 +158,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -651,31 +653,31 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 5,
-      "avg": 5,
+      "points": 7,
+      "avg": 3.5,
       "id_team": 6,
-      "last_gameweek": 1,
+      "last_gameweek": 2,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 2910000,
-      "change": 255000,
-      "sign": 255
+      "value": 4495000,
+      "change": 127000,
+      "sign": 127
     },
     {
       "time": "Una semana",
-      "value": 1870000,
-      "change": 1295000,
-      "sign": "+1.295.000"
+      "value": 3165000,
+      "change": 1457000,
+      "sign": "+1.457.000"
     },
     {
       "time": "Un mes",
-      "value": 472000,
-      "change": 2693000,
-      "sign": "+2.693.000"
+      "value": 358000,
+      "change": 4264000,
+      "sign": "+4.264.000"
     }
   ],
   "values_chart": {
@@ -855,11 +857,39 @@
       {
         "value": 3165000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 3440000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 3730000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 4049000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 4212000,
+        "date": "24 ago 2026"
+      },
+      {
+        "value": 4369000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 4495000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 4622000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
-      "value": 3165000,
-      "date": "20 ago 2026"
+      "value": 4622000,
+      "date": "27 ago 2026"
     },
     "min": {
       "value": 329000,
@@ -870,28 +900,28 @@
     "71139": {
       "id": 71139,
       "id_team": 6,
-      "id_match": 37952,
-      "id_gameweek": 4043,
-      "id_home": 13,
-      "id_away": 6,
+      "id_match": 37959,
+      "id_gameweek": 4044,
+      "id_home": 6,
+      "id_away": 19,
       "date": {
-        "ts": 1787599800,
-        "text": "lun 21:30",
+        "ts": 1788111000,
+        "text": "dom 19:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "lun",
-          "time": "21:30",
+          "date": "dom",
+          "time": "19:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Deportivo da Coruña",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Valencia",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
@@ -904,8 +934,9 @@
   },
   "away": {
     "71139": {
-      "points": 0,
-      "avg": 0
+      "id": 71139,
+      "points": 2,
+      "avg": 2
     }
   },
   "owners": [],

@@ -3,15 +3,15 @@
     "id": 3060,
     "name": "Mariano Díaz",
     "position": 4,
-    "points": 17,
-    "avg": 17,
+    "points": 25,
+    "avg": 12.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3060.png?version=20231221112719",
     "isFavorite": 0,
-    "value": 3533000,
-    "previousValue": 3224000,
+    "value": 5398000,
+    "previousValue": 5150000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3533000,
+      "floor": 5398000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 5299500,
+      "value": 8097000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3533000,
+      "price": 5398000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 180,
       "weight": 79
     },
-    "clausesRanking": 3
+    "clausesRanking": 2
   },
   "id": 3060,
   "player_extra": {
-    "matches": 1,
-    "goals": 1,
+    "matches": 2,
+    "goals": 2,
     "cards": 1
   },
   "points": [
@@ -105,12 +105,15 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 8,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
     {
@@ -162,7 +165,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -657,10 +660,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 17,
-      "avg": 17,
+      "points": 25,
+      "avg": 12.5,
       "id_team": 48,
-      "last_gameweek": 1,
+      "last_gameweek": 2,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
     {
@@ -683,59 +686,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 3224000,
-      "change": 309000,
-      "sign": 309
+      "value": 5150000,
+      "change": 248000,
+      "sign": 248
     },
     {
       "time": "Una semana",
-      "value": 2173000,
-      "change": 1360000,
-      "sign": "+1.360.000"
+      "value": 3533000,
+      "change": 1865000,
+      "sign": "+1.865.000"
     },
     {
       "time": "Un mes",
       "value": 329000,
-      "change": 3204000,
-      "sign": "+3.204.000"
+      "change": 5069000,
+      "sign": "+5.069.000"
     },
     {
       "time": "Un año",
-      "value": 3225000,
-      "change": 308000,
-      "sign": 308
+      "value": 4415000,
+      "change": 983000,
+      "sign": 983
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 3225000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 3481000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 3751000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 3980000,
-        "date": "23 ago 2025"
-      },
-      {
-        "value": 4223000,
-        "date": "24 ago 2025"
-      },
-      {
-        "value": 4283000,
-        "date": "25 ago 2025"
-      },
-      {
-        "value": 4342000,
-        "date": "26 ago 2025"
-      },
       {
         "value": 4415000,
         "date": "27 ago 2025"
@@ -2171,11 +2146,39 @@
       {
         "value": 3533000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 3879000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 4260000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 4466000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 4683000,
+        "date": "24 ago 2026"
+      },
+      {
+        "value": 4910000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 5150000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 5398000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
-      "value": 4605000,
-      "date": "30 ago 2025"
+      "value": 5398000,
+      "date": "27 ago 2026"
     },
     "min": {
       "value": 329000,
@@ -2186,28 +2189,28 @@
     "3060": {
       "id": 3060,
       "id_team": 48,
-      "id_match": 37954,
-      "id_gameweek": 4043,
-      "id_home": 14,
-      "id_away": 48,
+      "id_match": 37958,
+      "id_gameweek": 4044,
+      "id_home": 48,
+      "id_away": 20,
       "date": {
-        "ts": 1787252400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1787945400,
+        "text": "vie 21:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "vie",
+          "time": "21:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Alavés",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "home": "Alavés",
+      "away": "Villarreal",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
@@ -2220,8 +2223,9 @@
   },
   "away": {
     "3060": {
-      "points": 0,
-      "avg": 0
+      "id": 3060,
+      "points": 8,
+      "avg": 8
     }
   },
   "owners": [],

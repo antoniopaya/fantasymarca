@@ -3,15 +3,15 @@
     "id": 59499,
     "name": "Natan Souza",
     "position": 2,
-    "points": 0,
-    "avg": 0,
+    "points": 8,
+    "avg": 8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59499.png?version=20240815182347",
     "isFavorite": 0,
-    "value": 22338000,
-    "previousValue": 22552000,
+    "value": 23001000,
+    "previousValue": 22843000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 22338000,
+      "floor": 23001000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 33507000,
+      "value": 34501500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 22338000,
+      "price": 23001000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 188,
       "weight": null
     },
-    "clausesRanking": 371
+    "clausesRanking": 193
   },
   "id": 59499,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -89,7 +89,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
     {
@@ -99,12 +99,14 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 8,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
     {
@@ -156,7 +158,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -650,6 +652,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 8,
+      "avg": 8,
+      "id_team": 4,
+      "last_gameweek": 2,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+    },
+    {
       "season": "25/26",
       "points": 175,
       "avg": 5.303,
@@ -669,59 +679,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 22552000,
-      "change": -214000,
-      "sign": -214
+      "value": 22843000,
+      "change": 158000,
+      "sign": 158
     },
     {
       "time": "Una semana",
-      "value": 22602000,
-      "change": -264000,
-      "sign": -264
+      "value": 22338000,
+      "change": 663000,
+      "sign": 663
     },
     {
       "time": "Un mes",
-      "value": 20081000,
-      "change": 2257000,
-      "sign": "+2.257.000"
+      "value": 20695000,
+      "change": 2306000,
+      "sign": "+2.306.000"
     },
     {
       "time": "Un año",
-      "value": 11995000,
-      "change": 10343000,
-      "sign": "+10.343.000"
+      "value": 14845000,
+      "change": 8156000,
+      "sign": "+8.156.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 11995000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 12359000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 12748000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 13112000,
-        "date": "23 ago 2025"
-      },
-      {
-        "value": 13513000,
-        "date": "24 ago 2025"
-      },
-      {
-        "value": 13930000,
-        "date": "25 ago 2025"
-      },
-      {
-        "value": 14368000,
-        "date": "26 ago 2025"
-      },
       {
         "value": 14845000,
         "date": "27 ago 2025"
@@ -2157,6 +2139,34 @@
       {
         "value": 22338000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 22148000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 22061000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 22141000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 22339000,
+        "date": "24 ago 2026"
+      },
+      {
+        "value": 22575000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 22843000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 23001000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
@@ -2164,43 +2174,44 @@
       "date": "27 dic 2025"
     },
     "min": {
-      "value": 11995000,
-      "date": "20 ago 2025"
+      "value": 14272000,
+      "date": "24 sept 2025"
     }
   },
   "next_match": {
     "59499": {
       "id": 59499,
       "id_team": 4,
-      "id_match": 37955,
-      "id_gameweek": 4043,
-      "id_home": 4,
-      "id_away": 16,
+      "id_match": 37961,
+      "id_gameweek": 4044,
+      "id_home": 12,
+      "id_away": 4,
       "date": {
-        "ts": 1787338800,
-        "text": "vie 21:00",
+        "ts": 1788015600,
+        "text": "sáb 17:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "vie",
-          "time": "21:00",
+          "date": "sáb",
+          "time": "17:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Betis",
-      "away": "Real Sociedad",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "home": "Levante",
+      "away": "Betis",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "59499": {
-      "points": 0,
-      "avg": 0
+      "id": 59499,
+      "points": 8,
+      "avg": 8
     }
   },
   "away": {

@@ -5,17 +5,17 @@
     "position": 2,
     "points": 0,
     "avg": 0,
-    "status": "doubt",
+    "status": "injury",
     "id_competition": 1,
     "injury": {
-      "category": "doubt",
+      "category": "injury",
       "description": "Lesión en el aductor",
-      "duration": "Duda esta jornada"
+      "duration": "Baja esta jornada"
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/27852.png?version=20250204170236",
     "isFavorite": 0,
-    "value": 14054000,
-    "previousValue": 14467000,
+    "value": 11028000,
+    "previousValue": 11328000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 14054000,
+      "floor": 11028000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 21081000,
+      "value": 16542000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 14054000,
+      "price": 11028000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 337
   },
   "id": 27852,
   "player_extra": {
@@ -107,8 +107,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302676,
+        "id_player": 27852,
+        "category": "injury",
+        "description": "Lesión en el aductor",
+        "duration": "Baja esta jornada",
+        "since": "2026-08-10 21:34:00",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
     {
@@ -160,7 +169,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -681,59 +690,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 14467000,
-      "change": -413000,
-      "sign": -413
+      "value": 11328000,
+      "change": -300000,
+      "sign": -300
     },
     {
       "time": "Una semana",
-      "value": 16126000,
-      "change": -2072000,
-      "sign": "-2.072.000"
+      "value": 14054000,
+      "change": -3026000,
+      "sign": "-3.026.000"
     },
     {
       "time": "Un mes",
-      "value": 7828000,
-      "change": 6226000,
-      "sign": "+6.226.000"
+      "value": 9541000,
+      "change": 1487000,
+      "sign": "+1.487.000"
     },
     {
       "time": "Un año",
-      "value": 36437000,
-      "change": -22383000,
-      "sign": "-22.383.000"
+      "value": 35182000,
+      "change": -24154000,
+      "sign": "-24.154.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 36437000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 36289000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 36103000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 35926000,
-        "date": "23 ago 2025"
-      },
-      {
-        "value": 35805000,
-        "date": "24 ago 2025"
-      },
-      {
-        "value": 35634000,
-        "date": "25 ago 2025"
-      },
-      {
-        "value": 35406000,
-        "date": "26 ago 2025"
-      },
       {
         "value": 35182000,
         "date": "27 ago 2025"
@@ -2169,11 +2150,39 @@
       {
         "value": 14054000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 13789000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 13364000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 12731000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 12189000,
+        "date": "24 ago 2026"
+      },
+      {
+        "value": 11648000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 11328000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 11028000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
-      "value": 36437000,
-      "date": "20 ago 2025"
+      "value": 35182000,
+      "date": "27 ago 2025"
     },
     "min": {
       "value": 5354000,
@@ -2184,28 +2193,28 @@
     "27852": {
       "id": 27852,
       "id_team": 1,
-      "id_match": 37947,
-      "id_gameweek": 4043,
-      "id_home": 1,
-      "id_away": 17,
+      "id_match": 37158,
+      "id_gameweek": 3968,
+      "id_home": 3,
+      "id_away": 1,
       "date": {
-        "ts": 1787410800,
-        "text": "sáb 17:00",
-        "format": "EEE H:mm",
+        "ts": 1787857200,
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "17:00",
-          "format": "EEE"
+          "date": "Hoy",
+          "time": "21:00",
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Sevilla",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Barcelona",
+      "away": "Athletic Club",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,

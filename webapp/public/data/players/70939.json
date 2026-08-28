@@ -3,19 +3,19 @@
     "id": 70939,
     "name": "Yeremay Hernández",
     "position": 4,
-    "points": 0,
-    "avg": 0,
-    "status": "injury",
+    "points": 2,
+    "avg": 2,
+    "status": "other",
     "id_competition": 1,
     "injury": {
-      "category": "injury",
-      "description": "Pubalgia",
+      "category": "other",
+      "description": "No convocado",
       "duration": "Baja esta jornada"
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70939.png?version=20260621102855",
     "isFavorite": 0,
-    "value": 31680000,
-    "previousValue": 32210000,
+    "value": 28618000,
+    "previousValue": 29012000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 31680000,
+      "floor": 28618000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 47520000,
+      "value": 42927000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 31680000,
+      "price": 28618000,
       "loanable": null
     },
     "bid": {
@@ -72,11 +72,11 @@
       "height": 169,
       "weight": null
     },
-    "clausesRanking": 287
+    "clausesRanking": 289
   },
   "id": 70939,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -92,16 +92,7 @@
         "isLive": false
       },
       "events": null,
-      "injury": {
-        "id": 302502,
-        "id_player": 70939,
-        "category": "injury",
-        "description": "Pubalgia",
-        "duration": "Baja esta jornada",
-        "since": "2026-07-30 18:11:22",
-        "until": null,
-        "status": "Lesionado"
-      },
+      "injury": null,
       "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -112,12 +103,14 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
     {
@@ -169,7 +162,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -661,25 +654,34 @@
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   ],
-  "points_history": [],
+  "points_history": [
+    {
+      "season": "26/27",
+      "points": 2,
+      "avg": 2,
+      "id_team": 6,
+      "last_gameweek": 2,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+    }
+  ],
   "values": [
     {
       "time": "Un día",
-      "value": 32210000,
-      "change": -530000,
-      "sign": -530
+      "value": 29012000,
+      "change": -394000,
+      "sign": -394
     },
     {
       "time": "Una semana",
-      "value": 33119000,
-      "change": -1439000,
-      "sign": "-1.439.000"
+      "value": 31680000,
+      "change": -3062000,
+      "sign": "-3.062.000"
     },
     {
       "time": "Un mes",
-      "value": 23790000,
-      "change": 7890000,
-      "sign": "+7.890.000"
+      "value": 26263000,
+      "change": 2355000,
+      "sign": "+2.355.000"
     }
   ],
   "values_chart": {
@@ -923,6 +925,34 @@
       {
         "value": 31680000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 31132000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 30569000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 30049000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 29581000,
+        "date": "24 ago 2026"
+      },
+      {
+        "value": 29305000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 29012000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 28618000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
@@ -938,28 +968,28 @@
     "70939": {
       "id": 70939,
       "id_team": 6,
-      "id_match": 37952,
-      "id_gameweek": 4043,
-      "id_home": 13,
-      "id_away": 6,
+      "id_match": 37959,
+      "id_gameweek": 4044,
+      "id_home": 6,
+      "id_away": 19,
       "date": {
-        "ts": 1787599800,
-        "text": "lun 21:30",
+        "ts": 1788111000,
+        "text": "dom 19:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "lun",
-          "time": "21:30",
+          "date": "dom",
+          "time": "19:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Deportivo da Coruña",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Valencia",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
@@ -971,8 +1001,9 @@
   },
   "away": {
     "70939": {
-      "points": 0,
-      "avg": 0
+      "id": 70939,
+      "points": 2,
+      "avg": 2
     }
   },
   "owners": [],

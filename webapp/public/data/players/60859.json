@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60859.png?version=20250107092359",
     "isFavorite": 0,
-    "value": 393000,
-    "previousValue": 377000,
+    "value": 329000,
+    "previousValue": 352000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -49,15 +49,15 @@
       "percentage": 50
     },
     "market": {
-      "id": 1692541361,
-      "isPublic": 1,
-      "price": 393000,
-      "loanable": 0
+      "id": null,
+      "isPublic": null,
+      "price": 329000,
+      "loanable": null
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": 393000,
+      "input": null,
       "barter": [],
       "type": null,
       "days": null
@@ -66,8 +66,8 @@
     "bio": {
       "age": 26,
       "country": {
-        "flag": "🇦🇷",
-        "country": "Argentina"
+        "flag": "🇲🇾",
+        "country": "Malasia"
       },
       "height": 191,
       "weight": null
@@ -116,8 +116,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 293850,
+        "id_player": 60859,
+        "category": "other",
+        "description": "Sanción disciplinaria",
+        "duration": "Baja hasta Octubre",
+        "since": "2026-03-05 15:56:41",
+        "until": null,
+        "status": "No convocado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
     {
@@ -169,7 +178,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -682,59 +691,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 377000,
-      "change": 16000,
-      "sign": 16
+      "value": 352000,
+      "change": -23000,
+      "sign": -23
     },
     {
       "time": "Una semana",
-      "value": 380000,
-      "change": 13000,
-      "sign": 13
+      "value": 393000,
+      "change": -64000,
+      "sign": -64
     },
     {
       "time": "Un mes",
-      "value": 496000,
-      "change": -103000,
-      "sign": -103
+      "value": 329000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Un año",
-      "value": 6553000,
-      "change": -6160000,
-      "sign": "-6.160.000"
+      "value": 7857000,
+      "change": -7528000,
+      "sign": "-7.528.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 6553000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 6757000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 6964000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 7116000,
-        "date": "23 ago 2025"
-      },
-      {
-        "value": 7289000,
-        "date": "24 ago 2025"
-      },
-      {
-        "value": 7441000,
-        "date": "25 ago 2025"
-      },
-      {
-        "value": 7632000,
-        "date": "26 ago 2025"
-      },
       {
         "value": 7857000,
         "date": "27 ago 2025"
@@ -2170,6 +2151,34 @@
       {
         "value": 393000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 437000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 329000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 373000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 329000,
+        "date": "24 ago 2026"
+      },
+      {
+        "value": 453000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 352000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 329000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
@@ -2185,28 +2194,28 @@
     "60859": {
       "id": 60859,
       "id_team": 48,
-      "id_match": 37954,
-      "id_gameweek": 4043,
-      "id_home": 14,
-      "id_away": 48,
+      "id_match": 37958,
+      "id_gameweek": 4044,
+      "id_home": 48,
+      "id_away": 20,
       "date": {
-        "ts": 1787252400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1787945400,
+        "text": "vie 21:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "vie",
+          "time": "21:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Alavés",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "home": "Alavés",
+      "away": "Villarreal",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,

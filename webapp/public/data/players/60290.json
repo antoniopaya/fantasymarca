@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60290.png?version=20251003184102",
     "isFavorite": 0,
-    "value": 1000000,
-    "previousValue": 1067000,
+    "value": 683000,
+    "previousValue": 685000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1000000,
+      "floor": 683000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1500000,
+      "value": 1024500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1000000,
+      "price": 683000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 293
+    "clausesRanking": 304
   },
   "id": 60290,
   "player_extra": {
@@ -92,8 +92,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302508,
+        "id_player": 60290,
+        "category": "injury",
+        "description": "Lesión en el recto femoral",
+        "duration": "Baja hasta mediados de Septiembre",
+        "since": "2026-07-30 18:14:48",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
     {
@@ -107,8 +116,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302508,
+        "id_player": 60290,
+        "category": "injury",
+        "description": "Lesión en el recto femoral",
+        "duration": "Baja hasta mediados de Septiembre",
+        "since": "2026-07-30 18:14:48",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
     {
@@ -160,7 +178,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -673,59 +691,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1067000,
-      "change": -67000,
-      "sign": -67
+      "value": 685000,
+      "change": -2000,
+      "sign": -2
     },
     {
       "time": "Una semana",
-      "value": 1665000,
-      "change": -665000,
-      "sign": -665
+      "value": 1000000,
+      "change": -317000,
+      "sign": -317
     },
     {
       "time": "Un mes",
-      "value": 4051000,
-      "change": -3051000,
-      "sign": "-3.051.000"
+      "value": 3962000,
+      "change": -3279000,
+      "sign": "-3.279.000"
     },
     {
       "time": "Un año",
-      "value": 20233000,
-      "change": -19233000,
-      "sign": "-19.233.000"
+      "value": 15350000,
+      "change": -14667000,
+      "sign": "-14.667.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 20233000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 19835000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 19174000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 18299000,
-        "date": "23 ago 2025"
-      },
-      {
-        "value": 17615000,
-        "date": "24 ago 2025"
-      },
-      {
-        "value": 16769000,
-        "date": "25 ago 2025"
-      },
-      {
-        "value": 16023000,
-        "date": "26 ago 2025"
-      },
       {
         "value": 15350000,
         "date": "27 ago 2025"
@@ -2161,6 +2151,34 @@
       {
         "value": 1000000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 936000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 855000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 782000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 711000,
+        "date": "24 ago 2026"
+      },
+      {
+        "value": 690000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 685000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 683000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
@@ -2168,36 +2186,36 @@
       "date": "24 feb 2026"
     },
     "min": {
-      "value": 1000000,
-      "date": "20 ago 2026"
+      "value": 683000,
+      "date": "27 ago 2026"
     }
   },
   "next_match": {
     "60290": {
       "id": 60290,
       "id_team": 15,
-      "id_match": 37950,
-      "id_gameweek": 4043,
-      "id_home": 8,
-      "id_away": 15,
+      "id_match": 37963,
+      "id_gameweek": 4044,
+      "id_home": 15,
+      "id_away": 13,
       "date": {
-        "ts": 1787427000,
-        "text": "sáb 21:30",
+        "ts": 1788102000,
+        "text": "dom 17:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "21:30",
+          "date": "dom",
+          "time": "17:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
-      "away": "Real Madrid",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Real Madrid",
+      "away": "Málaga",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,

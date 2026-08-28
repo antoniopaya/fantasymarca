@@ -3,15 +3,15 @@
     "id": 364,
     "name": "Sergio Canales",
     "position": 3,
-    "points": 5,
+    "points": 10,
     "avg": 5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/364.png?version=20260622183248",
     "isFavorite": 0,
-    "value": 21062000,
-    "previousValue": 20733000,
+    "value": 23435000,
+    "previousValue": 23098000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 21062000,
+      "floor": 23435000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 31593000,
+      "value": 35152500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 21062000,
+      "price": 23435000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 176,
       "weight": 65
     },
-    "clausesRanking": 34
+    "clausesRanking": 118
   },
   "id": 364,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -101,12 +101,14 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
     {
@@ -158,7 +160,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -653,31 +655,31 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 5,
+      "points": 10,
       "avg": 5,
       "id_team": 1490,
-      "last_gameweek": 1,
+      "last_gameweek": 2,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 20733000,
-      "change": 329000,
-      "sign": 329
+      "value": 23098000,
+      "change": 337000,
+      "sign": 337
     },
     {
       "time": "Una semana",
-      "value": 16594000,
-      "change": 4468000,
-      "sign": "+4.468.000"
+      "value": 21062000,
+      "change": 2373000,
+      "sign": "+2.373.000"
     },
     {
       "time": "Un mes",
-      "value": 6646000,
-      "change": 14416000,
-      "sign": "+14.416.000"
+      "value": 8295000,
+      "change": 15140000,
+      "sign": "+15.140.000"
     }
   ],
   "values_chart": {
@@ -921,11 +923,39 @@
       {
         "value": 21062000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 21422000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 21793000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 22157000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 22504000,
+        "date": "24 ago 2026"
+      },
+      {
+        "value": 22805000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 23098000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 23435000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
-      "value": 21062000,
-      "date": "20 ago 2026"
+      "value": 23435000,
+      "date": "27 ago 2026"
     },
     "min": {
       "value": 4000000,
@@ -936,28 +966,28 @@
     "364": {
       "id": 364,
       "id_team": 1490,
-      "id_match": 37951,
-      "id_gameweek": 4043,
-      "id_home": 9,
-      "id_away": 1490,
+      "id_match": 37964,
+      "id_gameweek": 4044,
+      "id_home": 1490,
+      "id_away": 23,
       "date": {
-        "ts": 1787506200,
-        "text": "dom 19:30",
+        "ts": 1787936400,
+        "text": "vie 19:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "19:30",
+          "date": "vie",
+          "time": "19:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Getafe",
-      "away": "Racing de Santander",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Racing de Santander",
+      "away": "Elche",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   },
   "starter": false,
@@ -970,8 +1000,9 @@
   },
   "away": {
     "364": {
-      "points": 0,
-      "avg": 0
+      "id": 364,
+      "points": 5,
+      "avg": 5
     }
   },
   "owners": [],

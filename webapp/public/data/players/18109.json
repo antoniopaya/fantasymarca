@@ -3,19 +3,15 @@
     "id": 18109,
     "name": "Luis Rioja",
     "position": 3,
-    "points": 0,
-    "avg": 0,
-    "status": "doubt",
+    "points": 2,
+    "avg": 2,
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "doubt",
-      "description": "Lesión en el cuádriceps",
-      "duration": "Duda esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/18109.png?version=20251006020204",
     "isFavorite": 0,
-    "value": 13111000,
-    "previousValue": 13620000,
+    "value": 10565000,
+    "previousValue": 10722000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 13111000,
+      "floor": 10565000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 19666500,
+      "value": 15847500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 13111000,
+      "price": 10565000,
       "loanable": null
     },
     "bid": {
@@ -72,11 +68,11 @@
       "height": 173,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 424
   },
   "id": 18109,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -88,12 +84,14 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
     {
@@ -107,8 +105,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302602,
+        "id_player": 18109,
+        "category": "injury",
+        "description": "Lesión en el cuádriceps",
+        "duration": "Duda esta jornada",
+        "since": "2026-08-05 00:46:35",
+        "until": "2026-08-25 18:36:39",
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
     {
@@ -160,7 +167,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -654,6 +661,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 2,
+      "avg": 2,
+      "id_team": 19,
+      "last_gameweek": 1,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
+    },
+    {
       "season": "25/26",
       "points": 164,
       "avg": 4.4324,
@@ -689,59 +704,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 13620000,
-      "change": -509000,
-      "sign": -509
+      "value": 10722000,
+      "change": -157000,
+      "sign": -157
     },
     {
       "time": "Una semana",
-      "value": 16942000,
-      "change": -3831000,
-      "sign": "-3.831.000"
+      "value": 13111000,
+      "change": -2546000,
+      "sign": "-2.546.000"
     },
     {
       "time": "Un mes",
-      "value": 16603000,
-      "change": -3492000,
-      "sign": "-3.492.000"
+      "value": 19588000,
+      "change": -9023000,
+      "sign": "-9.023.000"
     },
     {
       "time": "Un año",
-      "value": 24413000,
-      "change": -11302000,
-      "sign": "-11.302.000"
+      "value": 22457000,
+      "change": -11892000,
+      "sign": "-11.892.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 24413000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 24265000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 24072000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 23851000,
-        "date": "23 ago 2025"
-      },
-      {
-        "value": 23588000,
-        "date": "24 ago 2025"
-      },
-      {
-        "value": 23137000,
-        "date": "25 ago 2025"
-      },
-      {
-        "value": 22734000,
-        "date": "26 ago 2025"
-      },
       {
         "value": 22457000,
         "date": "27 ago 2025"
@@ -2177,31 +2164,59 @@
       {
         "value": 13111000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 12767000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 12267000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 11734000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 11284000,
+        "date": "24 ago 2026"
+      },
+      {
+        "value": 10850000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 10722000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 10565000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
-      "value": 24413000,
-      "date": "20 ago 2025"
+      "value": 22764000,
+      "date": "13 oct 2025"
     },
     "min": {
-      "value": 11993000,
-      "date": "1 jul 2026"
+      "value": 10565000,
+      "date": "27 ago 2026"
     }
   },
   "next_match": {
     "18109": {
       "id": 18109,
       "id_team": 19,
-      "id_match": 37956,
-      "id_gameweek": 4043,
-      "id_home": 19,
-      "id_away": 5,
+      "id_match": 37959,
+      "id_gameweek": 4044,
+      "id_home": 6,
+      "id_away": 19,
       "date": {
-        "ts": 1787419800,
-        "text": "sáb 19:30",
+        "ts": 1788111000,
+        "text": "dom 19:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
+          "date": "dom",
           "time": "19:30",
           "format": "EEE"
         }
@@ -2209,18 +2224,19 @@
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Celta",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Valencia",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
   "home": {
     "18109": {
-      "points": 0,
-      "avg": 0
+      "id": 18109,
+      "points": 2,
+      "avg": 2
     }
   },
   "away": {

@@ -3,15 +3,15 @@
     "id": 14791,
     "name": "Gorka Guruzeta",
     "position": 4,
-    "points": 0,
-    "avg": 0,
+    "points": -1,
+    "avg": -1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/14791.png?version=20231205085735",
     "isFavorite": 0,
-    "value": 27633000,
-    "previousValue": 27582000,
+    "value": 26139000,
+    "previousValue": 26644000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 27633000,
+      "floor": 26139000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 41449500,
+      "value": 39208500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 27633000,
+      "price": 26139000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 188,
       "weight": null
     },
-    "clausesRanking": 175
+    "clausesRanking": 258
   },
   "id": 14791,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -99,12 +99,15 @@
       "startDate": "2026-08-20 21:00:00",
       "endDate": "2026-08-24 21:30:00",
       "points": {
-        "points": null,
+        "points": -1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
     {
@@ -156,7 +159,7 @@
       "id": 4047,
       "number": 6,
       "shortName": "J6",
-      "startDate": "2026-09-16 21:00:00",
+      "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-16 21:00:00",
       "points": {
         "points": null,
@@ -650,6 +653,14 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": -1,
+      "avg": -1,
+      "id_team": 1,
+      "last_gameweek": 2,
+      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+    },
+    {
       "season": "25/26",
       "points": 161,
       "avg": 4.6,
@@ -677,59 +688,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 27582000,
-      "change": 51000,
-      "sign": 51
+      "value": 26644000,
+      "change": -505000,
+      "sign": -505
     },
     {
       "time": "Una semana",
-      "value": 26732000,
-      "change": 901000,
-      "sign": 901
+      "value": 27633000,
+      "change": -1494000,
+      "sign": "-1.494.000"
     },
     {
       "time": "Un mes",
-      "value": 22194000,
-      "change": 5439000,
-      "sign": "+5.439.000"
+      "value": 22306000,
+      "change": 3833000,
+      "sign": "+3.833.000"
     },
     {
       "time": "Un año",
-      "value": 19136000,
-      "change": 8497000,
-      "sign": "+8.497.000"
+      "value": 16703000,
+      "change": 9436000,
+      "sign": "+9.436.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 19136000,
-        "date": "20 ago 2025"
-      },
-      {
-        "value": 18584000,
-        "date": "21 ago 2025"
-      },
-      {
-        "value": 18435000,
-        "date": "22 ago 2025"
-      },
-      {
-        "value": 17996000,
-        "date": "23 ago 2025"
-      },
-      {
-        "value": 17686000,
-        "date": "24 ago 2025"
-      },
-      {
-        "value": 17320000,
-        "date": "25 ago 2025"
-      },
-      {
-        "value": 16904000,
-        "date": "26 ago 2025"
-      },
       {
         "value": 16703000,
         "date": "27 ago 2025"
@@ -2165,6 +2148,34 @@
       {
         "value": 27633000,
         "date": "20 ago 2026"
+      },
+      {
+        "value": 27844000,
+        "date": "21 ago 2026"
+      },
+      {
+        "value": 27989000,
+        "date": "22 ago 2026"
+      },
+      {
+        "value": 27903000,
+        "date": "23 ago 2026"
+      },
+      {
+        "value": 27469000,
+        "date": "24 ago 2026"
+      },
+      {
+        "value": 26992000,
+        "date": "25 ago 2026"
+      },
+      {
+        "value": 26644000,
+        "date": "26 ago 2026"
+      },
+      {
+        "value": 26139000,
+        "date": "27 ago 2026"
       }
     ],
     "max": {
@@ -2180,35 +2191,36 @@
     "14791": {
       "id": 14791,
       "id_team": 1,
-      "id_match": 37947,
-      "id_gameweek": 4043,
-      "id_home": 1,
-      "id_away": 17,
+      "id_match": 37158,
+      "id_gameweek": 3968,
+      "id_home": 3,
+      "id_away": 1,
       "date": {
-        "ts": 1787410800,
-        "text": "sáb 17:00",
-        "format": "EEE H:mm",
+        "ts": 1787857200,
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "17:00",
-          "format": "EEE"
+          "date": "Hoy",
+          "time": "21:00",
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": 1,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Sevilla",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Barcelona",
+      "away": "Athletic Club",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
   "home": {
     "14791": {
-      "points": 0,
-      "avg": 0
+      "id": 14791,
+      "points": -1,
+      "avg": -1
     }
   },
   "away": {
