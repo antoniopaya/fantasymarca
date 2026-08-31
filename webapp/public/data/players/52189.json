@@ -3,15 +3,15 @@
     "id": 52189,
     "name": "Ayoze Pérez",
     "position": 4,
-    "points": 5,
-    "avg": 2.5,
+    "points": 7,
+    "avg": 2.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/52189.png?version=20251006020741",
     "isFavorite": 0,
-    "value": 21297000,
-    "previousValue": 20832000,
+    "value": 22049000,
+    "previousValue": 21973000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 21297000,
+      "floor": 22049000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 31945500,
+      "value": 33073500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 21297000,
+      "price": 22049000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 180,
       "weight": 66
     },
-    "clausesRanking": 1
+    "clausesRanking": 3
   },
   "id": 52189,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 0
   },
@@ -118,12 +118,14 @@
       "startDate": "2026-08-28 19:00:00",
       "endDate": "2026-08-31 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
     {
@@ -145,7 +147,7 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-12 18:30:00",
       "endDate": "2026-09-13 21:00:00",
       "points": {
         "points": null,
@@ -161,7 +163,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-16 21:00:00",
+      "endDate": "2026-09-17 19:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -655,10 +657,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 5,
-      "avg": 2.5,
+      "points": 7,
+      "avg": 2.3333,
       "id_team": 20,
-      "last_gameweek": 2,
+      "last_gameweek": 3,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     },
     {
@@ -689,47 +691,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 20832000,
-      "change": 465000,
-      "sign": 465
+      "value": 21973000,
+      "change": 76000,
+      "sign": 76
     },
     {
       "time": "Una semana",
-      "value": 15679000,
-      "change": 5618000,
-      "sign": "+5.618.000"
+      "value": 18940000,
+      "change": 3109000,
+      "sign": "+3.109.000"
     },
     {
       "time": "Un mes",
-      "value": 5881000,
-      "change": 15416000,
-      "sign": "+15.416.000"
+      "value": 6623000,
+      "change": 15426000,
+      "sign": "+15.426.000"
     },
     {
       "time": "Un año",
-      "value": 45846000,
-      "change": -24549000,
-      "sign": "-24.549.000"
+      "value": 44502000,
+      "change": -22453000,
+      "sign": "-22.453.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 45846000,
-        "date": "27 ago 2025"
-      },
-      {
-        "value": 45504000,
-        "date": "28 ago 2025"
-      },
-      {
-        "value": 45185000,
-        "date": "29 ago 2025"
-      },
-      {
-        "value": 44854000,
-        "date": "30 ago 2025"
-      },
       {
         "value": 44502000,
         "date": "31 ago 2025"
@@ -2177,11 +2163,27 @@
       {
         "value": 21297000,
         "date": "27 ago 2026"
+      },
+      {
+        "value": 21609000,
+        "date": "28 ago 2026"
+      },
+      {
+        "value": 21864000,
+        "date": "29 ago 2026"
+      },
+      {
+        "value": 21973000,
+        "date": "30 ago 2026"
+      },
+      {
+        "value": 22049000,
+        "date": "31 ago 2026"
       }
     ],
     "max": {
-      "value": 45846000,
-      "date": "27 ago 2025"
+      "value": 44502000,
+      "date": "31 ago 2025"
     },
     "min": {
       "value": 2342000,
@@ -2192,28 +2194,28 @@
     "52189": {
       "id": 52189,
       "id_team": 20,
-      "id_match": 37958,
-      "id_gameweek": 4044,
-      "id_home": 48,
-      "id_away": 20,
+      "id_match": 37976,
+      "id_gameweek": 4045,
+      "id_home": 20,
+      "id_away": 6,
       "date": {
-        "ts": 1787945400,
-        "text": "vie 21:30",
+        "ts": 1788634800,
+        "text": "sáb 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "vie",
-          "time": "21:30",
+          "date": "sáb",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Villarreal",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+      "home": "Villarreal",
+      "away": "Deportivo da Coruña",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,
@@ -2226,8 +2228,8 @@
   "away": {
     "52189": {
       "id": 52189,
-      "points": 5,
-      "avg": 2.5
+      "points": 7,
+      "avg": 2.3333
     }
   },
   "owners": [],

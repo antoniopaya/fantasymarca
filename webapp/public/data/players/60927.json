@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60927.png?version=20260621200950",
     "isFavorite": 0,
-    "value": 2386000,
-    "previousValue": 2579000,
+    "value": 1394000,
+    "previousValue": 1669000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2386000,
+      "floor": 1394000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 2,
-      "shield2WeeksSku": "shield_t2_2w",
-      "shield1MonthSku": "shield_t2_1m",
-      "value": 3579000,
+      "tier": 1,
+      "shield2WeeksSku": "shield_t1_2w",
+      "shield1MonthSku": "shield_t1_1m",
+      "value": 2091000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2386000,
+      "price": 1394000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 356
+    "clausesRanking": null
   },
   "id": 60927,
   "player_extra": {
@@ -140,8 +140,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302756,
+        "id_player": 60927,
+        "category": "injury",
+        "description": "Lesión en el sóleo",
+        "duration": "Baja hasta principios de Septiembre",
+        "since": "2026-08-15 10:03:49",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
     {
@@ -163,7 +172,7 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-12 18:30:00",
       "endDate": "2026-09-13 21:00:00",
       "points": {
         "points": null,
@@ -179,7 +188,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-16 21:00:00",
+      "endDate": "2026-09-17 19:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -683,21 +692,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2579000,
-      "change": -193000,
-      "sign": -193
+      "value": 1669000,
+      "change": -275000,
+      "sign": -275
     },
     {
       "time": "Una semana",
-      "value": 4006000,
-      "change": -1620000,
-      "sign": "-1.620.000"
+      "value": 3055000,
+      "change": -1661000,
+      "sign": "-1.661.000"
     },
     {
       "time": "Un mes",
-      "value": 2804000,
-      "change": -418000,
-      "sign": -418
+      "value": 3292000,
+      "change": -1898000,
+      "sign": "-1.898.000"
     }
   ],
   "values_chart": {
@@ -969,6 +978,22 @@
       {
         "value": 2386000,
         "date": "27 ago 2026"
+      },
+      {
+        "value": 2176000,
+        "date": "28 ago 2026"
+      },
+      {
+        "value": 1983000,
+        "date": "29 ago 2026"
+      },
+      {
+        "value": 1669000,
+        "date": "30 ago 2026"
+      },
+      {
+        "value": 1394000,
+        "date": "31 ago 2026"
       }
     ],
     "max": {
@@ -984,28 +1009,28 @@
     "60927": {
       "id": 60927,
       "id_team": 13,
-      "id_match": 37963,
-      "id_gameweek": 4044,
-      "id_home": 15,
-      "id_away": 13,
+      "id_match": 37972,
+      "id_gameweek": 4045,
+      "id_home": 13,
+      "id_away": 12,
       "date": {
-        "ts": 1788102000,
-        "text": "dom 17:00",
+        "ts": 1788712200,
+        "text": "dom 18:30",
         "format": "EEE H:mm",
         "splitted": {
           "date": "dom",
-          "time": "17:00",
+          "time": "18:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Madrid",
-      "away": "Málaga",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "home": "Málaga",
+      "away": "Levante",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
   "starter": false,

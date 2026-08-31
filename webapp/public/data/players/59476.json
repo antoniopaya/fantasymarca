@@ -5,17 +5,17 @@
     "position": 4,
     "points": 2,
     "avg": 2,
-    "status": "other",
+    "status": "injury",
     "id_competition": 1,
     "injury": {
-      "category": "other",
-      "description": "No convocado",
+      "category": "injury",
+      "description": "Transfer Request",
       "duration": "Baja esta jornada"
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59476.png?version=20251228213807",
     "isFavorite": 0,
-    "value": 39636000,
-    "previousValue": 40013000,
+    "value": 36931000,
+    "previousValue": 37466000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 39636000,
+      "floor": 36931000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 59454000,
+      "value": 55396500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 39636000,
+      "price": 36931000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 275
+    "clausesRanking": 306
   },
   "id": 59476,
   "player_extra": {
@@ -124,8 +124,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 304208,
+        "id_player": 59476,
+        "category": "injury",
+        "description": "Transfer Request",
+        "duration": "Baja esta jornada",
+        "since": "2026-08-28 13:18:43",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
     {
@@ -147,7 +156,7 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-12 18:30:00",
       "endDate": "2026-09-13 21:00:00",
       "points": {
         "points": null,
@@ -163,7 +172,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-16 21:00:00",
+      "endDate": "2026-09-17 19:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -683,47 +692,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 40013000,
-      "change": -377000,
-      "sign": -377
+      "value": 37466000,
+      "change": -535000,
+      "sign": -535
     },
     {
       "time": "Una semana",
-      "value": 41390000,
-      "change": -1754000,
-      "sign": "-1.754.000"
+      "value": 40718000,
+      "change": -3787000,
+      "sign": "-3.787.000"
     },
     {
       "time": "Un mes",
-      "value": 30893000,
-      "change": 8743000,
-      "sign": "+8.743.000"
+      "value": 32745000,
+      "change": 4186000,
+      "sign": "+4.186.000"
     },
     {
       "time": "Un año",
-      "value": 60551000,
-      "change": -20915000,
-      "sign": "-20.915.000"
+      "value": 60051000,
+      "change": -23120000,
+      "sign": "-23.120.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 60551000,
-        "date": "27 ago 2025"
-      },
-      {
-        "value": 60452000,
-        "date": "28 ago 2025"
-      },
-      {
-        "value": 60342000,
-        "date": "29 ago 2025"
-      },
-      {
-        "value": 60231000,
-        "date": "30 ago 2025"
-      },
       {
         "value": 60051000,
         "date": "31 ago 2025"
@@ -2171,6 +2164,22 @@
       {
         "value": 39636000,
         "date": "27 ago 2026"
+      },
+      {
+        "value": 38952000,
+        "date": "28 ago 2026"
+      },
+      {
+        "value": 38259000,
+        "date": "29 ago 2026"
+      },
+      {
+        "value": 37466000,
+        "date": "30 ago 2026"
+      },
+      {
+        "value": 36931000,
+        "date": "31 ago 2026"
       }
     ],
     "max": {
@@ -2186,27 +2195,27 @@
     "59476": {
       "id": 59476,
       "id_team": 2,
-      "id_match": 37966,
-      "id_gameweek": 4044,
-      "id_home": 17,
+      "id_match": 37967,
+      "id_gameweek": 4045,
+      "id_home": 1,
       "id_away": 2,
       "date": {
-        "ts": 1788031800,
-        "text": "sáb 21:30",
+        "ts": 1788617700,
+        "text": "sáb 16:15",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "21:30",
+          "time": "16:15",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
+      "home": "Athletic Club",
       "away": "Atlético",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     }
   },

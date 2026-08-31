@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/128.png?version=20251003194754",
     "isFavorite": 0,
-    "value": 28949000,
-    "previousValue": 29541000,
+    "value": 26566000,
+    "previousValue": 27149000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 28949000,
+      "floor": 26566000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 43423500,
+      "value": 39849000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 28949000,
+      "price": 26566000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 187,
       "weight": 80
     },
-    "clausesRanking": 321
+    "clausesRanking": null
   },
   "id": 128,
   "player_extra": {
@@ -93,7 +93,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
     {
@@ -122,8 +122,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 304052,
+        "id_player": 128,
+        "category": "injury",
+        "description": "Lesión en el sóleo",
+        "duration": "Baja esta jornada",
+        "since": "2026-08-25 17:07:18",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
     {
@@ -145,7 +154,7 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-12 18:30:00",
       "endDate": "2026-09-13 21:00:00",
       "points": {
         "points": null,
@@ -161,7 +170,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-16 21:00:00",
+      "endDate": "2026-09-17 19:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -681,47 +690,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 29541000,
-      "change": -592000,
-      "sign": -592
+      "value": 27149000,
+      "change": -583000,
+      "sign": -583
     },
     {
       "time": "Una semana",
-      "value": 31998000,
-      "change": -3049000,
-      "sign": "-3.049.000"
+      "value": 30572000,
+      "change": -4006000,
+      "sign": "-4.006.000"
     },
     {
       "time": "Un mes",
-      "value": 36900000,
-      "change": -7951000,
-      "sign": "-7.951.000"
+      "value": 36481000,
+      "change": -9915000,
+      "sign": "-9.915.000"
     },
     {
       "time": "Un año",
-      "value": 22235000,
-      "change": 6714000,
-      "sign": "+6.714.000"
+      "value": 21591000,
+      "change": 4975000,
+      "sign": "+4.975.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 22235000,
-        "date": "27 ago 2025"
-      },
-      {
-        "value": 22017000,
-        "date": "28 ago 2025"
-      },
-      {
-        "value": 21943000,
-        "date": "29 ago 2025"
-      },
-      {
-        "value": 21730000,
-        "date": "30 ago 2025"
-      },
       {
         "value": 21591000,
         "date": "31 ago 2025"
@@ -2169,6 +2162,22 @@
       {
         "value": 28949000,
         "date": "27 ago 2026"
+      },
+      {
+        "value": 28306000,
+        "date": "28 ago 2026"
+      },
+      {
+        "value": 27761000,
+        "date": "29 ago 2026"
+      },
+      {
+        "value": 27149000,
+        "date": "30 ago 2026"
+      },
+      {
+        "value": 26566000,
+        "date": "31 ago 2026"
       }
     ],
     "max": {
@@ -2184,28 +2193,28 @@
     "128": {
       "id": 128,
       "id_team": 5,
-      "id_match": 37152,
-      "id_gameweek": 3968,
-      "id_home": 5,
-      "id_away": 50,
+      "id_match": 37996,
+      "id_gameweek": 4047,
+      "id_home": 16,
+      "id_away": 5,
       "date": {
-        "ts": 1787855400,
-        "text": "Hoy 20:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1788462000,
+        "text": "jue 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "20:30",
-          "format": "'Hoy'"
+          "date": "jue",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Osasuna",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "home": "Real Sociedad",
+      "away": "Celta",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     }
   },
   "starter": false,

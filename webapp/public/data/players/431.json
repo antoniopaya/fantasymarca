@@ -3,15 +3,15 @@
     "id": 431,
     "name": "João Cancelo",
     "position": 2,
-    "points": 1,
+    "points": 2,
     "avg": 1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/431.png?version=20260113140939",
     "isFavorite": 0,
-    "value": 43035000,
-    "previousValue": 43424000,
+    "value": 41508000,
+    "previousValue": 41867000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 43035000,
+      "floor": 41508000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 64552500,
+      "value": 62262000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 43035000,
+      "price": 41508000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 182,
       "weight": 74
     },
-    "clausesRanking": 431
+    "clausesRanking": 389
   },
   "id": 431,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,14 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
     {
@@ -143,7 +145,7 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-12 18:30:00",
       "endDate": "2026-09-13 21:00:00",
       "points": {
         "points": null,
@@ -159,7 +161,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-16 21:00:00",
+      "endDate": "2026-09-17 19:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -653,7 +655,7 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 1,
+      "points": 2,
       "avg": 1,
       "id_team": 3,
       "last_gameweek": 2,
@@ -679,9 +681,15 @@
   "values": [
     {
       "time": "Un día",
-      "value": 43424000,
-      "change": -389000,
-      "sign": -389
+      "value": 41867000,
+      "change": -359000,
+      "sign": -359
+    },
+    {
+      "time": "Una semana",
+      "value": 44140000,
+      "change": -2632000,
+      "sign": "-2.632.000"
     }
   ],
   "values_chart": {
@@ -1397,6 +1405,22 @@
       {
         "value": 43035000,
         "date": "27 ago 2026"
+      },
+      {
+        "value": 42662000,
+        "date": "28 ago 2026"
+      },
+      {
+        "value": 42262000,
+        "date": "29 ago 2026"
+      },
+      {
+        "value": 41867000,
+        "date": "30 ago 2026"
+      },
+      {
+        "value": 41508000,
+        "date": "31 ago 2026"
       }
     ],
     "max": {
@@ -1412,17 +1436,17 @@
     "431": {
       "id": 431,
       "id_team": 3,
-      "id_match": 37158,
-      "id_gameweek": 3968,
+      "id_match": 37960,
+      "id_gameweek": 4044,
       "id_home": 3,
-      "id_away": 1,
+      "id_away": 14,
       "date": {
-        "ts": 1787857200,
-        "text": "Hoy 21:00",
+        "ts": 1788204600,
+        "text": "Hoy 21:30",
         "format": "'Hoy' H:mm",
         "splitted": {
           "date": "Hoy",
-          "time": "21:00",
+          "time": "21:30",
           "format": "'Hoy'"
         }
       },
@@ -1430,17 +1454,18 @@
       "confirmed": null,
       "minute": null,
       "home": "Barcelona",
-      "away": "Athletic Club",
+      "away": "Rayo Vallecano",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,
   "home": {
     "431": {
-      "points": 0,
-      "avg": 0
+      "id": 431,
+      "points": 1,
+      "avg": 1
     }
   },
   "away": {

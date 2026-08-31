@@ -3,15 +3,15 @@
     "id": 2720265,
     "name": "Troy Parrott",
     "position": 4,
-    "points": 2,
-    "avg": 2,
+    "points": 3,
+    "avg": 1.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/2720265.png?version=20260820222948",
     "isFavorite": 0,
-    "value": 20296000,
-    "previousValue": 20306000,
+    "value": 19836000,
+    "previousValue": 20000000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 20296000,
+      "floor": 19836000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 30444000,
+      "value": 29754000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 20296000,
+      "price": 19836000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 403
+    "clausesRanking": 421
   },
   "id": 2720265,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -116,12 +116,14 @@
       "startDate": "2026-08-28 19:00:00",
       "endDate": "2026-08-31 21:30:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
     {
@@ -143,7 +145,7 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-12 18:30:00",
       "endDate": "2026-09-13 21:00:00",
       "points": {
         "points": null,
@@ -159,7 +161,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-16 21:00:00",
+      "endDate": "2026-09-17 19:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -653,19 +655,25 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 2,
-      "avg": 2,
+      "points": 3,
+      "avg": 1.5,
       "id_team": 4,
-      "last_gameweek": 1,
+      "last_gameweek": 3,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 20306000,
-      "change": -10000,
-      "sign": -10
+      "value": 20000000,
+      "change": -164000,
+      "sign": -164
+    },
+    {
+      "time": "Una semana",
+      "value": 20353000,
+      "change": -517000,
+      "sign": -517
     }
   ],
   "values_chart": {
@@ -697,6 +705,22 @@
       {
         "value": 20296000,
         "date": "27 ago 2026"
+      },
+      {
+        "value": 20234000,
+        "date": "28 ago 2026"
+      },
+      {
+        "value": 20117000,
+        "date": "29 ago 2026"
+      },
+      {
+        "value": 20000000,
+        "date": "30 ago 2026"
+      },
+      {
+        "value": 19836000,
+        "date": "31 ago 2026"
       }
     ],
     "max": {
@@ -704,36 +728,36 @@
       "date": "25 ago 2026"
     },
     "min": {
-      "value": 20000000,
-      "date": "21 ago 2026"
+      "value": 19836000,
+      "date": "31 ago 2026"
     }
   },
   "next_match": {
     "2720265": {
       "id": 2720265,
       "id_team": 4,
-      "id_match": 37961,
-      "id_gameweek": 4044,
-      "id_home": 12,
-      "id_away": 4,
+      "id_match": 37974,
+      "id_gameweek": 4045,
+      "id_home": 4,
+      "id_away": 15,
       "date": {
-        "ts": 1788015600,
-        "text": "sáb 17:00",
+        "ts": 1788548400,
+        "text": "vie 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "17:00",
+          "date": "vie",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Betis",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Betis",
+      "away": "Real Madrid",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
@@ -746,8 +770,8 @@
   "away": {
     "2720265": {
       "id": 2720265,
-      "points": 2,
-      "avg": 2
+      "points": 3,
+      "avg": 1.5
     }
   },
   "owners": [],

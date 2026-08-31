@@ -5,17 +5,13 @@
     "position": 3,
     "points": 0,
     "avg": 0,
-    "status": "other",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "other",
-      "description": "No convocado",
-      "duration": "Baja esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3845074.png?version=20260826061635",
     "isFavorite": 0,
-    "value": 8127000,
-    "previousValue": 8000000,
+    "value": 7577000,
+    "previousValue": 7709000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 8127000,
+      "floor": 7577000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 12190500,
+      "value": 11365500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 8127000,
+      "price": 7577000,
       "loanable": null
     },
     "bid": {
@@ -123,7 +119,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
     {
@@ -145,7 +141,7 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-12 18:30:00",
       "endDate": "2026-09-13 21:00:00",
       "points": {
         "points": null,
@@ -161,7 +157,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-16 21:00:00",
+      "endDate": "2026-09-17 19:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -656,9 +652,9 @@
   "values": [
     {
       "time": "Un día",
-      "value": 8000000,
-      "change": 127000,
-      "sign": 127
+      "value": 7709000,
+      "change": -132000,
+      "sign": -132
     }
   ],
   "values_chart": {
@@ -670,6 +666,22 @@
       {
         "value": 8127000,
         "date": "27 ago 2026"
+      },
+      {
+        "value": 8089000,
+        "date": "28 ago 2026"
+      },
+      {
+        "value": 7913000,
+        "date": "29 ago 2026"
+      },
+      {
+        "value": 7709000,
+        "date": "30 ago 2026"
+      },
+      {
+        "value": 7577000,
+        "date": "31 ago 2026"
       }
     ],
     "max": {
@@ -677,36 +689,36 @@
       "date": "27 ago 2026"
     },
     "min": {
-      "value": 8000000,
-      "date": "26 ago 2026"
+      "value": 7577000,
+      "date": "31 ago 2026"
     }
   },
   "next_match": {
     "3845074": {
       "id": 3845074,
       "id_team": 20,
-      "id_match": 37958,
-      "id_gameweek": 4044,
-      "id_home": 48,
-      "id_away": 20,
+      "id_match": 37976,
+      "id_gameweek": 4045,
+      "id_home": 20,
+      "id_away": 6,
       "date": {
-        "ts": 1787945400,
-        "text": "vie 21:30",
+        "ts": 1788634800,
+        "text": "sáb 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "vie",
-          "time": "21:30",
+          "date": "sáb",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Villarreal",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+      "home": "Villarreal",
+      "away": "Deportivo da Coruña",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,

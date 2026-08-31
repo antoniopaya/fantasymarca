@@ -3,15 +3,15 @@
     "id": 55966,
     "name": "Adrià Altimira",
     "position": 2,
-    "points": 9,
-    "avg": 4.5,
+    "points": 8,
+    "avg": 2.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/55966.png?version=20240617154112",
     "isFavorite": 0,
-    "value": 9554000,
-    "previousValue": 9335000,
+    "value": 10178000,
+    "previousValue": 10168000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9554000,
+      "floor": 10178000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 3,
-      "shield2WeeksSku": "shield_t3_2w",
-      "shield1MonthSku": "shield_t3_1m",
-      "value": 14331000,
+      "tier": 4,
+      "shield2WeeksSku": "shield_t4_2w",
+      "shield1MonthSku": "shield_t4_1m",
+      "value": 15267000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9554000,
+      "price": 10178000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 116
+    "clausesRanking": 141
   },
   "id": 55966,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
-    "cards": 0
+    "cards": 2
   },
   "points": [
     {
@@ -118,12 +118,16 @@
       "startDate": "2026-08-28 19:00:00",
       "endDate": "2026-08-31 21:30:00",
       "points": {
-        "points": null,
+        "points": -1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in",
+        "double"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
     {
@@ -145,7 +149,7 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-12 18:30:00",
       "endDate": "2026-09-13 21:00:00",
       "points": {
         "points": null,
@@ -161,7 +165,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-16 21:00:00",
+      "endDate": "2026-09-17 19:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -655,10 +659,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 9,
-      "avg": 4.5,
+      "points": 8,
+      "avg": 2.6667,
       "id_team": 6,
-      "last_gameweek": 2,
+      "last_gameweek": 3,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
     {
@@ -689,47 +693,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 9335000,
-      "change": 219000,
-      "sign": 219
+      "value": 10168000,
+      "change": 10000,
+      "sign": 10
     },
     {
       "time": "Una semana",
-      "value": 7718000,
-      "change": 1836000,
-      "sign": "+1.836.000"
+      "value": 8823000,
+      "change": 1355000,
+      "sign": "+1.355.000"
     },
     {
       "time": "Un mes",
-      "value": 3266000,
-      "change": 6288000,
-      "sign": "+6.288.000"
+      "value": 4081000,
+      "change": 6097000,
+      "sign": "+6.097.000"
     },
     {
       "time": "Un año",
-      "value": 332000,
-      "change": 9222000,
-      "sign": "+9.222.000"
+      "value": 399000,
+      "change": 9779000,
+      "sign": "+9.779.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 332000,
-        "date": "27 ago 2025"
-      },
-      {
-        "value": 409000,
-        "date": "28 ago 2025"
-      },
-      {
-        "value": 374000,
-        "date": "29 ago 2025"
-      },
-      {
-        "value": 461000,
-        "date": "30 ago 2025"
-      },
       {
         "value": 399000,
         "date": "31 ago 2025"
@@ -1481,11 +1469,27 @@
       {
         "value": 9554000,
         "date": "27 ago 2026"
+      },
+      {
+        "value": 9773000,
+        "date": "28 ago 2026"
+      },
+      {
+        "value": 9975000,
+        "date": "29 ago 2026"
+      },
+      {
+        "value": 10168000,
+        "date": "30 ago 2026"
+      },
+      {
+        "value": 10178000,
+        "date": "31 ago 2026"
       }
     ],
     "max": {
-      "value": 9554000,
-      "date": "27 ago 2026"
+      "value": 10178000,
+      "date": "31 ago 2026"
     },
     "min": {
       "value": 329000,
@@ -1496,36 +1500,36 @@
     "55966": {
       "id": 55966,
       "id_team": 6,
-      "id_match": 37959,
-      "id_gameweek": 4044,
-      "id_home": 6,
-      "id_away": 19,
+      "id_match": 37976,
+      "id_gameweek": 4045,
+      "id_home": 20,
+      "id_away": 6,
       "date": {
-        "ts": 1788111000,
-        "text": "dom 19:30",
+        "ts": 1788634800,
+        "text": "sáb 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "19:30",
+          "date": "sáb",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Valencia",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
+      "home": "Villarreal",
+      "away": "Deportivo da Coruña",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,
   "home": {
     "55966": {
       "id": 55966,
-      "points": 6,
-      "avg": 6
+      "points": 5,
+      "avg": 2.5
     }
   },
   "away": {

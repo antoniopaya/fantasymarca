@@ -5,13 +5,17 @@
     "position": 4,
     "points": 1,
     "avg": 1,
-    "status": null,
+    "status": "other",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "other",
+      "description": "No convocado",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71794.png?version=20260805112002",
     "isFavorite": 0,
-    "value": 1252000,
-    "previousValue": 1333000,
+    "value": 620000,
+    "previousValue": 872000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1252000,
+      "floor": 666666.6666666666,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1878000,
+      "value": 1000000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1252000,
+      "price": 620000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 293
+    "clausesRanking": 349
   },
   "id": 71794,
   "player_extra": {
@@ -121,8 +125,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 304259,
+        "id_player": 71794,
+        "category": "other",
+        "description": "No convocado",
+        "duration": "Baja esta jornada",
+        "since": "2026-08-28 18:15:46",
+        "until": null,
+        "status": "No convocado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
     {
@@ -144,7 +157,7 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-12 18:30:00",
       "endDate": "2026-09-13 21:00:00",
       "points": {
         "points": null,
@@ -160,7 +173,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-16 21:00:00",
+      "endDate": "2026-09-17 19:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -664,15 +677,15 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1333000,
-      "change": -81000,
-      "sign": -81
+      "value": 872000,
+      "change": -252000,
+      "sign": -252
     },
     {
       "time": "Una semana",
-      "value": 2086000,
-      "change": -834000,
-      "sign": -834
+      "value": 1668000,
+      "change": -1048000,
+      "sign": "-1.048.000"
     }
   ],
   "values_chart": {
@@ -764,6 +777,22 @@
       {
         "value": 1252000,
         "date": "27 ago 2026"
+      },
+      {
+        "value": 1194000,
+        "date": "28 ago 2026"
+      },
+      {
+        "value": 1074000,
+        "date": "29 ago 2026"
+      },
+      {
+        "value": 872000,
+        "date": "30 ago 2026"
+      },
+      {
+        "value": 620000,
+        "date": "31 ago 2026"
       }
     ],
     "max": {
@@ -771,36 +800,36 @@
       "date": "18 ago 2026"
     },
     "min": {
-      "value": 702000,
-      "date": "6 ago 2026"
+      "value": 620000,
+      "date": "31 ago 2026"
     }
   },
   "next_match": {
     "71794": {
       "id": 71794,
       "id_team": 23,
-      "id_match": 37964,
-      "id_gameweek": 4044,
-      "id_home": 1490,
-      "id_away": 23,
+      "id_match": 37969,
+      "id_gameweek": 4045,
+      "id_home": 23,
+      "id_away": 16,
       "date": {
-        "ts": 1787936400,
-        "text": "vie 19:00",
-        "format": "EEE H:mm",
+        "ts": 1788809400,
+        "text": "7 sept 21:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "vie",
-          "time": "19:00",
-          "format": "EEE"
+          "date": "7 sept",
+          "time": "21:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
-      "away": "Elche",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+      "home": "Elche",
+      "away": "Real Sociedad",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   },
   "starter": false,

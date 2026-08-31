@@ -3,15 +3,15 @@
     "id": 25631,
     "name": "Ilaix Moriba",
     "position": 3,
-    "points": 2,
-    "avg": 2,
+    "points": 5,
+    "avg": 1.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/25631.png?version=20251003195109",
     "isFavorite": 0,
-    "value": 14767000,
-    "previousValue": 15257000,
+    "value": 12825000,
+    "previousValue": 13300000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 14767000,
+      "floor": 12825000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 22150500,
+      "value": 19237500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 14767000,
+      "price": 12825000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 385
+    "clausesRanking": null
   },
   "id": 25631,
   "player_extra": {
-    "matches": 1,
+    "matches": 3,
     "goals": 0,
     "cards": 0
   },
@@ -84,12 +84,12 @@
       "startDate": "2026-08-15 19:30:00",
       "endDate": "2026-08-27 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
     {
@@ -116,12 +116,14 @@
       "startDate": "2026-08-28 19:00:00",
       "endDate": "2026-08-31 21:30:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
     {
@@ -143,7 +145,7 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-12 18:30:00",
       "endDate": "2026-09-13 21:00:00",
       "points": {
         "points": null,
@@ -159,7 +161,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-16 21:00:00",
+      "endDate": "2026-09-17 19:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -653,10 +655,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 2,
-      "avg": 2,
+      "points": 5,
+      "avg": 1.6667,
       "id_team": 5,
-      "last_gameweek": 2,
+      "last_gameweek": 3,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
     {
@@ -687,47 +689,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 15257000,
-      "change": -490000,
-      "sign": -490
+      "value": 13300000,
+      "change": -475000,
+      "sign": -475
     },
     {
       "time": "Una semana",
-      "value": 18339000,
-      "change": -3572000,
-      "sign": "-3.572.000"
+      "value": 16101000,
+      "change": -3276000,
+      "sign": "-3.276.000"
     },
     {
       "time": "Un mes",
-      "value": 20708000,
-      "change": -5941000,
-      "sign": "-5.941.000"
+      "value": 21037000,
+      "change": -8212000,
+      "sign": "-8.212.000"
     },
     {
       "time": "Un año",
-      "value": 20021000,
-      "change": -5254000,
-      "sign": "-5.254.000"
+      "value": 20360000,
+      "change": -7535000,
+      "sign": "-7.535.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 20021000,
-        "date": "27 ago 2025"
-      },
-      {
-        "value": 20091000,
-        "date": "28 ago 2025"
-      },
-      {
-        "value": 20153000,
-        "date": "29 ago 2025"
-      },
-      {
-        "value": 20209000,
-        "date": "30 ago 2025"
-      },
       {
         "value": 20360000,
         "date": "31 ago 2025"
@@ -2175,6 +2161,22 @@
       {
         "value": 14767000,
         "date": "27 ago 2026"
+      },
+      {
+        "value": 14292000,
+        "date": "28 ago 2026"
+      },
+      {
+        "value": 13797000,
+        "date": "29 ago 2026"
+      },
+      {
+        "value": 13300000,
+        "date": "30 ago 2026"
+      },
+      {
+        "value": 12825000,
+        "date": "31 ago 2026"
       }
     ],
     "max": {
@@ -2190,35 +2192,36 @@
     "25631": {
       "id": 25631,
       "id_team": 5,
-      "id_match": 37152,
-      "id_gameweek": 3968,
-      "id_home": 5,
-      "id_away": 50,
+      "id_match": 37996,
+      "id_gameweek": 4047,
+      "id_home": 16,
+      "id_away": 5,
       "date": {
-        "ts": 1787855400,
-        "text": "Hoy 20:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1788462000,
+        "text": "jue 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "20:30",
-          "format": "'Hoy'"
+          "date": "jue",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Osasuna",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "home": "Real Sociedad",
+      "away": "Celta",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     }
   },
   "starter": false,
   "home": {
     "25631": {
-      "points": 0,
-      "avg": 0
+      "id": 25631,
+      "points": 3,
+      "avg": 1.5
     }
   },
   "away": {

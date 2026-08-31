@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/64496.png?version=20250727223602",
     "isFavorite": 0,
-    "value": 329000,
-    "previousValue": 421000,
+    "value": 409000,
+    "previousValue": 349000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 409000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 173,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 362
   },
   "id": 64496,
   "player_extra": {
@@ -92,8 +92,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302673,
+        "id_player": 64496,
+        "category": "injury",
+        "description": "Rotura de ligamento cruzado",
+        "duration": "Baja hasta Marzo",
+        "since": "2026-08-10 16:08:43",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
     {
@@ -154,7 +163,7 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-12 18:30:00",
       "endDate": "2026-09-13 21:00:00",
       "points": {
         "points": null,
@@ -170,7 +179,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-16 21:00:00",
+      "endDate": "2026-09-17 19:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -674,47 +683,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 421000,
-      "change": -92000,
-      "sign": -92
+      "value": 349000,
+      "change": 60000,
+      "sign": 60
     },
     {
       "time": "Una semana",
-      "value": 329000,
-      "change": 0,
-      "sign": 0
+      "value": 433000,
+      "change": -24000,
+      "sign": -24
     },
     {
       "time": "Un mes",
-      "value": 1375000,
-      "change": -1046000,
-      "sign": "-1.046.000"
+      "value": 1581000,
+      "change": -1172000,
+      "sign": "-1.172.000"
     },
     {
       "time": "Un año",
-      "value": 5930000,
-      "change": -5601000,
-      "sign": "-5.601.000"
+      "value": 5252000,
+      "change": -4843000,
+      "sign": "-4.843.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 5930000,
-        "date": "27 ago 2025"
-      },
-      {
-        "value": 5756000,
-        "date": "28 ago 2025"
-      },
-      {
-        "value": 5611000,
-        "date": "29 ago 2025"
-      },
-      {
-        "value": 5449000,
-        "date": "30 ago 2025"
-      },
       {
         "value": 5252000,
         "date": "31 ago 2025"
@@ -2162,11 +2155,27 @@
       {
         "value": 329000,
         "date": "27 ago 2026"
+      },
+      {
+        "value": 329000,
+        "date": "28 ago 2026"
+      },
+      {
+        "value": 329000,
+        "date": "29 ago 2026"
+      },
+      {
+        "value": 349000,
+        "date": "30 ago 2026"
+      },
+      {
+        "value": 409000,
+        "date": "31 ago 2026"
       }
     ],
     "max": {
-      "value": 5930000,
-      "date": "27 ago 2025"
+      "value": 5252000,
+      "date": "31 ago 2025"
     },
     "min": {
       "value": 329000,
@@ -2177,17 +2186,17 @@
     "64496": {
       "id": 64496,
       "id_team": 3,
-      "id_match": 37158,
-      "id_gameweek": 3968,
+      "id_match": 37960,
+      "id_gameweek": 4044,
       "id_home": 3,
-      "id_away": 1,
+      "id_away": 14,
       "date": {
-        "ts": 1787857200,
-        "text": "Hoy 21:00",
+        "ts": 1788204600,
+        "text": "Hoy 21:30",
         "format": "'Hoy' H:mm",
         "splitted": {
           "date": "Hoy",
-          "time": "21:00",
+          "time": "21:30",
           "format": "'Hoy'"
         }
       },
@@ -2195,10 +2204,10 @@
       "confirmed": null,
       "minute": null,
       "home": "Barcelona",
-      "away": "Athletic Club",
+      "away": "Rayo Vallecano",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,

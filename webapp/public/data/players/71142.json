@@ -3,15 +3,15 @@
     "id": 71142,
     "name": "Aliou Dieng",
     "position": 3,
-    "points": 3,
-    "avg": 1.5,
+    "points": 5,
+    "avg": 1.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71142.png?version=20260707213738",
     "isFavorite": 0,
-    "value": 1098000,
-    "previousValue": 1207000,
+    "value": 647000,
+    "previousValue": 768000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1098000,
+      "floor": 666666.6666666666,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1647000,
+      "value": 1000000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1098000,
+      "price": 647000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 401
+    "clausesRanking": null
   },
   "id": 71142,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 0
   },
@@ -118,12 +118,14 @@
       "startDate": "2026-08-28 19:00:00",
       "endDate": "2026-08-31 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
     {
@@ -145,7 +147,7 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-12 18:30:00",
       "endDate": "2026-09-13 21:00:00",
       "points": {
         "points": null,
@@ -161,7 +163,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-16 21:00:00",
+      "endDate": "2026-09-17 19:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -655,31 +657,31 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 3,
-      "avg": 1.5,
+      "points": 5,
+      "avg": 1.6667,
       "id_team": 19,
-      "last_gameweek": 2,
+      "last_gameweek": 3,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 1207000,
-      "change": -109000,
-      "sign": -109
+      "value": 768000,
+      "change": -121000,
+      "sign": -121
     },
     {
       "time": "Una semana",
-      "value": 2151000,
-      "change": -1053000,
-      "sign": "-1.053.000"
+      "value": 1465000,
+      "change": -818000,
+      "sign": -818
     },
     {
       "time": "Un mes",
-      "value": 4114000,
-      "change": -3016000,
-      "sign": "-3.016.000"
+      "value": 4277000,
+      "change": -3630000,
+      "sign": "-3.630.000"
     }
   ],
   "values_chart": {
@@ -887,6 +889,22 @@
       {
         "value": 1098000,
         "date": "27 ago 2026"
+      },
+      {
+        "value": 1035000,
+        "date": "28 ago 2026"
+      },
+      {
+        "value": 970000,
+        "date": "29 ago 2026"
+      },
+      {
+        "value": 768000,
+        "date": "30 ago 2026"
+      },
+      {
+        "value": 647000,
+        "date": "31 ago 2026"
       }
     ],
     "max": {
@@ -894,36 +912,36 @@
       "date": "1 ago 2026"
     },
     "min": {
-      "value": 1098000,
-      "date": "27 ago 2026"
+      "value": 647000,
+      "date": "31 ago 2026"
     }
   },
   "next_match": {
     "71142": {
       "id": 71142,
       "id_team": 19,
-      "id_match": 37959,
-      "id_gameweek": 4044,
-      "id_home": 6,
-      "id_away": 19,
+      "id_match": 37975,
+      "id_gameweek": 4045,
+      "id_home": 19,
+      "id_away": 3,
       "date": {
-        "ts": 1788111000,
-        "text": "dom 19:30",
+        "ts": 1788704100,
+        "text": "dom 16:15",
         "format": "EEE H:mm",
         "splitted": {
           "date": "dom",
-          "time": "19:30",
+          "time": "16:15",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Valencia",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
+      "home": "Valencia",
+      "away": "Barcelona",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,
@@ -936,8 +954,9 @@
   },
   "away": {
     "71142": {
-      "points": 0,
-      "avg": 0
+      "id": 71142,
+      "points": 2,
+      "avg": 2
     }
   },
   "owners": [],

@@ -3,15 +3,15 @@
     "id": 28612,
     "name": "Mathew Ryan",
     "position": 1,
-    "points": 15,
-    "avg": 7.5,
+    "points": 18,
+    "avg": 6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/28612.png?version=20250829183411",
     "isFavorite": 0,
-    "value": 23189000,
-    "previousValue": 22964000,
+    "value": 23976000,
+    "previousValue": 23790000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 23189000,
+      "floor": 23976000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 34783500,
+      "value": 35964000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 23189000,
+      "price": 23976000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 184,
       "weight": 82
     },
-    "clausesRanking": 200
+    "clausesRanking": 151
   },
   "id": 28612,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 0
   },
@@ -114,12 +114,12 @@
       "startDate": "2026-08-28 19:00:00",
       "endDate": "2026-08-31 21:30:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
     {
@@ -141,7 +141,7 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-12 18:30:00",
       "endDate": "2026-09-13 21:00:00",
       "points": {
         "points": null,
@@ -157,7 +157,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-16 21:00:00",
+      "endDate": "2026-09-17 19:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -651,10 +651,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 15,
-      "avg": 7.5,
+      "points": 18,
+      "avg": 6,
       "id_team": 12,
-      "last_gameweek": 2,
+      "last_gameweek": 3,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
     {
@@ -669,23 +669,25 @@
   "values": [
     {
       "time": "Un día",
-      "value": 22964000,
-      "change": 225000,
-      "sign": 225
+      "value": 23790000,
+      "change": 186000,
+      "sign": 186
     },
     {
       "time": "Una semana",
-      "value": 23192000,
-      "change": -3000,
-      "sign": -3
+      "value": 22647000,
+      "change": 1329000,
+      "sign": "+1.329.000"
+    },
+    {
+      "time": "Un año",
+      "value": 1022000,
+      "change": 22954000,
+      "sign": "+22.954.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 768000,
-        "date": "30 ago 2025"
-      },
       {
         "value": 1022000,
         "date": "31 ago 2025"
@@ -2009,6 +2011,22 @@
       {
         "value": 23189000,
         "date": "27 ago 2026"
+      },
+      {
+        "value": 23357000,
+        "date": "28 ago 2026"
+      },
+      {
+        "value": 23593000,
+        "date": "29 ago 2026"
+      },
+      {
+        "value": 23790000,
+        "date": "30 ago 2026"
+      },
+      {
+        "value": 23976000,
+        "date": "31 ago 2026"
       }
     ],
     "max": {
@@ -2016,43 +2034,44 @@
       "date": "24 may 2026"
     },
     "min": {
-      "value": 768000,
-      "date": "30 ago 2025"
+      "value": 1022000,
+      "date": "31 ago 2025"
     }
   },
   "next_match": {
     "28612": {
       "id": 28612,
       "id_team": 12,
-      "id_match": 37961,
-      "id_gameweek": 4044,
-      "id_home": 12,
-      "id_away": 4,
+      "id_match": 37972,
+      "id_gameweek": 4045,
+      "id_home": 13,
+      "id_away": 12,
       "date": {
-        "ts": 1788015600,
-        "text": "sáb 17:00",
+        "ts": 1788712200,
+        "text": "dom 18:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "17:00",
+          "date": "dom",
+          "time": "18:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Málaga",
+      "away": "Levante",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
   "starter": false,
   "home": {
     "28612": {
-      "points": 0,
-      "avg": 0
+      "id": 28612,
+      "points": 3,
+      "avg": 3
     }
   },
   "away": {

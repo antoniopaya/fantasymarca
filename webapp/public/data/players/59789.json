@@ -3,15 +3,15 @@
     "id": 59789,
     "name": "Orri Óskarsson",
     "position": 4,
-    "points": 3,
-    "avg": 1.5,
+    "points": 12,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59789.png?version=20251004234219",
     "isFavorite": 0,
-    "value": 18982000,
-    "previousValue": 19369000,
+    "value": 19110000,
+    "previousValue": 18426000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,33 +34,33 @@
       "price": null
     },
     "clause": {
-      "floor": 18982000,
+      "floor": 19110000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 28473000,
+      "value": 28665000,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 18982000,
-      "loanable": null
+      "id": 1727670706,
+      "isPublic": 1,
+      "price": 19110000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 19110000,
       "barter": [],
       "type": null,
       "days": null
     },
     "loan": [],
     "bio": {
-      "age": 21,
+      "age": 22,
       "country": {
         "flag": "🇮🇸",
         "country": "Islandia"
@@ -68,12 +68,12 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 320
+    "clausesRanking": 189
   },
   "id": 59789,
   "player_extra": {
-    "matches": 2,
-    "goals": 0,
+    "matches": 3,
+    "goals": 1,
     "cards": 0
   },
   "points": [
@@ -116,12 +116,15 @@
       "startDate": "2026-08-28 19:00:00",
       "endDate": "2026-08-31 21:30:00",
       "points": {
-        "points": null,
+        "points": 9,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
     {
@@ -143,7 +146,7 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-12 18:30:00",
       "endDate": "2026-09-13 21:00:00",
       "points": {
         "points": null,
@@ -159,7 +162,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-16 21:00:00",
+      "endDate": "2026-09-17 19:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -653,10 +656,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 3,
-      "avg": 1.5,
+      "points": 12,
+      "avg": 4,
       "id_team": 16,
-      "last_gameweek": 2,
+      "last_gameweek": 3,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
     {
@@ -679,47 +682,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 19369000,
-      "change": -387000,
-      "sign": -387
+      "value": 18426000,
+      "change": 684000,
+      "sign": 684
     },
     {
       "time": "Una semana",
-      "value": 19927000,
-      "change": -945000,
-      "sign": -945
+      "value": 20244000,
+      "change": -1134000,
+      "sign": "-1.134.000"
     },
     {
       "time": "Un mes",
-      "value": 9330000,
-      "change": 9652000,
-      "sign": "+9.652.000"
+      "value": 10398000,
+      "change": 8712000,
+      "sign": "+8.712.000"
     },
     {
       "time": "Un año",
-      "value": 7525000,
-      "change": 11457000,
-      "sign": "+11.457.000"
+      "value": 8725000,
+      "change": 10385000,
+      "sign": "+10.385.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 7525000,
-        "date": "27 ago 2025"
-      },
-      {
-        "value": 7827000,
-        "date": "28 ago 2025"
-      },
-      {
-        "value": 8141000,
-        "date": "29 ago 2025"
-      },
-      {
-        "value": 8428000,
-        "date": "30 ago 2025"
-      },
       {
         "value": 8725000,
         "date": "31 ago 2025"
@@ -2167,6 +2154,22 @@
       {
         "value": 18982000,
         "date": "27 ago 2026"
+      },
+      {
+        "value": 18475000,
+        "date": "28 ago 2026"
+      },
+      {
+        "value": 18160000,
+        "date": "29 ago 2026"
+      },
+      {
+        "value": 18426000,
+        "date": "30 ago 2026"
+      },
+      {
+        "value": 19110000,
+        "date": "31 ago 2026"
       }
     ],
     "max": {
@@ -2182,35 +2185,36 @@
     "59789": {
       "id": 59789,
       "id_team": 16,
-      "id_match": 37965,
-      "id_gameweek": 4044,
+      "id_match": 37996,
+      "id_gameweek": 4047,
       "id_home": 16,
-      "id_away": 8,
+      "id_away": 5,
       "date": {
-        "ts": 1788022800,
-        "text": "sáb 19:00",
+        "ts": 1788462000,
+        "text": "jue 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "19:00",
+          "date": "jue",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Real Sociedad",
-      "away": "Espanyol",
+      "away": "Celta",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     }
   },
   "starter": false,
   "home": {
     "59789": {
-      "points": 0,
-      "avg": 0
+      "id": 59789,
+      "points": 9,
+      "avg": 9
     }
   },
   "away": {
