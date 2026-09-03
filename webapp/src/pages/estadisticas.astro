@@ -26,14 +26,16 @@ function pct(value: number, max: number): number {
 }
 
 // --- Puntos: lo primero, es lo que de verdad importa para jugar bien ---
-const byLastSeason = summaries
-  .filter((s) => s.lastSeason !== null)
-  .sort((a, b) => (b.lastSeason?.points ?? 0) - (a.lastSeason?.points ?? 0));
-const topLastSeason = byLastSeason.slice(0, 10);
-const maxLastSeasonPoints = topLastSeason[0]?.lastSeason?.points ?? 1;
-const lastSeasonLabel = topLastSeason[0]?.lastSeason?.season ?? "";
+// Ya se han jugado jornadas de la temporada en curso, así que el ranking usa
+// sus puntos en vez de los de la temporada anterior (que solo tenía sentido
+// como sustituto antes de que arrancara la liga).
+const byCurrentSeason = [...summaries].sort((a, b) => b.points - a.points);
+const topCurrentSeason = byCurrentSeason.slice(0, 10);
+const maxCurrentSeasonPoints = topCurrentSeason[0]?.points ?? 1;
 
 const currentSeasonLabel = getNextGameweek().season ?? "26/27";
+const lastSeasonLabel =
+  summaries.find((s) => s.lastSeason !== null)?.lastSeason?.season ?? "";
 const scatterSeasons = [
   { key: "lastSeason", label: `Temporada ${lastSeasonLabel}` },
   { key: "current", label: `Temporada actual (${currentSeasonLabel})` },
@@ -112,12 +114,10 @@ const maxOvervaluedPct = overvalued[0]?.overvaluedPct ?? 1;
 
 // --- Ratio puntos/precio: rendimiento por millón pagado en la liga ---
 const valueForMoney = byFantastica
-  .filter((s) => (s.lastSeason?.points ?? 0) > 0)
+  .filter((s) => s.points > 0)
   .map((s) => ({
     ...s,
-    ratio:
-      (s.lastSeason?.points ?? 0) /
-      ((s.precioFantastica as number) / 1_000_000),
+    ratio: s.points / ((s.precioFantastica as number) / 1_000_000),
   }))
   .sort((a, b) => b.ratio - a.ratio)
   .slice(0, 10);
@@ -318,20 +318,18 @@ const sections = [
 
       <section id="puntos" class="mb-10 scroll-mt-24">
         <h2 class="mb-4 text-xl font-bold text-white">
-          Mejores de la {lastSeasonLabel} (puntos)
+          Mejores de la temporada {currentSeasonLabel} (puntos)
         </h2>
         <p class="mb-4 text-sm text-slate-500">
-          La temporada 26/27 no ha empezado — en cuanto se jueguen jornadas y
-          actualices los datos, esta sección pasará a mostrar los puntos de la
-          temporada actual.
+          Puntos acumulados en lo que llevamos de temporada.
         </p>
         <RankingList
-          items={topLastSeason.map((p) => ({
+          items={topCurrentSeason.map((p) => ({
             key: p.id,
             label: p.name,
-            sublabel: `${p.team_name} · media ${p.lastSeason?.avg.toFixed(2)}`,
-            valueLabel: `${p.lastSeason?.points} pts`,
-            barPercent: pct(p.lastSeason?.points ?? 0, maxLastSeasonPoints),
+            sublabel: `${p.team_name} · media ${p.avg.toFixed(2)}`,
+            valueLabel: `${p.points} pts`,
+            barPercent: pct(p.points, maxCurrentSeasonPoints),
             href: url(`/jugadores/${p.id}`),
             imageUrl: playerPhotoUrl(p.id),
           }))}
@@ -409,15 +407,15 @@ const sections = [
           {
             valueForMoney.length === 0 ? (
               <p class="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-500">
-                Todavía no hay puntos de la {lastSeasonLabel} para calcular el
-                ratio.
+                Todavía no hay puntos de la temporada {currentSeasonLabel} para
+                calcular el ratio.
               </p>
             ) : (
               <RankingList
                 items={valueForMoney.map((p) => ({
                   key: p.id,
                   label: p.name,
-                  sublabel: `${p.team_name} · ${p.lastSeason?.points} pts · ${formatMoney(p.precioFantastica as number)}`,
+                  sublabel: `${p.team_name} · ${p.points} pts · ${formatMoney(p.precioFantastica as number)}`,
                   valueLabel: `${p.ratio.toFixed(1)} pts/M€`,
                   barPercent: pct(p.ratio, maxRatio),
                   href: url(`/jugadores/${p.id}`),

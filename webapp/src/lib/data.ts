@@ -222,10 +222,17 @@ let summariesCache: PlayerSummary[] | null = null;
 export function getAllPlayerSummaries(): PlayerSummary[] {
   if (summariesCache) return summariesCache;
 
+  const currentSeason = getNextGameweek().season;
+
   summariesCache = getPlayers().map((catalogEntry) => {
     const detail = getPlayerDetail(catalogEntry.id);
     const weekly = detail.values.find((v) => v.time === "Una semana");
-    const lastSeasonEntry = detail.points_history[0];
+    // points_history[0] ya no es fiable para "temporada anterior": en cuanto la
+    // temporada en curso acumula alguna jornada, la API la mete ella también en
+    // el histórico (en primera posición), así que hay que descartarla explícitamente.
+    const lastSeasonEntry = detail.points_history.find(
+      (h) => h.season !== currentSeason,
+    );
 
     return {
       id: catalogEntry.id,
