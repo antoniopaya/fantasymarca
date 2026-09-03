@@ -3,15 +3,15 @@
     "id": 70638,
     "name": "Anthony Gordon",
     "position": 4,
-    "points": 18,
-    "avg": 9,
+    "points": 29,
+    "avg": 9.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70638.png?version=20260603151304",
     "isFavorite": 0,
-    "value": 44852000,
-    "previousValue": 44556000,
+    "value": 45887000,
+    "previousValue": 45542000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 44852000,
+      "floor": 45887000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 67278000,
+      "value": 68830500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 44852000,
+      "price": 45887000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 94
+    "clausesRanking": 55
   },
   "id": 70638,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 0
   },
@@ -120,12 +120,15 @@
       "startDate": "2026-08-28 19:00:00",
       "endDate": "2026-08-31 21:30:00",
       "points": {
-        "points": null,
+        "points": 11,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
     {
@@ -147,8 +150,8 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-12 18:30:00",
-      "endDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-11 21:00:00",
+      "endDate": "2026-09-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -163,7 +166,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 19:00:00",
+      "endDate": "2026-09-17 21:30:00",
       "points": {
         "points": null,
         "isLive": false
@@ -177,7 +180,7 @@
       "id": 4048,
       "number": 7,
       "shortName": "J7",
-      "startDate": "2026-09-20 21:00:00",
+      "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
         "points": null,
@@ -223,7 +226,7 @@
       "number": 10,
       "shortName": "J10",
       "startDate": "2026-10-25 20:00:00",
-      "endDate": "2026-10-25 20:00:00",
+      "endDate": "2026-10-25 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -657,31 +660,31 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 18,
-      "avg": 9,
+      "points": 29,
+      "avg": 9.6667,
       "id_team": 3,
-      "last_gameweek": 2,
+      "last_gameweek": 3,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 44556000,
-      "change": 296000,
-      "sign": 296
+      "value": 45542000,
+      "change": 345000,
+      "sign": 345
     },
     {
       "time": "Una semana",
-      "value": 43190000,
-      "change": 1662000,
-      "sign": "+1.662.000"
+      "value": 43859000,
+      "change": 2028000,
+      "sign": "+2.028.000"
     },
     {
       "time": "Un mes",
-      "value": 46828000,
-      "change": -1976000,
-      "sign": "-1.976.000"
+      "value": 46458000,
+      "change": -571000,
+      "sign": -571
     }
   ],
   "values_chart": {
@@ -1041,6 +1044,18 @@
       {
         "value": 44852000,
         "date": "31 ago 2026"
+      },
+      {
+        "value": 45132000,
+        "date": "1 sept 2026"
+      },
+      {
+        "value": 45542000,
+        "date": "2 sept 2026"
+      },
+      {
+        "value": 45887000,
+        "date": "3 sept 2026"
       }
     ],
     "max": {
@@ -1056,36 +1071,36 @@
     "70638": {
       "id": 70638,
       "id_team": 3,
-      "id_match": 37960,
-      "id_gameweek": 4044,
-      "id_home": 3,
-      "id_away": 14,
+      "id_match": 37975,
+      "id_gameweek": 4045,
+      "id_home": 19,
+      "id_away": 3,
       "date": {
-        "ts": 1788204600,
-        "text": "Hoy 21:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1788704100,
+        "text": "dom 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:30",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "16:15",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Barcelona",
-      "away": "Rayo Vallecano",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Valencia",
+      "away": "Barcelona",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,
   "home": {
     "70638": {
       "id": 70638,
-      "points": 6,
-      "avg": 6
+      "points": 17,
+      "avg": 8.5
     }
   },
   "away": {

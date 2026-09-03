@@ -5,17 +5,13 @@
     "position": 2,
     "points": 7,
     "avg": 3.5,
-    "status": "red",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "red",
-      "description": "Roja directa",
-      "duration": "Baja esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/49382.png?version=20231218004050",
     "isFavorite": 0,
-    "value": 21029000,
-    "previousValue": 21437000,
+    "value": 20237000,
+    "previousValue": 20463000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 21029000,
+      "floor": 20237000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 31543500,
+      "value": 30355500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 21029000,
+      "price": 20237000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +68,7 @@
       "height": 188,
       "weight": 84
     },
-    "clausesRanking": 191
+    "clausesRanking": 284
   },
   "id": 49382,
   "player_extra": {
@@ -147,8 +143,8 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-12 18:30:00",
-      "endDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-11 21:00:00",
+      "endDate": "2026-09-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -163,7 +159,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 19:00:00",
+      "endDate": "2026-09-17 21:30:00",
       "points": {
         "points": null,
         "isLive": false
@@ -177,7 +173,7 @@
       "id": 4048,
       "number": 7,
       "shortName": "J7",
-      "startDate": "2026-09-20 21:00:00",
+      "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
         "points": null,
@@ -223,7 +219,7 @@
       "number": 10,
       "shortName": "J10",
       "startDate": "2026-10-25 20:00:00",
-      "endDate": "2026-10-25 20:00:00",
+      "endDate": "2026-10-25 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -691,43 +687,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 21437000,
-      "change": -408000,
-      "sign": -408
+      "value": 20463000,
+      "change": -226000,
+      "sign": -226
     },
     {
       "time": "Una semana",
-      "value": 21159000,
-      "change": -130000,
-      "sign": -130
+      "value": 21999000,
+      "change": -1762000,
+      "sign": "-1.762.000"
     },
     {
       "time": "Un mes",
-      "value": 20578000,
-      "change": 451000,
-      "sign": 451
+      "value": 21127000,
+      "change": -890000,
+      "sign": -890
     },
     {
       "time": "Un año",
-      "value": 20471000,
-      "change": 558000,
-      "sign": 558
+      "value": 18869000,
+      "change": 1368000,
+      "sign": "+1.368.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 20471000,
-        "date": "31 ago 2025"
-      },
-      {
-        "value": 20008000,
-        "date": "1 sept 2025"
-      },
-      {
-        "value": 19590000,
-        "date": "2 sept 2025"
-      },
       {
         "value": 18869000,
         "date": "3 sept 2025"
@@ -2179,6 +2163,18 @@
       {
         "value": 21029000,
         "date": "31 ago 2026"
+      },
+      {
+        "value": 20677000,
+        "date": "1 sept 2026"
+      },
+      {
+        "value": 20463000,
+        "date": "2 sept 2026"
+      },
+      {
+        "value": 20237000,
+        "date": "3 sept 2026"
       }
     ],
     "max": {
@@ -2200,16 +2196,16 @@
       "id_away": 5,
       "date": {
         "ts": 1788462000,
-        "text": "jue 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "jue",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Real Sociedad",
       "away": "Celta",

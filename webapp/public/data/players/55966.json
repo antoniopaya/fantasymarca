@@ -5,13 +5,17 @@
     "position": 2,
     "points": 8,
     "avg": 2.7,
-    "status": null,
+    "status": "double",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "double",
+      "description": "Doble tarjeta",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/55966.png?version=20240617154112",
     "isFavorite": 0,
-    "value": 10178000,
-    "previousValue": 10168000,
+    "value": 9052000,
+    "previousValue": 9484000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 10178000,
+      "floor": 9052000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 4,
-      "shield2WeeksSku": "shield_t4_2w",
-      "shield1MonthSku": "shield_t4_1m",
-      "value": 15267000,
+      "tier": 3,
+      "shield2WeeksSku": "shield_t3_2w",
+      "shield1MonthSku": "shield_t3_1m",
+      "value": 13578000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 10178000,
+      "price": 9052000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 141
+    "clausesRanking": 242
   },
   "id": 55966,
   "player_extra": {
@@ -149,8 +153,8 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-12 18:30:00",
-      "endDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-11 21:00:00",
+      "endDate": "2026-09-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -165,7 +169,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 19:00:00",
+      "endDate": "2026-09-17 21:30:00",
       "points": {
         "points": null,
         "isLive": false
@@ -179,7 +183,7 @@
       "id": 4048,
       "number": 7,
       "shortName": "J7",
-      "startDate": "2026-09-20 21:00:00",
+      "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
         "points": null,
@@ -225,7 +229,7 @@
       "number": 10,
       "shortName": "J10",
       "startDate": "2026-10-25 20:00:00",
-      "endDate": "2026-10-25 20:00:00",
+      "endDate": "2026-10-25 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -693,43 +697,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 10168000,
-      "change": 10000,
-      "sign": 10
+      "value": 9484000,
+      "change": -432000,
+      "sign": -432
     },
     {
       "time": "Una semana",
-      "value": 8823000,
-      "change": 1355000,
-      "sign": "+1.355.000"
+      "value": 9554000,
+      "change": -502000,
+      "sign": -502
     },
     {
       "time": "Un mes",
-      "value": 4081000,
-      "change": 6097000,
-      "sign": "+6.097.000"
+      "value": 4548000,
+      "change": 4504000,
+      "sign": "+4.504.000"
     },
     {
       "time": "Un año",
-      "value": 399000,
-      "change": 9779000,
-      "sign": "+9.779.000"
+      "value": 510000,
+      "change": 8542000,
+      "sign": "+8.542.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 399000,
-        "date": "31 ago 2025"
-      },
-      {
-        "value": 329000,
-        "date": "1 sept 2025"
-      },
-      {
-        "value": 521000,
-        "date": "2 sept 2025"
-      },
       {
         "value": 510000,
         "date": "3 sept 2025"
@@ -1485,6 +1477,18 @@
       {
         "value": 10178000,
         "date": "31 ago 2026"
+      },
+      {
+        "value": 9899000,
+        "date": "1 sept 2026"
+      },
+      {
+        "value": 9484000,
+        "date": "2 sept 2026"
+      },
+      {
+        "value": 9052000,
+        "date": "3 sept 2026"
       }
     ],
     "max": {

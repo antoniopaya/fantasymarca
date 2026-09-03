@@ -3,15 +3,19 @@
     "id": 71502,
     "name": "Andrés García",
     "position": 2,
-    "points": 10,
-    "avg": 5,
-    "status": null,
+    "points": 13,
+    "avg": 4.3,
+    "status": "doubt",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "doubt",
+      "description": "Molestias",
+      "duration": "Duda esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71502.png?version=20260716123021",
     "isFavorite": 0,
-    "value": 9730000,
-    "previousValue": 9416000,
+    "value": 10801000,
+    "previousValue": 10439000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9730000,
+      "floor": 10801000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 3,
-      "shield2WeeksSku": "shield_t3_2w",
-      "shield1MonthSku": "shield_t3_1m",
-      "value": 14595000,
+      "tier": 4,
+      "shield2WeeksSku": "shield_t4_2w",
+      "shield1MonthSku": "shield_t4_1m",
+      "value": 16201500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9730000,
+      "price": 10801000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +72,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 66
+    "clausesRanking": 86
   },
   "id": 71502,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 0
   },
@@ -118,12 +122,14 @@
       "startDate": "2026-08-28 19:00:00",
       "endDate": "2026-08-31 21:30:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
     {
@@ -145,8 +151,8 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-12 18:30:00",
-      "endDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-11 21:00:00",
+      "endDate": "2026-09-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -161,7 +167,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 19:00:00",
+      "endDate": "2026-09-17 21:30:00",
       "points": {
         "points": null,
         "isLive": false
@@ -175,7 +181,7 @@
       "id": 4048,
       "number": 7,
       "shortName": "J7",
-      "startDate": "2026-09-20 21:00:00",
+      "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
         "points": null,
@@ -221,7 +227,7 @@
       "number": 10,
       "shortName": "J10",
       "startDate": "2026-10-25 20:00:00",
-      "endDate": "2026-10-25 20:00:00",
+      "endDate": "2026-10-25 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -655,31 +661,31 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 10,
-      "avg": 5,
+      "points": 13,
+      "avg": 4.3333,
       "id_team": 9,
-      "last_gameweek": 2,
+      "last_gameweek": 3,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 9416000,
-      "change": 314000,
-      "sign": 314
+      "value": 10439000,
+      "change": 362000,
+      "sign": 362
     },
     {
       "time": "Una semana",
-      "value": 7622000,
-      "change": 2108000,
-      "sign": "+2.108.000"
+      "value": 8542000,
+      "change": 2259000,
+      "sign": "+2.259.000"
     },
     {
       "time": "Un mes",
-      "value": 6233000,
-      "change": 3497000,
-      "sign": "+3.497.000"
+      "value": 6509000,
+      "change": 4292000,
+      "sign": "+4.292.000"
     }
   ],
   "values_chart": {
@@ -867,11 +873,23 @@
       {
         "value": 9730000,
         "date": "31 ago 2026"
+      },
+      {
+        "value": 10065000,
+        "date": "1 sept 2026"
+      },
+      {
+        "value": 10439000,
+        "date": "2 sept 2026"
+      },
+      {
+        "value": 10801000,
+        "date": "3 sept 2026"
       }
     ],
     "max": {
-      "value": 9730000,
-      "date": "31 ago 2026"
+      "value": 10801000,
+      "date": "3 sept 2026"
     },
     "min": {
       "value": 5284000,
@@ -882,28 +900,28 @@
     "71502": {
       "id": 71502,
       "id_team": 9,
-      "id_match": 37962,
-      "id_gameweek": 4044,
-      "id_home": 50,
-      "id_away": 9,
+      "id_match": 37971,
+      "id_gameweek": 4045,
+      "id_home": 9,
+      "id_away": 5,
       "date": {
-        "ts": 1788197400,
-        "text": "Hoy 19:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1788800400,
+        "text": "lun 19:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "19:30",
-          "format": "'Hoy'"
+          "date": "lun",
+          "time": "19:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Getafe",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Getafe",
+      "away": "Celta",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     }
   },
   "starter": false,
@@ -917,8 +935,8 @@
   "away": {
     "71502": {
       "id": 71502,
-      "points": 2,
-      "avg": 2
+      "points": 5,
+      "avg": 2.5
     }
   },
   "owners": [],

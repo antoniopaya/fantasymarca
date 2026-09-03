@@ -5,17 +5,17 @@
     "position": 2,
     "points": 0,
     "avg": 0,
-    "status": "injury",
+    "status": "doubt",
     "id_competition": 1,
     "injury": {
-      "category": "injury",
+      "category": "doubt",
       "description": "Lesión en el bíceps femoral",
-      "duration": "Baja esta jornada"
+      "duration": "Duda esta jornada"
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/58980.png?version=20251006025403",
     "isFavorite": 0,
-    "value": 6910000,
-    "previousValue": 6648000,
+    "value": 7776000,
+    "previousValue": 7474000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6910000,
+      "floor": 7776000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 10365000,
+      "value": 11664000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6910000,
+      "price": 7776000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 175,
       "weight": 70
     },
-    "clausesRanking": 16
+    "clausesRanking": 5
   },
   "id": 58980,
   "player_extra": {
@@ -131,8 +131,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 304146,
+        "id_player": 58980,
+        "category": "injury",
+        "description": "Lesión en el bíceps femoral",
+        "duration": "Duda esta jornada",
+        "since": "2026-08-26 15:14:41",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
     {
@@ -154,8 +163,8 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-12 18:30:00",
-      "endDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-11 21:00:00",
+      "endDate": "2026-09-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -170,7 +179,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 19:00:00",
+      "endDate": "2026-09-17 21:30:00",
       "points": {
         "points": null,
         "isLive": false
@@ -184,7 +193,7 @@
       "id": 4048,
       "number": 7,
       "shortName": "J7",
-      "startDate": "2026-09-20 21:00:00",
+      "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
         "points": null,
@@ -230,7 +239,7 @@
       "number": 10,
       "shortName": "J10",
       "startDate": "2026-10-25 20:00:00",
-      "endDate": "2026-10-25 20:00:00",
+      "endDate": "2026-10-25 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -682,43 +691,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 6648000,
-      "change": 262000,
-      "sign": 262
+      "value": 7474000,
+      "change": 302000,
+      "sign": 302
     },
     {
       "time": "Una semana",
-      "value": 6617000,
-      "change": 293000,
-      "sign": 293
+      "value": 5919000,
+      "change": 1857000,
+      "sign": "+1.857.000"
     },
     {
       "time": "Un mes",
-      "value": 13058000,
-      "change": -6148000,
-      "sign": "-6.148.000"
+      "value": 12192000,
+      "change": -4416000,
+      "sign": "-4.416.000"
     },
     {
       "time": "Un año",
-      "value": 21967000,
-      "change": -15057000,
-      "sign": "-15.057.000"
+      "value": 23197000,
+      "change": -15421000,
+      "sign": "-15.421.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 21967000,
-        "date": "31 ago 2025"
-      },
-      {
-        "value": 22310000,
-        "date": "1 sept 2025"
-      },
-      {
-        "value": 22752000,
-        "date": "2 sept 2025"
-      },
       {
         "value": 23197000,
         "date": "3 sept 2025"
@@ -2170,6 +2167,18 @@
       {
         "value": 6910000,
         "date": "31 ago 2026"
+      },
+      {
+        "value": 7186000,
+        "date": "1 sept 2026"
+      },
+      {
+        "value": 7474000,
+        "date": "2 sept 2026"
+      },
+      {
+        "value": 7776000,
+        "date": "3 sept 2026"
       }
     ],
     "max": {
@@ -2185,28 +2194,28 @@
     "58980": {
       "id": 58980,
       "id_team": 50,
-      "id_match": 37962,
-      "id_gameweek": 4044,
-      "id_home": 50,
-      "id_away": 9,
+      "id_match": 37968,
+      "id_gameweek": 4045,
+      "id_home": 48,
+      "id_away": 50,
       "date": {
-        "ts": 1788197400,
-        "text": "Hoy 19:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1788712200,
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "19:30",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Getafe",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Alavés",
+      "away": "Osasuna",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,

@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/63871.png?version=20250617095502",
     "isFavorite": 0,
-    "value": 8165000,
-    "previousValue": 8239000,
+    "value": 7655000,
+    "previousValue": 7725000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 8165000,
+      "floor": 7655000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 12247500,
+      "value": 11482500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 8165000,
+      "price": 7655000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 134
+    "clausesRanking": 210
   },
   "id": 63871,
   "player_extra": {
@@ -147,8 +147,8 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-12 18:30:00",
-      "endDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-11 21:00:00",
+      "endDate": "2026-09-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -163,7 +163,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 19:00:00",
+      "endDate": "2026-09-17 21:30:00",
       "points": {
         "points": null,
         "isLive": false
@@ -177,7 +177,7 @@
       "id": 4048,
       "number": 7,
       "shortName": "J7",
-      "startDate": "2026-09-20 21:00:00",
+      "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
         "points": null,
@@ -223,7 +223,7 @@
       "number": 10,
       "shortName": "J10",
       "startDate": "2026-10-25 20:00:00",
-      "endDate": "2026-10-25 20:00:00",
+      "endDate": "2026-10-25 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -675,43 +675,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 8239000,
-      "change": -74000,
-      "sign": -74
+      "value": 7725000,
+      "change": -70000,
+      "sign": -70
     },
     {
       "time": "Una semana",
-      "value": 7147000,
-      "change": 1018000,
-      "sign": "+1.018.000"
+      "value": 7857000,
+      "change": -202000,
+      "sign": -202
     },
     {
       "time": "Un mes",
-      "value": 2739000,
-      "change": 5426000,
-      "sign": "+5.426.000"
+      "value": 3261000,
+      "change": 4394000,
+      "sign": "+4.394.000"
     },
     {
       "time": "Un año",
-      "value": 4223000,
-      "change": 3942000,
-      "sign": "+3.942.000"
+      "value": 4641000,
+      "change": 3014000,
+      "sign": "+3.014.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 4223000,
-        "date": "31 ago 2025"
-      },
-      {
-        "value": 4353000,
-        "date": "1 sept 2025"
-      },
-      {
-        "value": 4502000,
-        "date": "2 sept 2025"
-      },
       {
         "value": 4641000,
         "date": "3 sept 2025"
@@ -2163,6 +2151,18 @@
       {
         "value": 8165000,
         "date": "31 ago 2026"
+      },
+      {
+        "value": 7930000,
+        "date": "1 sept 2026"
+      },
+      {
+        "value": 7725000,
+        "date": "2 sept 2026"
+      },
+      {
+        "value": 7655000,
+        "date": "3 sept 2026"
       }
     ],
     "max": {
@@ -2184,16 +2184,16 @@
       "id_away": 16,
       "date": {
         "ts": 1788809400,
-        "text": "7 sept 21:30",
-        "format": "d MMM H:mm",
+        "text": "lun 21:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "7 sept",
+          "date": "lun",
           "time": "21:30",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Elche",
       "away": "Real Sociedad",

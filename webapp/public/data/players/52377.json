@@ -3,15 +3,19 @@
     "id": 52377,
     "name": "Jorge Herrando",
     "position": 2,
-    "points": 12,
-    "avg": 6,
-    "status": null,
+    "points": 14,
+    "avg": 4.7,
+    "status": "doubt",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "doubt",
+      "description": "Lesión en el aductor",
+      "duration": "Duda esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/52377.png?version=20240305112855",
     "isFavorite": 0,
-    "value": 2149000,
-    "previousValue": 1825000,
+    "value": 2598000,
+    "previousValue": 2480000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2149000,
+      "floor": 2598000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3223500,
+      "value": 3897000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2149000,
+      "price": 2598000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +72,13 @@
       "height": 192,
       "weight": null
     },
-    "clausesRanking": 27
+    "clausesRanking": 53
   },
   "id": 52377,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -116,12 +120,15 @@
       "startDate": "2026-08-28 19:00:00",
       "endDate": "2026-08-31 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
     {
@@ -143,8 +150,8 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-12 18:30:00",
-      "endDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-11 21:00:00",
+      "endDate": "2026-09-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -159,7 +166,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 19:00:00",
+      "endDate": "2026-09-17 21:30:00",
       "points": {
         "points": null,
         "isLive": false
@@ -173,7 +180,7 @@
       "id": 4048,
       "number": 7,
       "shortName": "J7",
-      "startDate": "2026-09-20 21:00:00",
+      "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
         "points": null,
@@ -219,7 +226,7 @@
       "number": 10,
       "shortName": "J10",
       "startDate": "2026-10-25 20:00:00",
-      "endDate": "2026-10-25 20:00:00",
+      "endDate": "2026-10-25 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -653,10 +660,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 12,
-      "avg": 6,
+      "points": 14,
+      "avg": 4.6667,
       "id_team": 50,
-      "last_gameweek": 2,
+      "last_gameweek": 3,
       "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
     {
@@ -687,43 +694,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1825000,
-      "change": 324000,
-      "sign": 324
+      "value": 2480000,
+      "change": 118000,
+      "sign": 118
     },
     {
       "time": "Una semana",
-      "value": 457000,
-      "change": 1692000,
-      "sign": "+1.692.000"
+      "value": 1131000,
+      "change": 1467000,
+      "sign": "+1.467.000"
     },
     {
       "time": "Un mes",
-      "value": 419000,
-      "change": 1730000,
-      "sign": "+1.730.000"
+      "value": 348000,
+      "change": 2250000,
+      "sign": "+2.250.000"
     },
     {
       "time": "Un año",
-      "value": 339000,
-      "change": 1810000,
-      "sign": "+1.810.000"
+      "value": 329000,
+      "change": 2269000,
+      "sign": "+2.269.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 339000,
-        "date": "31 ago 2025"
-      },
-      {
-        "value": 445000,
-        "date": "1 sept 2025"
-      },
-      {
-        "value": 449000,
-        "date": "2 sept 2025"
-      },
       {
         "value": 329000,
         "date": "3 sept 2025"
@@ -2175,6 +2170,18 @@
       {
         "value": 2149000,
         "date": "31 ago 2026"
+      },
+      {
+        "value": 2328000,
+        "date": "1 sept 2026"
+      },
+      {
+        "value": 2480000,
+        "date": "2 sept 2026"
+      },
+      {
+        "value": 2598000,
+        "date": "3 sept 2026"
       }
     ],
     "max": {
@@ -2190,36 +2197,36 @@
     "52377": {
       "id": 52377,
       "id_team": 50,
-      "id_match": 37962,
-      "id_gameweek": 4044,
-      "id_home": 50,
-      "id_away": 9,
+      "id_match": 37968,
+      "id_gameweek": 4045,
+      "id_home": 48,
+      "id_away": 50,
       "date": {
-        "ts": 1788197400,
-        "text": "Hoy 19:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1788712200,
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "19:30",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Getafe",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Alavés",
+      "away": "Osasuna",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
   "home": {
     "52377": {
       "id": 52377,
-      "points": 9,
-      "avg": 9
+      "points": 11,
+      "avg": 5.5
     }
   },
   "away": {

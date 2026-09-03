@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/55088.png?version=20251003194833",
     "isFavorite": 0,
-    "value": 8634000,
-    "previousValue": 8875000,
+    "value": 8604000,
+    "previousValue": 8498000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 8634000,
+      "floor": 8604000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 12951000,
+      "value": 12906000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 8634000,
+      "price": 8604000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 185,
       "weight": 80
     },
-    "clausesRanking": 248
+    "clausesRanking": 345
   },
   "id": 55088,
   "player_extra": {
@@ -143,8 +143,8 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-12 18:30:00",
-      "endDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-11 21:00:00",
+      "endDate": "2026-09-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -159,7 +159,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 19:00:00",
+      "endDate": "2026-09-17 21:30:00",
       "points": {
         "points": null,
         "isLive": false
@@ -173,7 +173,7 @@
       "id": 4048,
       "number": 7,
       "shortName": "J7",
-      "startDate": "2026-09-20 21:00:00",
+      "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
         "points": null,
@@ -219,7 +219,7 @@
       "number": 10,
       "shortName": "J10",
       "startDate": "2026-10-25 20:00:00",
-      "endDate": "2026-10-25 20:00:00",
+      "endDate": "2026-10-25 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -687,43 +687,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 8875000,
-      "change": -241000,
-      "sign": -241
+      "value": 8498000,
+      "change": 106000,
+      "sign": 106
     },
     {
       "time": "Una semana",
-      "value": 9460000,
-      "change": -826000,
-      "sign": -826
+      "value": 9491000,
+      "change": -887000,
+      "sign": -887
     },
     {
       "time": "Un mes",
-      "value": 4252000,
-      "change": 4382000,
-      "sign": "+4.382.000"
+      "value": 4770000,
+      "change": 3834000,
+      "sign": "+3.834.000"
     },
     {
       "time": "Un año",
-      "value": 4380000,
-      "change": 4254000,
-      "sign": "+4.254.000"
+      "value": 4020000,
+      "change": 4584000,
+      "sign": "+4.584.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 4380000,
-        "date": "31 ago 2025"
-      },
-      {
-        "value": 4210000,
-        "date": "1 sept 2025"
-      },
-      {
-        "value": 4090000,
-        "date": "2 sept 2025"
-      },
       {
         "value": 4020000,
         "date": "3 sept 2025"
@@ -2175,6 +2163,18 @@
       {
         "value": 8634000,
         "date": "31 ago 2026"
+      },
+      {
+        "value": 8495000,
+        "date": "1 sept 2026"
+      },
+      {
+        "value": 8498000,
+        "date": "2 sept 2026"
+      },
+      {
+        "value": 8604000,
+        "date": "3 sept 2026"
       }
     ],
     "max": {
@@ -2196,16 +2196,16 @@
       "id_away": 5,
       "date": {
         "ts": 1788462000,
-        "text": "jue 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "jue",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Real Sociedad",
       "away": "Celta",

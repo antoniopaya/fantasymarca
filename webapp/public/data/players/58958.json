@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/58958.png?version=20240702134805",
     "isFavorite": 0,
-    "value": 2128000,
-    "previousValue": 1917000,
+    "value": 2120000,
+    "previousValue": 2147000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2128000,
+      "floor": 2120000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3192000,
+      "value": 3180000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2128000,
+      "price": 2120000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 193,
       "weight": null
     },
-    "clausesRanking": 122
+    "clausesRanking": 163
   },
   "id": 58958,
   "player_extra": {
@@ -123,7 +123,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     },
     {
@@ -145,8 +145,8 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-12 18:30:00",
-      "endDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-11 21:00:00",
+      "endDate": "2026-09-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -161,7 +161,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 19:00:00",
+      "endDate": "2026-09-17 21:30:00",
       "points": {
         "points": null,
         "isLive": false
@@ -175,7 +175,7 @@
       "id": 4048,
       "number": 7,
       "shortName": "J7",
-      "startDate": "2026-09-20 21:00:00",
+      "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
         "points": null,
@@ -221,7 +221,7 @@
       "number": 10,
       "shortName": "J10",
       "startDate": "2026-10-25 20:00:00",
-      "endDate": "2026-10-25 20:00:00",
+      "endDate": "2026-10-25 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -681,39 +681,25 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1917000,
-      "change": 211000,
-      "sign": 211
+      "value": 2147000,
+      "change": -27000,
+      "sign": -27
     },
     {
       "time": "Una semana",
-      "value": 1075000,
-      "change": 1053000,
-      "sign": "+1.053.000"
+      "value": 1478000,
+      "change": 642000,
+      "sign": 642
     },
     {
       "time": "Un mes",
       "value": 529000,
-      "change": 1599000,
-      "sign": "+1.599.000"
-    },
-    {
-      "time": "Un año",
-      "value": 704000,
-      "change": 1424000,
-      "sign": "+1.424.000"
+      "change": 1591000,
+      "sign": "+1.591.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 704000,
-        "date": "31 ago 2025"
-      },
-      {
-        "value": 504000,
-        "date": "1 sept 2025"
-      },
       {
         "value": 403000,
         "date": "3 jul 2026"
@@ -953,11 +939,23 @@
       {
         "value": 2128000,
         "date": "31 ago 2026"
+      },
+      {
+        "value": 2171000,
+        "date": "1 sept 2026"
+      },
+      {
+        "value": 2147000,
+        "date": "2 sept 2026"
+      },
+      {
+        "value": 2120000,
+        "date": "3 sept 2026"
       }
     ],
     "max": {
-      "value": 2128000,
-      "date": "31 ago 2026"
+      "value": 2171000,
+      "date": "1 sept 2026"
     },
     "min": {
       "value": 329000,
@@ -968,28 +966,28 @@
     "58958": {
       "id": 58958,
       "id_team": 14,
-      "id_match": 37960,
-      "id_gameweek": 4044,
-      "id_home": 3,
-      "id_away": 14,
+      "id_match": 37973,
+      "id_gameweek": 4045,
+      "id_home": 14,
+      "id_away": 1490,
       "date": {
-        "ts": 1788204600,
-        "text": "Hoy 21:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1788625800,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:30",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Barcelona",
-      "away": "Rayo Vallecano",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Racing de Santander",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,

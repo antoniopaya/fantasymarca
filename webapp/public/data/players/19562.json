@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/19562.png?version=20251004234049",
     "isFavorite": 0,
-    "value": 31750000,
-    "previousValue": 31918000,
+    "value": 30812000,
+    "previousValue": 31090000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 31750000,
+      "floor": 30812000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 47625000,
+      "value": 46218000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 31750000,
+      "price": 30812000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 174,
       "weight": 67
     },
-    "clausesRanking": 262
+    "clausesRanking": 316
   },
   "id": 19562,
   "player_extra": {
@@ -147,8 +147,8 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-12 18:30:00",
-      "endDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-11 21:00:00",
+      "endDate": "2026-09-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -163,7 +163,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 19:00:00",
+      "endDate": "2026-09-17 21:30:00",
       "points": {
         "points": null,
         "isLive": false
@@ -177,7 +177,7 @@
       "id": 4048,
       "number": 7,
       "shortName": "J7",
-      "startDate": "2026-09-20 21:00:00",
+      "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
         "points": null,
@@ -223,7 +223,7 @@
       "number": 10,
       "shortName": "J10",
       "startDate": "2026-10-25 20:00:00",
-      "endDate": "2026-10-25 20:00:00",
+      "endDate": "2026-10-25 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -691,43 +691,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 31918000,
-      "change": -168000,
-      "sign": -168
+      "value": 31090000,
+      "change": -278000,
+      "sign": -278
     },
     {
       "time": "Una semana",
-      "value": 30670000,
-      "change": 1080000,
-      "sign": "+1.080.000"
+      "value": 31607000,
+      "change": -795000,
+      "sign": -795
     },
     {
       "time": "Un mes",
-      "value": 25842000,
-      "change": 5908000,
-      "sign": "+5.908.000"
+      "value": 26747000,
+      "change": 4065000,
+      "sign": "+4.065.000"
     },
     {
       "time": "Un año",
-      "value": 40400000,
-      "change": -8650000,
-      "sign": "-8.650.000"
+      "value": 39695000,
+      "change": -8883000,
+      "sign": "-8.883.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 40400000,
-        "date": "31 ago 2025"
-      },
-      {
-        "value": 40086000,
-        "date": "1 sept 2025"
-      },
-      {
-        "value": 39806000,
-        "date": "2 sept 2025"
-      },
       {
         "value": 39695000,
         "date": "3 sept 2025"
@@ -2179,11 +2167,23 @@
       {
         "value": 31750000,
         "date": "31 ago 2026"
+      },
+      {
+        "value": 31439000,
+        "date": "1 sept 2026"
+      },
+      {
+        "value": 31090000,
+        "date": "2 sept 2026"
+      },
+      {
+        "value": 30812000,
+        "date": "3 sept 2026"
       }
     ],
     "max": {
-      "value": 40400000,
-      "date": "31 ago 2025"
+      "value": 39695000,
+      "date": "3 sept 2025"
     },
     "min": {
       "value": 12730000,
@@ -2200,12 +2200,12 @@
       "id_away": 5,
       "date": {
         "ts": 1788462000,
-        "text": "jue 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "jue",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

@@ -5,13 +5,17 @@
     "position": 4,
     "points": 10,
     "avg": 3.3,
-    "status": null,
+    "status": "injury",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "injury",
+      "description": "Lesión en los isquiotibiales",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/40089.png?version=20251004234421",
     "isFavorite": 0,
-    "value": 9811000,
-    "previousValue": 9789000,
+    "value": 9670000,
+    "previousValue": 10087000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,26 +38,26 @@
       "price": null
     },
     "clause": {
-      "floor": 9811000,
+      "floor": 9670000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 14716500,
+      "value": 14505000,
       "percentage": 50
     },
     "market": {
-      "id": 1727670713,
-      "isPublic": 1,
-      "price": 9811000,
-      "loanable": 0
+      "id": null,
+      "isPublic": null,
+      "price": 9670000,
+      "loanable": null
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": 9811000,
+      "input": null,
       "barter": [],
       "type": null,
       "days": null
@@ -68,7 +72,7 @@
       "height": 192,
       "weight": 75
     },
-    "clausesRanking": 242
+    "clausesRanking": 189
   },
   "id": 40089,
   "player_extra": {
@@ -147,8 +151,8 @@
       "id": 4046,
       "number": 5,
       "shortName": "J5",
-      "startDate": "2026-09-12 18:30:00",
-      "endDate": "2026-09-13 21:00:00",
+      "startDate": "2026-09-11 21:00:00",
+      "endDate": "2026-09-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -163,7 +167,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 19:00:00",
+      "endDate": "2026-09-17 21:30:00",
       "points": {
         "points": null,
         "isLive": false
@@ -177,7 +181,7 @@
       "id": 4048,
       "number": 7,
       "shortName": "J7",
-      "startDate": "2026-09-20 21:00:00",
+      "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
         "points": null,
@@ -223,7 +227,7 @@
       "number": 10,
       "shortName": "J10",
       "startDate": "2026-10-25 20:00:00",
-      "endDate": "2026-10-25 20:00:00",
+      "endDate": "2026-10-25 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -707,43 +711,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 9789000,
-      "change": 22000,
-      "sign": 22
+      "value": 10087000,
+      "change": -417000,
+      "sign": -417
     },
     {
       "time": "Una semana",
-      "value": 10638000,
-      "change": -827000,
-      "sign": -827
+      "value": 10456000,
+      "change": -786000,
+      "sign": -786
     },
     {
       "time": "Un mes",
-      "value": 10524000,
-      "change": -713000,
-      "sign": -713
+      "value": 10384000,
+      "change": -714000,
+      "sign": -714
     },
     {
       "time": "Un año",
-      "value": 5989000,
-      "change": 3822000,
-      "sign": "+3.822.000"
+      "value": 5583000,
+      "change": 4087000,
+      "sign": "+4.087.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 5989000,
-        "date": "31 ago 2025"
-      },
-      {
-        "value": 5860000,
-        "date": "1 sept 2025"
-      },
-      {
-        "value": 5806000,
-        "date": "2 sept 2025"
-      },
       {
         "value": 5583000,
         "date": "3 sept 2025"
@@ -2195,6 +2187,18 @@
       {
         "value": 9811000,
         "date": "31 ago 2026"
+      },
+      {
+        "value": 10026000,
+        "date": "1 sept 2026"
+      },
+      {
+        "value": 10087000,
+        "date": "2 sept 2026"
+      },
+      {
+        "value": 9670000,
+        "date": "3 sept 2026"
       }
     ],
     "max": {
