@@ -131,10 +131,7 @@ MANUAL_OVERRIDES = {
 # la liga los haya incluido en el reparto todavía). id de fantasy.marca.com
 # -> precio en millones de euros. Se aplica después del emparejamiento con el
 # Excel, así que sobrevive a que un futuro cambio en el Excel no los toque.
-EXTRA_PRICES: dict[int, float] = {
-    616: 18,  # Rodri Hernández (Barcelona)
-    28774: 14,  # Julen Agirrezabala (Racing de Santander)
-}
+EXTRA_PRICES: dict[int, float] = {}
 
 
 def find_excel_path() -> str:
