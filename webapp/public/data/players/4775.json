@@ -3,15 +3,15 @@
     "id": 4775,
     "name": "Aarón Martín",
     "position": 2,
-    "points": 0,
-    "avg": 0,
+    "points": 1,
+    "avg": 1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4775.png?version=20260901111219",
     "isFavorite": 0,
-    "value": 796000,
-    "previousValue": 698000,
+    "value": 668000,
+    "previousValue": 851000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 796000,
+      "floor": 668000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1194000,
+      "value": 1002000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 796000,
+      "price": 668000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 4775,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -129,12 +129,14 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
     {
@@ -648,13 +650,21 @@
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   ],
-  "points_history": [],
+  "points_history": [
+    {
+      "season": "26/27",
+      "points": 1,
+      "avg": 1,
+      "id_team": 1490,
+      "last_gameweek": 4
+    }
+  ],
   "values": [
     {
       "time": "Un día",
-      "value": 698000,
-      "change": 98000,
-      "sign": 98
+      "value": 851000,
+      "change": -183000,
+      "sign": -183
     }
   ],
   "values_chart": {
@@ -666,43 +676,59 @@
       {
         "value": 796000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 871000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 906000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 851000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 668000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
-      "value": 796000,
-      "date": "3 sept 2026"
+      "value": 906000,
+      "date": "5 sept 2026"
     },
     "min": {
-      "value": 698000,
-      "date": "2 sept 2026"
+      "value": 668000,
+      "date": "7 sept 2026"
     }
   },
   "next_match": {
     "4775": {
       "id": 4775,
       "id_team": 1490,
-      "id_match": 37973,
-      "id_gameweek": 4045,
-      "id_home": 14,
-      "id_away": 1490,
+      "id_match": 37983,
+      "id_gameweek": 4046,
+      "id_home": 1490,
+      "id_away": 48,
       "date": {
-        "ts": 1788625800,
-        "text": "sáb 18:30",
+        "ts": 1789214400,
+        "text": "sáb 14:00",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "18:30",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Racing de Santander",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Racing de Santander",
+      "away": "Alavés",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
@@ -714,8 +740,9 @@
   },
   "away": {
     "4775": {
-      "points": 0,
-      "avg": 0
+      "id": 4775,
+      "points": 1,
+      "avg": 1
     }
   },
   "owners": [],

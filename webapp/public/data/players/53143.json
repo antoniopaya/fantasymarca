@@ -4,14 +4,14 @@
     "name": "Abde Rebbach",
     "position": 3,
     "points": 14,
-    "avg": 4.7,
+    "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/53143.png?version=20251006023558",
     "isFavorite": 0,
-    "value": 9745000,
-    "previousValue": 9461000,
+    "value": 10318000,
+    "previousValue": 10185000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9745000,
+      "floor": 10318000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 3,
-      "shield2WeeksSku": "shield_t3_2w",
-      "shield1MonthSku": "shield_t3_1m",
-      "value": 14617500,
+      "tier": 4,
+      "shield2WeeksSku": "shield_t4_2w",
+      "shield1MonthSku": "shield_t4_1m",
+      "value": 15477000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9745000,
+      "price": 10318000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 176,
       "weight": null
     },
-    "clausesRanking": 113
+    "clausesRanking": 126
   },
   "id": 53143,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
-    "cards": 2
+    "cards": 3
   },
   "points": [
     {
@@ -135,12 +135,15 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
     {
@@ -658,66 +661,60 @@
     {
       "season": "26/27",
       "points": 14,
-      "avg": 4.6667,
+      "avg": 3.5,
       "id_team": 48,
-      "last_gameweek": 3,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "last_gameweek": 4
     },
     {
       "season": "25/26",
       "points": 100,
       "avg": 3.3333,
       "id_team": 48,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "last_gameweek": 38
     },
     {
       "season": "24/25",
       "points": 17,
       "avg": 2.125,
       "id_team": 48,
-      "last_gameweek": 16,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "last_gameweek": 16
     },
     {
       "season": "23/24",
       "points": 58,
       "avg": 2.5217,
       "id_team": 48,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "last_gameweek": 38
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 9461000,
-      "change": 284000,
-      "sign": 284
+      "value": 10185000,
+      "change": 133000,
+      "sign": 133
     },
     {
       "time": "Una semana",
-      "value": 8046000,
-      "change": 1699000,
-      "sign": "+1.699.000"
+      "value": 8969000,
+      "change": 1349000,
+      "sign": "+1.349.000"
     },
     {
       "time": "Un mes",
-      "value": 3651000,
-      "change": 6094000,
-      "sign": "+6.094.000"
+      "value": 4437000,
+      "change": 5881000,
+      "sign": "+5.881.000"
+    },
+    {
+      "time": "Un año",
+      "value": 366000,
+      "change": 9952000,
+      "sign": "+9.952.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 329000,
-        "date": "5 sept 2025"
-      },
-      {
-        "value": 341000,
-        "date": "6 sept 2025"
-      },
       {
         "value": 366000,
         "date": "7 sept 2025"
@@ -2165,11 +2162,27 @@
       {
         "value": 9745000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 9860000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 9995000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 10185000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 10318000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
-      "value": 9745000,
-      "date": "3 sept 2026"
+      "value": 10318000,
+      "date": "7 sept 2026"
     },
     "min": {
       "value": 329000,
@@ -2180,28 +2193,28 @@
     "53143": {
       "id": 53143,
       "id_team": 48,
-      "id_match": 37968,
-      "id_gameweek": 4045,
-      "id_home": 48,
-      "id_away": 50,
+      "id_match": 37983,
+      "id_gameweek": 4046,
+      "id_home": 1490,
+      "id_away": 48,
       "date": {
-        "ts": 1788712200,
-        "text": "dom 18:30",
+        "ts": 1789214400,
+        "text": "sáb 14:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "18:30",
+          "date": "sáb",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Osasuna",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "home": "Racing de Santander",
+      "away": "Alavés",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
@@ -2209,7 +2222,7 @@
     "53143": {
       "id": 53143,
       "points": 9,
-      "avg": 4.5
+      "avg": 3
     }
   },
   "away": {

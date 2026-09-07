@@ -3,15 +3,15 @@
     "id": 925296,
     "name": "Giorgi Tsitaishvili ",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 2,
+    "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/925296.png?version=20260813101752",
     "isFavorite": 0,
-    "value": 340000,
-    "previousValue": 329000,
+    "value": 496000,
+    "previousValue": 465000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 340000,
+      "price": 496000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 171,
       "weight": null
     },
-    "clausesRanking": 449
+    "clausesRanking": 376
   },
   "id": 925296,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -129,12 +129,14 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
     {
@@ -648,19 +650,27 @@
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   ],
-  "points_history": [],
+  "points_history": [
+    {
+      "season": "26/27",
+      "points": 2,
+      "avg": 2,
+      "id_team": 14,
+      "last_gameweek": 4
+    }
+  ],
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 11000,
-      "sign": 11
+      "value": 465000,
+      "change": 31000,
+      "sign": 31
     },
     {
       "time": "Una semana",
-      "value": 953000,
-      "change": -613000,
-      "sign": -613
+      "value": 378000,
+      "change": 118000,
+      "sign": 118
     }
   ],
   "values_chart": {
@@ -748,6 +758,22 @@
       {
         "value": 340000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 362000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 344000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 465000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 496000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -763,35 +789,36 @@
     "925296": {
       "id": 925296,
       "id_team": 14,
-      "id_match": 37973,
-      "id_gameweek": 4045,
-      "id_home": 14,
-      "id_away": 1490,
+      "id_match": 37982,
+      "id_gameweek": 4046,
+      "id_home": 15,
+      "id_away": 14,
       "date": {
-        "ts": 1788625800,
-        "text": "sáb 18:30",
+        "ts": 1789239600,
+        "text": "sáb 21:00",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "18:30",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Racing de Santander",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Real Madrid",
+      "away": "Rayo Vallecano",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,
   "home": {
     "925296": {
-      "points": 0,
-      "avg": 0
+      "id": 925296,
+      "points": 2,
+      "avg": 2
     }
   },
   "away": {

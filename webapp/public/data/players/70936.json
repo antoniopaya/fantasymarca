@@ -3,15 +3,15 @@
     "id": 70936,
     "name": "Manu Hernando",
     "position": 2,
-    "points": 14,
-    "avg": 4.7,
+    "points": 15,
+    "avg": 3.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70936.png?version=20260619115608",
     "isFavorite": 0,
-    "value": 8887000,
-    "previousValue": 8513000,
+    "value": 10521000,
+    "previousValue": 10085000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 8887000,
+      "floor": 10521000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 3,
-      "shield2WeeksSku": "shield_t3_2w",
-      "shield1MonthSku": "shield_t3_1m",
-      "value": 13330500,
+      "tier": 4,
+      "shield2WeeksSku": "shield_t4_2w",
+      "shield1MonthSku": "shield_t4_1m",
+      "value": 15781500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 8887000,
+      "price": 10521000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 181,
       "weight": null
     },
-    "clausesRanking": 10
+    "clausesRanking": 12
   },
   "id": 70936,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 1
   },
@@ -134,12 +134,14 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
     {
@@ -656,31 +658,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 14,
-      "avg": 4.6667,
+      "points": 15,
+      "avg": 3.75,
       "id_team": 1490,
-      "last_gameweek": 3,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "last_gameweek": 4
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 8513000,
-      "change": 374000,
-      "sign": 374
+      "value": 10085000,
+      "change": 436000,
+      "sign": 436
     },
     {
       "time": "Una semana",
-      "value": 6765000,
-      "change": 2122000,
-      "sign": "+2.122.000"
+      "value": 7890000,
+      "change": 2631000,
+      "sign": "+2.631.000"
     },
     {
       "time": "Un mes",
-      "value": 2724000,
-      "change": 6163000,
-      "sign": "+6.163.000"
+      "value": 3511000,
+      "change": 7010000,
+      "sign": "+7.010.000"
     }
   ],
   "values_chart": {
@@ -988,11 +989,27 @@
       {
         "value": 8887000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 9266000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 9665000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 10085000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 10521000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
-      "value": 8887000,
-      "date": "3 sept 2026"
+      "value": 10521000,
+      "date": "7 sept 2026"
     },
     "min": {
       "value": 329000,
@@ -1003,28 +1020,28 @@
     "70936": {
       "id": 70936,
       "id_team": 1490,
-      "id_match": 37973,
-      "id_gameweek": 4045,
-      "id_home": 14,
-      "id_away": 1490,
+      "id_match": 37983,
+      "id_gameweek": 4046,
+      "id_home": 1490,
+      "id_away": 48,
       "date": {
-        "ts": 1788625800,
-        "text": "sáb 18:30",
+        "ts": 1789214400,
+        "text": "sáb 14:00",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "18:30",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Racing de Santander",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Racing de Santander",
+      "away": "Alavés",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
@@ -1038,8 +1055,8 @@
   "away": {
     "70936": {
       "id": 70936,
-      "points": 5,
-      "avg": 5
+      "points": 6,
+      "avg": 3
     }
   },
   "owners": [],

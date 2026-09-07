@@ -3,15 +3,15 @@
     "id": 68606,
     "name": "Ángel Pérez",
     "position": 3,
-    "points": 25,
-    "avg": 8.3,
+    "points": 41,
+    "avg": 10.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68606.png?version=20260323141026",
     "isFavorite": 0,
-    "value": 22517000,
-    "previousValue": 22139000,
+    "value": 23868000,
+    "previousValue": 23415000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 22517000,
+      "floor": 23868000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 33775500,
+      "value": 35802000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 22517000,
+      "price": 23868000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 88
+    "clausesRanking": 77
   },
   "id": 68606,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 0
   },
@@ -136,12 +136,15 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 16,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "assist",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
     {
@@ -658,39 +661,37 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 25,
-      "avg": 8.3333,
+      "points": 41,
+      "avg": 10.25,
       "id_team": 48,
-      "last_gameweek": 3,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "last_gameweek": 4
     },
     {
       "season": "25/26",
       "points": 72,
       "avg": 4.5,
       "id_team": 48,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "last_gameweek": 38
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 22139000,
-      "change": 378000,
-      "sign": 378
+      "value": 23415000,
+      "change": 453000,
+      "sign": 453
     },
     {
       "time": "Una semana",
-      "value": 20373000,
-      "change": 2144000,
-      "sign": "+2.144.000"
+      "value": 21361000,
+      "change": 2507000,
+      "sign": "+2.507.000"
     },
     {
       "time": "Un mes",
-      "value": 14025000,
-      "change": 8492000,
-      "sign": "+8.492.000"
+      "value": 16062000,
+      "change": 7806000,
+      "sign": "+7.806.000"
     }
   ],
   "values_chart": {
@@ -1570,11 +1571,27 @@
       {
         "value": 22517000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 22749000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 23069000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 23415000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 23868000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
-      "value": 22517000,
-      "date": "3 sept 2026"
+      "value": 23868000,
+      "date": "7 sept 2026"
     },
     "min": {
       "value": 329000,
@@ -1585,36 +1602,36 @@
     "68606": {
       "id": 68606,
       "id_team": 48,
-      "id_match": 37968,
-      "id_gameweek": 4045,
-      "id_home": 48,
-      "id_away": 50,
+      "id_match": 37983,
+      "id_gameweek": 4046,
+      "id_home": 1490,
+      "id_away": 48,
       "date": {
-        "ts": 1788712200,
-        "text": "dom 18:30",
+        "ts": 1789214400,
+        "text": "sáb 14:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "18:30",
+          "date": "sáb",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Osasuna",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "home": "Racing de Santander",
+      "away": "Alavés",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
   "home": {
     "68606": {
       "id": 68606,
-      "points": 19,
-      "avg": 9.5
+      "points": 35,
+      "avg": 11.6667
     }
   },
   "away": {

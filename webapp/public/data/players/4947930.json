@@ -3,15 +3,15 @@
     "id": 4947930,
     "name": "Jens-Lys Cajuste",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 1,
+    "avg": 1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4947930.png?version=20260902085048",
     "isFavorite": 0,
-    "value": 5560000,
-    "previousValue": null,
+    "value": 4845000,
+    "previousValue": 5084000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5560000,
+      "floor": 4845000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8340000,
+      "value": 7267500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5560000,
+      "price": 4845000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 4947930,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -129,12 +129,14 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
     {
@@ -648,13 +650,44 @@
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   ],
-  "points_history": [],
-  "values": [],
+  "points_history": [
+    {
+      "season": "26/27",
+      "points": 1,
+      "avg": 1,
+      "id_team": 13,
+      "last_gameweek": 4
+    }
+  ],
+  "values": [
+    {
+      "time": "Un día",
+      "value": 5084000,
+      "change": -239000,
+      "sign": -239
+    }
+  ],
   "values_chart": {
     "points": [
       {
         "value": 5560000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 5499000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 5297000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 5084000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 4845000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -662,43 +695,44 @@
       "date": "3 sept 2026"
     },
     "min": {
-      "value": 5560000,
-      "date": "3 sept 2026"
+      "value": 4845000,
+      "date": "7 sept 2026"
     }
   },
   "next_match": {
     "4947930": {
       "id": 4947930,
       "id_team": 13,
-      "id_match": 37972,
-      "id_gameweek": 4045,
-      "id_home": 13,
-      "id_away": 12,
+      "id_match": 37978,
+      "id_gameweek": 4046,
+      "id_home": 5,
+      "id_away": 13,
       "date": {
-        "ts": 1788712200,
-        "text": "dom 18:30",
+        "ts": 1789300800,
+        "text": "dom 14:00",
         "format": "EEE H:mm",
         "splitted": {
           "date": "dom",
-          "time": "18:30",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Levante",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Celta",
+      "away": "Málaga",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,
   "home": {
     "4947930": {
-      "points": 0,
-      "avg": 0
+      "id": 4947930,
+      "points": 1,
+      "avg": 1
     }
   },
   "away": {

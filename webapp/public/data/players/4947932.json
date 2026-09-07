@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4947932.png?version=20260902085435",
     "isFavorite": 0,
-    "value": 4067000,
-    "previousValue": null,
+    "value": 3903000,
+    "previousValue": 4076000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4067000,
+      "floor": 3903000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6100500,
+      "value": 5854500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4067000,
+      "price": 3903000,
       "loanable": null
     },
     "bid": {
@@ -134,7 +134,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
     {
@@ -649,49 +649,72 @@
     }
   ],
   "points_history": [],
-  "values": [],
+  "values": [
+    {
+      "time": "Un día",
+      "value": 4076000,
+      "change": -173000,
+      "sign": -173
+    }
+  ],
   "values_chart": {
     "points": [
       {
         "value": 4067000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 4072000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 4105000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 4076000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 3903000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
-      "value": 4067000,
-      "date": "3 sept 2026"
+      "value": 4105000,
+      "date": "5 sept 2026"
     },
     "min": {
-      "value": 4067000,
-      "date": "3 sept 2026"
+      "value": 3903000,
+      "date": "7 sept 2026"
     }
   },
   "next_match": {
     "4947932": {
       "id": 4947932,
       "id_team": 14,
-      "id_match": 37973,
-      "id_gameweek": 4045,
-      "id_home": 14,
-      "id_away": 1490,
+      "id_match": 37982,
+      "id_gameweek": 4046,
+      "id_home": 15,
+      "id_away": 14,
       "date": {
-        "ts": 1788625800,
-        "text": "sáb 18:30",
+        "ts": 1789239600,
+        "text": "sáb 21:00",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "18:30",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Racing de Santander",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Real Madrid",
+      "away": "Rayo Vallecano",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,

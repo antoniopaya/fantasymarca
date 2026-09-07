@@ -3,15 +3,15 @@
     "id": 48556,
     "name": "Andreas Christensen",
     "position": 2,
-    "points": 12,
-    "avg": 6,
+    "points": 14,
+    "avg": 4.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/48556.png?version=20260217183949",
     "isFavorite": 0,
-    "value": 4942000,
-    "previousValue": 4776000,
+    "value": 5399000,
+    "previousValue": 5271000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4942000,
+      "floor": 5399000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7413000,
+      "value": 8098500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4942000,
+      "price": 5399000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 188,
       "weight": 78
     },
-    "clausesRanking": 74
+    "clausesRanking": 72
   },
   "id": 48556,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 0
   },
@@ -129,12 +129,14 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
     {
@@ -651,81 +653,61 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 12,
-      "avg": 6,
+      "points": 14,
+      "avg": 4.6667,
       "id_team": 3,
-      "last_gameweek": 3,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "last_gameweek": 4
     },
     {
       "season": "25/26",
       "points": 27,
       "avg": 2.0769,
       "id_team": 3,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "last_gameweek": 38
     },
     {
       "season": "24/25",
       "points": 16,
       "avg": 3.2,
       "id_team": 3,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "last_gameweek": 38
     },
     {
       "season": "23/24",
       "points": 135,
       "avg": 4.5,
       "id_team": 3,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "last_gameweek": 38
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 4776000,
-      "change": 166000,
-      "sign": 166
+      "value": 5271000,
+      "change": 128000,
+      "sign": 128
     },
     {
       "time": "Una semana",
-      "value": 3852000,
-      "change": 1090000,
-      "sign": "+1.090.000"
+      "value": 4459000,
+      "change": 940000,
+      "sign": 940
     },
     {
       "time": "Un mes",
-      "value": 2277000,
-      "change": 2665000,
-      "sign": "+2.665.000"
+      "value": 2496000,
+      "change": 2903000,
+      "sign": "+2.903.000"
     },
     {
       "time": "Un año",
-      "value": 4277000,
-      "change": 665000,
-      "sign": 665
+      "value": 4564000,
+      "change": 835000,
+      "sign": 835
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 4277000,
-        "date": "3 sept 2025"
-      },
-      {
-        "value": 4369000,
-        "date": "4 sept 2025"
-      },
-      {
-        "value": 4462000,
-        "date": "5 sept 2025"
-      },
-      {
-        "value": 4524000,
-        "date": "6 sept 2025"
-      },
       {
         "value": 4564000,
         "date": "7 sept 2025"
@@ -2173,6 +2155,22 @@
       {
         "value": 4942000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 5045000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 5152000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 5271000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 5399000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -2188,12 +2186,12 @@
     "48556": {
       "id": 48556,
       "id_team": 3,
-      "id_match": 37975,
-      "id_gameweek": 4045,
-      "id_home": 19,
+      "id_match": 37980,
+      "id_gameweek": 4046,
+      "id_home": 12,
       "id_away": 3,
       "date": {
-        "ts": 1788704100,
+        "ts": 1789308900,
         "text": "dom 16:15",
         "format": "EEE H:mm",
         "splitted": {
@@ -2205,10 +2203,10 @@
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Valencia",
+      "home": "Levante",
       "away": "Barcelona",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
@@ -2223,8 +2221,8 @@
   "away": {
     "48556": {
       "id": 48556,
-      "points": 10,
-      "avg": 10
+      "points": 12,
+      "avg": 6
     }
   },
   "owners": [],

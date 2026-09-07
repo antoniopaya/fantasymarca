@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/61009.png?version=20251003194240",
     "isFavorite": 0,
-    "value": 1630000,
-    "previousValue": 1487000,
+    "value": 1525000,
+    "previousValue": 1680000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1630000,
+      "floor": 1525000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2445000,
+      "value": 2287500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1630000,
+      "price": 1525000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 167,
       "weight": null
     },
-    "clausesRanking": 151
+    "clausesRanking": 195
   },
   "id": 61009,
   "player_extra": {
@@ -136,7 +136,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
     {
@@ -656,70 +656,51 @@
       "points": 7,
       "avg": 7,
       "id_team": 4,
-      "last_gameweek": 1,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "last_gameweek": 1
     },
     {
       "season": "25/26",
       "points": 32,
       "avg": 2.4615,
       "id_team": 4,
-      "last_gameweek": 29,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "last_gameweek": 29
     },
     {
       "season": "24/25",
       "points": 23,
       "avg": 4.6,
       "id_team": 4,
-      "last_gameweek": 37,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "last_gameweek": 37
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 1487000,
-      "change": 143000,
-      "sign": 143
+      "value": 1680000,
+      "change": -155000,
+      "sign": -155
     },
     {
       "time": "Una semana",
-      "value": 587000,
-      "change": 1043000,
-      "sign": "+1.043.000"
+      "value": 1306000,
+      "change": 219000,
+      "sign": 219
     },
     {
       "time": "Un mes",
-      "value": 329000,
-      "change": 1301000,
-      "sign": "+1.301.000"
+      "value": 337000,
+      "change": 1188000,
+      "sign": "+1.188.000"
     },
     {
       "time": "Un año",
-      "value": 932000,
-      "change": 698000,
-      "sign": 698
+      "value": 1782000,
+      "change": -257000,
+      "sign": -257
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 932000,
-        "date": "3 sept 2025"
-      },
-      {
-        "value": 1221000,
-        "date": "4 sept 2025"
-      },
-      {
-        "value": 1402000,
-        "date": "5 sept 2025"
-      },
-      {
-        "value": 1584000,
-        "date": "6 sept 2025"
-      },
       {
         "value": 1782000,
         "date": "7 sept 2025"
@@ -2167,6 +2148,22 @@
       {
         "value": 1630000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 1711000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 1735000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 1680000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 1525000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -2182,28 +2179,28 @@
     "61009": {
       "id": 61009,
       "id_team": 4,
-      "id_match": 37974,
-      "id_gameweek": 4045,
-      "id_home": 4,
-      "id_away": 15,
+      "id_match": 37986,
+      "id_gameweek": 4046,
+      "id_home": 20,
+      "id_away": 4,
       "date": {
-        "ts": 1788548400,
-        "text": "vie 21:00",
-        "format": "EEE H:mm",
+        "ts": 1789412400,
+        "text": "14 sept 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "vie",
+          "date": "14 sept",
           "time": "21:00",
-          "format": "EEE"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Real Madrid",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Villarreal",
+      "away": "Betis",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,

@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60218.png?version=20260619120854",
     "isFavorite": 0,
-    "value": 6921000,
-    "previousValue": 6980000,
+    "value": 6033000,
+    "previousValue": 6212000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6921000,
+      "floor": 6033000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 10381500,
+      "value": 9049500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6921000,
+      "price": 6033000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 54
+    "clausesRanking": 157
   },
   "id": 60218,
   "player_extra": {
@@ -139,8 +139,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 304883,
+        "id_player": 60218,
+        "category": "injury",
+        "description": "Lesión en el sóleo",
+        "duration": "Baja hasta finales de Septiembre",
+        "since": "2026-09-02 09:10:07",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
     {
@@ -660,36 +669,34 @@
       "points": 12,
       "avg": 4,
       "id_team": 1,
-      "last_gameweek": 3,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "last_gameweek": 3
     },
     {
       "season": "24/25",
       "points": 25,
       "avg": 3.125,
       "id_team": 1,
-      "last_gameweek": 35,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "last_gameweek": 35
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 6980000,
-      "change": -59000,
-      "sign": -59
+      "value": 6212000,
+      "change": -179000,
+      "sign": -179
     },
     {
       "time": "Una semana",
-      "value": 5537000,
-      "change": 1384000,
-      "sign": "+1.384.000"
+      "value": 6529000,
+      "change": -496000,
+      "sign": -496
     },
     {
       "time": "Un mes",
-      "value": 4015000,
-      "change": 2906000,
-      "sign": "+2.906.000"
+      "value": 4277000,
+      "change": 1756000,
+      "sign": "+1.756.000"
     }
   ],
   "values_chart": {
@@ -1001,6 +1008,22 @@
       {
         "value": 6921000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 6649000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 6442000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 6212000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 6033000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -1016,17 +1039,17 @@
     "60218": {
       "id": 60218,
       "id_team": 1,
-      "id_match": 37967,
-      "id_gameweek": 4045,
+      "id_match": 37977,
+      "id_gameweek": 4046,
       "id_home": 1,
-      "id_away": 2,
+      "id_away": 23,
       "date": {
-        "ts": 1788617700,
-        "text": "sáb 16:15",
+        "ts": 1789230600,
+        "text": "sáb 18:30",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "16:15",
+          "time": "18:30",
           "format": "EEE"
         }
       },
@@ -1034,10 +1057,10 @@
       "confirmed": null,
       "minute": null,
       "home": "Athletic Club",
-      "away": "Atlético",
+      "away": "Elche",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   },
   "starter": false,

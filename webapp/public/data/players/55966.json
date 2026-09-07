@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/55966.png?version=20240617154112",
     "isFavorite": 0,
-    "value": 9052000,
-    "previousValue": 9484000,
+    "value": 7626000,
+    "previousValue": 7955000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9052000,
+      "floor": 7626000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 13578000,
+      "value": 11439000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9052000,
+      "price": 7626000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 242
+    "clausesRanking": null
   },
   "id": 55966,
   "player_extra": {
@@ -145,8 +145,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 304858,
+        "id_player": 55966,
+        "category": "double",
+        "description": "Doble tarjeta",
+        "duration": "Baja esta jornada",
+        "since": "2026-09-01 11:18:48",
+        "until": null,
+        "status": "Sancionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     },
     {
@@ -666,78 +675,58 @@
       "points": 8,
       "avg": 2.6667,
       "id_team": 6,
-      "last_gameweek": 3,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "last_gameweek": 3
     },
     {
       "season": "25/26",
       "points": 1,
       "avg": 1,
       "id_team": 20,
-      "last_gameweek": 8,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+      "last_gameweek": 8
     },
     {
       "season": "24/25",
       "points": 82,
       "avg": 3.7273,
       "id_team": 49,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/49.png?version="
+      "last_gameweek": 38
     },
     {
       "season": "23/24",
       "points": 5,
       "avg": 0.5,
       "id_team": 20,
-      "last_gameweek": 20,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+      "last_gameweek": 20
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 9484000,
-      "change": -432000,
-      "sign": -432
+      "value": 7955000,
+      "change": -329000,
+      "sign": -329
     },
     {
       "time": "Una semana",
-      "value": 9554000,
-      "change": -502000,
-      "sign": -502
+      "value": 10178000,
+      "change": -2552000,
+      "sign": "-2.552.000"
     },
     {
       "time": "Un mes",
-      "value": 4548000,
-      "change": 4504000,
-      "sign": "+4.504.000"
+      "value": 5228000,
+      "change": 2398000,
+      "sign": "+2.398.000"
     },
     {
       "time": "Un año",
-      "value": 510000,
-      "change": 8542000,
-      "sign": "+8.542.000"
+      "value": 455000,
+      "change": 7171000,
+      "sign": "+7.171.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 510000,
-        "date": "3 sept 2025"
-      },
-      {
-        "value": 379000,
-        "date": "4 sept 2025"
-      },
-      {
-        "value": 513000,
-        "date": "5 sept 2025"
-      },
-      {
-        "value": 524000,
-        "date": "6 sept 2025"
-      },
       {
         "value": 455000,
         "date": "7 sept 2025"
@@ -1489,6 +1478,22 @@
       {
         "value": 9052000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 8637000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 8286000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 7955000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 7626000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -1504,27 +1509,27 @@
     "55966": {
       "id": 55966,
       "id_team": 6,
-      "id_match": 37976,
-      "id_gameweek": 4045,
-      "id_home": 20,
+      "id_match": 37979,
+      "id_gameweek": 4046,
+      "id_home": 9,
       "id_away": 6,
       "date": {
-        "ts": 1788634800,
-        "text": "sáb 21:00",
+        "ts": 1789317000,
+        "text": "dom 18:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "21:00",
+          "date": "dom",
+          "time": "18:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Villarreal",
+      "home": "Getafe",
       "away": "Deportivo da Coruña",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },

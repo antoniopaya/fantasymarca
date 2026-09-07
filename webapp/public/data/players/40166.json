@@ -5,17 +5,17 @@
     "position": 3,
     "points": 0,
     "avg": 0,
-    "status": "doubt",
+    "status": "injury",
     "id_competition": 1,
     "injury": {
-      "category": "doubt",
+      "category": "injury",
       "description": "Molestias",
-      "duration": "Duda esta jornada"
+      "duration": "Baja esta jornada"
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/40166.png?version=20251003183451",
     "isFavorite": 0,
-    "value": 26127000,
-    "previousValue": 26592000,
+    "value": 24298000,
+    "previousValue": 24689000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 26127000,
+      "floor": 24298000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 39190500,
+      "value": 36447000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 26127000,
+      "price": 24298000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 188,
       "weight": null
     },
-    "clausesRanking": 432
+    "clausesRanking": 398
   },
   "id": 40166,
   "player_extra": {
@@ -129,7 +129,7 @@
         "description": "Molestias",
         "duration": "Duda esta jornada",
         "since": "2026-08-25 12:40:58",
-        "until": null,
+        "until": "2026-09-04 10:05:26",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -146,8 +146,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 305026,
+        "id_player": 40166,
+        "category": "injury",
+        "description": "Molestias",
+        "duration": "Baja esta jornada",
+        "since": "2026-09-04 10:05:26",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
     {
@@ -667,70 +676,51 @@
       "points": 171,
       "avg": 5.1818,
       "id_team": 15,
-      "last_gameweek": 37,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "last_gameweek": 37
     },
     {
       "season": "24/25",
       "points": 147,
       "avg": 4.5938,
       "id_team": 15,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "last_gameweek": 38
     },
     {
       "season": "23/24",
       "points": 144,
       "avg": 5.3333,
       "id_team": 15,
-      "last_gameweek": 33,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "last_gameweek": 33
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 26592000,
-      "change": -465000,
-      "sign": -465
+      "value": 24689000,
+      "change": -391000,
+      "sign": -391
     },
     {
       "time": "Una semana",
-      "value": 29530000,
-      "change": -3403000,
-      "sign": "-3.403.000"
+      "value": 27486000,
+      "change": -3188000,
+      "sign": "-3.188.000"
     },
     {
       "time": "Un mes",
-      "value": 38002000,
-      "change": -11875000,
-      "sign": "-11.875.000"
+      "value": 37193000,
+      "change": -12895000,
+      "sign": "-12.895.000"
     },
     {
       "time": "Un año",
-      "value": 41138000,
-      "change": -15011000,
-      "sign": "-15.011.000"
+      "value": 41143000,
+      "change": -16845000,
+      "sign": "-16.845.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 41138000,
-        "date": "3 sept 2025"
-      },
-      {
-        "value": 41203000,
-        "date": "4 sept 2025"
-      },
-      {
-        "value": 41292000,
-        "date": "5 sept 2025"
-      },
-      {
-        "value": 41285000,
-        "date": "6 sept 2025"
-      },
       {
         "value": 41143000,
         "date": "7 sept 2025"
@@ -2178,6 +2168,22 @@
       {
         "value": 26127000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 25584000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 25148000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 24689000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 24298000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -2185,24 +2191,24 @@
       "date": "10 abr 2026"
     },
     "min": {
-      "value": 26127000,
-      "date": "3 sept 2026"
+      "value": 24298000,
+      "date": "7 sept 2026"
     }
   },
   "next_match": {
     "40166": {
       "id": 40166,
       "id_team": 15,
-      "id_match": 37974,
-      "id_gameweek": 4045,
-      "id_home": 4,
-      "id_away": 15,
+      "id_match": 37982,
+      "id_gameweek": 4046,
+      "id_home": 15,
+      "id_away": 14,
       "date": {
-        "ts": 1788548400,
-        "text": "vie 21:00",
+        "ts": 1789239600,
+        "text": "sáb 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "vie",
+          "date": "sáb",
           "time": "21:00",
           "format": "EEE"
         }
@@ -2210,11 +2216,11 @@
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Real Madrid",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Real Madrid",
+      "away": "Rayo Vallecano",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,

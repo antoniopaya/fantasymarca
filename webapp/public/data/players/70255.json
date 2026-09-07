@@ -5,13 +5,17 @@
     "position": 3,
     "points": 0,
     "avg": 0,
-    "status": null,
+    "status": "other",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "other",
+      "description": "No convocado",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70255.png?version=20260502195407",
     "isFavorite": 0,
-    "value": 799000,
-    "previousValue": 660000,
+    "value": 751000,
+    "previousValue": 962000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 799000,
+      "floor": 751000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1198500,
+      "value": 1126500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 799000,
+      "price": 751000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 168,
       "weight": null
     },
-    "clausesRanking": 152
+    "clausesRanking": 141
   },
   "id": 70255,
   "player_extra": {
@@ -133,8 +137,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 305050,
+        "id_player": 70255,
+        "category": "other",
+        "description": "No convocado",
+        "duration": "Baja esta jornada",
+        "since": "2026-09-04 16:25:39",
+        "until": null,
+        "status": "No convocado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
     {
@@ -654,28 +667,27 @@
       "points": 9,
       "avg": 9,
       "id_team": 2,
-      "last_gameweek": 34,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "last_gameweek": 34
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 660000,
-      "change": 139000,
-      "sign": 139
+      "value": 962000,
+      "change": -211000,
+      "sign": -211
     },
     {
       "time": "Una semana",
-      "value": 329000,
-      "change": 470000,
-      "sign": 470
+      "value": 500000,
+      "change": 251000,
+      "sign": 251
     },
     {
       "time": "Un mes",
-      "value": 422000,
-      "change": 377000,
-      "sign": 377
+      "value": 329000,
+      "change": 422000,
+      "sign": 422
     }
   ],
   "values_chart": {
@@ -1175,11 +1187,27 @@
       {
         "value": 799000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 918000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 978000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 962000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 751000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
-      "value": 799000,
-      "date": "3 sept 2026"
+      "value": 978000,
+      "date": "5 sept 2026"
     },
     "min": {
       "value": 329000,
@@ -1190,28 +1218,28 @@
     "70255": {
       "id": 70255,
       "id_team": 1490,
-      "id_match": 37973,
-      "id_gameweek": 4045,
-      "id_home": 14,
-      "id_away": 1490,
+      "id_match": 37983,
+      "id_gameweek": 4046,
+      "id_home": 1490,
+      "id_away": 48,
       "date": {
-        "ts": 1788625800,
-        "text": "sáb 18:30",
+        "ts": 1789214400,
+        "text": "sáb 14:00",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "18:30",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Racing de Santander",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Racing de Santander",
+      "away": "Alavés",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,

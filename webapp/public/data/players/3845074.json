@@ -3,15 +3,15 @@
     "id": 3845074,
     "name": "Nathan Saliba",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 5,
+    "avg": 5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3845074.png?version=20260826061635",
     "isFavorite": 0,
-    "value": 7069000,
-    "previousValue": 7187000,
+    "value": 6781000,
+    "previousValue": 6683000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 7069000,
+      "floor": 6781000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 10603500,
+      "value": 10171500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 7069000,
+      "price": 6781000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 173,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 384
   },
   "id": 3845074,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -129,12 +129,12 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
     {
@@ -648,19 +648,27 @@
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   ],
-  "points_history": [],
+  "points_history": [
+    {
+      "season": "26/27",
+      "points": 5,
+      "avg": 5,
+      "id_team": 20,
+      "last_gameweek": 4
+    }
+  ],
   "values": [
     {
       "time": "Un día",
-      "value": 7187000,
-      "change": -118000,
-      "sign": -118
+      "value": 6683000,
+      "change": 98000,
+      "sign": 98
     },
     {
       "time": "Una semana",
-      "value": 8127000,
-      "change": -1058000,
-      "sign": "-1.058.000"
+      "value": 7577000,
+      "change": -796000,
+      "sign": -796
     }
   ],
   "values_chart": {
@@ -700,6 +708,22 @@
       {
         "value": 7069000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 6904000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 6695000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 6683000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 6781000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -707,43 +731,44 @@
       "date": "27 ago 2026"
     },
     "min": {
-      "value": 7069000,
-      "date": "3 sept 2026"
+      "value": 6683000,
+      "date": "6 sept 2026"
     }
   },
   "next_match": {
     "3845074": {
       "id": 3845074,
       "id_team": 20,
-      "id_match": 37976,
-      "id_gameweek": 4045,
+      "id_match": 37986,
+      "id_gameweek": 4046,
       "id_home": 20,
-      "id_away": 6,
+      "id_away": 4,
       "date": {
-        "ts": 1788634800,
-        "text": "sáb 21:00",
-        "format": "EEE H:mm",
+        "ts": 1789412400,
+        "text": "14 sept 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
+          "date": "14 sept",
           "time": "21:00",
-          "format": "EEE"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Villarreal",
-      "away": "Deportivo da Coruña",
+      "away": "Betis",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "3845074": {
-      "points": 0,
-      "avg": 0
+      "id": 3845074,
+      "points": 5,
+      "avg": 5
     }
   },
   "away": {

@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60859.png?version=20250107092359",
     "isFavorite": 0,
-    "value": 525000,
-    "previousValue": 333000,
+    "value": 425000,
+    "previousValue": 525000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 525000,
+      "price": 425000,
       "loanable": null
     },
     "bid": {
@@ -64,7 +64,7 @@
     },
     "loan": [],
     "bio": {
-      "age": 26,
+      "age": 27,
       "country": {
         "flag": "🇲🇾",
         "country": "Malasia"
@@ -164,8 +164,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 293850,
+        "id_player": 60859,
+        "category": "other",
+        "description": "Sanción disciplinaria",
+        "duration": "Baja hasta Octubre",
+        "since": "2026-03-05 15:56:41",
+        "until": null,
+        "status": "No convocado"
+      },
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
     {
@@ -685,62 +694,44 @@
       "points": 47,
       "avg": 4.7,
       "id_team": 48,
-      "last_gameweek": 26,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "last_gameweek": 26
     },
     {
       "season": "24/25",
       "points": 51,
       "avg": 5.1,
       "id_team": 48,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "last_gameweek": 38
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 333000,
-      "change": 192000,
-      "sign": 192
+      "value": 525000,
+      "change": -100000,
+      "sign": -100
     },
     {
       "time": "Una semana",
       "value": 329000,
-      "change": 196000,
-      "sign": 196
+      "change": 96000,
+      "sign": 96
     },
     {
       "time": "Un mes",
-      "value": 329000,
-      "change": 196000,
-      "sign": 196
+      "value": 469000,
+      "change": -44000,
+      "sign": -44
     },
     {
       "time": "Un año",
-      "value": 9519000,
-      "change": -8994000,
-      "sign": "-8.994.000"
+      "value": 10626000,
+      "change": -10201000,
+      "sign": "-10.201.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 9519000,
-        "date": "3 sept 2025"
-      },
-      {
-        "value": 9813000,
-        "date": "4 sept 2025"
-      },
-      {
-        "value": 10086000,
-        "date": "5 sept 2025"
-      },
-      {
-        "value": 10369000,
-        "date": "6 sept 2025"
-      },
       {
         "value": 10626000,
         "date": "7 sept 2025"
@@ -2188,6 +2179,22 @@
       {
         "value": 525000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 392000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 525000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 425000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -2203,28 +2210,28 @@
     "60859": {
       "id": 60859,
       "id_team": 48,
-      "id_match": 37968,
-      "id_gameweek": 4045,
-      "id_home": 48,
-      "id_away": 50,
+      "id_match": 37983,
+      "id_gameweek": 4046,
+      "id_home": 1490,
+      "id_away": 48,
       "date": {
-        "ts": 1788712200,
-        "text": "dom 18:30",
+        "ts": 1789214400,
+        "text": "sáb 14:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "18:30",
+          "date": "sáb",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Osasuna",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "home": "Racing de Santander",
+      "away": "Alavés",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,

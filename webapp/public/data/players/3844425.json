@@ -3,15 +3,15 @@
     "id": 3844425,
     "name": "Couhaib Driouech",
     "position": 4,
-    "points": 0,
-    "avg": 0,
+    "points": 1,
+    "avg": 1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3844425.png?version=20260825210031",
     "isFavorite": 0,
-    "value": 5053000,
-    "previousValue": 5168000,
+    "value": 4613000,
+    "previousValue": 4710000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5053000,
+      "floor": 4613000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7579500,
+      "value": 6919500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5053000,
+      "price": 4613000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 444
+    "clausesRanking": 330
   },
   "id": 3844425,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -159,12 +159,15 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
     {
@@ -648,19 +651,27 @@
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   ],
-  "points_history": [],
+  "points_history": [
+    {
+      "season": "26/27",
+      "points": 1,
+      "avg": 1,
+      "id_team": 5,
+      "last_gameweek": 6
+    }
+  ],
   "values": [
     {
       "time": "Un día",
-      "value": 5168000,
-      "change": -115000,
-      "sign": -115
+      "value": 4710000,
+      "change": -97000,
+      "sign": -97
     },
     {
       "time": "Una semana",
-      "value": 6050000,
-      "change": -997000,
-      "sign": -997
+      "value": 5486000,
+      "change": -873000,
+      "sign": -873
     }
   ],
   "values_chart": {
@@ -700,6 +711,22 @@
       {
         "value": 5053000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 4929000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 4810000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 4710000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 4613000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -707,35 +734,35 @@
       "date": "27 ago 2026"
     },
     "min": {
-      "value": 5053000,
-      "date": "3 sept 2026"
+      "value": 4613000,
+      "date": "7 sept 2026"
     }
   },
   "next_match": {
     "3844425": {
       "id": 3844425,
       "id_team": 5,
-      "id_match": 37996,
-      "id_gameweek": 4047,
-      "id_home": 16,
+      "id_match": 37971,
+      "id_gameweek": 4045,
+      "id_home": 9,
       "id_away": 5,
       "date": {
-        "ts": 1788462000,
-        "text": "Hoy 21:00",
+        "ts": 1788800400,
+        "text": "Hoy 19:00",
         "format": "'Hoy' H:mm",
         "splitted": {
           "date": "Hoy",
-          "time": "21:00",
+          "time": "19:00",
           "format": "'Hoy'"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Sociedad",
+      "home": "Getafe",
       "away": "Celta",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     }
   },
@@ -748,8 +775,9 @@
   },
   "away": {
     "3844425": {
-      "points": 0,
-      "avg": 0
+      "id": 3844425,
+      "points": 1,
+      "avg": 1
     }
   },
   "owners": [],

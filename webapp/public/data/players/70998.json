@@ -3,15 +3,15 @@
     "id": 70998,
     "name": "Izan Merino",
     "position": 3,
-    "points": 9,
-    "avg": 3,
+    "points": 11,
+    "avg": 2.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70998.png?version=20260621195729",
     "isFavorite": 0,
-    "value": 6435000,
-    "previousValue": 6295000,
+    "value": 6575000,
+    "previousValue": 6591000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6435000,
+      "floor": 6575000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 9652500,
+      "value": 9862500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6435000,
+      "price": 6575000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 123
+    "clausesRanking": 147
   },
   "id": 70998,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 0
   },
@@ -133,12 +133,14 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
     {
@@ -655,31 +657,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 9,
-      "avg": 3,
+      "points": 11,
+      "avg": 2.75,
       "id_team": 13,
-      "last_gameweek": 3,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "last_gameweek": 4
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 6295000,
-      "change": 140000,
-      "sign": 140
+      "value": 6591000,
+      "change": -16000,
+      "sign": -16
     },
     {
       "time": "Una semana",
-      "value": 5601000,
-      "change": 834000,
-      "sign": 834
+      "value": 6030000,
+      "change": 545000,
+      "sign": 545
     },
     {
       "time": "Un mes",
-      "value": 2874000,
-      "change": 3561000,
-      "sign": "+3.561.000"
+      "value": 3745000,
+      "change": 2830000,
+      "sign": "+2.830.000"
     }
   ],
   "values_chart": {
@@ -979,11 +980,27 @@
       {
         "value": 6435000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 6499000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 6511000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 6591000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 6575000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
-      "value": 6435000,
-      "date": "3 sept 2026"
+      "value": 6591000,
+      "date": "6 sept 2026"
     },
     "min": {
       "value": 382000,
@@ -994,36 +1011,36 @@
     "70998": {
       "id": 70998,
       "id_team": 13,
-      "id_match": 37972,
-      "id_gameweek": 4045,
-      "id_home": 13,
-      "id_away": 12,
+      "id_match": 37978,
+      "id_gameweek": 4046,
+      "id_home": 5,
+      "id_away": 13,
       "date": {
-        "ts": 1788712200,
-        "text": "dom 18:30",
+        "ts": 1789300800,
+        "text": "dom 14:00",
         "format": "EEE H:mm",
         "splitted": {
           "date": "dom",
-          "time": "18:30",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Levante",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Celta",
+      "away": "Málaga",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,
   "home": {
     "70998": {
       "id": 70998,
-      "points": 4,
-      "avg": 4
+      "points": 6,
+      "avg": 3
     }
   },
   "away": {

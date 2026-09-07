@@ -4,14 +4,14 @@
     "name": "Óscar Valentín",
     "position": 3,
     "points": 11,
-    "avg": 3.7,
+    "avg": 2.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/27518.png?version=20251004225843",
     "isFavorite": 0,
-    "value": 6623000,
-    "previousValue": 6464000,
+    "value": 6622000,
+    "previousValue": 6754000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6623000,
+      "floor": 6622000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 9934500,
+      "value": 9933000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6623000,
+      "price": 6622000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 177,
       "weight": null
     },
-    "clausesRanking": 172
+    "clausesRanking": 148
   },
   "id": 27518,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -133,12 +133,15 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
     {
@@ -656,80 +659,60 @@
     {
       "season": "26/27",
       "points": 11,
-      "avg": 3.6667,
+      "avg": 2.75,
       "id_team": 14,
-      "last_gameweek": 3,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "last_gameweek": 4
     },
     {
       "season": "25/26",
       "points": 145,
       "avg": 4.3939,
       "id_team": 14,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "last_gameweek": 38
     },
     {
       "season": "24/25",
       "points": 113,
       "avg": 3.3235,
       "id_team": 14,
-      "last_gameweek": 37,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "last_gameweek": 37
     },
     {
       "season": "23/24",
       "points": 147,
       "avg": 4.3235,
       "id_team": 14,
-      "last_gameweek": 37,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "last_gameweek": 37
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 6464000,
-      "change": 159000,
-      "sign": 159
+      "value": 6754000,
+      "change": -132000,
+      "sign": -132
     },
     {
       "time": "Una semana",
-      "value": 6884000,
-      "change": -261000,
-      "sign": -261
+      "value": 6369000,
+      "change": 253000,
+      "sign": 253
     },
     {
       "time": "Un mes",
-      "value": 4071000,
-      "change": 2552000,
-      "sign": "+2.552.000"
+      "value": 4466000,
+      "change": 2156000,
+      "sign": "+2.156.000"
     },
     {
       "time": "Un año",
-      "value": 1061000,
-      "change": 5562000,
-      "sign": "+5.562.000"
+      "value": 599000,
+      "change": 6023000,
+      "sign": "+6.023.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 1061000,
-        "date": "3 sept 2025"
-      },
-      {
-        "value": 955000,
-        "date": "4 sept 2025"
-      },
-      {
-        "value": 776000,
-        "date": "5 sept 2025"
-      },
-      {
-        "value": 673000,
-        "date": "6 sept 2025"
-      },
       {
         "value": 599000,
         "date": "7 sept 2025"
@@ -2177,6 +2160,22 @@
       {
         "value": 6623000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 6697000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 6785000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 6754000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 6622000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -2192,28 +2191,28 @@
     "27518": {
       "id": 27518,
       "id_team": 14,
-      "id_match": 37973,
-      "id_gameweek": 4045,
-      "id_home": 14,
-      "id_away": 1490,
+      "id_match": 37982,
+      "id_gameweek": 4046,
+      "id_home": 15,
+      "id_away": 14,
       "date": {
-        "ts": 1788625800,
-        "text": "sáb 18:30",
+        "ts": 1789239600,
+        "text": "sáb 21:00",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "18:30",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Racing de Santander",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Real Madrid",
+      "away": "Rayo Vallecano",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,
@@ -2221,7 +2220,7 @@
     "27518": {
       "id": 27518,
       "points": 3,
-      "avg": 3
+      "avg": 1.5
     }
   },
   "away": {

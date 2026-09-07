@@ -3,15 +3,15 @@
     "id": 4836184,
     "name": "Jeanuël Belocian",
     "position": 2,
-    "points": 0,
-    "avg": 0,
+    "points": 4,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4836184.png?version=20260901214919",
     "isFavorite": 0,
-    "value": 9484000,
-    "previousValue": 9600000,
+    "value": 8385000,
+    "previousValue": 8551000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9484000,
+      "floor": 8385000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 14226000,
+      "value": 12577500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9484000,
+      "price": 8385000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 438
   },
   "id": 4836184,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -129,12 +129,14 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
     {
@@ -648,13 +650,21 @@
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   ],
-  "points_history": [],
+  "points_history": [
+    {
+      "season": "26/27",
+      "points": 4,
+      "avg": 4,
+      "id_team": 1490,
+      "last_gameweek": 4
+    }
+  ],
   "values": [
     {
       "time": "Un día",
-      "value": 9600000,
-      "change": -116000,
-      "sign": -116
+      "value": 8551000,
+      "change": -166000,
+      "sign": -166
     }
   ],
   "values_chart": {
@@ -666,6 +676,22 @@
       {
         "value": 9484000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 9190000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 8805000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 8551000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 8385000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -673,36 +699,36 @@
       "date": "2 sept 2026"
     },
     "min": {
-      "value": 9484000,
-      "date": "3 sept 2026"
+      "value": 8385000,
+      "date": "7 sept 2026"
     }
   },
   "next_match": {
     "4836184": {
       "id": 4836184,
       "id_team": 1490,
-      "id_match": 37973,
-      "id_gameweek": 4045,
-      "id_home": 14,
-      "id_away": 1490,
+      "id_match": 37983,
+      "id_gameweek": 4046,
+      "id_home": 1490,
+      "id_away": 48,
       "date": {
-        "ts": 1788625800,
-        "text": "sáb 18:30",
+        "ts": 1789214400,
+        "text": "sáb 14:00",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "18:30",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Racing de Santander",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Racing de Santander",
+      "away": "Alavés",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
@@ -714,8 +740,9 @@
   },
   "away": {
     "4836184": {
-      "points": 0,
-      "avg": 0
+      "id": 4836184,
+      "points": 4,
+      "avg": 4
     }
   },
   "owners": [],

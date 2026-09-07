@@ -3,15 +3,15 @@
     "id": 59506,
     "name": "Javi Rodríguez",
     "position": 2,
-    "points": 8,
-    "avg": 2.7,
+    "points": 9,
+    "avg": 2.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59506.png?version=20251003195248",
     "isFavorite": 0,
-    "value": 17113000,
-    "previousValue": 17723000,
+    "value": 14807000,
+    "previousValue": 15210000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 17113000,
+      "floor": 14807000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 5,
-      "shield2WeeksSku": "shield_t5_2w",
-      "shield1MonthSku": "shield_t5_1m",
-      "value": 25669500,
+      "tier": 4,
+      "shield2WeeksSku": "shield_t4_2w",
+      "shield1MonthSku": "shield_t4_1m",
+      "value": 22210500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 17113000,
+      "price": 14807000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 59506,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 0
   },
@@ -161,12 +161,14 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
     {
@@ -653,73 +655,54 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 8,
-      "avg": 2.6667,
+      "points": 9,
+      "avg": 2.25,
       "id_team": 5,
-      "last_gameweek": 3,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "last_gameweek": 6
     },
     {
       "season": "25/26",
       "points": 143,
       "avg": 4.3333,
       "id_team": 5,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "last_gameweek": 38
     },
     {
       "season": "24/25",
       "points": 139,
       "avg": 3.8611,
       "id_team": 5,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "last_gameweek": 38
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 17723000,
-      "change": -610000,
-      "sign": -610
+      "value": 15210000,
+      "change": -403000,
+      "sign": -403
     },
     {
       "time": "Una semana",
-      "value": 18192000,
-      "change": -1079000,
-      "sign": "-1.079.000"
+      "value": 18635000,
+      "change": -3828000,
+      "sign": "-3.828.000"
     },
     {
       "time": "Un mes",
-      "value": 13015000,
-      "change": 4098000,
-      "sign": "+4.098.000"
+      "value": 14821000,
+      "change": -14000,
+      "sign": -14
     },
     {
       "time": "Un año",
-      "value": 10014000,
-      "change": 7099000,
-      "sign": "+7.099.000"
+      "value": 9179000,
+      "change": 5628000,
+      "sign": "+5.628.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 10014000,
-        "date": "3 sept 2025"
-      },
-      {
-        "value": 9793000,
-        "date": "4 sept 2025"
-      },
-      {
-        "value": 9602000,
-        "date": "5 sept 2025"
-      },
-      {
-        "value": 9461000,
-        "date": "6 sept 2025"
-      },
       {
         "value": 9179000,
         "date": "7 sept 2025"
@@ -2167,6 +2150,22 @@
       {
         "value": 17113000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 16479000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 15776000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 15210000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 14807000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -2182,27 +2181,27 @@
     "59506": {
       "id": 59506,
       "id_team": 5,
-      "id_match": 37996,
-      "id_gameweek": 4047,
-      "id_home": 16,
+      "id_match": 37971,
+      "id_gameweek": 4045,
+      "id_home": 9,
       "id_away": 5,
       "date": {
-        "ts": 1788462000,
-        "text": "Hoy 21:00",
+        "ts": 1788800400,
+        "text": "Hoy 19:00",
         "format": "'Hoy' H:mm",
         "splitted": {
           "date": "Hoy",
-          "time": "21:00",
+          "time": "19:00",
           "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
-      "home": "Real Sociedad",
+      "home": "Getafe",
       "away": "Celta",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     }
   },
@@ -2217,8 +2216,8 @@
   "away": {
     "59506": {
       "id": 59506,
-      "points": 7,
-      "avg": 7
+      "points": 8,
+      "avg": 4
     }
   },
   "owners": [],

@@ -3,15 +3,15 @@
     "id": 19727,
     "name": "Rodrigo Riquelme",
     "position": 3,
-    "points": 24,
-    "avg": 8,
+    "points": 25,
+    "avg": 6.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/19727.png?version=20251003194652",
     "isFavorite": 0,
-    "value": 11501000,
-    "previousValue": 10990000,
+    "value": 13482000,
+    "previousValue": 12957000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 11501000,
+      "floor": 13482000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 17251500,
+      "value": 20223000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 11501000,
+      "price": 13482000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 174,
       "weight": null
     },
-    "clausesRanking": 17
+    "clausesRanking": 29
   },
   "id": 19727,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 2,
     "cards": 0
   },
@@ -137,12 +137,14 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
     {
@@ -659,81 +661,61 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 24,
-      "avg": 8,
+      "points": 25,
+      "avg": 6.25,
       "id_team": 4,
-      "last_gameweek": 3,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "last_gameweek": 4
     },
     {
       "season": "25/26",
       "points": 64,
       "avg": 2.56,
       "id_team": 4,
-      "last_gameweek": 37,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "last_gameweek": 37
     },
     {
       "season": "24/25",
       "points": 45,
       "avg": 2.8125,
       "id_team": 2,
-      "last_gameweek": 32,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "last_gameweek": 32
     },
     {
       "season": "23/24",
       "points": 110,
       "avg": 3.2353,
       "id_team": 2,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "last_gameweek": 38
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 10990000,
-      "change": 511000,
-      "sign": 511
+      "value": 12957000,
+      "change": 525000,
+      "sign": 525
     },
     {
       "time": "Una semana",
-      "value": 8378000,
-      "change": 3123000,
-      "sign": "+3.123.000"
+      "value": 10016000,
+      "change": 3466000,
+      "sign": "+3.466.000"
     },
     {
       "time": "Un mes",
-      "value": 3189000,
-      "change": 8312000,
-      "sign": "+8.312.000"
+      "value": 4227000,
+      "change": 9255000,
+      "sign": "+9.255.000"
     },
     {
       "time": "Un año",
-      "value": 19417000,
-      "change": -7916000,
-      "sign": "-7.916.000"
+      "value": 20677000,
+      "change": -7195000,
+      "sign": "-7.195.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 19417000,
-        "date": "3 sept 2025"
-      },
-      {
-        "value": 20087000,
-        "date": "4 sept 2025"
-      },
-      {
-        "value": 20404000,
-        "date": "5 sept 2025"
-      },
-      {
-        "value": 20570000,
-        "date": "6 sept 2025"
-      },
       {
         "value": 20677000,
         "date": "7 sept 2025"
@@ -2181,6 +2163,22 @@
       {
         "value": 11501000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 11988000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 12470000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 12957000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 13482000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -2196,36 +2194,36 @@
     "19727": {
       "id": 19727,
       "id_team": 4,
-      "id_match": 37974,
-      "id_gameweek": 4045,
-      "id_home": 4,
-      "id_away": 15,
+      "id_match": 37986,
+      "id_gameweek": 4046,
+      "id_home": 20,
+      "id_away": 4,
       "date": {
-        "ts": 1788548400,
-        "text": "vie 21:00",
-        "format": "EEE H:mm",
+        "ts": 1789412400,
+        "text": "14 sept 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "vie",
+          "date": "14 sept",
           "time": "21:00",
-          "format": "EEE"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Real Madrid",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Villarreal",
+      "away": "Betis",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "19727": {
       "id": 19727,
-      "points": 14,
-      "avg": 14
+      "points": 15,
+      "avg": 7.5
     }
   },
   "away": {

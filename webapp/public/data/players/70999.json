@@ -3,15 +3,15 @@
     "id": 70999,
     "name": "Dani Lorenzo",
     "position": 3,
-    "points": 10,
-    "avg": 5,
+    "points": 16,
+    "avg": 5.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70999.png?version=20260621195504",
     "isFavorite": 0,
-    "value": 11142000,
-    "previousValue": 10824000,
+    "value": 11889000,
+    "previousValue": 11712000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 11142000,
+      "floor": 11889000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 16713000,
+      "value": 17833500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 11142000,
+      "price": 11889000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 176,
       "weight": null
     },
-    "clausesRanking": 108
+    "clausesRanking": 117
   },
   "id": 70999,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -133,12 +133,15 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
     {
@@ -655,31 +658,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 10,
-      "avg": 5,
+      "points": 16,
+      "avg": 5.3333,
       "id_team": 13,
-      "last_gameweek": 2,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "last_gameweek": 4
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 10824000,
-      "change": 318000,
-      "sign": 318
+      "value": 11712000,
+      "change": 177000,
+      "sign": 177
     },
     {
       "time": "Una semana",
-      "value": 9102000,
-      "change": 2040000,
-      "sign": "+2.040.000"
+      "value": 10276000,
+      "change": 1613000,
+      "sign": "+1.613.000"
     },
     {
       "time": "Un mes",
-      "value": 4338000,
-      "change": 6804000,
-      "sign": "+6.804.000"
+      "value": 4936000,
+      "change": 6953000,
+      "sign": "+6.953.000"
     }
   ],
   "values_chart": {
@@ -979,11 +981,27 @@
       {
         "value": 11142000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 11290000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 11475000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 11712000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 11889000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
-      "value": 11142000,
-      "date": "3 sept 2026"
+      "value": 11889000,
+      "date": "7 sept 2026"
     },
     "min": {
       "value": 406000,
@@ -994,36 +1012,36 @@
     "70999": {
       "id": 70999,
       "id_team": 13,
-      "id_match": 37972,
-      "id_gameweek": 4045,
-      "id_home": 13,
-      "id_away": 12,
+      "id_match": 37978,
+      "id_gameweek": 4046,
+      "id_home": 5,
+      "id_away": 13,
       "date": {
-        "ts": 1788712200,
-        "text": "dom 18:30",
+        "ts": 1789300800,
+        "text": "dom 14:00",
         "format": "EEE H:mm",
         "splitted": {
           "date": "dom",
-          "time": "18:30",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Levante",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Celta",
+      "away": "Málaga",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,
   "home": {
     "70999": {
       "id": 70999,
-      "points": 4,
-      "avg": 4
+      "points": 10,
+      "avg": 5
     }
   },
   "away": {

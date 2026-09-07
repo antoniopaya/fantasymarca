@@ -3,15 +3,15 @@
     "id": 71140,
     "name": "Quilindschy Hartman",
     "position": 2,
-    "points": 0,
-    "avg": 0,
+    "points": 2,
+    "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71140.png?version=20260707175228",
     "isFavorite": 0,
-    "value": 7952000,
-    "previousValue": 8343000,
+    "value": 6541000,
+    "previousValue": 6872000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 7952000,
+      "floor": 6541000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 11928000,
+      "value": 9811500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 7952000,
+      "price": 6541000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 71140,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -129,12 +129,14 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
     {
@@ -648,25 +650,33 @@
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   ],
-  "points_history": [],
+  "points_history": [
+    {
+      "season": "26/27",
+      "points": 2,
+      "avg": 2,
+      "id_team": 8,
+      "last_gameweek": 4
+    }
+  ],
   "values": [
     {
       "time": "Un día",
-      "value": 8343000,
-      "change": -391000,
-      "sign": -391
+      "value": 6872000,
+      "change": -331000,
+      "sign": -331
     },
     {
       "time": "Una semana",
-      "value": 11114000,
-      "change": -3162000,
-      "sign": "-3.162.000"
+      "value": 9175000,
+      "change": -2634000,
+      "sign": "-2.634.000"
     },
     {
       "time": "Un mes",
-      "value": 18057000,
-      "change": -10105000,
-      "sign": "-10.105.000"
+      "value": 20101000,
+      "change": -13560000,
+      "sign": "-13.560.000"
     }
   ],
   "values_chart": {
@@ -902,6 +912,22 @@
       {
         "value": 7952000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 7569000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 7211000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 6872000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 6541000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -909,43 +935,44 @@
       "date": "8 ago 2026"
     },
     "min": {
-      "value": 7952000,
-      "date": "3 sept 2026"
+      "value": 6541000,
+      "date": "7 sept 2026"
     }
   },
   "next_match": {
     "71140": {
       "id": 71140,
       "id_team": 8,
-      "id_match": 37970,
-      "id_gameweek": 4045,
-      "id_home": 8,
-      "id_away": 17,
+      "id_match": 37981,
+      "id_gameweek": 4046,
+      "id_home": 50,
+      "id_away": 8,
       "date": {
-        "ts": 1788721200,
-        "text": "dom 21:00",
+        "ts": 1789222500,
+        "text": "sáb 16:15",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "21:00",
+          "date": "sáb",
+          "time": "16:15",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
-      "away": "Sevilla",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Osasuna",
+      "away": "Espanyol",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,
   "home": {
     "71140": {
-      "points": 0,
-      "avg": 0
+      "id": 71140,
+      "points": 2,
+      "avg": 2
     }
   },
   "away": {

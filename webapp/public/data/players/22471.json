@@ -5,17 +5,13 @@
     "position": 2,
     "points": 0,
     "avg": 0,
-    "status": "other",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "other",
-      "description": "No convocado",
-      "duration": "Baja esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22471.png?version=20250204161316",
     "isFavorite": 0,
     "value": 329000,
-    "previousValue": 391000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -72,7 +68,7 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 383
+    "clausesRanking": 308
   },
   "id": 22471,
   "player_extra": {
@@ -177,7 +173,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
     {
@@ -667,70 +663,51 @@
       "points": 79,
       "avg": 3.5909,
       "id_team": 48,
-      "last_gameweek": 32,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "last_gameweek": 32
     },
     {
       "season": "24/25",
       "points": 40,
       "avg": 2.8571,
       "id_team": 16,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "last_gameweek": 38
     },
     {
       "season": "23/24",
       "points": 102,
       "avg": 4.4348,
       "id_team": 16,
-      "last_gameweek": 38,
-      "teamLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "last_gameweek": 38
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 391000,
-      "change": -62000,
-      "sign": -62
+      "value": 329000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Una semana",
-      "value": 369000,
-      "change": -40000,
-      "sign": -40
+      "value": 481000,
+      "change": -152000,
+      "sign": -152
     },
     {
       "time": "Un mes",
-      "value": 474000,
-      "change": -145000,
-      "sign": -145
+      "value": 368000,
+      "change": -39000,
+      "sign": -39
     },
     {
       "time": "Un año",
-      "value": 1260000,
-      "change": -931000,
-      "sign": -931
+      "value": 673000,
+      "change": -344000,
+      "sign": -344
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 1260000,
-        "date": "3 sept 2025"
-      },
-      {
-        "value": 1144000,
-        "date": "4 sept 2025"
-      },
-      {
-        "value": 1041000,
-        "date": "5 sept 2025"
-      },
-      {
-        "value": 860000,
-        "date": "6 sept 2025"
-      },
       {
         "value": 673000,
         "date": "7 sept 2025"
@@ -2178,6 +2155,22 @@
       {
         "value": 329000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 409000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 345000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -2193,28 +2186,28 @@
     "22471": {
       "id": 22471,
       "id_team": 16,
-      "id_match": 37996,
-      "id_gameweek": 4047,
-      "id_home": 16,
-      "id_away": 5,
+      "id_match": 37969,
+      "id_gameweek": 4045,
+      "id_home": 23,
+      "id_away": 16,
       "date": {
-        "ts": 1788462000,
-        "text": "Hoy 21:00",
+        "ts": 1788809400,
+        "text": "Hoy 21:30",
         "format": "'Hoy' H:mm",
         "splitted": {
           "date": "Hoy",
-          "time": "21:00",
+          "time": "21:30",
           "format": "'Hoy'"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Sociedad",
-      "away": "Celta",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "home": "Elche",
+      "away": "Real Sociedad",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   },
   "starter": false,

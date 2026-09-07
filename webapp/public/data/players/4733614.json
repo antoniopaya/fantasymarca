@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4733614.png?version=20260901110930",
     "isFavorite": 0,
-    "value": 5689000,
-    "previousValue": 5643000,
+    "value": 5343000,
+    "previousValue": 5475000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5689000,
+      "floor": 5343000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8533500,
+      "value": 8014500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5689000,
+      "price": 5343000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 172,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 435
   },
   "id": 4733614,
   "player_extra": {
@@ -134,7 +134,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
     {
@@ -652,9 +652,9 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5643000,
-      "change": 46000,
-      "sign": 46
+      "value": 5475000,
+      "change": -132000,
+      "sign": -132
     }
   ],
   "values_chart": {
@@ -666,6 +666,22 @@
       {
         "value": 5689000,
         "date": "3 sept 2026"
+      },
+      {
+        "value": 5668000,
+        "date": "4 sept 2026"
+      },
+      {
+        "value": 5574000,
+        "date": "5 sept 2026"
+      },
+      {
+        "value": 5475000,
+        "date": "6 sept 2026"
+      },
+      {
+        "value": 5343000,
+        "date": "7 sept 2026"
       }
     ],
     "max": {
@@ -673,36 +689,36 @@
       "date": "3 sept 2026"
     },
     "min": {
-      "value": 5643000,
-      "date": "2 sept 2026"
+      "value": 5343000,
+      "date": "7 sept 2026"
     }
   },
   "next_match": {
     "4733614": {
       "id": 4733614,
       "id_team": 50,
-      "id_match": 37968,
-      "id_gameweek": 4045,
-      "id_home": 48,
-      "id_away": 50,
+      "id_match": 37981,
+      "id_gameweek": 4046,
+      "id_home": 50,
+      "id_away": 8,
       "date": {
-        "ts": 1788712200,
-        "text": "dom 18:30",
+        "ts": 1789222500,
+        "text": "sáb 16:15",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "18:30",
+          "date": "sáb",
+          "time": "16:15",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Osasuna",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "home": "Osasuna",
+      "away": "Espanyol",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,
