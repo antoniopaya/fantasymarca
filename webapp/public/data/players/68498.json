@@ -3,15 +3,19 @@
     "id": 68498,
     "name": "Zaid Romero",
     "position": 2,
-    "points": 16,
-    "avg": 5.3,
-    "status": null,
+    "points": 18,
+    "avg": 4.5,
+    "status": "double",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "double",
+      "description": "Doble tarjeta",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68498.png?version=20260117124556",
     "isFavorite": 0,
-    "value": 20079000,
-    "previousValue": 20023000,
+    "value": 18281000,
+    "previousValue": 19179000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 20079000,
+      "floor": 18281000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 30118500,
+      "value": 27421500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 20079000,
+      "price": 18281000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +72,13 @@
       "height": 192,
       "weight": null
     },
-    "clausesRanking": 194
+    "clausesRanking": 271
   },
   "id": 68498,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
-    "cards": 0
+    "cards": 2
   },
   "points": [
     {
@@ -90,6 +94,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": true,
+      "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
     {
@@ -105,6 +110,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": true,
+      "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
     {
@@ -120,6 +126,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": true,
+      "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
     {
@@ -129,12 +136,16 @@
       "startDate": "2026-09-04 21:00:00",
       "endDate": "2026-09-07 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "double"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
+      "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
     {
@@ -150,6 +161,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
     {
@@ -165,6 +177,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
     {
@@ -180,13 +193,14 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 13,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
     {
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-11 21:00:00",
+      "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-11 21:00:00",
       "points": {
         "points": null,
@@ -195,6 +209,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 3,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     },
     {
@@ -210,6 +225,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
     {
@@ -225,6 +241,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
     {
@@ -240,6 +257,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
     {
@@ -255,6 +273,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 20,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     },
     {
@@ -270,6 +289,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
     {
@@ -285,6 +305,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
     {
@@ -300,6 +321,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
     {
@@ -315,6 +337,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
     {
@@ -330,6 +353,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
     {
@@ -345,6 +369,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
     {
@@ -360,6 +385,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
     {
@@ -375,6 +401,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
     {
@@ -390,6 +417,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
     {
@@ -405,6 +433,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
     {
@@ -420,6 +449,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 20,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     },
     {
@@ -435,6 +465,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
     {
@@ -450,6 +481,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
     {
@@ -465,6 +497,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
     {
@@ -480,6 +513,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
     {
@@ -495,6 +529,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
     {
@@ -510,6 +545,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
     {
@@ -525,6 +561,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
     {
@@ -540,6 +577,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
     {
@@ -555,6 +593,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
     {
@@ -570,6 +609,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
     {
@@ -585,6 +625,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 13,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
     {
@@ -600,6 +641,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
     {
@@ -615,6 +657,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
     {
@@ -630,6 +673,7 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
     {
@@ -645,16 +689,17 @@
       "events": null,
       "injury": null,
       "teamPlayed": false,
+      "rivalId": 3,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   ],
   "points_history": [
     {
       "season": "26/27",
-      "points": 16,
-      "avg": 5.3333,
+      "points": 18,
+      "avg": 4.5,
       "id_team": 9,
-      "last_gameweek": 3
+      "last_gameweek": 4
     },
     {
       "season": "25/26",
@@ -667,21 +712,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 20023000,
-      "change": 56000,
-      "sign": 56
+      "value": 19179000,
+      "change": -898000,
+      "sign": -898
     },
     {
       "time": "Una semana",
-      "value": 20031000,
-      "change": 48000,
-      "sign": 48
+      "value": 20278000,
+      "change": -1997000,
+      "sign": "-1.997.000"
     },
     {
       "time": "Un mes",
-      "value": 22021000,
-      "change": -1942000,
-      "sign": "-1.942.000"
+      "value": 22476000,
+      "change": -4195000,
+      "sign": "-4.195.000"
     }
   ],
   "values_chart": {
@@ -1553,6 +1598,18 @@
       {
         "value": 20079000,
         "date": "7 sept 2026"
+      },
+      {
+        "value": 19955000,
+        "date": "8 sept 2026"
+      },
+      {
+        "value": 19179000,
+        "date": "9 sept 2026"
+      },
+      {
+        "value": 18281000,
+        "date": "10 sept 2026"
       }
     ],
     "max": {
@@ -1568,36 +1625,36 @@
     "68498": {
       "id": 68498,
       "id_team": 9,
-      "id_match": 37971,
-      "id_gameweek": 4045,
+      "id_match": 37979,
+      "id_gameweek": 4046,
       "id_home": 9,
-      "id_away": 5,
+      "id_away": 6,
       "date": {
-        "ts": 1788800400,
-        "text": "Hoy 19:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1789317000,
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "19:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Getafe",
-      "away": "Celta",
+      "away": "Deportivo da Coruña",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,
   "home": {
     "68498": {
       "id": 68498,
-      "points": 7,
-      "avg": 7
+      "points": 9,
+      "avg": 4.5
     }
   },
   "away": {
