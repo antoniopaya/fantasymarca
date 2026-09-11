@@ -56,8 +56,14 @@ try {
 const TEAM_NEXT_OPPONENT: Record<number, { name: string; logoUrl: string }> =
   {};
 for (const m of nextGwMatches) {
-  TEAM_NEXT_OPPONENT[m.id_home] = { name: m.away, logoUrl: m.awayLogoUrl };
-  TEAM_NEXT_OPPONENT[m.id_away] = { name: m.home, logoUrl: m.homeLogoUrl };
+  TEAM_NEXT_OPPONENT[m.id_home] = {
+    name: m.away,
+    logoUrl: teamLogoUrl(m.id_away),
+  };
+  TEAM_NEXT_OPPONENT[m.id_away] = {
+    name: m.home,
+    logoUrl: teamLogoUrl(m.id_home),
+  };
 }
 ---
 

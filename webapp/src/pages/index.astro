@@ -109,12 +109,12 @@ const stats = [
             <MatchCard
               home={game.home}
               away={game.away}
-              homeLogoUrl={game.homeLogoUrl}
-              awayLogoUrl={game.awayLogoUrl}
               dateText={game.date.text}
               goalsHome={game.goals_home}
               goalsAway={game.goals_away}
               status={game.status}
+              homeTeamId={game.id_home}
+              awayTeamId={game.id_away}
             />
           ))}
         </div>

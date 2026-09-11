@@ -41,8 +41,10 @@ export interface Match {
   gameweek: string;
   home: string;
   away: string;
-  homeLogoUrl: string;
-  awayLogoUrl: string;
+  // Ojo: Marca dejó de mandar homeLogoUrl/awayLogoUrl en el payload de partidos
+  // (desaparecieron en el refresco del 2026-09-07). Los logos se derivan del id
+  // del equipo con teamLogoUrl(); no vuelvas a declararlos aquí sin comprobar
+  // antes que el JSON los trae de verdad, porque TypeScript no lo detecta.
 }
 
 export interface PlayerDetail {
