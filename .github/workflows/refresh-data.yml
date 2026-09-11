@@ -7,6 +7,11 @@ on:
   schedule:
     - cron: "0 7 * * 1,4"
   workflow_dispatch:
+    inputs:
+      force_deploy:
+        description: "Dispara deploy.yml aunque no cambien los datos"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -66,7 +71,7 @@ jobs:
         # enterarse de los datos nuevos y el sitio se quedaba congelado.
         # workflow_dispatch sí es la excepción documentada a esa regla, así que
         # llamamos al deploy explícitamente cuando hubo cambios.
-        if: steps.commit.outputs.changed == 'true'
+        if: steps.commit.outputs.changed == 'true' || inputs.force_deploy
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run deploy.yml --ref main
