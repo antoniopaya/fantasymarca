@@ -35,7 +35,8 @@ webapp/         Sitio Astro + Tailwind, 100% estático
   public/data/           JSON generados por fantasy_api (ver abajo)
 .github/workflows/
   deploy.yml            build + publica en GitHub Pages (push a main)
-  refresh-data.yml       corre main.py en cron y commitea si cambian los datos
+  refresh-data.yml       corre main.py en cron, commitea si cambian los datos
+                         y dispara deploy.yml a mano (ver abajo)
   verify.yml             lint + type-check + build en cada push/PR (sin desplegar)
 ```
 
@@ -94,6 +95,14 @@ y publicación en GitHub Pages. Como el repo no se llama `<usuario>.github.io`,
 el sitio se sirve bajo `/fantasymarca/`; `astro.config.mjs` fija el `base`
 solo cuando `GITHUB_ACTIONS=true`, así que en local (`npm run dev`) todo
 sigue funcionando en la raíz sin tocar nada.
+
+Los commits de datos son la excepción a ese "cada push dispara el deploy":
+`refresh-data.yml` commitea con el `GITHUB_TOKEN` del propio workflow, y GitHub
+no encadena workflows desde pushes hechos con ese token, así que `deploy.yml`
+nunca se enteraba y el sitio se quedaba servido con datos viejos. Por eso
+`refresh-data.yml` termina llamando a `gh workflow run deploy.yml` (el
+`workflow_dispatch` sí es la excepción documentada a esa regla), y necesita
+permiso `actions: write` para poder hacerlo.
 
 `refresh-data.yml` necesita dos secrets del repo para autenticarse contra
 fantasy.marca.com: `FANTASY_X_AUTH` y `FANTASY_REFRESH_TOKEN` (los mismos
