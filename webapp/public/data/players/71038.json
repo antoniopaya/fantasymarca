@@ -5,17 +5,13 @@
     "position": 2,
     "points": 1,
     "avg": 1,
-    "status": "injury",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "injury",
-      "description": "Esguince de tobillo",
-      "duration": "Baja hasta mediados de Septiembre"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71038.png?version=20260701170915",
     "isFavorite": 0,
-    "value": 6052000,
-    "previousValue": 6344000,
+    "value": 5823000,
+    "previousValue": 6052000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6052000,
+      "floor": 5823000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 3,
-      "shield2WeeksSku": "shield_t3_2w",
-      "shield1MonthSku": "shield_t3_1m",
-      "value": 9078000,
+      "tier": 2,
+      "shield2WeeksSku": "shield_t2_2w",
+      "shield1MonthSku": "shield_t2_1m",
+      "value": 8734500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6052000,
+      "price": 5823000,
       "loanable": null
     },
     "bid": {
@@ -159,7 +155,7 @@
         "description": "Esguince de tobillo",
         "duration": "Baja hasta mediados de Septiembre",
         "since": "2026-09-03 14:14:43",
-        "until": null,
+        "until": "2026-09-10 19:48:07",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -218,8 +214,8 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-09 21:00:00",
-      "endDate": "2026-10-11 21:00:00",
+      "startDate": "2026-10-10 21:00:00",
+      "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -723,21 +719,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 6344000,
-      "change": -292000,
-      "sign": -292
+      "value": 6052000,
+      "change": -229000,
+      "sign": -229
     },
     {
       "time": "Una semana",
-      "value": 8568000,
-      "change": -2516000,
-      "sign": "-2.516.000"
+      "value": 8159000,
+      "change": -2336000,
+      "sign": "-2.336.000"
     },
     {
       "time": "Un mes",
-      "value": 11941000,
-      "change": -5889000,
-      "sign": "-5.889.000"
+      "value": 12317000,
+      "change": -6494000,
+      "sign": "-6.494.000"
     }
   ],
   "values_chart": {
@@ -1029,6 +1025,10 @@
       {
         "value": 6052000,
         "date": "10 sept 2026"
+      },
+      {
+        "value": 5823000,
+        "date": "11 sept 2026"
       }
     ],
     "max": {
@@ -1050,12 +1050,12 @@
       "id_away": 19,
       "date": {
         "ts": 1789153200,
-        "text": "vie 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "vie",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/31226.png?version=20240702124019",
     "isFavorite": 0,
-    "value": 9465000,
-    "previousValue": 9312000,
+    "value": 9486000,
+    "previousValue": 9465000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 9465000,
+      "floor": 9486000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 14197500,
+      "value": 14229000,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 9465000,
-      "loanable": null
+      "id": 1762814289,
+      "isPublic": 1,
+      "price": 9486000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 9486000,
       "barter": [],
       "type": null,
       "days": null
@@ -68,7 +68,7 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 157
+    "clausesRanking": 161
   },
   "id": 31226,
   "player_extra": {
@@ -199,8 +199,8 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-09 21:00:00",
-      "endDate": "2026-10-11 21:00:00",
+      "startDate": "2026-10-10 21:00:00",
+      "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -725,35 +725,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 9312000,
-      "change": 153000,
-      "sign": 153
+      "value": 9465000,
+      "change": 21000,
+      "sign": 21
     },
     {
       "time": "Una semana",
-      "value": 10018000,
-      "change": -553000,
-      "sign": -553
+      "value": 9777000,
+      "change": -291000,
+      "sign": -291
     },
     {
       "time": "Un mes",
-      "value": 5930000,
-      "change": 3535000,
-      "sign": "+3.535.000"
+      "value": 6113000,
+      "change": 3373000,
+      "sign": "+3.373.000"
     },
     {
       "time": "Un año",
-      "value": 17936000,
-      "change": -8471000,
-      "sign": "-8.471.000"
+      "value": 18551000,
+      "change": -9065000,
+      "sign": "-9.065.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 17936000,
-        "date": "10 sept 2025"
-      },
       {
         "value": 18551000,
         "date": "11 sept 2025"
@@ -2213,6 +2209,10 @@
       {
         "value": 9465000,
         "date": "10 sept 2026"
+      },
+      {
+        "value": 9486000,
+        "date": "11 sept 2026"
       }
     ],
     "max": {
@@ -2234,16 +2234,16 @@
       "id_away": 19,
       "date": {
         "ts": 1789153200,
-        "text": "vie 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "vie",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Sevilla",
       "away": "Valencia",

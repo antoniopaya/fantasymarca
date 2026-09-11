@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4836189.png?version=20260901214753",
     "isFavorite": 0,
-    "value": 18705000,
-    "previousValue": 18637000,
+    "value": 18657000,
+    "previousValue": 18705000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 18705000,
+      "floor": 18657000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 28057500,
+      "value": 27985500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 18705000,
+      "price": 18657000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 343
+    "clausesRanking": 292
   },
   "id": 4836189,
   "player_extra": {
@@ -195,8 +195,8 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-09 21:00:00",
-      "endDate": "2026-10-11 21:00:00",
+      "startDate": "2026-10-10 21:00:00",
+      "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -700,15 +700,15 @@
   "values": [
     {
       "time": "Un día",
-      "value": 18637000,
-      "change": 68000,
-      "sign": 68
+      "value": 18705000,
+      "change": -48000,
+      "sign": -48
     },
     {
       "time": "Una semana",
-      "value": 16335000,
-      "change": 2370000,
-      "sign": "+2.370.000"
+      "value": 16716000,
+      "change": 1941000,
+      "sign": "+1.941.000"
     }
   ],
   "values_chart": {
@@ -748,6 +748,10 @@
       {
         "value": 18705000,
         "date": "10 sept 2026"
+      },
+      {
+        "value": 18657000,
+        "date": "11 sept 2026"
       }
     ],
     "max": {
@@ -769,16 +773,16 @@
       "id_away": 19,
       "date": {
         "ts": 1789153200,
-        "text": "vie 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "vie",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Sevilla",
       "away": "Valencia",

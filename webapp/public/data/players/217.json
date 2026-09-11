@@ -5,17 +5,17 @@
     "position": 2,
     "points": 0,
     "avg": 0,
-    "status": "doubt",
+    "status": "injury",
     "id_competition": 1,
     "injury": {
-      "category": "doubt",
+      "category": "injury",
       "description": "Molestias",
-      "duration": "Duda esta jornada"
+      "duration": "Baja esta jornada"
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/217.png?version=20251006015048",
     "isFavorite": 0,
-    "value": 477000,
-    "previousValue": 329000,
+    "value": 447000,
+    "previousValue": 477000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 477000,
+      "price": 447000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 183,
       "weight": 79
     },
-    "clausesRanking": 380
+    "clausesRanking": 403
   },
   "id": 217,
   "player_extra": {
@@ -165,7 +165,7 @@
         "description": "Molestias",
         "duration": "Duda esta jornada",
         "since": "2026-09-03 14:15:16",
-        "until": null,
+        "until": "2026-09-10 19:36:16",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -224,8 +224,8 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-09 21:00:00",
-      "endDate": "2026-10-11 21:00:00",
+      "startDate": "2026-10-10 21:00:00",
+      "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -743,35 +743,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 148000,
-      "sign": 148
+      "value": 477000,
+      "change": -30000,
+      "sign": -30
     },
     {
       "time": "Una semana",
-      "value": 329000,
-      "change": 148000,
-      "sign": 148
+      "value": 513000,
+      "change": -66000,
+      "sign": -66
     },
     {
       "time": "Un mes",
-      "value": 971000,
-      "change": -494000,
-      "sign": -494
+      "value": 842000,
+      "change": -395000,
+      "sign": -395
     },
     {
       "time": "Un año",
-      "value": 10237000,
-      "change": -9760000,
-      "sign": "-9.760.000"
+      "value": 10040000,
+      "change": -9593000,
+      "sign": "-9.593.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 10237000,
-        "date": "10 sept 2025"
-      },
       {
         "value": 10040000,
         "date": "11 sept 2025"
@@ -2231,11 +2227,15 @@
       {
         "value": 477000,
         "date": "10 sept 2026"
+      },
+      {
+        "value": 447000,
+        "date": "11 sept 2026"
       }
     ],
     "max": {
-      "value": 10237000,
-      "date": "10 sept 2025"
+      "value": 10040000,
+      "date": "11 sept 2025"
     },
     "min": {
       "value": 329000,
@@ -2252,12 +2252,12 @@
       "id_away": 19,
       "date": {
         "ts": 1789153200,
-        "text": "vie 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "vie",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
