@@ -3,15 +3,15 @@
     "id": 3117,
     "name": "Diego Rico",
     "position": 2,
-    "points": 0,
-    "avg": 0,
+    "points": 1,
+    "avg": 1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3117.png?version=20251003200031",
     "isFavorite": 0,
-    "value": 360000,
-    "previousValue": 384000,
+    "value": 441000,
+    "previousValue": 415000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 360000,
+      "price": 441000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 181,
       "weight": 76
     },
-    "clausesRanking": 378
+    "clausesRanking": 370
   },
   "id": 3117,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -148,12 +148,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -688,6 +690,13 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 1,
+      "avg": 1,
+      "id_team": 50,
+      "last_gameweek": 5
+    },
+    {
       "season": "25/26",
       "points": 86,
       "avg": 3.0714,
@@ -712,37 +721,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 384000,
-      "change": -24000,
-      "sign": -24
+      "value": 415000,
+      "change": 26000,
+      "sign": 26
     },
     {
       "time": "Una semana",
-      "value": 1163000,
-      "change": -803000,
-      "sign": -803
+      "value": 613000,
+      "change": -172000,
+      "sign": -172
+    },
+    {
+      "time": "Un mes",
+      "value": 673000,
+      "change": -232000,
+      "sign": -232
     },
     {
       "time": "Un año",
-      "value": 16131000,
-      "change": -15771000,
-      "sign": "-15.771.000"
+      "value": 16259000,
+      "change": -15818000,
+      "sign": "-15.818.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 16131000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 16224000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 16167000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 16259000,
         "date": "14 sept 2025"
@@ -1978,6 +1981,18 @@
       {
         "value": 360000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 393000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 415000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 441000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -1993,35 +2008,36 @@
     "3117": {
       "id": 3117,
       "id_team": 50,
-      "id_match": 37981,
-      "id_gameweek": 4046,
-      "id_home": 50,
-      "id_away": 8,
+      "id_match": 37987,
+      "id_gameweek": 4047,
+      "id_home": 2,
+      "id_away": 50,
       "date": {
-        "ts": 1789222500,
-        "text": "sáb 16:15",
+        "ts": 1789578000,
+        "text": "mié 19:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "16:15",
+          "date": "mié",
+          "time": "19:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Espanyol",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "home": "Atlético",
+      "away": "Osasuna",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
   "home": {
     "3117": {
-      "points": 0,
-      "avg": 0
+      "id": 3117,
+      "points": 1,
+      "avg": 1
     }
   },
   "away": {

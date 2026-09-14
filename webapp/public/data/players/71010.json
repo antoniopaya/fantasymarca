@@ -3,15 +3,15 @@
     "id": 71010,
     "name": "Ángel Recio",
     "position": 2,
-    "points": 15,
-    "avg": 3.8,
+    "points": 18,
+    "avg": 3.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71010.png?version=20260621195317",
     "isFavorite": 0,
-    "value": 4748000,
-    "previousValue": 4588000,
+    "value": 5090000,
+    "previousValue": 4980000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4748000,
+      "floor": 5090000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7122000,
+      "value": 7635000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4748000,
+      "price": 5090000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 67
+    "clausesRanking": 71
   },
   "id": 71010,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 0
   },
@@ -148,12 +148,12 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -689,30 +689,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 15,
-      "avg": 3.75,
+      "points": 18,
+      "avg": 3.6,
       "id_team": 13,
-      "last_gameweek": 4
+      "last_gameweek": 5
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 4588000,
-      "change": 160000,
-      "sign": 160
+      "value": 4980000,
+      "change": 110000,
+      "sign": 110
     },
     {
       "time": "Una semana",
-      "value": 3637000,
-      "change": 1111000,
-      "sign": "+1.111.000"
+      "value": 4179000,
+      "change": 911000,
+      "sign": 911
     },
     {
       "time": "Un mes",
-      "value": 445000,
-      "change": 4303000,
-      "sign": "+4.303.000"
+      "value": 491000,
+      "change": 4599000,
+      "sign": "+4.599.000"
     }
   ],
   "values_chart": {
@@ -1044,11 +1044,23 @@
       {
         "value": 4748000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 4855000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 4980000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 5090000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
-      "value": 4748000,
-      "date": "11 sept 2026"
+      "value": 5090000,
+      "date": "14 sept 2026"
     },
     "min": {
       "value": 329000,
@@ -1059,28 +1071,28 @@
     "71010": {
       "id": 71010,
       "id_team": 13,
-      "id_match": 37978,
-      "id_gameweek": 4046,
-      "id_home": 5,
-      "id_away": 13,
+      "id_match": 37993,
+      "id_gameweek": 4047,
+      "id_home": 13,
+      "id_away": 20,
       "date": {
-        "ts": 1789300800,
-        "text": "dom 14:00",
+        "ts": 1789673400,
+        "text": "jue 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
+          "date": "jue",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Málaga",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "home": "Málaga",
+      "away": "Villarreal",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
@@ -1094,8 +1106,8 @@
   "away": {
     "71010": {
       "id": 71010,
-      "points": 4,
-      "avg": 2
+      "points": 7,
+      "avg": 2.3333
     }
   },
   "owners": [],

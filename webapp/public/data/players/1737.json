@@ -3,15 +3,15 @@
     "id": 1737,
     "name": "Einar Galilea",
     "position": 2,
-    "points": 21,
-    "avg": 5.3,
+    "points": 22,
+    "avg": 4.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/1737.png?version=20260621200620",
     "isFavorite": 0,
-    "value": 9117000,
-    "previousValue": 8816000,
+    "value": 9875000,
+    "previousValue": 9656000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9117000,
+      "floor": 9875000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 13675500,
+      "value": 14812500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9117000,
+      "price": 9875000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 182,
       "weight": 73
     },
-    "clausesRanking": 64
+    "clausesRanking": 67
   },
   "id": 1737,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -152,12 +152,15 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -693,30 +696,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 21,
-      "avg": 5.25,
+      "points": 22,
+      "avg": 4.4,
       "id_team": 13,
-      "last_gameweek": 4
+      "last_gameweek": 5
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 8816000,
-      "change": 301000,
-      "sign": 301
+      "value": 9656000,
+      "change": 219000,
+      "sign": 219
     },
     {
       "time": "Una semana",
-      "value": 7659000,
-      "change": 1458000,
-      "sign": "+1.458.000"
+      "value": 7921000,
+      "change": 1954000,
+      "sign": "+1.954.000"
     },
     {
       "time": "Un mes",
-      "value": 4583000,
-      "change": 4534000,
-      "sign": "+4.534.000"
+      "value": 4933000,
+      "change": 4942000,
+      "sign": "+4.942.000"
     }
   ],
   "values_chart": {
@@ -1048,11 +1051,23 @@
       {
         "value": 9117000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 9400000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 9656000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 9875000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
-      "value": 9117000,
-      "date": "11 sept 2026"
+      "value": 9875000,
+      "date": "14 sept 2026"
     },
     "min": {
       "value": 329000,
@@ -1063,28 +1078,28 @@
     "1737": {
       "id": 1737,
       "id_team": 13,
-      "id_match": 37978,
-      "id_gameweek": 4046,
-      "id_home": 5,
-      "id_away": 13,
+      "id_match": 37993,
+      "id_gameweek": 4047,
+      "id_home": 13,
+      "id_away": 20,
       "date": {
-        "ts": 1789300800,
-        "text": "dom 14:00",
+        "ts": 1789673400,
+        "text": "jue 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
+          "date": "jue",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Málaga",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "home": "Málaga",
+      "away": "Villarreal",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
@@ -1098,8 +1113,8 @@
   "away": {
     "1737": {
       "id": 1737,
-      "points": 7,
-      "avg": 3.5
+      "points": 8,
+      "avg": 2.6667
     }
   },
   "owners": [],

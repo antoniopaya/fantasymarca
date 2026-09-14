@@ -15,7 +15,7 @@
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60859.png?version=20250107092359",
     "isFavorite": 0,
     "value": 329000,
-    "previousValue": 329000,
+    "previousValue": 461000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -192,8 +192,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 306104,
+        "id_player": 60859,
+        "category": "injury",
+        "description": "Rotura de ligamento cruzado",
+        "duration": "Baja indefinida",
+        "since": "2026-09-08 10:34:34",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -745,15 +754,15 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 0,
-      "sign": 0
+      "value": 461000,
+      "change": -132000,
+      "sign": -132
     },
     {
       "time": "Una semana",
-      "value": 392000,
-      "change": -63000,
-      "sign": -63
+      "value": 425000,
+      "change": -96000,
+      "sign": -96
     },
     {
       "time": "Un mes",
@@ -763,25 +772,13 @@
     },
     {
       "time": "Un año",
-      "value": 11396000,
-      "change": -11067000,
-      "sign": "-11.067.000"
+      "value": 11703000,
+      "change": -11374000,
+      "sign": "-11.374.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 11396000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 11457000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 11447000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 11703000,
         "date": "14 sept 2025"
@@ -2233,6 +2230,18 @@
       {
         "value": 329000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 369000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 461000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -2248,28 +2257,28 @@
     "60859": {
       "id": 60859,
       "id_team": 48,
-      "id_match": 37983,
-      "id_gameweek": 4046,
-      "id_home": 1490,
-      "id_away": 48,
+      "id_match": 37988,
+      "id_gameweek": 4047,
+      "id_home": 48,
+      "id_away": 19,
       "date": {
-        "ts": 1789214400,
-        "text": "sáb 14:00",
+        "ts": 1789495200,
+        "text": "mar 20:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
+          "date": "mar",
+          "time": "20:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
-      "away": "Alavés",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "home": "Alavés",
+      "away": "Valencia",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,

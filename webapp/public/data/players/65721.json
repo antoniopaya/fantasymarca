@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65721.png?version=20260827164543",
     "isFavorite": 0,
-    "value": 915000,
-    "previousValue": 940000,
+    "value": 644000,
+    "previousValue": 685000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 915000,
+      "floor": 666666.6666666666,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1372500,
+      "value": 1000000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 915000,
+      "price": 644000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 259
+    "clausesRanking": 316
   },
   "id": 65721,
   "player_extra": {
@@ -153,7 +153,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -690,37 +690,25 @@
   "values": [
     {
       "time": "Un día",
-      "value": 940000,
-      "change": -25000,
-      "sign": -25
+      "value": 685000,
+      "change": -41000,
+      "sign": -41
     },
     {
       "time": "Una semana",
-      "value": 1122000,
-      "change": -207000,
-      "sign": -207
+      "value": 1190000,
+      "change": -546000,
+      "sign": -546
     },
     {
       "time": "Un año",
-      "value": 9415000,
-      "change": -8500000,
-      "sign": "-8.500.000"
+      "value": 9924000,
+      "change": -9280000,
+      "sign": "-9.280.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 9415000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 9579000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 9717000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 9924000,
         "date": "14 sept 2025"
@@ -1336,6 +1324,18 @@
       {
         "value": 915000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 796000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 685000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 644000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -1351,28 +1351,28 @@
     "65721": {
       "id": 65721,
       "id_team": 3,
-      "id_match": 37980,
-      "id_gameweek": 4046,
-      "id_home": 12,
-      "id_away": 3,
+      "id_match": 37991,
+      "id_gameweek": 4047,
+      "id_home": 3,
+      "id_away": 1490,
       "date": {
-        "ts": 1789308900,
-        "text": "dom 16:15",
+        "ts": 1789587000,
+        "text": "mié 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "16:15",
+          "date": "mié",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Barcelona",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "home": "Barcelona",
+      "away": "Racing de Santander",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,

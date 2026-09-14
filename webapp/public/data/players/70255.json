@@ -3,15 +3,15 @@
     "id": 70255,
     "name": "Iker Luque",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 2,
+    "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70255.png?version=20260502195407",
     "isFavorite": 0,
-    "value": 344000,
-    "previousValue": 404000,
+    "value": 330000,
+    "previousValue": 345000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 344000,
+      "price": 330000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 168,
       "weight": null
     },
-    "clausesRanking": 307
+    "clausesRanking": 335
   },
   "id": 70255,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -157,12 +157,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -697,6 +699,13 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 2,
+      "avg": 2,
+      "id_team": 1490,
+      "last_gameweek": 5
+    },
+    {
       "season": "25/26",
       "points": 9,
       "avg": 9,
@@ -707,21 +716,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 404000,
-      "change": -60000,
-      "sign": -60
+      "value": 345000,
+      "change": -15000,
+      "sign": -15
     },
     {
       "time": "Una semana",
-      "value": 918000,
-      "change": -574000,
-      "sign": -574
+      "value": 751000,
+      "change": -421000,
+      "sign": -421
     },
     {
       "time": "Un mes",
-      "value": 329000,
-      "change": 15000,
-      "sign": 15
+      "value": 381000,
+      "change": -51000,
+      "sign": -51
     }
   ],
   "values_chart": {
@@ -1253,6 +1262,18 @@
       {
         "value": 344000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 345000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 330000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -1268,35 +1289,36 @@
     "70255": {
       "id": 70255,
       "id_team": 1490,
-      "id_match": 37983,
-      "id_gameweek": 4046,
-      "id_home": 1490,
-      "id_away": 48,
+      "id_match": 37991,
+      "id_gameweek": 4047,
+      "id_home": 3,
+      "id_away": 1490,
       "date": {
-        "ts": 1789214400,
-        "text": "sáb 14:00",
+        "ts": 1789587000,
+        "text": "mié 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
+          "date": "mié",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
-      "away": "Alavés",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "home": "Barcelona",
+      "away": "Racing de Santander",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,
   "home": {
     "70255": {
-      "points": 0,
-      "avg": 0
+      "id": 70255,
+      "points": 2,
+      "avg": 2
     }
   },
   "away": {

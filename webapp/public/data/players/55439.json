@@ -3,15 +3,15 @@
     "id": 55439,
     "name": "Hugo González",
     "position": 3,
-    "points": 12,
-    "avg": 6,
+    "points": 21,
+    "avg": 7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/55439.png?version=20260805081935",
     "isFavorite": 0,
-    "value": 2127000,
-    "previousValue": 1833000,
+    "value": 2597000,
+    "previousValue": 2414000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2127000,
+      "floor": 2597000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3190500,
+      "value": 3895500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2127000,
+      "price": 2597000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 181,
       "weight": null
     },
-    "clausesRanking": 122
+    "clausesRanking": 80
   },
   "id": 55439,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 0
   },
@@ -153,12 +153,15 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 9,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 13,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
@@ -694,10 +697,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 12,
-      "avg": 6,
+      "points": 21,
+      "avg": 7,
       "id_team": 5,
-      "last_gameweek": 4
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -717,21 +720,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1833000,
-      "change": 294000,
-      "sign": 294
+      "value": 2414000,
+      "change": 183000,
+      "sign": 183
     },
     {
       "time": "Una semana",
-      "value": 1895000,
-      "change": 232000,
-      "sign": 232
+      "value": 1224000,
+      "change": 1373000,
+      "sign": "+1.373.000"
     },
     {
       "time": "Un mes",
-      "value": 1257000,
-      "change": 870000,
-      "sign": 870
+      "value": 1954000,
+      "change": 643000,
+      "sign": 643
     }
   ],
   "values_chart": {
@@ -883,6 +886,18 @@
       {
         "value": 2127000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 2272000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 2414000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 2597000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -898,36 +913,36 @@
     "55439": {
       "id": 55439,
       "id_team": 5,
-      "id_match": 37978,
-      "id_gameweek": 4046,
+      "id_match": 38072,
+      "id_gameweek": 4048,
       "id_home": 5,
-      "id_away": 13,
+      "id_away": 1490,
       "date": {
-        "ts": 1789300800,
-        "text": "dom 14:00",
+        "ts": 1789835400,
+        "text": "sáb 18:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
+          "date": "sáb",
+          "time": "18:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Celta",
-      "away": "Málaga",
+      "away": "Racing de Santander",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,
   "home": {
     "55439": {
       "id": 55439,
-      "points": 1,
-      "avg": 1
+      "points": 10,
+      "avg": 5
     }
   },
   "away": {

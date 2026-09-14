@@ -3,15 +3,15 @@
     "id": 19927,
     "name": "Raúl García de Haro",
     "position": 4,
-    "points": 12,
+    "points": 15,
     "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/19927.png?version=20231222193004",
     "isFavorite": 0,
-    "value": 5801000,
-    "previousValue": 5654000,
+    "value": 5771000,
+    "previousValue": 5857000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5801000,
+      "floor": 5771000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8701500,
+      "value": 8656500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5801000,
+      "price": 5771000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 192,
       "weight": 70
     },
-    "clausesRanking": 124
+    "clausesRanking": 142
   },
   "id": 19927,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 1
   },
@@ -156,12 +156,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -697,10 +699,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 12,
+      "points": 15,
       "avg": 3,
       "id_team": 50,
-      "last_gameweek": 4
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -727,43 +729,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5654000,
-      "change": 147000,
-      "sign": 147
+      "value": 5857000,
+      "change": -86000,
+      "sign": -86
     },
     {
       "time": "Una semana",
-      "value": 5197000,
-      "change": 604000,
-      "sign": 604
+      "value": 5387000,
+      "change": 384000,
+      "sign": 384
     },
     {
       "time": "Un mes",
-      "value": 4532000,
-      "change": 1269000,
-      "sign": "+1.269.000"
+      "value": 4709000,
+      "change": 1062000,
+      "sign": "+1.062.000"
     },
     {
       "time": "Un año",
-      "value": 346000,
-      "change": 5455000,
-      "sign": "+5.455.000"
+      "value": 489000,
+      "change": 5282000,
+      "sign": "+5.282.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 346000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 517000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 530000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 489000,
         "date": "14 sept 2025"
@@ -2215,11 +2205,23 @@
       {
         "value": 5801000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 5878000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 5857000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 5771000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
-      "value": 5801000,
-      "date": "11 sept 2026"
+      "value": 5878000,
+      "date": "12 sept 2026"
     },
     "min": {
       "value": 329000,
@@ -2230,36 +2232,36 @@
     "19927": {
       "id": 19927,
       "id_team": 50,
-      "id_match": 37981,
-      "id_gameweek": 4046,
-      "id_home": 50,
-      "id_away": 8,
+      "id_match": 37987,
+      "id_gameweek": 4047,
+      "id_home": 2,
+      "id_away": 50,
       "date": {
-        "ts": 1789222500,
-        "text": "sáb 16:15",
+        "ts": 1789578000,
+        "text": "mié 19:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "16:15",
+          "date": "mié",
+          "time": "19:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Espanyol",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "home": "Atlético",
+      "away": "Osasuna",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
   "home": {
     "19927": {
       "id": 19927,
-      "points": 3,
-      "avg": 1.5
+      "points": 6,
+      "avg": 2
     }
   },
   "away": {

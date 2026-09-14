@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/55966.png?version=20240617154112",
     "isFavorite": 0,
-    "value": 6574000,
-    "previousValue": 6828000,
+    "value": 5970000,
+    "previousValue": 6176000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6574000,
+      "floor": 5970000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 3,
-      "shield2WeeksSku": "shield_t3_2w",
-      "shield1MonthSku": "shield_t3_1m",
-      "value": 9861000,
+      "tier": 2,
+      "shield2WeeksSku": "shield_t2_2w",
+      "shield1MonthSku": "shield_t2_1m",
+      "value": 8955000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6574000,
+      "price": 5970000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 383
   },
   "id": 55966,
   "player_extra": {
@@ -170,7 +170,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -736,43 +736,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 6828000,
-      "change": -254000,
-      "sign": -254
+      "value": 6176000,
+      "change": -206000,
+      "sign": -206
     },
     {
       "time": "Una semana",
-      "value": 8637000,
-      "change": -2063000,
-      "sign": "-2.063.000"
+      "value": 7626000,
+      "change": -1656000,
+      "sign": "-1.656.000"
     },
     {
       "time": "Un mes",
-      "value": 5957000,
-      "change": 617000,
-      "sign": 617
+      "value": 6516000,
+      "change": -546000,
+      "sign": -546
     },
     {
       "time": "Un año",
-      "value": 365000,
-      "change": 6209000,
-      "sign": "+6.209.000"
+      "value": 329000,
+      "change": 5641000,
+      "sign": "+5.641.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 365000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 381000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 329000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 329000,
         "date": "14 sept 2025"
@@ -1528,6 +1516,18 @@
       {
         "value": 6574000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 6353000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 6176000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 5970000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -1543,28 +1543,28 @@
     "55966": {
       "id": 55966,
       "id_team": 6,
-      "id_match": 37979,
-      "id_gameweek": 4046,
-      "id_home": 9,
-      "id_away": 6,
+      "id_match": 37989,
+      "id_gameweek": 4047,
+      "id_home": 6,
+      "id_away": 17,
       "date": {
-        "ts": 1789317000,
-        "text": "dom 18:30",
+        "ts": 1789578000,
+        "text": "mié 19:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "18:30",
+          "date": "mié",
+          "time": "19:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Deportivo da Coruña",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Sevilla",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,

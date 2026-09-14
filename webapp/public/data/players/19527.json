@@ -4,14 +4,14 @@
     "name": "Jon Moncayola",
     "position": 3,
     "points": 13,
-    "avg": 3.3,
+    "avg": 2.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/19527.png?version=20231222184833",
     "isFavorite": 0,
-    "value": 14884000,
-    "previousValue": 15260000,
+    "value": 13374000,
+    "previousValue": 13913000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 14884000,
+      "floor": 13374000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 22326000,
+      "value": 20061000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 14884000,
+      "price": 13374000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 182,
       "weight": 73
     },
-    "clausesRanking": 317
+    "clausesRanking": 400
   },
   "id": 19527,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -150,12 +150,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -692,9 +694,9 @@
     {
       "season": "26/27",
       "points": 13,
-      "avg": 3.25,
+      "avg": 2.6,
       "id_team": 50,
-      "last_gameweek": 4
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -721,43 +723,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 15260000,
-      "change": -376000,
-      "sign": -376
+      "value": 13913000,
+      "change": -539000,
+      "sign": -539
     },
     {
       "time": "Una semana",
-      "value": 18009000,
-      "change": -3125000,
-      "sign": "-3.125.000"
+      "value": 16879000,
+      "change": -3505000,
+      "sign": "-3.505.000"
     },
     {
       "time": "Un mes",
-      "value": 10658000,
-      "change": 4226000,
-      "sign": "+4.226.000"
+      "value": 11722000,
+      "change": 1652000,
+      "sign": "+1.652.000"
     },
     {
       "time": "Un año",
-      "value": 13920000,
-      "change": 964000,
-      "sign": 964
+      "value": 14308000,
+      "change": -934000,
+      "sign": -934
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 13920000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 14059000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 14128000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 14308000,
         "date": "14 sept 2025"
@@ -2209,6 +2199,18 @@
       {
         "value": 14884000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 14455000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 13913000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 13374000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -2224,28 +2226,28 @@
     "19527": {
       "id": 19527,
       "id_team": 50,
-      "id_match": 37981,
-      "id_gameweek": 4046,
-      "id_home": 50,
-      "id_away": 8,
+      "id_match": 37987,
+      "id_gameweek": 4047,
+      "id_home": 2,
+      "id_away": 50,
       "date": {
-        "ts": 1789222500,
-        "text": "sáb 16:15",
+        "ts": 1789578000,
+        "text": "mié 19:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "16:15",
+          "date": "mié",
+          "time": "19:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Espanyol",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "home": "Atlético",
+      "away": "Osasuna",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
@@ -2253,7 +2255,7 @@
     "19527": {
       "id": 19527,
       "points": 12,
-      "avg": 6
+      "avg": 4
     }
   },
   "away": {

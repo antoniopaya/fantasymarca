@@ -3,15 +3,15 @@
     "id": 28780,
     "name": "Luismi Cruz",
     "position": 3,
-    "points": 24,
+    "points": 30,
     "avg": 6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/28780.png?version=20260621103122",
     "isFavorite": 0,
-    "value": 10488000,
-    "previousValue": 10049000,
+    "value": 11877000,
+    "previousValue": 11382000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 10488000,
+      "floor": 11877000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 15732000,
+      "value": 17815500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 10488000,
+      "price": 11877000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 166,
       "weight": null
     },
-    "clausesRanking": 22
+    "clausesRanking": 27
   },
   "id": 28780,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 1,
     "cards": 0
   },
@@ -158,12 +158,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -699,30 +701,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 24,
+      "points": 30,
       "avg": 6,
       "id_team": 6,
-      "last_gameweek": 4
+      "last_gameweek": 5
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 10049000,
-      "change": 439000,
-      "sign": 439
+      "value": 11382000,
+      "change": 495000,
+      "sign": 495
     },
     {
       "time": "Una semana",
-      "value": 7809000,
-      "change": 2679000,
-      "sign": "+2.679.000"
+      "value": 8790000,
+      "change": 3087000,
+      "sign": "+3.087.000"
     },
     {
       "time": "Un mes",
-      "value": 5138000,
-      "change": 5350000,
-      "sign": "+5.350.000"
+      "value": 5657000,
+      "change": 6220000,
+      "sign": "+6.220.000"
     }
   ],
   "values_chart": {
@@ -1054,11 +1056,23 @@
       {
         "value": 10488000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 10914000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 11382000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 11877000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
-      "value": 10488000,
-      "date": "11 sept 2026"
+      "value": 11877000,
+      "date": "14 sept 2026"
     },
     "min": {
       "value": 329000,
@@ -1069,28 +1083,28 @@
     "28780": {
       "id": 28780,
       "id_team": 6,
-      "id_match": 37979,
-      "id_gameweek": 4046,
-      "id_home": 9,
-      "id_away": 6,
+      "id_match": 37989,
+      "id_gameweek": 4047,
+      "id_home": 6,
+      "id_away": 17,
       "date": {
-        "ts": 1789317000,
-        "text": "dom 18:30",
+        "ts": 1789578000,
+        "text": "mié 19:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "18:30",
+          "date": "mié",
+          "time": "19:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Deportivo da Coruña",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Sevilla",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,
@@ -1104,8 +1118,8 @@
   "away": {
     "28780": {
       "id": 28780,
-      "points": 18,
-      "avg": 9
+      "points": 24,
+      "avg": 8
     }
   },
   "owners": [],

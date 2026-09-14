@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59623.png?version=20240826105318",
     "isFavorite": 0,
-    "value": 23649000,
-    "previousValue": 24255000,
+    "value": 22495000,
+    "previousValue": 22838000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 23649000,
+      "floor": 22495000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 35473500,
+      "value": 33742500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 23649000,
+      "price": 22495000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 274
+    "clausesRanking": 344
   },
   "id": 59623,
   "player_extra": {
@@ -159,8 +159,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 306110,
+        "id_player": 59623,
+        "category": "red",
+        "description": "Roja directa",
+        "duration": "Baja esta jornada",
+        "since": "2026-09-08 14:06:19",
+        "until": null,
+        "status": "Sancionado"
+      },
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -719,43 +728,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 24255000,
-      "change": -606000,
-      "sign": -606
+      "value": 22838000,
+      "change": -343000,
+      "sign": -343
     },
     {
       "time": "Una semana",
-      "value": 24952000,
-      "change": -1303000,
-      "sign": "-1.303.000"
+      "value": 25194000,
+      "change": -2699000,
+      "sign": "-2.699.000"
     },
     {
       "time": "Un mes",
-      "value": 27442000,
-      "change": -3793000,
-      "sign": "-3.793.000"
+      "value": 28047000,
+      "change": -5552000,
+      "sign": "-5.552.000"
     },
     {
       "time": "Un año",
-      "value": 1737000,
-      "change": 21912000,
-      "sign": "+21.912.000"
+      "value": 992000,
+      "change": 21503000,
+      "sign": "+21.503.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 1737000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 1468000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 1219000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 992000,
         "date": "14 sept 2025"
@@ -2207,6 +2204,18 @@
       {
         "value": 23649000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 23232000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 22838000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 22495000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -2222,12 +2231,12 @@
     "59623": {
       "id": 59623,
       "id_team": 16,
-      "id_match": 37984,
-      "id_gameweek": 4046,
-      "id_home": 16,
-      "id_away": 2,
+      "id_match": 38078,
+      "id_gameweek": 4048,
+      "id_home": 19,
+      "id_away": 16,
       "date": {
-        "ts": 1789326000,
+        "ts": 1789930800,
         "text": "dom 21:00",
         "format": "EEE H:mm",
         "splitted": {
@@ -2239,11 +2248,11 @@
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Sociedad",
-      "away": "Atlético",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "home": "Valencia",
+      "away": "Real Sociedad",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   },
   "starter": false,

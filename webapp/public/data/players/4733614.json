@@ -3,15 +3,15 @@
     "id": 4733614,
     "name": "Romain Del Castillo",
     "position": 4,
-    "points": 0,
-    "avg": 0,
+    "points": 2,
+    "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4733614.png?version=20260901110930",
     "isFavorite": 0,
-    "value": 4755000,
-    "previousValue": 4897000,
+    "value": 4276000,
+    "previousValue": 4451000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4755000,
+      "floor": 4276000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7132500,
+      "value": 6414000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4755000,
+      "price": 4276000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 172,
       "weight": null
     },
-    "clausesRanking": 404
+    "clausesRanking": null
   },
   "id": 4733614,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -148,12 +148,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -686,19 +688,27 @@
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   ],
-  "points_history": [],
+  "points_history": [
+    {
+      "season": "26/27",
+      "points": 2,
+      "avg": 2,
+      "id_team": 50,
+      "last_gameweek": 5
+    }
+  ],
   "values": [
     {
       "time": "Un día",
-      "value": 4897000,
-      "change": -142000,
-      "sign": -142
+      "value": 4451000,
+      "change": -175000,
+      "sign": -175
     },
     {
       "time": "Una semana",
-      "value": 5668000,
-      "change": -913000,
-      "sign": -913
+      "value": 5343000,
+      "change": -1067000,
+      "sign": "-1.067.000"
     }
   ],
   "values_chart": {
@@ -742,6 +752,18 @@
       {
         "value": 4755000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 4597000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 4451000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 4276000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -749,43 +771,44 @@
       "date": "3 sept 2026"
     },
     "min": {
-      "value": 4755000,
-      "date": "11 sept 2026"
+      "value": 4276000,
+      "date": "14 sept 2026"
     }
   },
   "next_match": {
     "4733614": {
       "id": 4733614,
       "id_team": 50,
-      "id_match": 37981,
-      "id_gameweek": 4046,
-      "id_home": 50,
-      "id_away": 8,
+      "id_match": 37987,
+      "id_gameweek": 4047,
+      "id_home": 2,
+      "id_away": 50,
       "date": {
-        "ts": 1789222500,
-        "text": "sáb 16:15",
+        "ts": 1789578000,
+        "text": "mié 19:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "16:15",
+          "date": "mié",
+          "time": "19:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Espanyol",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "home": "Atlético",
+      "away": "Osasuna",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
   "home": {
     "4733614": {
-      "points": 0,
-      "avg": 0
+      "id": 4733614,
+      "points": 2,
+      "avg": 2
     }
   },
   "away": {

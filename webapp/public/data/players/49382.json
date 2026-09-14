@@ -3,15 +3,15 @@
     "id": 49382,
     "name": "Marcos Alonso",
     "position": 2,
-    "points": 18,
-    "avg": 4.5,
+    "points": 21,
+    "avg": 4.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/49382.png?version=20231218004050",
     "isFavorite": 0,
-    "value": 20774000,
-    "previousValue": 20779000,
+    "value": 20470000,
+    "previousValue": 20642000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 20774000,
+      "floor": 20470000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 31161000,
+      "value": 30705000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 20774000,
+      "price": 20470000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 188,
       "weight": 84
     },
-    "clausesRanking": 188
+    "clausesRanking": 194
   },
   "id": 49382,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 3
   },
@@ -152,12 +152,12 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 13,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
@@ -695,8 +695,8 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 18,
-      "avg": 4.5,
+      "points": 21,
+      "avg": 4.2,
       "id_team": 5,
       "last_gameweek": 6
     },
@@ -725,43 +725,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 20779000,
-      "change": -5000,
-      "sign": -5
+      "value": 20642000,
+      "change": -172000,
+      "sign": -172
     },
     {
       "time": "Una semana",
-      "value": 20034000,
-      "change": 740000,
-      "sign": 740
+      "value": 20427000,
+      "change": 43000,
+      "sign": 43
     },
     {
       "time": "Un mes",
-      "value": 22286000,
-      "change": -1512000,
-      "sign": "-1.512.000"
+      "value": 22486000,
+      "change": -2016000,
+      "sign": "-2.016.000"
     },
     {
       "time": "Un año",
-      "value": 13745000,
-      "change": 7029000,
-      "sign": "+7.029.000"
+      "value": 12109000,
+      "change": 8361000,
+      "sign": "+8.361.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 13745000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 13093000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 12584000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 12109000,
         "date": "14 sept 2025"
@@ -2213,6 +2201,18 @@
       {
         "value": 20774000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 20698000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 20642000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 20470000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -2228,36 +2228,36 @@
     "49382": {
       "id": 49382,
       "id_team": 5,
-      "id_match": 37978,
-      "id_gameweek": 4046,
+      "id_match": 38072,
+      "id_gameweek": 4048,
       "id_home": 5,
-      "id_away": 13,
+      "id_away": 1490,
       "date": {
-        "ts": 1789300800,
-        "text": "dom 14:00",
+        "ts": 1789835400,
+        "text": "sáb 18:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
+          "date": "sáb",
+          "time": "18:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Celta",
-      "away": "Málaga",
+      "away": "Racing de Santander",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,
   "home": {
     "49382": {
       "id": 49382,
-      "points": -2,
-      "avg": -2
+      "points": 1,
+      "avg": 0.5
     }
   },
   "away": {

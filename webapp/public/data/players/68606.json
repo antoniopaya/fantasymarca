@@ -3,15 +3,15 @@
     "id": 68606,
     "name": "Ángel Pérez",
     "position": 3,
-    "points": 41,
-    "avg": 10.3,
+    "points": 43,
+    "avg": 8.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68606.png?version=20260323141026",
     "isFavorite": 0,
-    "value": 25931000,
-    "previousValue": 25441000,
+    "value": 27347000,
+    "previousValue": 26877000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 25931000,
+      "floor": 27347000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 38896500,
+      "value": 41020500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 25931000,
+      "price": 27347000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 43
+    "clausesRanking": 49
   },
   "id": 68606,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 0
   },
@@ -158,12 +158,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -699,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 41,
-      "avg": 10.25,
+      "points": 43,
+      "avg": 8.6,
       "id_team": 48,
-      "last_gameweek": 4
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -715,21 +717,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 25441000,
-      "change": 490000,
-      "sign": 490
+      "value": 26877000,
+      "change": 470000,
+      "sign": 470
     },
     {
       "time": "Una semana",
-      "value": 22749000,
-      "change": 3182000,
-      "sign": "+3.182.000"
+      "value": 23868000,
+      "change": 3479000,
+      "sign": "+3.479.000"
     },
     {
       "time": "Un mes",
-      "value": 18197000,
-      "change": 7734000,
-      "sign": "+7.734.000"
+      "value": 19732000,
+      "change": 7615000,
+      "sign": "+7.615.000"
     }
   ],
   "values_chart": {
@@ -1641,11 +1643,23 @@
       {
         "value": 25931000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 26427000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 26877000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 27347000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
-      "value": 25931000,
-      "date": "11 sept 2026"
+      "value": 27347000,
+      "date": "14 sept 2026"
     },
     "min": {
       "value": 329000,
@@ -1656,28 +1670,28 @@
     "68606": {
       "id": 68606,
       "id_team": 48,
-      "id_match": 37983,
-      "id_gameweek": 4046,
-      "id_home": 1490,
-      "id_away": 48,
+      "id_match": 37988,
+      "id_gameweek": 4047,
+      "id_home": 48,
+      "id_away": 19,
       "date": {
-        "ts": 1789214400,
-        "text": "sáb 14:00",
+        "ts": 1789495200,
+        "text": "mar 20:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
+          "date": "mar",
+          "time": "20:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
-      "away": "Alavés",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "home": "Alavés",
+      "away": "Valencia",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
@@ -1691,8 +1705,8 @@
   "away": {
     "68606": {
       "id": 68606,
-      "points": 6,
-      "avg": 6
+      "points": 8,
+      "avg": 4
     }
   },
   "owners": [],

@@ -3,15 +3,15 @@
     "id": 71639,
     "name": "Beñat Gerenabarrena",
     "position": 3,
-    "points": 18,
-    "avg": 4.5,
+    "points": 20,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71639.png?version=20260803092552",
     "isFavorite": 0,
-    "value": 5281000,
-    "previousValue": 5066000,
+    "value": 5935000,
+    "previousValue": 5697000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5281000,
+      "floor": 5935000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7921500,
+      "value": 8902500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5281000,
+      "price": 5935000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 173,
       "weight": null
     },
-    "clausesRanking": 27
+    "clausesRanking": 26
   },
   "id": 71639,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -154,12 +154,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -695,30 +697,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 18,
-      "avg": 4.5,
+      "points": 20,
+      "avg": 4,
       "id_team": 1,
-      "last_gameweek": 4
+      "last_gameweek": 5
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 5066000,
-      "change": 215000,
-      "sign": 215
+      "value": 5697000,
+      "change": 238000,
+      "sign": 238
     },
     {
       "time": "Una semana",
-      "value": 3835000,
-      "change": 1446000,
-      "sign": "+1.446.000"
+      "value": 4466000,
+      "change": 1469000,
+      "sign": "+1.469.000"
     },
     {
       "time": "Un mes",
-      "value": 1572000,
-      "change": 3709000,
-      "sign": "+3.709.000"
+      "value": 1566000,
+      "change": 4369000,
+      "sign": "+4.369.000"
     }
   ],
   "values_chart": {
@@ -878,11 +880,23 @@
       {
         "value": 5281000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 5480000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 5697000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 5935000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
-      "value": 5281000,
-      "date": "11 sept 2026"
+      "value": 5935000,
+      "date": "14 sept 2026"
     },
     "min": {
       "value": 725000,
@@ -893,36 +907,36 @@
     "71639": {
       "id": 71639,
       "id_team": 1,
-      "id_match": 37977,
-      "id_gameweek": 4046,
-      "id_home": 1,
-      "id_away": 23,
+      "id_match": 37992,
+      "id_gameweek": 4047,
+      "id_home": 12,
+      "id_away": 1,
       "date": {
-        "ts": 1789230600,
-        "text": "sáb 18:30",
+        "ts": 1789587000,
+        "text": "mié 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "18:30",
+          "date": "mié",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Elche",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+      "home": "Levante",
+      "away": "Athletic Club",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
   "home": {
     "71639": {
       "id": 71639,
-      "points": 11,
-      "avg": 5.5
+      "points": 13,
+      "avg": 4.3333
     }
   },
   "away": {

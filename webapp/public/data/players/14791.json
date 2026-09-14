@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/14791.png?version=20231205085735",
     "isFavorite": 0,
-    "value": 18841000,
-    "previousValue": 19833000,
+    "value": 16247000,
+    "previousValue": 17052000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 18841000,
+      "floor": 16247000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 28261500,
+      "value": 24370500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 18841000,
+      "price": 16247000,
       "loanable": null
     },
     "bid": {
@@ -64,7 +64,7 @@
     },
     "loan": [],
     "bio": {
-      "age": 29,
+      "age": 30,
       "country": {
         "flag": "🇪🇸",
         "country": "España"
@@ -72,7 +72,7 @@
       "height": 188,
       "weight": null
     },
-    "clausesRanking": 390
+    "clausesRanking": null
   },
   "id": 14791,
   "player_extra": {
@@ -166,8 +166,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 306142,
+        "id_player": 14791,
+        "category": "injury",
+        "description": "Lesión en los isquiotibiales",
+        "duration": "Baja hasta Octubre",
+        "since": "2026-09-09 18:02:21",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -733,43 +742,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 19833000,
-      "change": -992000,
-      "sign": -992
+      "value": 17052000,
+      "change": -805000,
+      "sign": -805
     },
     {
       "time": "Una semana",
-      "value": 22598000,
-      "change": -3757000,
-      "sign": "-3.757.000"
+      "value": 21166000,
+      "change": -4919000,
+      "sign": "-4.919.000"
     },
     {
       "time": "Un mes",
-      "value": 26338000,
-      "change": -7497000,
-      "sign": "-7.497.000"
+      "value": 26971000,
+      "change": -10724000,
+      "sign": "-10.724.000"
     },
     {
       "time": "Un año",
-      "value": 10031000,
-      "change": 8810000,
-      "sign": "+8.810.000"
+      "value": 9217000,
+      "change": 7030000,
+      "sign": "+7.030.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 10031000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 9818000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 9543000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 9217000,
         "date": "14 sept 2025"
@@ -2221,6 +2218,18 @@
       {
         "value": 18841000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 17899000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 17052000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 16247000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -2236,28 +2245,28 @@
     "14791": {
       "id": 14791,
       "id_team": 1,
-      "id_match": 37977,
-      "id_gameweek": 4046,
-      "id_home": 1,
-      "id_away": 23,
+      "id_match": 37992,
+      "id_gameweek": 4047,
+      "id_home": 12,
+      "id_away": 1,
       "date": {
-        "ts": 1789230600,
-        "text": "sáb 18:30",
+        "ts": 1789587000,
+        "text": "mié 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "18:30",
+          "date": "mié",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Elche",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+      "home": "Levante",
+      "away": "Athletic Club",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,

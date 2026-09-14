@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/55452.png?version=20231221203629",
     "isFavorite": 0,
-    "value": 433000,
-    "previousValue": 429000,
+    "value": 329000,
+    "previousValue": 377000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 433000,
+      "price": 329000,
       "loanable": null
     },
     "bid": {
@@ -192,8 +192,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302142,
+        "id_player": 55452,
+        "category": "injury",
+        "description": "Rotura de ligamento cruzado",
+        "duration": "Baja hasta Diciembre",
+        "since": "2026-07-16 18:38:26",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -745,21 +754,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 429000,
-      "change": 4000,
-      "sign": 4
+      "value": 377000,
+      "change": -48000,
+      "sign": -48
     },
     {
       "time": "Una semana",
-      "value": 493000,
-      "change": -60000,
-      "sign": -60
+      "value": 513000,
+      "change": -184000,
+      "sign": -184
     },
     {
       "time": "Un mes",
-      "value": 329000,
-      "change": 104000,
-      "sign": 104
+      "value": 425000,
+      "change": -96000,
+      "sign": -96
     }
   ],
   "values_chart": {
@@ -1047,6 +1056,18 @@
       {
         "value": 433000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 377000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -1062,27 +1083,27 @@
     "55452": {
       "id": 55452,
       "id_team": 19,
-      "id_match": 37985,
-      "id_gameweek": 4046,
-      "id_home": 17,
+      "id_match": 37988,
+      "id_gameweek": 4047,
+      "id_home": 48,
       "id_away": 19,
       "date": {
-        "ts": 1789153200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1789495200,
+        "text": "mar 20:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "mar",
+          "time": "20:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
+      "home": "Alavés",
       "away": "Valencia",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },

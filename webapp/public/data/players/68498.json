@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68498.png?version=20260117124556",
     "isFavorite": 0,
-    "value": 17484000,
-    "previousValue": 18281000,
+    "value": 15982000,
+    "previousValue": 16432000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 17484000,
+      "floor": 15982000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 26226000,
+      "value": 23973000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 17484000,
+      "price": 15982000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 192,
       "weight": null
     },
-    "clausesRanking": 286
+    "clausesRanking": 345
   },
   "id": 68498,
   "player_extra": {
@@ -159,8 +159,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 306107,
+        "id_player": 68498,
+        "category": "double",
+        "description": "Doble tarjeta",
+        "duration": "Baja esta jornada",
+        "since": "2026-09-08 14:05:47",
+        "until": null,
+        "status": "Sancionado"
+      },
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -712,21 +721,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 18281000,
-      "change": -797000,
-      "sign": -797
+      "value": 16432000,
+      "change": -450000,
+      "sign": -450
     },
     {
       "time": "Una semana",
-      "value": 20198000,
-      "change": -2714000,
-      "sign": "-2.714.000"
+      "value": 20079000,
+      "change": -4097000,
+      "sign": "-4.097.000"
     },
     {
       "time": "Un mes",
-      "value": 22653000,
-      "change": -5169000,
-      "sign": "-5.169.000"
+      "value": 22939000,
+      "change": -6957000,
+      "sign": "-6.957.000"
     }
   ],
   "values_chart": {
@@ -1614,6 +1623,18 @@
       {
         "value": 17484000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 16865000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 16432000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 15982000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -1629,28 +1650,28 @@
     "68498": {
       "id": 68498,
       "id_team": 9,
-      "id_match": 37979,
-      "id_gameweek": 4046,
-      "id_home": 9,
-      "id_away": 6,
+      "id_match": 37995,
+      "id_gameweek": 4047,
+      "id_home": 4,
+      "id_away": 9,
       "date": {
-        "ts": 1789317000,
-        "text": "dom 18:30",
+        "ts": 1789664400,
+        "text": "jue 19:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "18:30",
+          "date": "jue",
+          "time": "19:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Deportivo da Coruña",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Betis",
+      "away": "Getafe",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,

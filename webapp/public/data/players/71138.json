@@ -3,15 +3,15 @@
     "id": 71138,
     "name": "Ryunosuke Sato",
     "position": 3,
-    "points": 6,
-    "avg": 1.5,
+    "points": 8,
+    "avg": 1.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71138.png?version=20260707174743",
     "isFavorite": 0,
-    "value": 8991000,
-    "previousValue": 9227000,
+    "value": 7965000,
+    "previousValue": 8274000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 8991000,
+      "floor": 7965000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 13486500,
+      "value": 11947500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 8991000,
+      "price": 7965000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 171,
       "weight": null
     },
-    "clausesRanking": 341
+    "clausesRanking": 420
   },
   "id": 71138,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -156,12 +156,15 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -697,30 +700,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 6,
-      "avg": 1.5,
+      "points": 8,
+      "avg": 1.6,
       "id_team": 19,
-      "last_gameweek": 4
+      "last_gameweek": 5
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 9227000,
-      "change": -236000,
-      "sign": -236
+      "value": 8274000,
+      "change": -309000,
+      "sign": -309
     },
     {
       "time": "Una semana",
-      "value": 11302000,
-      "change": -2311000,
-      "sign": "-2.311.000"
+      "value": 10368000,
+      "change": -2403000,
+      "sign": "-2.403.000"
     },
     {
       "time": "Un mes",
-      "value": 6649000,
-      "change": 2342000,
-      "sign": "+2.342.000"
+      "value": 7365000,
+      "change": 600000,
+      "sign": 600
     }
   ],
   "values_chart": {
@@ -988,6 +991,18 @@
       {
         "value": 8991000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 8688000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 8274000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 7965000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -1003,27 +1018,27 @@
     "71138": {
       "id": 71138,
       "id_team": 19,
-      "id_match": 37985,
-      "id_gameweek": 4046,
-      "id_home": 17,
+      "id_match": 37988,
+      "id_gameweek": 4047,
+      "id_home": 48,
       "id_away": 19,
       "date": {
-        "ts": 1789153200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1789495200,
+        "text": "mar 20:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "mar",
+          "time": "20:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
+      "home": "Alavés",
       "away": "Valencia",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
@@ -1038,7 +1053,7 @@
   "away": {
     "71138": {
       "id": 71138,
-      "points": 2,
+      "points": 4,
       "avg": 2
     }
   },

@@ -3,15 +3,15 @@
     "id": 31484,
     "name": "Eduardo Camavinga",
     "position": 3,
-    "points": 12,
-    "avg": 3,
+    "points": 14,
+    "avg": 2.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/31484.png?version=20251003184013",
     "isFavorite": 0,
-    "value": 11383000,
-    "previousValue": 11156000,
+    "value": 12010000,
+    "previousValue": 11794000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 11383000,
+      "floor": 12010000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 17074500,
+      "value": 18015000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 11383000,
+      "price": 12010000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 141
+    "clausesRanking": 147
   },
   "id": 31484,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 2
   },
@@ -156,12 +156,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -697,10 +699,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 12,
-      "avg": 3,
+      "points": 14,
+      "avg": 2.8,
       "id_team": 15,
-      "last_gameweek": 4
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -727,43 +729,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 11156000,
-      "change": 227000,
-      "sign": 227
+      "value": 11794000,
+      "change": 216000,
+      "sign": 216
     },
     {
       "time": "Una semana",
-      "value": 9647000,
-      "change": 1736000,
-      "sign": "+1.736.000"
+      "value": 10325000,
+      "change": 1685000,
+      "sign": "+1.685.000"
     },
     {
       "time": "Un mes",
-      "value": 8219000,
-      "change": 3164000,
-      "sign": "+3.164.000"
+      "value": 8714000,
+      "change": 3296000,
+      "sign": "+3.296.000"
     },
     {
       "time": "Un año",
-      "value": 10834000,
-      "change": 549000,
-      "sign": 549
+      "value": 10361000,
+      "change": 1649000,
+      "sign": "+1.649.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 10834000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 10598000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 10554000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 10361000,
         "date": "14 sept 2025"
@@ -2215,6 +2205,18 @@
       {
         "value": 11383000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 11591000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 11794000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 12010000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -2230,36 +2232,36 @@
     "31484": {
       "id": 31484,
       "id_team": 15,
-      "id_match": 37982,
-      "id_gameweek": 4046,
-      "id_home": 15,
-      "id_away": 14,
+      "id_match": 37990,
+      "id_gameweek": 4047,
+      "id_home": 23,
+      "id_away": 15,
       "date": {
-        "ts": 1789239600,
-        "text": "sáb 21:00",
+        "ts": 1789500600,
+        "text": "mar 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "21:00",
+          "date": "mar",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Madrid",
-      "away": "Rayo Vallecano",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Elche",
+      "away": "Real Madrid",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
   "home": {
     "31484": {
       "id": 31484,
-      "points": 7,
-      "avg": 3.5
+      "points": 9,
+      "avg": 3
     }
   },
   "away": {

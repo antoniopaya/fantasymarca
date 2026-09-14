@@ -3,15 +3,15 @@
     "id": 71574,
     "name": "Karim Adeyemi",
     "position": 4,
-    "points": 19,
-    "avg": 4.8,
+    "points": 26,
+    "avg": 5.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71574.png?version=20260723170252",
     "isFavorite": 0,
-    "value": 38369000,
-    "previousValue": 38582000,
+    "value": 38130000,
+    "previousValue": 38080000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 38369000,
+      "floor": 38130000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 57553500,
+      "value": 57195000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 38369000,
+      "price": 38130000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 257
+    "clausesRanking": 228
   },
   "id": 71574,
   "player_extra": {
-    "matches": 4,
-    "goals": 1,
+    "matches": 5,
+    "goals": 2,
     "cards": 0
   },
   "points": [
@@ -158,12 +158,15 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -699,30 +702,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 19,
-      "avg": 4.75,
+      "points": 26,
+      "avg": 5.2,
       "id_team": 3,
-      "last_gameweek": 4
+      "last_gameweek": 5
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 38582000,
-      "change": -213000,
-      "sign": -213
+      "value": 38080000,
+      "change": 50000,
+      "sign": 50
     },
     {
       "time": "Una semana",
-      "value": 40413000,
-      "change": -2044000,
-      "sign": "-2.044.000"
+      "value": 39509000,
+      "change": -1379000,
+      "sign": "-1.379.000"
     },
     {
       "time": "Un mes",
-      "value": 40053000,
-      "change": -1684000,
-      "sign": "-1.684.000"
+      "value": 39877000,
+      "change": -1747000,
+      "sign": "-1.747.000"
     }
   ],
   "values_chart": {
@@ -926,6 +929,18 @@
       {
         "value": 38369000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 38239000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 38080000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 38130000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -941,28 +956,28 @@
     "71574": {
       "id": 71574,
       "id_team": 3,
-      "id_match": 37980,
-      "id_gameweek": 4046,
-      "id_home": 12,
-      "id_away": 3,
+      "id_match": 37991,
+      "id_gameweek": 4047,
+      "id_home": 3,
+      "id_away": 1490,
       "date": {
-        "ts": 1789308900,
-        "text": "dom 16:15",
+        "ts": 1789587000,
+        "text": "mié 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "16:15",
+          "date": "mié",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Barcelona",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "home": "Barcelona",
+      "away": "Racing de Santander",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,
@@ -976,8 +991,8 @@
   "away": {
     "71574": {
       "id": 71574,
-      "points": 12,
-      "avg": 6
+      "points": 19,
+      "avg": 6.3333
     }
   },
   "owners": [],

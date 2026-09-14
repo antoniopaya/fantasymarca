@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/1684.png?version=20251003195620",
     "isFavorite": 0,
-    "value": 378000,
-    "previousValue": 438000,
+    "value": 373000,
+    "previousValue": 358000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 378000,
+      "price": 373000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 186,
       "weight": 79
     },
-    "clausesRanking": 440
+    "clausesRanking": 412
   },
   "id": 1684,
   "player_extra": {
@@ -192,8 +192,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302687,
+        "id_player": 1684,
+        "category": "injury",
+        "description": "Rotura del tendón bíceps femoral",
+        "duration": "Baja hasta Diciembre",
+        "since": "2026-08-10 21:45:49",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -752,43 +761,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 438000,
-      "change": -60000,
-      "sign": -60
+      "value": 358000,
+      "change": 15000,
+      "sign": 15
     },
     {
       "time": "Una semana",
-      "value": 1882000,
-      "change": -1504000,
-      "sign": "-1.504.000"
+      "value": 1018000,
+      "change": -645000,
+      "sign": -645
     },
     {
       "time": "Un mes",
-      "value": 8636000,
-      "change": -8258000,
-      "sign": "-8.258.000"
+      "value": 7460000,
+      "change": -7087000,
+      "sign": "-7.087.000"
     },
     {
       "time": "Un año",
-      "value": 11866000,
-      "change": -11488000,
-      "sign": "-11.488.000"
+      "value": 11443000,
+      "change": -11070000,
+      "sign": "-11.070.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 11866000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 11760000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 11537000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 11443000,
         "date": "14 sept 2025"
@@ -2240,6 +2237,18 @@
       {
         "value": 378000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 437000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 358000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 373000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -2247,35 +2256,35 @@
       "date": "1 abr 2026"
     },
     "min": {
-      "value": 378000,
-      "date": "11 sept 2026"
+      "value": 358000,
+      "date": "13 sept 2026"
     }
   },
   "next_match": {
     "1684": {
       "id": 1684,
       "id_team": 8,
-      "id_match": 37981,
-      "id_gameweek": 4046,
-      "id_home": 50,
+      "id_match": 37994,
+      "id_gameweek": 4047,
+      "id_home": 14,
       "id_away": 8,
       "date": {
-        "ts": 1789222500,
-        "text": "sáb 16:15",
+        "ts": 1789491600,
+        "text": "mar 19:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "16:15",
+          "date": "mar",
+          "time": "19:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
+      "home": "Rayo Vallecano",
       "away": "Espanyol",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },

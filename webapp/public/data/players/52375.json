@@ -3,15 +3,15 @@
     "id": 52375,
     "name": "Lamine Yamal",
     "position": 4,
-    "points": 53,
-    "avg": 13.3,
+    "points": 71,
+    "avg": 14.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/52375.png?version=20260217182455",
     "isFavorite": 0,
-    "value": 79628000,
-    "previousValue": 79513000,
+    "value": 80029000,
+    "previousValue": 79863000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 79628000,
+      "floor": 80029000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 119442000,
+      "value": 120043500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 79628000,
+      "price": 80029000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 46
+    "clausesRanking": 44
   },
   "id": 52375,
   "player_extra": {
-    "matches": 4,
-    "goals": 4,
+    "matches": 5,
+    "goals": 6,
     "cards": 0
   },
   "points": [
@@ -156,12 +156,16 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 18,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "penalty",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -697,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 53,
-      "avg": 13.25,
+      "points": 71,
+      "avg": 14.2,
       "id_team": 3,
-      "last_gameweek": 4
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -727,43 +731,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 79513000,
-      "change": 115000,
-      "sign": 115
+      "value": 79863000,
+      "change": 166000,
+      "sign": 166
     },
     {
       "time": "Una semana",
-      "value": 78754000,
-      "change": 874000,
-      "sign": 874
+      "value": 78910000,
+      "change": 1119000,
+      "sign": "+1.119.000"
     },
     {
       "time": "Un mes",
-      "value": 79049000,
-      "change": 579000,
-      "sign": 579
+      "value": 79207000,
+      "change": 822000,
+      "sign": 822
     },
     {
       "time": "Un año",
-      "value": 81446000,
-      "change": -1818000,
-      "sign": "-1.818.000"
+      "value": 81190000,
+      "change": -1161000,
+      "sign": "-1.161.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 81446000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 81377000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 81302000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 81190000,
         "date": "14 sept 2025"
@@ -2215,6 +2207,18 @@
       {
         "value": 79628000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 79725000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 79863000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 80029000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -2230,28 +2234,28 @@
     "52375": {
       "id": 52375,
       "id_team": 3,
-      "id_match": 37980,
-      "id_gameweek": 4046,
-      "id_home": 12,
-      "id_away": 3,
+      "id_match": 37991,
+      "id_gameweek": 4047,
+      "id_home": 3,
+      "id_away": 1490,
       "date": {
-        "ts": 1789308900,
-        "text": "dom 16:15",
+        "ts": 1789587000,
+        "text": "mié 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "16:15",
+          "date": "mié",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Barcelona",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "home": "Barcelona",
+      "away": "Racing de Santander",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,
@@ -2265,8 +2269,8 @@
   "away": {
     "52375": {
       "id": 52375,
-      "points": 24,
-      "avg": 12
+      "points": 42,
+      "avg": 14
     }
   },
   "owners": [],

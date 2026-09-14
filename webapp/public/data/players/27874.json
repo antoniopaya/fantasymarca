@@ -3,15 +3,15 @@
     "id": 27874,
     "name": "Iván Martín",
     "position": 3,
-    "points": 11,
-    "avg": 3.7,
+    "points": 14,
+    "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/27874.png?version=20260820222555",
     "isFavorite": 0,
-    "value": 4770000,
-    "previousValue": 4591000,
+    "value": 5232000,
+    "previousValue": 5103000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4770000,
+      "floor": 5232000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7155000,
+      "value": 7848000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4770000,
+      "price": 5232000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 39
+    "clausesRanking": 41
   },
   "id": 27874,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 0
   },
@@ -150,12 +150,12 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -691,10 +691,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 11,
-      "avg": 3.6667,
+      "points": 14,
+      "avg": 3.5,
       "id_team": 1490,
-      "last_gameweek": 4
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -721,37 +721,25 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4591000,
-      "change": 179000,
-      "sign": 179
+      "value": 5103000,
+      "change": 129000,
+      "sign": 129
     },
     {
       "time": "Una semana",
-      "value": 3224000,
-      "change": 1546000,
-      "sign": "+1.546.000"
+      "value": 4075000,
+      "change": 1157000,
+      "sign": "+1.157.000"
     },
     {
       "time": "Un año",
-      "value": 2034000,
-      "change": 2736000,
-      "sign": "+2.736.000"
+      "value": 1875000,
+      "change": 3357000,
+      "sign": "+3.357.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 2034000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 2024000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 1903000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 1875000,
         "date": "14 sept 2025"
@@ -2011,6 +1999,18 @@
       {
         "value": 4770000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 4929000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 5103000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 5232000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -2026,36 +2026,36 @@
     "27874": {
       "id": 27874,
       "id_team": 1490,
-      "id_match": 37983,
-      "id_gameweek": 4046,
-      "id_home": 1490,
-      "id_away": 48,
+      "id_match": 37991,
+      "id_gameweek": 4047,
+      "id_home": 3,
+      "id_away": 1490,
       "date": {
-        "ts": 1789214400,
-        "text": "sáb 14:00",
+        "ts": 1789587000,
+        "text": "mié 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
+          "date": "mié",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
-      "away": "Alavés",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "home": "Barcelona",
+      "away": "Racing de Santander",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,
   "home": {
     "27874": {
       "id": 27874,
-      "points": 5,
-      "avg": 5
+      "points": 8,
+      "avg": 4
     }
   },
   "away": {

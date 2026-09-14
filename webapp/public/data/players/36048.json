@@ -3,15 +3,15 @@
     "id": 36048,
     "name": "Nahuel Tenaglia",
     "position": 2,
-    "points": 32,
-    "avg": 8,
+    "points": 35,
+    "avg": 7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/36048.png?version=20251006024418",
     "isFavorite": 0,
-    "value": 32862000,
-    "previousValue": 32733000,
+    "value": 33553000,
+    "previousValue": 33370000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 32862000,
+      "floor": 33553000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 49293000,
+      "value": 50329500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 32862000,
+      "price": 33553000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 182,
       "weight": 71
     },
-    "clausesRanking": 132
+    "clausesRanking": 171
   },
   "id": 36048,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 1,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -152,12 +152,15 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -693,10 +696,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 32,
-      "avg": 8,
+      "points": 35,
+      "avg": 7,
       "id_team": 48,
-      "last_gameweek": 4
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -723,43 +726,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 32733000,
-      "change": 129000,
-      "sign": 129
+      "value": 33370000,
+      "change": 183000,
+      "sign": 183
     },
     {
       "time": "Una semana",
-      "value": 30181000,
-      "change": 2681000,
-      "sign": "+2.681.000"
+      "value": 31633000,
+      "change": 1920000,
+      "sign": "+1.920.000"
     },
     {
       "time": "Un mes",
-      "value": 21302000,
-      "change": 11560000,
-      "sign": "+11.560.000"
+      "value": 21774000,
+      "change": 11779000,
+      "sign": "+11.779.000"
     },
     {
       "time": "Un año",
-      "value": 26633000,
-      "change": 6229000,
-      "sign": "+6.229.000"
+      "value": 26854000,
+      "change": 6699000,
+      "sign": "+6.699.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 26633000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 26571000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 26571000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 26854000,
         "date": "14 sept 2025"
@@ -2211,6 +2202,18 @@
       {
         "value": 32862000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 33088000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 33370000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 33553000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -2226,28 +2229,28 @@
     "36048": {
       "id": 36048,
       "id_team": 48,
-      "id_match": 37983,
-      "id_gameweek": 4046,
-      "id_home": 1490,
-      "id_away": 48,
+      "id_match": 37988,
+      "id_gameweek": 4047,
+      "id_home": 48,
+      "id_away": 19,
       "date": {
-        "ts": 1789214400,
-        "text": "sáb 14:00",
+        "ts": 1789495200,
+        "text": "mar 20:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
+          "date": "mar",
+          "time": "20:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
-      "away": "Alavés",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "home": "Alavés",
+      "away": "Valencia",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
@@ -2261,8 +2264,8 @@
   "away": {
     "36048": {
       "id": 36048,
-      "points": 6,
-      "avg": 6
+      "points": 9,
+      "avg": 4.5
     }
   },
   "owners": [],

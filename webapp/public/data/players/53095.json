@@ -3,15 +3,15 @@
     "id": 53095,
     "name": "Bryan Zaragoza",
     "position": 3,
-    "points": 2,
+    "points": 4,
     "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/53095.png?version=20260827201514",
     "isFavorite": 0,
-    "value": 25309000,
-    "previousValue": 25707000,
+    "value": 24096000,
+    "previousValue": 24600000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 25309000,
+      "floor": 24096000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 37963500,
+      "value": 36144000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 25309000,
+      "price": 24096000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 165,
       "weight": null
     },
-    "clausesRanking": 416
+    "clausesRanking": 437
   },
   "id": 53095,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -159,12 +159,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -700,10 +702,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 2,
+      "points": 4,
       "avg": 2,
       "id_team": 8,
-      "last_gameweek": 4
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -730,37 +732,25 @@
   "values": [
     {
       "time": "Un día",
-      "value": 25707000,
-      "change": -398000,
-      "sign": -398
+      "value": 24600000,
+      "change": -504000,
+      "sign": -504
     },
     {
       "time": "Una semana",
-      "value": 27699000,
-      "change": -2390000,
-      "sign": "-2.390.000"
+      "value": 26798000,
+      "change": -2702000,
+      "sign": "-2.702.000"
     },
     {
       "time": "Un año",
-      "value": 24355000,
-      "change": 954000,
-      "sign": 954
+      "value": 23780000,
+      "change": 316000,
+      "sign": 316
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 24355000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 24233000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 24007000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 23780000,
         "date": "14 sept 2025"
@@ -1388,6 +1378,18 @@
       {
         "value": 25309000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 25052000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 24600000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 24096000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -1403,27 +1405,27 @@
     "53095": {
       "id": 53095,
       "id_team": 8,
-      "id_match": 37981,
-      "id_gameweek": 4046,
-      "id_home": 50,
+      "id_match": 37994,
+      "id_gameweek": 4047,
+      "id_home": 14,
       "id_away": 8,
       "date": {
-        "ts": 1789222500,
-        "text": "sáb 16:15",
+        "ts": 1789491600,
+        "text": "mar 19:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "16:15",
+          "date": "mar",
+          "time": "19:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
+      "home": "Rayo Vallecano",
       "away": "Espanyol",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
@@ -1437,8 +1439,9 @@
   },
   "away": {
     "53095": {
-      "points": 0,
-      "avg": 0
+      "id": 53095,
+      "points": 2,
+      "avg": 2
     }
   },
   "owners": [],

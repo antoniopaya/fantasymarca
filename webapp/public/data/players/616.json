@@ -3,15 +3,15 @@
     "id": 616,
     "name": "Rodri Hernández",
     "position": 3,
-    "points": 9,
-    "avg": 3,
+    "points": 14,
+    "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/616.png?version=20260818215112",
     "isFavorite": 0,
-    "value": 46308000,
-    "previousValue": 46339000,
+    "value": 46187000,
+    "previousValue": 46197000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 46308000,
+      "floor": 46187000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 69462000,
+      "value": 69280500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 46308000,
+      "price": 46187000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 191,
       "weight": 82
     },
-    "clausesRanking": 159
+    "clausesRanking": 162
   },
   "id": 616,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 1
   },
@@ -155,12 +155,12 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -696,24 +696,24 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 9,
-      "avg": 3,
+      "points": 14,
+      "avg": 3.5,
       "id_team": 3,
-      "last_gameweek": 4
+      "last_gameweek": 5
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 46339000,
-      "change": -31000,
-      "sign": -31
+      "value": 46197000,
+      "change": -10000,
+      "sign": -10
     },
     {
       "time": "Una semana",
-      "value": 46407000,
-      "change": -99000,
-      "sign": -99
+      "value": 46233000,
+      "change": -46000,
+      "sign": -46
     }
   ],
   "values_chart": {
@@ -817,6 +817,18 @@
       {
         "value": 46308000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 46254000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 46197000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 46187000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -832,28 +844,28 @@
     "616": {
       "id": 616,
       "id_team": 3,
-      "id_match": 37980,
-      "id_gameweek": 4046,
-      "id_home": 12,
-      "id_away": 3,
+      "id_match": 37991,
+      "id_gameweek": 4047,
+      "id_home": 3,
+      "id_away": 1490,
       "date": {
-        "ts": 1789308900,
-        "text": "dom 16:15",
+        "ts": 1789587000,
+        "text": "mié 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "16:15",
+          "date": "mié",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Barcelona",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "home": "Barcelona",
+      "away": "Racing de Santander",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,
@@ -867,7 +879,7 @@
   "away": {
     "616": {
       "id": 616,
-      "points": 5,
+      "points": 10,
       "avg": 5
     }
   },

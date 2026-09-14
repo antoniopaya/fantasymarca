@@ -3,15 +3,15 @@
     "id": 56502,
     "name": "Mikel Jauregizar",
     "position": 3,
-    "points": 8,
-    "avg": 2.7,
+    "points": 11,
+    "avg": 2.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/56502.png?version=20251003193200",
     "isFavorite": 0,
-    "value": 6243000,
-    "previousValue": 6409000,
+    "value": 5785000,
+    "previousValue": 5933000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6243000,
+      "floor": 5785000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 3,
-      "shield2WeeksSku": "shield_t3_2w",
-      "shield1MonthSku": "shield_t3_1m",
-      "value": 9364500,
+      "tier": 2,
+      "shield2WeeksSku": "shield_t2_2w",
+      "shield1MonthSku": "shield_t2_1m",
+      "value": 8677500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6243000,
+      "price": 5785000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 177,
       "weight": null
     },
-    "clausesRanking": 411
+    "clausesRanking": null
   },
   "id": 56502,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 0
   },
@@ -154,12 +154,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -695,10 +697,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 8,
-      "avg": 2.6667,
+      "points": 11,
+      "avg": 2.75,
       "id_team": 1,
-      "last_gameweek": 4
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -725,43 +727,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 6409000,
-      "change": -166000,
-      "sign": -166
+      "value": 5933000,
+      "change": -148000,
+      "sign": -148
     },
     {
       "time": "Una semana",
-      "value": 7515000,
-      "change": -1272000,
-      "sign": "-1.272.000"
+      "value": 6891000,
+      "change": -1106000,
+      "sign": "-1.106.000"
     },
     {
       "time": "Un mes",
-      "value": 6994000,
-      "change": -751000,
-      "sign": -751
+      "value": 7747000,
+      "change": -1962000,
+      "sign": "-1.962.000"
     },
     {
       "time": "Un año",
-      "value": 19129000,
-      "change": -12886000,
-      "sign": "-12.886.000"
+      "value": 18457000,
+      "change": -12672000,
+      "sign": "-12.672.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 19129000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 18992000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 18706000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 18457000,
         "date": "14 sept 2025"
@@ -2213,6 +2203,18 @@
       {
         "value": 6243000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 6116000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 5933000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 5785000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -2228,36 +2230,36 @@
     "56502": {
       "id": 56502,
       "id_team": 1,
-      "id_match": 37977,
-      "id_gameweek": 4046,
-      "id_home": 1,
-      "id_away": 23,
+      "id_match": 37992,
+      "id_gameweek": 4047,
+      "id_home": 12,
+      "id_away": 1,
       "date": {
-        "ts": 1789230600,
-        "text": "sáb 18:30",
+        "ts": 1789587000,
+        "text": "mié 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "18:30",
+          "date": "mié",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Elche",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+      "home": "Levante",
+      "away": "Athletic Club",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
   "home": {
     "56502": {
       "id": 56502,
-      "points": 2,
-      "avg": 2
+      "points": 5,
+      "avg": 2.5
     }
   },
   "away": {

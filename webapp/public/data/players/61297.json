@@ -3,15 +3,15 @@
     "id": 61297,
     "name": "Luken Beitia",
     "position": 2,
-    "points": 3,
+    "points": 6,
     "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/61297.png?version=20250225085005",
     "isFavorite": 0,
-    "value": 329000,
-    "previousValue": 329000,
+    "value": 333000,
+    "previousValue": 356000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 333000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 191,
       "weight": null
     },
-    "clausesRanking": 383
+    "clausesRanking": 330
   },
   "id": 61297,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 1
   },
@@ -150,12 +150,12 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -691,10 +691,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": -1,
-      "avg": -1,
+      "points": 2,
+      "avg": 1,
       "id_team": 16,
-      "last_gameweek": 1
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -714,15 +714,15 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 0,
-      "sign": 0
+      "value": 356000,
+      "change": -23000,
+      "sign": -23
     },
     {
       "time": "Una semana",
-      "value": 329000,
-      "change": 0,
-      "sign": 0
+      "value": 394000,
+      "change": -61000,
+      "sign": -61
     }
   ],
   "values_chart": {
@@ -998,6 +998,18 @@
       {
         "value": 329000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 373000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 356000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 333000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -1013,12 +1025,12 @@
     "61297": {
       "id": 61297,
       "id_team": 16,
-      "id_match": 37984,
-      "id_gameweek": 4046,
-      "id_home": 16,
-      "id_away": 2,
+      "id_match": 38078,
+      "id_gameweek": 4048,
+      "id_home": 19,
+      "id_away": 16,
       "date": {
-        "ts": 1789326000,
+        "ts": 1789930800,
         "text": "dom 21:00",
         "format": "EEE H:mm",
         "splitted": {
@@ -1030,18 +1042,19 @@
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Sociedad",
-      "away": "Atlético",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "home": "Valencia",
+      "away": "Real Sociedad",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   },
   "starter": false,
   "home": {
     "61297": {
-      "points": 0,
-      "avg": 0
+      "id": 61297,
+      "points": 3,
+      "avg": 3
     }
   },
   "away": {

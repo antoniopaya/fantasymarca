@@ -3,15 +3,15 @@
     "id": 15653,
     "name": "Kang-In Lee",
     "position": 3,
-    "points": 27,
-    "avg": 6.8,
+    "points": 31,
+    "avg": 6.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/15653.png?version=20260725160628",
     "isFavorite": 0,
-    "value": 42439000,
-    "previousValue": 42517000,
+    "value": 42136000,
+    "previousValue": 42287000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 42439000,
+      "floor": 42136000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 63658500,
+      "value": 63204000,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 42439000,
-      "loanable": null
+      "id": 1772330289,
+      "isPublic": 1,
+      "price": 42136000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 42136000,
       "barter": [],
       "type": null,
       "days": null
@@ -68,11 +68,11 @@
       "height": 173,
       "weight": 68
     },
-    "clausesRanking": 140
+    "clausesRanking": 178
   },
   "id": 15653,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 1,
     "cards": 1
   },
@@ -159,12 +159,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -700,30 +702,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 27,
-      "avg": 6.75,
+      "points": 31,
+      "avg": 6.2,
       "id_team": 2,
-      "last_gameweek": 4
+      "last_gameweek": 5
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 42517000,
-      "change": -78000,
-      "sign": -78
+      "value": 42287000,
+      "change": -151000,
+      "sign": -151
     },
     {
       "time": "Una semana",
-      "value": 41893000,
-      "change": 546000,
-      "sign": 546
+      "value": 42322000,
+      "change": -186000,
+      "sign": -186
     },
     {
       "time": "Un mes",
-      "value": 32650000,
-      "change": 9789000,
-      "sign": "+9.789.000"
+      "value": 33546000,
+      "change": 8590000,
+      "sign": "+8.590.000"
     }
   ],
   "values_chart": {
@@ -923,6 +925,18 @@
       {
         "value": 42439000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 42359000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 42287000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 42136000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -938,28 +952,28 @@
     "15653": {
       "id": 15653,
       "id_team": 2,
-      "id_match": 37984,
-      "id_gameweek": 4046,
-      "id_home": 16,
-      "id_away": 2,
+      "id_match": 37987,
+      "id_gameweek": 4047,
+      "id_home": 2,
+      "id_away": 50,
       "date": {
-        "ts": 1789326000,
-        "text": "dom 21:00",
+        "ts": 1789578000,
+        "text": "mié 19:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "21:00",
+          "date": "mié",
+          "time": "19:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Sociedad",
-      "away": "Atlético",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "home": "Atlético",
+      "away": "Osasuna",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
@@ -973,8 +987,8 @@
   "away": {
     "15653": {
       "id": 15653,
-      "points": 12,
-      "avg": 6
+      "points": 16,
+      "avg": 5.3333
     }
   },
   "owners": [],

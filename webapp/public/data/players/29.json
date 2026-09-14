@@ -3,15 +3,15 @@
     "id": 29,
     "name": "Iñaki Williams",
     "position": 4,
-    "points": 22,
-    "avg": 5.5,
+    "points": 28,
+    "avg": 5.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/29.png?version=20251003185351",
     "isFavorite": 0,
-    "value": 23274000,
-    "previousValue": 22987000,
+    "value": 23935000,
+    "previousValue": 23818000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 23274000,
+      "floor": 23935000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 34911000,
+      "value": 35902500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 23274000,
+      "price": 23935000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 186,
       "weight": 76
     },
-    "clausesRanking": 89
+    "clausesRanking": 98
   },
   "id": 29,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 0
   },
@@ -158,12 +158,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -699,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 22,
-      "avg": 5.5,
+      "points": 24,
+      "avg": 4.8,
       "id_team": 1,
-      "last_gameweek": 4
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -729,43 +731,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 22987000,
-      "change": 287000,
-      "sign": 287
+      "value": 23818000,
+      "change": 117000,
+      "sign": 117
     },
     {
       "time": "Una semana",
-      "value": 21851000,
-      "change": 1423000,
-      "sign": "+1.423.000"
+      "value": 21968000,
+      "change": 1967000,
+      "sign": "+1.967.000"
     },
     {
       "time": "Un mes",
-      "value": 22571000,
-      "change": 703000,
-      "sign": 703
+      "value": 23155000,
+      "change": 780000,
+      "sign": 780
     },
     {
       "time": "Un año",
-      "value": 36176000,
-      "change": -12902000,
-      "sign": "-12.902.000"
+      "value": 35344000,
+      "change": -11409000,
+      "sign": "-11.409.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 36176000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 36110000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 35844000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 35344000,
         "date": "14 sept 2025"
@@ -2217,11 +2207,23 @@
       {
         "value": 23274000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 23575000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 23818000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 23935000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
-      "value": 36176000,
-      "date": "11 sept 2025"
+      "value": 35344000,
+      "date": "14 sept 2025"
     },
     "min": {
       "value": 9256000,
@@ -2232,36 +2234,36 @@
     "29": {
       "id": 29,
       "id_team": 1,
-      "id_match": 37977,
-      "id_gameweek": 4046,
-      "id_home": 1,
-      "id_away": 23,
+      "id_match": 37992,
+      "id_gameweek": 4047,
+      "id_home": 12,
+      "id_away": 1,
       "date": {
-        "ts": 1789230600,
-        "text": "sáb 18:30",
+        "ts": 1789587000,
+        "text": "mié 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "18:30",
+          "date": "mié",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Elche",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+      "home": "Levante",
+      "away": "Athletic Club",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
   "home": {
     "29": {
       "id": 29,
-      "points": 14,
-      "avg": 7
+      "points": 16,
+      "avg": 5.3333
     }
   },
   "away": {

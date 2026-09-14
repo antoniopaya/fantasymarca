@@ -3,15 +3,15 @@
     "id": 70922,
     "name": "Ibrahima Konaté",
     "position": 2,
-    "points": 12,
-    "avg": 4,
+    "points": 15,
+    "avg": 3.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70922.png?version=20260618121720",
     "isFavorite": 0,
-    "value": 34121000,
-    "previousValue": 34534000,
+    "value": 32715000,
+    "previousValue": 33288000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 34121000,
+      "floor": 32715000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 51181500,
+      "value": 49072500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 34121000,
+      "price": 32715000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 195,
       "weight": null
     },
-    "clausesRanking": 451
+    "clausesRanking": 422
   },
   "id": 70922,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 2
   },
@@ -152,12 +152,12 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -693,30 +693,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 12,
-      "avg": 4,
+      "points": 15,
+      "avg": 3.75,
       "id_team": 15,
-      "last_gameweek": 4
+      "last_gameweek": 5
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 34534000,
-      "change": -413000,
-      "sign": -413
+      "value": 33288000,
+      "change": -573000,
+      "sign": -573
     },
     {
       "time": "Una semana",
-      "value": 37757000,
-      "change": -3636000,
-      "sign": "-3.636.000"
+      "value": 36273000,
+      "change": -3558000,
+      "sign": "-3.558.000"
     },
     {
       "time": "Un mes",
-      "value": 38222000,
-      "change": -4101000,
-      "sign": "-4.101.000"
+      "value": 37252000,
+      "change": -4537000,
+      "sign": "-4.537.000"
     }
   ],
   "values_chart": {
@@ -1060,6 +1060,18 @@
       {
         "value": 34121000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 33706000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 33288000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 32715000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -1067,43 +1079,43 @@
       "date": "1 ago 2026"
     },
     "min": {
-      "value": 34121000,
-      "date": "11 sept 2026"
+      "value": 32715000,
+      "date": "14 sept 2026"
     }
   },
   "next_match": {
     "70922": {
       "id": 70922,
       "id_team": 15,
-      "id_match": 37982,
-      "id_gameweek": 4046,
-      "id_home": 15,
-      "id_away": 14,
+      "id_match": 37990,
+      "id_gameweek": 4047,
+      "id_home": 23,
+      "id_away": 15,
       "date": {
-        "ts": 1789239600,
-        "text": "sáb 21:00",
+        "ts": 1789500600,
+        "text": "mar 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "21:00",
+          "date": "mar",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Real Madrid",
-      "away": "Rayo Vallecano",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Elche",
+      "away": "Real Madrid",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
   "home": {
     "70922": {
       "id": 70922,
-      "points": 3,
+      "points": 6,
       "avg": 3
     }
   },

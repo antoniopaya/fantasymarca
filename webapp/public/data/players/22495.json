@@ -3,15 +3,15 @@
     "id": 22495,
     "name": "Giorgi Kochorashvili",
     "position": 3,
-    "points": 3,
-    "avg": 1.5,
+    "points": 9,
+    "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22495.png?version=20260821132838",
     "isFavorite": 0,
-    "value": 5357000,
-    "previousValue": 5292000,
+    "value": 5556000,
+    "previousValue": 5489000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 5357000,
+      "floor": 5556000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8035500,
+      "value": 8334000,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 5357000,
-      "loanable": null
+      "id": 1772330291,
+      "isPublic": 1,
+      "price": 5556000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 5556000,
       "barter": [],
       "type": null,
       "days": null
@@ -72,7 +72,7 @@
   },
   "id": 22495,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 1
   },
@@ -153,12 +153,15 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -694,24 +697,24 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 3,
-      "avg": 1.5,
+      "points": 9,
+      "avg": 3,
       "id_team": 17,
-      "last_gameweek": 4
+      "last_gameweek": 5
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 5292000,
-      "change": 65000,
-      "sign": 65
+      "value": 5489000,
+      "change": 67000,
+      "sign": 67
     },
     {
       "time": "Una semana",
-      "value": 4701000,
-      "change": 656000,
-      "sign": 656
+      "value": 5085000,
+      "change": 471000,
+      "sign": 471
     }
   ],
   "values_chart": {
@@ -803,11 +806,23 @@
       {
         "value": 5357000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 5435000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 5489000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 5556000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
-      "value": 5357000,
-      "date": "11 sept 2026"
+      "value": 5556000,
+      "date": "14 sept 2026"
     },
     "min": {
       "value": 3200000,
@@ -818,36 +833,36 @@
     "22495": {
       "id": 22495,
       "id_team": 17,
-      "id_match": 37985,
-      "id_gameweek": 4046,
-      "id_home": 17,
-      "id_away": 19,
+      "id_match": 37989,
+      "id_gameweek": 4047,
+      "id_home": 6,
+      "id_away": 17,
       "date": {
-        "ts": 1789153200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1789578000,
+        "text": "mié 19:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "mié",
+          "time": "19:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Valencia",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Sevilla",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,
   "home": {
     "22495": {
       "id": 22495,
-      "points": 3,
-      "avg": 3
+      "points": 9,
+      "avg": 4.5
     }
   },
   "away": {

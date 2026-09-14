@@ -5,13 +5,17 @@
     "position": 3,
     "points": 1,
     "avg": 1,
-    "status": null,
+    "status": "other",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "other",
+      "description": "No convocado",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71022.png?version=20260630222009",
     "isFavorite": 0,
-    "value": 445000,
-    "previousValue": 329000,
+    "value": 365000,
+    "previousValue": 485000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -47,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 445000,
+      "price": 365000,
       "loanable": null
     },
     "bid": {
@@ -155,7 +159,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -700,21 +704,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 116000,
-      "sign": 116
+      "value": 485000,
+      "change": -120000,
+      "sign": -120
     },
     {
       "time": "Una semana",
-      "value": 534000,
-      "change": -89000,
-      "sign": -89
+      "value": 329000,
+      "change": 36000,
+      "sign": 36
     },
     {
       "time": "Un mes",
-      "value": 4862000,
-      "change": -4417000,
-      "sign": "-4.417.000"
+      "value": 4781000,
+      "change": -4416000,
+      "sign": "-4.416.000"
     }
   ],
   "values_chart": {
@@ -1010,6 +1014,18 @@
       {
         "value": 445000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 416000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 485000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 365000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -1025,28 +1041,28 @@
     "71022": {
       "id": 71022,
       "id_team": 6,
-      "id_match": 37979,
-      "id_gameweek": 4046,
-      "id_home": 9,
-      "id_away": 6,
+      "id_match": 37989,
+      "id_gameweek": 4047,
+      "id_home": 6,
+      "id_away": 17,
       "date": {
-        "ts": 1789317000,
-        "text": "dom 18:30",
+        "ts": 1789578000,
+        "text": "mié 19:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "18:30",
+          "date": "mié",
+          "time": "19:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Deportivo da Coruña",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Sevilla",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,

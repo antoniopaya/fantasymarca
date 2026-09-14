@@ -3,19 +3,15 @@
     "id": 59641,
     "name": "Toni Martínez",
     "position": 4,
-    "points": 14,
-    "avg": 4.7,
-    "status": "doubt",
+    "points": 17,
+    "avg": 4.3,
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "doubt",
-      "description": "Microrrotura",
-      "duration": "Duda esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59641.png?version=20251006024644",
     "isFavorite": 0,
-    "value": 26531000,
-    "previousValue": 27110000,
+    "value": 25260000,
+    "previousValue": 25621000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 26531000,
+      "floor": 25260000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 39796500,
+      "value": 37890000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 26531000,
+      "price": 25260000,
       "loanable": null
     },
     "bid": {
@@ -72,11 +68,11 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 343
+    "clausesRanking": 401
   },
   "id": 59641,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 0
   },
@@ -149,7 +145,7 @@
         "description": "Microrrotura",
         "duration": "Duda esta jornada",
         "since": "2026-09-04 15:41:11",
-        "until": null,
+        "until": "2026-09-12 13:23:37",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -163,12 +159,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -704,10 +702,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 14,
-      "avg": 4.6667,
+      "points": 17,
+      "avg": 4.25,
       "id_team": 48,
-      "last_gameweek": 3
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -727,43 +725,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 27110000,
-      "change": -579000,
-      "sign": -579
+      "value": 25621000,
+      "change": -361000,
+      "sign": -361
     },
     {
       "time": "Una semana",
-      "value": 30743000,
-      "change": -4212000,
-      "sign": "-4.212.000"
+      "value": 28795000,
+      "change": -3535000,
+      "sign": "-3.535.000"
     },
     {
       "time": "Un mes",
-      "value": 38585000,
-      "change": -12054000,
-      "sign": "-12.054.000"
+      "value": 38294000,
+      "change": -13034000,
+      "sign": "-13.034.000"
     },
     {
       "time": "Un año",
-      "value": 12457000,
-      "change": 14074000,
-      "sign": "+14.074.000"
+      "value": 13238000,
+      "change": 12022000,
+      "sign": "+12.022.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 12457000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 12753000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 13004000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 13238000,
         "date": "14 sept 2025"
@@ -2215,6 +2201,18 @@
       {
         "value": 26531000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 26099000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 25621000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 25260000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -2230,28 +2228,28 @@
     "59641": {
       "id": 59641,
       "id_team": 48,
-      "id_match": 37983,
-      "id_gameweek": 4046,
-      "id_home": 1490,
-      "id_away": 48,
+      "id_match": 37988,
+      "id_gameweek": 4047,
+      "id_home": 48,
+      "id_away": 19,
       "date": {
-        "ts": 1789214400,
-        "text": "sáb 14:00",
+        "ts": 1789495200,
+        "text": "mar 20:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
+          "date": "mar",
+          "time": "20:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
-      "away": "Alavés",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "home": "Alavés",
+      "away": "Valencia",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
@@ -2265,8 +2263,8 @@
   "away": {
     "59641": {
       "id": 59641,
-      "points": 5,
-      "avg": 5
+      "points": 8,
+      "avg": 4
     }
   },
   "owners": [],

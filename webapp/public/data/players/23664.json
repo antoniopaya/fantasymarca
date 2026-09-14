@@ -3,15 +3,15 @@
     "id": 23664,
     "name": "Sergio Carreira",
     "position": 2,
-    "points": 16,
-    "avg": 3.2,
+    "points": 20,
+    "avg": 3.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/23664.png?version=20251003195345",
     "isFavorite": 0,
-    "value": 13667000,
-    "previousValue": 13681000,
+    "value": 13166000,
+    "previousValue": 13238000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 13667000,
+      "floor": 13166000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 20500500,
+      "value": 19749000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 13667000,
+      "price": 13166000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 198
+    "clausesRanking": 238
   },
   "id": 23664,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 0,
     "cards": 1
   },
@@ -154,12 +154,12 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 13,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
@@ -695,8 +695,8 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 16,
-      "avg": 3.2,
+      "points": 20,
+      "avg": 3.3333,
       "id_team": 5,
       "last_gameweek": 6
     },
@@ -718,43 +718,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 13681000,
-      "change": -14000,
-      "sign": -14
+      "value": 13238000,
+      "change": -72000,
+      "sign": -72
     },
     {
       "time": "Una semana",
-      "value": 13569000,
-      "change": 98000,
-      "sign": 98
+      "value": 13353000,
+      "change": -187000,
+      "sign": -187
     },
     {
       "time": "Un mes",
-      "value": 8699000,
-      "change": 4968000,
-      "sign": "+4.968.000"
+      "value": 9500000,
+      "change": 3666000,
+      "sign": "+3.666.000"
     },
     {
       "time": "Un año",
-      "value": 2243000,
-      "change": 11424000,
-      "sign": "+11.424.000"
+      "value": 2016000,
+      "change": 11150000,
+      "sign": "+11.150.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 2243000,
-        "date": "11 sept 2025"
-      },
-      {
-        "value": 2177000,
-        "date": "12 sept 2025"
-      },
-      {
-        "value": 2061000,
-        "date": "13 sept 2025"
-      },
       {
         "value": 2016000,
         "date": "14 sept 2025"
@@ -2206,6 +2194,18 @@
       {
         "value": 13667000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 13474000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 13238000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 13166000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -2221,17 +2221,17 @@
     "23664": {
       "id": 23664,
       "id_team": 5,
-      "id_match": 37978,
-      "id_gameweek": 4046,
+      "id_match": 38072,
+      "id_gameweek": 4048,
       "id_home": 5,
-      "id_away": 13,
+      "id_away": 1490,
       "date": {
-        "ts": 1789300800,
-        "text": "dom 14:00",
+        "ts": 1789835400,
+        "text": "sáb 18:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
+          "date": "sáb",
+          "time": "18:30",
           "format": "EEE"
         }
       },
@@ -2239,18 +2239,18 @@
       "confirmed": null,
       "minute": null,
       "home": "Celta",
-      "away": "Málaga",
+      "away": "Racing de Santander",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,
   "home": {
     "23664": {
       "id": 23664,
-      "points": 2,
-      "avg": 1
+      "points": 6,
+      "avg": 2
     }
   },
   "away": {

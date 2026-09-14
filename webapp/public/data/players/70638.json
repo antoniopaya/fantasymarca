@@ -3,15 +3,15 @@
     "id": 70638,
     "name": "Anthony Gordon",
     "position": 4,
-    "points": 37,
-    "avg": 9.3,
+    "points": 41,
+    "avg": 8.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70638.png?version=20260603151304",
     "isFavorite": 0,
-    "value": 48685000,
-    "previousValue": 48323000,
+    "value": 49545000,
+    "previousValue": 49300000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 48685000,
+      "floor": 49545000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 73027500,
+      "value": 74317500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 48685000,
+      "price": 49545000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 49
+    "clausesRanking": 59
   },
   "id": 70638,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 0
   },
@@ -160,12 +160,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -701,30 +703,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 37,
-      "avg": 9.25,
+      "points": 41,
+      "avg": 8.2,
       "id_team": 3,
-      "last_gameweek": 4
+      "last_gameweek": 5
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 48323000,
-      "change": 362000,
-      "sign": 362
+      "value": 49300000,
+      "change": 245000,
+      "sign": 245
     },
     {
       "time": "Una semana",
-      "value": 46182000,
-      "change": 2503000,
-      "sign": "+2.503.000"
+      "value": 47259000,
+      "change": 2286000,
+      "sign": "+2.286.000"
     },
     {
       "time": "Un mes",
-      "value": 45174000,
-      "change": 3511000,
-      "sign": "+3.511.000"
+      "value": 44657000,
+      "change": 4888000,
+      "sign": "+4.888.000"
     }
   ],
   "values_chart": {
@@ -1128,6 +1130,18 @@
       {
         "value": 48685000,
         "date": "11 sept 2026"
+      },
+      {
+        "value": 48968000,
+        "date": "12 sept 2026"
+      },
+      {
+        "value": 49300000,
+        "date": "13 sept 2026"
+      },
+      {
+        "value": 49545000,
+        "date": "14 sept 2026"
       }
     ],
     "max": {
@@ -1143,28 +1157,28 @@
     "70638": {
       "id": 70638,
       "id_team": 3,
-      "id_match": 37980,
-      "id_gameweek": 4046,
-      "id_home": 12,
-      "id_away": 3,
+      "id_match": 37991,
+      "id_gameweek": 4047,
+      "id_home": 3,
+      "id_away": 1490,
       "date": {
-        "ts": 1789308900,
-        "text": "dom 16:15",
+        "ts": 1789587000,
+        "text": "mié 21:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "16:15",
+          "date": "mié",
+          "time": "21:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Barcelona",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "home": "Barcelona",
+      "away": "Racing de Santander",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,
@@ -1178,8 +1192,8 @@
   "away": {
     "70638": {
       "id": 70638,
-      "points": 20,
-      "avg": 10
+      "points": 24,
+      "avg": 8
     }
   },
   "owners": [],
