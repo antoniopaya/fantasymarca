@@ -201,10 +201,22 @@ export function getPlayerById(id: number): Player | undefined {
   return getPlayers().find((p) => p.id === id);
 }
 
-/** La próxima jornada sin empezar; si no queda ninguna, la última de la temporada. */
+/**
+ * La jornada "actual": la que se está jugando ahora mismo o, si ninguna está en
+ * curso, la próxima sin empezar; si no queda ninguna, la última de la temporada.
+ *
+ * Con el calendario reordenado (partidos aplazados) puede haber varias jornadas
+ * "ongoing" a la vez: una casi terminada salvo el partido que se aplazó, y la
+ * siguiente ya arrancando (p.ej. jornada 5 con 9/10 partidos jugados y solo el
+ * aplazado pendiente, mientras la 6 ya se está jugando). Nos quedamos con la de
+ * número más alto: es la ronda que realmente toca esta semana, no el rezagado
+ * de la jornada anterior.
+ */
 export function getNextGameweek(): Gameweek {
   const gameweeks = getGameweeks();
+  const ongoing = gameweeks.filter((gw) => gw.status === "ongoing");
   return (
+    ongoing[ongoing.length - 1] ??
     gameweeks.find((gw) => gw.status === "unstarted") ??
     gameweeks[gameweeks.length - 1]
   );
