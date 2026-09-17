@@ -3,15 +3,15 @@
     "id": 70939,
     "name": "Yeremay Hernández",
     "position": 4,
-    "points": 11,
+    "points": 14,
     "avg": 2.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70939.png?version=20260621102855",
     "isFavorite": 0,
-    "value": 24381000,
-    "previousValue": 24602000,
+    "value": 24000000,
+    "previousValue": 24147000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 24381000,
+      "floor": 24000000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 36571500,
+      "value": 36000000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 24381000,
+      "price": 24000000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 169,
       "weight": null
     },
-    "clausesRanking": 302
+    "clausesRanking": 254
   },
   "id": 70939,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 1
   },
@@ -174,12 +174,14 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -219,8 +221,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -699,30 +701,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 11,
-      "avg": 2.75,
+      "points": 14,
+      "avg": 2.8,
       "id_team": 6,
-      "last_gameweek": 5
+      "last_gameweek": 6
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 24602000,
-      "change": -221000,
-      "sign": -221
+      "value": 24147000,
+      "change": -147000,
+      "sign": -147
     },
     {
       "time": "Una semana",
-      "value": 26578000,
-      "change": -2197000,
-      "sign": "-2.197.000"
+      "value": 25621000,
+      "change": -1621000,
+      "sign": "-1.621.000"
     },
     {
       "time": "Un mes",
-      "value": 33172000,
-      "change": -8791000,
-      "sign": "-8.791.000"
+      "value": 32809000,
+      "change": -8809000,
+      "sign": "-8.809.000"
     }
   ],
   "values_chart": {
@@ -1066,6 +1068,18 @@
       {
         "value": 24381000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 24239000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 24147000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 24000000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -1081,17 +1095,17 @@
     "70939": {
       "id": 70939,
       "id_team": 6,
-      "id_match": 37989,
-      "id_gameweek": 4047,
+      "id_match": 38073,
+      "id_gameweek": 4048,
       "id_home": 6,
-      "id_away": 17,
+      "id_away": 4,
       "date": {
-        "ts": 1789578000,
-        "text": "mié 19:00",
+        "ts": 1789921800,
+        "text": "dom 18:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "19:00",
+          "date": "dom",
+          "time": "18:30",
           "format": "EEE"
         }
       },
@@ -1099,18 +1113,18 @@
       "confirmed": null,
       "minute": null,
       "home": "Deportivo da Coruña",
-      "away": "Sevilla",
+      "away": "Betis",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "70939": {
       "id": 70939,
-      "points": 2,
-      "avg": 2
+      "points": 5,
+      "avg": 2.5
     }
   },
   "away": {

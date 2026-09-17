@@ -3,15 +3,15 @@
     "id": 36046,
     "name": "Gonzalo Villar",
     "position": 3,
-    "points": 23,
-    "avg": 4.6,
+    "points": 24,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/36046.png?version=20260201092605",
     "isFavorite": 0,
-    "value": 13115000,
-    "previousValue": 12933000,
+    "value": 13582000,
+    "previousValue": 13473000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 13115000,
+      "floor": 13582000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 19672500,
+      "value": 20373000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 13115000,
+      "price": 13582000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 181,
       "weight": null
     },
-    "clausesRanking": 169
+    "clausesRanking": 202
   },
   "id": 36046,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 0,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -171,12 +171,14 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -216,8 +218,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -696,10 +698,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 23,
-      "avg": 4.6,
+      "points": 24,
+      "avg": 4,
       "id_team": 23,
-      "last_gameweek": 5
+      "last_gameweek": 6
     },
     {
       "season": "25/26",
@@ -719,21 +721,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 12933000,
-      "change": 182000,
-      "sign": 182
+      "value": 13473000,
+      "change": 109000,
+      "sign": 109
     },
     {
       "time": "Una semana",
-      "value": 11591000,
-      "change": 1524000,
-      "sign": "+1.524.000"
+      "value": 12476000,
+      "change": 1106000,
+      "sign": "+1.106.000"
     },
     {
       "time": "Un mes",
-      "value": 5073000,
-      "change": 8042000,
-      "sign": "+8.042.000"
+      "value": 5452000,
+      "change": 8130000,
+      "sign": "+8.130.000"
     }
   ],
   "values_chart": {
@@ -1637,11 +1639,23 @@
       {
         "value": 13115000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 13249000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 13473000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 13582000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
-      "value": 13115000,
-      "date": "14 sept 2026"
+      "value": 13582000,
+      "date": "17 sept 2026"
     },
     "min": {
       "value": 329000,
@@ -1652,36 +1666,36 @@
     "36046": {
       "id": 36046,
       "id_team": 23,
-      "id_match": 37990,
-      "id_gameweek": 4047,
-      "id_home": 23,
-      "id_away": 15,
+      "id_match": 38074,
+      "id_gameweek": 4048,
+      "id_home": 8,
+      "id_away": 23,
       "date": {
-        "ts": 1789500600,
-        "text": "mar 21:30",
+        "ts": 1789758000,
+        "text": "vie 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mar",
-          "time": "21:30",
+          "date": "vie",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Elche",
-      "away": "Real Madrid",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Espanyol",
+      "away": "Elche",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   },
   "starter": false,
   "home": {
     "36046": {
       "id": 36046,
-      "points": 8,
-      "avg": 4
+      "points": 9,
+      "avg": 3
     }
   },
   "away": {

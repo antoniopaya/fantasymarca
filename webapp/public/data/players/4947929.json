@@ -3,15 +3,15 @@
     "id": 4947929,
     "name": "Emil Audero",
     "position": 1,
-    "points": 2,
-    "avg": 2,
+    "points": 5,
+    "avg": 2.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4947929.png?version=20260902084735",
     "isFavorite": 0,
-    "value": 3363000,
-    "previousValue": 3133000,
+    "value": 4175000,
+    "previousValue": 3884000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3363000,
+      "floor": 4175000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 5044500,
+      "value": 6262500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3363000,
+      "price": 4175000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 190,
       "weight": null
     },
-    "clausesRanking": 83
+    "clausesRanking": 46
   },
   "id": 4947929,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -164,12 +164,12 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -209,8 +209,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -689,24 +689,24 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 2,
-      "avg": 2,
+      "points": 5,
+      "avg": 2.5,
       "id_team": 14,
-      "last_gameweek": 5
+      "last_gameweek": 6
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 3133000,
-      "change": 230000,
-      "sign": 230
+      "value": 3884000,
+      "change": 291000,
+      "sign": 291
     },
     {
       "time": "Una semana",
-      "value": 2486000,
-      "change": 877000,
-      "sign": 877
+      "value": 2798000,
+      "change": 1377000,
+      "sign": "+1.377.000"
     }
   ],
   "values_chart": {
@@ -758,11 +758,23 @@
       {
         "value": 3363000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 3614000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 3884000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 4175000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
-      "value": 3363000,
-      "date": "14 sept 2026"
+      "value": 4175000,
+      "date": "17 sept 2026"
     },
     "min": {
       "value": 2098000,
@@ -773,35 +785,36 @@
     "4947929": {
       "id": 4947929,
       "id_team": 14,
-      "id_match": 37994,
-      "id_gameweek": 4047,
-      "id_home": 14,
-      "id_away": 8,
+      "id_match": 38076,
+      "id_gameweek": 4048,
+      "id_home": 50,
+      "id_away": 14,
       "date": {
-        "ts": 1789491600,
-        "text": "mar 19:00",
+        "ts": 1789819200,
+        "text": "sáb 14:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mar",
-          "time": "19:00",
+          "date": "sáb",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Espanyol",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "home": "Osasuna",
+      "away": "Rayo Vallecano",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,
   "home": {
     "4947929": {
-      "points": 0,
-      "avg": 0
+      "id": 4947929,
+      "points": 3,
+      "avg": 3
     }
   },
   "away": {

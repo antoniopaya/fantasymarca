@@ -3,15 +3,15 @@
     "id": 4733614,
     "name": "Romain Del Castillo",
     "position": 4,
-    "points": 2,
-    "avg": 2,
+    "points": 3,
+    "avg": 1.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4733614.png?version=20260901110930",
     "isFavorite": 0,
-    "value": 4276000,
-    "previousValue": 4451000,
+    "value": 3844000,
+    "previousValue": 4009000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4276000,
+      "floor": 3844000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6414000,
+      "value": 5766000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4276000,
+      "price": 3844000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 172,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 427
   },
   "id": 4733614,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -166,12 +166,14 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -211,8 +213,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -691,24 +693,24 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 2,
-      "avg": 2,
+      "points": 3,
+      "avg": 1.5,
       "id_team": 50,
-      "last_gameweek": 5
+      "last_gameweek": 6
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 4451000,
-      "change": -175000,
-      "sign": -175
+      "value": 4009000,
+      "change": -165000,
+      "sign": -165
     },
     {
       "time": "Una semana",
-      "value": 5343000,
-      "change": -1067000,
-      "sign": "-1.067.000"
+      "value": 4897000,
+      "change": -1053000,
+      "sign": "-1.053.000"
     }
   ],
   "values_chart": {
@@ -764,6 +766,18 @@
       {
         "value": 4276000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 4144000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 4009000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 3844000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -771,36 +785,36 @@
       "date": "3 sept 2026"
     },
     "min": {
-      "value": 4276000,
-      "date": "14 sept 2026"
+      "value": 3844000,
+      "date": "17 sept 2026"
     }
   },
   "next_match": {
     "4733614": {
       "id": 4733614,
       "id_team": 50,
-      "id_match": 37987,
-      "id_gameweek": 4047,
-      "id_home": 2,
-      "id_away": 50,
+      "id_match": 38076,
+      "id_gameweek": 4048,
+      "id_home": 50,
+      "id_away": 14,
       "date": {
-        "ts": 1789578000,
-        "text": "mié 19:00",
+        "ts": 1789819200,
+        "text": "sáb 14:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "19:00",
+          "date": "sáb",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Atlético",
-      "away": "Osasuna",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "home": "Osasuna",
+      "away": "Rayo Vallecano",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,
@@ -813,8 +827,9 @@
   },
   "away": {
     "4733614": {
-      "points": 0,
-      "avg": 0
+      "id": 4733614,
+      "points": 1,
+      "avg": 1
     }
   },
   "owners": [],

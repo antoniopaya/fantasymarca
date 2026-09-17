@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/53107.png?version=20251006021432",
     "isFavorite": 0,
-    "value": 4482000,
-    "previousValue": 4487000,
+    "value": 4086000,
+    "previousValue": 4255000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4482000,
+      "floor": 4086000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6723000,
+      "value": 6129000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4482000,
+      "price": 4086000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 227
+    "clausesRanking": 242
   },
   "id": 53107,
   "player_extra": {
@@ -153,7 +153,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -209,8 +209,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -719,43 +719,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4487000,
-      "change": -5000,
-      "sign": -5
+      "value": 4255000,
+      "change": -169000,
+      "sign": -169
     },
     {
       "time": "Una semana",
-      "value": 4973000,
-      "change": -491000,
-      "sign": -491
+      "value": 4704000,
+      "change": -618000,
+      "sign": -618
     },
     {
       "time": "Un mes",
-      "value": 10451000,
-      "change": -5969000,
-      "sign": "-5.969.000"
+      "value": 10931000,
+      "change": -6845000,
+      "sign": "-6.845.000"
     },
     {
       "time": "Un año",
-      "value": 32162000,
-      "change": -27680000,
-      "sign": "-27.680.000"
+      "value": 31004000,
+      "change": -26918000,
+      "sign": "-26.918.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 32162000,
-        "date": "14 sept 2025"
-      },
-      {
-        "value": 31721000,
-        "date": "15 sept 2025"
-      },
-      {
-        "value": 31240000,
-        "date": "16 sept 2025"
-      },
       {
         "value": 31004000,
         "date": "17 sept 2025"
@@ -2207,6 +2195,18 @@
       {
         "value": 4482000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 4424000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 4255000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 4086000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -2214,36 +2214,36 @@
       "date": "14 oct 2025"
     },
     "min": {
-      "value": 4162000,
-      "date": "12 abr 2026"
+      "value": 4086000,
+      "date": "17 sept 2026"
     }
   },
   "next_match": {
     "53107": {
       "id": 53107,
       "id_team": 20,
-      "id_match": 37986,
-      "id_gameweek": 4046,
-      "id_home": 20,
-      "id_away": 4,
+      "id_match": 37993,
+      "id_gameweek": 4047,
+      "id_home": 13,
+      "id_away": 20,
       "date": {
-        "ts": 1789412400,
-        "text": "Hoy 21:00",
+        "ts": 1789673400,
+        "text": "Hoy 21:30",
         "format": "'Hoy' H:mm",
         "splitted": {
           "date": "Hoy",
-          "time": "21:00",
+          "time": "21:30",
           "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Villarreal",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Málaga",
+      "away": "Villarreal",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,

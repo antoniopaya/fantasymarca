@@ -3,19 +3,15 @@
     "id": 20346,
     "name": "Guido Rodríguez",
     "position": 3,
-    "points": 11,
-    "avg": 5.5,
-    "status": "injury",
+    "points": 16,
+    "avg": 5.3,
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "injury",
-      "description": "Lesión en el cuádriceps",
-      "duration": "Baja hasta mediados de Septiembre"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/20346.png?version=20260126185524",
     "isFavorite": 0,
-    "value": 14295000,
-    "previousValue": 13727000,
+    "value": 16198000,
+    "previousValue": 15515000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 14295000,
+      "floor": 16198000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 4,
-      "shield2WeeksSku": "shield_t4_2w",
-      "shield1MonthSku": "shield_t4_1m",
-      "value": 21442500,
+      "tier": 5,
+      "shield2WeeksSku": "shield_t5_2w",
+      "shield1MonthSku": "shield_t5_1m",
+      "value": 24297000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 14295000,
+      "price": 16198000,
       "loanable": null
     },
     "bid": {
@@ -72,13 +68,13 @@
       "height": 185,
       "weight": 80
     },
-    "clausesRanking": 40
+    "clausesRanking": 10
   },
   "id": 20346,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -158,7 +154,7 @@
         "description": "Lesión en el cuádriceps",
         "duration": "Baja hasta mediados de Septiembre",
         "since": "2026-09-03 14:14:17",
-        "until": null,
+        "until": "2026-09-15 14:50:48",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -183,7 +179,7 @@
         "description": "Lesión en el cuádriceps",
         "duration": "Baja hasta mediados de Septiembre",
         "since": "2026-09-03 14:14:17",
-        "until": null,
+        "until": "2026-09-15 14:50:48",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -197,12 +193,15 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -242,8 +241,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -722,10 +721,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 11,
-      "avg": 5.5,
+      "points": 16,
+      "avg": 5.3333,
       "id_team": 19,
-      "last_gameweek": 2
+      "last_gameweek": 6
     },
     {
       "season": "25/26",
@@ -745,21 +744,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 13727000,
-      "change": 568000,
-      "sign": 568
+      "value": 15515000,
+      "change": 683000,
+      "sign": 683
     },
     {
       "time": "Una semana",
-      "value": 17859000,
-      "change": -3564000,
-      "sign": "-3.564.000"
+      "value": 15599000,
+      "change": 599000,
+      "sign": 599
     },
     {
       "time": "Un mes",
-      "value": 25022000,
-      "change": -10727000,
-      "sign": "-10.727.000"
+      "value": 24270000,
+      "change": -8072000,
+      "sign": "-8.072.000"
     }
   ],
   "values_chart": {
@@ -1691,6 +1690,18 @@
       {
         "value": 14295000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 14861000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 15515000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 16198000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -1706,28 +1717,28 @@
     "20346": {
       "id": 20346,
       "id_team": 19,
-      "id_match": 37988,
-      "id_gameweek": 4047,
-      "id_home": 48,
-      "id_away": 19,
+      "id_match": 38078,
+      "id_gameweek": 4048,
+      "id_home": 19,
+      "id_away": 16,
       "date": {
-        "ts": 1789495200,
-        "text": "mar 20:00",
+        "ts": 1789930800,
+        "text": "dom 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mar",
-          "time": "20:00",
+          "date": "dom",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Valencia",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
+      "home": "Valencia",
+      "away": "Real Sociedad",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   },
   "starter": false,
@@ -1740,8 +1751,9 @@
   },
   "away": {
     "20346": {
-      "points": 0,
-      "avg": 0
+      "id": 20346,
+      "points": 5,
+      "avg": 5
     }
   },
   "owners": [],

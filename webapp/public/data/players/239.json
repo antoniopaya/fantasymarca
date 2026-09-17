@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/239.png?version=20250617224701",
     "isFavorite": 0,
-    "value": 2020000,
-    "previousValue": 2231000,
+    "value": 1311000,
+    "previousValue": 1604000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2020000,
+      "floor": 1311000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 2,
-      "shield2WeeksSku": "shield_t2_2w",
-      "shield1MonthSku": "shield_t2_1m",
-      "value": 3030000,
+      "tier": 1,
+      "shield2WeeksSku": "shield_t1_2w",
+      "shield1MonthSku": "shield_t1_1m",
+      "value": 1966500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2020000,
+      "price": 1311000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 180,
       "weight": 78
     },
-    "clausesRanking": 243
+    "clausesRanking": 338
   },
   "id": 239,
   "player_extra": {
@@ -173,7 +173,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -213,8 +213,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -709,43 +709,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2231000,
-      "change": -211000,
-      "sign": -211
+      "value": 1604000,
+      "change": -293000,
+      "sign": -293
     },
     {
       "time": "Una semana",
-      "value": 2715000,
-      "change": -695000,
-      "sign": -695
+      "value": 2727000,
+      "change": -1416000,
+      "sign": "-1.416.000"
     },
     {
       "time": "Un mes",
-      "value": 5553000,
-      "change": -3533000,
-      "sign": "-3.533.000"
+      "value": 5008000,
+      "change": -3697000,
+      "sign": "-3.697.000"
     },
     {
       "time": "Un año",
-      "value": 10146000,
-      "change": -8126000,
-      "sign": "-8.126.000"
+      "value": 11220000,
+      "change": -9909000,
+      "sign": "-9.909.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 10146000,
-        "date": "14 sept 2025"
-      },
-      {
-        "value": 10480000,
-        "date": "15 sept 2025"
-      },
-      {
-        "value": 10852000,
-        "date": "16 sept 2025"
-      },
       {
         "value": 11220000,
         "date": "17 sept 2025"
@@ -2197,6 +2185,18 @@
       {
         "value": 2020000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 1885000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 1604000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 1311000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -2212,28 +2212,28 @@
     "239": {
       "id": 239,
       "id_team": 23,
-      "id_match": 37990,
-      "id_gameweek": 4047,
-      "id_home": 23,
-      "id_away": 15,
+      "id_match": 38074,
+      "id_gameweek": 4048,
+      "id_home": 8,
+      "id_away": 23,
       "date": {
-        "ts": 1789500600,
-        "text": "mar 21:30",
+        "ts": 1789758000,
+        "text": "vie 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mar",
-          "time": "21:30",
+          "date": "vie",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Elche",
-      "away": "Real Madrid",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Espanyol",
+      "away": "Elche",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   },
   "starter": false,

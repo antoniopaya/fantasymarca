@@ -3,15 +3,15 @@
     "id": 68652,
     "name": "Ville Koski",
     "position": 2,
-    "points": 35,
-    "avg": 7,
+    "points": 40,
+    "avg": 6.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68652.png?version=20260323141101",
     "isFavorite": 0,
-    "value": 12597000,
-    "previousValue": 12094000,
+    "value": 14204000,
+    "previousValue": 13667000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 12597000,
+      "floor": 14204000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 18895500,
+      "value": 21306000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 12597000,
+      "price": 14204000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 43
+    "clausesRanking": 32
   },
   "id": 68652,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 1,
     "cards": 0
   },
@@ -168,12 +168,12 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -213,8 +213,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -693,10 +693,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 35,
-      "avg": 7,
+      "points": 40,
+      "avg": 6.6667,
       "id_team": 48,
-      "last_gameweek": 5
+      "last_gameweek": 6
     },
     {
       "season": "25/26",
@@ -709,21 +709,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 12094000,
-      "change": 503000,
-      "sign": 503
+      "value": 13667000,
+      "change": 537000,
+      "sign": 537
     },
     {
       "time": "Una semana",
-      "value": 9901000,
-      "change": 2696000,
-      "sign": "+2.696.000"
+      "value": 10964000,
+      "change": 3240000,
+      "sign": "+3.240.000"
     },
     {
       "time": "Un mes",
-      "value": 4226000,
-      "change": 8371000,
-      "sign": "+8.371.000"
+      "value": 4667000,
+      "change": 9537000,
+      "sign": "+9.537.000"
     }
   ],
   "values_chart": {
@@ -1635,11 +1635,23 @@
       {
         "value": 12597000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 13116000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 13667000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 14204000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
-      "value": 12597000,
-      "date": "14 sept 2026"
+      "value": 14204000,
+      "date": "17 sept 2026"
     },
     "min": {
       "value": 329000,
@@ -1650,36 +1662,36 @@
     "68652": {
       "id": 68652,
       "id_team": 48,
-      "id_match": 37988,
-      "id_gameweek": 4047,
-      "id_home": 48,
-      "id_away": 19,
+      "id_match": 38070,
+      "id_gameweek": 4048,
+      "id_home": 1,
+      "id_away": 48,
       "date": {
-        "ts": 1789495200,
-        "text": "mar 20:00",
+        "ts": 1789827300,
+        "text": "sáb 16:15",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mar",
-          "time": "20:00",
+          "date": "sáb",
+          "time": "16:15",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Valencia",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
+      "home": "Athletic Club",
+      "away": "Alavés",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
   "home": {
     "68652": {
       "id": 68652,
-      "points": 20,
-      "avg": 6.6667
+      "points": 25,
+      "avg": 6.25
     }
   },
   "away": {

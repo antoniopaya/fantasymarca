@@ -3,15 +3,15 @@
     "id": 56578,
     "name": "Johnny Cardoso",
     "position": 3,
-    "points": 4,
-    "avg": 1.3,
+    "points": 16,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/56578.png?version=20250818184253",
     "isFavorite": 0,
-    "value": 1082000,
-    "previousValue": 1072000,
+    "value": 1455000,
+    "previousValue": 1255000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1082000,
+      "floor": 1455000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1623000,
+      "value": 2182500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1082000,
+      "price": 1455000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 250
+    "clausesRanking": 95
   },
   "id": 56578,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 1
   },
@@ -171,12 +171,15 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 12,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -216,8 +219,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -696,10 +699,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 4,
-      "avg": 1.3333,
+      "points": 16,
+      "avg": 4,
       "id_team": 2,
-      "last_gameweek": 5
+      "last_gameweek": 6
     },
     {
       "season": "25/26",
@@ -726,43 +729,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1072000,
-      "change": 10000,
-      "sign": 10
+      "value": 1255000,
+      "change": 200000,
+      "sign": 200
     },
     {
       "time": "Una semana",
-      "value": 1482000,
-      "change": -400000,
-      "sign": -400
+      "value": 1215000,
+      "change": 240000,
+      "sign": 240
     },
     {
       "time": "Un mes",
-      "value": 4500000,
-      "change": -3418000,
-      "sign": "-3.418.000"
+      "value": 4647000,
+      "change": -3192000,
+      "sign": "-3.192.000"
     },
     {
       "time": "Un año",
-      "value": 29522000,
-      "change": -28440000,
-      "sign": "-28.440.000"
+      "value": 27663000,
+      "change": -26208000,
+      "sign": "-26.208.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 29522000,
-        "date": "14 sept 2025"
-      },
-      {
-        "value": 28875000,
-        "date": "15 sept 2025"
-      },
-      {
-        "value": 28283000,
-        "date": "16 sept 2025"
-      },
       {
         "value": 27663000,
         "date": "17 sept 2025"
@@ -2214,11 +2205,23 @@
       {
         "value": 1082000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 1160000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 1255000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 1455000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
-      "value": 29522000,
-      "date": "14 sept 2025"
+      "value": 27663000,
+      "date": "17 sept 2025"
     },
     "min": {
       "value": 329000,
@@ -2229,17 +2232,17 @@
     "56578": {
       "id": 56578,
       "id_team": 2,
-      "id_match": 37987,
-      "id_gameweek": 4047,
+      "id_match": 38071,
+      "id_gameweek": 4048,
       "id_home": 2,
-      "id_away": 50,
+      "id_away": 15,
       "date": {
-        "ts": 1789578000,
-        "text": "mié 19:00",
+        "ts": 1789913700,
+        "text": "dom 16:15",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "19:00",
+          "date": "dom",
+          "time": "16:15",
           "format": "EEE"
         }
       },
@@ -2247,17 +2250,18 @@
       "confirmed": null,
       "minute": null,
       "home": "Atlético",
-      "away": "Osasuna",
+      "away": "Real Madrid",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
   "home": {
     "56578": {
-      "points": 0,
-      "avg": 0
+      "id": 56578,
+      "points": 12,
+      "avg": 12
     }
   },
   "away": {

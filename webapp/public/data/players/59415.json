@@ -3,15 +3,15 @@
     "id": 59415,
     "name": "Dani Olmo",
     "position": 3,
-    "points": 21,
-    "avg": 4.2,
+    "points": 31,
+    "avg": 5.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59415.png?version=20260217184404",
     "isFavorite": 0,
-    "value": 40461000,
-    "previousValue": 40720000,
+    "value": 39765000,
+    "previousValue": 39956000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 40461000,
+      "floor": 39765000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 60691500,
+      "value": 59647500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 40461000,
+      "price": 39765000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 220
+    "clausesRanking": 261
   },
   "id": 59415,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 0,
     "cards": 0
   },
@@ -176,12 +176,14 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 10,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -221,8 +223,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -701,10 +703,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 21,
-      "avg": 4.2,
+      "points": 31,
+      "avg": 5.1667,
       "id_team": 3,
-      "last_gameweek": 5
+      "last_gameweek": 6
     },
     {
       "season": "25/26",
@@ -724,43 +726,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 40720000,
-      "change": -259000,
-      "sign": -259
+      "value": 39956000,
+      "change": -191000,
+      "sign": -191
     },
     {
       "time": "Una semana",
-      "value": 41981000,
-      "change": -1520000,
-      "sign": "-1.520.000"
+      "value": 41393000,
+      "change": -1628000,
+      "sign": "-1.628.000"
     },
     {
       "time": "Un mes",
-      "value": 48699000,
-      "change": -8238000,
-      "sign": "-8.238.000"
+      "value": 48199000,
+      "change": -8434000,
+      "sign": "-8.434.000"
     },
     {
       "time": "Un año",
-      "value": 35463000,
-      "change": 4998000,
-      "sign": "+4.998.000"
+      "value": 34402000,
+      "change": 5363000,
+      "sign": "+5.363.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 35463000,
-        "date": "14 sept 2025"
-      },
-      {
-        "value": 35181000,
-        "date": "15 sept 2025"
-      },
-      {
-        "value": 34787000,
-        "date": "16 sept 2025"
-      },
       {
         "value": 34402000,
         "date": "17 sept 2025"
@@ -2212,6 +2202,18 @@
       {
         "value": 40461000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 40192000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 39956000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 39765000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -2227,36 +2229,36 @@
     "59415": {
       "id": 59415,
       "id_team": 3,
-      "id_match": 37991,
-      "id_gameweek": 4047,
-      "id_home": 3,
-      "id_away": 1490,
+      "id_match": 38077,
+      "id_gameweek": 4048,
+      "id_home": 17,
+      "id_away": 3,
       "date": {
-        "ts": 1789587000,
-        "text": "mié 21:30",
+        "ts": 1789844400,
+        "text": "sáb 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "21:30",
+          "date": "sáb",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Barcelona",
-      "away": "Racing de Santander",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Sevilla",
+      "away": "Barcelona",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,
   "home": {
     "59415": {
       "id": 59415,
-      "points": 7,
-      "avg": 3.5
+      "points": 17,
+      "avg": 5.6667
     }
   },
   "away": {

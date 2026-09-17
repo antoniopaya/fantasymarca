@@ -3,15 +3,15 @@
     "id": 22495,
     "name": "Giorgi Kochorashvili",
     "position": 3,
-    "points": 9,
-    "avg": 3,
+    "points": 11,
+    "avg": 2.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22495.png?version=20260821132838",
     "isFavorite": 0,
-    "value": 5556000,
-    "previousValue": 5489000,
+    "value": 5607000,
+    "previousValue": 5617000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 5556000,
+      "floor": 5607000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8334000,
+      "value": 8410500,
       "percentage": 50
     },
     "market": {
-      "id": 1772330291,
-      "isPublic": 1,
-      "price": 5556000,
-      "loanable": 0
+      "id": null,
+      "isPublic": null,
+      "price": 5607000,
+      "loanable": null
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": 5556000,
+      "input": null,
       "barter": [],
       "type": null,
       "days": null
@@ -68,11 +68,11 @@
       "height": 176,
       "weight": null
     },
-    "clausesRanking": 164
+    "clausesRanking": 172
   },
   "id": 22495,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 1
   },
@@ -172,12 +172,14 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -217,8 +219,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -697,24 +699,24 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 9,
-      "avg": 3,
+      "points": 11,
+      "avg": 2.75,
       "id_team": 17,
-      "last_gameweek": 5
+      "last_gameweek": 6
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 5489000,
-      "change": 67000,
-      "sign": 67
+      "value": 5617000,
+      "change": -10000,
+      "sign": -10
     },
     {
       "time": "Una semana",
-      "value": 5085000,
-      "change": 471000,
-      "sign": 471
+      "value": 5292000,
+      "change": 315000,
+      "sign": 315
     }
   ],
   "values_chart": {
@@ -818,11 +820,23 @@
       {
         "value": 5556000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 5615000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 5617000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 5607000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
-      "value": 5556000,
-      "date": "14 sept 2026"
+      "value": 5617000,
+      "date": "16 sept 2026"
     },
     "min": {
       "value": 3200000,
@@ -833,28 +847,28 @@
     "22495": {
       "id": 22495,
       "id_team": 17,
-      "id_match": 37989,
-      "id_gameweek": 4047,
-      "id_home": 6,
-      "id_away": 17,
+      "id_match": 38077,
+      "id_gameweek": 4048,
+      "id_home": 17,
+      "id_away": 3,
       "date": {
-        "ts": 1789578000,
-        "text": "mié 19:00",
+        "ts": 1789844400,
+        "text": "sáb 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "19:00",
+          "date": "sáb",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Sevilla",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Sevilla",
+      "away": "Barcelona",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,
@@ -868,8 +882,8 @@
   "away": {
     "22495": {
       "id": 22495,
-      "points": 0,
-      "avg": 0
+      "points": 2,
+      "avg": 1
     }
   },
   "owners": [],

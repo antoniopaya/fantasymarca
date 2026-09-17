@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65721.png?version=20260827164543",
     "isFavorite": 0,
-    "value": 644000,
-    "previousValue": 685000,
+    "value": 639000,
+    "previousValue": 564000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 644000,
+      "price": 639000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 316
+    "clausesRanking": 277
   },
   "id": 65721,
   "player_extra": {
@@ -169,7 +169,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -209,8 +209,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -690,37 +690,25 @@
   "values": [
     {
       "time": "Un día",
-      "value": 685000,
-      "change": -41000,
-      "sign": -41
+      "value": 564000,
+      "change": 75000,
+      "sign": 75
     },
     {
       "time": "Una semana",
-      "value": 1190000,
-      "change": -546000,
-      "sign": -546
+      "value": 940000,
+      "change": -301000,
+      "sign": -301
     },
     {
       "time": "Un año",
-      "value": 9924000,
-      "change": -9280000,
-      "sign": "-9.280.000"
+      "value": 9458000,
+      "change": -8819000,
+      "sign": "-8.819.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 9924000,
-        "date": "14 sept 2025"
-      },
-      {
-        "value": 9983000,
-        "date": "15 sept 2025"
-      },
-      {
-        "value": 9839000,
-        "date": "16 sept 2025"
-      },
       {
         "value": 9458000,
         "date": "17 sept 2025"
@@ -1336,11 +1324,23 @@
       {
         "value": 644000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 598000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 564000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 639000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
-      "value": 9983000,
-      "date": "15 sept 2025"
+      "value": 9458000,
+      "date": "17 sept 2025"
     },
     "min": {
       "value": 329000,
@@ -1351,28 +1351,28 @@
     "65721": {
       "id": 65721,
       "id_team": 3,
-      "id_match": 37991,
-      "id_gameweek": 4047,
-      "id_home": 3,
-      "id_away": 1490,
+      "id_match": 38077,
+      "id_gameweek": 4048,
+      "id_home": 17,
+      "id_away": 3,
       "date": {
-        "ts": 1789587000,
-        "text": "mié 21:30",
+        "ts": 1789844400,
+        "text": "sáb 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "21:30",
+          "date": "sáb",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Barcelona",
-      "away": "Racing de Santander",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Sevilla",
+      "away": "Barcelona",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,

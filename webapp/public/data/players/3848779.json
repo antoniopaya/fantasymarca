@@ -3,15 +3,15 @@
     "id": 3848779,
     "name": "Gnangoro Bouare",
     "position": 3,
-    "points": 6,
+    "points": 8,
     "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3848779.png?version=20260827165009",
     "isFavorite": 0,
-    "value": 1197000,
-    "previousValue": 1133000,
+    "value": 1324000,
+    "previousValue": 1332000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 1197000,
+      "floor": 1324000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1795500,
+      "value": 1986000,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 1197000,
-      "loanable": null
+      "id": 1781852623,
+      "isPublic": 1,
+      "price": 1324000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 1324000,
       "barter": [],
       "type": null,
       "days": null
@@ -68,13 +68,13 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 206
+    "clausesRanking": 178
   },
   "id": 3848779,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -170,12 +170,15 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -215,8 +218,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -695,24 +698,24 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 6,
+      "points": 8,
       "avg": 2,
       "id_team": 14,
-      "last_gameweek": 5
+      "last_gameweek": 6
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 1133000,
-      "change": 64000,
-      "sign": 64
+      "value": 1332000,
+      "change": -8000,
+      "sign": -8
     },
     {
       "time": "Una semana",
-      "value": 907000,
-      "change": 290000,
-      "sign": 290
+      "value": 1060000,
+      "change": 264000,
+      "sign": 264
     }
   ],
   "values_chart": {
@@ -788,11 +791,23 @@
       {
         "value": 1197000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 1276000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 1332000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 1324000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
-      "value": 1197000,
-      "date": "14 sept 2026"
+      "value": 1332000,
+      "date": "16 sept 2026"
     },
     "min": {
       "value": 469000,
@@ -803,35 +818,35 @@
     "3848779": {
       "id": 3848779,
       "id_team": 14,
-      "id_match": 37994,
-      "id_gameweek": 4047,
-      "id_home": 14,
-      "id_away": 8,
+      "id_match": 38076,
+      "id_gameweek": 4048,
+      "id_home": 50,
+      "id_away": 14,
       "date": {
-        "ts": 1789491600,
-        "text": "mar 19:00",
+        "ts": 1789819200,
+        "text": "sáb 14:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mar",
-          "time": "19:00",
+          "date": "sáb",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Espanyol",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "home": "Osasuna",
+      "away": "Rayo Vallecano",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,
   "home": {
     "3848779": {
       "id": 3848779,
-      "points": 2,
+      "points": 4,
       "avg": 2
     }
   },

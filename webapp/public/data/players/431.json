@@ -3,15 +3,15 @@
     "id": 431,
     "name": "João Cancelo",
     "position": 2,
-    "points": 6,
-    "avg": 1.5,
+    "points": 13,
+    "avg": 2.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/431.png?version=20260113140939",
     "isFavorite": 0,
-    "value": 32418000,
-    "previousValue": 33064000,
+    "value": 30911000,
+    "previousValue": 31079000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 32418000,
+      "floor": 30911000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 48627000,
+      "value": 46366500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 32418000,
+      "price": 30911000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 182,
       "weight": 74
     },
-    "clausesRanking": null
+    "clausesRanking": 448
   },
   "id": 431,
   "player_extra": {
-    "matches": 4,
-    "goals": 0,
-    "cards": 0
+    "matches": 5,
+    "goals": 1,
+    "cards": 1
   },
   "points": [
     {
@@ -172,12 +172,16 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -217,8 +221,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -697,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 6,
-      "avg": 1.5,
+      "points": 13,
+      "avg": 2.6,
       "id_team": 3,
-      "last_gameweek": 5
+      "last_gameweek": 6
     },
     {
       "season": "25/26",
@@ -720,15 +724,15 @@
   "values": [
     {
       "time": "Un día",
-      "value": 33064000,
-      "change": -646000,
-      "sign": -646
+      "value": 31079000,
+      "change": -168000,
+      "sign": -168
     },
     {
       "time": "Una semana",
-      "value": 37470000,
-      "change": -5052000,
-      "sign": "-5.052.000"
+      "value": 35062000,
+      "change": -4151000,
+      "sign": "-4.151.000"
     }
   ],
   "values_chart": {
@@ -1516,6 +1520,18 @@
       {
         "value": 32418000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 31736000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 31079000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 30911000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -1531,36 +1547,36 @@
     "431": {
       "id": 431,
       "id_team": 3,
-      "id_match": 37991,
-      "id_gameweek": 4047,
-      "id_home": 3,
-      "id_away": 1490,
+      "id_match": 38077,
+      "id_gameweek": 4048,
+      "id_home": 17,
+      "id_away": 3,
       "date": {
-        "ts": 1789587000,
-        "text": "mié 21:30",
+        "ts": 1789844400,
+        "text": "sáb 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "21:30",
+          "date": "sáb",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Barcelona",
-      "away": "Racing de Santander",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Sevilla",
+      "away": "Barcelona",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,
   "home": {
     "431": {
       "id": 431,
-      "points": 3,
-      "avg": 1.5
+      "points": 10,
+      "avg": 3.3333
     }
   },
   "away": {

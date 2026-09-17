@@ -3,15 +3,15 @@
     "id": 54832,
     "name": "Santiago Mouriño",
     "position": 2,
-    "points": 6,
+    "points": 8,
     "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/54832.png?version=20251006021354",
     "isFavorite": 0,
-    "value": 16120000,
-    "previousValue": 16346000,
+    "value": 15039000,
+    "previousValue": 15271000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 16120000,
+      "floor": 15039000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 24180000,
+      "value": 22558500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 16120000,
+      "price": 15039000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 186,
       "weight": 76
     },
-    "clausesRanking": 446
+    "clausesRanking": 351
   },
   "id": 54832,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 2
   },
@@ -155,12 +155,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -216,8 +218,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -696,10 +698,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 6,
+      "points": 8,
       "avg": 2,
       "id_team": 20,
-      "last_gameweek": 3
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -719,43 +721,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 16346000,
-      "change": -226000,
-      "sign": -226
+      "value": 15271000,
+      "change": -232000,
+      "sign": -232
     },
     {
       "time": "Una semana",
-      "value": 19801000,
-      "change": -3681000,
-      "sign": "-3.681.000"
+      "value": 17755000,
+      "change": -2716000,
+      "sign": "-2.716.000"
     },
     {
       "time": "Un mes",
-      "value": 28615000,
-      "change": -12495000,
-      "sign": "-12.495.000"
+      "value": 28913000,
+      "change": -13874000,
+      "sign": "-13.874.000"
     },
     {
       "time": "Un año",
-      "value": 30860000,
-      "change": -14740000,
-      "sign": "-14.740.000"
+      "value": 29663000,
+      "change": -14624000,
+      "sign": "-14.624.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 30860000,
-        "date": "14 sept 2025"
-      },
-      {
-        "value": 30526000,
-        "date": "15 sept 2025"
-      },
-      {
-        "value": 29977000,
-        "date": "16 sept 2025"
-      },
       {
         "value": 29663000,
         "date": "17 sept 2025"
@@ -2207,6 +2197,18 @@
       {
         "value": 16120000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 15697000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 15271000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 15039000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -2214,43 +2216,44 @@
       "date": "24 abr 2026"
     },
     "min": {
-      "value": 15322000,
-      "date": "3 ene 2026"
+      "value": 15039000,
+      "date": "17 sept 2026"
     }
   },
   "next_match": {
     "54832": {
       "id": 54832,
       "id_team": 20,
-      "id_match": 37986,
-      "id_gameweek": 4046,
-      "id_home": 20,
-      "id_away": 4,
+      "id_match": 37993,
+      "id_gameweek": 4047,
+      "id_home": 13,
+      "id_away": 20,
       "date": {
-        "ts": 1789412400,
-        "text": "Hoy 21:00",
+        "ts": 1789673400,
+        "text": "Hoy 21:30",
         "format": "'Hoy' H:mm",
         "splitted": {
           "date": "Hoy",
-          "time": "21:00",
+          "time": "21:30",
           "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Villarreal",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Málaga",
+      "away": "Villarreal",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "54832": {
-      "points": 0,
-      "avg": 0
+      "id": 54832,
+      "points": 2,
+      "avg": 2
     }
   },
   "away": {

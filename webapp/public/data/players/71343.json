@@ -3,15 +3,15 @@
     "id": 71343,
     "name": "Jonathan Asp Jensen",
     "position": 3,
-    "points": 10,
+    "points": 13,
     "avg": 3.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71343.png?version=20260714104654",
     "isFavorite": 0,
-    "value": 3568000,
-    "previousValue": 3920000,
+    "value": 2790000,
+    "previousValue": 3025000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3568000,
+      "floor": 2790000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 5352000,
+      "value": 4185000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3568000,
+      "price": 2790000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 71343,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 0
   },
@@ -170,12 +170,14 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -215,8 +217,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -695,30 +697,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 10,
-      "avg": 3.3333,
+      "points": 13,
+      "avg": 3.25,
       "id_team": 6,
-      "last_gameweek": 3
+      "last_gameweek": 6
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 3920000,
-      "change": -352000,
-      "sign": -352
+      "value": 3025000,
+      "change": -235000,
+      "sign": -235
     },
     {
       "time": "Una semana",
-      "value": 5100000,
-      "change": -1532000,
-      "sign": "-1.532.000"
+      "value": 4499000,
+      "change": -1709000,
+      "sign": "-1.709.000"
     },
     {
       "time": "Un mes",
-      "value": 5564000,
-      "change": -1996000,
-      "sign": "-1.996.000"
+      "value": 5251000,
+      "change": -2461000,
+      "sign": "-2.461.000"
     }
   ],
   "values_chart": {
@@ -970,6 +972,18 @@
       {
         "value": 3568000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 3276000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 3025000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 2790000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -977,25 +991,25 @@
       "date": "30 ago 2026"
     },
     "min": {
-      "value": 3040000,
-      "date": "15 jul 2026"
+      "value": 2790000,
+      "date": "17 sept 2026"
     }
   },
   "next_match": {
     "71343": {
       "id": 71343,
       "id_team": 6,
-      "id_match": 37989,
-      "id_gameweek": 4047,
+      "id_match": 38073,
+      "id_gameweek": 4048,
       "id_home": 6,
-      "id_away": 17,
+      "id_away": 4,
       "date": {
-        "ts": 1789578000,
-        "text": "mié 19:00",
+        "ts": 1789921800,
+        "text": "dom 18:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "19:00",
+          "date": "dom",
+          "time": "18:30",
           "format": "EEE"
         }
       },
@@ -1003,18 +1017,18 @@
       "confirmed": null,
       "minute": null,
       "home": "Deportivo da Coruña",
-      "away": "Sevilla",
+      "away": "Betis",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "71343": {
       "id": 71343,
-      "points": 7,
-      "avg": 3.5
+      "points": 10,
+      "avg": 3.3333
     }
   },
   "away": {

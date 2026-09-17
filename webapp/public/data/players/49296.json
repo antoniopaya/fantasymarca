@@ -3,19 +3,15 @@
     "id": 49296,
     "name": "Fran Pérez",
     "position": 3,
-    "points": 4,
-    "avg": 1,
-    "status": "red",
+    "points": 6,
+    "avg": 1.2,
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "red",
-      "description": "Roja directa",
-      "duration": "Baja esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/49296.png?version=20251004225250",
     "isFavorite": 0,
-    "value": 329000,
-    "previousValue": 420000,
+    "value": 444000,
+    "previousValue": 441000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -51,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 444000,
       "loanable": null
     },
     "bid": {
@@ -72,11 +68,11 @@
       "height": 176,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 387
   },
   "id": 49296,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 2
   },
@@ -173,7 +169,7 @@
         "description": "Roja directa",
         "duration": "Baja esta jornada",
         "since": "2026-09-08 14:06:08",
-        "until": null,
+        "until": "2026-09-15 12:30:35",
         "status": "Sancionado"
       },
       "teamPlayed": true,
@@ -187,12 +183,14 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -232,8 +230,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -712,10 +710,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 4,
-      "avg": 1,
+      "points": 6,
+      "avg": 1.2,
       "id_team": 14,
-      "last_gameweek": 4
+      "last_gameweek": 6
     },
     {
       "season": "25/26",
@@ -742,43 +740,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 420000,
-      "change": -91000,
-      "sign": -91
+      "value": 441000,
+      "change": 3000,
+      "sign": 3
     },
     {
       "time": "Una semana",
-      "value": 1944000,
-      "change": -1615000,
-      "sign": "-1.615.000"
+      "value": 1164000,
+      "change": -720000,
+      "sign": -720
     },
     {
       "time": "Un mes",
-      "value": 1250000,
-      "change": -921000,
-      "sign": -921
+      "value": 1406000,
+      "change": -962000,
+      "sign": -962
     },
     {
       "time": "Un año",
-      "value": 4881000,
-      "change": -4552000,
-      "sign": "-4.552.000"
+      "value": 4899000,
+      "change": -4455000,
+      "sign": "-4.455.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 4881000,
-        "date": "14 sept 2025"
-      },
-      {
-        "value": 4977000,
-        "date": "15 sept 2025"
-      },
-      {
-        "value": 4896000,
-        "date": "16 sept 2025"
-      },
       {
         "value": 4899000,
         "date": "17 sept 2025"
@@ -2230,11 +2216,23 @@
       {
         "value": 329000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 441000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 444000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
-      "value": 4977000,
-      "date": "15 sept 2025"
+      "value": 4899000,
+      "date": "17 sept 2025"
     },
     "min": {
       "value": 329000,
@@ -2245,36 +2243,36 @@
     "49296": {
       "id": 49296,
       "id_team": 14,
-      "id_match": 37994,
-      "id_gameweek": 4047,
-      "id_home": 14,
-      "id_away": 8,
+      "id_match": 38076,
+      "id_gameweek": 4048,
+      "id_home": 50,
+      "id_away": 14,
       "date": {
-        "ts": 1789491600,
-        "text": "mar 19:00",
+        "ts": 1789819200,
+        "text": "sáb 14:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mar",
-          "time": "19:00",
+          "date": "sáb",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Espanyol",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "home": "Osasuna",
+      "away": "Rayo Vallecano",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,
   "home": {
     "49296": {
       "id": 49296,
-      "points": 1,
-      "avg": 0.5
+      "points": 3,
+      "avg": 1
     }
   },
   "away": {

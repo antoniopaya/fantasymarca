@@ -3,15 +3,15 @@
     "id": 68640,
     "name": "Alex Freeman",
     "position": 2,
-    "points": 6,
-    "avg": 2,
+    "points": 7,
+    "avg": 1.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68640.png?version=20260323141045",
     "isFavorite": 0,
-    "value": 4172000,
-    "previousValue": 3989000,
+    "value": 4300000,
+    "previousValue": 4242000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4172000,
+      "floor": 4300000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6258000,
+      "value": 6450000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4172000,
+      "price": 4300000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 188,
       "weight": null
     },
-    "clausesRanking": 109
+    "clausesRanking": 94
   },
   "id": 68640,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 0
   },
@@ -152,12 +152,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -213,8 +215,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -693,10 +695,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 6,
-      "avg": 2,
+      "points": 7,
+      "avg": 1.75,
       "id_team": 20,
-      "last_gameweek": 4
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -709,21 +711,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 3989000,
-      "change": 183000,
-      "sign": 183
+      "value": 4242000,
+      "change": 58000,
+      "sign": 58
     },
     {
       "time": "Una semana",
-      "value": 2958000,
-      "change": 1214000,
-      "sign": "+1.214.000"
+      "value": 3463000,
+      "change": 837000,
+      "sign": 837
     },
     {
       "time": "Un mes",
-      "value": 4348000,
-      "change": -176000,
-      "sign": -176
+      "value": 4170000,
+      "change": 130000,
+      "sign": 130
     }
   ],
   "values_chart": {
@@ -1639,6 +1641,18 @@
       {
         "value": 4172000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 4229000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 4242000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 4300000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -1654,36 +1668,36 @@
     "68640": {
       "id": 68640,
       "id_team": 20,
-      "id_match": 37986,
-      "id_gameweek": 4046,
-      "id_home": 20,
-      "id_away": 4,
+      "id_match": 37993,
+      "id_gameweek": 4047,
+      "id_home": 13,
+      "id_away": 20,
       "date": {
-        "ts": 1789412400,
-        "text": "Hoy 21:00",
+        "ts": 1789673400,
+        "text": "Hoy 21:30",
         "format": "'Hoy' H:mm",
         "splitted": {
           "date": "Hoy",
-          "time": "21:00",
+          "time": "21:30",
           "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
-      "home": "Villarreal",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Málaga",
+      "away": "Villarreal",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "68640": {
       "id": 68640,
-      "points": 2,
-      "avg": 2
+      "points": 3,
+      "avg": 1.5
     }
   },
   "away": {

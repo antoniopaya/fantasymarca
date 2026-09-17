@@ -3,15 +3,15 @@
     "id": 20449,
     "name": "Fer Niño",
     "position": 4,
-    "points": 24,
-    "avg": 4.8,
+    "points": 31,
+    "avg": 5.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/20449.png?version=20260730085621",
     "isFavorite": 0,
-    "value": 8998000,
-    "previousValue": 8740000,
+    "value": 9967000,
+    "previousValue": 9564000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 8998000,
+      "floor": 9967000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 13497000,
+      "value": 14950500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 8998000,
+      "price": 9967000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 190,
       "weight": null
     },
-    "clausesRanking": 56
+    "clausesRanking": 44
   },
   "id": 20449,
   "player_extra": {
-    "matches": 5,
-    "goals": 2,
+    "matches": 6,
+    "goals": 3,
     "cards": 1
   },
   "points": [
@@ -175,12 +175,15 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -220,8 +223,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -700,30 +703,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 24,
-      "avg": 4.8,
+      "points": 31,
+      "avg": 5.1667,
       "id_team": 23,
-      "last_gameweek": 5
+      "last_gameweek": 6
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 8740000,
-      "change": 258000,
-      "sign": 258
+      "value": 9564000,
+      "change": 403000,
+      "sign": 403
     },
     {
       "time": "Una semana",
-      "value": 7170000,
-      "change": 1828000,
-      "sign": "+1.828.000"
+      "value": 7942000,
+      "change": 2025000,
+      "sign": "+2.025.000"
     },
     {
       "time": "Un mes",
-      "value": 4980000,
-      "change": 4018000,
-      "sign": "+4.018.000"
+      "value": 5449000,
+      "change": 4518000,
+      "sign": "+4.518.000"
     }
   ],
   "values_chart": {
@@ -915,11 +918,23 @@
       {
         "value": 8998000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 9225000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 9564000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 9967000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
-      "value": 8998000,
-      "date": "14 sept 2026"
+      "value": 9967000,
+      "date": "17 sept 2026"
     },
     "min": {
       "value": 2000000,
@@ -930,36 +945,36 @@
     "20449": {
       "id": 20449,
       "id_team": 23,
-      "id_match": 37990,
-      "id_gameweek": 4047,
-      "id_home": 23,
-      "id_away": 15,
+      "id_match": 38074,
+      "id_gameweek": 4048,
+      "id_home": 8,
+      "id_away": 23,
       "date": {
-        "ts": 1789500600,
-        "text": "mar 21:30",
+        "ts": 1789758000,
+        "text": "vie 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mar",
-          "time": "21:30",
+          "date": "vie",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Elche",
-      "away": "Real Madrid",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Espanyol",
+      "away": "Elche",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   },
   "starter": false,
   "home": {
     "20449": {
       "id": 20449,
-      "points": 8,
-      "avg": 4
+      "points": 15,
+      "avg": 5
     }
   },
   "away": {

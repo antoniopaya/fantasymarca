@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4836189.png?version=20260901214753",
     "isFavorite": 0,
-    "value": 16902000,
-    "previousValue": 17546000,
+    "value": 14960000,
+    "previousValue": 15654000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 16902000,
+      "floor": 14960000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 5,
-      "shield2WeeksSku": "shield_t5_2w",
-      "shield1MonthSku": "shield_t5_1m",
-      "value": 25353000,
+      "tier": 4,
+      "shield2WeeksSku": "shield_t4_2w",
+      "shield1MonthSku": "shield_t4_1m",
+      "value": 22440000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 16902000,
+      "price": 14960000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 323
+    "clausesRanking": 361
   },
   "id": 4836189,
   "player_extra": {
@@ -173,7 +173,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -213,8 +213,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -702,15 +702,15 @@
   "values": [
     {
       "time": "Un día",
-      "value": 17546000,
-      "change": -644000,
-      "sign": -644
+      "value": 15654000,
+      "change": -694000,
+      "sign": -694
     },
     {
       "time": "Una semana",
-      "value": 18088000,
-      "change": -1186000,
-      "sign": "-1.186.000"
+      "value": 18705000,
+      "change": -3745000,
+      "sign": "-3.745.000"
     }
   ],
   "values_chart": {
@@ -766,6 +766,18 @@
       {
         "value": 16902000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 16328000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 15654000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 14960000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -773,36 +785,36 @@
       "date": "10 sept 2026"
     },
     "min": {
-      "value": 16000000,
-      "date": "2 sept 2026"
+      "value": 14960000,
+      "date": "17 sept 2026"
     }
   },
   "next_match": {
     "4836189": {
       "id": 4836189,
       "id_team": 19,
-      "id_match": 37988,
-      "id_gameweek": 4047,
-      "id_home": 48,
-      "id_away": 19,
+      "id_match": 38078,
+      "id_gameweek": 4048,
+      "id_home": 19,
+      "id_away": 16,
       "date": {
-        "ts": 1789495200,
-        "text": "mar 20:00",
+        "ts": 1789930800,
+        "text": "dom 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mar",
-          "time": "20:00",
+          "date": "dom",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Valencia",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
+      "home": "Valencia",
+      "away": "Real Sociedad",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   },
   "starter": false,

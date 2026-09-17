@@ -3,15 +3,15 @@
     "id": 60210,
     "name": "Pau Navarro",
     "position": 2,
-    "points": 0,
-    "avg": 0,
+    "points": 3,
+    "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60210.png?version=20240929093251",
     "isFavorite": 0,
-    "value": 4134000,
-    "previousValue": 4146000,
+    "value": 4027000,
+    "previousValue": 4050000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4134000,
+      "floor": 4027000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6201000,
+      "value": 6040500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4134000,
+      "price": 4027000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 432
+    "clausesRanking": 285
   },
   "id": 60210,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -148,12 +148,12 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -209,8 +209,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -688,6 +688,13 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 3,
+      "avg": 3,
+      "id_team": 20,
+      "last_gameweek": 5
+    },
+    {
       "season": "25/26",
       "points": 102,
       "avg": 4.4348,
@@ -705,43 +712,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4146000,
-      "change": -12000,
-      "sign": -12
+      "value": 4050000,
+      "change": -23000,
+      "sign": -23
     },
     {
       "time": "Una semana",
-      "value": 5043000,
-      "change": -909000,
-      "sign": -909
+      "value": 4472000,
+      "change": -445000,
+      "sign": -445
     },
     {
       "time": "Un mes",
-      "value": 10836000,
-      "change": -6702000,
-      "sign": "-6.702.000"
+      "value": 11106000,
+      "change": -7079000,
+      "sign": "-7.079.000"
     },
     {
       "time": "Un año",
-      "value": 329000,
-      "change": 3805000,
-      "sign": "+3.805.000"
+      "value": 355000,
+      "change": 3672000,
+      "sign": "+3.672.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 329000,
-        "date": "14 sept 2025"
-      },
-      {
-        "value": 329000,
-        "date": "15 sept 2025"
-      },
-      {
-        "value": 417000,
-        "date": "16 sept 2025"
-      },
       {
         "value": 355000,
         "date": "17 sept 2025"
@@ -2193,6 +2188,18 @@
       {
         "value": 4134000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 4075000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 4050000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 4027000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -2208,35 +2215,36 @@
     "60210": {
       "id": 60210,
       "id_team": 20,
-      "id_match": 37986,
-      "id_gameweek": 4046,
-      "id_home": 20,
-      "id_away": 4,
+      "id_match": 37993,
+      "id_gameweek": 4047,
+      "id_home": 13,
+      "id_away": 20,
       "date": {
-        "ts": 1789412400,
-        "text": "Hoy 21:00",
+        "ts": 1789673400,
+        "text": "Hoy 21:30",
         "format": "'Hoy' H:mm",
         "splitted": {
           "date": "Hoy",
-          "time": "21:00",
+          "time": "21:30",
           "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Villarreal",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Málaga",
+      "away": "Villarreal",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "60210": {
-      "points": 0,
-      "avg": 0
+      "id": 60210,
+      "points": 3,
+      "avg": 3
     }
   },
   "away": {

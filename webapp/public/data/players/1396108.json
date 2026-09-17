@@ -3,15 +3,15 @@
     "id": 1396108,
     "name": "Arnau Ortiz",
     "position": 3,
-    "points": 11,
+    "points": 14,
     "avg": 2.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/1396108.png?version=20260815101129",
     "isFavorite": 0,
-    "value": 1541000,
-    "previousValue": 1515000,
+    "value": 2180000,
+    "previousValue": 1930000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1541000,
+      "floor": 2180000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 1,
-      "shield2WeeksSku": "shield_t1_2w",
-      "shield1MonthSku": "shield_t1_1m",
-      "value": 2311500,
+      "tier": 2,
+      "shield2WeeksSku": "shield_t2_2w",
+      "shield1MonthSku": "shield_t2_1m",
+      "value": 3270000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1541000,
+      "price": 2180000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 244
+    "clausesRanking": 139
   },
   "id": 1396108,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 0
   },
@@ -172,12 +172,14 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -217,8 +219,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -697,24 +699,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 11,
-      "avg": 2.75,
+      "points": 14,
+      "avg": 2.8,
       "id_team": 2,
-      "last_gameweek": 5
+      "last_gameweek": 6
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 1515000,
-      "change": 26000,
-      "sign": 26
+      "value": 1930000,
+      "change": 250000,
+      "sign": 250
     },
     {
       "time": "Una semana",
-      "value": 1992000,
-      "change": -451000,
-      "sign": -451
+      "value": 1760000,
+      "change": 420000,
+      "sign": 420
+    },
+    {
+      "time": "Un mes",
+      "value": 1164000,
+      "change": 1016000,
+      "sign": "+1.016.000"
     }
   ],
   "values_chart": {
@@ -838,11 +846,23 @@
       {
         "value": 1541000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 1722000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 1930000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 2180000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
-      "value": 2097000,
-      "date": "24 ago 2026"
+      "value": 2180000,
+      "date": "17 sept 2026"
     },
     "min": {
       "value": 1073000,
@@ -853,17 +873,17 @@
     "1396108": {
       "id": 1396108,
       "id_team": 2,
-      "id_match": 37987,
-      "id_gameweek": 4047,
+      "id_match": 38071,
+      "id_gameweek": 4048,
       "id_home": 2,
-      "id_away": 50,
+      "id_away": 15,
       "date": {
-        "ts": 1789578000,
-        "text": "mié 19:00",
+        "ts": 1789913700,
+        "text": "dom 16:15",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "19:00",
+          "date": "dom",
+          "time": "16:15",
           "format": "EEE"
         }
       },
@@ -871,17 +891,17 @@
       "confirmed": null,
       "minute": null,
       "home": "Atlético",
-      "away": "Osasuna",
+      "away": "Real Madrid",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
   "home": {
     "1396108": {
       "id": 1396108,
-      "points": 3,
+      "points": 6,
       "avg": 3
     }
   },

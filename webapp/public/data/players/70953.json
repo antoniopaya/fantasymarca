@@ -3,15 +3,15 @@
     "id": 70953,
     "name": "Miguel Loureiro",
     "position": 2,
-    "points": 10,
-    "avg": 3.3,
+    "points": 20,
+    "avg": 5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70953.png?version=20260621102344",
     "isFavorite": 0,
-    "value": 3116000,
-    "previousValue": 3301000,
+    "value": 2843000,
+    "previousValue": 2766000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 3116000,
+      "floor": 2843000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 4674000,
+      "value": 4264500,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 3116000,
-      "loanable": null
+      "id": 1781852627,
+      "isPublic": 1,
+      "price": 2843000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 2843000,
       "barter": [],
       "type": null,
       "days": null
@@ -68,11 +68,11 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 276
+    "clausesRanking": 250
   },
   "id": 70953,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 0
   },
@@ -170,12 +170,12 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-09-17 21:30:00",
       "points": {
-        "points": null,
+        "points": 10,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -215,8 +215,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -695,30 +695,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 10,
-      "avg": 3.3333,
+      "points": 20,
+      "avg": 5,
       "id_team": 6,
-      "last_gameweek": 4
+      "last_gameweek": 6
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 3301000,
-      "change": -185000,
-      "sign": -185
+      "value": 2766000,
+      "change": 77000,
+      "sign": 77
     },
     {
       "time": "Una semana",
-      "value": 3561000,
-      "change": -445000,
-      "sign": -445
+      "value": 3481000,
+      "change": -638000,
+      "sign": -638
     },
     {
       "time": "Un mes",
-      "value": 5534000,
-      "change": -2418000,
-      "sign": "-2.418.000"
+      "value": 5739000,
+      "change": -2896000,
+      "sign": "-2.896.000"
     }
   ],
   "values_chart": {
@@ -1062,6 +1062,18 @@
       {
         "value": 3116000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 2966000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 2766000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 2843000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -1077,17 +1089,17 @@
     "70953": {
       "id": 70953,
       "id_team": 6,
-      "id_match": 37989,
-      "id_gameweek": 4047,
+      "id_match": 38073,
+      "id_gameweek": 4048,
       "id_home": 6,
-      "id_away": 17,
+      "id_away": 4,
       "date": {
-        "ts": 1789578000,
-        "text": "mié 19:00",
+        "ts": 1789921800,
+        "text": "dom 18:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "19:00",
+          "date": "dom",
+          "time": "18:30",
           "format": "EEE"
         }
       },
@@ -1095,18 +1107,18 @@
       "confirmed": null,
       "minute": null,
       "home": "Deportivo da Coruña",
-      "away": "Sevilla",
+      "away": "Betis",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "70953": {
       "id": 70953,
-      "points": 2,
-      "avg": 2
+      "points": 12,
+      "avg": 6
     }
   },
   "away": {

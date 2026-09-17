@@ -3,15 +3,15 @@
     "id": 53098,
     "name": "Alberto Moleiro",
     "position": 3,
-    "points": 14,
-    "avg": 3.5,
+    "points": 17,
+    "avg": 3.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/53098.png?version=20251006020600",
     "isFavorite": 0,
-    "value": 36120000,
-    "previousValue": 36342000,
+    "value": 34608000,
+    "previousValue": 35054000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 36120000,
+      "floor": 34608000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 54180000,
+      "value": 51912000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 36120000,
+      "price": 34608000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 53098,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 0
   },
@@ -157,12 +157,14 @@
       "startDate": "2026-09-11 21:00:00",
       "endDate": "2026-09-14 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -218,8 +220,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -698,10 +700,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 14,
-      "avg": 3.5,
+      "points": 17,
+      "avg": 3.4,
       "id_team": 20,
-      "last_gameweek": 4
+      "last_gameweek": 5
     },
     {
       "season": "25/26",
@@ -728,43 +730,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 36342000,
-      "change": -222000,
-      "sign": -222
+      "value": 35054000,
+      "change": -446000,
+      "sign": -446
     },
     {
       "time": "Una semana",
-      "value": 39211000,
-      "change": -3091000,
-      "sign": "-3.091.000"
+      "value": 37683000,
+      "change": -3075000,
+      "sign": "-3.075.000"
     },
     {
       "time": "Un mes",
-      "value": 47691000,
-      "change": -11571000,
-      "sign": "-11.571.000"
+      "value": 47079000,
+      "change": -12471000,
+      "sign": "-12.471.000"
     },
     {
       "time": "Un año",
-      "value": 24150000,
-      "change": 11970000,
-      "sign": "+11.970.000"
+      "value": 23011000,
+      "change": 11597000,
+      "sign": "+11.597.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 24150000,
-        "date": "14 sept 2025"
-      },
-      {
-        "value": 23684000,
-        "date": "15 sept 2025"
-      },
-      {
-        "value": 23308000,
-        "date": "16 sept 2025"
-      },
       {
         "value": 23011000,
         "date": "17 sept 2025"
@@ -2216,6 +2206,18 @@
       {
         "value": 36120000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 35561000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 35054000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 34608000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -2231,35 +2233,35 @@
     "53098": {
       "id": 53098,
       "id_team": 20,
-      "id_match": 37986,
-      "id_gameweek": 4046,
-      "id_home": 20,
-      "id_away": 4,
+      "id_match": 37993,
+      "id_gameweek": 4047,
+      "id_home": 13,
+      "id_away": 20,
       "date": {
-        "ts": 1789412400,
-        "text": "Hoy 21:00",
+        "ts": 1789673400,
+        "text": "Hoy 21:30",
         "format": "'Hoy' H:mm",
         "splitted": {
           "date": "Hoy",
-          "time": "21:00",
+          "time": "21:30",
           "format": "'Hoy'"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Villarreal",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Málaga",
+      "away": "Villarreal",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "53098": {
       "id": 53098,
-      "points": 3,
+      "points": 6,
       "avg": 3
     }
   },

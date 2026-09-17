@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/1256139.png?version=20260814195048",
     "isFavorite": 0,
-    "value": 1423000,
-    "previousValue": 1639000,
+    "value": 898000,
+    "previousValue": 1035000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1423000,
+      "floor": 898000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2134500,
+      "value": 1347000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1423000,
+      "price": 898000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 451
+    "clausesRanking": 423
   },
   "id": 1256139,
   "player_extra": {
@@ -173,7 +173,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -213,8 +213,8 @@
       "id": 4050,
       "number": 9,
       "shortName": "J9",
-      "startDate": "2026-10-18 21:00:00",
-      "endDate": "2026-10-18 21:00:00",
+      "startDate": "2026-10-16 21:00:00",
+      "endDate": "2026-10-19 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -702,15 +702,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1639000,
-      "change": -216000,
-      "sign": -216
+      "value": 1035000,
+      "change": -137000,
+      "sign": -137
     },
     {
       "time": "Una semana",
-      "value": 2736000,
-      "change": -1313000,
-      "sign": "-1.313.000"
+      "value": 2253000,
+      "change": -1355000,
+      "sign": "-1.355.000"
+    },
+    {
+      "time": "Un mes",
+      "value": 4363000,
+      "change": -3465000,
+      "sign": "-3.465.000"
     }
   ],
   "values_chart": {
@@ -838,6 +844,18 @@
       {
         "value": 1423000,
         "date": "14 sept 2026"
+      },
+      {
+        "value": 1186000,
+        "date": "15 sept 2026"
+      },
+      {
+        "value": 1035000,
+        "date": "16 sept 2026"
+      },
+      {
+        "value": 898000,
+        "date": "17 sept 2026"
       }
     ],
     "max": {
@@ -845,36 +863,36 @@
       "date": "16 ago 2026"
     },
     "min": {
-      "value": 1423000,
-      "date": "14 sept 2026"
+      "value": 898000,
+      "date": "17 sept 2026"
     }
   },
   "next_match": {
     "1256139": {
       "id": 1256139,
       "id_team": 8,
-      "id_match": 37994,
-      "id_gameweek": 4047,
-      "id_home": 14,
-      "id_away": 8,
+      "id_match": 38074,
+      "id_gameweek": 4048,
+      "id_home": 8,
+      "id_away": 23,
       "date": {
-        "ts": 1789491600,
-        "text": "mar 19:00",
+        "ts": 1789758000,
+        "text": "vie 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mar",
-          "time": "19:00",
+          "date": "vie",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Espanyol",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "home": "Espanyol",
+      "away": "Elche",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   },
   "starter": false,
