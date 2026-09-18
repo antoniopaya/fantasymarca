@@ -3,15 +3,15 @@
     "id": 6044,
     "name": "Enes Ünal",
     "position": 4,
-    "points": 15,
-    "avg": 3,
+    "points": 17,
+    "avg": 2.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/6044.png?version=20260813165621",
     "isFavorite": 0,
-    "value": 20657000,
-    "previousValue": 19790000,
+    "value": 21085000,
+    "previousValue": 20657000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 20657000,
+      "floor": 21085000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 30985500,
+      "value": 31627500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 20657000,
+      "price": 21085000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": 75
     },
-    "clausesRanking": 8
+    "clausesRanking": 7
   },
   "id": 6044,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 1,
     "cards": 2
   },
@@ -170,14 +170,16 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 21:30:00",
+      "endDate": "2026-10-21 20:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -697,10 +699,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 15,
-      "avg": 3,
+      "points": 17,
+      "avg": 2.8333,
       "id_team": 9,
-      "last_gameweek": 5
+      "last_gameweek": 6
     },
     {
       "season": "23/24",
@@ -713,21 +715,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 19790000,
-      "change": 867000,
-      "sign": 867
+      "value": 20657000,
+      "change": 428000,
+      "sign": 428
     },
     {
       "time": "Una semana",
-      "value": 15234000,
-      "change": 5423000,
-      "sign": "+5.423.000"
+      "value": 15929000,
+      "change": 5156000,
+      "sign": "+5.156.000"
     },
     {
       "time": "Un mes",
-      "value": 5688000,
-      "change": 14969000,
-      "sign": "+14.969.000"
+      "value": 5907000,
+      "change": 15178000,
+      "sign": "+15.178.000"
     }
   ],
   "values_chart": {
@@ -875,11 +877,15 @@
       {
         "value": 20657000,
         "date": "17 sept 2026"
+      },
+      {
+        "value": 21085000,
+        "date": "18 sept 2026"
       }
     ],
     "max": {
-      "value": 20657000,
-      "date": "17 sept 2026"
+      "value": 21085000,
+      "date": "18 sept 2026"
     },
     "min": {
       "value": 5000000,
@@ -890,28 +896,28 @@
     "6044": {
       "id": 6044,
       "id_team": 9,
-      "id_match": 37995,
-      "id_gameweek": 4047,
-      "id_home": 4,
-      "id_away": 9,
+      "id_match": 38075,
+      "id_gameweek": 4048,
+      "id_home": 9,
+      "id_away": 13,
       "date": {
-        "ts": 1789664400,
-        "text": "Hoy 19:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1789905600,
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "19:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Getafe",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Getafe",
+      "away": "Málaga",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,
@@ -925,8 +931,8 @@
   "away": {
     "6044": {
       "id": 6044,
-      "points": 2,
-      "avg": 1
+      "points": 4,
+      "avg": 1.3333
     }
   },
   "owners": [],

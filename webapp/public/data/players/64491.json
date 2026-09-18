@@ -3,15 +3,15 @@
     "id": 64491,
     "name": "Valentín Gómez",
     "position": 2,
-    "points": 11,
-    "avg": 11,
+    "points": 20,
+    "avg": 10,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/64491.png?version=20250727111021",
     "isFavorite": 0,
-    "value": 1372000,
-    "previousValue": 1445000,
+    "value": 1453000,
+    "previousValue": 1372000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1372000,
+      "floor": 1453000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2058000,
+      "value": 2179500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1372000,
+      "price": 1453000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 181,
       "weight": null
     },
-    "clausesRanking": 270
+    "clausesRanking": 254
   },
   "id": 64491,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -162,14 +162,14 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 21:30:00",
+      "endDate": "2026-10-21 20:00:00",
       "points": {
-        "points": null,
+        "points": 9,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -689,10 +689,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 11,
-      "avg": 11,
+      "points": 20,
+      "avg": 10,
       "id_team": 4,
-      "last_gameweek": 1
+      "last_gameweek": 6
     },
     {
       "season": "25/26",
@@ -705,35 +705,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1445000,
-      "change": -73000,
-      "sign": -73
+      "value": 1372000,
+      "change": 81000,
+      "sign": 81
     },
     {
       "time": "Una semana",
-      "value": 1792000,
-      "change": -420000,
-      "sign": -420
+      "value": 1696000,
+      "change": -243000,
+      "sign": -243
     },
     {
       "time": "Un mes",
-      "value": 1307000,
-      "change": 65000,
-      "sign": 65
+      "value": 1209000,
+      "change": 244000,
+      "sign": 244
     },
     {
       "time": "Un año",
-      "value": 547000,
-      "change": 825000,
-      "sign": 825
+      "value": 656000,
+      "change": 797000,
+      "sign": 797
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 547000,
-        "date": "17 sept 2025"
-      },
       {
         "value": 656000,
         "date": "18 sept 2025"
@@ -2193,6 +2189,10 @@
       {
         "value": 1372000,
         "date": "17 sept 2026"
+      },
+      {
+        "value": 1453000,
+        "date": "18 sept 2026"
       }
     ],
     "max": {
@@ -2208,35 +2208,36 @@
     "64491": {
       "id": 64491,
       "id_team": 4,
-      "id_match": 37995,
-      "id_gameweek": 4047,
-      "id_home": 4,
-      "id_away": 9,
+      "id_match": 38073,
+      "id_gameweek": 4048,
+      "id_home": 6,
+      "id_away": 4,
       "date": {
-        "ts": 1789664400,
-        "text": "Hoy 19:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1789921800,
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "19:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Getafe",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Betis",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "64491": {
-      "points": 0,
-      "avg": 0
+      "id": 64491,
+      "points": 9,
+      "avg": 9
     }
   },
   "away": {

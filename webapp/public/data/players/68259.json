@@ -3,8 +3,8 @@
     "id": 68259,
     "name": "Carlos Macia",
     "position": 3,
-    "points": 5,
-    "avg": 2.5,
+    "points": 10,
+    "avg": 3.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
@@ -68,11 +68,11 @@
       "height": 194,
       "weight": null
     },
-    "clausesRanking": 421
+    "clausesRanking": 408
   },
   "id": 68259,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 0
   },
@@ -166,14 +166,16 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 21:30:00",
+      "endDate": "2026-10-21 20:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 13,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
@@ -693,10 +695,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 5,
-      "avg": 2.5,
+      "points": 10,
+      "avg": 3.3333,
       "id_team": 20,
-      "last_gameweek": 2
+      "last_gameweek": 6
     },
     {
       "season": "25/26",
@@ -715,15 +717,15 @@
     },
     {
       "time": "Una semana",
-      "value": 1219000,
-      "change": -890000,
-      "sign": -890
+      "value": 1056000,
+      "change": -727000,
+      "sign": -727
     },
     {
       "time": "Un mes",
-      "value": 1806000,
-      "change": -1477000,
-      "sign": "-1.477.000"
+      "value": 2032000,
+      "change": -1703000,
+      "sign": "-1.703.000"
     }
   ],
   "values_chart": {
@@ -1859,6 +1861,10 @@
       {
         "value": 329000,
         "date": "17 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "18 sept 2026"
       }
     ],
     "max": {
@@ -1874,28 +1880,28 @@
     "68259": {
       "id": 68259,
       "id_team": 20,
-      "id_match": 37993,
-      "id_gameweek": 4047,
-      "id_home": 13,
-      "id_away": 20,
+      "id_match": 38079,
+      "id_gameweek": 4048,
+      "id_home": 20,
+      "id_away": 12,
       "date": {
-        "ts": 1789673400,
-        "text": "Hoy 21:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1789921800,
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:30",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Villarreal",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+      "home": "Villarreal",
+      "away": "Levante",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
   "starter": false,
@@ -1908,8 +1914,8 @@
   "away": {
     "68259": {
       "id": 68259,
-      "points": 5,
-      "avg": 2.5
+      "points": 10,
+      "avg": 3.3333
     }
   },
   "owners": [],

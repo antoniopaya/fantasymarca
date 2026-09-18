@@ -3,15 +3,15 @@
     "id": 70992,
     "name": "Chupete",
     "position": 4,
-    "points": 16,
+    "points": 19,
     "avg": 3.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70992.png?version=20260621195421",
     "isFavorite": 0,
-    "value": 32533000,
-    "previousValue": 33161000,
+    "value": 31955000,
+    "previousValue": 32533000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 32533000,
+      "floor": 31955000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 48799500,
+      "value": 47932500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 32533000,
+      "price": 31955000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 404
+    "clausesRanking": 445
   },
   "id": 70992,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 1,
     "cards": 1
   },
@@ -168,14 +168,14 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 21:30:00",
+      "endDate": "2026-10-21 20:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 20,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     },
@@ -695,30 +695,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 16,
-      "avg": 3.2,
+      "points": 19,
+      "avg": 3.1667,
       "id_team": 13,
-      "last_gameweek": 5
+      "last_gameweek": 6
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 33161000,
-      "change": -628000,
-      "sign": -628
+      "value": 32533000,
+      "change": -578000,
+      "sign": -578
     },
     {
       "time": "Una semana",
-      "value": 37155000,
-      "change": -4622000,
-      "sign": "-4.622.000"
+      "value": 36779000,
+      "change": -4824000,
+      "sign": "-4.824.000"
     },
     {
       "time": "Un mes",
-      "value": 22025000,
-      "change": 10508000,
-      "sign": "+10.508.000"
+      "value": 22526000,
+      "change": 9429000,
+      "sign": "+9.429.000"
     }
   ],
   "values_chart": {
@@ -1074,6 +1074,10 @@
       {
         "value": 32533000,
         "date": "17 sept 2026"
+      },
+      {
+        "value": 31955000,
+        "date": "18 sept 2026"
       }
     ],
     "max": {
@@ -1089,36 +1093,36 @@
     "70992": {
       "id": 70992,
       "id_team": 13,
-      "id_match": 37993,
-      "id_gameweek": 4047,
-      "id_home": 13,
-      "id_away": 20,
+      "id_match": 38075,
+      "id_gameweek": 4048,
+      "id_home": 9,
+      "id_away": 13,
       "date": {
-        "ts": 1789673400,
-        "text": "Hoy 21:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1789905600,
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:30",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Villarreal",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+      "home": "Getafe",
+      "away": "Málaga",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,
   "home": {
     "70992": {
       "id": 70992,
-      "points": 10,
-      "avg": 5
+      "points": 13,
+      "avg": 4.3333
     }
   },
   "away": {

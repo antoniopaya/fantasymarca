@@ -3,15 +3,15 @@
     "id": 19727,
     "name": "Rodrigo Riquelme",
     "position": 3,
-    "points": 27,
-    "avg": 5.4,
+    "points": 30,
+    "avg": 5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/19727.png?version=20251003194652",
     "isFavorite": 0,
-    "value": 19279000,
-    "previousValue": 18682000,
+    "value": 19770000,
+    "previousValue": 19279000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 19279000,
+      "floor": 19770000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 28918500,
+      "value": 29655000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 19279000,
+      "price": 19770000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 174,
       "weight": null
     },
-    "clausesRanking": 112
+    "clausesRanking": 115
   },
   "id": 19727,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 2,
     "cards": 0
   },
@@ -174,14 +174,16 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 21:30:00",
+      "endDate": "2026-10-21 20:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -701,10 +703,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 27,
-      "avg": 5.4,
+      "points": 30,
+      "avg": 5,
       "id_team": 4,
-      "last_gameweek": 5
+      "last_gameweek": 6
     },
     {
       "season": "25/26",
@@ -731,35 +733,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 18682000,
-      "change": 597000,
-      "sign": 597
+      "value": 19279000,
+      "change": 491000,
+      "sign": 491
     },
     {
       "time": "Una semana",
-      "value": 15179000,
-      "change": 4100000,
-      "sign": "+4.100.000"
+      "value": 15725000,
+      "change": 4045000,
+      "sign": "+4.045.000"
     },
     {
       "time": "Un mes",
-      "value": 5664000,
-      "change": 13615000,
-      "sign": "+13.615.000"
+      "value": 5803000,
+      "change": 13967000,
+      "sign": "+13.967.000"
     },
     {
       "time": "Un año",
-      "value": 19323000,
-      "change": -44000,
-      "sign": -44
+      "value": 19290000,
+      "change": 480000,
+      "sign": 480
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 19323000,
-        "date": "17 sept 2025"
-      },
       {
         "value": 19290000,
         "date": "18 sept 2025"
@@ -2219,11 +2217,15 @@
       {
         "value": 19279000,
         "date": "17 sept 2026"
+      },
+      {
+        "value": 19770000,
+        "date": "18 sept 2026"
       }
     ],
     "max": {
-      "value": 19323000,
-      "date": "17 sept 2025"
+      "value": 19770000,
+      "date": "18 sept 2026"
     },
     "min": {
       "value": 329000,
@@ -2234,36 +2236,36 @@
     "19727": {
       "id": 19727,
       "id_team": 4,
-      "id_match": 37995,
-      "id_gameweek": 4047,
-      "id_home": 4,
-      "id_away": 9,
+      "id_match": 38073,
+      "id_gameweek": 4048,
+      "id_home": 6,
+      "id_away": 4,
       "date": {
-        "ts": 1789664400,
-        "text": "Hoy 19:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1789921800,
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "19:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Getafe",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Betis",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "19727": {
       "id": 19727,
-      "points": 15,
-      "avg": 7.5
+      "points": 18,
+      "avg": 6
     }
   },
   "away": {

@@ -5,17 +5,13 @@
     "position": 2,
     "points": 0,
     "avg": 0,
-    "status": "other",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "other",
-      "description": "No convocado",
-      "duration": "Baja esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/63869.png?version=20250617095415",
     "isFavorite": 0,
-    "value": 481000,
-    "previousValue": 333000,
+    "value": 389000,
+    "previousValue": 481000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -51,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 481000,
+      "price": 389000,
       "loanable": null
     },
     "bid": {
@@ -175,7 +171,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 21:30:00",
+      "endDate": "2026-10-21 20:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -711,35 +707,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 333000,
-      "change": 148000,
-      "sign": 148
+      "value": 481000,
+      "change": -92000,
+      "sign": -92
     },
     {
       "time": "Una semana",
-      "value": 413000,
-      "change": 68000,
-      "sign": 68
+      "value": 411000,
+      "change": -22000,
+      "sign": -22
     },
     {
       "time": "Un mes",
       "value": 329000,
-      "change": 152000,
-      "sign": 152
+      "change": 60000,
+      "sign": 60
     },
     {
       "time": "Un año",
-      "value": 389000,
-      "change": 92000,
-      "sign": 92
+      "value": 345000,
+      "change": 44000,
+      "sign": 44
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 389000,
-        "date": "17 sept 2025"
-      },
       {
         "value": 345000,
         "date": "18 sept 2025"
@@ -1583,6 +1575,10 @@
       {
         "value": 481000,
         "date": "17 sept 2026"
+      },
+      {
+        "value": 389000,
+        "date": "18 sept 2026"
       }
     ],
     "max": {
@@ -1604,12 +1600,12 @@
       "id_away": 23,
       "date": {
         "ts": 1789758000,
-        "text": "vie 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "vie",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

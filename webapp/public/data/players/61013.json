@@ -3,15 +3,15 @@
     "id": 61013,
     "name": "Antony Santos",
     "position": 4,
-    "points": 25,
-    "avg": 5,
+    "points": 31,
+    "avg": 5.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/61013.png?version=20251228214253",
     "isFavorite": 0,
-    "value": 42839000,
-    "previousValue": 42571000,
+    "value": 43110000,
+    "previousValue": 42839000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 42839000,
+      "floor": 43110000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 64258500,
+      "value": 64665000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 42839000,
+      "price": 43110000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 172,
       "weight": null
     },
-    "clausesRanking": 9
+    "clausesRanking": 8
   },
   "id": 61013,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 0,
     "cards": 0
   },
@@ -166,14 +166,16 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 21:30:00",
+      "endDate": "2026-10-21 20:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -693,10 +695,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 25,
-      "avg": 5,
+      "points": 31,
+      "avg": 5.1667,
       "id_team": 4,
-      "last_gameweek": 5
+      "last_gameweek": 6
     },
     {
       "season": "25/26",
@@ -716,35 +718,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 42571000,
-      "change": 268000,
-      "sign": 268
+      "value": 42839000,
+      "change": 271000,
+      "sign": 271
     },
     {
       "time": "Una semana",
-      "value": 40822000,
-      "change": 2017000,
-      "sign": "+2.017.000"
+      "value": 41102000,
+      "change": 2008000,
+      "sign": "+2.008.000"
     },
     {
       "time": "Un mes",
-      "value": 41314000,
-      "change": 1525000,
-      "sign": "+1.525.000"
+      "value": 41130000,
+      "change": 1980000,
+      "sign": "+1.980.000"
     },
     {
       "time": "Un año",
-      "value": 61007000,
-      "change": -18168000,
-      "sign": "-18.168.000"
+      "value": 60882000,
+      "change": -17772000,
+      "sign": "-17.772.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 61007000,
-        "date": "17 sept 2025"
-      },
       {
         "value": 60882000,
         "date": "18 sept 2025"
@@ -2204,11 +2202,15 @@
       {
         "value": 42839000,
         "date": "17 sept 2026"
+      },
+      {
+        "value": 43110000,
+        "date": "18 sept 2026"
       }
     ],
     "max": {
-      "value": 61007000,
-      "date": "17 sept 2025"
+      "value": 60882000,
+      "date": "18 sept 2025"
     },
     "min": {
       "value": 39890000,
@@ -2219,36 +2221,36 @@
     "61013": {
       "id": 61013,
       "id_team": 4,
-      "id_match": 37995,
-      "id_gameweek": 4047,
-      "id_home": 4,
-      "id_away": 9,
+      "id_match": 38073,
+      "id_gameweek": 4048,
+      "id_home": 6,
+      "id_away": 4,
       "date": {
-        "ts": 1789664400,
-        "text": "Hoy 19:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1789921800,
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "19:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Getafe",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Betis",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "61013": {
       "id": 61013,
-      "points": 11,
-      "avg": 5.5
+      "points": 17,
+      "avg": 5.6667
     }
   },
   "away": {

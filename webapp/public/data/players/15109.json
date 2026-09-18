@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/15109.png?version=20251003194404",
     "isFavorite": 0,
-    "value": 8458000,
-    "previousValue": 8562000,
+    "value": 8294000,
+    "previousValue": 8458000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 8458000,
+      "floor": 8294000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 12687000,
+      "value": 12441000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 8458000,
+      "price": 8294000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 177,
       "weight": 70
     },
-    "clausesRanking": 323
+    "clausesRanking": 274
   },
   "id": 15109,
   "player_extra": {
@@ -191,14 +191,14 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 21:30:00",
+      "endDate": "2026-10-21 20:00:00",
       "points": {
         "points": null,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -741,35 +741,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 8562000,
-      "change": -104000,
-      "sign": -104
+      "value": 8458000,
+      "change": -164000,
+      "sign": -164
     },
     {
       "time": "Una semana",
-      "value": 9412000,
-      "change": -954000,
-      "sign": -954
+      "value": 9114000,
+      "change": -820000,
+      "sign": -820
     },
     {
       "time": "Un mes",
-      "value": 21320000,
-      "change": -12862000,
-      "sign": "-12.862.000"
+      "value": 20912000,
+      "change": -12618000,
+      "sign": "-12.618.000"
     },
     {
       "time": "Un año",
-      "value": 40843000,
-      "change": -32385000,
-      "sign": "-32.385.000"
+      "value": 40796000,
+      "change": -32502000,
+      "sign": "-32.502.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 40843000,
-        "date": "17 sept 2025"
-      },
       {
         "value": 40796000,
         "date": "18 sept 2025"
@@ -2229,6 +2225,10 @@
       {
         "value": 8458000,
         "date": "17 sept 2026"
+      },
+      {
+        "value": 8294000,
+        "date": "18 sept 2026"
       }
     ],
     "max": {
@@ -2244,28 +2244,28 @@
     "15109": {
       "id": 15109,
       "id_team": 4,
-      "id_match": 37995,
-      "id_gameweek": 4047,
-      "id_home": 4,
-      "id_away": 9,
+      "id_match": 38073,
+      "id_gameweek": 4048,
+      "id_home": 6,
+      "id_away": 4,
       "date": {
-        "ts": 1789664400,
-        "text": "Hoy 19:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1789921800,
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "19:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Getafe",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Betis",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,

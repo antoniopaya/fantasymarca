@@ -5,13 +5,17 @@
     "position": 4,
     "points": 14,
     "avg": 2.3,
-    "status": null,
+    "status": "doubt",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "doubt",
+      "description": "Molestias",
+      "duration": "Duda esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/31226.png?version=20240702124019",
     "isFavorite": 0,
-    "value": 8871000,
-    "previousValue": 8710000,
+    "value": 8907000,
+    "previousValue": 8871000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 8871000,
+      "floor": 8907000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 13306500,
+      "value": 13360500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 8871000,
+      "price": 8907000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 196
+    "clausesRanking": 179
   },
   "id": 31226,
   "player_extra": {
@@ -168,7 +172,7 @@
       "number": 6,
       "shortName": "J6",
       "startDate": "2026-09-03 21:00:00",
-      "endDate": "2026-09-17 21:30:00",
+      "endDate": "2026-10-21 20:00:00",
       "points": {
         "points": 5,
         "isLive": false
@@ -725,35 +729,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 8710000,
-      "change": 161000,
-      "sign": 161
+      "value": 8871000,
+      "change": 36000,
+      "sign": 36
     },
     {
       "time": "Una semana",
-      "value": 9465000,
-      "change": -594000,
-      "sign": -594
+      "value": 9486000,
+      "change": -579000,
+      "sign": -579
     },
     {
       "time": "Un mes",
-      "value": 7414000,
-      "change": 1457000,
-      "sign": "+1.457.000"
+      "value": 7584000,
+      "change": 1323000,
+      "sign": "+1.323.000"
     },
     {
       "time": "Un año",
-      "value": 20672000,
-      "change": -11801000,
-      "sign": "-11.801.000"
+      "value": 20728000,
+      "change": -11821000,
+      "sign": "-11.821.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 20672000,
-        "date": "17 sept 2025"
-      },
       {
         "value": 20728000,
         "date": "18 sept 2025"
@@ -2213,6 +2213,10 @@
       {
         "value": 8871000,
         "date": "17 sept 2026"
+      },
+      {
+        "value": 8907000,
+        "date": "18 sept 2026"
       }
     ],
     "max": {
