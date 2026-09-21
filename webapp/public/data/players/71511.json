@@ -5,13 +5,9 @@
     "position": 2,
     "points": 0,
     "avg": 0,
-    "status": "doubt",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "doubt",
-      "description": "Lesión en el sóleo",
-      "duration": "Duda esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71511.png?version=20260716182159",
     "isFavorite": 0,
     "value": 329000,
@@ -76,7 +72,7 @@
   },
   "id": 71511,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -199,7 +195,7 @@
         "description": "Lesión en el sóleo",
         "duration": "Duda esta jornada",
         "since": "2026-09-10 19:30:17",
-        "until": null,
+        "until": "2026-09-18 13:58:52",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -229,12 +225,12 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -242,7 +238,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -735,7 +731,15 @@
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   ],
-  "points_history": [],
+  "points_history": [
+    {
+      "season": "26/27",
+      "points": 0,
+      "avg": 0,
+      "id_team": 13,
+      "last_gameweek": 7
+    }
+  ],
   "values": [
     {
       "time": "Un día",
@@ -745,15 +749,15 @@
     },
     {
       "time": "Una semana",
-      "value": 394000,
-      "change": -65000,
-      "sign": -65
+      "value": 329000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Un mes",
-      "value": 357000,
-      "change": -28000,
-      "sign": -28
+      "value": 331000,
+      "change": -2000,
+      "sign": -2
     }
   ],
   "values_chart": {
@@ -1013,6 +1017,18 @@
       {
         "value": 329000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 373000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -1028,28 +1044,28 @@
     "71511": {
       "id": 71511,
       "id_team": 13,
-      "id_match": 38075,
-      "id_gameweek": 4048,
-      "id_home": 9,
-      "id_away": 13,
+      "id_match": 37999,
+      "id_gameweek": 4049,
+      "id_home": 13,
+      "id_away": 8,
       "date": {
-        "ts": 1789905600,
-        "text": "dom 14:00",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Málaga",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "home": "Málaga",
+      "away": "Espanyol",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,
@@ -1061,6 +1077,7 @@
   },
   "away": {
     "71511": {
+      "id": 71511,
       "points": 0,
       "avg": 0
     }

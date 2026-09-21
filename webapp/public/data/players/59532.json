@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59532.png?version=20240817221457",
     "isFavorite": 0,
-    "value": 332000,
-    "previousValue": 422000,
+    "value": 329000,
+    "previousValue": 341000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 332000,
+      "price": 329000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 191,
       "weight": null
     },
-    "clausesRanking": 407
+    "clausesRanking": 439
   },
   "id": 59532,
   "player_extra": {
@@ -212,7 +212,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -220,7 +220,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -732,43 +732,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 422000,
-      "change": -90000,
-      "sign": -90
+      "value": 341000,
+      "change": -12000,
+      "sign": -12
     },
     {
       "time": "Una semana",
-      "value": 483000,
-      "change": -151000,
-      "sign": -151
+      "value": 365000,
+      "change": -36000,
+      "sign": -36
     },
     {
       "time": "Un mes",
-      "value": 1522000,
-      "change": -1190000,
-      "sign": "-1.190.000"
+      "value": 2044000,
+      "change": -1715000,
+      "sign": "-1.715.000"
     },
     {
       "time": "Un año",
-      "value": 9217000,
-      "change": -8885000,
-      "sign": "-8.885.000"
+      "value": 8286000,
+      "change": -7957000,
+      "sign": "-7.957.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 9217000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 8858000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 8527000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 8286000,
         "date": "21 sept 2025"
@@ -2004,11 +1992,23 @@
       {
         "value": 332000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 381000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 341000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
-      "value": 9217000,
-      "date": "18 sept 2025"
+      "value": 8286000,
+      "date": "21 sept 2025"
     },
     "min": {
       "value": 329000,
@@ -2019,28 +2019,28 @@
     "59532": {
       "id": 59532,
       "id_team": 14,
-      "id_match": 38076,
-      "id_gameweek": 4048,
-      "id_home": 50,
-      "id_away": 14,
+      "id_match": 38000,
+      "id_gameweek": 4049,
+      "id_home": 14,
+      "id_away": 1,
       "date": {
-        "ts": 1789819200,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Rayo Vallecano",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Athletic Club",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,

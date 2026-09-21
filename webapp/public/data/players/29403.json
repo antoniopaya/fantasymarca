@@ -3,15 +3,15 @@
     "id": 29403,
     "name": "Pathé Ciss",
     "position": 3,
-    "points": 27,
-    "avg": 4.5,
+    "points": 30,
+    "avg": 4.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/29403.png?version=20251004225713",
     "isFavorite": 0,
-    "value": 15065000,
-    "previousValue": 14795000,
+    "value": 16408000,
+    "previousValue": 16001000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 15065000,
+      "floor": 16408000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 22597500,
+      "value": 24612000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 15065000,
+      "price": 16408000,
       "loanable": null
     },
     "bid": {
@@ -72,9 +72,9 @@
   },
   "id": 29403,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
-    "cards": 2
+    "cards": 3
   },
   "points": [
     {
@@ -184,12 +184,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -197,7 +199,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -693,10 +695,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 27,
-      "avg": 4.5,
+      "points": 30,
+      "avg": 4.2857,
       "id_team": 14,
-      "last_gameweek": 6
+      "last_gameweek": 7
     },
     {
       "season": "25/26",
@@ -723,43 +725,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 14795000,
-      "change": 270000,
-      "sign": 270
-    },
-    {
-      "time": "Una semana",
-      "value": 14658000,
+      "value": 16001000,
       "change": 407000,
       "sign": 407
     },
     {
+      "time": "Una semana",
+      "value": 14851000,
+      "change": 1557000,
+      "sign": "+1.557.000"
+    },
+    {
       "time": "Un mes",
-      "value": 11339000,
-      "change": 3726000,
-      "sign": "+3.726.000"
+      "value": 12216000,
+      "change": 4192000,
+      "sign": "+4.192.000"
     },
     {
       "time": "Un año",
-      "value": 23559000,
-      "change": -8494000,
-      "sign": "-8.494.000"
+      "value": 24338000,
+      "change": -7930000,
+      "sign": "-7.930.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 23559000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 23830000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 24083000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 24338000,
         "date": "21 sept 2025"
@@ -2211,6 +2201,18 @@
       {
         "value": 15065000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 15480000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 16001000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 16408000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2226,28 +2228,28 @@
     "29403": {
       "id": 29403,
       "id_team": 14,
-      "id_match": 38076,
-      "id_gameweek": 4048,
-      "id_home": 50,
-      "id_away": 14,
+      "id_match": 38000,
+      "id_gameweek": 4049,
+      "id_home": 14,
+      "id_away": 1,
       "date": {
-        "ts": 1789819200,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Rayo Vallecano",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Athletic Club",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
@@ -2261,7 +2263,7 @@
   "away": {
     "29403": {
       "id": 29403,
-      "points": 9,
+      "points": 12,
       "avg": 3
     }
   },

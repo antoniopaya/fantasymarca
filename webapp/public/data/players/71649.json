@@ -3,15 +3,15 @@
     "id": 71649,
     "name": "Péter Gulácsi",
     "position": 1,
-    "points": 12,
-    "avg": 6,
+    "points": 17,
+    "avg": 5.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71649.png?version=20260804093816",
     "isFavorite": 0,
-    "value": 4308000,
-    "previousValue": 4129000,
+    "value": 4820000,
+    "previousValue": 4673000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4308000,
+      "floor": 4820000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6462000,
+      "value": 7230000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4308000,
+      "price": 4820000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 190,
       "weight": null
     },
-    "clausesRanking": 20
+    "clausesRanking": 17
   },
   "id": 71649,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 0
   },
@@ -180,12 +180,12 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -193,7 +193,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -689,30 +689,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 12,
-      "avg": 6,
+      "points": 17,
+      "avg": 5.6667,
       "id_team": 20,
-      "last_gameweek": 6
+      "last_gameweek": 7
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 4129000,
-      "change": 179000,
-      "sign": 179
+      "value": 4673000,
+      "change": 147000,
+      "sign": 147
     },
     {
       "time": "Una semana",
-      "value": 2643000,
-      "change": 1665000,
-      "sign": "+1.665.000"
+      "value": 3184000,
+      "change": 1636000,
+      "sign": "+1.636.000"
     },
     {
       "time": "Un mes",
-      "value": 3807000,
-      "change": 501000,
-      "sign": 501
+      "value": 4124000,
+      "change": 696000,
+      "sign": 696
     }
   ],
   "values_chart": {
@@ -896,11 +896,23 @@
       {
         "value": 4308000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 4487000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 4673000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 4820000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
-      "value": 4308000,
-      "date": "18 sept 2026"
+      "value": 4820000,
+      "date": "21 sept 2026"
     },
     "min": {
       "value": 1388000,
@@ -911,36 +923,36 @@
     "71649": {
       "id": 71649,
       "id_team": 20,
-      "id_match": 38079,
-      "id_gameweek": 4048,
-      "id_home": 20,
-      "id_away": 12,
+      "id_match": 38002,
+      "id_gameweek": 4049,
+      "id_home": 15,
+      "id_away": 20,
       "date": {
-        "ts": 1789921800,
-        "text": "dom 18:30",
-        "format": "EEE H:mm",
+        "ts": 1791658800,
+        "text": "10 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "18:30",
-          "format": "EEE"
+          "date": "10 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Villarreal",
-      "away": "Levante",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Real Madrid",
+      "away": "Villarreal",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "71649": {
       "id": 71649,
-      "points": 9,
-      "avg": 9
+      "points": 14,
+      "avg": 7
     }
   },
   "away": {

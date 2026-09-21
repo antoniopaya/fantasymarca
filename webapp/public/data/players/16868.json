@@ -3,15 +3,15 @@
     "id": 16868,
     "name": "Ander Guevara",
     "position": 3,
-    "points": 2,
-    "avg": 1,
+    "points": 8,
+    "avg": 2.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/16868.png?version=20251006023721",
     "isFavorite": 0,
-    "value": 340000,
-    "previousValue": 451000,
+    "value": 646000,
+    "previousValue": 580000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 340000,
+      "price": 646000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 362
+    "clausesRanking": 383
   },
   "id": 16868,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 0
   },
@@ -184,12 +184,12 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -197,7 +197,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -693,10 +693,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 2,
-      "avg": 1,
+      "points": 8,
+      "avg": 2.6667,
       "id_team": 48,
-      "last_gameweek": 6
+      "last_gameweek": 7
     },
     {
       "season": "25/26",
@@ -723,43 +723,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 451000,
-      "change": -111000,
-      "sign": -111
+      "value": 580000,
+      "change": 66000,
+      "sign": 66
     },
     {
       "time": "Una semana",
-      "value": 420000,
-      "change": -80000,
-      "sign": -80
+      "value": 362000,
+      "change": 284000,
+      "sign": 284
     },
     {
       "time": "Un mes",
-      "value": 407000,
-      "change": -67000,
-      "sign": -67
+      "value": 401000,
+      "change": 245000,
+      "sign": 245
     },
     {
       "time": "Un año",
-      "value": 694000,
-      "change": -354000,
-      "sign": -354
+      "value": 474000,
+      "change": 172000,
+      "sign": 172
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 694000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 713000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 665000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 474000,
         "date": "21 sept 2025"
@@ -2211,6 +2199,18 @@
       {
         "value": 340000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 489000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 580000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 646000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2226,28 +2226,28 @@
     "16868": {
       "id": 16868,
       "id_team": 48,
-      "id_match": 38070,
-      "id_gameweek": 4048,
-      "id_home": 1,
-      "id_away": 48,
+      "id_match": 38005,
+      "id_gameweek": 4049,
+      "id_home": 48,
+      "id_away": 2,
       "date": {
-        "ts": 1789827300,
-        "text": "sáb 16:15",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "16:15",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Alavés",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "home": "Alavés",
+      "away": "Atlético",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     }
   },
   "starter": false,
@@ -2260,8 +2260,9 @@
   },
   "away": {
     "16868": {
-      "points": 0,
-      "avg": 0
+      "id": 16868,
+      "points": 6,
+      "avg": 6
     }
   },
   "owners": [],

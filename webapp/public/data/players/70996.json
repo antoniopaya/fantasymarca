@@ -3,15 +3,15 @@
     "id": 70996,
     "name": "David Larrubia",
     "position": 3,
-    "points": 22,
-    "avg": 3.7,
+    "points": 25,
+    "avg": 3.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70996.png?version=20260621200736",
     "isFavorite": 0,
-    "value": 22814000,
-    "previousValue": 23021000,
+    "value": 21924000,
+    "previousValue": 22131000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 22814000,
+      "floor": 21924000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 34221000,
+      "value": 32886000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 22814000,
+      "price": 21924000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 172,
       "weight": null
     },
-    "clausesRanking": 207
+    "clausesRanking": 292
   },
   "id": 70996,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
-    "cards": 2
+    "cards": 3
   },
   "points": [
     {
@@ -185,12 +185,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -198,7 +200,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -694,30 +696,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 22,
-      "avg": 3.6667,
+      "points": 25,
+      "avg": 3.5714,
       "id_team": 13,
-      "last_gameweek": 6
+      "last_gameweek": 7
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 23021000,
+      "value": 22131000,
       "change": -207000,
       "sign": -207
     },
     {
       "time": "Una semana",
-      "value": 23020000,
-      "change": -206000,
-      "sign": -206
+      "value": 23368000,
+      "change": -1444000,
+      "sign": "-1.444.000"
     },
     {
       "time": "Un mes",
-      "value": 16953000,
-      "change": 5861000,
-      "sign": "+5.861.000"
+      "value": 18890000,
+      "change": 3034000,
+      "sign": "+3.034.000"
     }
   ],
   "values_chart": {
@@ -1077,6 +1079,18 @@
       {
         "value": 22814000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 22510000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 22131000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 21924000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -1092,28 +1106,28 @@
     "70996": {
       "id": 70996,
       "id_team": 13,
-      "id_match": 38075,
-      "id_gameweek": 4048,
-      "id_home": 9,
-      "id_away": 13,
+      "id_match": 37999,
+      "id_gameweek": 4049,
+      "id_home": 13,
+      "id_away": 8,
       "date": {
-        "ts": 1789905600,
-        "text": "dom 14:00",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Málaga",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "home": "Málaga",
+      "away": "Espanyol",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,
@@ -1127,8 +1141,8 @@
   "away": {
     "70996": {
       "id": 70996,
-      "points": 12,
-      "avg": 4
+      "points": 15,
+      "avg": 3.75
     }
   },
   "owners": [],

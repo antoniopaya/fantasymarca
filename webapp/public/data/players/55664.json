@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/55664.png?version=20251004234343",
     "isFavorite": 0,
-    "value": 2019000,
-    "previousValue": 2067000,
+    "value": 1650000,
+    "previousValue": 1805000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 2019000,
+      "floor": 1650000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 2,
-      "shield2WeeksSku": "shield_t2_2w",
-      "shield1MonthSku": "shield_t2_1m",
-      "value": 3028500,
+      "tier": 1,
+      "shield2WeeksSku": "shield_t1_2w",
+      "shield1MonthSku": "shield_t1_1m",
+      "value": 2475000,
       "percentage": 50
     },
     "market": {
-      "id": 1785026075,
-      "isPublic": 1,
-      "price": 2019000,
-      "loanable": 0
+      "id": null,
+      "isPublic": null,
+      "price": 1650000,
+      "loanable": null
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": 2019000,
+      "input": null,
       "barter": [],
       "type": null,
       "days": null
@@ -68,7 +68,7 @@
       "height": 187,
       "weight": null
     },
-    "clausesRanking": 100
+    "clausesRanking": 229
   },
   "id": 55664,
   "player_extra": {
@@ -185,7 +185,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -193,7 +193,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -719,43 +719,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2067000,
-      "change": -48000,
-      "sign": -48
+      "value": 1805000,
+      "change": -155000,
+      "sign": -155
     },
     {
       "time": "Una semana",
-      "value": 1599000,
-      "change": 420000,
-      "sign": 420
+      "value": 2205000,
+      "change": -555000,
+      "sign": -555
     },
     {
       "time": "Un mes",
-      "value": 1732000,
-      "change": 287000,
-      "sign": 287
+      "value": 1649000,
+      "change": 1000,
+      "sign": 1
     },
     {
       "time": "Un año",
-      "value": 329000,
-      "change": 1690000,
-      "sign": "+1.690.000"
+      "value": 432000,
+      "change": 1218000,
+      "sign": "+1.218.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 329000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 335000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 505000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 432000,
         "date": "21 sept 2025"
@@ -2207,6 +2195,18 @@
       {
         "value": 2019000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 1893000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 1805000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 1650000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2222,28 +2222,28 @@
     "55664": {
       "id": 55664,
       "id_team": 16,
-      "id_match": 38078,
-      "id_gameweek": 4048,
-      "id_home": 19,
-      "id_away": 16,
+      "id_match": 38004,
+      "id_gameweek": 4049,
+      "id_home": 16,
+      "id_away": 6,
       "date": {
-        "ts": 1789930800,
-        "text": "dom 21:00",
-        "format": "EEE H:mm",
+        "ts": 1791728100,
+        "text": "11 oct 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "21:00",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "16:15",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Real Sociedad",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "home": "Real Sociedad",
+      "away": "Deportivo da Coruña",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,

@@ -3,15 +3,15 @@
     "id": 24778,
     "name": "Robert Navarro",
     "position": 3,
-    "points": 29,
-    "avg": 7.3,
+    "points": 36,
+    "avg": 7.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/24778.png?version=20251003193526",
     "isFavorite": 0,
-    "value": 9023000,
-    "previousValue": 8640000,
+    "value": 10182000,
+    "previousValue": 9845000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9023000,
+      "floor": 10182000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 3,
-      "shield2WeeksSku": "shield_t3_2w",
-      "shield1MonthSku": "shield_t3_1m",
-      "value": 13534500,
+      "tier": 4,
+      "shield2WeeksSku": "shield_t4_2w",
+      "shield1MonthSku": "shield_t4_1m",
+      "value": 15273000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9023000,
+      "price": 10182000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 24778,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 2,
     "cards": 1
   },
@@ -191,12 +191,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -204,7 +206,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -700,10 +702,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 29,
-      "avg": 7.25,
+      "points": 36,
+      "avg": 7.2,
       "id_team": 1,
-      "last_gameweek": 5
+      "last_gameweek": 7
     },
     {
       "season": "25/26",
@@ -730,43 +732,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 8640000,
-      "change": 383000,
-      "sign": 383
+      "value": 9845000,
+      "change": 337000,
+      "sign": 337
     },
     {
       "time": "Una semana",
-      "value": 6626000,
-      "change": 2397000,
-      "sign": "+2.397.000"
+      "value": 7567000,
+      "change": 2615000,
+      "sign": "+2.615.000"
     },
     {
       "time": "Un mes",
-      "value": 5053000,
-      "change": 3970000,
-      "sign": "+3.970.000"
+      "value": 5209000,
+      "change": 4973000,
+      "sign": "+4.973.000"
     },
     {
       "time": "Un año",
-      "value": 8041000,
-      "change": 982000,
-      "sign": 982
+      "value": 8723000,
+      "change": 1459000,
+      "sign": "+1.459.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 8041000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 8274000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 8501000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 8723000,
         "date": "21 sept 2025"
@@ -2218,6 +2208,18 @@
       {
         "value": 9023000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 9414000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 9845000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 10182000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2233,36 +2235,36 @@
     "24778": {
       "id": 24778,
       "id_team": 1,
-      "id_match": 38070,
-      "id_gameweek": 4048,
-      "id_home": 1,
-      "id_away": 48,
+      "id_match": 38000,
+      "id_gameweek": 4049,
+      "id_home": 14,
+      "id_away": 1,
       "date": {
-        "ts": 1789827300,
-        "text": "sáb 16:15",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "16:15",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Alavés",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Athletic Club",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
   "home": {
     "24778": {
       "id": 24778,
-      "points": 16,
-      "avg": 8
+      "points": 23,
+      "avg": 7.6667
     }
   },
   "away": {

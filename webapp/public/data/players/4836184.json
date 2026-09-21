@@ -3,15 +3,15 @@
     "id": 4836184,
     "name": "Jeanuël Belocian",
     "position": 2,
-    "points": 12,
-    "avg": 6,
+    "points": 8,
+    "avg": 2.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4836184.png?version=20260901214919",
     "isFavorite": 0,
-    "value": 7279000,
-    "previousValue": 7352000,
+    "value": 6678000,
+    "previousValue": 6889000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 7279000,
+      "floor": 6678000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 10918500,
+      "value": 10017000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 7279000,
+      "price": 6678000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 333
+    "clausesRanking": 407
   },
   "id": 4836184,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -182,12 +182,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": -4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -195,7 +197,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -691,24 +693,24 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 12,
-      "avg": 6,
+      "points": 8,
+      "avg": 2.6667,
       "id_team": 1490,
-      "last_gameweek": 5
+      "last_gameweek": 7
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 7352000,
-      "change": -73000,
-      "sign": -73
+      "value": 6889000,
+      "change": -211000,
+      "sign": -211
     },
     {
       "time": "Una semana",
-      "value": 7590000,
-      "change": -311000,
-      "sign": -311
+      "value": 7341000,
+      "change": -663000,
+      "sign": -663
     }
   ],
   "values_chart": {
@@ -780,6 +782,18 @@
       {
         "value": 7279000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 7133000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 6889000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 6678000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -787,36 +801,36 @@
       "date": "2 sept 2026"
     },
     "min": {
-      "value": 7279000,
-      "date": "18 sept 2026"
+      "value": 6678000,
+      "date": "21 sept 2026"
     }
   },
   "next_match": {
     "4836184": {
       "id": 4836184,
       "id_team": 1490,
-      "id_match": 38072,
-      "id_gameweek": 4048,
-      "id_home": 5,
-      "id_away": 1490,
+      "id_match": 38003,
+      "id_gameweek": 4049,
+      "id_home": 1490,
+      "id_away": 19,
       "date": {
-        "ts": 1789835400,
-        "text": "sáb 18:30",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "18:30",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Racing de Santander",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Racing de Santander",
+      "away": "Valencia",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
@@ -830,8 +844,8 @@
   "away": {
     "4836184": {
       "id": 4836184,
-      "points": 4,
-      "avg": 4
+      "points": 0,
+      "avg": 0
     }
   },
   "owners": [],

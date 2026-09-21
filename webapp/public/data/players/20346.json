@@ -3,15 +3,15 @@
     "id": 20346,
     "name": "Guido Rodríguez",
     "position": 3,
-    "points": 16,
-    "avg": 5.3,
+    "points": 18,
+    "avg": 4.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/20346.png?version=20260126185524",
     "isFavorite": 0,
-    "value": 16882000,
-    "previousValue": 16198000,
+    "value": 18982000,
+    "previousValue": 18378000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 16882000,
+      "floor": 18982000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 25323000,
+      "value": 28473000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 16882000,
+      "price": 18982000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": 80
     },
-    "clausesRanking": 9
+    "clausesRanking": 4
   },
   "id": 20346,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 1
   },
@@ -212,12 +212,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -225,7 +227,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -721,10 +723,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 16,
-      "avg": 5.3333,
+      "points": 18,
+      "avg": 4.5,
       "id_team": 19,
-      "last_gameweek": 6
+      "last_gameweek": 7
     },
     {
       "season": "25/26",
@@ -744,21 +746,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 16198000,
-      "change": 684000,
-      "sign": 684
+      "value": 18378000,
+      "change": 604000,
+      "sign": 604
     },
     {
       "time": "Una semana",
-      "value": 14862000,
-      "change": 2020000,
-      "sign": "+2.020.000"
+      "value": 14295000,
+      "change": 4687000,
+      "sign": "+4.687.000"
     },
     {
       "time": "Un mes",
-      "value": 23895000,
-      "change": -7013000,
-      "sign": "-7.013.000"
+      "value": 23209000,
+      "change": -4227000,
+      "sign": "-4.227.000"
     }
   ],
   "values_chart": {
@@ -1706,6 +1708,18 @@
       {
         "value": 16882000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 17605000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 18378000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 18982000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -1721,36 +1735,36 @@
     "20346": {
       "id": 20346,
       "id_team": 19,
-      "id_match": 38078,
-      "id_gameweek": 4048,
-      "id_home": 19,
-      "id_away": 16,
+      "id_match": 38003,
+      "id_gameweek": 4049,
+      "id_home": 1490,
+      "id_away": 19,
       "date": {
-        "ts": 1789930800,
-        "text": "dom 21:00",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
+          "date": "11 oct",
           "time": "21:00",
-          "format": "EEE"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Real Sociedad",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "home": "Racing de Santander",
+      "away": "Valencia",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
   "home": {
     "20346": {
       "id": 20346,
-      "points": 11,
-      "avg": 5.5
+      "points": 13,
+      "avg": 4.3333
     }
   },
   "away": {

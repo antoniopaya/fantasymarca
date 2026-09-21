@@ -3,15 +3,15 @@
     "id": 70938,
     "name": "Álvaro Mantilla",
     "position": 2,
-    "points": 10,
+    "points": 12,
     "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70938.png?version=20260619115216",
     "isFavorite": 0,
-    "value": 5525000,
-    "previousValue": 5574000,
+    "value": 5129000,
+    "previousValue": 5236000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5525000,
+      "floor": 5129000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8287500,
+      "value": 7693500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5525000,
+      "price": 5129000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 136
+    "clausesRanking": 190
   },
   "id": 70938,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 0,
     "cards": 2
   },
@@ -186,12 +186,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -199,7 +201,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -695,30 +697,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 10,
+      "points": 12,
       "avg": 2,
       "id_team": 1490,
-      "last_gameweek": 5
+      "last_gameweek": 7
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 5574000,
-      "change": -49000,
-      "sign": -49
+      "value": 5236000,
+      "change": -107000,
+      "sign": -107
     },
     {
       "time": "Una semana",
-      "value": 5599000,
-      "change": -74000,
-      "sign": -74
+      "value": 5647000,
+      "change": -518000,
+      "sign": -518
     },
     {
       "time": "Un mes",
-      "value": 5771000,
-      "change": -246000,
-      "sign": -246
+      "value": 6000000,
+      "change": -871000,
+      "sign": -871
     }
   ],
   "values_chart": {
@@ -1086,6 +1088,18 @@
       {
         "value": 5525000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 5387000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 5236000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 5129000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -1101,28 +1115,28 @@
     "70938": {
       "id": 70938,
       "id_team": 1490,
-      "id_match": 38072,
-      "id_gameweek": 4048,
-      "id_home": 5,
-      "id_away": 1490,
+      "id_match": 38003,
+      "id_gameweek": 4049,
+      "id_home": 1490,
+      "id_away": 19,
       "date": {
-        "ts": 1789835400,
-        "text": "sáb 18:30",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "18:30",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Racing de Santander",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Racing de Santander",
+      "away": "Valencia",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
@@ -1136,7 +1150,7 @@
   "away": {
     "70938": {
       "id": 70938,
-      "points": 4,
+      "points": 6,
       "avg": 2
     }
   },

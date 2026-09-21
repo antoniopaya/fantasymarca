@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22527.png?version=20231217203727",
     "isFavorite": 0,
-    "value": 9248000,
-    "previousValue": 9589000,
+    "value": 8257000,
+    "previousValue": 8527000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9248000,
+      "floor": 8257000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 13872000,
+      "value": 12385500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9248000,
+      "price": 8257000,
       "loanable": null
     },
     "bid": {
@@ -212,8 +212,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 307136,
+        "id_player": 22527,
+        "category": "injury",
+        "description": "Lesión muscular",
+        "duration": "Baja hasta finales de Septiembre",
+        "since": "2026-09-15 15:45:50",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -221,7 +230,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -747,43 +756,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 9589000,
-      "change": -341000,
-      "sign": -341
+      "value": 8527000,
+      "change": -270000,
+      "sign": -270
     },
     {
       "time": "Una semana",
-      "value": 12483000,
-      "change": -3235000,
-      "sign": "-3.235.000"
+      "value": 10996000,
+      "change": -2739000,
+      "sign": "-2.739.000"
     },
     {
       "time": "Un mes",
-      "value": 20139000,
-      "change": -10891000,
-      "sign": "-10.891.000"
+      "value": 20502000,
+      "change": -12245000,
+      "sign": "-12.245.000"
     },
     {
       "time": "Un año",
-      "value": 24248000,
-      "change": -15000000,
-      "sign": "-15.000.000"
+      "value": 22577000,
+      "change": -14320000,
+      "sign": "-14.320.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 24248000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 23658000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 23129000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 22577000,
         "date": "21 sept 2025"
@@ -2235,6 +2232,18 @@
       {
         "value": 9248000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 8885000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 8527000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 8257000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2250,28 +2259,28 @@
     "22527": {
       "id": 22527,
       "id_team": 50,
-      "id_match": 38076,
-      "id_gameweek": 4048,
-      "id_home": 50,
-      "id_away": 14,
+      "id_match": 38001,
+      "id_gameweek": 4049,
+      "id_home": 4,
+      "id_away": 50,
       "date": {
-        "ts": 1789819200,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Rayo Vallecano",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Betis",
+      "away": "Osasuna",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,

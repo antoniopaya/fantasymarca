@@ -3,15 +3,15 @@
     "id": 64491,
     "name": "Valentín Gómez",
     "position": 2,
-    "points": 20,
-    "avg": 10,
+    "points": 26,
+    "avg": 8.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/64491.png?version=20250727111021",
     "isFavorite": 0,
-    "value": 1453000,
-    "previousValue": 1372000,
+    "value": 2144000,
+    "previousValue": 1898000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1453000,
+      "floor": 2144000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 1,
-      "shield2WeeksSku": "shield_t1_2w",
-      "shield1MonthSku": "shield_t1_1m",
-      "value": 2179500,
+      "tier": 2,
+      "shield2WeeksSku": "shield_t2_2w",
+      "shield1MonthSku": "shield_t2_1m",
+      "value": 3216000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1453000,
+      "price": 2144000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 181,
       "weight": null
     },
-    "clausesRanking": 254
+    "clausesRanking": 89
   },
   "id": 64491,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -180,12 +180,15 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -193,7 +196,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -689,10 +692,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 20,
-      "avg": 10,
+      "points": 26,
+      "avg": 8.6667,
       "id_team": 4,
-      "last_gameweek": 6
+      "last_gameweek": 7
     },
     {
       "season": "25/26",
@@ -705,43 +708,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1372000,
-      "change": 81000,
-      "sign": 81
+      "value": 1898000,
+      "change": 246000,
+      "sign": 246
     },
     {
       "time": "Una semana",
-      "value": 1696000,
-      "change": -243000,
-      "sign": -243
+      "value": 1605000,
+      "change": 539000,
+      "sign": 539
     },
     {
       "time": "Un mes",
-      "value": 1209000,
-      "change": 244000,
-      "sign": 244
+      "value": 957000,
+      "change": 1187000,
+      "sign": "+1.187.000"
     },
     {
       "time": "Un año",
-      "value": 656000,
-      "change": 797000,
-      "sign": 797
+      "value": 1095000,
+      "change": 1049000,
+      "sign": "+1.049.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 656000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 799000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 929000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 1095000,
         "date": "21 sept 2025"
@@ -2193,6 +2184,18 @@
       {
         "value": 1453000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 1652000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 1898000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 2144000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2208,28 +2211,28 @@
     "64491": {
       "id": 64491,
       "id_team": 4,
-      "id_match": 38073,
-      "id_gameweek": 4048,
-      "id_home": 6,
-      "id_away": 4,
+      "id_match": 38001,
+      "id_gameweek": 4049,
+      "id_home": 4,
+      "id_away": 50,
       "date": {
-        "ts": 1789921800,
-        "text": "dom 18:30",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "18:30",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Betis",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Betis",
+      "away": "Osasuna",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
@@ -2243,8 +2246,8 @@
   "away": {
     "64491": {
       "id": 64491,
-      "points": 11,
-      "avg": 11
+      "points": 17,
+      "avg": 8.5
     }
   },
   "owners": [],

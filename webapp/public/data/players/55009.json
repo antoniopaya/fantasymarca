@@ -3,15 +3,15 @@
     "id": 55009,
     "name": "Fermín López",
     "position": 3,
-    "points": 60,
-    "avg": 12,
+    "points": 65,
+    "avg": 10.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/55009.png?version=20260217184107",
     "isFavorite": 0,
-    "value": 59240000,
-    "previousValue": 58889000,
+    "value": 60032000,
+    "previousValue": 59875000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 59240000,
+      "floor": 60032000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 88860000,
+      "value": 90048000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 59240000,
+      "price": 60032000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 176,
       "weight": null
     },
-    "clausesRanking": 54
+    "clausesRanking": 63
   },
   "id": 55009,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 4,
     "cards": 1
   },
@@ -193,12 +193,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -206,7 +208,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -702,10 +704,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 60,
-      "avg": 12,
+      "points": 65,
+      "avg": 10.8333,
       "id_team": 3,
-      "last_gameweek": 5
+      "last_gameweek": 7
     },
     {
       "season": "25/26",
@@ -732,43 +734,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 58889000,
-      "change": 351000,
-      "sign": 351
+      "value": 59875000,
+      "change": 157000,
+      "sign": 157
     },
     {
       "time": "Una semana",
-      "value": 56458000,
-      "change": 2782000,
-      "sign": "+2.782.000"
+      "value": 57659000,
+      "change": 2373000,
+      "sign": "+2.373.000"
     },
     {
       "time": "Un mes",
-      "value": 50518000,
-      "change": 8722000,
-      "sign": "+8.722.000"
+      "value": 49842000,
+      "change": 10190000,
+      "sign": "+10.190.000"
     },
     {
       "time": "Un año",
-      "value": 20045000,
-      "change": 39195000,
-      "sign": "+39.195.000"
+      "value": 21197000,
+      "change": 38835000,
+      "sign": "+38.835.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 20045000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 20460000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 20807000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 21197000,
         "date": "21 sept 2025"
@@ -2220,6 +2210,18 @@
       {
         "value": 59240000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 59564000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 59875000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 60032000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2235,28 +2237,28 @@
     "55009": {
       "id": 55009,
       "id_team": 3,
-      "id_match": 38077,
-      "id_gameweek": 4048,
-      "id_home": 17,
-      "id_away": 3,
+      "id_match": 37997,
+      "id_gameweek": 4049,
+      "id_home": 3,
+      "id_away": 9,
       "date": {
-        "ts": 1789844400,
-        "text": "sáb 21:00",
-        "format": "EEE H:mm",
+        "ts": 1791649800,
+        "text": "10 oct 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "21:00",
-          "format": "EEE"
+          "date": "10 oct",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Barcelona",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "home": "Barcelona",
+      "away": "Getafe",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,
@@ -2270,8 +2272,8 @@
   "away": {
     "55009": {
       "id": 55009,
-      "points": 46,
-      "avg": 15.3333
+      "points": 51,
+      "avg": 12.75
     }
   },
   "owners": [],

@@ -3,15 +3,15 @@
     "id": 3317698,
     "name": "Ifeanyi Ndukwe",
     "position": 2,
-    "points": 2,
-    "avg": 2,
+    "points": 5,
+    "avg": 2.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3317698.png?version=20260823083029",
     "isFavorite": 0,
-    "value": 431000,
-    "previousValue": 399000,
+    "value": 422000,
+    "previousValue": 445000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 431000,
+      "price": 422000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 3317698,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -182,12 +182,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 20,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     },
@@ -195,7 +197,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -691,24 +693,24 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 2,
-      "avg": 2,
+      "points": 5,
+      "avg": 2.5,
       "id_team": 12,
-      "last_gameweek": 5
+      "last_gameweek": 7
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 399000,
-      "change": 32000,
-      "sign": 32
+      "value": 445000,
+      "change": -23000,
+      "sign": -23
     },
     {
       "time": "Una semana",
       "value": 329000,
-      "change": 102000,
-      "sign": 102
+      "change": 93000,
+      "sign": 93
     }
   ],
   "values_chart": {
@@ -816,6 +818,18 @@
       {
         "value": 431000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 440000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 445000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 422000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -831,28 +845,28 @@
     "3317698": {
       "id": 3317698,
       "id_team": 12,
-      "id_match": 38079,
-      "id_gameweek": 4048,
-      "id_home": 20,
-      "id_away": 12,
+      "id_match": 37998,
+      "id_gameweek": 4049,
+      "id_home": 12,
+      "id_away": 17,
       "date": {
-        "ts": 1789921800,
-        "text": "dom 18:30",
-        "format": "EEE H:mm",
+        "ts": 1791831600,
+        "text": "12 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "18:30",
-          "format": "EEE"
+          "date": "12 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Villarreal",
-      "away": "Levante",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Levante",
+      "away": "Sevilla",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,
@@ -865,8 +879,9 @@
   },
   "away": {
     "3317698": {
-      "points": 0,
-      "avg": 0
+      "id": 3317698,
+      "points": 3,
+      "avg": 3
     }
   },
   "owners": [],

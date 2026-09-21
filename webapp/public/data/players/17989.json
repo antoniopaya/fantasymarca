@@ -3,19 +3,15 @@
     "id": 17989,
     "name": "Jorge de Frutos",
     "position": 3,
-    "points": 8,
-    "avg": 2,
-    "status": "red",
+    "points": 13,
+    "avg": 2.6,
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "red",
-      "description": "Roja directa",
-      "duration": "Baja esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/17989.png?version=20251004225553",
     "isFavorite": 0,
-    "value": 22392000,
-    "previousValue": 22752000,
+    "value": 21554000,
+    "previousValue": 21825000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 22392000,
+      "floor": 21554000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 33588000,
+      "value": 32331000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 22392000,
+      "price": 21554000,
       "loanable": null
     },
     "bid": {
@@ -76,7 +72,7 @@
   },
   "id": 17989,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 1
   },
@@ -170,7 +166,7 @@
         "description": "Roja directa",
         "duration": "Baja esta jornada",
         "since": "2026-09-08 14:05:58",
-        "until": null,
+        "until": "2026-09-18 11:27:15",
         "status": "Sancionado"
       },
       "teamPlayed": true,
@@ -200,12 +196,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -213,7 +211,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -709,10 +707,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 8,
-      "avg": 2,
+      "points": 13,
+      "avg": 2.6,
       "id_team": 14,
-      "last_gameweek": 4
+      "last_gameweek": 7
     },
     {
       "season": "25/26",
@@ -739,43 +737,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 22752000,
-      "change": -360000,
-      "sign": -360
+      "value": 21825000,
+      "change": -271000,
+      "sign": -271
     },
     {
       "time": "Una semana",
-      "value": 25516000,
-      "change": -3124000,
-      "sign": "-3.124.000"
+      "value": 23931000,
+      "change": -2377000,
+      "sign": "-2.377.000"
     },
     {
       "time": "Un mes",
-      "value": 37490000,
-      "change": -15098000,
-      "sign": "-15.098.000"
+      "value": 35980000,
+      "change": -14426000,
+      "sign": "-14.426.000"
     },
     {
       "time": "Un año",
-      "value": 40238000,
-      "change": -17846000,
-      "sign": "-17.846.000"
+      "value": 39960000,
+      "change": -18406000,
+      "sign": "-18.406.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 40238000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 40080000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 39960000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 39960000,
         "date": "21 sept 2025"
@@ -2227,6 +2213,18 @@
       {
         "value": 22392000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 22153000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 21825000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 21554000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2234,36 +2232,36 @@
       "date": "18 mar 2026"
     },
     "min": {
-      "value": 22392000,
-      "date": "18 sept 2026"
+      "value": 21554000,
+      "date": "21 sept 2026"
     }
   },
   "next_match": {
     "17989": {
       "id": 17989,
       "id_team": 14,
-      "id_match": 38076,
-      "id_gameweek": 4048,
-      "id_home": 50,
-      "id_away": 14,
+      "id_match": 38000,
+      "id_gameweek": 4049,
+      "id_home": 14,
+      "id_away": 1,
       "date": {
-        "ts": 1789819200,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Rayo Vallecano",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Athletic Club",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
@@ -2277,8 +2275,8 @@
   "away": {
     "17989": {
       "id": 17989,
-      "points": 2,
-      "avg": 1
+      "points": 7,
+      "avg": 2.3333
     }
   },
   "owners": [],

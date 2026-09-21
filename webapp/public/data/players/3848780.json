@@ -3,15 +3,15 @@
     "id": 3848780,
     "name": "Johaneko Louis-Jean",
     "position": 2,
-    "points": 12,
-    "avg": 3,
+    "points": 13,
+    "avg": 2.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3848780.png?version=20260827201004",
     "isFavorite": 0,
-    "value": 4075000,
-    "previousValue": 3915000,
+    "value": 4063000,
+    "previousValue": 4116000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4075000,
+      "floor": 4063000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6112500,
+      "value": 6094500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4075000,
+      "price": 4063000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 95
+    "clausesRanking": 116
   },
   "id": 3848780,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 1
   },
@@ -189,12 +189,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -202,7 +204,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -698,24 +700,24 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 12,
-      "avg": 3,
+      "points": 13,
+      "avg": 2.6,
       "id_team": 1,
-      "last_gameweek": 5
+      "last_gameweek": 7
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 3915000,
-      "change": 160000,
-      "sign": 160
+      "value": 4116000,
+      "change": -53000,
+      "sign": -53
     },
     {
       "time": "Una semana",
-      "value": 3150000,
-      "change": 925000,
-      "sign": 925
+      "value": 3473000,
+      "change": 590000,
+      "sign": 590
     }
   ],
   "values_chart": {
@@ -807,11 +809,23 @@
       {
         "value": 4075000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 4113000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 4116000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 4063000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
-      "value": 4075000,
-      "date": "18 sept 2026"
+      "value": 4116000,
+      "date": "20 sept 2026"
     },
     "min": {
       "value": 936000,
@@ -822,36 +836,36 @@
     "3848780": {
       "id": 3848780,
       "id_team": 1,
-      "id_match": 38070,
-      "id_gameweek": 4048,
-      "id_home": 1,
-      "id_away": 48,
+      "id_match": 38000,
+      "id_gameweek": 4049,
+      "id_home": 14,
+      "id_away": 1,
       "date": {
-        "ts": 1789827300,
-        "text": "sáb 16:15",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "16:15",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Alavés",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Athletic Club",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
   "home": {
     "3848780": {
       "id": 3848780,
-      "points": 4,
-      "avg": 2
+      "points": 5,
+      "avg": 1.6667
     }
   },
   "away": {

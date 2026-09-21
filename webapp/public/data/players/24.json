@@ -3,15 +3,15 @@
     "id": 24,
     "name": "Unai López",
     "position": 3,
-    "points": 30,
-    "avg": 5,
+    "points": 34,
+    "avg": 4.9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/24.png?version=20251004230007",
     "isFavorite": 0,
-    "value": 19317000,
-    "previousValue": 19445000,
+    "value": 19084000,
+    "previousValue": 19334000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 19317000,
+      "floor": 19084000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 28975500,
+      "value": 28626000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 19317000,
+      "price": 19084000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 169,
       "weight": 64
     },
-    "clausesRanking": 133
+    "clausesRanking": 273
   },
   "id": 24,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 2
   },
@@ -194,12 +194,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -207,7 +209,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -703,10 +705,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 30,
-      "avg": 5,
+      "points": 34,
+      "avg": 4.8571,
       "id_team": 14,
-      "last_gameweek": 6
+      "last_gameweek": 7
     },
     {
       "season": "25/26",
@@ -733,43 +735,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 19445000,
-      "change": -128000,
-      "sign": -128
+      "value": 19334000,
+      "change": -250000,
+      "sign": -250
     },
     {
       "time": "Una semana",
-      "value": 16182000,
-      "change": 3135000,
-      "sign": "+3.135.000"
+      "value": 17993000,
+      "change": 1091000,
+      "sign": "+1.091.000"
     },
     {
       "time": "Un mes",
-      "value": 6395000,
-      "change": 12922000,
-      "sign": "+12.922.000"
+      "value": 7164000,
+      "change": 11920000,
+      "sign": "+11.920.000"
     },
     {
       "time": "Un año",
-      "value": 8411000,
-      "change": 10906000,
-      "sign": "+10.906.000"
+      "value": 8660000,
+      "change": 10424000,
+      "sign": "+10.424.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 8411000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 8603000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 8681000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 8660000,
         "date": "21 sept 2025"
@@ -2221,6 +2211,18 @@
       {
         "value": 19317000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 19334000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 19334000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 19084000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2236,28 +2238,28 @@
     "24": {
       "id": 24,
       "id_team": 14,
-      "id_match": 38076,
-      "id_gameweek": 4048,
-      "id_home": 50,
-      "id_away": 14,
+      "id_match": 38000,
+      "id_gameweek": 4049,
+      "id_home": 14,
+      "id_away": 1,
       "date": {
-        "ts": 1789819200,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Rayo Vallecano",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Athletic Club",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
@@ -2271,8 +2273,8 @@
   "away": {
     "24": {
       "id": 24,
-      "points": 11,
-      "avg": 3.6667
+      "points": 15,
+      "avg": 3.75
     }
   },
   "owners": [],

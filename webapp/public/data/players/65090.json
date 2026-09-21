@@ -3,15 +3,15 @@
     "id": 65090,
     "name": "Filip Ugrinic",
     "position": 3,
-    "points": 17,
-    "avg": 2.8,
+    "points": 19,
+    "avg": 2.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65090.png?version=20250809103647",
     "isFavorite": 0,
-    "value": 4084000,
-    "previousValue": 4070000,
+    "value": 3975000,
+    "previousValue": 4019000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4084000,
+      "floor": 3975000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6126000,
+      "value": 5962500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4084000,
+      "price": 3975000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 258
+    "clausesRanking": 225
   },
   "id": 65090,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 0
   },
@@ -184,12 +184,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -197,7 +199,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -693,10 +695,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 17,
-      "avg": 2.8333,
+      "points": 19,
+      "avg": 2.7143,
       "id_team": 19,
-      "last_gameweek": 6
+      "last_gameweek": 7
     },
     {
       "season": "25/26",
@@ -709,43 +711,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4070000,
-      "change": 14000,
-      "sign": 14
+      "value": 4019000,
+      "change": -44000,
+      "sign": -44
     },
     {
       "time": "Una semana",
-      "value": 4750000,
-      "change": -666000,
-      "sign": -666
+      "value": 4277000,
+      "change": -302000,
+      "sign": -302
     },
     {
       "time": "Un mes",
-      "value": 3934000,
-      "change": 150000,
-      "sign": 150
+      "value": 4375000,
+      "change": -400000,
+      "sign": -400
     },
     {
       "time": "Un año",
-      "value": 387000,
-      "change": 3697000,
-      "sign": "+3.697.000"
+      "value": 360000,
+      "change": 3615000,
+      "sign": "+3.615.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 387000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 439000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 447000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 360000,
         "date": "21 sept 2025"
@@ -2197,6 +2187,18 @@
       {
         "value": 4084000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 4077000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 4019000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 3975000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2212,35 +2214,35 @@
     "65090": {
       "id": 65090,
       "id_team": 19,
-      "id_match": 38078,
-      "id_gameweek": 4048,
-      "id_home": 19,
-      "id_away": 16,
+      "id_match": 38003,
+      "id_gameweek": 4049,
+      "id_home": 1490,
+      "id_away": 19,
       "date": {
-        "ts": 1789930800,
-        "text": "dom 21:00",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
+          "date": "11 oct",
           "time": "21:00",
-          "format": "EEE"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Real Sociedad",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "home": "Racing de Santander",
+      "away": "Valencia",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
   "home": {
     "65090": {
       "id": 65090,
-      "points": 6,
+      "points": 8,
       "avg": 2
     }
   },

@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/17459.png?version=20251003184121",
     "isFavorite": 0,
-    "value": 1707000,
-    "previousValue": 1669000,
+    "value": 2112000,
+    "previousValue": 1949000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1707000,
+      "floor": 2112000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 1,
-      "shield2WeeksSku": "shield_t1_2w",
-      "shield1MonthSku": "shield_t1_1m",
-      "value": 2560500,
+      "tier": 2,
+      "shield2WeeksSku": "shield_t2_2w",
+      "shield1MonthSku": "shield_t2_1m",
+      "value": 3168000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1707000,
+      "price": 2112000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 174,
       "weight": 62
     },
-    "clausesRanking": 250
+    "clausesRanking": 201
   },
   "id": 17459,
   "player_extra": {
@@ -242,8 +242,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 293791,
+        "id_player": 17459,
+        "category": "injury",
+        "description": "Rotura de ligamento cruzado",
+        "duration": "Baja hasta Octubre",
+        "since": "2026-03-03 19:18:20",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -251,7 +260,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -770,43 +779,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1669000,
-      "change": 38000,
-      "sign": 38
+      "value": 1949000,
+      "change": 163000,
+      "sign": 163
     },
     {
       "time": "Una semana",
-      "value": 1909000,
-      "change": -202000,
-      "sign": -202
+      "value": 1750000,
+      "change": 362000,
+      "sign": 362
     },
     {
       "time": "Un mes",
-      "value": 3176000,
-      "change": -1469000,
-      "sign": "-1.469.000"
+      "value": 2795000,
+      "change": -683000,
+      "sign": -683
     },
     {
       "time": "Un año",
-      "value": 19934000,
-      "change": -18227000,
-      "sign": "-18.227.000"
+      "value": 20086000,
+      "change": -17974000,
+      "sign": "-17.974.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 19934000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 20032000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 20109000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 20086000,
         "date": "21 sept 2025"
@@ -2258,6 +2255,18 @@
       {
         "value": 1707000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 1781000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 1949000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 2112000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2273,28 +2282,28 @@
     "17459": {
       "id": 17459,
       "id_team": 15,
-      "id_match": 38071,
-      "id_gameweek": 4048,
-      "id_home": 2,
-      "id_away": 15,
+      "id_match": 38002,
+      "id_gameweek": 4049,
+      "id_home": 15,
+      "id_away": 20,
       "date": {
-        "ts": 1789913700,
-        "text": "dom 16:15",
-        "format": "EEE H:mm",
+        "ts": 1791658800,
+        "text": "10 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "16:15",
-          "format": "EEE"
+          "date": "10 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Atlético",
-      "away": "Real Madrid",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Real Madrid",
+      "away": "Villarreal",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,

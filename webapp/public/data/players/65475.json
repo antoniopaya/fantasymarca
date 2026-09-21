@@ -3,15 +3,15 @@
     "id": 65475,
     "name": "Asier Osambela",
     "position": 3,
-    "points": 9,
-    "avg": 2.3,
+    "points": 13,
+    "avg": 2.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65475.png?version=20250826151727",
     "isFavorite": 0,
-    "value": 367000,
-    "previousValue": 382000,
+    "value": 356000,
+    "previousValue": 339000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 367000,
+      "price": 356000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 282
+    "clausesRanking": 239
   },
   "id": 65475,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -186,12 +186,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -199,7 +201,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -695,10 +697,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 9,
-      "avg": 2.25,
+      "points": 13,
+      "avg": 2.6,
       "id_team": 50,
-      "last_gameweek": 6
+      "last_gameweek": 7
     },
     {
       "season": "25/26",
@@ -711,21 +713,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 382000,
-      "change": -15000,
-      "sign": -15
+      "value": 339000,
+      "change": 17000,
+      "sign": 17
     },
     {
       "time": "Una semana",
-      "value": 388000,
-      "change": -21000,
-      "sign": -21
+      "value": 494000,
+      "change": -138000,
+      "sign": -138
     },
     {
       "time": "Un mes",
-      "value": 481000,
-      "change": -114000,
-      "sign": -114
+      "value": 409000,
+      "change": -53000,
+      "sign": -53
     }
   ],
   "values_chart": {
@@ -2029,6 +2031,18 @@
       {
         "value": 367000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 341000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 339000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 356000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2044,36 +2058,36 @@
     "65475": {
       "id": 65475,
       "id_team": 50,
-      "id_match": 38076,
-      "id_gameweek": 4048,
-      "id_home": 50,
-      "id_away": 14,
+      "id_match": 38001,
+      "id_gameweek": 4049,
+      "id_home": 4,
+      "id_away": 50,
       "date": {
-        "ts": 1789819200,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Rayo Vallecano",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Betis",
+      "away": "Osasuna",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
   "home": {
     "65475": {
       "id": 65475,
-      "points": 1,
-      "avg": 1
+      "points": 5,
+      "avg": 2.5
     }
   },
   "away": {

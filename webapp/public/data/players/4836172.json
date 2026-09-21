@@ -5,13 +5,17 @@
     "position": 4,
     "points": 17,
     "avg": 5.7,
-    "status": null,
+    "status": "doubt",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "doubt",
+      "description": "Lesión en el aductor",
+      "duration": "Duda esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4836172.png?version=20260901214106",
     "isFavorite": 0,
-    "value": 18033000,
-    "previousValue": 17619000,
+    "value": 17500000,
+    "previousValue": 17897000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 18033000,
+      "floor": 17500000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 27049500,
+      "value": 26250000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 18033000,
+      "price": 17500000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 204
+    "clausesRanking": 240
   },
   "id": 4836172,
   "player_extra": {
@@ -191,8 +195,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 307490,
+        "id_player": 4836172,
+        "category": "injury",
+        "description": "Lesión en el aductor",
+        "duration": "Duda esta jornada",
+        "since": "2026-09-18 14:01:31",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 3,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     },
@@ -200,7 +213,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -705,15 +718,15 @@
   "values": [
     {
       "time": "Un día",
-      "value": 17619000,
-      "change": 414000,
-      "sign": 414
+      "value": 17897000,
+      "change": -397000,
+      "sign": -397
     },
     {
       "time": "Una semana",
-      "value": 15107000,
-      "change": 2926000,
-      "sign": "+2.926.000"
+      "value": 16410000,
+      "change": 1090000,
+      "sign": "+1.090.000"
     }
   ],
   "values_chart": {
@@ -785,11 +798,23 @@
       {
         "value": 18033000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 18155000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 17897000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 17500000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
-      "value": 18033000,
-      "date": "18 sept 2026"
+      "value": 18155000,
+      "date": "19 sept 2026"
     },
     "min": {
       "value": 12000000,
@@ -800,28 +825,28 @@
     "4836172": {
       "id": 4836172,
       "id_team": 17,
-      "id_match": 38077,
-      "id_gameweek": 4048,
-      "id_home": 17,
-      "id_away": 3,
+      "id_match": 37998,
+      "id_gameweek": 4049,
+      "id_home": 12,
+      "id_away": 17,
       "date": {
-        "ts": 1789844400,
-        "text": "sáb 21:00",
-        "format": "EEE H:mm",
+        "ts": 1791831600,
+        "text": "12 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
+          "date": "12 oct",
           "time": "21:00",
-          "format": "EEE"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Barcelona",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "home": "Levante",
+      "away": "Sevilla",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,

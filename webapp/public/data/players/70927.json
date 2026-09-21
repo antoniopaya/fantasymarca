@@ -3,15 +3,15 @@
     "id": 70927,
     "name": "Giorgi Guliashvili",
     "position": 4,
-    "points": 2,
-    "avg": 0.7,
+    "points": 3,
+    "avg": 0.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70927.png?version=20260619115321",
     "isFavorite": 0,
-    "value": 345000,
-    "previousValue": 420000,
+    "value": 517000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 345000,
+      "price": 517000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 179,
       "weight": null
     },
-    "clausesRanking": 330
+    "clausesRanking": 377
   },
   "id": 70927,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 0
   },
@@ -187,12 +187,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -200,7 +202,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -696,30 +698,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 2,
-      "avg": 0.6667,
+      "points": 3,
+      "avg": 0.75,
       "id_team": 1490,
-      "last_gameweek": 6
+      "last_gameweek": 7
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 420000,
-      "change": -75000,
-      "sign": -75
+      "value": 329000,
+      "change": 188000,
+      "sign": 188
     },
     {
       "time": "Una semana",
-      "value": 407000,
-      "change": -62000,
-      "sign": -62
+      "value": 406000,
+      "change": 111000,
+      "sign": 111
     },
     {
       "time": "Un mes",
-      "value": 1927000,
-      "change": -1582000,
-      "sign": "-1.582.000"
+      "value": 1422000,
+      "change": -905000,
+      "sign": -905
     }
   ],
   "values_chart": {
@@ -1087,6 +1089,18 @@
       {
         "value": 345000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 517000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -1102,28 +1116,28 @@
     "70927": {
       "id": 70927,
       "id_team": 1490,
-      "id_match": 38072,
-      "id_gameweek": 4048,
-      "id_home": 5,
-      "id_away": 1490,
+      "id_match": 38003,
+      "id_gameweek": 4049,
+      "id_home": 1490,
+      "id_away": 19,
       "date": {
-        "ts": 1789835400,
-        "text": "sáb 18:30",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "18:30",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Racing de Santander",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Racing de Santander",
+      "away": "Valencia",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
@@ -1137,8 +1151,8 @@
   "away": {
     "70927": {
       "id": 70927,
-      "points": 0,
-      "avg": 0
+      "points": 1,
+      "avg": 0.5
     }
   },
   "owners": [],

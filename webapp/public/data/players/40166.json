@@ -3,15 +3,15 @@
     "id": 40166,
     "name": "Aurélien Tchouaméni",
     "position": 3,
-    "points": 5,
-    "avg": 2.5,
+    "points": 7,
+    "avg": 2.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/40166.png?version=20251003183451",
     "isFavorite": 0,
-    "value": 22874000,
-    "previousValue": 23012000,
+    "value": 22604000,
+    "previousValue": 22729000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 22874000,
+      "floor": 22604000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 34311000,
+      "value": 33906000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 22874000,
+      "price": 22604000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 188,
       "weight": null
     },
-    "clausesRanking": 272
+    "clausesRanking": 316
   },
   "id": 40166,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 0
   },
@@ -202,12 +202,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -215,7 +217,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -711,10 +713,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 5,
-      "avg": 2.5,
+      "points": 7,
+      "avg": 2.3333,
       "id_team": 15,
-      "last_gameweek": 6
+      "last_gameweek": 7
     },
     {
       "season": "25/26",
@@ -741,43 +743,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 23012000,
-      "change": -138000,
-      "sign": -138
+      "value": 22729000,
+      "change": -125000,
+      "sign": -125
     },
     {
       "time": "Una semana",
-      "value": 23575000,
-      "change": -701000,
-      "sign": -701
+      "value": 23334000,
+      "change": -730000,
+      "sign": -730
     },
     {
       "time": "Un mes",
-      "value": 34594000,
-      "change": -11720000,
-      "sign": "-11.720.000"
+      "value": 33096000,
+      "change": -10492000,
+      "sign": "-10.492.000"
     },
     {
       "time": "Un año",
-      "value": 41505000,
-      "change": -18631000,
-      "sign": "-18.631.000"
+      "value": 41960000,
+      "change": -19356000,
+      "sign": "-19.356.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 41505000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 41618000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 41798000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 41960000,
         "date": "21 sept 2025"
@@ -2229,6 +2219,18 @@
       {
         "value": 22874000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 22814000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 22729000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 22604000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2236,36 +2238,36 @@
       "date": "10 abr 2026"
     },
     "min": {
-      "value": 22874000,
-      "date": "18 sept 2026"
+      "value": 22604000,
+      "date": "21 sept 2026"
     }
   },
   "next_match": {
     "40166": {
       "id": 40166,
       "id_team": 15,
-      "id_match": 38071,
-      "id_gameweek": 4048,
-      "id_home": 2,
-      "id_away": 15,
+      "id_match": 38002,
+      "id_gameweek": 4049,
+      "id_home": 15,
+      "id_away": 20,
       "date": {
-        "ts": 1789913700,
-        "text": "dom 16:15",
-        "format": "EEE H:mm",
+        "ts": 1791658800,
+        "text": "10 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "16:15",
-          "format": "EEE"
+          "date": "10 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Atlético",
-      "away": "Real Madrid",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Real Madrid",
+      "away": "Villarreal",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
@@ -2279,8 +2281,8 @@
   "away": {
     "40166": {
       "id": 40166,
-      "points": 3,
-      "avg": 3
+      "points": 5,
+      "avg": 2.5
     }
   },
   "owners": [],

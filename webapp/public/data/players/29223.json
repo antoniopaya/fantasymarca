@@ -3,15 +3,15 @@
     "id": 29223,
     "name": "Mario Soriano",
     "position": 3,
-    "points": 29,
-    "avg": 4.8,
+    "points": 38,
+    "avg": 5.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/29223.png?version=20260621102316",
     "isFavorite": 0,
-    "value": 22651000,
-    "previousValue": 22547000,
+    "value": 23190000,
+    "previousValue": 22994000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 22651000,
+      "floor": 23190000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 33976500,
+      "value": 34785000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 22651000,
+      "price": 23190000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 163,
       "weight": null
     },
-    "clausesRanking": 125
+    "clausesRanking": 131
   },
   "id": 29223,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 1
   },
@@ -192,12 +192,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 9,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -205,7 +207,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -701,30 +703,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 29,
-      "avg": 4.8333,
+      "points": 38,
+      "avg": 5.4286,
       "id_team": 6,
-      "last_gameweek": 6
+      "last_gameweek": 7
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 22547000,
-      "change": 104000,
-      "sign": 104
+      "value": 22994000,
+      "change": 196000,
+      "sign": 196
     },
     {
       "time": "Una semana",
-      "value": 21286000,
-      "change": 1365000,
-      "sign": "+1.365.000"
+      "value": 21793000,
+      "change": 1397000,
+      "sign": "+1.397.000"
     },
     {
       "time": "Un mes",
-      "value": 11719000,
-      "change": 10932000,
-      "sign": "+10.932.000"
+      "value": 12985000,
+      "change": 10205000,
+      "sign": "+10.205.000"
     }
   ],
   "values_chart": {
@@ -1088,11 +1090,23 @@
       {
         "value": 22651000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 22807000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 22994000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 23190000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
-      "value": 22651000,
-      "date": "18 sept 2026"
+      "value": 23190000,
+      "date": "21 sept 2026"
     },
     "min": {
       "value": 2274000,
@@ -1103,36 +1117,36 @@
     "29223": {
       "id": 29223,
       "id_team": 6,
-      "id_match": 38073,
-      "id_gameweek": 4048,
-      "id_home": 6,
-      "id_away": 4,
+      "id_match": 38004,
+      "id_gameweek": 4049,
+      "id_home": 16,
+      "id_away": 6,
       "date": {
-        "ts": 1789921800,
-        "text": "dom 18:30",
-        "format": "EEE H:mm",
+        "ts": 1791728100,
+        "text": "11 oct 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "18:30",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "16:15",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Real Sociedad",
+      "away": "Deportivo da Coruña",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,
   "home": {
     "29223": {
       "id": 29223,
-      "points": 18,
-      "avg": 6
+      "points": 27,
+      "avg": 6.75
     }
   },
   "away": {

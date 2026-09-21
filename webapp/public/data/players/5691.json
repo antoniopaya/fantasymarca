@@ -14,7 +14,7 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/5691.png?version=20251004233059",
     "isFavorite": 0,
-    "value": 445000,
+    "value": 381000,
     "previousValue": 329000,
     "videoFrame": null,
     "team": {
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 445000,
+      "price": 381000,
       "loanable": null
     },
     "bid": {
@@ -242,8 +242,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 292996,
+        "id_player": 5691,
+        "category": "injury",
+        "description": "Rotura de ligamento cruzado",
+        "duration": "Baja hasta Octubre",
+        "since": "2026-02-23 11:18:35",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -251,7 +260,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -771,42 +780,30 @@
     {
       "time": "Un día",
       "value": 329000,
-      "change": 116000,
-      "sign": 116
+      "change": 52000,
+      "sign": 52
     },
     {
       "time": "Una semana",
-      "value": 529000,
-      "change": -84000,
-      "sign": -84
+      "value": 329000,
+      "change": 52000,
+      "sign": 52
     },
     {
       "time": "Un mes",
-      "value": 477000,
-      "change": -32000,
-      "sign": -32
+      "value": 329000,
+      "change": 52000,
+      "sign": 52
     },
     {
       "time": "Un año",
-      "value": 360000,
-      "change": 85000,
-      "sign": 85
+      "value": 433000,
+      "change": -52000,
+      "sign": -52
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 360000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 329000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 329000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 433000,
         "date": "21 sept 2025"
@@ -2258,6 +2255,18 @@
       {
         "value": 445000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 329000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 381000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2273,28 +2282,28 @@
     "5691": {
       "id": 5691,
       "id_team": 16,
-      "id_match": 38078,
-      "id_gameweek": 4048,
-      "id_home": 19,
-      "id_away": 16,
+      "id_match": 38004,
+      "id_gameweek": 4049,
+      "id_home": 16,
+      "id_away": 6,
       "date": {
-        "ts": 1789930800,
-        "text": "dom 21:00",
-        "format": "EEE H:mm",
+        "ts": 1791728100,
+        "text": "11 oct 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "21:00",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "16:15",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Real Sociedad",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "home": "Real Sociedad",
+      "away": "Deportivo da Coruña",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,

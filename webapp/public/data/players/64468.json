@@ -3,15 +3,15 @@
     "id": 64468,
     "name": "Tyrhys Dolan",
     "position": 3,
-    "points": 23,
-    "avg": 4.6,
+    "points": 26,
+    "avg": 4.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/64468.png?version=20250725131445",
     "isFavorite": 0,
-    "value": 18281000,
-    "previousValue": 18632000,
+    "value": 16979000,
+    "previousValue": 17229000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 18281000,
+      "floor": 16979000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 27421500,
+      "value": 25468500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 18281000,
+      "price": 16979000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 331
+    "clausesRanking": 393
   },
   "id": 64468,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 1,
     "cards": 0
   },
@@ -187,12 +187,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -200,7 +202,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -696,10 +698,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 23,
-      "avg": 4.6,
+      "points": 26,
+      "avg": 4.3333,
       "id_team": 8,
-      "last_gameweek": 5
+      "last_gameweek": 7
     },
     {
       "season": "25/26",
@@ -712,43 +714,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 18632000,
-      "change": -351000,
-      "sign": -351
+      "value": 17229000,
+      "change": -250000,
+      "sign": -250
     },
     {
       "time": "Una semana",
-      "value": 20205000,
-      "change": -1924000,
-      "sign": "-1.924.000"
+      "value": 19874000,
+      "change": -2895000,
+      "sign": "-2.895.000"
     },
     {
       "time": "Un mes",
-      "value": 15571000,
-      "change": 2710000,
-      "sign": "+2.710.000"
+      "value": 17535000,
+      "change": -556000,
+      "sign": -556
     },
     {
       "time": "Un año",
-      "value": 13722000,
-      "change": 4559000,
-      "sign": "+4.559.000"
+      "value": 15409000,
+      "change": 1570000,
+      "sign": "+1.570.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 13722000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 14280000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 14812000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 15409000,
         "date": "21 sept 2025"
@@ -2200,6 +2190,18 @@
       {
         "value": 18281000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 17805000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 17229000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 16979000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2215,36 +2217,36 @@
     "64468": {
       "id": 64468,
       "id_team": 8,
-      "id_match": 38074,
-      "id_gameweek": 4048,
-      "id_home": 8,
-      "id_away": 23,
+      "id_match": 37999,
+      "id_gameweek": 4049,
+      "id_home": 13,
+      "id_away": 8,
       "date": {
-        "ts": 1789758000,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "11 oct",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
-      "away": "Elche",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+      "home": "Málaga",
+      "away": "Espanyol",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,
   "home": {
     "64468": {
       "id": 64468,
-      "points": 15,
-      "avg": 5
+      "points": 18,
+      "avg": 4.5
     }
   },
   "away": {

@@ -3,15 +3,15 @@
     "id": 12915,
     "name": "Cucho Hernández",
     "position": 4,
-    "points": 29,
-    "avg": 4.8,
+    "points": 38,
+    "avg": 5.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/12915.png?version=20251003194337",
     "isFavorite": 0,
-    "value": 30390000,
-    "previousValue": 30658000,
+    "value": 29773000,
+    "previousValue": 29746000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 30390000,
+      "floor": 29773000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 45585000,
+      "value": 44659500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 30390000,
+      "price": 29773000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 175,
       "weight": 73
     },
-    "clausesRanking": 290
+    "clausesRanking": 267
   },
   "id": 12915,
   "player_extra": {
-    "matches": 6,
-    "goals": 1,
+    "matches": 7,
+    "goals": 2,
     "cards": 0
   },
   "points": [
@@ -194,12 +194,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 9,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -207,7 +209,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -703,10 +705,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 29,
-      "avg": 4.8333,
+      "points": 38,
+      "avg": 5.4286,
       "id_team": 4,
-      "last_gameweek": 6
+      "last_gameweek": 7
     },
     {
       "season": "25/26",
@@ -726,43 +728,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 30658000,
-      "change": -268000,
-      "sign": -268
+      "value": 29746000,
+      "change": 27000,
+      "sign": 27
     },
     {
       "time": "Una semana",
-      "value": 32363000,
-      "change": -1973000,
-      "sign": "-1.973.000"
+      "value": 30952000,
+      "change": -1179000,
+      "sign": "-1.179.000"
     },
     {
       "time": "Un mes",
-      "value": 38744000,
-      "change": -8354000,
-      "sign": "-8.354.000"
+      "value": 38019000,
+      "change": -8246000,
+      "sign": "-8.246.000"
     },
     {
       "time": "Un año",
-      "value": 24183000,
-      "change": 6207000,
-      "sign": "+6.207.000"
+      "value": 24668000,
+      "change": 5105000,
+      "sign": "+5.105.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 24183000,
-        "date": "18 sept 2025"
-      },
-      {
-        "value": 24135000,
-        "date": "19 sept 2025"
-      },
-      {
-        "value": 24331000,
-        "date": "20 sept 2025"
-      },
       {
         "value": 24668000,
         "date": "21 sept 2025"
@@ -2214,6 +2204,18 @@
       {
         "value": 30390000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 30070000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 29746000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 29773000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -2221,36 +2223,36 @@
       "date": "12 ene 2026"
     },
     "min": {
-      "value": 24135000,
-      "date": "19 sept 2025"
+      "value": 24668000,
+      "date": "21 sept 2025"
     }
   },
   "next_match": {
     "12915": {
       "id": 12915,
       "id_team": 4,
-      "id_match": 38073,
-      "id_gameweek": 4048,
-      "id_home": 6,
-      "id_away": 4,
+      "id_match": 38001,
+      "id_gameweek": 4049,
+      "id_home": 4,
+      "id_away": 50,
       "date": {
-        "ts": 1789921800,
-        "text": "dom 18:30",
-        "format": "EEE H:mm",
+        "ts": 1791745200,
+        "text": "11 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "18:30",
-          "format": "EEE"
+          "date": "11 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Betis",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Betis",
+      "away": "Osasuna",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
@@ -2264,8 +2266,8 @@
   "away": {
     "12915": {
       "id": 12915,
-      "points": 14,
-      "avg": 4.6667
+      "points": 23,
+      "avg": 5.75
     }
   },
   "owners": [],

@@ -3,15 +3,15 @@
     "id": 4947931,
     "name": "Petar Ratkov",
     "position": 4,
-    "points": -1,
-    "avg": -1,
+    "points": 0,
+    "avg": 0,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4947931.png?version=20260902085231",
     "isFavorite": 0,
-    "value": 4628000,
-    "previousValue": 4846000,
+    "value": 4091000,
+    "previousValue": 4235000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4628000,
+      "floor": 4091000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6942000,
+      "value": 6136500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4628000,
+      "price": 4091000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 4947931,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -182,12 +182,14 @@
       "startDate": "2026-09-18 21:00:00",
       "endDate": "2026-09-20 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 20,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     },
@@ -195,7 +197,7 @@
       "id": 4049,
       "number": 8,
       "shortName": "J8",
-      "startDate": "2026-10-10 21:00:00",
+      "startDate": "2026-10-10 18:30:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": null,
@@ -691,24 +693,24 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": -1,
-      "avg": -1,
+      "points": 0,
+      "avg": 0,
       "id_team": 12,
-      "last_gameweek": 5
+      "last_gameweek": 7
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 4846000,
-      "change": -218000,
-      "sign": -218
+      "value": 4235000,
+      "change": -144000,
+      "sign": -144
     },
     {
       "time": "Una semana",
-      "value": 6287000,
-      "change": -1659000,
-      "sign": "-1.659.000"
+      "value": 5560000,
+      "change": -1469000,
+      "sign": "-1.469.000"
     }
   ],
   "values_chart": {
@@ -776,6 +778,18 @@
       {
         "value": 4628000,
         "date": "18 sept 2026"
+      },
+      {
+        "value": 4430000,
+        "date": "19 sept 2026"
+      },
+      {
+        "value": 4235000,
+        "date": "20 sept 2026"
+      },
+      {
+        "value": 4091000,
+        "date": "21 sept 2026"
       }
     ],
     "max": {
@@ -783,36 +797,36 @@
       "date": "6 sept 2026"
     },
     "min": {
-      "value": 4628000,
-      "date": "18 sept 2026"
+      "value": 4091000,
+      "date": "21 sept 2026"
     }
   },
   "next_match": {
     "4947931": {
       "id": 4947931,
       "id_team": 12,
-      "id_match": 38079,
-      "id_gameweek": 4048,
-      "id_home": 20,
-      "id_away": 12,
+      "id_match": 37998,
+      "id_gameweek": 4049,
+      "id_home": 12,
+      "id_away": 17,
       "date": {
-        "ts": 1789921800,
-        "text": "dom 18:30",
-        "format": "EEE H:mm",
+        "ts": 1791831600,
+        "text": "12 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "18:30",
-          "format": "EEE"
+          "date": "12 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Villarreal",
-      "away": "Levante",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Levante",
+      "away": "Sevilla",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,
@@ -825,8 +839,9 @@
   },
   "away": {
     "4947931": {
-      "points": 0,
-      "avg": 0
+      "id": 4947931,
+      "points": 1,
+      "avg": 1
     }
   },
   "owners": [],
