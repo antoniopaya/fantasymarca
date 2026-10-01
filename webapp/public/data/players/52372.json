@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/52372.png?version=20251006015600",
     "isFavorite": 0,
-    "value": 21007000,
-    "previousValue": 20923000,
+    "value": 19999000,
+    "previousValue": 20452000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 21007000,
+      "floor": 19999000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 31510500,
+      "value": 29998500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 21007000,
+      "price": 19999000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 187,
       "weight": null
     },
-    "clausesRanking": 231
+    "clausesRanking": 289
   },
   "id": 52372,
   "player_extra": {
@@ -728,43 +728,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 20923000,
-      "change": 84000,
-      "sign": 84
+      "value": 20452000,
+      "change": -453000,
+      "sign": -453
     },
     {
       "time": "Una semana",
-      "value": 17879000,
-      "change": 3128000,
-      "sign": "+3.128.000"
+      "value": 19345000,
+      "change": 654000,
+      "sign": 654
     },
     {
       "time": "Un mes",
-      "value": 24804000,
-      "change": -3797000,
-      "sign": "-3.797.000"
+      "value": 23623000,
+      "change": -3624000,
+      "sign": "-3.624.000"
     },
     {
       "time": "Un año",
-      "value": 28549000,
-      "change": -7542000,
-      "sign": "-7.542.000"
+      "value": 28777000,
+      "change": -8778000,
+      "sign": "-8.778.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 28549000,
-        "date": "28 sept 2025"
-      },
-      {
-        "value": 28734000,
-        "date": "29 sept 2025"
-      },
-      {
-        "value": 28895000,
-        "date": "30 sept 2025"
-      },
       {
         "value": 28777000,
         "date": "1 oct 2025"
@@ -2216,11 +2204,23 @@
       {
         "value": 21007000,
         "date": "28 sept 2026"
+      },
+      {
+        "value": 20879000,
+        "date": "29 sept 2026"
+      },
+      {
+        "value": 20452000,
+        "date": "30 sept 2026"
+      },
+      {
+        "value": 19999000,
+        "date": "1 oct 2026"
       }
     ],
     "max": {
-      "value": 28895000,
-      "date": "30 sept 2025"
+      "value": 28777000,
+      "date": "1 oct 2025"
     },
     "min": {
       "value": 574000,
@@ -2246,7 +2246,7 @@
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Racing de Santander",
       "away": "Valencia",
