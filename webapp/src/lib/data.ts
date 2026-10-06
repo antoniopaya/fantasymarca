@@ -216,10 +216,14 @@ export interface Prediction {
   /** Probabilidad de titular según futbolfantasy (0-100), si la hay. */
   ff_prob: number | null;
   ff_status: "titular" | "suplente" | null;
+  /** Puntos esperados en cada jornada del horizonte ("8": 6.4, "9": ...). */
+  next: Record<string, number>;
 }
 
 export interface Predictions {
   jornada: number;
+  /** Jornadas predichas: la próxima y las siguientes. */
+  horizon: number[];
   generated_at: string;
   model: string;
   n_train: number;

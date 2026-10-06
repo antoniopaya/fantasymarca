@@ -236,6 +236,30 @@ export function prediction(
   return preds.players[String(playerId)] ?? null;
 }
 
+/** Puntos esperados por el modelo en cualquier jornada de su horizonte. */
+function modelXp(playerId: number, gameweek: number): number | null {
+  const preds = getPredictions();
+  const value = preds?.players[String(playerId)]?.next?.[String(gameweek)];
+  return value === undefined ? null : value;
+}
+
+/** Jornadas para las que se calcula el "próximas 3": la próxima y 2 más. */
+export function horizonGameweeks(): number[] {
+  const next = getNextGameweek().number;
+  const last = getGameweeks().at(-1)?.number ?? next;
+  return [next, next + 1, next + 2].filter((g) => g <= last);
+}
+
+/** Puntos esperados en cada una de las próximas 3 jornadas y su suma. */
+export function expectedPointsHorizon(player: PlayerSummary) {
+  const perGw = horizonGameweeks().map((gw) => ({
+    gw,
+    xp: expectedPoints(player, gw),
+  }));
+  const total = Math.round(perGw.reduce((s, x) => s + x.xp, 0) * 10) / 10;
+  return { perGw, total };
+}
+
 /**
  * Puntos esperados de un jugador en una jornada (sin doblar por capitán).
  * Si fantasy_api/ml_model.py ha predicho esa jornada, se usa el modelo
@@ -251,9 +275,9 @@ export function expectedPoints(
   const cached = xpCache.get(key);
   if (cached !== undefined) return cached;
   const fixtureForModel = fixtureIn(player.id_team, gameweek);
-  const predicted = prediction(player.id, gameweek);
-  if (predicted && fixtureForModel) {
-    const value = Math.max(0, Math.round(predicted.xp * 10) / 10);
+  const predicted = modelXp(player.id, gameweek);
+  if (predicted !== null && fixtureForModel) {
+    const value = Math.max(0, Math.round(predicted * 10) / 10);
     xpCache.set(key, value);
     return value;
   }

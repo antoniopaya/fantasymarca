@@ -1,6 +1,11 @@
 {
  "jornada": 8,
- "generated_at": "2026-10-06T13:21+00:00",
+ "horizon": [
+  8,
+  9,
+  10
+ ],
+ "generated_at": "2026-10-06T13:26+00:00",
  "model": "lineal",
  "n_train": 3645,
  "train_gameweeks": 7,
@@ -11,12 +16,12 @@
    "jornada": 4,
    "n": 528,
    "lineal": {
-    "mae": 2.116,
-    "top50": 5.56
+    "mae": 2.099,
+    "top50": 6.36
    },
    "boosting": {
-    "mae": 2.118,
-    "top50": 5.22
+    "mae": 2.132,
+    "top50": 6.1
    },
    "media_previa": {
     "mae": 2.041,
@@ -31,12 +36,12 @@
    "jornada": 5,
    "n": 528,
    "lineal": {
-    "mae": 1.947,
-    "top50": 5.4
+    "mae": 1.948,
+    "top50": 5.36
    },
    "boosting": {
-    "mae": 2.041,
-    "top50": 5.24
+    "mae": 2.044,
+    "top50": 5.68
    },
    "media_previa": {
     "mae": 2.027,
@@ -51,12 +56,12 @@
    "jornada": 6,
    "n": 477,
    "lineal": {
-    "mae": 2.113,
-    "top50": 5.64
+    "mae": 2.123,
+    "top50": 5.16
    },
    "boosting": {
-    "mae": 2.218,
-    "top50": 5.5
+    "mae": 2.194,
+    "top50": 4.66
    },
    "media_previa": {
     "mae": 2.287,
@@ -71,12 +76,12 @@
    "jornada": 7,
    "n": 528,
    "lineal": {
-    "mae": 2.087,
-    "top50": 5.7
+    "mae": 2.085,
+    "top50": 5.4
    },
    "boosting": {
-    "mae": 2.083,
-    "top50": 4.92
+    "mae": 2.124,
+    "top50": 4.42
    },
    "media_previa": {
     "mae": 2.086,
@@ -90,12 +95,12 @@
  ],
  "validation_summary": {
   "lineal": {
-   "mae": 2.066,
-   "top50": 5.58
+   "mae": 2.064,
+   "top50": 5.57
   },
   "boosting": {
-   "mae": 2.115,
-   "top50": 5.22
+   "mae": 2.123,
+   "top50": 5.21
   },
   "media_previa": {
    "mae": 2.11,
@@ -108,3698 +113,6338 @@
  },
  "players": {
   "10": {
-   "xp": 4.06,
-   "p_play": 0.84,
-   "if_plays": 4.84,
+   "next": {
+    "8": 4.04,
+    "9": 5.29,
+    "10": 5.71
+   },
+   "xp": 4.04,
+   "p_play": 0.844,
+   "if_plays": 4.78,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "24": {
-   "xp": 3.67,
-   "p_play": 0.825,
-   "if_plays": 4.45,
+   "next": {
+    "8": 3.28,
+    "9": 3.31,
+    "10": 2.97
+   },
+   "xp": 3.28,
+   "p_play": 0.818,
+   "if_plays": 4.01,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "29": {
-   "xp": 3.58,
-   "p_play": 0.773,
-   "if_plays": 4.63,
+   "next": {
+    "8": 3.75,
+    "9": 5.08,
+    "10": 5.87
+   },
+   "xp": 3.75,
+   "p_play": 0.772,
+   "if_plays": 4.86,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "31": {
-   "xp": 5.7,
-   "p_play": 0.949,
-   "if_plays": 6.01,
+   "next": {
+    "8": 5.76,
+    "9": 5.82,
+    "10": 6.39
+   },
+   "xp": 5.76,
+   "p_play": 0.947,
+   "if_plays": 6.08,
    "ff_prob": 95,
    "ff_status": "titular"
   },
   "34": {
-   "xp": 4.41,
-   "p_play": 0.883,
-   "if_plays": 5.0,
+   "next": {
+    "8": 4.04,
+    "9": 4.08,
+    "10": 2.94
+   },
+   "xp": 4.04,
+   "p_play": 0.893,
+   "if_plays": 4.53,
    "ff_prob": 90,
    "ff_status": "titular"
   },
   "42": {
-   "xp": 2.4,
-   "p_play": 0.62,
-   "if_plays": 3.86,
+   "next": {
+    "8": 2.64,
+    "9": 3.7,
+    "10": 4.43
+   },
+   "xp": 2.64,
+   "p_play": 0.618,
+   "if_plays": 4.28,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "63": {
-   "xp": 2.05,
-   "p_play": 0.392,
-   "if_plays": 5.22,
+   "next": {
+    "8": 1.86,
+    "9": 0.5,
+    "10": 2.11
+   },
+   "xp": 1.86,
+   "p_play": 0.385,
+   "if_plays": 4.84,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "96": {
-   "xp": 1.39,
-   "p_play": 0.353,
-   "if_plays": 3.94,
+   "next": {
+    "8": 1.66,
+    "9": 1.17,
+    "10": 1.95
+   },
+   "xp": 1.66,
+   "p_play": 0.389,
+   "if_plays": 4.26,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "118": {
-   "xp": 2.27,
-   "p_play": 0.724,
-   "if_plays": 3.13,
+   "next": {
+    "8": 1.92,
+    "9": 2.18,
+    "10": 3.21
+   },
+   "xp": 1.92,
+   "p_play": 0.715,
+   "if_plays": 2.68,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "128": {
-   "xp": 1.41,
-   "p_play": 0.428,
+   "next": {
+    "8": 1.29,
+    "9": 2.56,
+    "10": 2.9
+   },
+   "xp": 1.29,
+   "p_play": 0.394,
    "if_plays": 3.28,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "130": {
-   "xp": 0.91,
-   "p_play": 0.286,
-   "if_plays": 3.18,
+   "next": {
+    "8": 0.9,
+    "9": 2.84,
+    "10": 3.23
+   },
+   "xp": 0.9,
+   "p_play": 0.273,
+   "if_plays": 3.29,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "208": {
-   "xp": 1.08,
-   "p_play": 0.349,
-   "if_plays": 3.08,
+   "next": {
+    "8": 1.04,
+    "9": 1.29,
+    "10": 1.21
+   },
+   "xp": 1.04,
+   "p_play": 0.344,
+   "if_plays": 3.01,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "213": {
-   "xp": 4.06,
-   "p_play": 0.906,
-   "if_plays": 4.49,
+   "next": {
+    "8": 4.62,
+    "9": 4.32,
+    "10": 3.85
+   },
+   "xp": 4.62,
+   "p_play": 0.915,
+   "if_plays": 5.05,
    "ff_prob": 95,
    "ff_status": "titular"
   },
   "217": {
-   "xp": 0.06,
+   "next": {
+    "8": 0.09,
+    "9": 0.53,
+    "10": 0.46
+   },
+   "xp": 0.09,
    "p_play": 0.03,
-   "if_plays": 2.16,
+   "if_plays": 2.94,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "239": {
+   "next": {
+    "8": 2.14,
+    "9": 1.99,
+    "10": 2.39
+   },
    "xp": 2.14,
-   "p_play": 0.553,
-   "if_plays": 3.88,
+   "p_play": 0.534,
+   "if_plays": 4.01,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "270": {
-   "xp": 3.55,
-   "p_play": 0.829,
-   "if_plays": 4.28,
+   "next": {
+    "8": 3.44,
+    "9": 3.53,
+    "10": 3.37
+   },
+   "xp": 3.44,
+   "p_play": 0.823,
+   "if_plays": 4.18,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "306": {
-   "xp": 1.9,
-   "p_play": 0.416,
-   "if_plays": 4.57,
+   "next": {
+    "8": 1.78,
+    "9": 0.04,
+    "10": 0.76
+   },
+   "xp": 1.78,
+   "p_play": 0.423,
+   "if_plays": 4.21,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "308": {
-   "xp": 0.58,
-   "p_play": 0.824,
-   "if_plays": 0.71,
+   "next": {
+    "8": -0.21,
+    "9": 2.97,
+    "10": 2.63
+   },
+   "xp": -0.21,
+   "p_play": 0.823,
+   "if_plays": -0.25,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "340": {
-   "xp": 4.65,
-   "p_play": 0.748,
-   "if_plays": 6.22,
+   "next": {
+    "8": 5.05,
+    "9": 3.96,
+    "10": 5.15
+   },
+   "xp": 5.05,
+   "p_play": 0.774,
+   "if_plays": 6.52,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "361": {
-   "xp": 3.6,
-   "p_play": 0.834,
-   "if_plays": 4.32,
+   "next": {
+    "8": 3.51,
+    "9": 4.53,
+    "10": 4.89
+   },
+   "xp": 3.51,
+   "p_play": 0.832,
+   "if_plays": 4.22,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "364": {
-   "xp": 4.53,
-   "p_play": 0.854,
-   "if_plays": 5.3,
+   "next": {
+    "8": 4.15,
+    "9": 3.32,
+    "10": 3.3
+   },
+   "xp": 4.15,
+   "p_play": 0.865,
+   "if_plays": 4.79,
    "ff_prob": 90,
    "ff_status": "titular"
   },
   "392": {
-   "xp": 1.5,
-   "p_play": 0.535,
-   "if_plays": 2.8,
+   "next": {
+    "8": 1.79,
+    "9": 1.93,
+    "10": 2.57
+   },
+   "xp": 1.79,
+   "p_play": 0.539,
+   "if_plays": 3.32,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "431": {
-   "xp": 3.95,
-   "p_play": 0.569,
-   "if_plays": 6.95,
+   "next": {
+    "8": 3.65,
+    "9": 4.38,
+    "10": 3.43
+   },
+   "xp": 3.65,
+   "p_play": 0.586,
+   "if_plays": 6.23,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "432": {
-   "xp": 3.08,
-   "p_play": 0.715,
-   "if_plays": 4.32,
+   "next": {
+    "8": 3.54,
+    "9": 3.83,
+    "10": 3.43
+   },
+   "xp": 3.54,
+   "p_play": 0.722,
+   "if_plays": 4.91,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "476": {
-   "xp": 2.16,
-   "p_play": 0.462,
-   "if_plays": 4.68,
+   "next": {
+    "8": 2.0,
+    "9": 4.29,
+    "10": 4.42
+   },
+   "xp": 2.0,
+   "p_play": 0.454,
+   "if_plays": 4.4,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "557": {
-   "xp": 4.59,
-   "p_play": 0.833,
-   "if_plays": 5.51,
+   "next": {
+    "8": 4.17,
+    "9": 2.39,
+    "10": 3.48
+   },
+   "xp": 4.17,
+   "p_play": 0.819,
+   "if_plays": 5.09,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "561": {
-   "xp": 4.31,
-   "p_play": 0.839,
-   "if_plays": 5.13,
+   "next": {
+    "8": 4.19,
+    "9": 4.74,
+    "10": 5.31
+   },
+   "xp": 4.19,
+   "p_play": 0.84,
+   "if_plays": 4.98,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "564": {
-   "xp": 5.94,
-   "p_play": 0.921,
-   "if_plays": 6.45,
+   "next": {
+    "8": 5.6,
+    "9": 5.64,
+    "10": 5.69
+   },
+   "xp": 5.6,
+   "p_play": 0.916,
+   "if_plays": 6.12,
    "ff_prob": 90,
    "ff_status": "titular"
   },
   "607": {
-   "xp": -0.02,
-   "p_play": 0.206,
-   "if_plays": -0.1,
+   "next": {
+    "8": 0.07,
+    "9": 1.13,
+    "10": 1.03
+   },
+   "xp": 0.07,
+   "p_play": 0.2,
+   "if_plays": 0.35,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "609": {
-   "xp": 2.33,
-   "p_play": 0.953,
-   "if_plays": 2.44,
+   "next": {
+    "8": 1.46,
+    "9": 4.9,
+    "10": 4.52
+   },
+   "xp": 1.46,
+   "p_play": 0.946,
+   "if_plays": 1.54,
    "ff_prob": 95,
    "ff_status": "titular"
   },
   "616": {
-   "xp": 5.17,
-   "p_play": 0.809,
-   "if_plays": 6.4,
+   "next": {
+    "8": 5.6,
+    "9": 5.37,
+    "10": 4.84
+   },
+   "xp": 5.6,
+   "p_play": 0.82,
+   "if_plays": 6.83,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "1034": {
-   "xp": -0.02,
+   "next": {
+    "8": 0.01,
+    "9": 0.2,
+    "10": 0.18
+   },
+   "xp": 0.01,
    "p_play": 0.03,
-   "if_plays": -0.56,
+   "if_plays": 0.17,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "1684": {
-   "xp": 0.08,
+   "next": {
+    "8": 0.07,
+    "9": 0.14,
+    "10": 0.11
+   },
+   "xp": 0.07,
    "p_play": 0.03,
-   "if_plays": 2.79,
+   "if_plays": 2.45,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "1713": {
-   "xp": 5.09,
-   "p_play": 0.945,
-   "if_plays": 5.38,
+   "next": {
+    "8": 4.94,
+    "9": 4.89,
+    "10": 4.51
+   },
+   "xp": 4.94,
+   "p_play": 0.932,
+   "if_plays": 5.3,
    "ff_prob": 95,
    "ff_status": "titular"
   },
   "1719": {
-   "xp": 1.9,
-   "p_play": 0.504,
-   "if_plays": 3.78,
+   "next": {
+    "8": 2.2,
+    "9": 2.1,
+    "10": 2.42
+   },
+   "xp": 2.2,
+   "p_play": 0.529,
+   "if_plays": 4.15,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "1737": {
-   "xp": 1.7,
-   "p_play": 0.511,
-   "if_plays": 3.34,
+   "next": {
+    "8": 1.72,
+    "9": 2.17,
+    "10": 1.57
+   },
+   "xp": 1.72,
+   "p_play": 0.518,
+   "if_plays": 3.32,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "1762": {
-   "xp": 2.8,
-   "p_play": 0.737,
-   "if_plays": 3.8,
+   "next": {
+    "8": 2.9,
+    "9": 3.72,
+    "10": 4.41
+   },
+   "xp": 2.9,
+   "p_play": 0.74,
+   "if_plays": 3.91,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "3046": {
-   "xp": 0.73,
-   "p_play": 0.208,
-   "if_plays": 3.51,
+   "next": {
+    "8": 0.58,
+    "9": 0.78,
+    "10": 0.89
+   },
+   "xp": 0.58,
+   "p_play": 0.184,
+   "if_plays": 3.15,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "3060": {
-   "xp": 1.32,
-   "p_play": 0.473,
-   "if_plays": 2.79,
+   "next": {
+    "8": 1.55,
+    "9": 1.98,
+    "10": 2.67
+   },
+   "xp": 1.55,
+   "p_play": 0.48,
+   "if_plays": 3.23,
    "ff_prob": 40,
    "ff_status": "suplente"
   },
   "3117": {
-   "xp": 1.42,
-   "p_play": 0.503,
-   "if_plays": 2.82,
+   "next": {
+    "8": 1.52,
+    "9": 1.63,
+    "10": 1.34
+   },
+   "xp": 1.52,
+   "p_play": 0.491,
+   "if_plays": 3.09,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "3728": {
-   "xp": 2.91,
-   "p_play": 0.607,
-   "if_plays": 4.8,
+   "next": {
+    "8": 2.87,
+    "9": 2.05,
+    "10": 3.13
+   },
+   "xp": 2.87,
+   "p_play": 0.605,
+   "if_plays": 4.74,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "4753": {
-   "xp": 1.49,
-   "p_play": 0.484,
-   "if_plays": 3.08,
+   "next": {
+    "8": 1.46,
+    "9": 1.98,
+    "10": 2.03
+   },
+   "xp": 1.46,
+   "p_play": 0.522,
+   "if_plays": 2.8,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "4774": {
-   "xp": 0.13,
-   "p_play": 0.06,
-   "if_plays": 2.16,
+   "next": {
+    "8": 0.16,
+    "9": 0.22,
+    "10": 0.12
+   },
+   "xp": 0.16,
+   "p_play": 0.061,
+   "if_plays": 2.57,
    "ff_prob": 5,
    "ff_status": "suplente"
   },
   "4775": {
-   "xp": 1.22,
-   "p_play": 0.336,
-   "if_plays": 3.63,
+   "next": {
+    "8": 1.56,
+    "9": 1.89,
+    "10": 1.6
+   },
+   "xp": 1.56,
+   "p_play": 0.343,
+   "if_plays": 4.56,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "4886": {
-   "xp": 1.23,
-   "p_play": 0.29,
-   "if_plays": 4.24,
+   "next": {
+    "8": 1.07,
+    "9": 2.29,
+    "10": 2.28
+   },
+   "xp": 1.07,
+   "p_play": 0.28,
+   "if_plays": 3.84,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "4888": {
-   "xp": 4.29,
+   "next": {
+    "8": 4.25,
+    "9": 5.11,
+    "10": 5.16
+   },
+   "xp": 4.25,
    "p_play": 0.784,
-   "if_plays": 5.47,
+   "if_plays": 5.42,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "5691": {
+   "next": {
+    "8": 0.08,
+    "9": 0.2,
+    "10": 0.18
+   },
+   "xp": 0.08,
+   "p_play": 0.03,
+   "if_plays": 2.69,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "5916": {
+   "next": {
+    "8": 1.42,
+    "9": 1.7,
+    "10": 2.9
+   },
+   "xp": 1.42,
+   "p_play": 0.497,
+   "if_plays": 2.85,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "5917": {
+   "next": {
+    "8": 1.98,
+    "9": 2.94,
+    "10": 2.71
+   },
+   "xp": 1.98,
+   "p_play": 0.458,
+   "if_plays": 4.32,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "5920": {
+   "next": {
+    "8": 1.41,
+    "9": 1.76,
+    "10": 2.45
+   },
+   "xp": 1.41,
+   "p_play": 0.479,
+   "if_plays": 2.94,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "6032": {
+   "next": {
+    "8": 4.51,
+    "9": 5.04,
+    "10": 4.74
+   },
+   "xp": 4.51,
+   "p_play": 0.805,
+   "if_plays": 5.6,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "6034": {
+   "next": {
+    "8": 4.2,
+    "9": 4.48,
+    "10": 4.06
+   },
+   "xp": 4.2,
+   "p_play": 0.834,
+   "if_plays": 5.03,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "6035": {
+   "next": {
+    "8": 0.05,
+    "9": 0.13,
+    "10": 0.17
+   },
+   "xp": 0.05,
+   "p_play": 0.03,
+   "if_plays": 1.62,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "6044": {
+   "next": {
+    "8": 1.45,
+    "9": 3.77,
+    "10": 3.52
+   },
+   "xp": 1.45,
+   "p_play": 0.757,
+   "if_plays": 1.92,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "6065": {
+   "next": {
+    "8": 1.29,
+    "9": 1.89,
+    "10": 1.62
+   },
+   "xp": 1.29,
+   "p_play": 0.391,
+   "if_plays": 3.3,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "7011": {
+   "next": {
+    "8": 2.56,
+    "9": 2.59,
+    "10": 1.6
+   },
+   "xp": 2.56,
+   "p_play": 0.793,
+   "if_plays": 3.23,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "7024": {
+   "next": {
+    "8": 0.17,
+    "9": 2.95,
+    "10": 1.66
+   },
+   "xp": 0.17,
+   "p_play": 0.03,
+   "if_plays": 5.53,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "7025": {
+   "next": {
+    "8": 3.57,
+    "9": 2.73,
+    "10": 3.27
+   },
+   "xp": 3.57,
+   "p_play": 0.702,
+   "if_plays": 5.09,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "7784": {
+   "next": {
+    "8": 1.71,
+    "9": 1.5,
+    "10": 1.94
+   },
+   "xp": 1.71,
+   "p_play": 0.459,
+   "if_plays": 3.73,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "7893": {
+   "next": {
+    "8": 3.86,
+    "9": 4.02,
+    "10": 5.4
+   },
+   "xp": 3.86,
+   "p_play": 0.947,
+   "if_plays": 4.08,
+   "ff_prob": 95,
+   "ff_status": "titular"
+  },
+  "8171": {
+   "next": {
+    "8": 0.78,
+    "9": 4.39,
+    "10": 4.0
+   },
+   "xp": 0.78,
+   "p_play": 0.917,
+   "if_plays": 0.86,
+   "ff_prob": 90,
+   "ff_status": "titular"
+  },
+  "8953": {
+   "next": {
+    "8": 2.67,
+    "9": 3.4,
+    "10": 2.93
+   },
+   "xp": 2.67,
+   "p_play": 0.663,
+   "if_plays": 4.02,
+   "ff_prob": 60,
+   "ff_status": "titular"
+  },
+  "10967": {
+   "next": {
+    "8": 3.87,
+    "9": 4.33,
+    "10": 4.36
+   },
+   "xp": 3.87,
+   "p_play": 0.752,
+   "if_plays": 5.15,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "11092": {
+   "next": {
+    "8": 0.32,
+    "9": 0.22,
+    "10": 0.33
+   },
+   "xp": 0.32,
+   "p_play": 0.106,
+   "if_plays": 3.05,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "11186": {
+   "next": {
+    "8": 0.68,
+    "9": 1.43,
+    "10": 1.18
+   },
+   "xp": 0.68,
+   "p_play": 0.258,
+   "if_plays": 2.64,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "11472": {
+   "next": {
+    "8": 4.27,
+    "9": 3.02,
+    "10": 3.58
+   },
+   "xp": 4.27,
+   "p_play": 0.769,
+   "if_plays": 5.55,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "11697": {
+   "next": {
+    "8": 3.45,
+    "9": 2.71,
+    "10": 3.43
+   },
+   "xp": 3.45,
+   "p_play": 0.841,
+   "if_plays": 4.1,
+   "ff_prob": 90,
+   "ff_status": "titular"
+  },
+  "11761": {
+   "next": {
+    "8": 0.13,
+    "9": 0.14,
+    "10": 1.15
+   },
+   "xp": 0.13,
+   "p_play": 0.03,
+   "if_plays": 4.41,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "11866": {
+   "next": {
+    "8": 3.0,
+    "9": 4.44,
+    "10": 3.85
+   },
+   "xp": 3.0,
+   "p_play": 0.764,
+   "if_plays": 3.93,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "12900": {
+   "next": {
+    "8": 5.3,
+    "9": 7.17,
+    "10": 4.58
+   },
+   "xp": 5.3,
+   "p_play": 0.773,
+   "if_plays": 6.86,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "12902": {
+   "next": {
+    "8": 0.09,
+    "9": 0.4,
+    "10": 0.35
+   },
    "xp": 0.09,
    "p_play": 0.03,
    "if_plays": 3.03,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
-  "5916": {
-   "xp": 1.32,
-   "p_play": 0.49,
-   "if_plays": 2.69,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "5917": {
-   "xp": 1.98,
-   "p_play": 0.46,
-   "if_plays": 4.32,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "5920": {
-   "xp": 1.24,
-   "p_play": 0.49,
-   "if_plays": 2.54,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "6032": {
-   "xp": 4.11,
-   "p_play": 0.822,
-   "if_plays": 4.99,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "6034": {
-   "xp": 4.42,
-   "p_play": 0.84,
-   "if_plays": 5.26,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "6035": {
-   "xp": 0.06,
-   "p_play": 0.03,
-   "if_plays": 1.93,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "6044": {
-   "xp": 1.06,
-   "p_play": 0.736,
-   "if_plays": 1.44,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "6065": {
-   "xp": 1.56,
-   "p_play": 0.428,
-   "if_plays": 3.65,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "7011": {
-   "xp": 2.66,
-   "p_play": 0.792,
-   "if_plays": 3.36,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "7024": {
-   "xp": 0.17,
-   "p_play": 0.03,
-   "if_plays": 5.54,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "7025": {
-   "xp": 3.4,
-   "p_play": 0.735,
-   "if_plays": 4.62,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "7784": {
-   "xp": 1.55,
-   "p_play": 0.435,
-   "if_plays": 3.57,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "7893": {
-   "xp": 4.09,
-   "p_play": 0.954,
-   "if_plays": 4.29,
-   "ff_prob": 95,
-   "ff_status": "titular"
-  },
-  "8171": {
-   "xp": 1.7,
-   "p_play": 0.917,
-   "if_plays": 1.86,
-   "ff_prob": 90,
-   "ff_status": "titular"
-  },
-  "8953": {
-   "xp": 2.46,
-   "p_play": 0.664,
-   "if_plays": 3.7,
-   "ff_prob": 60,
-   "ff_status": "titular"
-  },
-  "10967": {
-   "xp": 3.96,
-   "p_play": 0.762,
-   "if_plays": 5.2,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "11092": {
-   "xp": 0.26,
-   "p_play": 0.106,
-   "if_plays": 2.5,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "11186": {
-   "xp": 0.69,
-   "p_play": 0.26,
-   "if_plays": 2.66,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "11472": {
-   "xp": 4.23,
-   "p_play": 0.796,
-   "if_plays": 5.31,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "11697": {
-   "xp": 3.67,
-   "p_play": 0.86,
-   "if_plays": 4.27,
-   "ff_prob": 90,
-   "ff_status": "titular"
-  },
-  "11761": {
-   "xp": 0.13,
-   "p_play": 0.03,
-   "if_plays": 4.45,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "11866": {
-   "xp": 3.17,
-   "p_play": 0.773,
-   "if_plays": 4.11,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "12900": {
-   "xp": 5.43,
-   "p_play": 0.78,
-   "if_plays": 6.96,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "12902": {
-   "xp": 0.09,
-   "p_play": 0.03,
-   "if_plays": 2.99,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
   "12915": {
-   "xp": 4.03,
-   "p_play": 0.642,
-   "if_plays": 6.28,
+   "next": {
+    "8": 3.8,
+    "9": 3.48,
+    "10": 4.68
+   },
+   "xp": 3.8,
+   "p_play": 0.638,
+   "if_plays": 5.96,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "12946": {
-   "xp": 1.65,
-   "p_play": 0.529,
-   "if_plays": 3.12,
+   "next": {
+    "8": 1.66,
+    "9": 3.2,
+    "10": 3.33
+   },
+   "xp": 1.66,
+   "p_play": 0.515,
+   "if_plays": 3.22,
    "ff_prob": 40,
    "ff_status": "suplente"
   },
   "12949": {
-   "xp": 3.12,
-   "p_play": 0.649,
-   "if_plays": 4.81,
+   "next": {
+    "8": 3.05,
+    "9": 2.76,
+    "10": 2.99
+   },
+   "xp": 3.05,
+   "p_play": 0.65,
+   "if_plays": 4.69,
    "ff_prob": 60,
    "ff_status": "titular"
   },
   "13005": {
-   "xp": 0.18,
-   "p_play": 0.059,
-   "if_plays": 3.07,
+   "next": {
+    "8": 0.19,
+    "9": 0.34,
+    "10": -0.05
+   },
+   "xp": 0.19,
+   "p_play": 0.067,
+   "if_plays": 2.87,
    "ff_prob": 5,
    "ff_status": "suplente"
   },
   "13011": {
+   "next": {
+    "8": 0.98,
+    "9": 0.57,
+    "10": 0.41
+   },
    "xp": 0.98,
-   "p_play": 0.338,
-   "if_plays": 2.9,
+   "p_play": 0.329,
+   "if_plays": 2.96,
    "ff_prob": 40,
    "ff_status": "suplente"
   },
   "13420": {
-   "xp": 0.63,
-   "p_play": 0.189,
-   "if_plays": 3.31,
+   "next": {
+    "8": 0.8,
+    "9": 1.87,
+    "10": 1.61
+   },
+   "xp": 0.8,
+   "p_play": 0.244,
+   "if_plays": 3.26,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "14379": {
-   "xp": 2.19,
-   "p_play": 0.604,
-   "if_plays": 3.63,
+   "next": {
+    "8": 2.3,
+    "9": 1.77,
+    "10": 1.5
+   },
+   "xp": 2.3,
+   "p_play": 0.618,
+   "if_plays": 3.72,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "14432": {
-   "xp": 0.09,
+   "next": {
+    "8": 0.08,
+    "9": 0.36,
+    "10": 0.29
+   },
+   "xp": 0.08,
    "p_play": 0.03,
-   "if_plays": 2.99,
+   "if_plays": 2.72,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "14670": {
-   "xp": 5.29,
-   "p_play": 0.94,
-   "if_plays": 5.64,
+   "next": {
+    "8": 5.28,
+    "9": 5.72,
+    "10": 2.26
+   },
+   "xp": 5.28,
+   "p_play": 0.933,
+   "if_plays": 5.66,
    "ff_prob": 95,
    "ff_status": "titular"
   },
   "14691": {
-   "xp": 4.72,
-   "p_play": 0.842,
-   "if_plays": 5.61,
+   "next": {
+    "8": 5.45,
+    "9": 6.29,
+    "10": 5.86
+   },
+   "xp": 5.45,
+   "p_play": 0.844,
+   "if_plays": 6.46,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "14789": {
-   "xp": 4.57,
-   "p_play": 0.898,
-   "if_plays": 5.09,
+   "next": {
+    "8": 5.01,
+    "9": 5.64,
+    "10": 6.42
+   },
+   "xp": 5.01,
+   "p_play": 0.909,
+   "if_plays": 5.51,
    "ff_prob": 90,
    "ff_status": "titular"
   },
   "14791": {
-   "xp": 1.55,
-   "p_play": 0.442,
-   "if_plays": 3.51,
+   "next": {
+    "8": 1.46,
+    "9": 2.8,
+    "10": 3.36
+   },
+   "xp": 1.46,
+   "p_play": 0.417,
+   "if_plays": 3.5,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "14811": {
-   "xp": 4.86,
-   "p_play": 0.95,
-   "if_plays": 5.11,
+   "next": {
+    "8": 5.29,
+    "9": 5.98,
+    "10": 6.36
+   },
+   "xp": 5.29,
+   "p_play": 0.946,
+   "if_plays": 5.59,
    "ff_prob": 95,
    "ff_status": "titular"
   },
   "14911": {
-   "xp": 4.92,
-   "p_play": 0.842,
-   "if_plays": 5.84,
+   "next": {
+    "8": 4.67,
+    "9": 5.03,
+    "10": 4.67
+   },
+   "xp": 4.67,
+   "p_play": 0.839,
+   "if_plays": 5.56,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "15107": {
-   "xp": 2.8,
-   "p_play": 0.694,
-   "if_plays": 4.04,
+   "next": {
+    "8": 2.92,
+    "9": 3.61,
+    "10": 0.7
+   },
+   "xp": 2.92,
+   "p_play": 0.72,
+   "if_plays": 4.06,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "15109": {
-   "xp": 0.96,
-   "p_play": 0.208,
-   "if_plays": 4.59,
+   "next": {
+    "8": 1.03,
+    "9": 1.18,
+    "10": 1.87
+   },
+   "xp": 1.03,
+   "p_play": 0.225,
+   "if_plays": 4.57,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "15338": {
-   "xp": 2.64,
-   "p_play": 0.528,
-   "if_plays": 5.0,
+   "next": {
+    "8": 2.6,
+    "9": 3.17,
+    "10": 3.37
+   },
+   "xp": 2.6,
+   "p_play": 0.541,
+   "if_plays": 4.79,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "15342": {
-   "xp": 3.81,
+   "next": {
+    "8": 3.77,
+    "9": 5.48,
+    "10": 5.52
+   },
+   "xp": 3.77,
    "p_play": 0.637,
-   "if_plays": 5.98,
+   "if_plays": 5.92,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "15344": {
-   "xp": 1.54,
-   "p_play": 0.419,
-   "if_plays": 3.67,
+   "next": {
+    "8": 1.65,
+    "9": 2.14,
+    "10": 0.91
+   },
+   "xp": 1.65,
+   "p_play": 0.421,
+   "if_plays": 3.92,
    "ff_prob": 40,
    "ff_status": "suplente"
   },
   "15345": {
-   "xp": 0.71,
-   "p_play": 0.261,
-   "if_plays": 2.72,
+   "next": {
+    "8": 0.84,
+    "9": 1.59,
+    "10": 1.42
+   },
+   "xp": 0.84,
+   "p_play": 0.265,
+   "if_plays": 3.16,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "15566": {
-   "xp": 2.45,
-   "p_play": 0.715,
-   "if_plays": 3.43,
+   "next": {
+    "8": 2.66,
+    "9": 2.8,
+    "10": 2.83
+   },
+   "xp": 2.66,
+   "p_play": 0.734,
+   "if_plays": 3.63,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "15653": {
-   "xp": 3.46,
-   "p_play": 0.627,
-   "if_plays": 5.51,
+   "next": {
+    "8": 3.87,
+    "9": 5.67,
+    "10": 6.46
+   },
+   "xp": 3.87,
+   "p_play": 0.636,
+   "if_plays": 6.09,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "15693": {
-   "xp": 1.24,
-   "p_play": 0.405,
-   "if_plays": 3.05,
+   "next": {
+    "8": 1.05,
+    "9": 1.85,
+    "10": 2.31
+   },
+   "xp": 1.05,
+   "p_play": 0.419,
+   "if_plays": 2.51,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "15756": {
-   "xp": 3.49,
-   "p_play": 0.799,
-   "if_plays": 4.36,
+   "next": {
+    "8": 3.38,
+    "9": 3.42,
+    "10": 2.99
+   },
+   "xp": 3.38,
+   "p_play": 0.781,
+   "if_plays": 4.33,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "16868": {
-   "xp": 0.84,
-   "p_play": 0.371,
-   "if_plays": 2.27,
+   "next": {
+    "8": 1.11,
+    "9": 1.52,
+    "10": 2.11
+   },
+   "xp": 1.11,
+   "p_play": 0.382,
+   "if_plays": 2.9,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "17290": {
-   "xp": 5.97,
-   "p_play": 0.921,
-   "if_plays": 6.49,
+   "next": {
+    "8": 5.67,
+    "9": 5.8,
+    "10": 5.42
+   },
+   "xp": 5.67,
+   "p_play": 0.92,
+   "if_plays": 6.16,
    "ff_prob": 90,
    "ff_status": "titular"
   },
   "17450": {
-   "xp": 0.12,
-   "p_play": 0.03,
-   "if_plays": 3.85,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "17452": {
-   "xp": 0.12,
-   "p_play": 0.03,
-   "if_plays": 4.04,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "17453": {
-   "xp": 0.15,
-   "p_play": 0.03,
-   "if_plays": 4.85,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "17459": {
-   "xp": 0.11,
-   "p_play": 0.03,
-   "if_plays": 3.54,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "17568": {
-   "xp": 0.79,
-   "p_play": 0.276,
-   "if_plays": 2.86,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "17614": {
-   "xp": 1.15,
-   "p_play": 0.381,
-   "if_plays": 3.02,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "17615": {
-   "xp": 1.49,
-   "p_play": 0.387,
-   "if_plays": 3.86,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "17623": {
-   "xp": 0.08,
-   "p_play": 0.03,
-   "if_plays": 2.7,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "17989": {
-   "xp": 4.0,
-   "p_play": 0.764,
-   "if_plays": 5.23,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "18004": {
-   "xp": 5.18,
-   "p_play": 0.914,
-   "if_plays": 5.67,
-   "ff_prob": 90,
-   "ff_status": "titular"
-  },
-  "18109": {
-   "xp": 1.99,
-   "p_play": 0.456,
-   "if_plays": 4.36,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "18186": {
-   "xp": 1.7,
-   "p_play": 0.329,
-   "if_plays": 5.16,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "18531": {
-   "xp": 1.73,
-   "p_play": 0.621,
-   "if_plays": 2.78,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "19168": {
-   "xp": 0.65,
-   "p_play": 0.824,
-   "if_plays": 0.79,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "19524": {
-   "xp": 0.08,
-   "p_play": 0.03,
-   "if_plays": 2.83,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "19527": {
-   "xp": 2.91,
-   "p_play": 0.859,
-   "if_plays": 3.39,
-   "ff_prob": 90,
-   "ff_status": "titular"
-  },
-  "19562": {
-   "xp": 2.29,
-   "p_play": 0.489,
-   "if_plays": 4.69,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "19727": {
-   "xp": 1.4,
-   "p_play": 0.324,
-   "if_plays": 4.33,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "19927": {
-   "xp": 1.5,
-   "p_play": 0.397,
-   "if_plays": 3.79,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "20131": {
-   "xp": 3.79,
-   "p_play": 0.806,
-   "if_plays": 4.69,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "20141": {
-   "xp": 4.93,
-   "p_play": 0.855,
-   "if_plays": 5.77,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "20346": {
-   "xp": 3.24,
-   "p_play": 0.759,
-   "if_plays": 4.26,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "20449": {
-   "xp": 6.0,
-   "p_play": 0.926,
-   "if_plays": 6.48,
-   "ff_prob": 90,
-   "ff_status": "titular"
-  },
-  "22471": {
+   "next": {
+    "8": 0.11,
+    "9": -0.08,
+    "10": 0.38
+   },
    "xp": 0.11,
    "p_play": 0.03,
    "if_plays": 3.65,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
+  "17452": {
+   "next": {
+    "8": 0.1,
+    "9": 0.74,
+    "10": 0.01
+   },
+   "xp": 0.1,
+   "p_play": 0.03,
+   "if_plays": 3.26,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "17453": {
+   "next": {
+    "8": 0.14,
+    "9": 0.29,
+    "10": 0.26
+   },
+   "xp": 0.14,
+   "p_play": 0.03,
+   "if_plays": 4.81,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "17459": {
+   "next": {
+    "8": 0.11,
+    "9": 0.48,
+    "10": 0.2
+   },
+   "xp": 0.11,
+   "p_play": 0.03,
+   "if_plays": 3.8,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "17568": {
+   "next": {
+    "8": 0.78,
+    "9": 1.18,
+    "10": 0.99
+   },
+   "xp": 0.78,
+   "p_play": 0.271,
+   "if_plays": 2.89,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "17614": {
+   "next": {
+    "8": 1.22,
+    "9": 1.8,
+    "10": 1.69
+   },
+   "xp": 1.22,
+   "p_play": 0.39,
+   "if_plays": 3.13,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "17615": {
+   "next": {
+    "8": 1.44,
+    "9": 2.07,
+    "10": 1.79
+   },
+   "xp": 1.44,
+   "p_play": 0.344,
+   "if_plays": 4.18,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "17623": {
+   "next": {
+    "8": 0.09,
+    "9": 0.3,
+    "10": -0.02
+   },
+   "xp": 0.09,
+   "p_play": 0.03,
+   "if_plays": 2.99,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "17989": {
+   "next": {
+    "8": 3.56,
+    "9": 3.98,
+    "10": 3.64
+   },
+   "xp": 3.56,
+   "p_play": 0.75,
+   "if_plays": 4.75,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "18004": {
+   "next": {
+    "8": 4.83,
+    "9": 4.71,
+    "10": 4.55
+   },
+   "xp": 4.83,
+   "p_play": 0.902,
+   "if_plays": 5.36,
+   "ff_prob": 90,
+   "ff_status": "titular"
+  },
+  "18109": {
+   "next": {
+    "8": 1.89,
+    "9": 4.09,
+    "10": 3.58
+   },
+   "xp": 1.89,
+   "p_play": 0.447,
+   "if_plays": 4.23,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "18186": {
+   "next": {
+    "8": 1.61,
+    "9": 1.67,
+    "10": 1.24
+   },
+   "xp": 1.61,
+   "p_play": 0.318,
+   "if_plays": 5.08,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "18531": {
+   "next": {
+    "8": 1.61,
+    "9": 1.28,
+    "10": 1.45
+   },
+   "xp": 1.61,
+   "p_play": 0.597,
+   "if_plays": 2.7,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "19168": {
+   "next": {
+    "8": 1.12,
+    "9": 3.12,
+    "10": 2.89
+   },
+   "xp": 1.12,
+   "p_play": 0.814,
+   "if_plays": 1.38,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "19524": {
+   "next": {
+    "8": 0.09,
+    "9": 0.09,
+    "10": 0.28
+   },
+   "xp": 0.09,
+   "p_play": 0.03,
+   "if_plays": 2.91,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "19527": {
+   "next": {
+    "8": 2.82,
+    "9": 2.31,
+    "10": 2.18
+   },
+   "xp": 2.82,
+   "p_play": 0.848,
+   "if_plays": 3.33,
+   "ff_prob": 90,
+   "ff_status": "titular"
+  },
+  "19562": {
+   "next": {
+    "8": 2.26,
+    "9": 3.19,
+    "10": 3.21
+   },
+   "xp": 2.26,
+   "p_play": 0.501,
+   "if_plays": 4.51,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "19727": {
+   "next": {
+    "8": 1.67,
+    "9": 1.7,
+    "10": 2.65
+   },
+   "xp": 1.67,
+   "p_play": 0.359,
+   "if_plays": 4.65,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "19927": {
+   "next": {
+    "8": 1.39,
+    "9": 2.78,
+    "10": 2.64
+   },
+   "xp": 1.39,
+   "p_play": 0.375,
+   "if_plays": 3.7,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "20131": {
+   "next": {
+    "8": 3.91,
+    "9": 3.31,
+    "10": 3.72
+   },
+   "xp": 3.91,
+   "p_play": 0.798,
+   "if_plays": 4.9,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "20141": {
+   "next": {
+    "8": 4.5,
+    "9": 4.08,
+    "10": 4.4
+   },
+   "xp": 4.5,
+   "p_play": 0.851,
+   "if_plays": 5.29,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "20346": {
+   "next": {
+    "8": 2.78,
+    "9": 3.3,
+    "10": 2.84
+   },
+   "xp": 2.78,
+   "p_play": 0.779,
+   "if_plays": 3.58,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "20449": {
+   "next": {
+    "8": 5.83,
+    "9": 5.13,
+    "10": 5.47
+   },
+   "xp": 5.83,
+   "p_play": 0.926,
+   "if_plays": 6.29,
+   "ff_prob": 90,
+   "ff_status": "titular"
+  },
+  "22471": {
+   "next": {
+    "8": 0.11,
+    "9": 1.35,
+    "10": 1.21
+   },
+   "xp": 0.11,
+   "p_play": 0.03,
+   "if_plays": 3.77,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
   "22486": {
-   "xp": 1.72,
-   "p_play": 0.468,
-   "if_plays": 3.68,
+   "next": {
+    "8": 1.67,
+    "9": 1.73,
+    "10": 1.85
+   },
+   "xp": 1.67,
+   "p_play": 0.473,
+   "if_plays": 3.53,
    "ff_prob": 40,
    "ff_status": "suplente"
   },
   "22495": {
-   "xp": 1.83,
-   "p_play": 0.563,
+   "next": {
+    "8": 1.86,
+    "9": 2.03,
+    "10": 3.25
+   },
+   "xp": 1.86,
+   "p_play": 0.571,
    "if_plays": 3.25,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "22502": {
-   "xp": 4.53,
-   "p_play": 0.768,
-   "if_plays": 5.9,
+   "next": {
+    "8": 4.96,
+    "9": 5.96,
+    "10": 6.75
+   },
+   "xp": 4.96,
+   "p_play": 0.775,
+   "if_plays": 6.4,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "22527": {
-   "xp": 2.03,
-   "p_play": 0.501,
-   "if_plays": 4.06,
+   "next": {
+    "8": 2.04,
+    "9": 1.97,
+    "10": 1.89
+   },
+   "xp": 2.04,
+   "p_play": 0.5,
+   "if_plays": 4.07,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "22547": {
-   "xp": 6.68,
-   "p_play": 0.84,
-   "if_plays": 7.95,
+   "next": {
+    "8": 6.49,
+    "9": 6.61,
+    "10": 6.03
+   },
+   "xp": 6.49,
+   "p_play": 0.839,
+   "if_plays": 7.73,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "22595": {
-   "xp": 2.42,
-   "p_play": 0.607,
-   "if_plays": 4.0,
+   "next": {
+    "8": 2.45,
+    "9": 3.91,
+    "10": 3.11
+   },
+   "xp": 2.45,
+   "p_play": 0.617,
+   "if_plays": 3.98,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "22601": {
+   "next": {
+    "8": 2.72,
+    "9": 4.86,
+    "10": 4.26
+   },
    "xp": 2.72,
-   "p_play": 0.624,
-   "if_plays": 4.36,
+   "p_play": 0.627,
+   "if_plays": 4.34,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "22604": {
-   "xp": 4.09,
-   "p_play": 0.779,
-   "if_plays": 5.25,
+   "next": {
+    "8": 3.66,
+    "9": 3.06,
+    "10": 3.05
+   },
+   "xp": 3.66,
+   "p_play": 0.784,
+   "if_plays": 4.66,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "22668": {
-   "xp": 1.33,
-   "p_play": 0.415,
-   "if_plays": 3.2,
+   "next": {
+    "8": 1.29,
+    "9": 1.97,
+    "10": 1.85
+   },
+   "xp": 1.29,
+   "p_play": 0.402,
+   "if_plays": 3.21,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "22885": {
-   "xp": 0.7,
-   "p_play": 0.213,
-   "if_plays": 3.28,
+   "next": {
+    "8": 0.61,
+    "9": 0.86,
+    "10": 0.99
+   },
+   "xp": 0.61,
+   "p_play": 0.207,
+   "if_plays": 2.97,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "22956": {
-   "xp": 3.74,
-   "p_play": 0.832,
-   "if_plays": 4.5,
+   "next": {
+    "8": 3.83,
+    "9": 4.56,
+    "10": 4.25
+   },
+   "xp": 3.83,
+   "p_play": 0.826,
+   "if_plays": 4.64,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "23147": {
-   "xp": 2.44,
-   "p_play": 0.546,
-   "if_plays": 4.48,
+   "next": {
+    "8": 2.13,
+    "9": 2.5,
+    "10": 2.79
+   },
+   "xp": 2.13,
+   "p_play": 0.549,
+   "if_plays": 3.88,
    "ff_prob": 40,
    "ff_status": "suplente"
   },
   "23172": {
-   "xp": 2.41,
-   "p_play": 0.592,
-   "if_plays": 4.06,
+   "next": {
+    "8": 2.34,
+    "9": 3.05,
+    "10": 2.69
+   },
+   "xp": 2.34,
+   "p_play": 0.588,
+   "if_plays": 3.98,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "23369": {
+   "next": {
+    "8": 1.52,
+    "9": 2.38,
+    "10": 2.61
+   },
    "xp": 1.52,
-   "p_play": 0.467,
-   "if_plays": 3.25,
+   "p_play": 0.516,
+   "if_plays": 2.94,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "23664": {
-   "xp": 1.8,
-   "p_play": 0.587,
-   "if_plays": 3.06,
+   "next": {
+    "8": 1.72,
+    "9": 2.41,
+    "10": 2.95
+   },
+   "xp": 1.72,
+   "p_play": 0.581,
+   "if_plays": 2.96,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "24691": {
-   "xp": 0.24,
-   "p_play": 0.158,
-   "if_plays": 1.55,
+   "next": {
+    "8": 0.39,
+    "9": 0.69,
+    "10": 1.04
+   },
+   "xp": 0.39,
+   "p_play": 0.172,
+   "if_plays": 2.25,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "24742": {
-   "xp": 1.2,
-   "p_play": 0.276,
-   "if_plays": 4.35,
+   "next": {
+    "8": 1.05,
+    "9": 1.12,
+    "10": 1.05
+   },
+   "xp": 1.05,
+   "p_play": 0.296,
+   "if_plays": 3.56,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "24778": {
-   "xp": 3.66,
-   "p_play": 0.769,
-   "if_plays": 4.75,
+   "next": {
+    "8": 3.9,
+    "9": 5.25,
+    "10": 6.03
+   },
+   "xp": 3.9,
+   "p_play": 0.771,
+   "if_plays": 5.06,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "24789": {
-   "xp": 0.18,
+   "next": {
+    "8": 0.19,
+    "9": 3.27,
+    "10": 3.68
+   },
+   "xp": 0.19,
    "p_play": 0.03,
-   "if_plays": 6.07,
+   "if_plays": 6.19,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "24792": {
-   "xp": 4.45,
-   "p_play": 0.907,
-   "if_plays": 4.91,
+   "next": {
+    "8": 4.33,
+    "9": 3.21,
+    "10": 5.31
+   },
+   "xp": 4.33,
+   "p_play": 0.897,
+   "if_plays": 4.82,
    "ff_prob": 90,
    "ff_status": "titular"
   },
   "25579": {
+   "next": {
+    "8": 3.3,
+    "9": 2.68,
+    "10": 2.85
+   },
    "xp": 3.3,
-   "p_play": 0.805,
-   "if_plays": 4.1,
+   "p_play": 0.811,
+   "if_plays": 4.07,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "25621": {
-   "xp": 4.15,
-   "p_play": 0.816,
-   "if_plays": 5.09,
+   "next": {
+    "8": 4.1,
+    "9": 4.24,
+    "10": 3.93
+   },
+   "xp": 4.1,
+   "p_play": 0.797,
+   "if_plays": 5.14,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "25630": {
-   "xp": 3.28,
-   "p_play": 0.817,
-   "if_plays": 4.02,
+   "next": {
+    "8": 3.64,
+    "9": 2.98,
+    "10": 3.52
+   },
+   "xp": 3.64,
+   "p_play": 0.813,
+   "if_plays": 4.47,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "25631": {
-   "xp": 3.41,
-   "p_play": 0.784,
-   "if_plays": 4.35,
+   "next": {
+    "8": 3.43,
+    "9": 5.18,
+    "10": 5.87
+   },
+   "xp": 3.43,
+   "p_play": 0.782,
+   "if_plays": 4.39,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "25867": {
-   "xp": 2.93,
-   "p_play": 0.877,
-   "if_plays": 3.34,
+   "next": {
+    "8": 3.12,
+    "9": 2.62,
+    "10": 3.45
+   },
+   "xp": 3.12,
+   "p_play": 0.868,
+   "if_plays": 3.6,
    "ff_prob": 90,
    "ff_status": "titular"
   },
   "27333": {
-   "xp": 4.45,
-   "p_play": 0.731,
-   "if_plays": 6.09,
+   "next": {
+    "8": 4.01,
+    "9": 3.61,
+    "10": 2.75
+   },
+   "xp": 4.01,
+   "p_play": 0.703,
+   "if_plays": 5.71,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "27422": {
-   "xp": 0.07,
+   "next": {
+    "8": 0.08,
+    "9": 0.3,
+    "10": 0.26
+   },
+   "xp": 0.08,
    "p_play": 0.03,
-   "if_plays": 2.19,
+   "if_plays": 2.82,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "27425": {
-   "xp": 2.9,
-   "p_play": 0.762,
-   "if_plays": 3.81,
+   "next": {
+    "8": 2.98,
+    "9": 4.01,
+    "10": 4.76
+   },
+   "xp": 2.98,
+   "p_play": 0.759,
+   "if_plays": 3.93,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "27516": {
-   "xp": 0.14,
+   "next": {
+    "8": 0.13,
+    "9": 0.74,
+    "10": 0.75
+   },
+   "xp": 0.13,
    "p_play": 0.03,
-   "if_plays": 4.82,
+   "if_plays": 4.21,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "27517": {
-   "xp": 2.11,
-   "p_play": 0.505,
-   "if_plays": 4.17,
+   "next": {
+    "8": 1.93,
+    "9": 1.76,
+    "10": 1.59
+   },
+   "xp": 1.93,
+   "p_play": 0.49,
+   "if_plays": 3.95,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "27518": {
-   "xp": 2.53,
-   "p_play": 0.544,
-   "if_plays": 4.64,
+   "next": {
+    "8": 2.33,
+    "9": 3.56,
+    "10": 3.23
+   },
+   "xp": 2.33,
+   "p_play": 0.534,
+   "if_plays": 4.36,
    "ff_prob": 40,
    "ff_status": "suplente"
   },
   "27520": {
-   "xp": 3.72,
-   "p_play": 0.774,
-   "if_plays": 4.8,
+   "next": {
+    "8": 3.63,
+    "9": 0.42,
+    "10": 2.53
+   },
+   "xp": 3.63,
+   "p_play": 0.792,
+   "if_plays": 4.59,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "27852": {
-   "xp": 0.5,
-   "p_play": 0.203,
+   "next": {
+    "8": 0.49,
+    "9": 0.57,
+    "10": 0.55
+   },
+   "xp": 0.49,
+   "p_play": 0.198,
    "if_plays": 2.46,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "27855": {
-   "xp": 0.63,
-   "p_play": 0.178,
-   "if_plays": 3.54,
+   "next": {
+    "8": 0.59,
+    "9": -0.06,
+    "10": 0.21
+   },
+   "xp": 0.59,
+   "p_play": 0.166,
+   "if_plays": 3.53,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "27861": {
-   "xp": 2.82,
-   "p_play": 0.724,
-   "if_plays": 3.89,
+   "next": {
+    "8": 2.63,
+    "9": 3.12,
+    "10": 2.44
+   },
+   "xp": 2.63,
+   "p_play": 0.722,
+   "if_plays": 3.64,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "27865": {
-   "xp": 2.22,
-   "p_play": 0.683,
-   "if_plays": 3.25,
+   "next": {
+    "8": 2.33,
+    "9": 2.77,
+    "10": 2.87
+   },
+   "xp": 2.33,
+   "p_play": 0.697,
+   "if_plays": 3.34,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "27869": {
-   "xp": 1.38,
-   "p_play": 0.436,
-   "if_plays": 3.17,
+   "next": {
+    "8": 1.46,
+    "9": 2.06,
+    "10": 1.49
+   },
+   "xp": 1.46,
+   "p_play": 0.44,
+   "if_plays": 3.32,
    "ff_prob": 40,
    "ff_status": "suplente"
   },
   "27874": {
-   "xp": 3.68,
-   "p_play": 0.792,
-   "if_plays": 4.65,
+   "next": {
+    "8": 3.17,
+    "9": 2.49,
+    "10": 2.48
+   },
+   "xp": 3.17,
+   "p_play": 0.77,
+   "if_plays": 4.12,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "27907": {
-   "xp": 3.9,
-   "p_play": 0.717,
-   "if_plays": 5.44,
+   "next": {
+    "8": 4.03,
+    "9": 3.8,
+    "10": 3.96
+   },
+   "xp": 4.03,
+   "p_play": 0.737,
+   "if_plays": 5.47,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "28395": {
-   "xp": 3.32,
-   "p_play": 0.74,
-   "if_plays": 4.48,
+   "next": {
+    "8": 3.71,
+    "9": 3.39,
+    "10": 3.91
+   },
+   "xp": 3.71,
+   "p_play": 0.735,
+   "if_plays": 5.04,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "28612": {
-   "xp": 5.04,
-   "p_play": 0.914,
-   "if_plays": 5.52,
+   "next": {
+    "8": 5.2,
+    "9": 3.86,
+    "10": 4.25
+   },
+   "xp": 5.2,
+   "p_play": 0.887,
+   "if_plays": 5.86,
    "ff_prob": 95,
    "ff_status": "titular"
   },
   "28619": {
-   "xp": 1.04,
-   "p_play": 0.314,
-   "if_plays": 3.32,
+   "next": {
+    "8": 1.23,
+    "9": 2.51,
+    "10": 2.28
+   },
+   "xp": 1.23,
+   "p_play": 0.327,
+   "if_plays": 3.77,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "28621": {
-   "xp": -0.04,
-   "p_play": 0.169,
-   "if_plays": -0.25,
+   "next": {
+    "8": -0.27,
+    "9": 0.58,
+    "10": 0.48
+   },
+   "xp": -0.27,
+   "p_play": 0.17,
+   "if_plays": -1.58,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "28677": {
-   "xp": 0.2,
-   "p_play": 0.101,
-   "if_plays": 1.97,
+   "next": {
+    "8": 0.25,
+    "9": 0.46,
+    "10": 0.6
+   },
+   "xp": 0.25,
+   "p_play": 0.122,
+   "if_plays": 2.08,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "28772": {
-   "xp": 0.08,
+   "next": {
+    "8": 0.09,
+    "9": 1.65,
+    "10": 2.03
+   },
+   "xp": 0.09,
    "p_play": 0.03,
-   "if_plays": 2.55,
+   "if_plays": 2.88,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "28773": {
-   "xp": 2.47,
-   "p_play": 0.594,
-   "if_plays": 4.15,
+   "next": {
+    "8": 2.36,
+    "9": 3.95,
+    "10": 4.22
+   },
+   "xp": 2.36,
+   "p_play": 0.605,
+   "if_plays": 3.89,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "28774": {
-   "xp": 5.33,
-   "p_play": 0.905,
-   "if_plays": 5.89,
+   "next": {
+    "8": 6.31,
+    "9": 5.26,
+    "10": 4.8
+   },
+   "xp": 6.31,
+   "p_play": 0.907,
+   "if_plays": 6.95,
    "ff_prob": 95,
    "ff_status": "titular"
   },
   "28776": {
-   "xp": 1.78,
-   "p_play": 0.455,
-   "if_plays": 3.9,
+   "next": {
+    "8": 1.81,
+    "9": 2.26,
+    "10": 2.28
+   },
+   "xp": 1.81,
+   "p_play": 0.46,
+   "if_plays": 3.95,
    "ff_prob": 40,
    "ff_status": "suplente"
   },
   "28779": {
-   "xp": 4.74,
-   "p_play": 0.782,
-   "if_plays": 6.05,
+   "next": {
+    "8": 4.53,
+    "9": 4.74,
+    "10": 4.95
+   },
+   "xp": 4.53,
+   "p_play": 0.777,
+   "if_plays": 5.83,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "28780": {
-   "xp": 3.4,
-   "p_play": 0.812,
-   "if_plays": 4.19,
+   "next": {
+    "8": 3.49,
+    "9": 3.92,
+    "10": 3.24
+   },
+   "xp": 3.49,
+   "p_play": 0.821,
+   "if_plays": 4.26,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "28784": {
-   "xp": 0.6,
-   "p_play": 0.286,
-   "if_plays": 2.09,
+   "next": {
+    "8": 0.62,
+    "9": 0.47,
+    "10": 1.35
+   },
+   "xp": 0.62,
+   "p_play": 0.27,
+   "if_plays": 2.3,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "28787": {
+   "next": {
+    "8": 0.08,
+    "9": 0.5,
+    "10": 0.42
+   },
    "xp": 0.08,
    "p_play": 0.03,
-   "if_plays": 2.77,
+   "if_plays": 2.82,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "28791": {
-   "xp": 1.12,
-   "p_play": 0.406,
-   "if_plays": 2.76,
+   "next": {
+    "8": 1.41,
+    "9": 2.46,
+    "10": 2.07
+   },
+   "xp": 1.41,
+   "p_play": 0.426,
+   "if_plays": 3.3,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "29163": {
-   "xp": 3.31,
-   "p_play": 0.765,
-   "if_plays": 4.33,
+   "next": {
+    "8": 3.66,
+    "9": 2.38,
+    "10": 2.9
+   },
+   "xp": 3.66,
+   "p_play": 0.758,
+   "if_plays": 4.84,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "29166": {
-   "xp": 3.63,
-   "p_play": 0.539,
-   "if_plays": 6.74,
+   "next": {
+    "8": 3.41,
+    "9": 3.36,
+    "10": 2.73
+   },
+   "xp": 3.41,
+   "p_play": 0.511,
+   "if_plays": 6.68,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "29167": {
-   "xp": 0.69,
-   "p_play": 0.226,
-   "if_plays": 3.07,
+   "next": {
+    "8": 0.68,
+    "9": 0.12,
+    "10": 0.18
+   },
+   "xp": 0.68,
+   "p_play": 0.231,
+   "if_plays": 2.93,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "29169": {
-   "xp": 2.68,
-   "p_play": 0.819,
-   "if_plays": 3.27,
+   "next": {
+    "8": 3.05,
+    "9": 2.94,
+    "10": 3.84
+   },
+   "xp": 3.05,
+   "p_play": 0.817,
+   "if_plays": 3.73,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "29205": {
-   "xp": 0.96,
-   "p_play": 0.171,
-   "if_plays": 5.59,
+   "next": {
+    "8": 0.95,
+    "9": 1.71,
+    "10": 1.34
+   },
+   "xp": 0.95,
+   "p_play": 0.165,
+   "if_plays": 5.74,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "29222": {
-   "xp": 3.41,
+   "next": {
+    "8": 3.5,
+    "9": 5.18,
+    "10": 5.99
+   },
+   "xp": 3.5,
    "p_play": 0.643,
-   "if_plays": 5.3,
+   "if_plays": 5.44,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "29223": {
-   "xp": 3.57,
-   "p_play": 0.84,
+   "next": {
+    "8": 3.59,
+    "9": 4.24,
+    "10": 3.51
+   },
+   "xp": 3.59,
+   "p_play": 0.842,
    "if_plays": 4.26,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "29235": {
-   "xp": 0.75,
-   "p_play": 0.153,
-   "if_plays": 4.9,
+   "next": {
+    "8": 0.94,
+    "9": 1.65,
+    "10": 1.46
+   },
+   "xp": 0.94,
+   "p_play": 0.183,
+   "if_plays": 5.13,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "29238": {
+   "next": {
+    "8": 0.06,
+    "9": 0.18,
+    "10": 0.07
+   },
    "xp": 0.06,
    "p_play": 0.03,
-   "if_plays": 2.02,
+   "if_plays": 1.87,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "29402": {
-   "xp": 0.58,
-   "p_play": 0.173,
-   "if_plays": 3.38,
+   "next": {
+    "8": 0.49,
+    "9": 0.87,
+    "10": 0.76
+   },
+   "xp": 0.49,
+   "p_play": 0.162,
+   "if_plays": 3.01,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "29403": {
-   "xp": 4.03,
-   "p_play": 0.823,
-   "if_plays": 4.89,
+   "next": {
+    "8": 3.74,
+    "9": 3.8,
+    "10": 3.46
+   },
+   "xp": 3.74,
+   "p_play": 0.818,
+   "if_plays": 4.58,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "30444": {
-   "xp": 3.76,
-   "p_play": 0.927,
-   "if_plays": 4.06,
+   "next": {
+    "8": 3.91,
+    "9": 3.59,
+    "10": 2.55
+   },
+   "xp": 3.91,
+   "p_play": 0.91,
+   "if_plays": 4.29,
    "ff_prob": 95,
    "ff_status": "titular"
   },
   "31128": {
-   "xp": 0.09,
+   "next": {
+    "8": 0.08,
+    "9": 0.51,
+    "10": 0.37
+   },
+   "xp": 0.08,
    "p_play": 0.03,
-   "if_plays": 2.97,
+   "if_plays": 2.68,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "31226": {
-   "xp": 2.62,
-   "p_play": 0.633,
-   "if_plays": 4.14,
+   "next": {
+    "8": 2.51,
+    "9": 4.57,
+    "10": 3.96
+   },
+   "xp": 2.51,
+   "p_play": 0.628,
+   "if_plays": 3.99,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "31355": {
-   "xp": 0.88,
-   "p_play": 0.249,
-   "if_plays": 3.52,
+   "next": {
+    "8": 0.91,
+    "9": 1.15,
+    "10": 1.35
+   },
+   "xp": 0.91,
+   "p_play": 0.227,
+   "if_plays": 4.02,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "31484": {
-   "xp": 2.14,
-   "p_play": 0.567,
-   "if_plays": 3.78,
+   "next": {
+    "8": 2.43,
+    "9": 3.72,
+    "10": 1.67
+   },
+   "xp": 2.43,
+   "p_play": 0.578,
+   "if_plays": 4.2,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "31496": {
-   "xp": 3.62,
-   "p_play": 0.737,
-   "if_plays": 4.9,
+   "next": {
+    "8": 3.39,
+    "9": 0.48,
+    "10": 2.64
+   },
+   "xp": 3.39,
+   "p_play": 0.729,
+   "if_plays": 4.65,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "33053": {
-   "xp": 3.99,
-   "p_play": 0.755,
-   "if_plays": 5.28,
+   "next": {
+    "8": 3.97,
+    "9": 3.91,
+    "10": 4.34
+   },
+   "xp": 3.97,
+   "p_play": 0.747,
+   "if_plays": 5.32,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "33717": {
-   "xp": 1.72,
-   "p_play": 0.507,
-   "if_plays": 3.4,
+   "next": {
+    "8": 1.95,
+    "9": 1.62,
+    "10": 1.97
+   },
+   "xp": 1.95,
+   "p_play": 0.504,
+   "if_plays": 3.86,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "33726": {
+   "next": {
+    "8": 2.98,
+    "9": 4.55,
+    "10": 5.22
+   },
    "xp": 2.98,
-   "p_play": 0.778,
+   "p_play": 0.777,
    "if_plays": 3.83,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "33734": {
-   "xp": 5.24,
-   "p_play": 0.767,
-   "if_plays": 6.83,
+   "next": {
+    "8": 4.72,
+    "9": 3.47,
+    "10": 4.59
+   },
+   "xp": 4.72,
+   "p_play": 0.754,
+   "if_plays": 6.27,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "33896": {
-   "xp": 3.02,
-   "p_play": 0.772,
-   "if_plays": 3.91,
+   "next": {
+    "8": 3.08,
+    "9": 4.62,
+    "10": 4.78
+   },
+   "xp": 3.08,
+   "p_play": 0.777,
+   "if_plays": 3.97,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "35059": {
-   "xp": 3.47,
-   "p_play": 0.767,
-   "if_plays": 4.53,
+   "next": {
+    "8": 3.41,
+    "9": 4.89,
+    "10": 5.49
+   },
+   "xp": 3.41,
+   "p_play": 0.761,
+   "if_plays": 4.48,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "35434": {
-   "xp": 3.29,
-   "p_play": 0.762,
-   "if_plays": 4.31,
+   "next": {
+    "8": 2.74,
+    "9": 2.64,
+    "10": 2.97
+   },
+   "xp": 2.74,
+   "p_play": 0.776,
+   "if_plays": 3.53,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "35922": {
+   "next": {
+    "8": 0.47,
+    "9": 0.9,
+    "10": 0.73
+   },
    "xp": 0.47,
-   "p_play": 0.182,
-   "if_plays": 2.57,
+   "p_play": 0.185,
+   "if_plays": 2.54,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "36046": {
-   "xp": 3.69,
-   "p_play": 0.821,
-   "if_plays": 4.49,
+   "next": {
+    "8": 3.5,
+    "9": 2.82,
+    "10": 3.12
+   },
+   "xp": 3.5,
+   "p_play": 0.831,
+   "if_plays": 4.21,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "36048": {
-   "xp": 3.55,
-   "p_play": 0.881,
-   "if_plays": 4.03,
+   "next": {
+    "8": 2.72,
+    "9": 2.6,
+    "10": 3.65
+   },
+   "xp": 2.72,
+   "p_play": 0.86,
+   "if_plays": 3.17,
    "ff_prob": 90,
    "ff_status": "titular"
   },
   "36334": {
-   "xp": 1.26,
-   "p_play": 0.395,
-   "if_plays": 3.18,
+   "next": {
+    "8": 1.16,
+    "9": 1.88,
+    "10": 1.43
+   },
+   "xp": 1.16,
+   "p_play": 0.377,
+   "if_plays": 3.08,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "36410": {
+   "next": {
+    "8": 0.15,
+    "9": 2.39,
+    "10": 2.04
+   },
    "xp": 0.15,
    "p_play": 0.03,
-   "if_plays": 5.09,
+   "if_plays": 5.07,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "40089": {
-   "xp": 0.1,
+   "next": {
+    "8": 0.09,
+    "9": 0.94,
+    "10": 0.79
+   },
+   "xp": 0.09,
    "p_play": 0.03,
-   "if_plays": 3.37,
+   "if_plays": 3.06,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "40147": {
-   "xp": 5.42,
-   "p_play": 0.89,
-   "if_plays": 6.09,
+   "next": {
+    "8": 5.39,
+    "9": 6.09,
+    "10": 2.58
+   },
+   "xp": 5.39,
+   "p_play": 0.902,
+   "if_plays": 5.98,
    "ff_prob": 90,
    "ff_status": "titular"
   },
   "40166": {
-   "xp": 3.06,
-   "p_play": 0.719,
-   "if_plays": 4.26,
+   "next": {
+    "8": 3.09,
+    "9": 3.62,
+    "10": 1.71
+   },
+   "xp": 3.09,
+   "p_play": 0.705,
+   "if_plays": 4.38,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "48194": {
-   "xp": 2.07,
-   "p_play": 0.611,
-   "if_plays": 3.38,
+   "next": {
+    "8": 2.0,
+    "9": 3.62,
+    "10": 4.19
+   },
+   "xp": 2.0,
+   "p_play": 0.608,
+   "if_plays": 3.29,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "48203": {
-   "xp": 1.69,
-   "p_play": 0.845,
-   "if_plays": 2.0,
+   "next": {
+    "8": 2.57,
+    "9": 5.16,
+    "10": 4.88
+   },
+   "xp": 2.57,
+   "p_play": 0.848,
+   "if_plays": 3.03,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "48205": {
-   "xp": 2.01,
-   "p_play": 0.565,
-   "if_plays": 3.55,
+   "next": {
+    "8": 2.02,
+    "9": 2.39,
+    "10": 2.08
+   },
+   "xp": 2.02,
+   "p_play": 0.545,
+   "if_plays": 3.7,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "48210": {
-   "xp": 1.7,
-   "p_play": 0.444,
-   "if_plays": 3.84,
+   "next": {
+    "8": 1.59,
+    "9": 2.63,
+    "10": 2.49
+   },
+   "xp": 1.59,
+   "p_play": 0.435,
+   "if_plays": 3.65,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "48486": {
-   "xp": 0.07,
+   "next": {
+    "8": 0.09,
+    "9": 0.53,
+    "10": 0.46
+   },
+   "xp": 0.09,
    "p_play": 0.03,
-   "if_plays": 2.43,
+   "if_plays": 2.94,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "48554": {
+   "next": {
+    "8": 0.1,
+    "9": 0.48,
+    "10": 0.46
+   },
    "xp": 0.1,
    "p_play": 0.03,
-   "if_plays": 3.22,
+   "if_plays": 3.44,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "48556": {
-   "xp": 0.14,
+   "next": {
+    "8": 0.15,
+    "9": 1.56,
+    "10": 1.12
+   },
+   "xp": 0.15,
    "p_play": 0.03,
-   "if_plays": 4.68,
+   "if_plays": 5.02,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "48620": {
+   "next": {
+    "8": 0.06,
+    "9": 0.1,
+    "10": 0.36
+   },
+   "xp": 0.06,
+   "p_play": 0.03,
+   "if_plays": 1.95,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "48657": {
+   "next": {
+    "8": 7.93,
+    "9": 11.6,
+    "10": 10.94
+   },
+   "xp": 7.93,
+   "p_play": 0.65,
+   "if_plays": 12.21,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "48960": {
+   "next": {
+    "8": -0.69,
+    "9": 0.84,
+    "10": 0.7
+   },
+   "xp": -0.69,
+   "p_play": 0.48,
+   "if_plays": -1.44,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "49275": {
+   "next": {
+    "8": 1.31,
+    "9": 1.61,
+    "10": 1.61
+   },
+   "xp": 1.31,
+   "p_play": 0.375,
+   "if_plays": 3.5,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "49296": {
+   "next": {
+    "8": 0.99,
+    "9": 1.67,
+    "10": 1.47
+   },
+   "xp": 0.99,
+   "p_play": 0.299,
+   "if_plays": 3.31,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "49382": {
+   "next": {
+    "8": 2.55,
+    "9": 2.15,
+    "10": 2.53
+   },
+   "xp": 2.55,
+   "p_play": 0.75,
+   "if_plays": 3.4,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "49424": {
+   "next": {
+    "8": 3.59,
+    "9": 2.19,
+    "10": 3.74
+   },
+   "xp": 3.59,
+   "p_play": 0.847,
+   "if_plays": 4.24,
+   "ff_prob": 90,
+   "ff_status": "titular"
+  },
+  "51060": {
+   "next": {
+    "8": 2.14,
+    "9": 3.28,
+    "10": 2.56
+   },
+   "xp": 2.14,
+   "p_play": 0.596,
+   "if_plays": 3.6,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "51134": {
+   "next": {
+    "8": 1.5,
+    "9": 3.57,
+    "10": 4.14
+   },
+   "xp": 1.5,
+   "p_play": 0.471,
+   "if_plays": 3.19,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "51135": {
+   "next": {
+    "8": 1.76,
+    "9": 1.71,
+    "10": 2.1
+   },
+   "xp": 1.76,
+   "p_play": 0.5,
+   "if_plays": 3.52,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "51137": {
+   "next": {
+    "8": 0.34,
+    "9": 0.45,
+    "10": 0.46
+   },
+   "xp": 0.34,
+   "p_play": 0.121,
+   "if_plays": 2.82,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "52117": {
+   "next": {
+    "8": 4.07,
+    "9": 3.03,
+    "10": 3.19
+   },
+   "xp": 4.07,
+   "p_play": 0.866,
+   "if_plays": 4.7,
+   "ff_prob": 90,
+   "ff_status": "titular"
+  },
+  "52162": {
+   "next": {
+    "8": 3.88,
+    "9": 5.0,
+    "10": 5.15
+   },
+   "xp": 3.88,
+   "p_play": 0.831,
+   "if_plays": 4.67,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "52189": {
+   "next": {
+    "8": 3.68,
+    "9": 5.87,
+    "10": 6.02
+   },
+   "xp": 3.68,
+   "p_play": 0.712,
+   "if_plays": 5.16,
+   "ff_prob": 60,
+   "ff_status": "titular"
+  },
+  "52371": {
+   "next": {
+    "8": 2.43,
+    "9": 2.47,
+    "10": 2.33
+   },
+   "xp": 2.43,
+   "p_play": 0.72,
+   "if_plays": 3.38,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "52372": {
+   "next": {
+    "8": 3.91,
+    "9": 5.23,
+    "10": 4.62
+   },
+   "xp": 3.91,
+   "p_play": 0.841,
+   "if_plays": 4.65,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "52375": {
+   "next": {
+    "8": 11.97,
+    "9": 12.27,
+    "10": 11.61
+   },
+   "xp": 11.97,
+   "p_play": 0.93,
+   "if_plays": 12.87,
+   "ff_prob": 90,
+   "ff_status": "titular"
+  },
+  "52377": {
+   "next": {
+    "8": 0.1,
+    "9": 0.54,
+    "10": 0.44
+   },
+   "xp": 0.1,
+   "p_play": 0.03,
+   "if_plays": 3.27,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "52404": {
+   "next": {
+    "8": 0.04,
+    "9": 0.24,
+    "10": 0.7
+   },
+   "xp": 0.04,
+   "p_play": 0.03,
+   "if_plays": 1.33,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "53095": {
+   "next": {
+    "8": 2.1,
+    "9": 2.47,
+    "10": 2.16
+   },
+   "xp": 2.1,
+   "p_play": 0.554,
+   "if_plays": 3.8,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "53098": {
+   "next": {
+    "8": 5.3,
+    "9": 7.01,
+    "10": 7.18
+   },
+   "xp": 5.3,
+   "p_play": 0.859,
+   "if_plays": 6.17,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "53107": {
+   "next": {
+    "8": 2.14,
+    "9": 3.75,
+    "10": 4.12
+   },
+   "xp": 2.14,
+   "p_play": 0.659,
+   "if_plays": 3.25,
+   "ff_prob": 60,
+   "ff_status": "titular"
+  },
+  "53111": {
+   "next": {
+    "8": 5.44,
+    "9": 2.3,
+    "10": 4.63
+   },
+   "xp": 5.44,
+   "p_play": 0.824,
+   "if_plays": 6.6,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "53114": {
+   "next": {
+    "8": 6.55,
+    "9": 8.26,
+    "10": 5.55
+   },
+   "xp": 6.55,
+   "p_play": 0.854,
+   "if_plays": 7.67,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "53143": {
+   "next": {
+    "8": 2.75,
+    "9": 2.9,
+    "10": 3.79
+   },
+   "xp": 2.75,
+   "p_play": 0.746,
+   "if_plays": 3.69,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "53144": {
+   "next": {
+    "8": 1.56,
+    "9": 1.94,
+    "10": 2.59
+   },
+   "xp": 1.56,
+   "p_play": 0.47,
+   "if_plays": 3.33,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "54817": {
+   "next": {
+    "8": 4.8,
+    "9": 6.46,
+    "10": 3.93
+   },
+   "xp": 4.8,
+   "p_play": 0.767,
+   "if_plays": 6.26,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "54832": {
+   "next": {
+    "8": 1.47,
+    "9": 3.01,
+    "10": 3.35
+   },
+   "xp": 1.47,
+   "p_play": 0.576,
+   "if_plays": 2.56,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "54900": {
+   "next": {
+    "8": 3.24,
+    "9": 3.76,
+    "10": 2.99
+   },
+   "xp": 3.24,
+   "p_play": 0.818,
+   "if_plays": 3.96,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "55009": {
+   "next": {
+    "8": 3.72,
+    "9": 4.19,
+    "10": 3.8
+   },
+   "xp": 3.72,
+   "p_play": 0.562,
+   "if_plays": 6.62,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "55045": {
+   "next": {
+    "8": 0.78,
+    "9": 1.37,
+    "10": 1.46
+   },
+   "xp": 0.78,
+   "p_play": 0.231,
+   "if_plays": 3.37,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "55088": {
+   "next": {
+    "8": 0.08,
+    "9": 0.46,
+    "10": 0.55
+   },
+   "xp": 0.08,
+   "p_play": 0.03,
+   "if_plays": 2.62,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "55439": {
+   "next": {
+    "8": 2.4,
+    "9": 4.25,
+    "10": 4.83
+   },
+   "xp": 2.4,
+   "p_play": 0.614,
+   "if_plays": 3.9,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "55452": {
+   "next": {
+    "8": 0.06,
+    "9": 0.27,
+    "10": 0.21
+   },
+   "xp": 0.06,
+   "p_play": 0.03,
+   "if_plays": 2.01,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "55454": {
+   "next": {
+    "8": 0.55,
+    "9": 1.14,
+    "10": 1.15
+   },
+   "xp": 0.55,
+   "p_play": 0.211,
+   "if_plays": 2.6,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "55664": {
+   "next": {
+    "8": 0.76,
+    "9": 0.89,
+    "10": 0.81
+   },
+   "xp": 0.76,
+   "p_play": 0.197,
+   "if_plays": 3.85,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "55666": {
+   "next": {
+    "8": 1.9,
+    "9": 3.21,
+    "10": 1.13
+   },
+   "xp": 1.9,
+   "p_play": 0.389,
+   "if_plays": 4.89,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "55738": {
+   "next": {
+    "8": 2.37,
+    "9": 2.91,
+    "10": 2.59
+   },
+   "xp": 2.37,
+   "p_play": 0.557,
+   "if_plays": 4.26,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "55743": {
+   "next": {
+    "8": 1.26,
+    "9": 2.69,
+    "10": 2.99
+   },
+   "xp": 1.26,
+   "p_play": 0.48,
+   "if_plays": 2.61,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "55966": {
+   "next": {
+    "8": 0.82,
+    "9": 1.33,
+    "10": 0.81
+   },
+   "xp": 0.82,
+   "p_play": 0.271,
+   "if_plays": 3.01,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "56502": {
+   "next": {
+    "8": 1.78,
+    "9": 3.25,
+    "10": 3.94
+   },
+   "xp": 1.78,
+   "p_play": 0.529,
+   "if_plays": 3.36,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "56578": {
+   "next": {
+    "8": 2.69,
+    "9": 3.55,
+    "10": 4.19
+   },
+   "xp": 2.69,
+   "p_play": 0.591,
+   "if_plays": 4.55,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "56583": {
+   "next": {
+    "8": 0.14,
+    "9": 0.64,
+    "10": 0.63
+   },
+   "xp": 0.14,
+   "p_play": 0.03,
+   "if_plays": 4.76,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "56628": {
+   "next": {
+    "8": 3.68,
+    "9": 3.52,
+    "10": 5.03
+   },
+   "xp": 3.68,
+   "p_play": 0.828,
+   "if_plays": 4.44,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "56632": {
+   "next": {
+    "8": 1.27,
+    "9": 1.74,
+    "10": 2.85
+   },
+   "xp": 1.27,
+   "p_play": 0.413,
+   "if_plays": 3.07,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "56924": {
+   "next": {
+    "8": 0.82,
+    "9": 1.47,
+    "10": 1.55
+   },
+   "xp": 0.82,
+   "p_play": 0.219,
+   "if_plays": 3.77,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "56925": {
+   "next": {
+    "8": 4.1,
+    "9": 4.66,
+    "10": 4.36
+   },
+   "xp": 4.1,
+   "p_play": 0.809,
+   "if_plays": 5.07,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "56926": {
+   "next": {
+    "8": 4.83,
+    "9": 4.1,
+    "10": 3.21
+   },
+   "xp": 4.83,
+   "p_play": 0.781,
+   "if_plays": 6.18,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "56971": {
+   "next": {
+    "8": 0.93,
+    "9": 1.63,
+    "10": 1.48
+   },
+   "xp": 0.93,
+   "p_play": 0.25,
+   "if_plays": 3.73,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "58125": {
+   "next": {
+    "8": 0.41,
+    "9": 1.87,
+    "10": 1.71
+   },
+   "xp": 0.41,
+   "p_play": 0.533,
+   "if_plays": 0.78,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "58383": {
+   "next": {
+    "8": 0.03,
+    "9": 0.38,
+    "10": 0.36
+   },
+   "xp": 0.03,
+   "p_play": 0.03,
+   "if_plays": 0.99,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "58436": {
+   "next": {
+    "8": 0.11,
+    "9": 1.21,
+    "10": 1.14
+   },
+   "xp": 0.11,
+   "p_play": 0.03,
+   "if_plays": 3.62,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "58438": {
+   "next": {
+    "8": 1.25,
+    "9": 1.8,
+    "10": 1.52
+   },
+   "xp": 1.25,
+   "p_play": 0.343,
+   "if_plays": 3.64,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "58467": {
+   "next": {
+    "8": 1.06,
+    "9": 1.33,
+    "10": 2.31
+   },
+   "xp": 1.06,
+   "p_play": 0.391,
+   "if_plays": 2.71,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "58820": {
+   "next": {
+    "8": 0.11,
+    "9": 1.15,
+    "10": 0.91
+   },
+   "xp": 0.11,
+   "p_play": 0.03,
+   "if_plays": 3.55,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "58951": {
+   "next": {
+    "8": 0.69,
+    "9": 1.62,
+    "10": 0.67
+   },
+   "xp": 0.69,
+   "p_play": 0.18,
+   "if_plays": 3.81,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "58954": {
+   "next": {
+    "8": 6.68,
+    "9": 10.99,
+    "10": 8.24
+   },
+   "xp": 6.68,
+   "p_play": 0.647,
+   "if_plays": 10.33,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "58958": {
+   "next": {
+    "8": 0.41,
+    "9": 1.07,
+    "10": 0.99
+   },
+   "xp": 0.41,
+   "p_play": 0.125,
+   "if_plays": 3.25,
+   "ff_prob": 5,
+   "ff_status": "suplente"
+  },
+  "58980": {
+   "next": {
+    "8": 0.79,
+    "9": 0.54,
+    "10": 0.44
+   },
+   "xp": 0.79,
+   "p_play": 0.255,
+   "if_plays": 3.1,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "58986": {
+   "next": {
+    "8": 1.82,
+    "9": 2.32,
+    "10": 1.95
+   },
+   "xp": 1.82,
+   "p_play": 0.536,
+   "if_plays": 3.4,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "58992": {
+   "next": {
+    "8": 0.36,
+    "9": 0.87,
+    "10": 1.12
+   },
+   "xp": 0.36,
+   "p_play": 0.165,
+   "if_plays": 2.18,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "59042": {
+   "next": {
+    "8": 0.69,
+    "9": 0.54,
+    "10": 1.02
+   },
+   "xp": 0.69,
+   "p_play": 0.3,
+   "if_plays": 2.31,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "59064": {
+   "next": {
+    "8": -0.1,
+    "9": 0.17,
+    "10": 0.14
+   },
+   "xp": -0.1,
+   "p_play": 0.067,
+   "if_plays": -1.56,
+   "ff_prob": 5,
+   "ff_status": "suplente"
+  },
+  "59089": {
+   "next": {
+    "8": 0.13,
+    "9": 0.26,
+    "10": 0.25
+   },
+   "xp": 0.13,
+   "p_play": 0.065,
+   "if_plays": 2.08,
+   "ff_prob": 5,
+   "ff_status": "suplente"
+  },
+  "59126": {
+   "next": {
+    "8": 0.16,
+    "9": 0.1,
+    "10": 0.2
+   },
+   "xp": 0.16,
+   "p_play": 0.164,
+   "if_plays": 0.98,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "59371": {
+   "next": {
+    "8": 3.44,
+    "9": 3.98,
+    "10": 4.02
+   },
+   "xp": 3.44,
+   "p_play": 0.769,
+   "if_plays": 4.47,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "59382": {
+   "next": {
+    "8": 2.08,
+    "9": 3.27,
+    "10": 3.38
+   },
+   "xp": 2.08,
+   "p_play": 0.566,
+   "if_plays": 3.67,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "59395": {
+   "next": {
+    "8": 2.11,
+    "9": 3.62,
+    "10": 3.31
+   },
+   "xp": 2.11,
+   "p_play": 0.45,
+   "if_plays": 4.68,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "59415": {
+   "next": {
+    "8": 4.19,
+    "9": 5.37,
+    "10": 4.85
+   },
+   "xp": 4.19,
+   "p_play": 0.607,
+   "if_plays": 6.91,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "59476": {
+   "next": {
+    "8": 2.95,
+    "9": 3.83,
+    "10": 4.45
+   },
+   "xp": 2.95,
+   "p_play": 0.583,
+   "if_plays": 5.06,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "59484": {
+   "next": {
+    "8": 2.27,
+    "9": 2.49,
+    "10": 2.17
+   },
+   "xp": 2.27,
+   "p_play": 0.454,
+   "if_plays": 5.0,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "59499": {
+   "next": {
+    "8": 6.4,
+    "9": 2.81,
+    "10": 5.31
+   },
+   "xp": 6.4,
+   "p_play": 0.912,
+   "if_plays": 7.01,
+   "ff_prob": 90,
+   "ff_status": "titular"
+  },
+  "59506": {
+   "next": {
+    "8": 0.92,
+    "9": 0.81,
+    "10": 1.04
+   },
+   "xp": 0.92,
+   "p_play": 0.473,
+   "if_plays": 1.95,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "59532": {
+   "next": {
+    "8": 0.42,
+    "9": 0.6,
+    "10": 0.57
+   },
+   "xp": 0.42,
+   "p_play": 0.114,
+   "if_plays": 3.71,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "59533": {
+   "next": {
+    "8": 3.71,
+    "9": 2.52,
+    "10": 1.85
+   },
+   "xp": 3.71,
+   "p_play": 0.725,
+   "if_plays": 5.12,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "59534": {
+   "next": {
+    "8": 1.26,
+    "9": 2.14,
+    "10": 1.72
+   },
+   "xp": 1.26,
+   "p_play": 0.548,
+   "if_plays": 2.3,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "59581": {
+   "next": {
+    "8": 0.78,
+    "9": 2.1,
+    "10": 2.32
+   },
+   "xp": 0.78,
+   "p_play": 0.299,
+   "if_plays": 2.6,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "59593": {
+   "next": {
+    "8": 0.71,
+    "9": 1.83,
+    "10": 2.03
+   },
+   "xp": 0.71,
+   "p_play": 0.282,
+   "if_plays": 2.53,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "59623": {
+   "next": {
+    "8": 3.89,
+    "9": 4.37,
+    "10": 4.08
+   },
+   "xp": 3.89,
+   "p_play": 0.804,
+   "if_plays": 4.84,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "59633": {
+   "next": {
+    "8": 0.58,
+    "9": 0.72,
+    "10": 1.42
+   },
+   "xp": 0.58,
+   "p_play": 0.27,
+   "if_plays": 2.16,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "59641": {
+   "next": {
+    "8": 2.71,
+    "9": 2.86,
+    "10": 3.59
+   },
+   "xp": 2.71,
+   "p_play": 0.633,
+   "if_plays": 4.28,
+   "ff_prob": 60,
+   "ff_status": "titular"
+  },
+  "59642": {
+   "next": {
+    "8": 0.11,
+    "9": 0.16,
+    "10": 0.18
+   },
+   "xp": 0.11,
+   "p_play": 0.059,
+   "if_plays": 1.84,
+   "ff_prob": 5,
+   "ff_status": "suplente"
+  },
+  "59789": {
+   "next": {
+    "8": 0.11,
+    "9": 1.72,
+    "10": 1.73
+   },
+   "xp": 0.11,
+   "p_play": 0.03,
+   "if_plays": 3.52,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "60210": {
+   "next": {
+    "8": 2.04,
+    "9": 3.55,
+    "10": 3.9
+   },
+   "xp": 2.04,
+   "p_play": 0.653,
+   "if_plays": 3.12,
+   "ff_prob": 60,
+   "ff_status": "titular"
+  },
+  "60218": {
+   "next": {
+    "8": 0.94,
+    "9": 1.36,
+    "10": 1.77
+   },
+   "xp": 0.94,
+   "p_play": 0.428,
+   "if_plays": 2.2,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "60227": {
+   "next": {
+    "8": 0.6,
+    "9": 0.82,
+    "10": 0.6
+   },
+   "xp": 0.6,
+   "p_play": 0.124,
+   "if_plays": 4.86,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "60271": {
+   "next": {
+    "8": 0.39,
+    "9": 0.75,
+    "10": 0.58
+   },
+   "xp": 0.39,
+   "p_play": 0.186,
+   "if_plays": 2.12,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "60290": {
+   "next": {
+    "8": 0.07,
+    "9": 0.2,
+    "10": -0.07
+   },
+   "xp": 0.07,
+   "p_play": 0.03,
+   "if_plays": 2.45,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "60858": {
+   "next": {
+    "8": 3.53,
+    "9": 2.66,
+    "10": 2.32
+   },
+   "xp": 3.53,
+   "p_play": 0.643,
+   "if_plays": 5.5,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "60859": {
+   "next": {
+    "8": 0.05,
+    "9": 0.1,
+    "10": 0.16
+   },
+   "xp": 0.05,
+   "p_play": 0.03,
+   "if_plays": 1.52,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "60861": {
+   "next": {
+    "8": 0.05,
+    "9": 0.45,
+    "10": 0.54
+   },
+   "xp": 0.05,
+   "p_play": 0.03,
+   "if_plays": 1.72,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "60872": {
+   "next": {
+    "8": 0.7,
+    "9": 1.33,
+    "10": 2.07
+   },
+   "xp": 0.7,
+   "p_play": 0.209,
+   "if_plays": 3.37,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "60888": {
+   "next": {
+    "8": 5.62,
+    "9": 5.62,
+    "10": 5.19
+   },
+   "xp": 5.62,
+   "p_play": 0.908,
+   "if_plays": 6.19,
+   "ff_prob": 90,
+   "ff_status": "titular"
+  },
+  "60919": {
+   "next": {
+    "8": 2.59,
+    "9": 3.36,
+    "10": 4.08
+   },
+   "xp": 2.59,
+   "p_play": 0.762,
+   "if_plays": 3.4,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "60927": {
+   "next": {
+    "8": 1.79,
+    "9": 3.18,
+    "10": 2.61
+   },
+   "xp": 1.79,
+   "p_play": 0.415,
+   "if_plays": 4.31,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "61009": {
+   "next": {
+    "8": 0.85,
+    "9": -0.23,
+    "10": 0.38
+   },
+   "xp": 0.85,
+   "p_play": 0.268,
+   "if_plays": 3.17,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "61012": {
+   "next": {
+    "8": 3.28,
+    "9": 2.85,
+    "10": 2.85
+   },
+   "xp": 3.28,
+   "p_play": 0.697,
+   "if_plays": 4.7,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "61013": {
+   "next": {
+    "8": 4.79,
+    "9": 3.11,
+    "10": 4.26
+   },
+   "xp": 4.79,
+   "p_play": 0.832,
+   "if_plays": 5.75,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "61092": {
+   "next": {
+    "8": 1.96,
+    "9": 3.42,
+    "10": 3.55
+   },
+   "xp": 1.96,
+   "p_play": 0.597,
+   "if_plays": 3.29,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "61093": {
+   "next": {
+    "8": 0.83,
+    "9": 1.45,
+    "10": 1.87
+   },
+   "xp": 0.83,
+   "p_play": 0.364,
+   "if_plays": 2.27,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "61167": {
+   "next": {
+    "8": 0.52,
+    "9": 0.29,
+    "10": 0.18
+   },
+   "xp": 0.52,
+   "p_play": 0.243,
+   "if_plays": 2.14,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "61297": {
+   "next": {
+    "8": 1.12,
+    "9": 1.87,
+    "10": 1.67
+   },
+   "xp": 1.12,
+   "p_play": 0.36,
+   "if_plays": 3.12,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "61410": {
+   "next": {
+    "8": 0.06,
+    "9": 0.07,
+    "10": 0.12
+   },
+   "xp": 0.06,
+   "p_play": 0.048,
+   "if_plays": 1.2,
+   "ff_prob": 5,
+   "ff_status": "suplente"
+  },
+  "62904": {
+   "next": {
+    "8": 3.64,
+    "9": 6.05,
+    "10": 3.51
+   },
+   "xp": 3.64,
+   "p_play": 0.627,
+   "if_plays": 5.81,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "62910": {
+   "next": {
+    "8": 0.11,
+    "9": 0.05,
+    "10": 0.2
+   },
+   "xp": 0.11,
+   "p_play": 0.059,
+   "if_plays": 1.84,
+   "ff_prob": 5,
+   "ff_status": "suplente"
+  },
+  "63406": {
+   "next": {
+    "8": 1.46,
+    "9": 2.36,
+    "10": 0.47
+   },
+   "xp": 1.46,
+   "p_play": 0.368,
+   "if_plays": 3.97,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "63705": {
+   "next": {
+    "8": 4.52,
+    "9": 4.75,
+    "10": 5.5
+   },
+   "xp": 4.52,
+   "p_play": 0.945,
+   "if_plays": 4.78,
+   "ff_prob": 95,
+   "ff_status": "titular"
+  },
+  "63727": {
+   "next": {
+    "8": 2.15,
+    "9": 2.63,
+    "10": 2.3
+   },
+   "xp": 2.15,
+   "p_play": 0.568,
+   "if_plays": 3.78,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "63780": {
+   "next": {
+    "8": 1.98,
+    "9": 2.16,
+    "10": 0.95
+   },
+   "xp": 1.98,
+   "p_play": 0.49,
+   "if_plays": 4.04,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "63784": {
+   "next": {
+    "8": 0.28,
+    "9": 0.23,
+    "10": 0.29
+   },
+   "xp": 0.28,
+   "p_play": 0.1,
+   "if_plays": 2.83,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "63788": {
+   "next": {
+    "8": 0.11,
+    "9": 2.11,
+    "10": 0.27
+   },
+   "xp": 0.11,
+   "p_play": 0.03,
+   "if_plays": 3.67,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "63866": {
+   "next": {
+    "8": 1.4,
+    "9": 2.49,
+    "10": 2.98
+   },
+   "xp": 1.4,
+   "p_play": 0.431,
+   "if_plays": 3.26,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "63867": {
+   "next": {
+    "8": 0.07,
+    "9": 0.15,
+    "10": 0.19
+   },
+   "xp": 0.07,
+   "p_play": 0.03,
+   "if_plays": 2.35,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "63868": {
+   "next": {
+    "8": 0.43,
+    "9": 0.55,
+    "10": 0.8
+   },
+   "xp": 0.43,
+   "p_play": 0.237,
+   "if_plays": 1.8,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "63869": {
+   "next": {
+    "8": 0.09,
+    "9": 0.25,
+    "10": 0.33
+   },
+   "xp": 0.09,
+   "p_play": 0.03,
+   "if_plays": 2.98,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "63871": {
+   "next": {
+    "8": 1.37,
+    "9": 1.4,
+    "10": 1.56
+   },
+   "xp": 1.37,
+   "p_play": 0.372,
+   "if_plays": 3.69,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "64031": {
+   "next": {
+    "8": 0.52,
+    "9": 1.03,
+    "10": 1.04
+   },
+   "xp": 0.52,
+   "p_play": 0.256,
+   "if_plays": 2.01,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "64033": {
+   "next": {
+    "8": 1.45,
+    "9": 2.32,
+    "10": 2.35
+   },
+   "xp": 1.45,
+   "p_play": 0.427,
+   "if_plays": 3.4,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "64038": {
+   "next": {
+    "8": 0.11,
+    "9": 2.94,
+    "10": 2.14
+   },
+   "xp": 0.11,
+   "p_play": 0.03,
+   "if_plays": 3.59,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "64151": {
+   "next": {
+    "8": -0.62,
+    "9": 1.05,
+    "10": 0.85
+   },
+   "xp": -0.62,
+   "p_play": 0.379,
+   "if_plays": -1.63,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "64160": {
+   "next": {
+    "8": 1.71,
+    "9": 2.36,
+    "10": 2.88
+   },
+   "xp": 1.71,
+   "p_play": 0.576,
+   "if_plays": 2.97,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "64199": {
+   "next": {
+    "8": 0.04,
+    "9": 0.11,
+    "10": 0.11
+   },
+   "xp": 0.04,
+   "p_play": 0.03,
+   "if_plays": 1.38,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "64200": {
+   "next": {
+    "8": 2.56,
+    "9": 2.92,
+    "10": 3.35
+   },
+   "xp": 2.56,
+   "p_play": 0.602,
+   "if_plays": 4.24,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "64382": {
+   "next": {
+    "8": 3.24,
+    "9": 2.33,
+    "10": 4.3
+   },
+   "xp": 3.24,
+   "p_play": 0.814,
+   "if_plays": 3.98,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "64410": {
+   "next": {
+    "8": 0.88,
+    "9": 0.31,
+    "10": 0.38
+   },
+   "xp": 0.88,
+   "p_play": 0.238,
+   "if_plays": 3.68,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "64411": {
+   "next": {
+    "8": 0.56,
+    "9": 0.85,
+    "10": 1.44
+   },
+   "xp": 0.56,
+   "p_play": 0.346,
+   "if_plays": 1.63,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "64458": {
+   "next": {
+    "8": 0.22,
+    "9": 0.27,
+    "10": 0.33
+   },
+   "xp": 0.22,
+   "p_play": 0.061,
+   "if_plays": 3.52,
+   "ff_prob": 5,
+   "ff_status": "suplente"
+  },
+  "64459": {
+   "next": {
+    "8": 3.23,
+    "9": 3.58,
+    "10": 4.11
+   },
+   "xp": 3.23,
+   "p_play": 0.829,
+   "if_plays": 3.9,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "64468": {
+   "next": {
+    "8": 2.01,
+    "9": 2.91,
+    "10": 2.56
+   },
+   "xp": 2.01,
+   "p_play": 0.509,
+   "if_plays": 3.95,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "64491": {
+   "next": {
+    "8": 2.24,
+    "9": 0.59,
+    "10": 2.12
+   },
+   "xp": 2.24,
+   "p_play": 0.447,
+   "if_plays": 5.0,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "64496": {
+   "next": {
+    "8": 0.12,
+    "9": 0.12,
+    "10": 0.1
+   },
+   "xp": 0.12,
+   "p_play": 0.03,
+   "if_plays": 3.86,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "64524": {
+   "next": {
+    "8": 1.39,
+    "9": 1.45,
+    "10": 1.61
+   },
+   "xp": 1.39,
+   "p_play": 0.379,
+   "if_plays": 3.67,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "64562": {
+   "next": {
+    "8": 2.66,
+    "9": 2.89,
+    "10": 4.06
+   },
+   "xp": 2.66,
+   "p_play": 0.489,
+   "if_plays": 5.44,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "65090": {
+   "next": {
+    "8": 1.73,
+    "9": 4.02,
+    "10": 3.45
+   },
+   "xp": 1.73,
+   "p_play": 0.473,
+   "if_plays": 3.65,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "65104": {
+   "next": {
+    "8": 0.54,
+    "9": 1.1,
+    "10": 1.03
+   },
+   "xp": 0.54,
+   "p_play": 0.158,
+   "if_plays": 3.43,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "65111": {
+   "next": {
+    "8": 4.41,
+    "9": 3.06,
+    "10": 5.04
+   },
+   "xp": 4.41,
+   "p_play": 0.923,
+   "if_plays": 4.78,
+   "ff_prob": 95,
+   "ff_status": "titular"
+  },
+  "65136": {
+   "next": {
+    "8": 0.1,
+    "9": 1.02,
+    "10": 1.16
+   },
+   "xp": 0.1,
+   "p_play": 0.03,
+   "if_plays": 3.2,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "65179": {
+   "next": {
+    "8": 2.51,
+    "9": 2.43,
+    "10": 4.23
+   },
+   "xp": 2.51,
+   "p_play": 0.591,
+   "if_plays": 4.25,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "65187": {
+   "next": {
+    "8": 0.21,
+    "9": 0.36,
+    "10": 0.48
+   },
+   "xp": 0.21,
+   "p_play": 0.116,
+   "if_plays": 1.81,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "65188": {
+   "next": {
+    "8": 0.07,
+    "9": 0.35,
+    "10": 0.04
+   },
+   "xp": 0.07,
+   "p_play": 0.03,
+   "if_plays": 2.3,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "65269": {
+   "next": {
+    "8": 0.4,
+    "9": 0.43,
+    "10": 0.53
+   },
+   "xp": 0.4,
+   "p_play": 0.165,
+   "if_plays": 2.45,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "65347": {
+   "next": {
+    "8": 2.91,
+    "9": 4.99,
+    "10": 5.45
+   },
+   "xp": 2.91,
+   "p_play": 0.773,
+   "if_plays": 3.77,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "65475": {
+   "next": {
+    "8": 1.77,
+    "9": 2.14,
+    "10": 2.01
+   },
+   "xp": 1.77,
+   "p_play": 0.564,
+   "if_plays": 3.14,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "65476": {
+   "next": {
+    "8": 2.54,
+    "9": 2.26,
+    "10": 2.77
+   },
+   "xp": 2.54,
+   "p_play": 0.55,
+   "if_plays": 4.62,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "65625": {
+   "next": {
+    "8": 0.96,
+    "9": 2.25,
+    "10": 2.35
+   },
+   "xp": 0.96,
+   "p_play": 0.31,
+   "if_plays": 3.12,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "65669": {
+   "next": {
+    "8": 0.54,
+    "9": 0.29,
+    "10": 0.33
+   },
+   "xp": 0.54,
+   "p_play": 0.188,
+   "if_plays": 2.9,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "65674": {
+   "next": {
+    "8": 0.11,
+    "9": 2.21,
+    "10": 2.56
+   },
+   "xp": 0.11,
+   "p_play": 0.03,
+   "if_plays": 3.63,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "65704": {
+   "next": {
+    "8": 2.72,
+    "9": 5.37,
+    "10": 5.52
+   },
+   "xp": 2.72,
+   "p_play": 0.563,
+   "if_plays": 4.82,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "65721": {
+   "next": {
+    "8": 1.74,
+    "9": 1.04,
+    "10": 0.77
+   },
+   "xp": 1.74,
+   "p_play": 0.346,
+   "if_plays": 5.02,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "65724": {
+   "next": {
+    "8": 0.05,
+    "9": 0.05,
+    "10": 0.28
+   },
+   "xp": 0.05,
+   "p_play": 0.03,
+   "if_plays": 1.68,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "65727": {
+   "next": {
+    "8": 1.07,
+    "9": 2.52,
+    "10": 2.27
+   },
+   "xp": 1.07,
+   "p_play": 0.267,
+   "if_plays": 4.0,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "66706": {
+   "next": {
+    "8": 3.38,
+    "9": 3.48,
+    "10": 3.08
+   },
+   "xp": 3.38,
+   "p_play": 0.822,
+   "if_plays": 4.12,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "67580": {
+   "next": {
+    "8": 0.26,
+    "9": 0.24,
+    "10": 0.2
+   },
+   "xp": 0.26,
+   "p_play": 0.112,
+   "if_plays": 2.35,
+   "ff_prob": null,
+   "ff_status": null
+  },
+  "67870": {
+   "next": {
+    "8": 0.07,
+    "9": 0.16,
+    "10": 0.19
+   },
+   "xp": 0.07,
+   "p_play": 0.03,
+   "if_plays": 2.49,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "67931": {
+   "next": {
+    "8": 0.2,
+    "9": 0.28,
+    "10": 0.39
+   },
+   "xp": 0.2,
+   "p_play": 0.132,
+   "if_plays": 1.54,
+   "ff_prob": null,
+   "ff_status": null
+  },
+  "67942": {
+   "next": {
+    "8": 1.95,
+    "9": 2.03,
+    "10": 1.66
+   },
+   "xp": 1.95,
+   "p_play": 0.682,
+   "if_plays": 2.86,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "68259": {
+   "next": {
+    "8": 0.42,
+    "9": 1.35,
+    "10": 1.42
+   },
+   "xp": 0.42,
+   "p_play": 0.211,
+   "if_plays": 2.0,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "68361": {
+   "next": {
+    "8": 0.46,
+    "9": 0.55,
+    "10": 0.89
+   },
+   "xp": 0.46,
+   "p_play": 0.237,
+   "if_plays": 1.96,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "68383": {
+   "next": {
+    "8": 3.07,
+    "9": 3.03,
+    "10": 3.19
+   },
+   "xp": 3.07,
+   "p_play": 0.659,
+   "if_plays": 4.66,
+   "ff_prob": 60,
+   "ff_status": "titular"
+  },
+  "68446": {
+   "next": {
+    "8": 1.03,
+    "9": 0.96,
+    "10": 1.04
+   },
+   "xp": 1.03,
+   "p_play": 0.34,
+   "if_plays": 3.03,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "68465": {
+   "next": {
+    "8": 1.56,
+    "9": 1.73,
+    "10": 1.9
+   },
+   "xp": 1.56,
+   "p_play": 0.386,
+   "if_plays": 4.05,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "68495": {
+   "next": {
+    "8": 1.78,
+    "9": 5.0,
+    "10": 4.71
+   },
+   "xp": 1.78,
+   "p_play": 0.643,
+   "if_plays": 2.77,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "68497": {
+   "next": {
+    "8": -0.47,
+    "9": 1.4,
+    "10": 1.2
+   },
+   "xp": -0.47,
+   "p_play": 0.456,
+   "if_plays": -1.02,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "68498": {
+   "next": {
+    "8": 0.55,
+    "9": 4.04,
+    "10": 3.67
+   },
+   "xp": 0.55,
+   "p_play": 0.911,
+   "if_plays": 0.6,
+   "ff_prob": 90,
+   "ff_status": "titular"
+  },
+  "68593": {
+   "next": {
+    "8": 2.5,
+    "9": 2.58,
+    "10": 2.85
+   },
+   "xp": 2.5,
+   "p_play": 0.603,
+   "if_plays": 4.15,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "68606": {
+   "next": {
+    "8": 3.59,
+    "9": 3.02,
+    "10": 3.82
+   },
+   "xp": 3.59,
+   "p_play": 0.863,
+   "if_plays": 4.17,
+   "ff_prob": 90,
+   "ff_status": "titular"
+  },
+  "68640": {
+   "next": {
+    "8": 1.93,
+    "9": 4.07,
+    "10": 4.49
+   },
+   "xp": 1.93,
+   "p_play": 0.613,
+   "if_plays": 3.16,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "68652": {
+   "next": {
+    "8": 0.12,
+    "9": 2.03,
+    "10": 2.71
+   },
+   "xp": 0.12,
+   "p_play": 0.03,
+   "if_plays": 4.15,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "68676": {
+   "next": {
+    "8": 2.56,
+    "9": 3.48,
+    "10": 4.17
+   },
+   "xp": 2.56,
+   "p_play": 0.604,
+   "if_plays": 4.23,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "68677": {
+   "next": {
+    "8": 0.6,
+    "9": 0.36,
+    "10": 0.87
+   },
+   "xp": 0.6,
+   "p_play": 0.186,
+   "if_plays": 3.24,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "68711": {
+   "next": {
+    "8": 0.06,
+    "9": 0.23,
+    "10": 0.33
+   },
    "xp": 0.06,
    "p_play": 0.03,
    "if_plays": 1.97,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
-  "48657": {
-   "xp": 8.03,
-   "p_play": 0.65,
-   "if_plays": 12.35,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "48960": {
-   "xp": -0.12,
-   "p_play": 0.48,
-   "if_plays": -0.24,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "49275": {
-   "xp": 1.5,
-   "p_play": 0.375,
-   "if_plays": 4.0,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "49296": {
-   "xp": 1.05,
-   "p_play": 0.307,
-   "if_plays": 3.42,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "49382": {
-   "xp": 2.88,
-   "p_play": 0.763,
-   "if_plays": 3.78,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "49424": {
-   "xp": 3.9,
-   "p_play": 0.853,
-   "if_plays": 4.58,
-   "ff_prob": 90,
-   "ff_status": "titular"
-  },
-  "51060": {
-   "xp": 2.39,
-   "p_play": 0.609,
-   "if_plays": 3.93,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "51134": {
-   "xp": 1.49,
-   "p_play": 0.478,
-   "if_plays": 3.12,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "51135": {
-   "xp": 1.71,
-   "p_play": 0.49,
-   "if_plays": 3.49,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "51137": {
-   "xp": 0.31,
-   "p_play": 0.123,
-   "if_plays": 2.49,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "52117": {
-   "xp": 4.06,
-   "p_play": 0.866,
-   "if_plays": 4.69,
-   "ff_prob": 90,
-   "ff_status": "titular"
-  },
-  "52162": {
-   "xp": 3.83,
-   "p_play": 0.833,
-   "if_plays": 4.6,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "52189": {
-   "xp": 3.43,
-   "p_play": 0.713,
-   "if_plays": 4.81,
-   "ff_prob": 60,
-   "ff_status": "titular"
-  },
-  "52371": {
-   "xp": 2.39,
-   "p_play": 0.71,
-   "if_plays": 3.37,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "52372": {
-   "xp": 4.03,
-   "p_play": 0.843,
-   "if_plays": 4.78,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "52375": {
-   "xp": 12.69,
-   "p_play": 0.93,
-   "if_plays": 13.65,
-   "ff_prob": 90,
-   "ff_status": "titular"
-  },
-  "52377": {
-   "xp": 0.09,
-   "p_play": 0.03,
-   "if_plays": 3.14,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "52404": {
-   "xp": 0.03,
-   "p_play": 0.03,
-   "if_plays": 1.12,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "53095": {
-   "xp": 2.18,
-   "p_play": 0.537,
-   "if_plays": 4.07,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "53098": {
-   "xp": 5.25,
-   "p_play": 0.859,
-   "if_plays": 6.1,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "53107": {
-   "xp": 2.16,
-   "p_play": 0.657,
-   "if_plays": 3.29,
-   "ff_prob": 60,
-   "ff_status": "titular"
-  },
-  "53111": {
-   "xp": 5.39,
-   "p_play": 0.834,
-   "if_plays": 6.47,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "53114": {
-   "xp": 6.45,
-   "p_play": 0.852,
-   "if_plays": 7.57,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "53143": {
-   "xp": 2.47,
-   "p_play": 0.746,
-   "if_plays": 3.3,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "53144": {
-   "xp": 1.09,
-   "p_play": 0.443,
-   "if_plays": 2.46,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "54817": {
-   "xp": 4.81,
-   "p_play": 0.772,
-   "if_plays": 6.23,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "54832": {
-   "xp": 1.76,
-   "p_play": 0.579,
-   "if_plays": 3.04,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "54900": {
-   "xp": 2.88,
-   "p_play": 0.797,
-   "if_plays": 3.61,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "55009": {
-   "xp": 4.1,
-   "p_play": 0.576,
-   "if_plays": 7.11,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "55045": {
-   "xp": 0.8,
-   "p_play": 0.226,
-   "if_plays": 3.55,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "55088": {
-   "xp": 0.1,
-   "p_play": 0.03,
-   "if_plays": 3.18,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "55439": {
-   "xp": 2.05,
-   "p_play": 0.592,
-   "if_plays": 3.46,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "55452": {
-   "xp": 0.05,
-   "p_play": 0.03,
-   "if_plays": 1.8,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "55454": {
-   "xp": 0.46,
-   "p_play": 0.196,
-   "if_plays": 2.33,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "55664": {
-   "xp": 0.77,
-   "p_play": 0.186,
-   "if_plays": 4.15,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "55666": {
-   "xp": 2.1,
-   "p_play": 0.391,
-   "if_plays": 5.36,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "55738": {
-   "xp": 2.08,
-   "p_play": 0.548,
-   "if_plays": 3.8,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "55743": {
-   "xp": 1.53,
-   "p_play": 0.502,
-   "if_plays": 3.05,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "55966": {
-   "xp": 0.57,
-   "p_play": 0.235,
-   "if_plays": 2.42,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "56502": {
-   "xp": 1.65,
-   "p_play": 0.533,
-   "if_plays": 3.09,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "56578": {
-   "xp": 2.31,
-   "p_play": 0.564,
-   "if_plays": 4.1,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "56583": {
-   "xp": 0.13,
-   "p_play": 0.03,
-   "if_plays": 4.25,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "56628": {
-   "xp": 3.49,
-   "p_play": 0.828,
-   "if_plays": 4.22,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "56632": {
-   "xp": 1.29,
-   "p_play": 0.426,
-   "if_plays": 3.02,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "56924": {
-   "xp": 0.98,
-   "p_play": 0.252,
-   "if_plays": 3.9,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "56925": {
-   "xp": 3.85,
-   "p_play": 0.814,
-   "if_plays": 4.73,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "56926": {
-   "xp": 5.18,
-   "p_play": 0.799,
-   "if_plays": 6.48,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "56971": {
-   "xp": 0.91,
-   "p_play": 0.235,
-   "if_plays": 3.88,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "58125": {
-   "xp": 0.03,
-   "p_play": 0.546,
-   "if_plays": 0.05,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "58383": {
-   "xp": 0.04,
-   "p_play": 0.03,
-   "if_plays": 1.18,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "58436": {
-   "xp": 0.11,
-   "p_play": 0.03,
-   "if_plays": 3.54,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "58438": {
-   "xp": 1.27,
-   "p_play": 0.359,
-   "if_plays": 3.54,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "58467": {
-   "xp": 1.04,
-   "p_play": 0.385,
-   "if_plays": 2.7,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "58820": {
-   "xp": 0.1,
-   "p_play": 0.03,
-   "if_plays": 3.26,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "58951": {
-   "xp": 0.54,
-   "p_play": 0.164,
-   "if_plays": 3.31,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "58954": {
-   "xp": 6.93,
-   "p_play": 0.648,
-   "if_plays": 10.7,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "58958": {
-   "xp": 0.31,
-   "p_play": 0.104,
-   "if_plays": 2.96,
-   "ff_prob": 5,
-   "ff_status": "suplente"
-  },
-  "58980": {
-   "xp": 0.78,
-   "p_play": 0.268,
-   "if_plays": 2.93,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "58986": {
-   "xp": 1.74,
-   "p_play": 0.535,
-   "if_plays": 3.26,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "58992": {
-   "xp": 0.36,
-   "p_play": 0.175,
-   "if_plays": 2.09,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "59042": {
-   "xp": 0.65,
-   "p_play": 0.294,
-   "if_plays": 2.2,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "59064": {
-   "xp": -0.04,
-   "p_play": 0.074,
-   "if_plays": -0.61,
-   "ff_prob": 5,
-   "ff_status": "suplente"
-  },
-  "59089": {
-   "xp": 0.07,
-   "p_play": 0.063,
-   "if_plays": 1.05,
-   "ff_prob": 5,
-   "ff_status": "suplente"
-  },
-  "59126": {
-   "xp": 0.21,
-   "p_play": 0.161,
-   "if_plays": 1.32,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "59371": {
-   "xp": 3.41,
-   "p_play": 0.763,
-   "if_plays": 4.46,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "59382": {
-   "xp": 2.4,
-   "p_play": 0.606,
-   "if_plays": 3.96,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "59395": {
-   "xp": 2.04,
-   "p_play": 0.452,
-   "if_plays": 4.5,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "59415": {
-   "xp": 4.38,
-   "p_play": 0.619,
-   "if_plays": 7.07,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "59476": {
-   "xp": 2.73,
-   "p_play": 0.587,
-   "if_plays": 4.65,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "59484": {
-   "xp": 2.21,
-   "p_play": 0.451,
-   "if_plays": 4.9,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "59499": {
-   "xp": 6.5,
-   "p_play": 0.918,
-   "if_plays": 7.08,
-   "ff_prob": 90,
-   "ff_status": "titular"
-  },
-  "59506": {
-   "xp": 1.12,
-   "p_play": 0.491,
-   "if_plays": 2.28,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "59532": {
-   "xp": 0.29,
-   "p_play": 0.103,
-   "if_plays": 2.76,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "59533": {
-   "xp": 3.98,
-   "p_play": 0.748,
-   "if_plays": 5.31,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "59534": {
-   "xp": 1.25,
-   "p_play": 0.551,
-   "if_plays": 2.26,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "59581": {
-   "xp": 0.91,
-   "p_play": 0.321,
-   "if_plays": 2.84,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "59593": {
-   "xp": 0.52,
-   "p_play": 0.233,
-   "if_plays": 2.24,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "59623": {
-   "xp": 4.06,
-   "p_play": 0.806,
-   "if_plays": 5.04,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "59633": {
-   "xp": 0.59,
-   "p_play": 0.269,
-   "if_plays": 2.18,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "59641": {
-   "xp": 2.94,
-   "p_play": 0.674,
-   "if_plays": 4.36,
-   "ff_prob": 60,
-   "ff_status": "titular"
-  },
-  "59642": {
-   "xp": 0.12,
-   "p_play": 0.057,
-   "if_plays": 2.13,
-   "ff_prob": 5,
-   "ff_status": "suplente"
-  },
-  "59789": {
-   "xp": 0.12,
-   "p_play": 0.03,
-   "if_plays": 3.87,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "60210": {
-   "xp": 2.14,
-   "p_play": 0.644,
-   "if_plays": 3.33,
-   "ff_prob": 60,
-   "ff_status": "titular"
-  },
-  "60218": {
-   "xp": 0.88,
-   "p_play": 0.392,
-   "if_plays": 2.23,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "60227": {
-   "xp": 0.57,
-   "p_play": 0.12,
-   "if_plays": 4.75,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "60271": {
-   "xp": 0.35,
-   "p_play": 0.169,
-   "if_plays": 2.05,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "60290": {
-   "xp": 0.09,
-   "p_play": 0.03,
-   "if_plays": 2.86,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "60858": {
-   "xp": 2.89,
-   "p_play": 0.633,
-   "if_plays": 4.56,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "60859": {
-   "xp": 0.08,
-   "p_play": 0.03,
-   "if_plays": 2.52,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "60861": {
-   "xp": 0.05,
-   "p_play": 0.03,
-   "if_plays": 1.64,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "60872": {
-   "xp": 0.68,
-   "p_play": 0.201,
-   "if_plays": 3.4,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "60888": {
-   "xp": 5.8,
-   "p_play": 0.915,
-   "if_plays": 6.34,
-   "ff_prob": 90,
-   "ff_status": "titular"
-  },
-  "60919": {
-   "xp": 2.74,
-   "p_play": 0.748,
-   "if_plays": 3.67,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "60927": {
-   "xp": 1.55,
-   "p_play": 0.386,
-   "if_plays": 4.02,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "61009": {
-   "xp": 0.82,
-   "p_play": 0.265,
-   "if_plays": 3.11,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "61012": {
-   "xp": 3.46,
-   "p_play": 0.693,
-   "if_plays": 4.99,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "61013": {
-   "xp": 5.01,
-   "p_play": 0.84,
-   "if_plays": 5.96,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "61092": {
-   "xp": 1.9,
-   "p_play": 0.607,
-   "if_plays": 3.13,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "61093": {
-   "xp": 0.73,
-   "p_play": 0.361,
-   "if_plays": 2.03,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "61167": {
-   "xp": 0.48,
-   "p_play": 0.24,
-   "if_plays": 1.99,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "61297": {
-   "xp": 1.01,
-   "p_play": 0.329,
-   "if_plays": 3.07,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "61410": {
-   "xp": 0.06,
-   "p_play": 0.051,
-   "if_plays": 1.18,
-   "ff_prob": 5,
-   "ff_status": "suplente"
-  },
-  "62904": {
-   "xp": 3.73,
-   "p_play": 0.617,
-   "if_plays": 6.05,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "62910": {
-   "xp": 0.05,
-   "p_play": 0.06,
-   "if_plays": 0.78,
-   "ff_prob": 5,
-   "ff_status": "suplente"
-  },
-  "63406": {
-   "xp": 1.32,
-   "p_play": 0.339,
-   "if_plays": 3.88,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "63705": {
-   "xp": 4.57,
-   "p_play": 0.954,
-   "if_plays": 4.79,
-   "ff_prob": 95,
-   "ff_status": "titular"
-  },
-  "63727": {
-   "xp": 2.46,
+  "68716": {
+   "next": {
+    "8": 2.63,
+    "9": 2.83,
+    "10": 3.34
+   },
+   "xp": 2.63,
    "p_play": 0.586,
-   "if_plays": 4.2,
+   "if_plays": 4.5,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "68835": {
+   "next": {
+    "8": 1.54,
+    "9": 1.72,
+    "10": 1.75
+   },
+   "xp": 1.54,
+   "p_play": 0.545,
+   "if_plays": 2.84,
    "ff_prob": 50,
    "ff_status": "titular"
   },
-  "63780": {
-   "xp": 2.28,
-   "p_play": 0.522,
-   "if_plays": 4.36,
+  "69281": {
+   "next": {
+    "8": 1.89,
+    "9": 1.58,
+    "10": 1.86
+   },
+   "xp": 1.89,
+   "p_play": 0.5,
+   "if_plays": 3.77,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
-  "63784": {
-   "xp": 0.24,
-   "p_play": 0.094,
-   "if_plays": 2.58,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "63788": {
-   "xp": 0.12,
-   "p_play": 0.03,
-   "if_plays": 4.1,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "63866": {
-   "xp": 1.26,
-   "p_play": 0.396,
-   "if_plays": 3.17,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "63867": {
-   "xp": 0.07,
-   "p_play": 0.03,
-   "if_plays": 2.39,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "63868": {
-   "xp": 0.38,
-   "p_play": 0.219,
-   "if_plays": 1.72,
+  "69744": {
+   "next": {
+    "8": 0.4,
+    "9": 0.14,
+    "10": 0.88
+   },
+   "xp": 0.4,
+   "p_play": 0.246,
+   "if_plays": 1.62,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
-  "63869": {
+  "69889": {
+   "next": {
+    "8": 2.27,
+    "9": 1.75,
+    "10": 1.26
+   },
+   "xp": 2.27,
+   "p_play": 0.47,
+   "if_plays": 4.84,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "70150": {
+   "next": {
+    "8": 2.96,
+    "9": 2.07,
+    "10": 2.32
+   },
+   "xp": 2.96,
+   "p_play": 0.796,
+   "if_plays": 3.72,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "70181": {
+   "next": {
+    "8": 0.45,
+    "9": 0.49,
+    "10": 0.51
+   },
+   "xp": 0.45,
+   "p_play": 0.154,
+   "if_plays": 2.94,
+   "ff_prob": null,
+   "ff_status": null
+  },
+  "70183": {
+   "next": {
+    "8": 0.56,
+    "9": 0.99,
+    "10": 0.88
+   },
+   "xp": 0.56,
+   "p_play": 0.158,
+   "if_plays": 3.51,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "70189": {
+   "next": {
+    "8": 0.87,
+    "9": 1.2,
+    "10": 1.35
+   },
+   "xp": 0.87,
+   "p_play": 0.306,
+   "if_plays": 2.86,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "70255": {
+   "next": {
+    "8": 1.13,
+    "9": 1.26,
+    "10": 1.26
+   },
+   "xp": 1.13,
+   "p_play": 0.355,
+   "if_plays": 3.18,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "70496": {
+   "next": {
+    "8": 0.06,
+    "9": 0.53,
+    "10": 0.56
+   },
+   "xp": 0.06,
+   "p_play": 0.03,
+   "if_plays": 2.09,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "70499": {
+   "next": {
+    "8": 0.32,
+    "9": 0.41,
+    "10": 0.35
+   },
+   "xp": 0.32,
+   "p_play": 0.118,
+   "if_plays": 2.69,
+   "ff_prob": null,
+   "ff_status": null
+  },
+  "70638": {
+   "next": {
+    "8": 3.63,
+    "9": 4.45,
+    "10": 3.96
+   },
+   "xp": 3.63,
+   "p_play": 0.594,
+   "if_plays": 6.11,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "70917": {
+   "next": {
+    "8": 1.04,
+    "9": 0.41,
+    "10": 1.26
+   },
+   "xp": 1.04,
+   "p_play": 0.475,
+   "if_plays": 2.19,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "70918": {
+   "next": {
+    "8": 3.29,
+    "9": 4.97,
+    "10": 2.49
+   },
+   "xp": 3.29,
+   "p_play": 0.691,
+   "if_plays": 4.75,
+   "ff_prob": 60,
+   "ff_status": "titular"
+  },
+  "70922": {
+   "next": {
+    "8": 3.19,
+    "9": 4.13,
+    "10": 0.97
+   },
+   "xp": 3.19,
+   "p_play": 0.737,
+   "if_plays": 4.32,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "70923": {
+   "next": {
+    "8": 3.12,
+    "9": 2.67,
+    "10": 2.82
+   },
+   "xp": 3.12,
+   "p_play": 0.72,
+   "if_plays": 4.33,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "70925": {
+   "next": {
+    "8": 0.37,
+    "9": 0.62,
+    "10": 0.53
+   },
+   "xp": 0.37,
+   "p_play": 0.071,
+   "if_plays": 5.17,
+   "ff_prob": 5,
+   "ff_status": "suplente"
+  },
+  "70927": {
+   "next": {
+    "8": 0.56,
+    "9": 0.97,
+    "10": 0.97
+   },
+   "xp": 0.56,
+   "p_play": 0.195,
+   "if_plays": 2.89,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "70929": {
+   "next": {
+    "8": 0.58,
+    "9": 0.98,
+    "10": 0.99
+   },
+   "xp": 0.58,
+   "p_play": 0.189,
+   "if_plays": 3.06,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "70931": {
+   "next": {
+    "8": 1.48,
+    "9": 1.91,
+    "10": 1.92
+   },
+   "xp": 1.48,
+   "p_play": 0.386,
+   "if_plays": 3.83,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "70932": {
+   "next": {
+    "8": 0.46,
+    "9": 0.58,
+    "10": 0.07
+   },
+   "xp": 0.46,
+   "p_play": 0.194,
+   "if_plays": 2.38,
+   "ff_prob": null,
+   "ff_status": null
+  },
+  "70934": {
+   "next": {
+    "8": 0.81,
+    "9": 1.04,
+    "10": 1.04
+   },
+   "xp": 0.81,
+   "p_play": 0.269,
+   "if_plays": 2.99,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "70935": {
+   "next": {
+    "8": 4.55,
+    "9": 4.57,
+    "10": 4.12
+   },
+   "xp": 4.55,
+   "p_play": 0.725,
+   "if_plays": 6.27,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "70936": {
+   "next": {
+    "8": 1.7,
+    "9": 2.14,
+    "10": 1.84
+   },
+   "xp": 1.7,
+   "p_play": 0.35,
+   "if_plays": 4.87,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "70938": {
+   "next": {
+    "8": 4.14,
+    "9": 3.63,
+    "10": 3.2
+   },
+   "xp": 4.14,
+   "p_play": 0.785,
+   "if_plays": 5.28,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "70939": {
+   "next": {
+    "8": 2.76,
+    "9": 3.11,
+    "10": 2.51
+   },
+   "xp": 2.76,
+   "p_play": 0.715,
+   "if_plays": 3.86,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "70940": {
+   "next": {
+    "8": 1.19,
+    "9": 1.3,
+    "10": 0.97
+   },
+   "xp": 1.19,
+   "p_play": 0.399,
+   "if_plays": 2.97,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "70941": {
+   "next": {
+    "8": 2.94,
+    "9": 3.6,
+    "10": 2.93
+   },
+   "xp": 2.94,
+   "p_play": 0.748,
+   "if_plays": 3.93,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "70943": {
+   "next": {
+    "8": 0.84,
+    "9": 1.68,
+    "10": 1.23
+   },
+   "xp": 0.84,
+   "p_play": 0.306,
+   "if_plays": 2.75,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "70944": {
+   "next": {
+    "8": 1.54,
+    "9": 2.0,
+    "10": 1.49
+   },
+   "xp": 1.54,
+   "p_play": 0.544,
+   "if_plays": 2.82,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "70945": {
+   "next": {
+    "8": 0.88,
+    "9": 2.35,
+    "10": 1.82
+   },
+   "xp": 0.88,
+   "p_play": 0.27,
+   "if_plays": 3.26,
+   "ff_prob": 10,
+   "ff_status": "suplente"
+  },
+  "70947": {
+   "next": {
+    "8": 0.05,
+    "9": 0.2,
+    "10": 0.12
+   },
+   "xp": 0.05,
+   "p_play": 0.03,
+   "if_plays": 1.66,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "70948": {
+   "next": {
+    "8": 1.75,
+    "9": 1.89,
+    "10": 1.23
+   },
+   "xp": 1.75,
+   "p_play": 0.514,
+   "if_plays": 3.41,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "70949": {
+   "next": {
+    "8": 0.05,
+    "9": 0.14,
+    "10": 0.03
+   },
+   "xp": 0.05,
+   "p_play": 0.03,
+   "if_plays": 1.6,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "70950": {
+   "next": {
+    "8": 2.93,
+    "9": 3.16,
+    "10": 2.06
+   },
+   "xp": 2.93,
+   "p_play": 0.814,
+   "if_plays": 3.6,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "70952": {
+   "next": {
+    "8": 0.07,
+    "9": 0.17,
+    "10": 0.08
+   },
+   "xp": 0.07,
+   "p_play": 0.03,
+   "if_plays": 2.29,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "70953": {
+   "next": {
+    "8": 1.36,
+    "9": 1.35,
+    "10": 0.9
+   },
+   "xp": 1.36,
+   "p_play": 0.399,
+   "if_plays": 3.41,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "70992": {
+   "next": {
+    "8": 3.13,
+    "9": 3.91,
+    "10": 3.16
+   },
+   "xp": 3.13,
+   "p_play": 0.745,
+   "if_plays": 4.2,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "70993": {
+   "next": {
+    "8": 0.06,
+    "9": 0.66,
+    "10": 0.43
+   },
    "xp": 0.06,
    "p_play": 0.03,
    "if_plays": 2.04,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
-  "63871": {
-   "xp": 1.51,
-   "p_play": 0.387,
-   "if_plays": 3.9,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "64031": {
-   "xp": 0.53,
-   "p_play": 0.269,
-   "if_plays": 1.96,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "64033": {
-   "xp": 1.51,
-   "p_play": 0.435,
-   "if_plays": 3.48,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "64038": {
-   "xp": 0.09,
-   "p_play": 0.03,
-   "if_plays": 2.85,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "64151": {
-   "xp": -0.24,
-   "p_play": 0.357,
-   "if_plays": -0.66,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "64160": {
-   "xp": 2.05,
-   "p_play": 0.582,
-   "if_plays": 3.53,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "64199": {
-   "xp": 0.05,
-   "p_play": 0.03,
-   "if_plays": 1.59,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "64200": {
-   "xp": 2.5,
-   "p_play": 0.616,
-   "if_plays": 4.06,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "64382": {
-   "xp": 3.01,
-   "p_play": 0.811,
-   "if_plays": 3.71,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "64410": {
-   "xp": 0.76,
-   "p_play": 0.248,
-   "if_plays": 3.07,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "64411": {
-   "xp": 0.74,
-   "p_play": 0.353,
-   "if_plays": 2.1,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "64458": {
-   "xp": 0.2,
-   "p_play": 0.056,
-   "if_plays": 3.54,
-   "ff_prob": 5,
-   "ff_status": "suplente"
-  },
-  "64459": {
-   "xp": 3.5,
-   "p_play": 0.832,
-   "if_plays": 4.21,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "64468": {
-   "xp": 2.22,
-   "p_play": 0.523,
-   "if_plays": 4.25,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "64491": {
-   "xp": 2.37,
-   "p_play": 0.471,
-   "if_plays": 5.03,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "64496": {
-   "xp": 0.11,
-   "p_play": 0.03,
-   "if_plays": 3.71,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "64524": {
-   "xp": 1.56,
-   "p_play": 0.385,
-   "if_plays": 4.04,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "64562": {
-   "xp": 2.51,
-   "p_play": 0.48,
-   "if_plays": 5.24,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "65090": {
-   "xp": 1.76,
-   "p_play": 0.469,
-   "if_plays": 3.76,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "65104": {
-   "xp": 0.43,
-   "p_play": 0.139,
-   "if_plays": 3.08,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "65111": {
-   "xp": 4.08,
-   "p_play": 0.933,
-   "if_plays": 4.37,
-   "ff_prob": 95,
-   "ff_status": "titular"
-  },
-  "65136": {
-   "xp": 0.09,
-   "p_play": 0.03,
-   "if_plays": 3.09,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "65179": {
-   "xp": 2.58,
-   "p_play": 0.582,
-   "if_plays": 4.44,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "65187": {
-   "xp": 0.18,
-   "p_play": 0.116,
-   "if_plays": 1.53,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "65188": {
-   "xp": 0.07,
-   "p_play": 0.03,
-   "if_plays": 2.48,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "65269": {
-   "xp": 0.38,
-   "p_play": 0.143,
-   "if_plays": 2.69,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "65347": {
-   "xp": 2.91,
-   "p_play": 0.772,
-   "if_plays": 3.76,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "65475": {
-   "xp": 1.64,
-   "p_play": 0.554,
-   "if_plays": 2.97,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "65476": {
-   "xp": 2.37,
-   "p_play": 0.537,
-   "if_plays": 4.42,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "65625": {
-   "xp": 0.86,
-   "p_play": 0.322,
-   "if_plays": 2.66,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "65669": {
-   "xp": 0.53,
-   "p_play": 0.184,
-   "if_plays": 2.87,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "65674": {
-   "xp": 0.11,
-   "p_play": 0.03,
-   "if_plays": 3.82,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "65704": {
-   "xp": 2.82,
-   "p_play": 0.57,
-   "if_plays": 4.95,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "65721": {
-   "xp": 1.81,
-   "p_play": 0.372,
-   "if_plays": 4.88,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "65724": {
-   "xp": 0.06,
-   "p_play": 0.03,
-   "if_plays": 2.02,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "65727": {
-   "xp": 1.18,
-   "p_play": 0.286,
-   "if_plays": 4.13,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "66706": {
-   "xp": 3.64,
-   "p_play": 0.821,
-   "if_plays": 4.43,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "67580": {
-   "xp": 0.2,
-   "p_play": 0.097,
-   "if_plays": 2.06,
-   "ff_prob": null,
-   "ff_status": null
-  },
-  "67870": {
-   "xp": 0.08,
-   "p_play": 0.03,
-   "if_plays": 2.6,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "67931": {
-   "xp": 0.13,
-   "p_play": 0.098,
-   "if_plays": 1.37,
-   "ff_prob": null,
-   "ff_status": null
-  },
-  "67942": {
-   "xp": 1.86,
-   "p_play": 0.658,
-   "if_plays": 2.83,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "68259": {
-   "xp": 0.28,
-   "p_play": 0.196,
-   "if_plays": 1.43,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "68361": {
-   "xp": 0.35,
-   "p_play": 0.241,
-   "if_plays": 1.46,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "68383": {
-   "xp": 3.07,
-   "p_play": 0.644,
-   "if_plays": 4.77,
-   "ff_prob": 60,
-   "ff_status": "titular"
-  },
-  "68446": {
-   "xp": 1.03,
-   "p_play": 0.325,
-   "if_plays": 3.16,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "68465": {
-   "xp": 1.81,
-   "p_play": 0.409,
-   "if_plays": 4.42,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "68495": {
-   "xp": 1.69,
-   "p_play": 0.643,
-   "if_plays": 2.63,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "68497": {
-   "xp": 0.02,
-   "p_play": 0.422,
-   "if_plays": 0.04,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "68498": {
-   "xp": 2.32,
-   "p_play": 0.902,
-   "if_plays": 2.58,
-   "ff_prob": 90,
-   "ff_status": "titular"
-  },
-  "68593": {
-   "xp": 2.61,
-   "p_play": 0.605,
-   "if_plays": 4.31,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "68606": {
-   "xp": 3.41,
-   "p_play": 0.837,
-   "if_plays": 4.07,
-   "ff_prob": 90,
-   "ff_status": "titular"
-  },
-  "68640": {
-   "xp": 1.79,
-   "p_play": 0.588,
-   "if_plays": 3.04,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "68652": {
-   "xp": 0.15,
-   "p_play": 0.03,
-   "if_plays": 4.95,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "68676": {
-   "xp": 2.43,
-   "p_play": 0.593,
-   "if_plays": 4.1,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "68677": {
-   "xp": 0.53,
-   "p_play": 0.153,
-   "if_plays": 3.48,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "68711": {
-   "xp": 0.05,
-   "p_play": 0.03,
-   "if_plays": 1.79,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "68716": {
-   "xp": 2.16,
-   "p_play": 0.565,
-   "if_plays": 3.83,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "68835": {
-   "xp": 1.58,
-   "p_play": 0.521,
-   "if_plays": 3.04,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "69281": {
-   "xp": 1.78,
-   "p_play": 0.469,
-   "if_plays": 3.8,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "69744": {
-   "xp": 0.58,
-   "p_play": 0.213,
-   "if_plays": 2.74,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "69889": {
-   "xp": 2.11,
-   "p_play": 0.458,
-   "if_plays": 4.6,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "70150": {
-   "xp": 2.93,
-   "p_play": 0.775,
-   "if_plays": 3.79,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "70181": {
-   "xp": 0.28,
-   "p_play": 0.157,
-   "if_plays": 1.8,
-   "ff_prob": null,
-   "ff_status": null
-  },
-  "70183": {
-   "xp": 0.56,
-   "p_play": 0.132,
-   "if_plays": 4.22,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "70189": {
-   "xp": 0.71,
-   "p_play": 0.278,
-   "if_plays": 2.54,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "70255": {
-   "xp": 1.64,
-   "p_play": 0.294,
-   "if_plays": 5.56,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "70496": {
-   "xp": 0.05,
-   "p_play": 0.03,
-   "if_plays": 1.79,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "70499": {
-   "xp": 0.19,
-   "p_play": 0.095,
-   "if_plays": 2.0,
-   "ff_prob": null,
-   "ff_status": null
-  },
-  "70638": {
-   "xp": 3.59,
-   "p_play": 0.602,
-   "if_plays": 5.96,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "70917": {
-   "xp": 1.07,
-   "p_play": 0.467,
-   "if_plays": 2.28,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "70918": {
-   "xp": 2.95,
-   "p_play": 0.681,
-   "if_plays": 4.33,
-   "ff_prob": 60,
-   "ff_status": "titular"
-  },
-  "70922": {
-   "xp": 3.06,
-   "p_play": 0.716,
-   "if_plays": 4.27,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "70923": {
-   "xp": 3.22,
-   "p_play": 0.713,
-   "if_plays": 4.51,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "70925": {
-   "xp": 0.31,
-   "p_play": 0.079,
-   "if_plays": 3.92,
-   "ff_prob": 5,
-   "ff_status": "suplente"
-  },
-  "70927": {
-   "xp": 0.9,
-   "p_play": 0.239,
-   "if_plays": 3.78,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "70929": {
-   "xp": 0.85,
-   "p_play": 0.222,
-   "if_plays": 3.84,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "70931": {
-   "xp": 1.77,
-   "p_play": 0.394,
-   "if_plays": 4.5,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "70932": {
-   "xp": 0.55,
-   "p_play": 0.22,
-   "if_plays": 2.52,
-   "ff_prob": null,
-   "ff_status": null
-  },
-  "70934": {
-   "xp": 1.06,
-   "p_play": 0.287,
-   "if_plays": 3.69,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "70935": {
-   "xp": 3.77,
-   "p_play": 0.715,
-   "if_plays": 5.27,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "70936": {
-   "xp": 1.37,
-   "p_play": 0.343,
-   "if_plays": 3.99,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "70938": {
-   "xp": 3.43,
-   "p_play": 0.782,
-   "if_plays": 4.38,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "70939": {
-   "xp": 2.83,
-   "p_play": 0.725,
-   "if_plays": 3.91,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "70940": {
-   "xp": 1.31,
-   "p_play": 0.417,
-   "if_plays": 3.15,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "70941": {
-   "xp": 3.03,
-   "p_play": 0.752,
-   "if_plays": 4.03,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "70943": {
-   "xp": 0.86,
-   "p_play": 0.304,
-   "if_plays": 2.82,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "70944": {
-   "xp": 1.58,
-   "p_play": 0.542,
-   "if_plays": 2.91,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "70945": {
-   "xp": 0.88,
-   "p_play": 0.266,
-   "if_plays": 3.32,
-   "ff_prob": 10,
-   "ff_status": "suplente"
-  },
-  "70947": {
-   "xp": 0.05,
-   "p_play": 0.03,
-   "if_plays": 1.83,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "70948": {
-   "xp": 1.75,
-   "p_play": 0.506,
-   "if_plays": 3.47,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "70949": {
-   "xp": 0.05,
-   "p_play": 0.03,
-   "if_plays": 1.81,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "70950": {
-   "xp": 2.98,
-   "p_play": 0.811,
-   "if_plays": 3.67,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "70952": {
-   "xp": 0.07,
-   "p_play": 0.03,
-   "if_plays": 2.2,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "70953": {
-   "xp": 1.38,
-   "p_play": 0.396,
-   "if_plays": 3.48,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "70992": {
-   "xp": 3.17,
-   "p_play": 0.741,
-   "if_plays": 4.29,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "70993": {
-   "xp": 0.07,
-   "p_play": 0.03,
-   "if_plays": 2.39,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
   "70994": {
-   "xp": 0.81,
-   "p_play": 0.297,
-   "if_plays": 2.71,
+   "next": {
+    "8": 0.69,
+    "9": 1.31,
+    "10": 0.93
+   },
+   "xp": 0.69,
+   "p_play": 0.28,
+   "if_plays": 2.47,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "70996": {
-   "xp": 3.23,
-   "p_play": 0.806,
-   "if_plays": 4.01,
+   "next": {
+    "8": 3.31,
+    "9": 3.87,
+    "10": 3.09
+   },
+   "xp": 3.31,
+   "p_play": 0.822,
+   "if_plays": 4.03,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "70997": {
+   "next": {
+    "8": 0.08,
+    "9": 0.28,
+    "10": 0.2
+   },
    "xp": 0.08,
    "p_play": 0.03,
-   "if_plays": 2.63,
+   "if_plays": 2.59,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "70998": {
+   "next": {
+    "8": 1.47,
+    "9": 2.82,
+    "10": 2.17
+   },
    "xp": 1.47,
-   "p_play": 0.421,
-   "if_plays": 3.48,
+   "p_play": 0.434,
+   "if_plays": 3.38,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "70999": {
-   "xp": 3.15,
-   "p_play": 0.753,
-   "if_plays": 4.18,
+   "next": {
+    "8": 3.2,
+    "9": 4.19,
+    "10": 3.37
+   },
+   "xp": 3.2,
+   "p_play": 0.763,
+   "if_plays": 4.19,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "71000": {
-   "xp": 1.32,
-   "p_play": 0.42,
-   "if_plays": 3.14,
+   "next": {
+    "8": 1.28,
+    "9": 2.46,
+    "10": 1.82
+   },
+   "xp": 1.28,
+   "p_play": 0.429,
+   "if_plays": 2.97,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "71002": {
-   "xp": 0.79,
-   "p_play": 0.271,
-   "if_plays": 2.9,
+   "next": {
+    "8": 0.74,
+    "9": 2.13,
+    "10": 1.52
+   },
+   "xp": 0.74,
+   "p_play": 0.278,
+   "if_plays": 2.68,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "71003": {
+   "next": {
+    "8": 0.08,
+    "9": 0.46,
+    "10": 0.32
+   },
    "xp": 0.08,
    "p_play": 0.03,
-   "if_plays": 2.61,
+   "if_plays": 2.69,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "71004": {
-   "xp": 2.3,
-   "p_play": 0.668,
-   "if_plays": 3.44,
+   "next": {
+    "8": 2.32,
+    "9": 2.42,
+    "10": 1.76
+   },
+   "xp": 2.32,
+   "p_play": 0.671,
+   "if_plays": 3.45,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "71006": {
-   "xp": 0.27,
-   "p_play": 0.111,
-   "if_plays": 2.41,
+   "next": {
+    "8": 0.26,
+    "9": 0.37,
+    "10": 0.24
+   },
+   "xp": 0.26,
+   "p_play": 0.108,
+   "if_plays": 2.42,
    "ff_prob": 10,
    "ff_status": "suplente"
   },
   "71008": {
-   "xp": 3.05,
+   "next": {
+    "8": 3.01,
+    "9": 3.13,
+    "10": 2.25
+   },
+   "xp": 3.01,
    "p_play": 0.86,
-   "if_plays": 3.55,
+   "if_plays": 3.5,
    "ff_prob": 90,
    "ff_status": "titular"
   },
   "71010": {
-   "xp": 2.2,
-   "p_play": 0.658,
-   "if_plays": 3.34,
+   "next": {
+    "8": 2.1,
+    "9": 2.98,
+    "10": 2.06
+   },
+   "xp": 2.1,
+   "p_play": 0.655,
+   "if_plays": 3.21,
    "ff_prob": 60,
    "ff_status": "titular"
   },
   "71011": {
-   "xp": 3.82,
-   "p_play": 0.92,
-   "if_plays": 4.15,
+   "next": {
+    "8": 4.04,
+    "9": 4.18,
+    "10": 3.2
+   },
+   "xp": 4.04,
+   "p_play": 0.915,
+   "if_plays": 4.41,
    "ff_prob": 95,
    "ff_status": "titular"
   },
   "71012": {
-   "xp": 0.17,
-   "p_play": 0.071,
-   "if_plays": 2.39,
+   "next": {
+    "8": 0.15,
+    "9": 0.26,
+    "10": 0.18
+   },
+   "xp": 0.15,
+   "p_play": 0.06,
+   "if_plays": 2.57,
    "ff_prob": 5,
    "ff_status": "suplente"
   },
   "71019": {
-   "xp": 0.3,
-   "p_play": 0.122,
-   "if_plays": 2.43,
+   "next": {
+    "8": 0.25,
+    "9": 0.32,
+    "10": 0.28
+   },
+   "xp": 0.25,
+   "p_play": 0.103,
+   "if_plays": 2.42,
    "ff_prob": null,
    "ff_status": null
   },
   "71021": {
-   "xp": 3.86,
-   "p_play": 0.637,
-   "if_plays": 6.06,
+   "next": {
+    "8": 3.92,
+    "9": 6.01,
+    "10": 6.63
+   },
+   "xp": 3.92,
+   "p_play": 0.64,
+   "if_plays": 6.12,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "71037": {
-   "xp": 1.19,
-   "p_play": 0.294,
-   "if_plays": 4.04,
+   "next": {
+    "8": 1.51,
+    "9": 2.52,
+    "10": 2.18
+   },
+   "xp": 1.51,
+   "p_play": 0.302,
+   "if_plays": 4.98,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "71038": {
-   "xp": 3.05,
-   "p_play": 0.722,
-   "if_plays": 4.22,
+   "next": {
+    "8": 3.55,
+    "9": 4.09,
+    "10": 3.62
+   },
+   "xp": 3.55,
+   "p_play": 0.738,
+   "if_plays": 4.8,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "71061": {
-   "xp": 2.22,
-   "p_play": 0.569,
-   "if_plays": 3.9,
+   "next": {
+    "8": 2.13,
+    "9": 2.72,
+    "10": 2.37
+   },
+   "xp": 2.13,
+   "p_play": 0.582,
+   "if_plays": 3.67,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "71124": {
-   "xp": 2.69,
-   "p_play": 0.673,
-   "if_plays": 4.0,
+   "next": {
+    "8": 2.78,
+    "9": 3.19,
+    "10": 0.59
+   },
+   "xp": 2.78,
+   "p_play": 0.698,
+   "if_plays": 3.98,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "71132": {
-   "xp": 2.54,
-   "p_play": 0.589,
-   "if_plays": 4.32,
+   "next": {
+    "8": 2.57,
+    "9": 1.63,
+    "10": 2.69
+   },
+   "xp": 2.57,
+   "p_play": 0.6,
+   "if_plays": 4.28,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "71138": {
-   "xp": 1.56,
-   "p_play": 0.544,
-   "if_plays": 2.87,
+   "next": {
+    "8": 1.42,
+    "9": 2.37,
+    "10": 1.93
+   },
+   "xp": 1.42,
+   "p_play": 0.551,
+   "if_plays": 2.57,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "71139": {
-   "xp": 0.98,
-   "p_play": 0.363,
-   "if_plays": 2.71,
+   "next": {
+    "8": 0.9,
+    "9": 1.27,
+    "10": 0.66
+   },
+   "xp": 0.9,
+   "p_play": 0.357,
+   "if_plays": 2.52,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "71140": {
-   "xp": 1.6,
-   "p_play": 0.486,
-   "if_plays": 3.28,
+   "next": {
+    "8": 1.75,
+    "9": 1.08,
+    "10": 1.46
+   },
+   "xp": 1.75,
+   "p_play": 0.488,
+   "if_plays": 3.59,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "71141": {
-   "xp": -0.1,
+   "next": {
+    "8": -0.4,
+    "9": 0.59,
+    "10": 0.48
+   },
+   "xp": -0.4,
    "p_play": 0.244,
-   "if_plays": -0.42,
+   "if_plays": -1.65,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "71142": {
-   "xp": 1.18,
-   "p_play": 0.391,
-   "if_plays": 3.03,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "71149": {
-   "xp": 1.5,
-   "p_play": 0.488,
-   "if_plays": 3.06,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "71154": {
-   "xp": 2.77,
-   "p_play": 0.831,
-   "if_plays": 3.33,
-   "ff_prob": 90,
-   "ff_status": "titular"
-  },
-  "71176": {
-   "xp": 2.04,
-   "p_play": 0.571,
-   "if_plays": 3.58,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "71179": {
-   "xp": 0.92,
-   "p_play": 0.22,
-   "if_plays": 4.19,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "71343": {
-   "xp": 1.72,
-   "p_play": 0.563,
-   "if_plays": 3.06,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "71502": {
-   "xp": 0.37,
-   "p_play": 0.589,
-   "if_plays": 0.63,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "71503": {
-   "xp": 0.0,
-   "p_play": 0.0,
-   "if_plays": 2.99,
-   "ff_prob": null,
-   "ff_status": null
-  },
-  "71505": {
-   "xp": 0.21,
-   "p_play": 0.114,
-   "if_plays": 1.83,
-   "ff_prob": null,
-   "ff_status": null
-  },
-  "71506": {
-   "xp": 0.21,
-   "p_play": 0.114,
-   "if_plays": 1.83,
-   "ff_prob": null,
-   "ff_status": null
-  },
-  "71509": {
-   "xp": 0.07,
-   "p_play": 0.03,
-   "if_plays": 2.37,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "71511": {
-   "xp": 0.91,
-   "p_play": 0.351,
-   "if_plays": 2.61,
-   "ff_prob": null,
-   "ff_status": null
-  },
-  "71530": {
-   "xp": 1.07,
-   "p_play": 0.31,
-   "if_plays": 3.47,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "71574": {
-   "xp": 5.04,
-   "p_play": 0.677,
-   "if_plays": 7.44,
-   "ff_prob": 60,
-   "ff_status": "titular"
-  },
-  "71616": {
-   "xp": 4.32,
-   "p_play": 0.735,
-   "if_plays": 5.88,
-   "ff_prob": 70,
-   "ff_status": "titular"
-  },
-  "71622": {
-   "xp": 0.33,
-   "p_play": 0.092,
-   "if_plays": 3.66,
-   "ff_prob": null,
-   "ff_status": null
-  },
-  "71623": {
-   "xp": 1.97,
-   "p_play": 0.537,
-   "if_plays": 3.68,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "71633": {
-   "xp": 0.93,
-   "p_play": 0.291,
-   "if_plays": 3.19,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "71638": {
-   "xp": 0.11,
-   "p_play": 0.03,
-   "if_plays": 3.51,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "71639": {
-   "xp": 1.81,
-   "p_play": 0.61,
-   "if_plays": 2.97,
-   "ff_prob": 60,
-   "ff_status": "titular"
-  },
-  "71640": {
-   "xp": 3.74,
-   "p_play": 0.833,
-   "if_plays": 4.49,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "71642": {
-   "xp": 0.55,
-   "p_play": 0.233,
-   "if_plays": 2.36,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "71649": {
-   "xp": 3.01,
-   "p_play": 0.774,
-   "if_plays": 3.9,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "71790": {
-   "xp": -0.03,
-   "p_play": 0.279,
-   "if_plays": -0.12,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "71791": {
-   "xp": 1.2,
-   "p_play": 0.427,
-   "if_plays": 2.82,
-   "ff_prob": 50,
-   "ff_status": "suplente"
-  },
-  "71792": {
-   "xp": 0.06,
-   "p_play": 0.03,
-   "if_plays": 1.94,
-   "ff_prob": 0,
-   "ff_status": "suplente"
-  },
-  "71795": {
-   "xp": 0.48,
-   "p_play": 0.248,
-   "if_plays": 1.93,
-   "ff_prob": 20,
-   "ff_status": "suplente"
-  },
-  "78393": {
-   "xp": 0.13,
-   "p_play": 0.07,
-   "if_plays": 1.84,
-   "ff_prob": 5,
-   "ff_status": "suplente"
-  },
-  "78394": {
-   "xp": 2.05,
-   "p_play": 0.63,
-   "if_plays": 3.26,
-   "ff_prob": 60,
-   "ff_status": "titular"
-  },
-  "78750": {
-   "xp": 0.63,
-   "p_play": 0.804,
-   "if_plays": 0.79,
-   "ff_prob": 80,
-   "ff_status": "titular"
-  },
-  "78751": {
-   "xp": 1.94,
-   "p_play": 0.441,
-   "if_plays": 4.39,
-   "ff_prob": 40,
-   "ff_status": "suplente"
-  },
-  "523868": {
-   "xp": 1.94,
-   "p_play": 0.594,
-   "if_plays": 3.26,
-   "ff_prob": 50,
-   "ff_status": "titular"
-  },
-  "822248": {
-   "xp": 0.87,
-   "p_play": 0.335,
-   "if_plays": 2.61,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "925296": {
-   "xp": 1.48,
-   "p_play": 0.397,
-   "if_plays": 3.74,
-   "ff_prob": 30,
-   "ff_status": "suplente"
-  },
-  "1153038": {
-   "xp": 0.36,
-   "p_play": 0.157,
-   "if_plays": 2.26,
-   "ff_prob": null,
-   "ff_status": null
-  },
-  "1255969": {
-   "xp": 0.6,
-   "p_play": 0.283,
-   "if_plays": 2.13,
-   "ff_prob": null,
-   "ff_status": null
-  },
-  "1256139": {
-   "xp": 0.85,
-   "p_play": 0.308,
+   "next": {
+    "8": 1.1,
+    "9": 2.35,
+    "10": 1.94
+   },
+   "xp": 1.1,
+   "p_play": 0.399,
    "if_plays": 2.76,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
+  "71149": {
+   "next": {
+    "8": 1.38,
+    "9": 1.25,
+    "10": 1.04
+   },
+   "xp": 1.38,
+   "p_play": 0.494,
+   "if_plays": 2.78,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "71154": {
+   "next": {
+    "8": 2.74,
+    "9": 2.47,
+    "10": 1.91
+   },
+   "xp": 2.74,
+   "p_play": 0.839,
+   "if_plays": 3.27,
+   "ff_prob": 90,
+   "ff_status": "titular"
+  },
+  "71176": {
+   "next": {
+    "8": 2.32,
+    "9": 3.03,
+    "10": 3.66
+   },
+   "xp": 2.32,
+   "p_play": 0.588,
+   "if_plays": 3.94,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "71179": {
+   "next": {
+    "8": 0.8,
+    "9": 0.62,
+    "10": 0.52
+   },
+   "xp": 0.8,
+   "p_play": 0.195,
+   "if_plays": 4.08,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "71343": {
+   "next": {
+    "8": 1.65,
+    "9": 2.27,
+    "10": 1.71
+   },
+   "xp": 1.65,
+   "p_play": 0.563,
+   "if_plays": 2.93,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "71502": {
+   "next": {
+    "8": -0.31,
+    "9": 2.53,
+    "10": 2.22
+   },
+   "xp": -0.31,
+   "p_play": 0.596,
+   "if_plays": -0.52,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "71503": {
+   "next": {
+    "8": 0.0,
+    "9": 0.56,
+    "10": 0.73
+   },
+   "xp": 0.0,
+   "p_play": 0.0,
+   "if_plays": 3.31,
+   "ff_prob": null,
+   "ff_status": null
+  },
+  "71505": {
+   "next": {
+    "8": 0.17,
+    "9": 0.2,
+    "10": 0.12
+   },
+   "xp": 0.17,
+   "p_play": 0.101,
+   "if_plays": 1.66,
+   "ff_prob": null,
+   "ff_status": null
+  },
+  "71506": {
+   "next": {
+    "8": 0.17,
+    "9": 0.2,
+    "10": 0.12
+   },
+   "xp": 0.17,
+   "p_play": 0.101,
+   "if_plays": 1.66,
+   "ff_prob": null,
+   "ff_status": null
+  },
+  "71509": {
+   "next": {
+    "8": 0.06,
+    "9": 0.51,
+    "10": 0.33
+   },
+   "xp": 0.06,
+   "p_play": 0.03,
+   "if_plays": 2.03,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "71511": {
+   "next": {
+    "8": 0.79,
+    "9": 0.96,
+    "10": 0.63
+   },
+   "xp": 0.79,
+   "p_play": 0.315,
+   "if_plays": 2.51,
+   "ff_prob": null,
+   "ff_status": null
+  },
+  "71530": {
+   "next": {
+    "8": 0.99,
+    "9": 1.33,
+    "10": 1.43
+   },
+   "xp": 0.99,
+   "p_play": 0.304,
+   "if_plays": 3.26,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "71574": {
+   "next": {
+    "8": 5.25,
+    "9": 6.08,
+    "10": 5.56
+   },
+   "xp": 5.25,
+   "p_play": 0.677,
+   "if_plays": 7.75,
+   "ff_prob": 60,
+   "ff_status": "titular"
+  },
+  "71616": {
+   "next": {
+    "8": 3.57,
+    "9": 3.34,
+    "10": 3.33
+   },
+   "xp": 3.57,
+   "p_play": 0.717,
+   "if_plays": 4.98,
+   "ff_prob": 70,
+   "ff_status": "titular"
+  },
+  "71622": {
+   "next": {
+    "8": 0.31,
+    "9": 0.25,
+    "10": 0.2
+   },
+   "xp": 0.31,
+   "p_play": 0.082,
+   "if_plays": 3.72,
+   "ff_prob": null,
+   "ff_status": null
+  },
+  "71623": {
+   "next": {
+    "8": 2.1,
+    "9": 1.7,
+    "10": 2.17
+   },
+   "xp": 2.1,
+   "p_play": 0.543,
+   "if_plays": 3.86,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "71633": {
+   "next": {
+    "8": 0.7,
+    "9": 0.73,
+    "10": 0.8
+   },
+   "xp": 0.7,
+   "p_play": 0.252,
+   "if_plays": 2.79,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "71638": {
+   "next": {
+    "8": 0.14,
+    "9": 0.41,
+    "10": 0.34
+   },
+   "xp": 0.14,
+   "p_play": 0.03,
+   "if_plays": 4.62,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "71639": {
+   "next": {
+    "8": 1.82,
+    "9": 2.32,
+    "10": 2.86
+   },
+   "xp": 1.82,
+   "p_play": 0.619,
+   "if_plays": 2.94,
+   "ff_prob": 60,
+   "ff_status": "titular"
+  },
+  "71640": {
+   "next": {
+    "8": 3.75,
+    "9": 3.68,
+    "10": 5.25
+   },
+   "xp": 3.75,
+   "p_play": 0.837,
+   "if_plays": 4.48,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "71642": {
+   "next": {
+    "8": 0.5,
+    "9": 0.66,
+    "10": 0.82
+   },
+   "xp": 0.5,
+   "p_play": 0.235,
+   "if_plays": 2.15,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "71649": {
+   "next": {
+    "8": 3.2,
+    "9": 3.95,
+    "10": 4.27
+   },
+   "xp": 3.2,
+   "p_play": 0.775,
+   "if_plays": 4.13,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "71790": {
+   "next": {
+    "8": -0.37,
+    "9": 1.07,
+    "10": 0.9
+   },
+   "xp": -0.37,
+   "p_play": 0.292,
+   "if_plays": -1.27,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "71791": {
+   "next": {
+    "8": 1.52,
+    "9": 0.85,
+    "10": 0.68
+   },
+   "xp": 1.52,
+   "p_play": 0.428,
+   "if_plays": 3.55,
+   "ff_prob": 50,
+   "ff_status": "suplente"
+  },
+  "71792": {
+   "next": {
+    "8": 0.05,
+    "9": 0.42,
+    "10": 0.95
+   },
+   "xp": 0.05,
+   "p_play": 0.03,
+   "if_plays": 1.78,
+   "ff_prob": 0,
+   "ff_status": "suplente"
+  },
+  "71795": {
+   "next": {
+    "8": 0.45,
+    "9": 0.69,
+    "10": 0.23
+   },
+   "xp": 0.45,
+   "p_play": 0.25,
+   "if_plays": 1.8,
+   "ff_prob": 20,
+   "ff_status": "suplente"
+  },
+  "78393": {
+   "next": {
+    "8": 0.12,
+    "9": 0.17,
+    "10": 0.22
+   },
+   "xp": 0.12,
+   "p_play": 0.064,
+   "if_plays": 1.89,
+   "ff_prob": 5,
+   "ff_status": "suplente"
+  },
+  "78394": {
+   "next": {
+    "8": 1.6,
+    "9": 1.91,
+    "10": 2.82
+   },
+   "xp": 1.6,
+   "p_play": 0.624,
+   "if_plays": 2.57,
+   "ff_prob": 60,
+   "ff_status": "titular"
+  },
+  "78750": {
+   "next": {
+    "8": 1.14,
+    "9": 3.12,
+    "10": 2.89
+   },
+   "xp": 1.14,
+   "p_play": 0.812,
+   "if_plays": 1.4,
+   "ff_prob": 80,
+   "ff_status": "titular"
+  },
+  "78751": {
+   "next": {
+    "8": 1.9,
+    "9": 1.78,
+    "10": 1.94
+   },
+   "xp": 1.9,
+   "p_play": 0.451,
+   "if_plays": 4.21,
+   "ff_prob": 40,
+   "ff_status": "suplente"
+  },
+  "523868": {
+   "next": {
+    "8": 1.84,
+    "9": 2.09,
+    "10": 3.42
+   },
+   "xp": 1.84,
+   "p_play": 0.588,
+   "if_plays": 3.13,
+   "ff_prob": 50,
+   "ff_status": "titular"
+  },
+  "822248": {
+   "next": {
+    "8": 0.85,
+    "9": 1.15,
+    "10": 0.91
+   },
+   "xp": 0.85,
+   "p_play": 0.326,
+   "if_plays": 2.6,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "925296": {
+   "next": {
+    "8": 1.37,
+    "9": 2.02,
+    "10": 1.79
+   },
+   "xp": 1.37,
+   "p_play": 0.393,
+   "if_plays": 3.48,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
+  "1153038": {
+   "next": {
+    "8": 0.47,
+    "9": 0.42,
+    "10": 0.36
+   },
+   "xp": 0.47,
+   "p_play": 0.176,
+   "if_plays": 2.67,
+   "ff_prob": null,
+   "ff_status": null
+  },
+  "1255969": {
+   "next": {
+    "8": 0.42,
+    "9": 0.46,
+    "10": 0.56
+   },
+   "xp": 0.42,
+   "p_play": 0.253,
+   "if_plays": 1.67,
+   "ff_prob": null,
+   "ff_status": null
+  },
+  "1256139": {
+   "next": {
+    "8": 0.88,
+    "9": 0.52,
+    "10": 0.78
+   },
+   "xp": 0.88,
+   "p_play": 0.302,
+   "if_plays": 2.93,
+   "ff_prob": 30,
+   "ff_status": "suplente"
+  },
   "1385821": {
-   "xp": 3.63,
-   "p_play": 0.676,
-   "if_plays": 5.36,
+   "next": {
+    "8": 3.72,
+    "9": 4.9,
+    "10": 5.38
+   },
+   "xp": 3.72,
+   "p_play": 0.685,
+   "if_plays": 5.43,
    "ff_prob": 60,
    "ff_status": "titular"
   },
   "1396108": {
-   "xp": 0.91,
-   "p_play": 0.362,
-   "if_plays": 2.51,
+   "next": {
+    "8": 0.96,
+    "9": 1.27,
+    "10": 1.66
+   },
+   "xp": 0.96,
+   "p_play": 0.36,
+   "if_plays": 2.65,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "1751425": {
-   "xp": 0.79,
-   "p_play": 0.22,
-   "if_plays": 3.58,
+   "next": {
+    "8": 0.76,
+    "9": 0.73,
+    "10": 0.86
+   },
+   "xp": 0.76,
+   "p_play": 0.209,
+   "if_plays": 3.63,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "2196106": {
-   "xp": 0.27,
-   "p_play": 0.582,
-   "if_plays": 0.46,
+   "next": {
+    "8": 0.6,
+    "9": 2.61,
+    "10": 2.4
+   },
+   "xp": 0.6,
+   "p_play": 0.585,
+   "if_plays": 1.03,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "2586746": {
-   "xp": 1.08,
-   "p_play": 0.336,
-   "if_plays": 3.22,
+   "next": {
+    "8": 0.86,
+    "9": 0.53,
+    "10": 0.61
+   },
+   "xp": 0.86,
+   "p_play": 0.301,
+   "if_plays": 2.84,
    "ff_prob": null,
    "ff_status": null
   },
   "2720265": {
-   "xp": 2.63,
-   "p_play": 0.542,
-   "if_plays": 4.85,
+   "next": {
+    "8": 2.57,
+    "9": 1.56,
+    "10": 2.38
+   },
+   "xp": 2.57,
+   "p_play": 0.538,
+   "if_plays": 4.79,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "3317698": {
-   "xp": 1.58,
-   "p_play": 0.483,
-   "if_plays": 3.27,
+   "next": {
+    "8": 1.56,
+    "9": 1.07,
+    "10": 1.29
+   },
+   "xp": 1.56,
+   "p_play": 0.468,
+   "if_plays": 3.33,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "3368896": {
-   "xp": 0.21,
-   "p_play": 0.067,
-   "if_plays": 3.22,
+   "next": {
+    "8": 0.16,
+    "9": 0.13,
+    "10": 0.06
+   },
+   "xp": 0.16,
+   "p_play": 0.051,
+   "if_plays": 3.04,
    "ff_prob": null,
    "ff_status": null
   },
   "3688394": {
-   "xp": 0.19,
-   "p_play": 0.08,
-   "if_plays": 2.44,
+   "next": {
+    "8": 0.24,
+    "9": 0.37,
+    "10": 0.34
+   },
+   "xp": 0.24,
+   "p_play": 0.077,
+   "if_plays": 3.1,
    "ff_prob": 5,
    "ff_status": "suplente"
   },
   "3844425": {
-   "xp": 0.69,
-   "p_play": 0.344,
-   "if_plays": 1.99,
+   "next": {
+    "8": 0.6,
+    "9": 1.04,
+    "10": 1.23
+   },
+   "xp": 0.6,
+   "p_play": 0.323,
+   "if_plays": 1.85,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "3845074": {
-   "xp": 2.22,
-   "p_play": 0.657,
-   "if_plays": 3.37,
+   "next": {
+    "8": 2.46,
+    "9": 3.71,
+    "10": 3.84
+   },
+   "xp": 2.46,
+   "p_play": 0.663,
+   "if_plays": 3.71,
    "ff_prob": 60,
    "ff_status": "titular"
   },
   "3848674": {
-   "xp": 2.84,
-   "p_play": 0.667,
-   "if_plays": 4.26,
+   "next": {
+    "8": 2.37,
+    "9": 1.7,
+    "10": 1.7
+   },
+   "xp": 2.37,
+   "p_play": 0.658,
+   "if_plays": 3.61,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "3848684": {
-   "xp": 0.08,
+   "next": {
+    "8": 0.07,
+    "9": 0.9,
+    "10": 0.91
+   },
+   "xp": 0.07,
    "p_play": 0.03,
-   "if_plays": 2.72,
+   "if_plays": 2.49,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "3848779": {
-   "xp": 1.49,
-   "p_play": 0.403,
-   "if_plays": 3.7,
+   "next": {
+    "8": 1.33,
+    "9": 1.99,
+    "10": 1.75
+   },
+   "xp": 1.33,
+   "p_play": 0.396,
+   "if_plays": 3.36,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "3848780": {
-   "xp": 0.89,
-   "p_play": 0.366,
-   "if_plays": 2.43,
+   "next": {
+    "8": 0.81,
+    "9": 1.53,
+    "10": 1.6
+   },
+   "xp": 0.81,
+   "p_play": 0.37,
+   "if_plays": 2.2,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "3849388": {
-   "xp": 1.56,
-   "p_play": 0.474,
-   "if_plays": 3.3,
+   "next": {
+    "8": 1.6,
+    "9": 1.63,
+    "10": 1.46
+   },
+   "xp": 1.6,
+   "p_play": 0.469,
+   "if_plays": 3.4,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "4478035": {
-   "xp": 0.53,
-   "p_play": 0.179,
-   "if_plays": 2.97,
+   "next": {
+    "8": 0.54,
+    "9": 0.3,
+    "10": 0.36
+   },
+   "xp": 0.54,
+   "p_play": 0.174,
+   "if_plays": 3.1,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "4733614": {
-   "xp": 0.98,
-   "p_play": 0.29,
-   "if_plays": 3.4,
+   "next": {
+    "8": 0.87,
+    "9": 1.34,
+    "10": 1.26
+   },
+   "xp": 0.87,
+   "p_play": 0.269,
+   "if_plays": 3.24,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "4764213": {
-   "xp": 2.9,
-   "p_play": 0.502,
-   "if_plays": 5.78,
+   "next": {
+    "8": 2.97,
+    "9": 2.53,
+    "10": 2.29
+   },
+   "xp": 2.97,
+   "p_play": 0.494,
+   "if_plays": 6.01,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "4774441": {
-   "xp": 0.12,
+   "next": {
+    "8": 0.14,
+    "9": 1.74,
+    "10": 2.04
+   },
+   "xp": 0.14,
    "p_play": 0.03,
-   "if_plays": 4.1,
+   "if_plays": 4.54,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "4836153": {
-   "xp": 4.22,
-   "p_play": 0.637,
-   "if_plays": 6.62,
+   "next": {
+    "8": 4.43,
+    "9": 6.5,
+    "10": 7.28
+   },
+   "xp": 4.43,
+   "p_play": 0.634,
+   "if_plays": 6.99,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "4836165": {
-   "xp": 4.04,
-   "p_play": 0.836,
-   "if_plays": 4.83,
+   "next": {
+    "8": 4.34,
+    "9": 3.85,
+    "10": 4.42
+   },
+   "xp": 4.34,
+   "p_play": 0.834,
+   "if_plays": 5.2,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "4836172": {
-   "xp": 1.31,
-   "p_play": 0.379,
-   "if_plays": 3.46,
+   "next": {
+    "8": 1.17,
+    "9": 1.35,
+    "10": 2.14
+   },
+   "xp": 1.17,
+   "p_play": 0.357,
+   "if_plays": 3.28,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "4836173": {
-   "xp": 2.88,
-   "p_play": 0.739,
-   "if_plays": 3.9,
+   "next": {
+    "8": 2.92,
+    "9": 2.86,
+    "10": 4.24
+   },
+   "xp": 2.92,
+   "p_play": 0.738,
+   "if_plays": 3.95,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "4836181": {
-   "xp": 1.23,
-   "p_play": 0.633,
-   "if_plays": 1.94,
+   "next": {
+    "8": 1.56,
+    "9": 4.45,
+    "10": 4.19
+   },
+   "xp": 1.56,
+   "p_play": 0.628,
+   "if_plays": 2.48,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "4836184": {
-   "xp": 1.68,
-   "p_play": 0.41,
-   "if_plays": 4.11,
+   "next": {
+    "8": 2.05,
+    "9": 1.02,
+    "10": 0.86
+   },
+   "xp": 2.05,
+   "p_play": 0.413,
+   "if_plays": 4.98,
    "ff_prob": 50,
    "ff_status": "titular"
   },
   "4836189": {
-   "xp": 1.09,
-   "p_play": 0.385,
-   "if_plays": 2.83,
+   "next": {
+    "8": 1.01,
+    "9": 2.13,
+    "10": 1.74
+   },
+   "xp": 1.01,
+   "p_play": 0.389,
+   "if_plays": 2.6,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "4836242": {
-   "xp": 1.82,
-   "p_play": 0.549,
-   "if_plays": 3.32,
+   "next": {
+    "8": 1.77,
+    "9": 2.19,
+    "10": 2.61
+   },
+   "xp": 1.77,
+   "p_play": 0.551,
+   "if_plays": 3.21,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "4947925": {
+   "next": {
+    "8": 0.1,
+    "9": 0.15,
+    "10": 0.12
+   },
    "xp": 0.1,
    "p_play": 0.03,
-   "if_plays": 3.24,
+   "if_plays": 3.18,
    "ff_prob": 0,
    "ff_status": "suplente"
   },
   "4947926": {
-   "xp": 0.92,
-   "p_play": 0.32,
-   "if_plays": 2.88,
+   "next": {
+    "8": 1.03,
+    "9": 0.33,
+    "10": 0.42
+   },
+   "xp": 1.03,
+   "p_play": 0.316,
+   "if_plays": 3.25,
    "ff_prob": 40,
    "ff_status": "suplente"
   },
   "4947927": {
-   "xp": 3.48,
-   "p_play": 0.826,
-   "if_plays": 4.21,
+   "next": {
+    "8": 3.52,
+    "9": 3.36,
+    "10": 4.87
+   },
+   "xp": 3.52,
+   "p_play": 0.829,
+   "if_plays": 4.24,
    "ff_prob": 80,
    "ff_status": "titular"
   },
   "4947928": {
-   "xp": 0.1,
-   "p_play": 0.072,
-   "if_plays": 1.45,
+   "next": {
+    "8": 0.05,
+    "9": 0.05,
+    "10": 0.07
+   },
+   "xp": 0.05,
+   "p_play": 0.043,
+   "if_plays": 1.09,
    "ff_prob": null,
    "ff_status": null
   },
   "4947929": {
-   "xp": 2.74,
-   "p_play": 0.677,
-   "if_plays": 4.05,
+   "next": {
+    "8": 2.97,
+    "9": 2.61,
+    "10": 2.45
+   },
+   "xp": 2.97,
+   "p_play": 0.65,
+   "if_plays": 4.57,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "4947930": {
-   "xp": 0.81,
-   "p_play": 0.257,
-   "if_plays": 3.15,
+   "next": {
+    "8": 0.83,
+    "9": 1.46,
+    "10": 1.12
+   },
+   "xp": 0.83,
+   "p_play": 0.269,
+   "if_plays": 3.08,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "4947931": {
-   "xp": 1.0,
-   "p_play": 0.348,
-   "if_plays": 2.87,
+   "next": {
+    "8": 0.78,
+    "9": 0.58,
+    "10": 0.64
+   },
+   "xp": 0.78,
+   "p_play": 0.316,
+   "if_plays": 2.47,
    "ff_prob": 30,
    "ff_status": "suplente"
   },
   "4947932": {
-   "xp": 2.93,
-   "p_play": 0.69,
-   "if_plays": 4.25,
+   "next": {
+    "8": 3.17,
+    "9": 3.18,
+    "10": 2.96
+   },
+   "xp": 3.17,
+   "p_play": 0.685,
+   "if_plays": 4.62,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "5235247": {
-   "xp": 0.51,
-   "p_play": 0.204,
-   "if_plays": 2.5,
+   "next": {
+    "8": 0.33,
+    "9": 0.35,
+    "10": 0.55
+   },
+   "xp": 0.33,
+   "p_play": 0.193,
+   "if_plays": 1.7,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "5235428": {
-   "xp": -0.23,
-   "p_play": 0.37,
-   "if_plays": -0.63,
+   "next": {
+    "8": -0.06,
+    "9": 0.73,
+    "10": 0.64
+   },
+   "xp": -0.06,
+   "p_play": 0.349,
+   "if_plays": -0.18,
    "ff_prob": null,
    "ff_status": null
   },
   "5298724": {
-   "xp": 0.72,
-   "p_play": 0.242,
-   "if_plays": 2.98,
+   "next": {
+    "8": 0.82,
+    "9": 1.08,
+    "10": 0.96
+   },
+   "xp": 0.82,
+   "p_play": 0.247,
+   "if_plays": 3.31,
    "ff_prob": 20,
    "ff_status": "suplente"
   },
   "5340038": {
-   "xp": 2.41,
-   "p_play": 0.586,
-   "if_plays": 4.12,
+   "next": {
+    "8": 2.22,
+    "9": 3.7,
+    "10": 3.19
+   },
+   "xp": 2.22,
+   "p_play": 0.583,
+   "if_plays": 3.8,
    "ff_prob": 50,
    "ff_status": "suplente"
   },
   "5358737": {
-   "xp": 1.66,
-   "p_play": 0.609,
-   "if_plays": 2.72,
+   "next": {
+    "8": 1.61,
+    "9": 1.13,
+    "10": 0.9
+   },
+   "xp": 1.61,
+   "p_play": 0.6,
+   "if_plays": 2.68,
    "ff_prob": 70,
    "ff_status": "titular"
   },
   "5404997": {
-   "xp": 1.05,
-   "p_play": 0.32,
-   "if_plays": 3.28,
+   "next": {
+    "8": 1.02,
+    "9": 0.65,
+    "10": 0.92
+   },
+   "xp": 1.02,
+   "p_play": 0.296,
+   "if_plays": 3.44,
    "ff_prob": null,
    "ff_status": null
   }

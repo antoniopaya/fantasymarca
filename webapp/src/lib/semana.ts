@@ -10,11 +10,18 @@ import {
   type LigaEntry,
   type PlayerSummary,
 } from "./data";
-import { difficulty, expectedPoints, fixtureIn } from "./forecast";
+import {
+  difficulty,
+  expectedPoints,
+  expectedPointsHorizon,
+  fixtureIn,
+} from "./forecast";
 
 export interface WeekPlayer {
   summary: PlayerSummary;
   xp: number;
+  /** Puntos esperados sumando la próxima jornada y las dos siguientes. */
+  xp3: number;
   rivalName: string | null;
   home: boolean | null;
   difficulty: number | null;
@@ -25,6 +32,7 @@ function toWeekPlayer(s: PlayerSummary, gameweek: number): WeekPlayer {
   return {
     summary: s,
     xp: expectedPoints(s, gameweek),
+    xp3: expectedPointsHorizon(s).total,
     rivalName: f?.rivalName ?? null,
     home: f?.home ?? null,
     difficulty: f ? difficulty(f.rivalId, s.position, f.home) : null,
@@ -77,15 +85,16 @@ export function weekPlan(entry: LigaEntry) {
     .sort((a, b) => b.xp - a.xp)
     .slice(0, 3);
 
-  // Los 3 que menos se espera que sumen, y para cada uno los mejores que
-  // podrías fichar con su precio más tu saldo (un cambio cada vez).
+  // Los 3 que menos se espera que sumen en las próximas 3 jornadas (un
+  // cambio se queda varias semanas), y para cada uno los mejores que podrías
+  // fichar con su precio más tu saldo (un cambio cada vez).
   const saldo = (entry.saldo ?? 0) * 1_000_000;
   const candidates = getAllPlayerSummaries().filter(
     (s) =>
       s.precioFantastica !== null && !mineIds.has(s.id) && s.status === null,
   );
   const changes = [...mine]
-    .sort((a, b) => a.xp - b.xp)
+    .sort((a, b) => a.xp3 - b.xp3)
     .slice(0, 3)
     .map((out) => {
       const budget = (out.summary.precioFantastica ?? 0) + saldo;
@@ -96,8 +105,8 @@ export function weekPlan(entry: LigaEntry) {
             (s.precioFantastica as number) <= budget,
         )
         .map((s) => toWeekPlayer(s, gameweek))
-        .filter((s) => s.xp >= out.xp + 1)
-        .sort((a, b) => b.xp - a.xp)
+        .filter((s) => s.xp3 >= out.xp3 + 2)
+        .sort((a, b) => b.xp3 - a.xp3)
         .slice(0, 3);
       return { out, budget, options };
     })

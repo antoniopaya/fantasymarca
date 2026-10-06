@@ -8,7 +8,6 @@ import {
   getLineupsScrapedAt,
   getNextGameweek,
   getPredictions,
-  MAX_CAPTAIN_PRICE,
   playerPhotoUrl,
   POSITION_NAMES,
   POSITION_SHORT,
@@ -18,8 +17,11 @@ import {
 import {
   difficulty,
   expectedPoints,
+  expectedPointsHorizon,
   fixtureIn,
+  horizonGameweeks,
   prediction,
+  teamFixtures,
 } from "../../lib/forecast";
 import { bestEleven, latestOwnershipPct } from "../../lib/liga";
 
@@ -36,7 +38,16 @@ interface Rec {
   diff: number | null;
   prob: number | null;
   owned: number;
+  xp3: number;
+  perGw: {
+    gw: number;
+    xp: number;
+    rival: string | null;
+    diff: number | null;
+  }[];
 }
+
+const horizon = horizonGameweeks();
 
 const recs: Rec[] = getAllPlayerSummaries()
   .filter((s) => s.precioFantastica !== null)
@@ -50,6 +61,21 @@ const recs: Rec[] = getAllPlayerSummaries()
       diff: f ? difficulty(f.rivalId, s.position, f.home) : null,
       prob: prediction(s.id, gw.number)?.ff_prob ?? null,
       owned: latestOwnershipPct(s.id),
+      ...(() => {
+        const h = expectedPointsHorizon(s);
+        const fixtures = teamFixtures(s.id_team);
+        return {
+          xp3: h.total,
+          perGw: h.perGw.map((x) => {
+            const fx = fixtures.find((f) => f.gameweek === x.gw);
+            return {
+              ...x,
+              rival: fx?.rivalName ?? null,
+              diff: fx ? difficulty(fx.rivalId, s.position, fx.home) : null,
+            };
+          }),
+        };
+      })(),
     };
   })
   .filter((r) => r.rival !== null);
@@ -65,6 +91,11 @@ const value = [...recs]
   .sort((a, b) => b.xp / millions(b) - a.xp / millions(a))
   .slice(0, 10);
 const differentials = byXp.filter((r) => r.owned <= 10).slice(0, 10);
+const byXp3 = [...recs].sort((a, b) => b.xp3 - a.xp3);
+const next3 = [1, 2, 3, 4].map((pos) => ({
+  pos,
+  list: byXp3.filter((r) => r.s.position === pos).slice(0, 5),
+}));
 
 const xpById = new Map(recs.map((r) => [r.s.id, r.xp]));
 const eleven = bestEleven(
@@ -75,8 +106,6 @@ const eleven = bestEleven(
 const elevenXp = eleven
   ? eleven.players.reduce((sum, p) => sum + p.points * (p.captain ? 2 : 1), 0)
   : 0;
-const captainOk = (r: Rec) =>
-  (r.s.precioFantastica ?? Infinity) < MAX_CAPTAIN_PRICE;
 
 const fmt = (n: number) => n.toFixed(1).replace(".", ",");
 const fmtM = (n: number) => `${fmt(n).replace(",0", "")}M`;
@@ -197,9 +226,64 @@ const baseline = summary?.media_previa;
     )
   }
 
+  <section class="mb-10" aria-labelledby="proximas-3">
+    <h2 id="proximas-3" class="text-xl font-bold text-white">
+      Para las próximas {horizon.length} jornadas
+    </h2>
+    <p class="mb-4 text-sm text-slate-400">
+      Con los cambios contados, conviene fichar pensando en más de una semana:
+      puntos esperados en cada jornada (J{horizon.join(", J")}) y su suma. Más
+      allá de la próxima no hay alineaciones probables, así que cuenta solo lo
+      que dice el modelo.
+    </p>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+      {
+        next3.map(({ pos, list }) => (
+          <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+            <h3 class="mb-1 text-sm font-semibold text-white">
+              {POSITION_NAMES[pos]}s
+            </h3>
+            <ol class="divide-y divide-white/5">
+              {list.map((r) => (
+                <li class="py-2">
+                  <a
+                    href={url(`/jugadores/${r.s.id}`)}
+                    class="flex items-baseline justify-between gap-2"
+                  >
+                    <span class="min-w-0 truncate font-semibold text-white">
+                      {r.s.name}
+                      <span class="ml-1 text-xs font-normal text-slate-500">
+                        {fmtM(millions(r))}
+                      </span>
+                    </span>
+                    <span class="shrink-0 font-bold text-emerald-300">
+                      ≈{fmt(r.xp3)}
+                    </span>
+                  </a>
+                  <div class="mt-1 grid grid-cols-3 gap-1 text-xs text-slate-300">
+                    {r.perGw.map((x) => (
+                      <span
+                        class="flex items-center gap-1"
+                        title={x.rival ? `vs ${x.rival}` : "Sin partido"}
+                      >
+                        <span class="text-slate-500">J{x.gw}</span>
+                        <DifficultyChip level={x.diff} />
+                        {x.rival ? fmt(x.xp) : "—"}
+                      </span>
+                    ))}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
   <section class="mb-10" aria-labelledby="por-posicion">
     <h2 id="por-posicion" class="mb-4 text-xl font-bold text-white">
-      Los mejores por posición
+      Los mejores para la {gw.name}
     </h2>
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
       {
@@ -236,11 +320,9 @@ const baseline = summary?.media_previa;
                       <span class="block font-bold text-emerald-300">
                         ≈{fmt(r.xp)}
                       </span>
-                      {captainOk(r) && (
-                        <span class="text-[10px] text-slate-500">
-                          capitán ≈{fmt(r.xp * 2)}
-                        </span>
-                      )}
+                      <span class="block text-[10px] text-slate-500">
+                        3 jornadas ≈{fmt(r.xp3)}
+                      </span>
                     </span>
                   </a>
                 </li>

@@ -108,8 +108,10 @@ mano; ver `MANUAL_OVERRIDES` dentro del script para los casos ya resueltos.
 5. **Modelo de puntos esperados** (`fantasy_api/ml_model.py`) — machine
    learning con scikit-learn: P(juega) × puntos si juega, con variables
    calculadas solo con lo que se sabía antes de cada jornada (forma,
-   titularidades, goles/asistencias, rival, casa/fuera, precio, temporada
-   pasada). Prueba un modelo lineal y uno de boosting, valida cada jornada
+   titularidades, goles/asistencias, precio, fuerza del rival y de su equipo,
+   casa/fuera, y cruces posición × rival: un rival goleador no afecta igual a
+   un portero que a un delantero). Predice la próxima jornada y las dos
+   siguientes, para fichar pensando en varias semanas. Prueba un modelo lineal y uno de boosting, valida cada jornada
    pasada entrenando solo con las anteriores y se queda el mejor; para la
    jornada a predecir combina su P(juega) con las alineaciones probables
    (cuando haya 2+ jornadas guardadas, las usa como variable y aprende su

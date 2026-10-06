@@ -366,6 +366,15 @@ const comparisonCandidates = player
                   >
                     {f.difficulty} · {DIFFICULTY_LABELS[f.difficulty]}
                   </span>
+                  {summary && (
+                    <span class="text-xs font-semibold text-emerald-300">
+                      ≈
+                      {expectedPoints(summary, f.gameweek)
+                        .toFixed(1)
+                        .replace(".", ",")}{" "}
+                      pts
+                    </span>
+                  )}
                 </div>
               ))}
             </div>

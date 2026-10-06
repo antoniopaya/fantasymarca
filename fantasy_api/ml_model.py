@@ -14,9 +14,11 @@ muy regularizado, que debería ir ganando cuando haya más temporada).
 Cada fila es (jugador, jornada g) y sus variables se calculan SOLO con lo
 que se sabía antes de g (jornadas anteriores, partidos ya jugados antes
 del primero de g), para no hacer trampas con información del futuro:
-posición, precio Fantástica, temporada pasada, medias/forma/titularidades
-previas, goles y asistencias previas, fuerza del equipo y del rival
-(puntos, goles a favor y en contra por partido) y si juega en casa.
+posición, precio Fantástica, medias/forma/titularidades previas, goles y
+asistencias previas, fuerza del equipo y del rival (puntos, goles a favor
+y en contra por partido), si juega en casa, y cruces posición × rival (no
+es lo mismo un rival goleador para un portero que para un delantero). La
+temporada pasada no se usa: no mejoraba la validación.
 
 Alineaciones probables (scrape_alineaciones.py): para la jornada a predecir
 se combinan con P(juega) del modelo. Cuando haya al menos 2 jornadas con
@@ -53,12 +55,14 @@ DATA_DIR = os.path.join(ROOT, "webapp", "data")
 SHRINK = 3  # partidos "de media" con los que se encoge la fuerza de cada equipo
 MIN_TRAIN_GW = 3  # jornadas mínimas de historia antes de validar
 SEED = 0
+HORIZON = 3  # jornadas que se predicen: la próxima y las dos siguientes
 
 FEATURES = [
-    "position",
+    "is_gk",
+    "is_def",
+    "is_mid",
+    "is_fwd",
     "price",
-    "ls_avg",
-    "ls_points",
     "n_prev",
     "play_rate",
     "start_rate",
@@ -76,6 +80,16 @@ FEATURES = [
     "rival_gf",
     "rival_ga",
     "home",
+    # El rival no afecta igual a todas las posiciones: a porteros y defensas
+    # les perjudica un rival goleador; a medios y delanteros les beneficia uno
+    # que encaja mucho. Un modelo lineal no lo ve sin estas variables cruzadas.
+    "rival_gf_x_def",
+    "rival_ga_x_def",
+    "rival_gf_x_att",
+    "rival_ga_x_att",
+    "team_ga_x_def",
+    "team_gf_x_att",
+    "home_x_def",
 ]
 FF_FEATURE = "ff_prob"
 
@@ -244,6 +258,17 @@ def build_rows(players, matches, gws, ff_hist):
             }
             rows.append(row)
     df = pd.DataFrame(rows)
+    for pos, name in ((1, "gk"), (2, "def"), (3, "mid"), (4, "fwd")):
+        df[f"is_{name}"] = (df.position == pos).astype(float)
+    defense = (df.position <= 2).astype(float)
+    attack = 1 - defense
+    df["rival_gf_x_def"] = df.rival_gf * defense
+    df["rival_ga_x_def"] = df.rival_ga * defense
+    df["rival_gf_x_att"] = df.rival_gf * attack
+    df["rival_ga_x_att"] = df.rival_ga * attack
+    df["team_ga_x_def"] = df.team_ga * defense
+    df["team_gf_x_att"] = df.team_gf * attack
+    df["home_x_def"] = df.home * defense
     df["y_played"] = df.y_points.notna()
     df["y_total"] = df.y_points.fillna(0)
     return df
@@ -374,7 +399,11 @@ def main() -> None:
         ff_now = {p["id"]: p for team in lineups["teams"].values() for p in team if p.get("id") is not None}
         ff_hist.setdefault(next_gw, {pid: p["prob"] for pid, p in ff_now.items()})
 
-    df = build_rows(players, matches, range(1, next_gw + 1), ff_hist)
+    # Además de la próxima, las dos siguientes: con los cambios limitados
+    # importa el calendario de varias jornadas, no solo el de esta.
+    last_gw = int(matches.gw.max())
+    horizon = [g for g in range(next_gw, next_gw + HORIZON) if g <= last_gw]
+    df = build_rows(players, matches, range(1, horizon[-1] + 1), ff_hist)
     history_gws = df[(df.gw < next_gw) & df[FF_FEATURE].notna()].gw.nunique()
     use_ff_feature = history_gws >= 2
     features = FEATURES + ([FF_FEATURE] if use_ff_feature else [])
@@ -393,34 +422,49 @@ def main() -> None:
     print(f"  -> modelo elegido: {family}", file=sys.stderr)
 
     train = df[(df.gw < next_gw) & df.team_played]
-    target = df[df.gw == next_gw].copy()
     models = fit(train, features, family)
-    p_model, if_plays = predict(models, target, features)
-    target["p_model"] = p_model
-    target["if_plays"] = if_plays
-    ff_prob = target["id"].map(lambda i: ff_now[i]["prob"] if i in ff_now else np.nan).to_numpy(dtype=float)
-    status = target["id"].map({p["id"]: p["status"] for p in players})
-    p_play = p_model if use_ff_feature else blend_with_lineups(p_model, ff_prob)
-    # Sin dato de futbolfantasy, el estado de Marca (lesión/sanción) manda.
-    out_status = status.isin(["injury", "red", "other"]).to_numpy() & np.isnan(ff_prob)
-    p_play = np.where(out_status, 0.0, p_play)
-    p_play = np.where(status.eq("doubt").to_numpy() & np.isnan(ff_prob), p_play * 0.5, p_play)
-    target["p_play"] = p_play
-    target["xp"] = p_play * target["if_plays"]
+    status_by_id = {p["id"]: p["status"] for p in players}
 
-    players_out = {}
-    for r in target.itertuples():
-        ff = ff_now.get(r.id)
-        players_out[str(r.id)] = {
-            "xp": round(float(r.xp), 2),
-            "p_play": round(float(r.p_play), 3),
-            "if_plays": round(float(r.if_plays), 2),
-            "ff_prob": ff["prob"] if ff else None,
-            "ff_status": ff["status"] if ff else None,
-        }
+    players_out: dict[str, dict] = {}
+    target = None
+    for g in horizon:
+        rows = df[df.gw == g].copy()
+        p_model, if_plays = predict(models, rows, features)
+        rows["if_plays"] = if_plays
+        status = rows["id"].map(status_by_id)
+        if g == next_gw:
+            ff_prob = rows["id"].map(lambda i: ff_now[i]["prob"] if i in ff_now else np.nan).to_numpy(dtype=float)
+            p_play = p_model if use_ff_feature else blend_with_lineups(p_model, ff_prob)
+            # Sin dato de futbolfantasy, el estado de Marca (lesión/sanción) manda.
+            out_status = status.isin(["injury", "red", "other"]).to_numpy() & np.isnan(ff_prob)
+            p_play = np.where(out_status, 0.0, p_play)
+            p_play = np.where(status.eq("doubt").to_numpy() & np.isnan(ff_prob), p_play * 0.5, p_play)
+        else:
+            # Más adelante no hay alineaciones: una lesión de hoy puede seguir o
+            # no, así que se queda a la mitad; una sanción suele ser de un partido.
+            p_play = np.where(status.eq("injury").to_numpy(), p_model * 0.5, p_model)
+        rows["p_play"] = p_play
+        rows["xp"] = p_play * rows["if_plays"]
+        for r in rows.itertuples():
+            entry = players_out.setdefault(str(r.id), {"next": {}})
+            entry["next"][str(g)] = round(float(r.xp), 2)
+            if g == next_gw:
+                ff = ff_now.get(r.id)
+                entry.update(
+                    {
+                        "xp": round(float(r.xp), 2),
+                        "p_play": round(float(r.p_play), 3),
+                        "if_plays": round(float(r.if_plays), 2),
+                        "ff_prob": ff["prob"] if ff else None,
+                        "ff_status": ff["status"] if ff else None,
+                    }
+                )
+        if g == next_gw:
+            target = rows
 
     payload = {
         "jornada": next_gw,
+        "horizon": horizon,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="minutes"),
         "model": family,
         "n_train": int(len(train)),

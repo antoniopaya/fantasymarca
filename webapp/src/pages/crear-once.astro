@@ -23,6 +23,7 @@ import {
   DIFFICULTY_LABELS,
   difficulty,
   expectedPoints,
+  expectedPointsHorizon,
   fixtureIn,
   prediction,
 } from "../lib/forecast";
@@ -71,6 +72,10 @@ const players = getAllPlayerSummaries()
         : null,
       home: fixture?.home ?? null,
       ffProb: prediction(p.id, nextGameweek.number)?.ff_prob ?? null,
+      ...(() => {
+        const h = expectedPointsHorizon(p);
+        return { xp3: h.total, xpByGw: h.perGw };
+      })(),
     };
   });
 const pricedIds = new Set(players.map((p) => p.id));
@@ -413,6 +418,7 @@ for (const m of nextGwMatches) {
           {
             [
               ["xp", "Esperados"],
+              ["xp3", "3 jornadas"],
               ["form", "Forma"],
               ["points", "Puntos"],
               ["value", "Pts/M€"],
@@ -1281,6 +1287,9 @@ for (const m of nextGwMatches) {
           <p class="text-sm text-slate-400">
             <b class="text-emerald-300">≈${formatXp(player.xp)} pts</b> esperados${player.ffProb !== null ? ` · titular ${player.ffProb}%` : ""} · J anterior: ${player.lastGwPoints ?? "–"} · forma ${player.form}
           </p>
+          <p class="text-sm text-slate-400">
+            Próximas: ${player.xpByGw.map((x) => `J${x.gw} ≈${formatXp(x.xp)}`).join(" · ")} = <b class="text-slate-200">≈${formatXp(player.xp3)}</b>
+          </p>
         </div>`;
       const isCaptain = state.captainId === player.id;
       const eligible = player.price < MAX_CAPTAIN_PRICE;
@@ -1340,6 +1349,7 @@ for (const m of nextGwMatches) {
     let pickerSort = "xp";
     const PICKER_SORTS = {
       xp: (p) => p.xp,
+      xp3: (p) => p.xp3,
       price: (p) => p.price,
       points: (p) => p.points,
       form: (p) => p.form,
@@ -1412,7 +1422,7 @@ for (const m of nextGwMatches) {
                     }
                   </span>
                   <span class="mt-0.5 block text-[13px] text-slate-400">
-                    <b class="text-emerald-300">≈${formatXp(p.xp)}</b>${p.ffProb !== null ? ` · tit. ${p.ffProb}%` : ""} · forma ${p.form} · ${p.ownershipPct}% liga
+                    <b class="text-emerald-300">≈${formatXp(p.xp)}</b> · 3 jorn. ≈${formatXp(p.xp3)}${p.ffProb !== null ? ` · tit. ${p.ffProb}%` : ""} · forma ${p.form} · ${p.ownershipPct}% liga
                   </span>
                 </span>
               </button>
