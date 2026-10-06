@@ -1,0 +1,348 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import LigaTabs from "../../components/LigaTabs.astro";
+import YoScript from "../../components/YoScript.astro";
+import RankingList from "../../components/RankingList.astro";
+import MultiLineChart from "../../components/charts/MultiLineChart.astro";
+import {
+  getLigaJornadas,
+  playerPhotoUrl,
+  POSITION_SHORT,
+  url,
+} from "../../lib/data";
+import {
+  captaincies,
+  differentials,
+  efficiency,
+  FAMILIA_COLORS,
+  favorites,
+  idealEleven,
+  jornadaWinners,
+  latestCaptains,
+  mostOwned,
+  similarTo,
+  templateEleven,
+} from "../../lib/liga";
+import { FAMILIA } from "../../lib/yo";
+
+const jornadas = getLigaJornadas();
+const last = jornadas[jornadas.length - 1];
+const prevNumber = jornadas[jornadas.length - 2]?.number;
+
+const fmtPct = (n: number) => `${n.toFixed(0)}%`;
+const fmt1 = (n: number) => n.toFixed(1).replace(".", ",");
+
+const perFamily = FAMILIA.map((name) => ({
+  name,
+  efficiency: efficiency(name),
+  favorites: favorites(name, 6),
+  similar: similarTo(name),
+}));
+
+const owned = mostOwned(12);
+const captainsNow = latestCaptains().slice(0, 6);
+const captainsSeason = captaincies().slice(0, 8);
+const template = templateEleven();
+const diffs = differentials(10, 10);
+const ideal = last ? idealEleven(last.number) : null;
+const lastWinner = jornadaWinners().at(-1);
+---
+
+<Layout
+  title="Estadísticas de la liga"
+  description="Jugadores más usados, capitanes, favoritos de cada participante, 11 ideal y diferenciales de la liga Fantástica."
+>
+  <h1 class="text-3xl font-black text-white">Liga Fantástica</h1>
+  <p class="mt-1 mb-6 text-sm text-slate-400">
+    {
+      last
+        ? `Estadísticas con ${jornadas.length} jornadas · última: Jornada ${last.number}`
+        : "Todavía no hay jornadas cargadas."
+    }
+  </p>
+
+  <LigaTabs active="estadisticas" />
+
+  {
+    last && (
+      <>
+        <section class="mb-10" aria-labelledby="tu-analisis-title">
+          <h2 id="tu-analisis-title" class="mb-4 text-xl font-bold text-white">
+            Tu análisis
+          </h2>
+          <p
+            data-yo-placeholder
+            class="rounded-2xl border border-dashed border-white/15 p-6 text-center text-sm text-slate-400"
+          >
+            Elige quién eres arriba (
+            <span class="text-slate-200">¿Quién eres?</span>) para ver tus
+            favoritos, tu eficiencia y a quién se parece tu equipo.
+          </p>
+          {perFamily.map(
+            ({ name, efficiency: eff, favorites: fav, similar }) => (
+              <div
+                data-yo-panel={name}
+                hidden
+                class="grid grid-cols-1 gap-4 lg:grid-cols-3"
+              >
+                <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+                  <p class="text-xs text-slate-500">Eficiencia media</p>
+                  <p class="text-3xl font-black text-white">
+                    {fmtPct(eff.avgPct)}
+                  </p>
+                  <p class="mt-1 text-xs text-slate-400">
+                    de los puntos del 11 ideal de cada jornada (el mejor 11
+                    posible con 180M, visto a toro pasado).
+                  </p>
+                  <p class="mt-4 text-xs text-slate-500">
+                    Puntos que te ha costado el capitán
+                  </p>
+                  <p class="text-3xl font-black text-white">
+                    {eff.captainLoss}
+                  </p>
+                  <p class="mt-1 text-xs text-slate-400">
+                    Lo que habrías sumado de más eligiendo cada jornada como
+                    capitán al mejor de tu propio 11 (de menos de 18M).
+                  </p>
+                </div>
+
+                <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+                  <p class="mb-3 text-sm font-semibold text-white">Tus fijos</p>
+                  <ul class="space-y-2">
+                    {fav.players.map((f) => (
+                      <li class="flex items-center gap-3 text-sm">
+                        <img
+                          src={playerPhotoUrl(f.summary.id)}
+                          alt=""
+                          class="h-8 w-8 shrink-0 rounded-full bg-slate-800 object-cover"
+                          loading="lazy"
+                        />
+                        <a
+                          href={url(`/jugadores/${f.summary.id}`)}
+                          class="min-w-0 flex-1 truncate text-slate-200 hover:text-white"
+                        >
+                          {f.summary.name}
+                        </a>
+                        <span class="shrink-0 text-xs text-slate-400">
+                          {f.jornadas}/{fav.played} jornadas
+                          {f.captain > 0 && ` · ${f.captain}× capitán`}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+                  <p class="mb-3 text-sm font-semibold text-white">
+                    A quién se parece tu 11 (J{last.number})
+                  </p>
+                  <ul class="space-y-1.5 text-sm">
+                    {similar.slice(0, 4).map((s) => (
+                      <li class="flex justify-between gap-2 text-slate-300">
+                        <span>{s.participant}</span>
+                        <span class="text-slate-400">
+                          {s.shared} de 11 en común
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p class="mt-4 mb-1.5 text-sm font-semibold text-white">
+                    Los más distintos
+                  </p>
+                  <ul class="space-y-1.5 text-sm">
+                    {similar.slice(-2).map((s) => (
+                      <li class="flex justify-between gap-2 text-slate-300">
+                        <span>{s.participant}</span>
+                        <span class="text-slate-400">
+                          {s.shared} de 11 en común
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ),
+          )}
+        </section>
+
+        <section class="mb-10 grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <MultiLineChart
+            title="Eficiencia por jornada (% del 11 ideal)"
+            xLabels={jornadas.map((j) => `J${j.number}`)}
+            valueSuffix="%"
+            series={perFamily.map((f) => ({
+              label: f.name,
+              color: FAMILIA_COLORS[f.name],
+              values: jornadas.map((j) => {
+                const row = f.efficiency.rows.find(
+                  (r) => r.jornada === j.number,
+                );
+                return row ? Math.round(row.pct) : null;
+              }),
+            }))}
+          />
+
+          {ideal && (
+            <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+              <p class="text-sm font-semibold text-white">
+                11 ideal de la Jornada {last.number}
+              </p>
+              <p class="mb-3 text-xs text-slate-400">
+                {ideal.points} pts ({ideal.formationKey},{" "}
+                {ideal.cost / 1_000_000}M)
+                {lastWinner &&
+                  ` · el mejor de la liga hizo ${lastWinner.points} (${lastWinner.winners.join(", ")})`}
+              </p>
+              <ul class="grid grid-cols-1 gap-1.5 text-sm sm:grid-cols-2">
+                {ideal.players.map((p) => (
+                  <li class="flex items-center gap-2 text-slate-300">
+                    <span class="w-8 shrink-0 text-[10px] font-semibold text-slate-500">
+                      {POSITION_SHORT[p.summary.position]}
+                    </span>
+                    <span class="min-w-0 flex-1 truncate">
+                      {p.summary.name}
+                      {p.captain && (
+                        <span class="ml-1 rounded bg-amber-400 px-1 text-[10px] font-bold text-slate-950">
+                          C
+                        </span>
+                      )}
+                    </span>
+                    <span class="shrink-0 text-slate-400">
+                      {p.captain ? `${p.points * 2}` : p.points} pts
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </section>
+
+        <section class="mb-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div>
+            <h2 class="mb-1 text-xl font-bold text-white">Los más usados</h2>
+            <p class="mb-4 text-sm text-slate-400">
+              % de participantes que lo llevaban en la Jornada {last.number}
+              {prevNumber && ` (y cambio respecto a la ${prevNumber})`}.
+            </p>
+            <RankingList
+              items={owned.map((o) => ({
+                key: o.summary.id,
+                label: o.summary.name,
+                sublabel: `${o.summary.team_name} · ${o.summary.points} pts${
+                  o.delta !== null && Math.round(o.delta) !== 0
+                    ? ` · ${o.delta > 0 ? "+" : ""}${Math.round(o.delta)} pp`
+                    : ""
+                }`,
+                valueLabel: fmtPct(o.pct),
+                barPercent: o.pct,
+                href: url(`/jugadores/${o.summary.id}`),
+                imageUrl: playerPhotoUrl(o.summary.id),
+              }))}
+            />
+          </div>
+
+          <div>
+            <h2 class="mb-1 text-xl font-bold text-white">Diferenciales</h2>
+            <p class="mb-4 text-sm text-slate-400">
+              Disponibles, en el 10% o menos de los equipos, ordenados por
+              puntos en las últimas 3 jornadas. Es por donde se remonta.
+            </p>
+            <RankingList
+              items={diffs.map((d) => ({
+                key: d.summary.id,
+                label: d.summary.name,
+                sublabel: `${d.summary.team_name} · ${fmtPct(d.pct)} de la liga · ${(d.summary.precioFantastica ?? 0) / 1_000_000}M`,
+                valueLabel: `${d.summary.form} pts`,
+                barPercent:
+                  (d.summary.form / (diffs[0]?.summary.form || 1)) * 100,
+                href: url(`/jugadores/${d.summary.id}`),
+                imageUrl: playerPhotoUrl(d.summary.id),
+              }))}
+            />
+          </div>
+        </section>
+
+        <section class="mb-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div>
+            <h2 class="mb-1 text-xl font-bold text-white">
+              Capitanes de la Jornada {last.number}
+            </h2>
+            <p class="mb-4 text-sm text-slate-400">
+              Cuántos participantes eligieron a cada uno.
+            </p>
+            <RankingList
+              items={captainsNow.map((c) => ({
+                key: c.summary.id,
+                label: c.summary.name,
+                sublabel: c.summary.team_name,
+                valueLabel: `${c.n}`,
+                barPercent: (c.n / last.entries.length) * 100,
+                href: url(`/jugadores/${c.summary.id}`),
+                imageUrl: playerPhotoUrl(c.summary.id),
+              }))}
+            />
+          </div>
+          <div>
+            <h2 class="mb-1 text-xl font-bold text-white">
+              Capitanes de la temporada
+            </h2>
+            <p class="mb-4 text-sm text-slate-400">
+              Veces elegido capitán en total y lo que puntuó de media (sin
+              doblar).
+            </p>
+            <RankingList
+              items={captainsSeason.map((c) => ({
+                key: c.summary.id,
+                label: c.summary.name,
+                sublabel: `${fmt1(c.avgPoints)} pts de media como capitán`,
+                valueLabel: `${c.times}×`,
+                barPercent: (c.times / (captainsSeason[0]?.times || 1)) * 100,
+                href: url(`/jugadores/${c.summary.id}`),
+                imageUrl: playerPhotoUrl(c.summary.id),
+              }))}
+            />
+          </div>
+        </section>
+
+        {template && (
+          <section aria-labelledby="plantilla-title">
+            <h2 id="plantilla-title" class="mb-1 text-xl font-bold text-white">
+              El 11 de la liga
+            </h2>
+            <p class="mb-4 text-sm text-slate-400">
+              Los más llevados por posición en la Jornada {last.number}, con la
+              formación más usada ({template.formationKey}).
+            </p>
+            <div class="space-y-4 rounded-2xl border border-white/10 bg-gradient-to-b from-emerald-950/30 to-slate-900/60 p-4">
+              {template.rows.map((row) => (
+                <div class="flex flex-wrap justify-center gap-3">
+                  {row.map((p) => (
+                    <a
+                      href={url(`/jugadores/${p.summary.id}`)}
+                      class="flex w-24 flex-col items-center rounded-xl border border-white/10 bg-slate-900/80 p-2 text-center hover:border-emerald-500/30"
+                    >
+                      <img
+                        src={playerPhotoUrl(p.summary.id)}
+                        alt=""
+                        class="h-10 w-10 rounded-full bg-slate-800 object-cover"
+                        loading="lazy"
+                      />
+                      <span class="mt-1 line-clamp-1 w-full text-[11px] font-medium text-white">
+                        {p.summary.name}
+                      </span>
+                      <span class="text-[10px] text-slate-400">
+                        {fmtPct(p.pct)}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+      </>
+    )
+  }
+
+  <YoScript />
+</Layout>

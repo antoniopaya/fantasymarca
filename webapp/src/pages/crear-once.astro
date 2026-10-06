@@ -11,6 +11,9 @@ import {
   PLAYER_STATUS_LABELS,
   formatMoney,
   getLatestLigaJornada,
+  FORMATIONS,
+  MAX_BUDGET,
+  MAX_CAPTAIN_PRICE,
 } from "../lib/data";
 import { FAMILIA, YO_EVENT, YO_STORAGE_KEY } from "../lib/yo";
 
@@ -48,15 +51,6 @@ const players = getAllPlayerSummaries()
   }));
 const pricedIds = new Set(players.map((p) => p.id));
 
-const FORMATIONS = [
-  { key: "3-4-3", def: 3, mid: 4, fwd: 3 },
-  { key: "3-5-2", def: 3, mid: 5, fwd: 2 },
-  { key: "4-3-3", def: 4, mid: 3, fwd: 3 },
-  { key: "4-4-2", def: 4, mid: 4, fwd: 2 },
-  { key: "4-5-1", def: 4, mid: 5, fwd: 1 },
-  { key: "5-3-2", def: 5, mid: 3, fwd: 2 },
-  { key: "5-4-1", def: 5, mid: 4, fwd: 1 },
-];
 const DEFAULT_FORMATION = "4-3-3";
 
 // El once que puso cada uno de la familia en la última jornada de la liga,
@@ -99,9 +93,6 @@ for (const name of FAMILIA) {
       .map((p) => p.name),
   };
 }
-
-const MAX_BUDGET = 180_000_000;
-const MAX_CAPTAIN_PRICE = 18_000_000;
 
 // Para el resumen de "próximos rivales": qué equipo le toca a cada equipo en
 // la próxima jornada, con su escudo, para poder cruzarlo con los equipos

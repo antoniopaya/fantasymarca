@@ -128,6 +128,21 @@ export const PLAYER_STATUS_LABELS: Record<string, string> = {
   other: "Baja",
 };
 
+/** Formaciones que admite la liga (defensas-medios-delanteros, siempre 1 portero). */
+export const FORMATIONS = [
+  { key: "3-4-3", def: 3, mid: 4, fwd: 3 },
+  { key: "3-5-2", def: 3, mid: 5, fwd: 2 },
+  { key: "4-3-3", def: 4, mid: 3, fwd: 3 },
+  { key: "4-4-2", def: 4, mid: 4, fwd: 2 },
+  { key: "4-5-1", def: 4, mid: 5, fwd: 1 },
+  { key: "5-3-2", def: 5, mid: 3, fwd: 2 },
+  { key: "5-4-1", def: 5, mid: 4, fwd: 1 },
+];
+
+/** Reglas de la liga Fantástica: tope del 11 y precio máximo (exclusivo) del capitán. */
+export const MAX_BUDGET = 180_000_000;
+export const MAX_CAPTAIN_PRICE = 18_000_000;
+
 export const POSITION_NAMES: Record<number, string> = {
   1: "Portero",
   2: "Defensa",
@@ -232,8 +247,23 @@ export function getMatches(gameweekNumber: number): Match[] {
   return loadJson<Match[]>(`matches/${gameweekNumber}.json`);
 }
 
+const detailCache = new Map<number, PlayerDetail>();
+
 export function getPlayerDetail(id: number): PlayerDetail {
-  return loadJson<PlayerDetail>(`players/${id}.json`);
+  let detail = detailCache.get(id);
+  if (!detail) {
+    detail = loadJson<PlayerDetail>(`players/${id}.json`);
+    detailCache.set(id, detail);
+  }
+  return detail;
+}
+
+/** Puntos de Marca de un jugador en una jornada (null si no jugó o aún no se ha jugado). */
+export function getGameweekPoints(id: number, gameweek: number): number | null {
+  return (
+    getPlayerDetail(id).points.find((p) => p.number === gameweek)?.points
+      .points ?? null
+  );
 }
 
 let summariesCache: PlayerSummary[] | null = null;

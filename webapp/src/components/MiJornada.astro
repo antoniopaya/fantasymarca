@@ -9,6 +9,7 @@ import {
   type LigaEntry,
 } from "../lib/data";
 import { FAMILIA } from "../lib/yo";
+import YoScript from "./YoScript.astro";
 
 const jornada = getLatestLigaJornada();
 const nextGameweek = getNextGameweek();
@@ -139,7 +140,7 @@ const once = (entry: LigaEntry) =>
           </ul>
 
           <h3 class="mt-6 mb-3 text-sm font-semibold text-slate-300">
-            La familia
+            Los Payás
           </h3>
           <table class="w-full text-left text-sm">
             <thead class="text-xs text-slate-500">
@@ -171,23 +172,4 @@ const once = (entry: LigaEntry) =>
   )
 }
 
-<script>
-  import { getYo, YO_EVENT } from "../lib/yo";
-
-  function show(yo: string | null) {
-    for (const panel of document.querySelectorAll<HTMLElement>(
-      "[data-yo-panel]",
-    )) {
-      panel.hidden = panel.dataset.yoPanel !== yo;
-    }
-    const placeholder = document.querySelector<HTMLElement>(
-      "[data-yo-placeholder]",
-    );
-    if (placeholder) placeholder.hidden = yo !== null;
-  }
-
-  show(getYo());
-  window.addEventListener(YO_EVENT, (e) =>
-    show((e as CustomEvent<string | null>).detail),
-  );
-</script>
+<YoScript />

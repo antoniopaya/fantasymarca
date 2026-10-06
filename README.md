@@ -19,6 +19,14 @@ En vivo: **https://antoniopaya.github.io/fantasymarca/**
 - **Crear once** — arma un XI con la táctica que quieras, tope de 180M€ en
   precio Fantástica, capitán por debajo de 18M€, y compártelo por WhatsApp.
   Se guarda en el navegador (`localStorage`), no hay cuentas ni servidor.
+  "Preparar mi once" carga el 11 de tu última jornada de la liga con tus
+  cambios disponibles.
+- **¿Quién eres?** — selector de la navbar (Antonio, Toño, Jandro) que
+  personaliza la home, Crear once y las páginas de la liga.
+- **Liga** — clasificación de la liga Fantástica con premios, evolución por
+  jornadas y ganadores de cada jornada; y estadísticas: jugadores más usados,
+  capitanes, diferenciales, el 11 de la liga, el 11 ideal de cada jornada,
+  y por persona sus fijos, su eficiencia y a quién se parece su equipo.
 
 ## Estructura del repo
 

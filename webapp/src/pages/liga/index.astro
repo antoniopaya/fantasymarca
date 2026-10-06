@@ -1,0 +1,239 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import LigaTabs from "../../components/LigaTabs.astro";
+import YoScript from "../../components/YoScript.astro";
+import MultiLineChart from "../../components/charts/MultiLineChart.astro";
+import { getLigaJornadas, getNextGameweek } from "../../lib/data";
+import {
+  averagePoints,
+  FAMILIA_COLORS,
+  history,
+  jornadaWinners,
+  PREMIOS_LIGA,
+  standings,
+} from "../../lib/liga";
+import { FAMILIA } from "../../lib/yo";
+
+const jornadas = getLigaJornadas();
+const last = jornadas[jornadas.length - 1];
+const rows = standings();
+const winners = jornadaWinners();
+const nextGameweek = getNextGameweek();
+
+const xLabels = jornadas.map((j) => `J${j.number}`);
+const familyHistory = FAMILIA.map((name) => ({ name, rows: history(name) }));
+
+const record = winners.reduce(
+  (best, w) => (w.points > best.points ? w : best),
+  winners[0],
+);
+
+const fmtWins = (n: number) => String(n).replace(".", ",");
+---
+
+<Layout
+  title="Liga Fantástica"
+  description="Clasificación de la liga Fantástica Marca, evolución por jornadas y ganadores de cada jornada."
+>
+  <h1 class="text-3xl font-black text-white">Liga Fantástica</h1>
+  <p class="mt-1 mb-6 text-sm text-slate-400">
+    {
+      last
+        ? `Clasificación tras la Jornada ${last.number} · ${last.entries.length} participantes`
+        : "Todavía no hay jornadas cargadas."
+    }
+  </p>
+
+  <LigaTabs active="clasificacion" />
+
+  {
+    last && (
+      <>
+        <section class="mb-10 grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <MultiLineChart
+            title="Puesto en la clasificación"
+            xLabels={xLabels}
+            invertY
+            valueSuffix="º"
+            yDomain={[1, last.entries.length]}
+            yTicks={[1, 8, 16, 24, last.entries.length]}
+            series={familyHistory.map((f) => ({
+              label: f.name,
+              color: FAMILIA_COLORS[f.name],
+              values: f.rows.map((r) => r.rank),
+            }))}
+          />
+          <MultiLineChart
+            title="Puntos por jornada"
+            xLabels={xLabels}
+            valueSuffix=" pts"
+            series={[
+              ...familyHistory.map((f) => ({
+                label: f.name,
+                color: FAMILIA_COLORS[f.name],
+                values: f.rows.map((r) => r.points),
+              })),
+              {
+                label: "Media de la liga",
+                color: "#94a3b8",
+                reference: true,
+                values: jornadas.map(
+                  (j) => Math.round(averagePoints(j) * 10) / 10,
+                ),
+              },
+            ]}
+          />
+        </section>
+
+        <section class="mb-10" aria-labelledby="clasificacion-title">
+          <div class="mb-3 flex flex-wrap items-end justify-between gap-2">
+            <h2 id="clasificacion-title" class="text-xl font-bold text-white">
+              Clasificación
+            </h2>
+            <p class="text-xs text-slate-500">
+              Premios:{" "}
+              {PREMIOS_LIGA.map((p, i) => `${i + 1}º ${p}€`).join(" · ")}
+            </p>
+          </div>
+          <div class="overflow-x-auto rounded-2xl border border-white/10 bg-slate-900/60">
+            <table class="w-full min-w-[640px] text-sm">
+              <thead class="text-xs text-slate-500">
+                <tr class="border-b border-white/10">
+                  <th class="px-3 py-2 text-left font-medium">#</th>
+                  <th class="px-3 py-2 text-left font-medium">Participante</th>
+                  <th class="px-3 py-2 text-right font-medium">
+                    J{last.number}
+                  </th>
+                  <th class="px-3 py-2 text-right font-medium">Total</th>
+                  <th class="px-3 py-2 text-right font-medium">Al líder</th>
+                  <th class="px-3 py-2 text-right font-medium">
+                    <abbr
+                      title="Jornadas ganadas / perdidas"
+                      class="no-underline"
+                    >
+                      G / P
+                    </abbr>
+                  </th>
+                  <th class="px-3 py-2 text-right font-medium">
+                    Cambios {nextGameweek.name.replace("Jornada ", "J")}
+                  </th>
+                  <th class="px-3 py-2 text-right font-medium">Premio</th>
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map(({ entry, rank, movement, premio }) => {
+                  const isFamily = (FAMILIA as readonly string[]).includes(
+                    entry.participant,
+                  );
+                  return (
+                    <tr
+                      data-participant={entry.participant}
+                      class={`border-b border-white/5 data-[yo=true]:bg-emerald-500/10 ${isFamily ? "font-semibold text-white" : "text-slate-300"}`}
+                    >
+                      <td class="px-3 py-2 whitespace-nowrap">
+                        {rank}
+                        {movement !== null && movement !== 0 && (
+                          <span
+                            class={`ml-1.5 text-xs ${movement > 0 ? "text-emerald-400" : "text-rose-400"}`}
+                            title={`${movement > 0 ? "Sube" : "Baja"} ${Math.abs(movement)} desde la jornada anterior`}
+                          >
+                            {movement > 0 ? "▲" : "▼"}
+                            {Math.abs(movement)}
+                          </span>
+                        )}
+                      </td>
+                      <td class="px-3 py-2">
+                        {entry.participant}
+                        {isFamily && (
+                          <span
+                            class="ml-2 inline-block h-2 w-2 rounded-full align-middle"
+                            style={`background:${FAMILIA_COLORS[entry.participant]}`}
+                          />
+                        )}
+                      </td>
+                      <td class="px-3 py-2 text-right">{entry.points}</td>
+                      <td class="px-3 py-2 text-right font-semibold">
+                        {entry.total}
+                      </td>
+                      <td class="px-3 py-2 text-right text-slate-400">
+                        {entry.dif ? `-${entry.dif}` : "—"}
+                      </td>
+                      <td class="px-3 py-2 text-right text-slate-400">
+                        {fmtWins(entry.won)} / {entry.lost}
+                      </td>
+                      <td class="px-3 py-2 text-right">
+                        {entry.changes ?? "—"}
+                      </td>
+                      <td class="px-3 py-2 text-right text-amber-300">
+                        {premio ? `${premio}€` : ""}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-2 text-xs text-slate-500">
+            Las flechas indican los puestos ganados o perdidos desde la jornada
+            anterior. Tu fila se resalta según quién hayas elegido arriba.
+          </p>
+        </section>
+
+        <section aria-labelledby="ganadores-title">
+          <h2 id="ganadores-title" class="mb-1 text-xl font-bold text-white">
+            Ganadores de cada jornada
+          </h2>
+          {record && (
+            <p class="mb-3 text-sm text-slate-400">
+              Mejor jornada de la temporada (se lleva el premio de 50€ si nadie
+              la supera): {record.points} pts de {record.winners.join(" y ")} en
+              la Jornada {record.jornada}.
+            </p>
+          )}
+          <div class="overflow-x-auto rounded-2xl border border-white/10 bg-slate-900/60">
+            <table class="w-full min-w-[520px] text-sm">
+              <thead class="text-xs text-slate-500">
+                <tr class="border-b border-white/10">
+                  <th class="px-3 py-2 text-left font-medium">Jornada</th>
+                  <th class="px-3 py-2 text-left font-medium">Ganador</th>
+                  <th class="px-3 py-2 text-right font-medium">Pts</th>
+                  <th class="px-3 py-2 text-right font-medium">Media</th>
+                  {FAMILIA.map((name) => (
+                    <th class="px-3 py-2 text-right font-medium">{name}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {[...winners].reverse().map((w) => {
+                  const jornada = jornadas.find((j) => j.number === w.jornada);
+                  return (
+                    <tr class="border-b border-white/5 text-slate-300">
+                      <td class="px-3 py-2">J{w.jornada}</td>
+                      <td class="px-3 py-2 text-white">
+                        {w.winners.join(", ")}
+                      </td>
+                      <td class="px-3 py-2 text-right font-semibold text-white">
+                        {w.points}
+                      </td>
+                      <td class="px-3 py-2 text-right text-slate-400">
+                        {w.average.toFixed(1).replace(".", ",")}
+                      </td>
+                      {FAMILIA.map((name) => (
+                        <td class="px-3 py-2 text-right">
+                          {jornada?.entries.find((e) => e.participant === name)
+                            ?.points ?? "—"}
+                        </td>
+                      ))}
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </>
+    )
+  }
+
+  <YoScript />
+</Layout>

@@ -1,0 +1,33 @@
+---
+// Personaliza la página según "¿Quién eres?":
+//   [data-yo-panel="Nombre"]  se muestra solo para esa persona
+//   [data-yo-placeholder]     se muestra solo si no hay nadie elegido
+//   [data-participant="X"]    recibe data-yo="true" si X es quien está mirando
+---
+
+<script>
+  import { getYo, YO_EVENT } from "../lib/yo";
+
+  function apply(yo: string | null) {
+    for (const el of document.querySelectorAll<HTMLElement>(
+      "[data-yo-panel]",
+    )) {
+      el.hidden = el.dataset.yoPanel !== yo;
+    }
+    for (const el of document.querySelectorAll<HTMLElement>(
+      "[data-yo-placeholder]",
+    )) {
+      el.hidden = yo !== null;
+    }
+    for (const el of document.querySelectorAll<HTMLElement>(
+      "[data-participant]",
+    )) {
+      el.dataset.yo = String(el.dataset.participant === yo);
+    }
+  }
+
+  apply(getYo());
+  window.addEventListener(YO_EVENT, (e) =>
+    apply((e as CustomEvent<string | null>).detail),
+  );
+</script>
