@@ -3,7 +3,7 @@ import SubTabs from "./SubTabs.astro";
 import { url } from "../lib/data";
 
 interface Props {
-  active: "buscar" | "estadisticas";
+  active: "buscar" | "recomendados" | "estadisticas";
 }
 
 const { active } = Astro.props;
@@ -14,6 +14,11 @@ const { active } = Astro.props;
   active={active}
   tabs={[
     { key: "buscar", label: "Buscar", href: url("/jugadores") },
+    {
+      key: "recomendados",
+      label: "Recomendados",
+      href: url("/jugadores/recomendados"),
+    },
     { key: "estadisticas", label: "Estadísticas", href: url("/estadisticas") },
   ]}
 />

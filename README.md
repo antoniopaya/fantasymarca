@@ -98,6 +98,28 @@ mano; ver `MANUAL_OVERRIDES` dentro del script para los casos ya resueltos.
    11 precios Fantástica + saldo sumen 180M. Lo que no resuelva lo lista al
    final para añadirlo a `LIGA_ALIASES`.
 
+4. **Alineaciones probables** (`fantasy_api/scrape_alineaciones.py`) — lee
+   la "Posible alineación" de la página de cada equipo en
+   [futbolfantasy.com](https://www.futbolfantasy.com/laliga/equipos/real-madrid)
+   (probabilidad de ser titular, suplentes, bajas) y la empareja con los ids
+   de Marca. Escribe `alineaciones.json` y guarda una copia por jornada
+   (la de antes del cierre) en `alineaciones_hist/`. 20 peticiones con pausa
+   entre ellas, solo cuando se refrescan los datos; su robots.txt lo permite.
+5. **Modelo de puntos esperados** (`fantasy_api/ml_model.py`) — machine
+   learning con scikit-learn: P(juega) × puntos si juega, con variables
+   calculadas solo con lo que se sabía antes de cada jornada (forma,
+   titularidades, goles/asistencias, rival, casa/fuera, precio, temporada
+   pasada). Prueba un modelo lineal y uno de boosting, valida cada jornada
+   pasada entrenando solo con las anteriores y se queda el mejor; para la
+   jornada a predecir combina su P(juega) con las alineaciones probables
+   (cuando haya 2+ jornadas guardadas, las usa como variable y aprende su
+   peso). Escribe `predicciones.json`, que la web usa para los puntos
+   esperados y la pestaña Jugadores → Recomendados (incluido el 11 de 180M
+   que más puntos espera). Si falta, la web vuelve a la fórmula sencilla.
+
+`refresh-data.yml` ejecuta los tres seguidos: `main.py`, el scraper (si
+falla, se sigue sin alineaciones) y el modelo.
+
 ## Correr en local
 
 **Webapp** (Node 22+):
@@ -114,7 +136,7 @@ npm run build     # build de producción a webapp/dist/
 **fantasy_api** (Python 3.13+, solo hace falta si quieres regenerar datos):
 
 ```bash
-pip install curl_cffi
+pip install -r fantasy_api/requirements.txt
 # fantasy_api/auth_store.json con tus credenciales (x_auth + refresh_token
 # capturados desde las DevTools del navegador logueado en fantasy.marca.com);
 # no está en el repo, es un secreto y va en .gitignore.

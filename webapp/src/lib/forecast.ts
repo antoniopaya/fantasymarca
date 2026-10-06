@@ -16,6 +16,8 @@ import {
   getGameweeks,
   getMatches,
   getNextGameweek,
+  getPredictions,
+  type Prediction,
   type Match,
   type PlayerSummary,
 } from "./data";
@@ -224,9 +226,22 @@ const DIFFICULTY_FACTOR: Record<number, number> = {
 
 const xpCache = new Map<string, number>();
 
+/** Predicción del modelo de ML para la jornada, si existe y es de esa jornada. */
+export function prediction(
+  playerId: number,
+  gameweek = getNextGameweek().number,
+): Prediction | null {
+  const preds = getPredictions();
+  if (!preds || preds.jornada !== gameweek) return null;
+  return preds.players[String(playerId)] ?? null;
+}
+
 /**
  * Puntos esperados de un jugador en una jornada (sin doblar por capitán).
- * 0 si su equipo no juega o está lesionado/sancionado; la mitad si es duda.
+ * Si fantasy_api/ml_model.py ha predicho esa jornada, se usa el modelo
+ * (que ya tiene en cuenta alineaciones probables, rival, forma...). Si no,
+ * la fórmula sencilla de abajo: 0 si su equipo no juega o está lesionado/
+ * sancionado; la mitad si es duda.
  */
 export function expectedPoints(
   player: PlayerSummary,
@@ -235,6 +250,13 @@ export function expectedPoints(
   const key = `${player.id}:${gameweek}`;
   const cached = xpCache.get(key);
   if (cached !== undefined) return cached;
+  const fixtureForModel = fixtureIn(player.id_team, gameweek);
+  const predicted = prediction(player.id, gameweek);
+  if (predicted && fixtureForModel) {
+    const value = Math.max(0, Math.round(predicted.xp * 10) / 10);
+    xpCache.set(key, value);
+    return value;
+  }
   const fixture = fixtureIn(player.id_team, gameweek);
   let xp = 0;
   if (fixture && !["injury", "red", "other"].includes(player.status ?? "")) {

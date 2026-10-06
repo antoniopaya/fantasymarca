@@ -206,6 +206,54 @@ export function getPreciosFantastica(): Record<string, number> {
   return preciosFantasticaCache;
 }
 
+export interface Prediction {
+  /** Puntos esperados (sin doblar por capitán). */
+  xp: number;
+  /** Probabilidad de jugar (0-1). */
+  p_play: number;
+  /** Puntos esperados si juega. */
+  if_plays: number;
+  /** Probabilidad de titular según futbolfantasy (0-100), si la hay. */
+  ff_prob: number | null;
+  ff_status: "titular" | "suplente" | null;
+}
+
+export interface Predictions {
+  jornada: number;
+  generated_at: string;
+  model: string;
+  n_train: number;
+  train_gameweeks: number;
+  uses_lineups_as_feature: boolean;
+  lineups_jornada: number | null;
+  validation_summary: Record<string, { mae: number; top50: number }>;
+  players: Record<string, Prediction>;
+}
+
+let predictionsCache: Predictions | null | undefined;
+
+/** Salida de fantasy_api/ml_model.py; null si todavía no se ha generado. */
+export function getPredictions(): Predictions | null {
+  if (predictionsCache === undefined) {
+    try {
+      predictionsCache = loadJson<Predictions>("predicciones.json");
+    } catch {
+      predictionsCache = null;
+    }
+  }
+  return predictionsCache;
+}
+
+/** Fecha del scraping de alineaciones probables, si existe. */
+export function getLineupsScrapedAt(): Date | null {
+  try {
+    const data = loadJson<{ scraped_at?: string }>("alineaciones.json");
+    return data.scraped_at ? new Date(data.scraped_at) : null;
+  } catch {
+    return null;
+  }
+}
+
 /**
  * Cuándo se descargaron por última vez los datos de Marca (lo escribe
  * fantasy_api/main.py). null si el fichero aún no existe.

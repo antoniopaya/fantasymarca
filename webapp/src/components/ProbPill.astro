@@ -1,0 +1,20 @@
+---
+// Probabilidad de ser titular según futbolfantasy (texto, sin color: no
+// es una categoría ni un estado, solo un número).
+interface Props {
+  prob: number | null;
+}
+
+const { prob } = Astro.props;
+---
+
+{
+  prob !== null && (
+    <span
+      class="inline-flex items-center rounded bg-slate-800 px-1.5 py-0.5 text-[11px] font-semibold text-slate-200"
+      title="Probabilidad de ser titular según futbolfantasy.com"
+    >
+      {prob}% tit.
+    </span>
+  )
+}

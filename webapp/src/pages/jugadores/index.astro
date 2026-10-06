@@ -11,7 +11,7 @@ import {
   teamLogoUrl,
 } from "../../lib/data";
 import { latestOwnershipPct, ligaPlayerInfo } from "../../lib/liga";
-import { expectedPoints } from "../../lib/forecast";
+import { expectedPoints, prediction } from "../../lib/forecast";
 import { FAMILIA } from "../../lib/yo";
 
 const ligaOf = (id: number) => ({
@@ -125,6 +125,7 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       players.map((player) => {
         const liga = ligaOf(player.id);
         const xp = expectedPoints(player);
+        const ffProb = prediction(player.id)?.ff_prob ?? null;
         return (
           <div
             data-player-card
@@ -155,6 +156,7 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
               }
               ligaLabel={[
                 `≈${xp.toFixed(1).replace(".", ",")} pts esperados`,
+                ffProb !== null ? `titular ${ffProb}%` : "",
                 liga.pct > 0 ? `${Math.round(liga.pct)}% de la liga` : "",
               ]
                 .filter(Boolean)

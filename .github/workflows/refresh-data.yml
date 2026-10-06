@@ -35,7 +35,7 @@ jobs:
           python-version: "3.13"
 
       - name: Install dependencies
-        run: pip install curl_cffi
+        run: pip install -r fantasy_api/requirements.txt
 
       - name: Write credentials
         # Nunca interpolar el secret directamente en el script de shell: se pasa
@@ -53,6 +53,17 @@ jobs:
       - name: Run main.py
         working-directory: fantasy_api
         run: python main.py
+
+      - name: Scrape alineaciones probables (futbolfantasy)
+        # Si la web de futbolfantasy falla o cambia, el modelo sigue
+        # funcionando sin alineaciones: no debe bloquear el refresco.
+        continue-on-error: true
+        working-directory: fantasy_api
+        run: python scrape_alineaciones.py
+
+      - name: Train model and predict next gameweek
+        working-directory: fantasy_api
+        run: python ml_model.py
 
       - name: Commit and push updated data
         id: commit

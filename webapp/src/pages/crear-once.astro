@@ -24,6 +24,7 @@ import {
   difficulty,
   expectedPoints,
   fixtureIn,
+  prediction,
 } from "../lib/forecast";
 
 const ligaJornada = getLatestLigaJornada();
@@ -69,6 +70,7 @@ const players = getAllPlayerSummaries()
         ? difficulty(fixture.rivalId, p.position, fixture.home)
         : null,
       home: fixture?.home ?? null,
+      ffProb: prediction(p.id, nextGameweek.number)?.ff_prob ?? null,
     };
   });
 const pricedIds = new Set(players.map((p) => p.id));
@@ -761,7 +763,11 @@ for (const m of nextGwMatches) {
             ${rival ? `<img src="${rival.logoUrl}" alt="" class="h-3.5 w-3.5 rounded-full" style="box-shadow:0 0 0 2px ${DIFFICULTY_COLORS[player.difficulty] ?? "transparent"}" />` : noMatch ? "—" : ""}
             ${formatMillions(player.price)}
           </span>
-          <span class="mt-1 text-[11px] font-semibold leading-none text-emerald-300">≈${formatXp(player.xp * (isCaptain ? 2 : 1))}</span>
+          <span class="mt-1 text-[11px] font-semibold leading-none text-emerald-300">≈${formatXp(player.xp * (isCaptain ? 2 : 1))}${
+            player.ffProb !== null && player.ffProb < 60
+              ? ` <span class="text-amber-300">${player.ffProb}%</span>`
+              : ""
+          }</span>
         </button>`;
     }
 
@@ -787,6 +793,13 @@ for (const m of nextGwMatches) {
       for (const p of filled.filter((p) => p.status)) {
         warnings.push(
           `${p.name}: ${(PLAYER_STATUS_LABELS[p.status] ?? "baja").toLowerCase()}`,
+        );
+      }
+      for (const p of filled.filter(
+        (p) => !p.status && p.ffProb !== null && p.ffProb <= 30,
+      )) {
+        warnings.push(
+          `${p.name}: probable suplente (${p.ffProb}% de titular según futbolfantasy)`,
         );
       }
       if (totalCost(null) > MAX_BUDGET) {
@@ -1266,7 +1279,7 @@ for (const m of nextGwMatches) {
             ${rival ? `vs ${rival.name} ${player.home ? "(casa)" : "(fuera)"} ${diffChip(player)}` : `Sin partido en la ${NEXT_GW_NAME}`}
           </p>
           <p class="text-sm text-slate-400">
-            <b class="text-emerald-300">≈${formatXp(player.xp)} pts</b> esperados · J anterior: ${player.lastGwPoints ?? "–"} · forma ${player.form}
+            <b class="text-emerald-300">≈${formatXp(player.xp)} pts</b> esperados${player.ffProb !== null ? ` · titular ${player.ffProb}%` : ""} · J anterior: ${player.lastGwPoints ?? "–"} · forma ${player.form}
           </p>
         </div>`;
       const isCaptain = state.captainId === player.id;
@@ -1399,7 +1412,7 @@ for (const m of nextGwMatches) {
                     }
                   </span>
                   <span class="mt-0.5 block text-[13px] text-slate-400">
-                    <b class="text-emerald-300">≈${formatXp(p.xp)}</b> · forma ${p.form} · ${p.points} pts · ${p.ownershipPct}% liga
+                    <b class="text-emerald-300">≈${formatXp(p.xp)}</b>${p.ffProb !== null ? ` · tit. ${p.ffProb}%` : ""} · forma ${p.form} · ${p.ownershipPct}% liga
                   </span>
                 </span>
               </button>

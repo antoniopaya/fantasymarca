@@ -339,6 +339,23 @@ const idealCache = new Map<number, IdealEleven | null>();
  */
 export function idealEleven(jornada: number): IdealEleven | null {
   if (idealCache.has(jornada)) return idealCache.get(jornada) ?? null;
+  const result = bestEleven(
+    jornada,
+    (s) => getGameweekPoints(s.id, jornada) ?? 0,
+  );
+  idealCache.set(jornada, result);
+  return result;
+}
+
+/**
+ * El 11 que maximiza `valueOf` (puntos reales, puntos esperados...) sin
+ * pasar de 180M en precio Fantástica, con alguna formación permitida.
+ */
+export function bestEleven(
+  jornada: number,
+  valueOf: (s: PlayerSummary) => number,
+  eligible: (s: PlayerSummary) => boolean = () => true,
+): IdealEleven | null {
   const budget = MAX_BUDGET / 1_000_000;
   const maxK: Record<number, number> = { 1: 1, 2: 5, 3: 5, 4: 3 };
 
@@ -352,9 +369,14 @@ export function idealEleven(jornada: number): IdealEleven | null {
       ),
     );
     for (const s of getAllPlayerSummaries()) {
-      if (s.position !== position || s.precioFantastica === null) continue;
+      if (
+        s.position !== position ||
+        s.precioFantastica === null ||
+        !eligible(s)
+      )
+        continue;
       const cost = Math.round(s.precioFantastica / 1_000_000);
-      const pts = getGameweekPoints(s.id, jornada) ?? 0;
+      const pts = valueOf(s);
       for (let k = K; k >= 1; k--) {
         for (let c = budget; c >= cost; c--) {
           const from = dp[k - 1][c - cost];
@@ -399,10 +421,7 @@ export function idealEleven(jornada: number): IdealEleven | null {
       best = { ...top, formationKey: f.key };
     }
   }
-  if (!best) {
-    idealCache.set(jornada, null);
-    return null;
-  }
+  if (!best) return null;
 
   const players = best.ids.flatMap((id) => {
     const summary = summaryOf(id);
@@ -410,7 +429,7 @@ export function idealEleven(jornada: number): IdealEleven | null {
       ? [
           {
             summary,
-            points: getGameweekPoints(id, jornada) ?? 0,
+            points: valueOf(summary),
             captain: false,
           },
         ]
@@ -428,7 +447,6 @@ export function idealEleven(jornada: number): IdealEleven | null {
     points: best.pts + (captain?.points ?? 0),
     cost: players.reduce((s, p) => s + (p.summary.precioFantastica ?? 0), 0),
   };
-  idealCache.set(jornada, result);
   return result;
 }
 
