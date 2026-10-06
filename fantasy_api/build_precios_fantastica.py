@@ -31,16 +31,15 @@ Uso:
     python build_precios_fantastica.py
 """
 
-import difflib
 import glob
 import json
 import math
 import os
-import re
 import sys
-import unicodedata
 
 import openpyxl
+
+from name_matching import normalize_tokens, token_score
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "webapp", "public", "data")
 
@@ -71,15 +70,6 @@ TEAM_ALIAS = {
 }
 
 POSITION_BY_LABEL = {"Portero": 1, "Defensa": 2, "Medio": 3, "Delantero": 4}
-
-# Abreviaturas de apellido habituales en el Excel que el catálogo escribe completas.
-SURNAME_ABBREVIATIONS = {
-    "fdez": "fernandez",
-    "glez": "gonzalez",
-    "hdez": "hernandez",
-    "mtnez": "martinez",
-    "rguez": "rodriguez",
-}
 
 # (equipo excel, posición excel, nombre excel) -> id de fantasy.marca.com, o None
 # para marcar explícitamente "sin contrapartida en el catálogo, no forzar match".
@@ -143,36 +133,12 @@ def find_excel_path() -> str:
     return matches[0]
 
 
-def normalize_tokens(name: str) -> list[str]:
-    ascii_name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode("ascii")
-    ascii_name = ascii_name.lower().replace("-", " ")
-    ascii_name = re.sub(r"[^a-z0-9. ]", "", ascii_name)
-    tokens = []
-    for tok in ascii_name.split():
-        tok = tok.rstrip(".")
-        tokens.append(SURNAME_ABBREVIATIONS.get(tok, tok))
-    return tokens
-
-
 def round_price(value: float) -> int:
     """Los precios Fantástica son siempre enteros. Un puñado de celdas del Excel
     quedaron con la media sin redondear de varios votos (p.ej. 20.428571... = 143/7):
     parece el resultado de una fórmula de promedio a la que nunca se le aplicó ROUND()
     antes de convertirla a valor. Redondeo normal (mitad hacia arriba, no bancario)."""
     return math.floor(value + 0.5)
-
-
-def token_score(e_tokens: list[str], c_tokens: list[str]) -> float:
-    total_weight = total_score = 0.0
-    for tok in e_tokens:
-        weight = 1.0 if len(tok) > 1 else 0.4  # una inicial sola pesa menos que un nombre completo
-        if len(tok) == 1:
-            best = 1.0 if any(c.startswith(tok) for c in c_tokens) else 0.0
-        else:
-            best = max((difflib.SequenceMatcher(None, tok, c).ratio() for c in c_tokens), default=0.0)
-        total_score += weight * best
-        total_weight += weight
-    return total_score / total_weight if total_weight else 0.0
 
 
 def parse_excel(path: str) -> list[dict]:

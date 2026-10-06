@@ -44,7 +44,7 @@ webapp/         Sitio Astro + Tailwind, 100% estático
 
 La webapp es **100% estática**: nunca llama a fantasy.marca.com en producción,
 solo lee JSON ya generados en `webapp/public/data/`. Ese directorio se llena
-de dos formas distintas, y por eso hay dos scripts separados:
+de tres fuentes distintas, cada una con su script:
 
 1. **Catálogo de Marca** (`fantasy_api/main.py`) — equipos, jornadas,
    partidos y la ficha completa de cada jugador (valor de mercado, cláusula,
@@ -63,6 +63,16 @@ correspondencia clara (fichajes que Marca no ha dado de alta todavía, o
 jugadores que han cambiado de equipo desde la última vez que se actualizó el
 Excel) — el propio script las lista al final de su salida para revisarlas a
 mano; ver `MANUAL_OVERRIDES` dentro del script para los casos ya resueltos.
+
+3. **Liga Fantástica** (`fantasy_api/build_liga.py`) — alineaciones,
+   capitanes, puntos, saldo y cambios de cada participante, jornada a
+   jornada. La liga los manda como un PDF por jornada; basta con dejarlo en
+   `data/Jornadas/` y hacer push: `build-liga.yml` lo lee, escribe
+   `liga/<n>.json` y despliega. El PDF solo trae nombres abreviados, así que
+   cada jugador se empareja con el catálogo por nombre y desempatando con
+   sus puntos de Marca en esa jornada; el script comprueba además que los
+   11 precios Fantástica + saldo sumen 180M. Lo que no resuelva lo lista al
+   final para añadirlo a `LIGA_ALIASES`.
 
 ## Correr en local
 

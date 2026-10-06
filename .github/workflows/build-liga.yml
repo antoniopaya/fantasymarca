@@ -1,0 +1,60 @@
+name: Build liga Fantástica data
+
+# Cada semana se sube a data/Jornadas/ el PDF de la jornada que manda la liga;
+# esto lo convierte en webapp/public/data/liga/<n>.json y despliega.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/Jornadas/**"
+      - "fantasy_api/build_liga.py"
+      - "fantasy_api/name_matching.py"
+      - ".github/workflows/build-liga.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install pdfplumber
+
+      - name: Run build_liga.py
+        working-directory: fantasy_api
+        run: python build_liga.py
+
+      - name: Commit and push liga data
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add webapp/public/data/liga
+          if git diff --cached --quiet; then
+            echo "Sin cambios en los datos de la liga."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Actualiza datos de la liga Fantástica [automated]"
+            # refresh-data.yml también empuja a main; si se cruzan, rebasamos.
+            git pull --rebase
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Trigger deploy
+        # Los pushes con GITHUB_TOKEN no disparan deploy.yml (ver refresh-data.yml).
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --ref main

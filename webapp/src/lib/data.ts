@@ -202,24 +202,28 @@ export function getPlayerById(id: number): Player | undefined {
 }
 
 /**
- * La jornada "actual": la que se está jugando ahora mismo o, si ninguna está en
- * curso, la próxima sin empezar; si no queda ninguna, la última de la temporada.
+ * La jornada "actual": la primera con algún partido pendiente que se juegue antes
+ * de que arranque la siguiente; si no queda ninguna, la última de la temporada.
  *
- * Con el calendario reordenado (partidos aplazados) puede haber varias jornadas
- * "ongoing" a la vez: una casi terminada salvo el partido que se aplazó, y la
- * siguiente ya arrancando (p.ej. jornada 5 con 9/10 partidos jugados y solo el
- * aplazado pendiente, mientras la 6 ya se está jugando). Nos quedamos con la de
- * número más alto: es la ronda que realmente toca esta semana, no el rezagado
- * de la jornada anterior.
+ * No se usa el `status` de Marca porque un partido aplazado deja su jornada en
+ * "ongoing" durante semanas (p.ej. la 6, con un partido movido al 21 oct): con
+ * esta regla ese rezagado no cuenta, porque se juega después de que empiece la
+ * jornada siguiente, mientras que una jornada a medio jugar el fin de semana sí.
  */
 export function getNextGameweek(): Gameweek {
   const gameweeks = getGameweeks();
-  const ongoing = gameweeks.filter((gw) => gw.status === "ongoing");
-  return (
-    ongoing[ongoing.length - 1] ??
-    gameweeks.find((gw) => gw.status === "unstarted") ??
-    gameweeks[gameweeks.length - 1]
-  );
+  const firstKickoff = (n: number) =>
+    Math.min(...getMatches(n).map((m) => m.date.ts ?? Infinity));
+  for (const [i, gw] of gameweeks.entries()) {
+    const nextStart = gameweeks[i + 1]
+      ? firstKickoff(gameweeks[i + 1].number)
+      : Infinity;
+    const pendingBeforeNext = getMatches(gw.number).some(
+      (m) => m.status !== "played" && (m.date.ts ?? Infinity) < nextStart,
+    );
+    if (pendingBeforeNext) return gw;
+  }
+  return gameweeks[gameweeks.length - 1];
 }
 
 export function getMatches(gameweekNumber: number): Match[] {
