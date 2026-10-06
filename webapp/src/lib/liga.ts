@@ -9,6 +9,7 @@ import {
   getGameweekPoints,
   getLigaJornadas,
   getPrecioFantastica,
+  isRecommendable,
   type LigaEntry,
   type LigaJornada,
   type PlayerSummary,
@@ -149,7 +150,10 @@ export function differentials(maxPct: number, limit: number) {
   if (!last) return [];
   const counts = ownershipCounts(last);
   return getAllPlayerSummaries()
-    .filter((s) => s.precioFantastica !== null && s.status === null)
+    .filter(
+      (s) =>
+        s.precioFantastica !== null && s.status === null && isRecommendable(s),
+    )
     .map((s) => ({
       summary: s,
       pct: ((counts.get(s.id) ?? 0) / last.entries.length) * 100,

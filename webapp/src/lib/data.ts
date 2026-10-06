@@ -140,6 +140,17 @@ export const FORMATIONS = [
   { key: "5-4-1", def: 5, mid: 4, fwd: 1 },
 ];
 
+/**
+ * Equipos de los que nunca se recomienda a nadie (somos del Madrid): no
+ * salen en Recomendados, ni como capitán o cambio sugerido, ni en la lista
+ * por defecto del selector de Mi 11 (sí buscándolos a propósito).
+ */
+export const EQUIPOS_VETADOS = [3]; // Barcelona
+
+export function isRecommendable(player: { id_team: number }): boolean {
+  return !EQUIPOS_VETADOS.includes(player.id_team);
+}
+
 /** Reglas de la liga Fantástica: tope del 11 y precio máximo (exclusivo) del capitán. */
 export const MAX_BUDGET = 180_000_000;
 export const MAX_CAPTAIN_PRICE = 18_000_000;

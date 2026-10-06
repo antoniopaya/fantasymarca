@@ -8,6 +8,7 @@ import {
   getLineupsScrapedAt,
   getNextGameweek,
   getPredictions,
+  isRecommendable,
   playerPhotoUrl,
   POSITION_NAMES,
   POSITION_SHORT,
@@ -50,7 +51,7 @@ interface Rec {
 const horizon = horizonGameweeks();
 
 const recs: Rec[] = getAllPlayerSummaries()
-  .filter((s) => s.precioFantastica !== null)
+  .filter((s) => s.precioFantastica !== null && isRecommendable(s))
   .map((s) => {
     const f = fixtureIn(s.id_team, gw.number);
     return {
@@ -164,6 +165,13 @@ const baseline = summary?.media_previa;
           {fmt(baseline.top50)} eligiendo por media de puntos), con un error
           medio de {fmt(chosen.mae)} pts por jugador. Con pocas jornadas es una
           ayuda para ordenar opciones, no una bola de cristal.
+        </p>
+      )
+    }
+    {
+      (
+        <p class="mt-2 text-xs text-slate-500">
+          Sin jugadores del Barcelona: aquí somos del Madrid.
         </p>
       )
     }

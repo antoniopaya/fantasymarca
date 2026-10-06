@@ -5,6 +5,7 @@ import {
   getAllPlayerSummaries,
   getMatches,
   getNextGameweek,
+  isRecommendable,
   MAX_CAPTAIN_PRICE,
   PLAYER_STATUS_LABELS,
   type LigaEntry,
@@ -81,7 +82,11 @@ export function weekPlan(entry: LigaEntry) {
   });
 
   const captains = mine
-    .filter((p) => (p.summary.precioFantastica ?? Infinity) < MAX_CAPTAIN_PRICE)
+    .filter(
+      (p) =>
+        (p.summary.precioFantastica ?? Infinity) < MAX_CAPTAIN_PRICE &&
+        isRecommendable(p.summary),
+    )
     .sort((a, b) => b.xp - a.xp)
     .slice(0, 3);
 
@@ -91,7 +96,10 @@ export function weekPlan(entry: LigaEntry) {
   const saldo = (entry.saldo ?? 0) * 1_000_000;
   const candidates = getAllPlayerSummaries().filter(
     (s) =>
-      s.precioFantastica !== null && !mineIds.has(s.id) && s.status === null,
+      s.precioFantastica !== null &&
+      !mineIds.has(s.id) &&
+      s.status === null &&
+      isRecommendable(s),
   );
   const changes = [...mine]
     .sort((a, b) => a.xp3 - b.xp3)

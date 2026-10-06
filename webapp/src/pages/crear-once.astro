@@ -13,6 +13,7 @@ import {
   getGameweekPoints,
   url,
   FORMATIONS,
+  EQUIPOS_VETADOS,
   MAX_BUDGET,
   MAX_CAPTAIN_PRICE,
 } from "../lib/data";
@@ -472,6 +473,7 @@ for (const m of nextGwMatches) {
       PLAYER_URL_BASE: url("/jugadores/"),
       DIFFICULTY_COLORS,
       DIFFICULTY_LABELS,
+      EQUIPOS_VETADOS,
     }}
   >
     const playersById = new Map(players.map((p) => [p.id, p]));
@@ -820,7 +822,10 @@ for (const m of nextGwMatches) {
         warnings.push("Falta elegir capitán");
       }
       const bestCaptain = filled
-        .filter((p) => p.price < MAX_CAPTAIN_PRICE)
+        .filter(
+          (p) =>
+            p.price < MAX_CAPTAIN_PRICE && !EQUIPOS_VETADOS.includes(p.id_team),
+        )
         .sort((a, b) => b.xp - a.xp)[0];
       const captain = state.captainId ? playersById.get(state.captainId) : null;
       if (bestCaptain && (!captain || bestCaptain.xp - captain.xp >= 1)) {
@@ -1377,6 +1382,12 @@ for (const m of nextGwMatches) {
             !q ||
             normalize(p.name).includes(q) ||
             normalize(p.teamName).includes(q),
+        )
+        // Los del Barça no se proponen: solo salen si se buscan a propósito
+        // o si ya están en ese hueco.
+        .filter(
+          (p) =>
+            q || p.id === slot.playerId || !EQUIPOS_VETADOS.includes(p.id_team),
         )
         .filter(
           (p) =>
