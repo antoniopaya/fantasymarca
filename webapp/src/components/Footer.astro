@@ -1,5 +1,28 @@
+---
+import { getDataUpdatedAt } from "../lib/data";
+
+const updatedAt = getDataUpdatedAt();
+const updatedLabel = updatedAt
+  ? new Intl.DateTimeFormat("es-ES", {
+      timeZone: "Europe/Madrid",
+      weekday: "short",
+      day: "numeric",
+      month: "short",
+      hour: "2-digit",
+      minute: "2-digit",
+    }).format(updatedAt)
+  : null;
+---
+
 <footer class="mt-16 border-t border-white/10">
   <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-500 sm:px-6">
+    {
+      updatedLabel && (
+        <p class="mb-3 text-center text-slate-400 sm:text-left">
+          Datos de Marca: {updatedLabel}
+        </p>
+      )
+    }
     <div class="flex flex-col items-center justify-between gap-3 sm:flex-row">
       <p>
         FantasyMarca &mdash; panel no oficial construido sobre la API pública de

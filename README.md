@@ -1,35 +1,46 @@
 # FantasyMarca
 
-Panel personal (no oficial, sin afiliación con MARCA) para seguir la liga de
-[Fantasy Marca](https://fantasy.marca.com): próxima jornada, ficha y
-estadísticas de los 500+ jugadores, y una herramienta para montar el once
-respetando el precio "Fantástica" que pactamos en nuestra liga privada.
+App personal (no oficial, sin afiliación con MARCA) para que los Payás
+(Antonio, Toño y Jandro) preparen cada semana su 11 de la liga privada
+"Fantástica" de [Fantasy Marca](https://fantasy.marca.com): precio
+Fantástica pactado, tope de 180M€, capitán de menos de 18M€ que puntúa doble
+y 3/6/11 cambios por jornada según la clasificación.
 
-En vivo: **https://antoniopaya.github.io/fantasymarca/**
+En vivo: **https://antoniopaya.github.io/fantasymarca/** — se puede instalar
+como app (PWA): en Android sale el botón "Instalar"; en iPhone, Safari →
+Compartir → "Añadir a pantalla de inicio". Funciona sin conexión con las
+páginas ya abiertas.
 
 ## Qué hay
 
-- **Inicio** — resumen: próximos partidos, jugadores más valiosos.
-- **Próxima jornada** — calendario completo, jornada a jornada.
-- **Jugadores** — buscador con filtros (equipo, posición, precio) y ficha
-  individual (valor de mercado, cláusula, evolución, calendario).
-- **Estadísticas** — rankings y gráficos: precio Fantástica vs. puntos,
-  gangas, ratio puntos/precio, cláusulas, distribución por posición, valor de
-  plantilla por equipo...
-- **Crear once** — arma un XI con la táctica que quieras, tope de 180M€ en
-  precio Fantástica, capitán por debajo de 18M€, y compártelo por WhatsApp.
+Cinco pestañas (abajo en el móvil, arriba en escritorio):
+
+- **Inicio ("Tu semana")** — cuenta atrás al primer partido de la jornada,
+  avisos sobre tu 11 (lesionados, dudas, sin partido), capitán recomendado,
+  cambios que suman con lo que te cabe, tu clasificación y Los Payás.
+- **Mi 11** — tu 11 en el campo con barra fija de presupuesto, cambios y
+  capitán. "Preparar mi 11" carga el 11 de tu última jornada de la liga con tus
+  cambios disponibles; al tocar un jugador se puede cambiar, hacer capitán o
+  quitar. El selector ordena por puntos esperados y filtra lo que te cabe.
+  Compartir por WhatsApp manda solo los cambios ("sale - entra") y el capitán.
   Se guarda en el navegador (`localStorage`), no hay cuentas ni servidor.
-  "Preparar mi once" carga el 11 de tu última jornada de la liga con tus
-  cambios disponibles.
-- **¿Quién eres?** — selector de la navbar (Antonio, Toño, Jandro) que
-  personaliza la home, Crear once y las páginas de la liga.
-- **Liga** — clasificación de la liga Fantástica con premios, evolución por
-  jornadas y ganadores de cada jornada; y estadísticas: jugadores más usados,
-  capitanes, diferenciales, el 11 de la liga, el 11 ideal de cada jornada,
-  y por persona sus fijos, su eficiencia y a quién se parece su equipo.
-  "Cara a cara" compara a dos participantes jornada a jornada y separa sus
-  jugadores en común de los exclusivos. Las fichas y el listado de jugadores
-  muestran qué % de la liga lleva a cada uno (y filtran por "mi 11").
+- **Jugadores** — buscador (orden por puntos esperados, filtro "mi 11") y
+  estadísticas (precio vs. puntos, puntos por millón...; lo del mercado de
+  Marca, al final). La ficha de cada jugador trae sus próximos partidos con la
+  dificultad, sus últimas jornadas y quién lo lleva en la liga.
+- **Jornada** — calendario con tus jugadores y sus puntos esperados en cada
+  partido.
+- **Liga** — clasificación con premios y evolución, estadísticas de la liga
+  (más usados, capitanes, diferenciales, 11 ideal, tus fijos y eficiencia) y
+  "Cara a cara" entre dos participantes.
+
+"¿Quién eres?" (arriba a la derecha) personaliza todo lo anterior.
+
+**Puntos esperados y dificultad** (`webapp/src/lib/forecast.ts`): fuerza de
+cada equipo con los partidos jugados, dificultad 1-5 de cada partido según la
+posición del jugador y casa/fuera, y puntos esperados = media de la temporada
++ forma de las últimas 3 jornadas, ajustados por dificultad y estado. Es una
+estimación sencilla para ordenar opciones, no una predicción fina.
 
 ## Estructura del repo
 
@@ -43,10 +54,11 @@ webapp/         Sitio Astro + Tailwind, 100% estático
   src/pages/            una carpeta/archivo por ruta
   src/components/       componentes Astro, incluidos los gráficos
   src/lib/data.ts        toda la lectura de datos (fs.readFileSync) vive aquí
-  public/data/           JSON generados por fantasy_api (ver abajo)
+  data/                  JSON generados por fantasy_api (ver abajo); no se publican
 .github/workflows/
   deploy.yml            build + publica en GitHub Pages (push a main)
-  refresh-data.yml       corre main.py en cron, commitea si cambian los datos
+  refresh-data.yml       corre main.py en cron (lun, jue, vie x2, sáb y dom),
+                         commitea si cambian los datos
                          y dispara deploy.yml a mano (ver abajo)
   verify.yml             lint + type-check + build en cada push/PR (sin desplegar)
 ```
@@ -54,16 +66,17 @@ webapp/         Sitio Astro + Tailwind, 100% estático
 ## De dónde salen los datos
 
 La webapp es **100% estática**: nunca llama a fantasy.marca.com en producción,
-solo lee JSON ya generados en `webapp/public/data/`. Ese directorio se llena
+solo lee JSON ya generados en `webapp/data/` (en el build: no se publican). Ese directorio se llena
 de tres fuentes distintas, cada una con su script:
 
 1. **Catálogo de Marca** (`fantasy_api/main.py`) — equipos, jornadas,
    partidos y la ficha completa de cada jugador (valor de mercado, cláusula,
    puntos, calendario). Se regenera entero cada vez que se ejecuta: a mano,
-   o automáticamente por `refresh-data.yml` (lunes y jueves).
+   o automáticamente por `refresh-data.yml` (lunes, jueves, viernes mañana y
+   tarde, sábado y domingo).
 2. **Precio Fantástica** (`fantasy_api/build_precios_fantastica.py`) — el
    precio de consenso que pactamos en la liga, mantenido a mano en un Excel
-   (`webapp/public/data/*.xlsx`). El script empareja cada fila del Excel
+   (`webapp/data/*.xlsx`). El script empareja cada fila del Excel
    contra el catálogo por nombre+equipo+posición (el Excel no trae IDs de
    Marca) y escribe `precios_fantastica.json`. Vive en un fichero aparte
    porque si estuviera en el mismo sitio que el catálogo, `main.py` lo

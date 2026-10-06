@@ -1,7 +1,7 @@
 # FantasyMarca — webapp
 
 Sitio Astro + Tailwind, 100% estático. Para qué es esto y de dónde salen los
-datos de `public/data/`, ver el [README de la raíz del repo](../README.md).
+datos de `data/`, ver el [README de la raíz del repo](../README.md).
 
 ## Estructura
 
@@ -9,8 +9,8 @@ datos de `public/data/`, ver el [README de la raíz del repo](../README.md).
 src/pages/         una carpeta/archivo por ruta (file-based routing de Astro)
 src/components/    componentes .astro, incluidos los gráficos (src/components/charts/)
 src/layouts/       Layout.astro envuelve todas las páginas (nav, footer, <head>)
-src/lib/data.ts    toda la lectura de datos (fs.readFileSync sobre public/data/)
-public/data/       JSON generados por fantasy_api/ (no se tocan a mano)
+src/lib/data.ts    toda la lectura de datos (fs.readFileSync sobre data/)
+data/              JSON generados por fantasy_api/ (no se tocan a mano)
 ```
 
 ## Comandos

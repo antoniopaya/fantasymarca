@@ -1,5 +1,5 @@
 """
-Genera en webapp/public/data/ todos los JSON que consume la webapp.
+Genera en webapp/data/ todos los JSON que consume la webapp.
 
 Pensado para ejecutarse a mano de vez en cuando (1-2 veces por semana, cuando
 se jueguen partidos), no en cada visita: la webapp se compila como sitio
@@ -13,6 +13,7 @@ Escribe:
   players.json         catálogo de jugadores (id/nombre/slug/equipo/posición)
   matches/<n>.json     partidos de la jornada n
   players/<id>.json    ficha completa (valor, cláusula, bio, calendario...) de cada jugador
+  meta.json            cuándo se generaron estos datos
 
 Uso:
     python main.py
@@ -24,11 +25,12 @@ import re
 import sys
 import time
 import unicodedata
+from datetime import datetime, timezone
 
 import client
 
 WEBAPP_DATA_DIR = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), "..", "webapp", "public", "data"
+    os.path.dirname(os.path.abspath(__file__)), "..", "webapp", "data"
 )
 
 SEED_GAMEWEEK_ID = 3968
@@ -125,6 +127,9 @@ def main() -> None:
 
     players = fetch_all_players(teams)
     write_json("players.json", players)
+
+    # Para que la web pueda decir "Datos de Marca de hace X horas".
+    write_json("meta.json", {"marca_updated_at": datetime.now(timezone.utc).isoformat(timespec="minutes")})
 
     print(f"\nListo. {len(players)} jugadores. Datos generados en {WEBAPP_DATA_DIR}", file=sys.stderr)
 

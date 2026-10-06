@@ -1,6 +1,6 @@
 """
-Construye ../webapp/public/data/precios_fantastica.json a partir del Excel de
-precios de consenso de la liga (../webapp/public/data/*.xlsx).
+Construye ../webapp/data/precios_fantastica.json a partir del Excel de
+precios de consenso de la liga (../webapp/data/*.xlsx).
 
 Por qué un script separado de main.py/build_catalog.py: esos dos regeneran
 players.json y players/<id>.json entero cada vez que se ejecutan (pisando
@@ -41,7 +41,7 @@ import openpyxl
 
 from name_matching import normalize_tokens, token_score
 
-DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "webapp", "public", "data")
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "webapp", "data")
 
 # Alias del nombre de equipo tal cual aparece en el Excel -> id_team de teams.json.
 # Si el Excel de una temporada futura trae equipos distintos (ascensos/descensos),

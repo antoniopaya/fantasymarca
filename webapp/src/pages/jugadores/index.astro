@@ -36,9 +36,9 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
   <JugadoresTabs active="buscar" />
 
   <div
-    class="sticky top-[calc(62px+env(safe-area-inset-top))] z-10 -mx-4 mb-6 flex flex-col gap-3 border-b border-white/10 bg-slate-950/95 px-4 py-3 backdrop-blur-md sm:flex-row sm:items-center"
+    class="-mx-4 mb-6 grid grid-cols-2 gap-2 border-b border-white/10 bg-slate-950/95 px-4 py-3 backdrop-blur-md sm:sticky sm:top-[calc(62px+env(safe-area-inset-top))] sm:z-10 sm:flex sm:flex-row sm:items-center sm:gap-3"
   >
-    <div class="relative flex-1">
+    <div class="relative col-span-2 flex-1">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-slate-500"
@@ -148,7 +148,6 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
               position={player.position}
               photoUrl={playerPhotoUrl(player.id)}
               teamLogoUrl={teamLogoUrl(player.id_team)}
-              valueLabel={formatMoney(player.value)}
               precioFantasticaLabel={
                 player.precioFantastica
                   ? formatMoney(player.precioFantastica)

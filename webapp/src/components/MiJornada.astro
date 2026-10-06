@@ -1,5 +1,6 @@
 ---
 import {
+  getDataUpdatedAt,
   getLatestLigaJornada,
   getNextGameweek,
   getPlayerById,
@@ -15,6 +16,7 @@ import YoScript from "./YoScript.astro";
 const jornada = getLatestLigaJornada();
 const nextGameweek = getNextGameweek();
 const cierre = deadline();
+const updatedAt = getDataUpdatedAt();
 const cierreLabel = cierre
   ? new Intl.DateTimeFormat("es-ES", {
       timeZone: "Europe/Madrid",
@@ -81,6 +83,17 @@ const fmtM = (euros: number) =>
       cierreLabel && (
         <p class="mt-1 text-sm text-slate-400">
           Primer partido: {cierre?.label}, {cierreLabel}
+        </p>
+      )
+    }
+    {
+      updatedAt && (
+        <p
+          class="mt-1 text-xs text-slate-500"
+          data-updated-ago
+          data-ts={updatedAt.getTime()}
+        >
+          Lesiones y dudas según los datos de Marca
         </p>
       )
     }
@@ -313,6 +326,18 @@ const fmtM = (euros: number) =>
 <YoScript />
 
 <script>
+  const ago = document.querySelector<HTMLElement>("[data-updated-ago]");
+  if (ago) {
+    const hours = Math.round((Date.now() - Number(ago.dataset.ts)) / 3_600_000);
+    ago.textContent = `Lesiones y dudas según los datos de Marca de hace ${
+      hours < 1
+        ? "menos de 1 h"
+        : hours < 48
+          ? `${hours} h`
+          : `${Math.round(hours / 24)} días`
+    }`;
+  }
+
   const el = document.querySelector<HTMLElement>("[data-countdown]");
   if (el) {
     const target = Number(el.dataset.ts) * 1000;

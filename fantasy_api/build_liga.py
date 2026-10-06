@@ -1,5 +1,5 @@
 """
-Construye ../webapp/public/data/liga/<n>.json a partir de los PDFs de la liga
+Construye ../webapp/data/liga/<n>.json a partir de los PDFs de la liga
 Fantástica (../data/Jornadas/*.pdf), uno por jornada.
 
 Los PDFs son la exportación del Excel que lleva la liga (no tenemos el Excel):
@@ -35,7 +35,7 @@ from name_matching import normalize_tokens, token_score
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 PDF_DIR = os.path.join(ROOT, "data", "Jornadas")
-DATA_DIR = os.path.join(ROOT, "webapp", "public", "data")
+DATA_DIR = os.path.join(ROOT, "webapp", "data")
 OUT_DIR = os.path.join(DATA_DIR, "liga")
 
 BUDGET_MILLIONS = 180

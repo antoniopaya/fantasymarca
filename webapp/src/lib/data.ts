@@ -3,8 +3,9 @@ import path from "node:path";
 
 // Todo esto lo genera fantasy_api/main.py (ver ../../../fantasy_api/main.py), a mano,
 // 1-2 veces por semana. La webapp es 100% estática: nunca llama a fantasy.marca.com
-// en producción, solo lee estos JSON ya generados dentro de public/data.
-const DATA_DIR = path.resolve(process.cwd(), "public", "data");
+// en producción, solo lee estos JSON ya generados dentro de webapp/data.
+// Fuera de public/: se leen en el build y no hace falta publicarlos (28MB).
+const DATA_DIR = path.resolve(process.cwd(), "data");
 
 export interface Team {
   id: number;
@@ -195,7 +196,7 @@ export function getGameweeks(): Gameweek[] {
 /**
  * Precio de consenso de la liga Fantástica, en euros (para usar con formatMoney
  * igual que `value`). Viene de fantasy_api/build_precios_fantastica.py, que lo
- * genera a partir del Excel en public/data/*.xlsx y vive en su propio fichero
+ * genera a partir del Excel en data/*.xlsx y vive en su propio fichero
  * porque main.py/build_catalog.py regeneran players.json entero cada vez.
  */
 export function getPreciosFantastica(): Record<string, number> {
@@ -203,6 +204,19 @@ export function getPreciosFantastica(): Record<string, number> {
     "precios_fantastica.json",
   );
   return preciosFantasticaCache;
+}
+
+/**
+ * Cuándo se descargaron por última vez los datos de Marca (lo escribe
+ * fantasy_api/main.py). null si el fichero aún no existe.
+ */
+export function getDataUpdatedAt(): Date | null {
+  try {
+    const meta = loadJson<{ marca_updated_at?: string }>("meta.json");
+    return meta.marca_updated_at ? new Date(meta.marca_updated_at) : null;
+  } catch {
+    return null;
+  }
 }
 
 export function getPrecioFantastica(id: number): number | null {

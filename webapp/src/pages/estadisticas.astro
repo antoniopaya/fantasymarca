@@ -175,18 +175,18 @@ const maxTeamFantastica = teamTotals[0]?.totalFantastica ?? 1;
 // El gráfico precio-vs-puntos va primero: es el más útil para decidir fichajes.
 const sections = [
   { id: "valor-vs-puntos", label: "Precio vs. puntos" },
-  { id: "gangas", label: "Gangas" },
-  { id: "sobrevalorados", label: "Sobrevalorados" },
   { id: "puntos", label: "Puntos" },
+  { id: "ratio-puntos-precio", label: "Puntos por millón" },
   { id: "posiciones", label: "Posiciones" },
   { id: "distribucion-valor", label: "Distribución de precios" },
-  { id: "mas-valiosos", label: "Más valiosos" },
-  { id: "ratio-puntos-precio", label: "Ratio puntos/precio" },
-  { id: "clausulas", label: "Cláusulas" },
-  { id: "subidas", label: "Subidas de valor" },
-  { id: "bajadas", label: "Bajadas de valor" },
   { id: "equipos", label: "Por equipo" },
   { id: "todos", label: "Todos los jugadores" },
+  { id: "gangas", label: "Gangas", market: true },
+  { id: "sobrevalorados", label: "Sobrevalorados", market: true },
+  { id: "mas-valiosos", label: "Más valiosos", market: true },
+  { id: "clausulas", label: "Cláusulas", market: true },
+  { id: "subidas", label: "Subidas de valor", market: true },
+  { id: "bajadas", label: "Bajadas de valor", market: true },
 ];
 ---
 
@@ -221,16 +221,23 @@ const sections = [
     <nav aria-label="Secciones" class="hidden lg:block">
       <div class="sticky top-20 space-y-1">
         {
-          sections.map((s) => (
-            <a
-              href={`#${s.id}`}
-              data-stats-nav-link
-              data-section={s.id}
-              data-base-class="text-slate-400"
-              class="stats-nav-link block rounded-lg px-3 py-2 text-sm font-medium text-slate-400 transition-colors hover:bg-white/5 hover:text-white"
-            >
-              {s.label}
-            </a>
+          sections.map((s, i) => (
+            <>
+              {s.market && !sections[i - 1]?.market && (
+                <p class="px-3 pt-4 pb-1 text-xs font-semibold tracking-wide text-slate-500 uppercase">
+                  Mercado de Marca
+                </p>
+              )}
+              <a
+                href={`#${s.id}`}
+                data-stats-nav-link
+                data-section={s.id}
+                data-base-class="text-slate-400"
+                class="stats-nav-link block rounded-lg px-3 py-2 text-sm font-medium text-slate-400 transition-colors hover:bg-white/5 hover:text-white"
+              >
+                {s.label}
+              </a>
+            </>
           ))
         }
       </div>
@@ -252,6 +259,158 @@ const sections = [
           />
         </div>
       </section>
+
+      <section id="puntos" class="mb-10 scroll-mt-24">
+        <h2 class="mb-4 text-xl font-bold text-white">
+          Mejores de la temporada {currentSeasonLabel} (puntos)
+        </h2>
+        <p class="mb-4 text-sm text-slate-500">
+          Puntos acumulados en lo que llevamos de temporada.
+        </p>
+        <RankingList
+          items={topCurrentSeason.map((p) => ({
+            key: p.id,
+            label: p.name,
+            sublabel: `${p.team_name} · media ${p.avg.toFixed(2)}`,
+            valueLabel: `${p.points} pts`,
+            barPercent: pct(p.points, maxCurrentSeasonPoints),
+            href: url(`/jugadores/${p.id}`),
+            imageUrl: playerPhotoUrl(p.id),
+          }))}
+        />
+      </section>
+
+      <section id="ratio-puntos-precio" class="mb-10 scroll-mt-24">
+        <h2 class="mb-4 text-xl font-bold text-white">Ratio puntos/precio</h2>
+        {
+          valueForMoney.length === 0 ? (
+            <p class="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-500">
+              Todavía no hay puntos de la temporada {currentSeasonLabel} para
+              calcular el ratio.
+            </p>
+          ) : (
+            <RankingList
+              items={valueForMoney.map((p) => ({
+                key: p.id,
+                label: p.name,
+                sublabel: `${p.team_name} · ${p.points} pts · ${formatMoney(p.precioFantastica as number)}`,
+                valueLabel: `${p.ratio.toFixed(1)} pts/M€`,
+                barPercent: pct(p.ratio, maxRatio),
+                href: url(`/jugadores/${p.id}`),
+                imageUrl: playerPhotoUrl(p.id),
+              }))}
+            />
+          )
+        }
+      </section>
+
+      <section id="posiciones" class="mb-10 scroll-mt-24">
+        <h2 class="mb-4 text-xl font-bold text-white">
+          Distribución por posición
+        </h2>
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
+            <p class="mb-4 text-sm font-medium text-slate-400">
+              Jugadores por posición
+            </p>
+            <DonutChart
+              segments={positionStats.map((s) => ({
+                label: POSITION_NAMES[s.position],
+                value: s.count,
+                color: s.color,
+              }))}
+              centerValue={String(summaries.length)}
+              centerLabel="jugadores"
+            />
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
+            <p class="mb-4 text-sm font-medium text-slate-400">
+              Precio Fantástica medio por posición
+            </p>
+            <CategoryBarChart
+              title="Precio Fantástica medio por posición"
+              bars={positionStats.map((s) => ({
+                label: POSITION_NAMES[s.position].slice(0, 3).toUpperCase(),
+                value: s.avgFantastica,
+                color: s.color,
+                valueLabel: formatMoney(s.avgFantastica),
+              }))}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="distribucion-valor" class="mb-10 scroll-mt-24">
+        <h2 class="mb-4 text-xl font-bold text-white">
+          Distribución de precios Fantástica
+        </h2>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+          <Histogram
+            buckets={fantasticaBuckets}
+            title="Distribución de precios Fantástica"
+          />
+        </div>
+      </section>
+
+      <section id="equipos" class="mb-10 scroll-mt-24">
+        <h2 class="mb-4 text-xl font-bold text-white">
+          Precio Fantástica total de plantilla por equipo
+        </h2>
+        <div class="space-y-2">
+          {
+            teamTotals.map((t, index) => (
+              <div class="flex items-center gap-3 rounded-xl border border-white/10 bg-slate-900/60 p-3">
+                <span class="w-5 shrink-0 text-center text-sm font-bold text-slate-500">
+                  {index + 1}
+                </span>
+                <img
+                  src={teamLogoUrl(t.team.id)}
+                  alt=""
+                  class="h-8 w-8 shrink-0 object-contain"
+                  loading="lazy"
+                />
+                <div class="min-w-0 flex-1">
+                  <div class="flex items-center justify-between gap-2">
+                    <p class="truncate text-sm font-medium text-white">
+                      {t.team.name}
+                    </p>
+                    <p class="shrink-0 text-sm font-bold text-white">
+                      {formatMoney(t.totalFantastica)}
+                    </p>
+                  </div>
+                  <p class="text-xs text-slate-500">
+                    {t.count} jugadores · media {formatMoney(t.avgFantastica)}
+                  </p>
+                  <div class="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-800">
+                    <div
+                      class="h-full rounded-full bg-emerald-500"
+                      style={`width:${Math.max(pct(t.totalFantastica, maxTeamFantastica), 3)}%`}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <section id="todos" class="mb-10 scroll-mt-24">
+        <h2 class="mb-4 text-xl font-bold text-white">Todos los jugadores</h2>
+        <p class="mb-4 text-sm text-slate-500">
+          Busca, filtra por equipo/posición y ordena cualquier columna haciendo
+          clic en la cabecera.
+        </p>
+        <PlayersTable players={summaries} teams={teams} />
+      </section>
+
+      <div class="mt-4 mb-6 border-t border-white/10 pt-8">
+        <h2 class="text-2xl font-black text-white">Mercado de Marca</h2>
+        <p class="mt-1 text-sm text-slate-400">
+          Valor de mercado y cláusulas del Fantasy oficial de Marca. En la liga
+          Fantástica no cuentan (solo el precio Fantástica y los puntos), pero
+          ayudan a ver quién está en racha o infravalorado.
+        </p>
+      </div>
 
       <section id="gangas" class="mb-10 scroll-mt-24">
         <h2 class="mb-4 text-xl font-bold text-white">Gangas</h2>
@@ -313,74 +472,6 @@ const sections = [
         }
       </section>
 
-      <section id="puntos" class="mb-10 scroll-mt-24">
-        <h2 class="mb-4 text-xl font-bold text-white">
-          Mejores de la temporada {currentSeasonLabel} (puntos)
-        </h2>
-        <p class="mb-4 text-sm text-slate-500">
-          Puntos acumulados en lo que llevamos de temporada.
-        </p>
-        <RankingList
-          items={topCurrentSeason.map((p) => ({
-            key: p.id,
-            label: p.name,
-            sublabel: `${p.team_name} · media ${p.avg.toFixed(2)}`,
-            valueLabel: `${p.points} pts`,
-            barPercent: pct(p.points, maxCurrentSeasonPoints),
-            href: url(`/jugadores/${p.id}`),
-            imageUrl: playerPhotoUrl(p.id),
-          }))}
-        />
-      </section>
-
-      <section id="posiciones" class="mb-10 scroll-mt-24">
-        <h2 class="mb-4 text-xl font-bold text-white">
-          Distribución por posición
-        </h2>
-        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-            <p class="mb-4 text-sm font-medium text-slate-400">
-              Jugadores por posición
-            </p>
-            <DonutChart
-              segments={positionStats.map((s) => ({
-                label: POSITION_NAMES[s.position],
-                value: s.count,
-                color: s.color,
-              }))}
-              centerValue={String(summaries.length)}
-              centerLabel="jugadores"
-            />
-          </div>
-          <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-            <p class="mb-4 text-sm font-medium text-slate-400">
-              Precio Fantástica medio por posición
-            </p>
-            <CategoryBarChart
-              title="Precio Fantástica medio por posición"
-              bars={positionStats.map((s) => ({
-                label: POSITION_NAMES[s.position].slice(0, 3).toUpperCase(),
-                value: s.avgFantastica,
-                color: s.color,
-                valueLabel: formatMoney(s.avgFantastica),
-              }))}
-            />
-          </div>
-        </div>
-      </section>
-
-      <section id="distribucion-valor" class="mb-10 scroll-mt-24">
-        <h2 class="mb-4 text-xl font-bold text-white">
-          Distribución de precios Fantástica
-        </h2>
-        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
-          <Histogram
-            buckets={fantasticaBuckets}
-            title="Distribución de precios Fantástica"
-          />
-        </div>
-      </section>
-
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
         <section id="mas-valiosos" class="scroll-mt-24">
           <h2 class="mb-4 text-xl font-bold text-white">
@@ -397,30 +488,6 @@ const sections = [
               imageUrl: playerPhotoUrl(p.id),
             }))}
           />
-        </section>
-
-        <section id="ratio-puntos-precio" class="scroll-mt-24">
-          <h2 class="mb-4 text-xl font-bold text-white">Ratio puntos/precio</h2>
-          {
-            valueForMoney.length === 0 ? (
-              <p class="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-500">
-                Todavía no hay puntos de la temporada {currentSeasonLabel} para
-                calcular el ratio.
-              </p>
-            ) : (
-              <RankingList
-                items={valueForMoney.map((p) => ({
-                  key: p.id,
-                  label: p.name,
-                  sublabel: `${p.team_name} · ${p.points} pts · ${formatMoney(p.precioFantastica as number)}`,
-                  valueLabel: `${p.ratio.toFixed(1)} pts/M€`,
-                  barPercent: pct(p.ratio, maxRatio),
-                  href: url(`/jugadores/${p.id}`),
-                  imageUrl: playerPhotoUrl(p.id),
-                }))}
-              />
-            )
-          }
         </section>
 
         <section id="clausulas" class="scroll-mt-24">
@@ -490,57 +557,6 @@ const sections = [
           }
         </section>
       </div>
-
-      <section id="equipos" class="mt-10 scroll-mt-24">
-        <h2 class="mb-4 text-xl font-bold text-white">
-          Precio Fantástica total de plantilla por equipo
-        </h2>
-        <div class="space-y-2">
-          {
-            teamTotals.map((t, index) => (
-              <div class="flex items-center gap-3 rounded-xl border border-white/10 bg-slate-900/60 p-3">
-                <span class="w-5 shrink-0 text-center text-sm font-bold text-slate-500">
-                  {index + 1}
-                </span>
-                <img
-                  src={teamLogoUrl(t.team.id)}
-                  alt=""
-                  class="h-8 w-8 shrink-0 object-contain"
-                  loading="lazy"
-                />
-                <div class="min-w-0 flex-1">
-                  <div class="flex items-center justify-between gap-2">
-                    <p class="truncate text-sm font-medium text-white">
-                      {t.team.name}
-                    </p>
-                    <p class="shrink-0 text-sm font-bold text-white">
-                      {formatMoney(t.totalFantastica)}
-                    </p>
-                  </div>
-                  <p class="text-xs text-slate-500">
-                    {t.count} jugadores · media {formatMoney(t.avgFantastica)}
-                  </p>
-                  <div class="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-800">
-                    <div
-                      class="h-full rounded-full bg-emerald-500"
-                      style={`width:${Math.max(pct(t.totalFantastica, maxTeamFantastica), 3)}%`}
-                    />
-                  </div>
-                </div>
-              </div>
-            ))
-          }
-        </div>
-      </section>
-
-      <section id="todos" class="mt-10 scroll-mt-24">
-        <h2 class="mb-4 text-xl font-bold text-white">Todos los jugadores</h2>
-        <p class="mb-4 text-sm text-slate-500">
-          Busca, filtra por equipo/posición y ordena cualquier columna haciendo
-          clic en la cabecera.
-        </p>
-        <PlayersTable players={summaries} teams={teams} />
-      </section>
     </div>
   </div>
 </Layout>

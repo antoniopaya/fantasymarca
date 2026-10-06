@@ -8,7 +8,6 @@
 // - Imágenes de Marca: ni se tocan. Su CDN no manda CORS (en Chrome cada
 //   respuesta opaca cuenta ~7MB de cuota) y ya las sirve con caché de un año,
 //   así que la caché HTTP normal las tiene también sin conexión.
-// - public/data no se usa nunca en el navegador: queda fuera.
 
 import { generateSW } from "workbox-build";
 
@@ -27,6 +26,7 @@ const { count, size, warnings } = await generateSW({
   skipWaiting: false,
   clientsClaim: true,
   cleanupOutdatedCaches: true,
+  sourcemap: false,
   navigateFallback: null,
   runtimeCaching: [
     {

@@ -3,7 +3,7 @@ import { defineConfig } from "astro/config";
 
 import tailwindcss from "@tailwindcss/vite";
 
-// Sitio 100% estático: los datos vienen de public/data/*.json, generados aparte
+// Sitio 100% estático: los datos vienen de data/*.json (se leen en el build), generados aparte
 // por fantasy_api/main.py. No hace falta adapter ni SSR.
 //
 // GitHub Pages sirve este repo en /fantasymarca/ (no es un repo <usuario>.github.io,

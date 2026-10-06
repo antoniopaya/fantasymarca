@@ -1,4 +1,4 @@
-// Cálculos sobre los datos de la liga Fantástica (public/data/liga/<n>.json).
+// Cálculos sobre los datos de la liga Fantástica (data/liga/<n>.json).
 // Todo se ejecuta en build: las páginas reciben ya los resultados.
 
 import {
