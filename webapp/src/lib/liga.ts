@@ -511,3 +511,19 @@ export function latestOwnershipPct(id: number): number {
   const info = ligaPlayerInfo(id);
   return info?.perJornada.find((p) => p.jornada === last?.number)?.pct ?? 0;
 }
+
+let shortNames: Map<number, string> | null = null;
+
+/** Nombre corto: el que usa la liga en sus PDFs ("Fermín L.") o, si no, el apellido. */
+export function ligaShortName(id: number, name: string): string {
+  if (!shortNames) {
+    shortNames = new Map();
+    for (const j of getLigaJornadas()) {
+      for (const e of j.entries) {
+        for (const p of e.players)
+          if (p.id !== null) shortNames.set(p.id, p.name);
+      }
+    }
+  }
+  return shortNames.get(id) ?? name.split(" ").slice(-1)[0];
+}

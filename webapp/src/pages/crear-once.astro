@@ -10,7 +10,6 @@ import {
   PLAYER_STATUS_LABELS,
   formatMoney,
   getLatestLigaJornada,
-  getLigaJornadas,
   getGameweekPoints,
   url,
   FORMATIONS,
@@ -18,6 +17,14 @@ import {
   MAX_CAPTAIN_PRICE,
 } from "../lib/data";
 import { FAMILIA, YO_EVENT, YO_STORAGE_KEY } from "../lib/yo";
+import { ligaShortName } from "../lib/liga";
+import {
+  DIFFICULTY_COLORS,
+  DIFFICULTY_LABELS,
+  difficulty,
+  expectedPoints,
+  fixtureIn,
+} from "../lib/forecast";
 
 const ligaJornada = getLatestLigaJornada();
 
@@ -30,18 +37,6 @@ for (const entry of ligaJornada?.entries ?? []) {
 }
 const ligaSize = ligaJornada?.entries.length ?? 0;
 
-// Nombre corto para las fichas del campo: el que usa la liga en sus PDFs
-// ("Fermín L.", "Vinicius Jr.") si lo ha usado alguna vez; si no, el apellido.
-const ligaShortNames = new Map<number, string>();
-for (const j of getLigaJornadas()) {
-  for (const e of j.entries) {
-    for (const p of e.players)
-      if (p.id !== null) ligaShortNames.set(p.id, p.name);
-  }
-}
-const shortName = (id: number, name: string) =>
-  ligaShortNames.get(id) ?? name.split(" ").slice(-1)[0];
-
 const nextGameweek = getNextGameweek();
 const lastPlayedGw = nextGameweek.number - 1;
 
@@ -49,25 +44,33 @@ const lastPlayedGw = nextGameweek.number - 1;
 // para el tope de 180M, así que uno sin precio no se puede valorar ni incluir.
 const players = getAllPlayerSummaries()
   .filter((p) => p.precioFantastica !== null)
-  .map((p) => ({
-    id: p.id,
-    name: p.name,
-    teamName: p.team_name,
-    id_team: p.id_team,
-    position: p.position,
-    price: p.precioFantastica as number,
-    photoUrl: playerPhotoUrl(p.id),
-    teamLogoUrl: teamLogoUrl(p.id_team),
-    status: p.status,
-    shortName: shortName(p.id, p.name),
-    avg: p.avg,
-    lastGwPoints: getGameweekPoints(p.id, lastPlayedGw),
-    points: p.points,
-    form: p.form,
-    ownershipPct: ligaSize
-      ? Math.round(((ownership.get(p.id) ?? 0) / ligaSize) * 100)
-      : 0,
-  }));
+  .map((p) => {
+    const fixture = fixtureIn(p.id_team, nextGameweek.number);
+    return {
+      id: p.id,
+      name: p.name,
+      teamName: p.team_name,
+      id_team: p.id_team,
+      position: p.position,
+      price: p.precioFantastica as number,
+      photoUrl: playerPhotoUrl(p.id),
+      teamLogoUrl: teamLogoUrl(p.id_team),
+      status: p.status,
+      shortName: ligaShortName(p.id, p.name),
+      avg: p.avg,
+      lastGwPoints: getGameweekPoints(p.id, lastPlayedGw),
+      points: p.points,
+      form: p.form,
+      ownershipPct: ligaSize
+        ? Math.round(((ownership.get(p.id) ?? 0) / ligaSize) * 100)
+        : 0,
+      xp: expectedPoints(p, nextGameweek.number),
+      difficulty: fixture
+        ? difficulty(fixture.rivalId, p.position, fixture.home)
+        : null,
+      home: fixture?.home ?? null,
+    };
+  });
 const pricedIds = new Set(players.map((p) => p.id));
 
 const DEFAULT_FORMATION = "4-3-3";
@@ -407,6 +410,7 @@ for (const m of nextGwMatches) {
         >
           {
             [
+              ["xp", "Esperados"],
               ["form", "Forma"],
               ["points", "Puntos"],
               ["value", "Pts/M€"],
@@ -415,7 +419,7 @@ for (const m of nextGwMatches) {
               <button
                 type="button"
                 data-sort={key}
-                aria-pressed={key === "form" ? "true" : "false"}
+                aria-pressed={key === "xp" ? "true" : "false"}
                 class="rounded-full border border-white/10 px-3 py-1.5 text-sm font-medium text-slate-300 hover:bg-white/5 aria-pressed:border-emerald-500/40 aria-pressed:bg-emerald-500/10 aria-pressed:text-emerald-400"
               >
                 {label}
@@ -458,6 +462,8 @@ for (const m of nextGwMatches) {
       YO_EVENT,
       NEXT_GW_NAME: nextGameweek.name,
       PLAYER_URL_BASE: url("/jugadores/"),
+      DIFFICULTY_COLORS,
+      DIFFICULTY_LABELS,
     }}
   >
     const playersById = new Map(players.map((p) => [p.id, p]));
@@ -686,6 +692,15 @@ for (const m of nextGwMatches) {
       return `${(value / 1_000_000).toFixed(1).replace(".0", "")}M`;
     }
 
+    function formatXp(xp) {
+      return xp.toFixed(1).replace(".", ",");
+    }
+
+    function diffChip(p) {
+      if (!p.difficulty) return "";
+      return `<span class="inline-flex h-[18px] min-w-[18px] shrink-0 items-center justify-center rounded px-1 text-[11px] font-bold text-white" style="background:${DIFFICULTY_COLORS[p.difficulty]}" title="Dificultad: ${DIFFICULTY_LABELS[p.difficulty]}">${p.difficulty}</span>`;
+    }
+
     // Ancho para que quepan 5 por línea en un móvil de 360px (gap-1.5 = 0.375rem).
     const CARD_WIDTH = "w-[calc((100%-1.5rem)/5)] max-w-[5.75rem]";
 
@@ -719,8 +734,9 @@ for (const m of nextGwMatches) {
         noMatch
           ? `no juega en la ${NEXT_GW_NAME}`
           : rival
-            ? `contra ${rival.name}`
+            ? `contra ${rival.name} (${(DIFFICULTY_LABELS[player.difficulty] ?? "").toLowerCase()})`
             : "",
+        `unos ${formatXp(player.xp)} puntos esperados`,
         isNew ? "nuevo" : "",
       ]
         .filter(Boolean)
@@ -742,9 +758,10 @@ for (const m of nextGwMatches) {
           </span>
           <span class="mt-1 block w-full truncate text-xs font-semibold leading-tight text-white">${player.shortName}</span>
           <span class="mt-0.5 flex items-center gap-1 text-[11px] leading-none text-slate-400">
-            ${rival ? `<img src="${rival.logoUrl}" alt="" class="h-3.5 w-3.5" />` : noMatch ? "—" : ""}
+            ${rival ? `<img src="${rival.logoUrl}" alt="" class="h-3.5 w-3.5 rounded-full" style="box-shadow:0 0 0 2px ${DIFFICULTY_COLORS[player.difficulty] ?? "transparent"}" />` : noMatch ? "—" : ""}
             ${formatMillions(player.price)}
           </span>
+          <span class="mt-1 text-[11px] font-semibold leading-none text-emerald-300">≈${formatXp(player.xp * (isCaptain ? 2 : 1))}</span>
         </button>`;
     }
 
@@ -782,6 +799,15 @@ for (const m of nextGwMatches) {
       }
       if (filled.length === state.slots.length && state.captainId === null) {
         warnings.push("Falta elegir capitán");
+      }
+      const bestCaptain = filled
+        .filter((p) => p.price < MAX_CAPTAIN_PRICE)
+        .sort((a, b) => b.xp - a.xp)[0];
+      const captain = state.captainId ? playersById.get(state.captainId) : null;
+      if (bestCaptain && (!captain || bestCaptain.xp - captain.xp >= 1)) {
+        warnings.push(
+          `Capitán sugerido: ${bestCaptain.name} (≈${formatXp(bestCaptain.xp)} pts esperados${captain ? `, frente a ≈${formatXp(captain.xp)} de ${captain.shortName}` : ""})`,
+        );
       }
       document.getElementById("warnings").innerHTML = warnings
         .map((w) => `<li>⚠ ${w}</li>`)
@@ -852,8 +878,7 @@ for (const m of nextGwMatches) {
               .join("");
     }
 
-    // Estimación simple hasta tener puntos esperados por partido: media de
-    // puntos de esta temporada de cada titular, con el capitán doblado.
+    // Suma de puntos esperados (lib/forecast.ts), con el capitán doblado.
     function renderEstimatedPoints() {
       const filled = state.slots
         .filter((s) => s.playerId !== null)
@@ -864,10 +889,10 @@ for (const m of nextGwMatches) {
         return;
       }
       const total = filled.reduce(
-        (sum, p) => sum + p.avg * (p.id === state.captainId ? 2 : 1),
+        (sum, p) => sum + p.xp * (p.id === state.captainId ? 2 : 1),
         0,
       );
-      label.textContent = `≈ ${total.toFixed(0)} pts esperados (media de la temporada)`;
+      label.textContent = `≈ ${total.toFixed(0)} pts esperados en la ${NEXT_GW_NAME}`;
     }
 
     // --- Cambios entre jornada y jornada (3, 6 u 11) ------------------------
@@ -1237,9 +1262,11 @@ for (const m of nextGwMatches) {
         <div class="min-w-0">
           <p id="sheet-title" class="truncate text-lg font-bold text-white">${player.name}</p>
           <p class="text-sm text-slate-400">${status}${player.teamName} · ${formatMoneyClient(player.price)}</p>
+          <p class="mt-0.5 flex items-center gap-1.5 text-sm text-slate-400">
+            ${rival ? `vs ${rival.name} ${player.home ? "(casa)" : "(fuera)"} ${diffChip(player)}` : `Sin partido en la ${NEXT_GW_NAME}`}
+          </p>
           <p class="text-sm text-slate-400">
-            ${rival ? `Rival: ${rival.name}` : `Sin partido en la ${NEXT_GW_NAME}`}
-            · J anterior: ${player.lastGwPoints ?? "–"} pts · forma ${player.form}
+            <b class="text-emerald-300">≈${formatXp(player.xp)} pts</b> esperados · J anterior: ${player.lastGwPoints ?? "–"} · forma ${player.form}
           </p>
         </div>`;
       const isCaptain = state.captainId === player.id;
@@ -1297,8 +1324,9 @@ for (const m of nextGwMatches) {
       }
     });
 
-    let pickerSort = "form";
+    let pickerSort = "xp";
     const PICKER_SORTS = {
+      xp: (p) => p.xp,
       price: (p) => p.price,
       points: (p) => p.points,
       form: (p) => p.form,
@@ -1366,12 +1394,12 @@ for (const m of nextGwMatches) {
                   <span class="mt-0.5 flex items-center gap-1.5 text-[13px] text-slate-400">
                     ${
                       rival
-                        ? `<img src="${rival.logoUrl}" alt="" class="h-4 w-4 shrink-0" /><span class="truncate">vs ${rival.name}</span>`
+                        ? `<img src="${rival.logoUrl}" alt="" class="h-4 w-4 shrink-0" /><span class="truncate">vs ${rival.name} ${p.home ? "(c)" : "(f)"}</span>${diffChip(p)}`
                         : `<span class="text-amber-400">sin partido</span>`
                     }
                   </span>
                   <span class="mt-0.5 block text-[13px] text-slate-400">
-                    Forma <b class="text-slate-200">${p.form}</b> · ${p.points} pts · ${p.ownershipPct}% liga
+                    <b class="text-emerald-300">≈${formatXp(p.xp)}</b> · forma ${p.form} · ${p.points} pts · ${p.ownershipPct}% liga
                   </span>
                 </span>
               </button>

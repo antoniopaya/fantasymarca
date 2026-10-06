@@ -11,6 +11,7 @@ import {
   teamLogoUrl,
 } from "../../lib/data";
 import { latestOwnershipPct, ligaPlayerInfo } from "../../lib/liga";
+import { expectedPoints } from "../../lib/forecast";
 import { FAMILIA } from "../../lib/yo";
 
 const ligaOf = (id: number) => ({
@@ -21,7 +22,9 @@ const ligaOf = (id: number) => ({
   ),
 });
 
-const players = [...getAllPlayerSummaries()].sort((a, b) => b.value - a.value);
+const players = [...getAllPlayerSummaries()].sort(
+  (a, b) => expectedPoints(b) - expectedPoints(a),
+);
 const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
 ---
 
@@ -78,14 +81,17 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       id="sort-select"
       class="rounded-xl border border-white/10 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
     >
-      <option value="value_desc">Valor: mayor a menor</option>
-      <option value="value_asc">Valor: menor a mayor</option>
-      <option value="fantastica_desc">Fantástica: mayor a menor</option>
-      <option value="fantastica_asc">Fantástica: menor a mayor</option>
-      <option value="clause_desc">Cláusula: mayor a menor</option>
-      <option value="points_desc">Puntos: mayor a menor</option>
-      <option value="liga_desc">% en la liga: mayor a menor</option>
+      <option value="xp_desc">Puntos esperados</option>
+      <option value="points_desc">Puntos de la temporada</option>
+      <option value="fantastica_desc">Precio: mayor a menor</option>
+      <option value="fantastica_asc">Precio: menor a mayor</option>
+      <option value="liga_desc">% en la liga</option>
       <option value="name_asc">Nombre: A-Z</option>
+      <optgroup label="Mercado de Marca">
+        <option value="value_desc">Valor: mayor a menor</option>
+        <option value="value_asc">Valor: menor a mayor</option>
+        <option value="clause_desc">Cláusula: mayor a menor</option>
+      </optgroup>
     </select>
     <select
       id="mine-filter"
@@ -118,6 +124,7 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
     {
       players.map((player) => {
         const liga = ligaOf(player.id);
+        const xp = expectedPoints(player);
         return (
           <div
             data-player-card
@@ -131,6 +138,7 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
             data-clause={player.clauseValue}
             data-points={player.points}
             data-liga={liga.pct}
+            data-xp={xp}
             data-owners={liga.owners.join(",")}
           >
             <PlayerCard
@@ -146,9 +154,12 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
                   ? formatMoney(player.precioFantastica)
                   : undefined
               }
-              ligaLabel={
-                liga.pct > 0 ? `${Math.round(liga.pct)}% de la liga` : undefined
-              }
+              ligaLabel={[
+                `≈${xp.toFixed(1).replace(".", ",")} pts esperados`,
+                liga.pct > 0 ? `${Math.round(liga.pct)}% de la liga` : "",
+              ]
+                .filter(Boolean)
+                .join(" · ")}
               status={player.status}
             />
           </div>
@@ -217,8 +228,7 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       if (teamSelect.value !== "0") params.set("equipo", teamSelect.value);
       if (positionSelect.value !== "0")
         params.set("posicion", positionSelect.value);
-      if (sortSelect.value !== "value_desc")
-        params.set("orden", sortSelect.value);
+      if (sortSelect.value !== "xp_desc") params.set("orden", sortSelect.value);
       if (favoritesOnly) params.set("favoritos", "1");
       if (mineSelect.value !== "all") params.set("mi11", mineSelect.value);
       const qs = params.toString();
@@ -296,6 +306,10 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
               parseFloat(b.dataset.points ?? "0") -
               parseFloat(a.dataset.points ?? "0")
             );
+          case "xp_desc":
+            return (
+              parseFloat(b.dataset.xp ?? "0") - parseFloat(a.dataset.xp ?? "0")
+            );
           case "liga_desc":
             return (
               parseFloat(b.dataset.liga ?? "0") -
@@ -354,7 +368,7 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
     input.value = initialParams.get("q") ?? "";
     teamSelect.value = initialParams.get("equipo") ?? "0";
     positionSelect.value = initialParams.get("posicion") ?? "0";
-    sortSelect.value = initialParams.get("orden") ?? "value_desc";
+    sortSelect.value = initialParams.get("orden") ?? "xp_desc";
     setFavoritesOnly(initialParams.get("favoritos") === "1");
     mineSelect.value = initialParams.get("mi11") ?? "all";
     syncMineSelect();
