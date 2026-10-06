@@ -10,7 +10,20 @@ import {
   POSITION_COLORS,
   PLAYER_STATUS_LABELS,
   formatMoney,
+  getLatestLigaJornada,
 } from "../lib/data";
+import { FAMILIA, YO_EVENT, YO_STORAGE_KEY } from "../lib/yo";
+
+const ligaJornada = getLatestLigaJornada();
+
+// % de participantes de la liga que llevaban a cada jugador en la última jornada.
+const ownership = new Map<number, number>();
+for (const entry of ligaJornada?.entries ?? []) {
+  for (const p of entry.players) {
+    if (p.id !== null) ownership.set(p.id, (ownership.get(p.id) ?? 0) + 1);
+  }
+}
+const ligaSize = ligaJornada?.entries.length ?? 0;
 
 // Solo entran jugadores con precio Fantástica: es el único precio que cuenta
 // para el tope de 180M, así que uno sin precio no se puede valorar ni incluir.
@@ -27,7 +40,13 @@ const players = getAllPlayerSummaries()
     teamLogoUrl: teamLogoUrl(p.id_team),
     status: p.status,
     lastSeasonAvg: p.lastSeason?.avg ?? null,
+    points: p.points,
+    form: p.form,
+    ownershipPct: ligaSize
+      ? Math.round(((ownership.get(p.id) ?? 0) / ligaSize) * 100)
+      : 0,
   }));
+const pricedIds = new Set(players.map((p) => p.id));
 
 const FORMATIONS = [
   { key: "3-4-3", def: 3, mid: 4, fwd: 3 },
@@ -39,6 +58,47 @@ const FORMATIONS = [
   { key: "5-4-1", def: 5, mid: 4, fwd: 1 },
 ];
 const DEFAULT_FORMATION = "4-3-3";
+
+// El once que puso cada uno de la familia en la última jornada de la liga,
+// listo para cargarlo como punto de partida de los cambios de la siguiente.
+const positionById = new Map(
+  getAllPlayerSummaries().map((p) => [p.id, p.position]),
+);
+const LIGA_ONCES: Record<
+  string,
+  {
+    jornada: number;
+    formationKey: string;
+    slots: { position: number; playerId: number }[];
+    captainId: number | null;
+    changes: number;
+    missing: string[];
+  }
+> = {};
+for (const name of FAMILIA) {
+  const entry = ligaJornada?.entries.find((e) => e.participant === name);
+  if (!ligaJornada || !entry) continue;
+  const inCatalog = entry.players.filter(
+    (p): p is typeof p & { id: number } => p.id !== null && pricedIds.has(p.id),
+  );
+  const slots = inCatalog
+    .map((p) => ({ position: positionById.get(p.id) ?? 0, playerId: p.id }))
+    .sort((a, b) => a.position - b.position);
+  const count = (pos: number) => slots.filter((s) => s.position === pos).length;
+  const formationKey = `${count(2)}-${count(3)}-${count(4)}`;
+  LIGA_ONCES[name] = {
+    jornada: ligaJornada.number,
+    formationKey: FORMATIONS.some((f) => f.key === formationKey)
+      ? formationKey
+      : DEFAULT_FORMATION,
+    slots,
+    captainId: inCatalog.find((p) => p.captain)?.id ?? null,
+    changes: entry.changes ?? 11,
+    missing: entry.players
+      .filter((p) => p.id === null || !pricedIds.has(p.id))
+      .map((p) => p.name),
+  };
+}
 
 const MAX_BUDGET = 180_000_000;
 const MAX_CAPTAIN_PRICE = 18_000_000;
@@ -138,6 +198,12 @@ for (const m of nextGwMatches) {
     </button>
   </div>
 
+  <div
+    id="liga-panel"
+    class="mb-6 hidden rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-4"
+  >
+  </div>
+
   <div class="mb-6 rounded-2xl border border-white/10 bg-slate-900/60 p-4">
     <p
       class="mb-3 text-xs font-semibold tracking-wide text-slate-500 uppercase"
@@ -192,6 +258,7 @@ for (const m of nextGwMatches) {
         >Sin datos suficientes para estimar puntos</span
       >
     </div>
+    <ul id="warnings" class="mt-3 space-y-1 text-sm text-amber-300"></ul>
   </div>
 
   <section
@@ -266,6 +333,30 @@ for (const m of nextGwMatches) {
         autocomplete="off"
         class="mb-3 w-full rounded-xl border border-white/10 bg-slate-950/60 px-3 py-2 text-sm text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
       />
+      <div
+        id="picker-sort"
+        role="group"
+        aria-label="Ordenar por"
+        class="mb-3 flex flex-wrap gap-1.5"
+      >
+        {
+          [
+            ["price", "Precio"],
+            ["points", "Puntos"],
+            ["form", "Forma"],
+            ["value", "Pts/M€"],
+          ].map(([key, label]) => (
+            <button
+              type="button"
+              data-sort={key}
+              aria-pressed={key === "price" ? "true" : "false"}
+              class="rounded-full border border-white/10 px-2.5 py-1 text-xs font-medium text-slate-300 hover:bg-white/5 aria-pressed:border-emerald-500/40 aria-pressed:bg-emerald-500/10 aria-pressed:text-emerald-400"
+            >
+              {label}
+            </button>
+          ))
+        }
+      </div>
       <button
         type="button"
         id="picker-remove"
@@ -289,6 +380,10 @@ for (const m of nextGwMatches) {
       POSITION_COLORS,
       PLAYER_STATUS_LABELS,
       TEAM_NEXT_OPPONENT,
+      LIGA_ONCES,
+      YO_STORAGE_KEY,
+      YO_EVENT,
+      NEXT_GW_NAME: nextGameweek.name,
     }}
   >
     const playersById = new Map(players.map((p) => [p.id, p]));
@@ -544,13 +639,20 @@ for (const m of nextGwMatches) {
           ? `Nombrar capitán a ${player.name}`
           : `${player.name} no puede ser capitán: debe costar menos de ${formatMoneyClient(MAX_CAPTAIN_PRICE)}`;
       const isNew = isNewInChangesMode(player.id);
+      const noMatch = hasNoMatch(player);
+      const cardTitle = [
+        isNew ? "Nuevo desde el último once" : "",
+        noMatch ? `Su equipo no juega en la ${NEXT_GW_NAME}` : "",
+      ]
+        .filter(Boolean)
+        .join(" · ");
 
       return `
         <div class="relative flex h-24 w-20 flex-col items-center rounded-xl border pt-1.5 sm:h-28 sm:w-24 ${
           isNew
             ? "border-emerald-500/60 bg-emerald-500/10 ring-2 ring-emerald-500/30"
             : "border-white/10 bg-slate-900/80"
-        }" data-slot="${slot.id}" ${isNew ? 'title="Nuevo desde el último once"' : ""}>
+        } ${noMatch ? "opacity-50" : ""}" data-slot="${slot.id}" ${cardTitle ? `title="${cardTitle}"` : ""}>
           <button type="button" data-slot="${slot.id}" data-action="remove"
             aria-label="Quitar a ${player.name} del equipo"
             class="absolute -right-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-rose-500 text-[10px] font-bold text-white hover:bg-rose-400">
@@ -577,6 +679,46 @@ for (const m of nextGwMatches) {
             <span class="text-[10px] font-semibold" style="color:${color}">${formatMoneyClient(player.price)}</span>
           </button>
         </div>`;
+    }
+
+    // Sin calendario cargado para la jornada no se puede saber quién juega:
+    // en ese caso no se marca a nadie.
+    const hasFixtures = Object.keys(TEAM_NEXT_OPPONENT).length > 0;
+
+    function hasNoMatch(player) {
+      return hasFixtures && !TEAM_NEXT_OPPONENT[player.id_team];
+    }
+
+    function renderWarnings() {
+      const filled = state.slots
+        .filter((s) => s.playerId !== null)
+        .map((s) => playersById.get(s.playerId));
+      const warnings = [];
+      const noMatch = filled.filter(hasNoMatch);
+      if (noMatch.length > 0) {
+        warnings.push(
+          `Sin partido en la ${NEXT_GW_NAME}: ${noMatch.map((p) => p.name).join(", ")}`,
+        );
+      }
+      for (const p of filled.filter((p) => p.status)) {
+        warnings.push(
+          `${p.name}: ${(PLAYER_STATUS_LABELS[p.status] ?? "baja").toLowerCase()}`,
+        );
+      }
+      if (totalCost(null) > MAX_BUDGET) {
+        warnings.push("Te pasas del presupuesto de 180 M€");
+      }
+      if (changesMode && computeChangesUsed() > changesMode.limit) {
+        warnings.push(
+          `Llevas ${computeChangesUsed()} cambios y solo tienes ${changesMode.limit}`,
+        );
+      }
+      if (filled.length === state.slots.length && state.captainId === null) {
+        warnings.push("Falta elegir capitán");
+      }
+      document.getElementById("warnings").innerHTML = warnings
+        .map((w) => `<li>⚠ ${w}</li>`)
+        .join("");
     }
 
     const POSITION_ROWS = [
@@ -925,8 +1067,10 @@ for (const m of nextGwMatches) {
       renderRivalsSummary();
       renderEstimatedPoints();
       renderChangesPanel();
+      renderWarnings();
 
       saveState();
+      renderLigaPanel();
     }
 
     function snapshotForUndo() {
@@ -993,16 +1137,25 @@ for (const m of nextGwMatches) {
       lastTrigger = null;
     }
 
+    let pickerSort = "price";
+    const PICKER_SORTS = {
+      price: (p) => p.price,
+      points: (p) => p.points,
+      form: (p) => p.form,
+      value: (p) => p.points / (p.price / 1_000_000),
+    };
+
     function renderPickerList(query) {
       const slot = state.slots.find((s) => s.id === activeSlotId);
       const used = usedIds(activeSlotId);
       const remaining = MAX_BUDGET - totalCost(activeSlotId);
       const q = normalize(query.trim());
+      const sortKey = PICKER_SORTS[pickerSort];
 
       const candidates = players
         .filter((p) => p.position === slot.position && !used.has(p.id))
         .filter((p) => !q || normalize(p.name).includes(q))
-        .sort((a, b) => b.price - a.price);
+        .sort((a, b) => sortKey(b) - sortKey(a) || b.price - a.price);
 
       const list = document.getElementById("picker-list");
       if (candidates.length === 0) {
@@ -1031,8 +1184,13 @@ for (const m of nextGwMatches) {
                 </div>
                 <span class="min-w-0 flex-1">
                   <span class="block truncate text-sm font-medium text-white">${p.name}</span>
-                  <span class="block truncate text-xs text-slate-500">${p.teamName}</span>
+                  <span class="block truncate text-xs text-slate-500">${p.teamName} · ${p.points} pts · forma ${p.form} · ${p.ownershipPct}% liga</span>
                 </span>
+                ${
+                  TEAM_NEXT_OPPONENT[p.id_team]
+                    ? `<img src="${TEAM_NEXT_OPPONENT[p.id_team].logoUrl}" alt="" title="Rival: ${TEAM_NEXT_OPPONENT[p.id_team].name}" class="h-6 w-6 shrink-0 rounded-full bg-slate-800 object-contain p-0.5" />`
+                    : `<span class="shrink-0 text-[10px] text-amber-400" title="Su equipo no juega en la ${NEXT_GW_NAME}">sin partido</span>`
+                }
                 <span class="shrink-0 text-sm font-semibold ${affordable ? "text-emerald-400" : "text-rose-400"}">
                   ${formatMoneyClient(p.price)}
                 </span>
@@ -1094,6 +1252,16 @@ for (const m of nextGwMatches) {
 
     document.getElementById("picker-search").addEventListener("input", (e) => {
       renderPickerList(e.target.value);
+    });
+
+    document.getElementById("picker-sort").addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-sort]");
+      if (!btn) return;
+      pickerSort = btn.dataset.sort;
+      for (const b of document.querySelectorAll("#picker-sort [data-sort]")) {
+        b.setAttribute("aria-pressed", String(b === btn));
+      }
+      renderPickerList(document.getElementById("picker-search").value);
     });
 
     document
@@ -1331,10 +1499,112 @@ for (const m of nextGwMatches) {
       render();
     }
 
+    // --- Once de la liga (quién eres + última jornada de los PDFs) ---------
+
+    function currentYo() {
+      try {
+        const value = localStorage.getItem(YO_STORAGE_KEY);
+        return LIGA_ONCES[value] ? value : null;
+      } catch {
+        return null;
+      }
+    }
+
+    function ligaLineupId(yo) {
+      return `liga-${yo}-${LIGA_ONCES[yo].jornada}`;
+    }
+
+    function renderLigaPanel() {
+      const panel = document.getElementById("liga-panel");
+      const yo = currentYo();
+      if (!yo) {
+        panel.classList.add("hidden");
+        return;
+      }
+      const once = LIGA_ONCES[yo];
+      panel.classList.remove("hidden");
+      if (activeLineupId === ligaLineupId(yo)) {
+        panel.innerHTML = `
+          <p class="text-sm text-slate-300">
+            Partes de tu once de la <strong class="text-white">Jornada ${once.jornada}</strong>.
+            Tienes <strong class="text-emerald-400">${once.changes} cambios</strong> para la ${NEXT_GW_NAME};
+            los que hagas salen en verde y se cuentan arriba.
+          </p>`;
+        return;
+      }
+      panel.innerHTML = `
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <p class="text-sm text-slate-300">
+            ${yo}, tienes <strong class="text-emerald-400">${once.changes} cambios</strong>
+            para la ${NEXT_GW_NAME}.
+          </p>
+          <button type="button" id="liga-load"
+            class="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-emerald-400">
+            Cargar mi once de la Jornada ${once.jornada}
+          </button>
+        </div>`;
+    }
+
+    // La convocatoria de la liga tiene id fijo por persona y jornada: si ya
+    // existe se vuelve a ella con los cambios que llevaras, no se pisa.
+    function loadLigaLineup(yo) {
+      const once = LIGA_ONCES[yo];
+      const id = ligaLineupId(yo);
+      if (!lineups[id]) {
+        const slots = buildSlots(once.formationKey, once.slots);
+        lineups[id] = {
+          name: `${yo} · ${NEXT_GW_NAME}`,
+          formationKey: once.formationKey,
+          slots,
+          captainId: once.captainId,
+          changesMode: {
+            limit: once.changes,
+            base: {
+              formationKey: once.formationKey,
+              slots: slots.map((s) => ({ ...s })),
+              captainId: once.captainId,
+            },
+          },
+        };
+        saveAllLineups();
+      }
+      setActiveLineupId(id);
+      applyLineup(id);
+      renderLineupSelect();
+      updateUndoButton();
+      render();
+      if (once.missing.length > 0) {
+        showNotice(
+          `Sin precio Fantástica, no se han podido cargar: ${once.missing.join(", ")}. Elige sustituto en su hueco.`,
+        );
+      }
+    }
+
+    document.getElementById("liga-panel").addEventListener("click", (e) => {
+      const yo = currentYo();
+      if (yo && e.target.closest("#liga-load")) loadLigaLineup(yo);
+    });
+
+    window.addEventListener(YO_EVENT, renderLigaPanel);
+
+    // Llegada desde "Preparar mi once" de la home, vía ?liga=1.
+    function tryLoadLigaFromQuery() {
+      const params = new URLSearchParams(window.location.search);
+      if (!params.has("liga")) return;
+      window.history.replaceState(null, "", window.location.pathname);
+      const yo = currentYo();
+      if (yo) loadLigaLineup(yo);
+      else
+        showNotice(
+          "Elige quién eres arriba (¿Quién eres?) para cargar tu once de la liga.",
+        );
+    }
+
     renderLineupSelect();
     applyLineup(activeLineupId);
     tryAddPlayerFromQuery();
     updateUndoButton();
     render();
+    tryLoadLigaFromQuery();
   </script>
 </Layout>

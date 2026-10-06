@@ -1,5 +1,6 @@
 ---
 import { url } from "../lib/data";
+import { FAMILIA } from "../lib/yo";
 
 const navItems = [
   { href: url("/"), label: "Inicio", match: "/" },
@@ -60,7 +61,20 @@ const currentPath = Astro.url.pathname.startsWith(baseStripped)
       }
     </div>
 
-    <details class="relative sm:hidden">
+    <label class="ml-auto flex items-center gap-2 sm:ml-2">
+      <span class="sr-only sm:not-sr-only sm:text-xs sm:text-slate-500"
+        >¿Quién eres?</span
+      >
+      <select
+        id="yo-select"
+        class="rounded-full border border-white/10 bg-slate-900/60 px-3 py-1.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
+      >
+        <option value="">Elegir…</option>
+        {FAMILIA.map((name) => <option value={name}>{name}</option>)}
+      </select>
+    </label>
+
+    <details class="relative ml-2 sm:hidden">
       <summary
         class="flex h-9 w-9 cursor-pointer list-none items-center justify-center rounded-lg border border-white/10 text-slate-200 [&::-webkit-details-marker]:hidden"
       >
@@ -95,3 +109,16 @@ const currentPath = Astro.url.pathname.startsWith(baseStripped)
     </details>
   </nav>
 </header>
+
+<script>
+  import { FAMILIA, getYo, setYo, YO_EVENT } from "../lib/yo";
+
+  const select = document.getElementById("yo-select") as HTMLSelectElement;
+  select.value = getYo() ?? "";
+  select.addEventListener("change", () => {
+    setYo(FAMILIA.find((f) => f === select.value) ?? null);
+  });
+  window.addEventListener(YO_EVENT, (e) => {
+    select.value = (e as CustomEvent<string | null>).detail ?? "";
+  });
+</script>

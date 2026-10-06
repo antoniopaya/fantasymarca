@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import MatchCard from "../components/MatchCard.astro";
 import PlayerCard from "../components/PlayerCard.astro";
+import MiJornada from "../components/MiJornada.astro";
 import {
   getPlayers,
   getTeams,
@@ -38,6 +39,8 @@ const stats = [
 ---
 
 <Layout title="Inicio">
+  <MiJornada />
+
   <section class="flex flex-col items-center gap-6 py-10 text-center sm:py-16">
     <span
       class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1 text-xs font-medium text-emerald-400"

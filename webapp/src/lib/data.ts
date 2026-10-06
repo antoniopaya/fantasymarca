@@ -111,6 +111,8 @@ export interface PlayerSummary {
   clausesRanking: number;
   points: number;
   avg: number;
+  /** Puntos sumados en las últimas 3 jornadas ya jugadas (sin partido = 0). */
+  form: number;
   lastSeason: { season: string; points: number; avg: number } | null;
   /** Precio de consenso de la liga (ver precios_fantastica.json), null si el jugador no está en el Excel. */
   precioFantastica: number | null;
@@ -240,7 +242,8 @@ let summariesCache: PlayerSummary[] | null = null;
 export function getAllPlayerSummaries(): PlayerSummary[] {
   if (summariesCache) return summariesCache;
 
-  const currentSeason = getNextGameweek().season;
+  const nextGameweek = getNextGameweek();
+  const currentSeason = nextGameweek.season;
 
   summariesCache = getPlayers().map((catalogEntry) => {
     const detail = getPlayerDetail(catalogEntry.id);
@@ -267,6 +270,13 @@ export function getAllPlayerSummaries(): PlayerSummary[] {
       clausesRanking: detail.player.clausesRanking,
       points: detail.player.points,
       avg: detail.player.avg,
+      form: detail.points
+        .filter(
+          (p) =>
+            p.number < nextGameweek.number &&
+            p.number >= nextGameweek.number - 3,
+        )
+        .reduce((sum, p) => sum + (p.points.points ?? 0), 0),
       lastSeason: lastSeasonEntry
         ? {
             season: lastSeasonEntry.season,
@@ -280,6 +290,57 @@ export function getAllPlayerSummaries(): PlayerSummary[] {
   });
 
   return summariesCache;
+}
+
+// --- Liga Fantástica (fantasy_api/build_liga.py, a partir de los PDFs) ------
+
+export interface LigaPlayer {
+  /** null si el jugador ya no está en el catálogo de Marca. */
+  id: number | null;
+  name: string;
+  /** Puntos de Marca en la jornada, sin doblar aunque sea el capitán. */
+  points: number;
+  captain: boolean;
+}
+
+export interface LigaEntry {
+  participant: string;
+  won: number;
+  lost: number;
+  players: LigaPlayer[];
+  /** Puntos de la jornada en la liga (el capitán ya cuenta doble). */
+  points: number;
+  prev_total: number;
+  total: number;
+  dif: number | null;
+  /** Millones que sobraron de los 180M al hacer el 11. */
+  saldo: number | null;
+  /** Cambios disponibles para la jornada siguiente (3/6/11 según la clasificación). */
+  changes: number | null;
+}
+
+export interface LigaJornada {
+  number: number;
+  /** Ordenadas por total, de primero a último. */
+  entries: LigaEntry[];
+}
+
+let ligaCache: LigaJornada[] | null = null;
+
+export function getLigaJornadas(): LigaJornada[] {
+  if (ligaCache) return ligaCache;
+  const dir = path.join(DATA_DIR, "liga");
+  const files = fs.existsSync(dir) ? fs.readdirSync(dir) : [];
+  ligaCache = files
+    .filter((f) => f.endsWith(".json"))
+    .map((f) => loadJson<LigaJornada>(`liga/${f}`))
+    .sort((a, b) => a.number - b.number);
+  return ligaCache;
+}
+
+export function getLatestLigaJornada(): LigaJornada | null {
+  const jornadas = getLigaJornadas();
+  return jornadas[jornadas.length - 1] ?? null;
 }
 
 const CDN_BASE = "https://cdn-fantasy.marca.com/file/cdn-common";

@@ -1,0 +1,193 @@
+---
+import {
+  getLatestLigaJornada,
+  getNextGameweek,
+  getPlayerById,
+  playerPhotoUrl,
+  POSITION_COLORS,
+  url,
+  type LigaEntry,
+} from "../lib/data";
+import { FAMILIA } from "../lib/yo";
+
+const jornada = getLatestLigaJornada();
+const nextGameweek = getNextGameweek();
+
+const rankOf = (entry: LigaEntry) =>
+  1 + (jornada?.entries.filter((e) => e.total > entry.total).length ?? 0);
+
+const familia = FAMILIA.map((name) => {
+  const entry = jornada?.entries.find((e) => e.participant === name) ?? null;
+  return { name, entry, rank: entry ? rankOf(entry) : null };
+}).filter(
+  (
+    f,
+  ): f is { name: (typeof FAMILIA)[number]; entry: LigaEntry; rank: number } =>
+    f.entry !== null,
+);
+
+const once = (entry: LigaEntry) =>
+  entry.players
+    .map((p) => {
+      const catalog = p.id !== null ? getPlayerById(p.id) : undefined;
+      return { ...p, position: catalog?.position ?? 0 };
+    })
+    .sort((a, b) => a.position - b.position);
+---
+
+{
+  jornada && familia.length > 0 && (
+    <section aria-labelledby="mi-jornada-title">
+      <h2 id="mi-jornada-title" class="sr-only">
+        Tu jornada
+      </h2>
+
+      <div
+        data-yo-placeholder
+        class="rounded-2xl border border-dashed border-white/15 p-6 text-center text-sm text-slate-400"
+      >
+        Elige quién eres en <span class="text-slate-200">¿Quién eres?</span>,
+        arriba, para ver tu clasificación, tu once de la Jornada{" "}
+        {jornada.number} y preparar el de la {nextGameweek.name}.
+      </div>
+
+      {familia.map(({ name, entry, rank }) => (
+        <div
+          data-yo-panel={name}
+          hidden
+          class="rounded-2xl border border-white/10 bg-slate-900/60 p-5 sm:p-6"
+        >
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <p class="text-sm text-slate-400">
+                Liga Fantástica · tras la Jornada {jornada.number}
+              </p>
+              <p class="mt-1 text-2xl font-black text-white">
+                {name}: {rank}º de {jornada.entries.length}
+              </p>
+            </div>
+            <a
+              href={url("/crear-once?liga=1")}
+              class="rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/20 transition-transform hover:-translate-y-0.5 hover:bg-emerald-400"
+            >
+              Preparar mi once de la {nextGameweek.name}
+            </a>
+          </div>
+
+          <dl class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div class="rounded-xl bg-slate-950/40 p-3">
+              <dt class="text-xs text-slate-500">Total</dt>
+              <dd class="text-xl font-bold text-white">{entry.total} pts</dd>
+            </div>
+            <div class="rounded-xl bg-slate-950/40 p-3">
+              <dt class="text-xs text-slate-500">Jornada {jornada.number}</dt>
+              <dd class="text-xl font-bold text-white">{entry.points} pts</dd>
+            </div>
+            <div class="rounded-xl bg-slate-950/40 p-3">
+              <dt class="text-xs text-slate-500">Al líder</dt>
+              <dd class="text-xl font-bold text-white">
+                {entry.dif ? `-${entry.dif}` : "Líder"}
+              </dd>
+            </div>
+            <div class="rounded-xl bg-slate-950/40 p-3">
+              <dt class="text-xs text-slate-500">
+                Cambios para la {nextGameweek.name}
+              </dt>
+              <dd class="text-xl font-bold text-emerald-400">
+                {entry.changes ?? "—"}
+              </dd>
+            </div>
+          </dl>
+
+          <p class="mt-3 text-xs text-slate-500">
+            Jornadas ganadas: {String(entry.won).replace(".", ",")} · perdidas:{" "}
+            {entry.lost} · saldo: {entry.saldo ?? 0} M€
+          </p>
+
+          <h3 class="mt-6 mb-3 text-sm font-semibold text-slate-300">
+            Tu once de la Jornada {jornada.number}
+          </h3>
+          <ul class="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-6">
+            {once(entry).map((p) => (
+              <li
+                class="flex items-center gap-2 rounded-xl bg-slate-950/40 p-2"
+                style={`border-left: 3px solid ${POSITION_COLORS[p.position] ?? "#64748b"}`}
+              >
+                {p.id !== null && (
+                  <img
+                    src={playerPhotoUrl(p.id)}
+                    alt=""
+                    class="h-8 w-8 shrink-0 rounded-full bg-slate-800 object-cover"
+                    loading="lazy"
+                  />
+                )}
+                <span class="min-w-0 flex-1">
+                  <span class="block truncate text-xs font-medium text-white">
+                    {p.name}
+                    {p.captain && (
+                      <span class="ml-1 rounded bg-amber-400 px-1 text-[10px] font-bold text-slate-950">
+                        C
+                      </span>
+                    )}
+                  </span>
+                  <span class="text-[11px] text-slate-400">
+                    {p.captain ? `${p.points * 2} pts (x2)` : `${p.points} pts`}
+                  </span>
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <h3 class="mt-6 mb-3 text-sm font-semibold text-slate-300">
+            La familia
+          </h3>
+          <table class="w-full text-left text-sm">
+            <thead class="text-xs text-slate-500">
+              <tr>
+                <th class="pb-2 font-medium">Puesto</th>
+                <th class="pb-2 font-medium">Participante</th>
+                <th class="pb-2 text-right font-medium">J{jornada.number}</th>
+                <th class="pb-2 text-right font-medium">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[...familia]
+                .sort((a, b) => a.rank - b.rank)
+                .map((f) => (
+                  <tr
+                    class={`border-t border-white/5 ${f.name === name ? "font-semibold text-emerald-400" : "text-slate-300"}`}
+                  >
+                    <td class="py-1.5">{f.rank}º</td>
+                    <td class="py-1.5">{f.name}</td>
+                    <td class="py-1.5 text-right">{f.entry.points}</td>
+                    <td class="py-1.5 text-right">{f.entry.total}</td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+      ))}
+    </section>
+  )
+}
+
+<script>
+  import { getYo, YO_EVENT } from "../lib/yo";
+
+  function show(yo: string | null) {
+    for (const panel of document.querySelectorAll<HTMLElement>(
+      "[data-yo-panel]",
+    )) {
+      panel.hidden = panel.dataset.yoPanel !== yo;
+    }
+    const placeholder = document.querySelector<HTMLElement>(
+      "[data-yo-placeholder]",
+    );
+    if (placeholder) placeholder.hidden = yo !== null;
+  }
+
+  show(getYo());
+  window.addEventListener(YO_EVENT, (e) =>
+    show((e as CustomEvent<string | null>).detail),
+  );
+</script>
