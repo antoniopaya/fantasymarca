@@ -4,27 +4,48 @@ import {
   getNextGameweek,
   getPlayerById,
   playerPhotoUrl,
-  POSITION_COLORS,
   url,
   type LigaEntry,
 } from "../lib/data";
+import { deadline, weekPlan } from "../lib/semana";
 import { FAMILIA } from "../lib/yo";
+import DifficultyChip from "./DifficultyChip.astro";
 import YoScript from "./YoScript.astro";
 
 const jornada = getLatestLigaJornada();
 const nextGameweek = getNextGameweek();
+const cierre = deadline();
+const cierreLabel = cierre
+  ? new Intl.DateTimeFormat("es-ES", {
+      timeZone: "Europe/Madrid",
+      weekday: "short",
+      day: "numeric",
+      month: "short",
+      hour: "2-digit",
+      minute: "2-digit",
+    }).format(new Date(cierre.ts * 1000))
+  : null;
 
 const rankOf = (entry: LigaEntry) =>
   1 + (jornada?.entries.filter((e) => e.total > entry.total).length ?? 0);
 
 const familia = FAMILIA.map((name) => {
   const entry = jornada?.entries.find((e) => e.participant === name) ?? null;
-  return { name, entry, rank: entry ? rankOf(entry) : null };
+  return {
+    name,
+    entry,
+    rank: entry ? rankOf(entry) : null,
+    plan: entry ? weekPlan(entry) : null,
+  };
 }).filter(
   (
     f,
-  ): f is { name: (typeof FAMILIA)[number]; entry: LigaEntry; rank: number } =>
-    f.entry !== null,
+  ): f is {
+    name: (typeof FAMILIA)[number];
+    entry: LigaEntry;
+    rank: number;
+    plan: ReturnType<typeof weekPlan>;
+  } => f.entry !== null,
 );
 
 const once = (entry: LigaEntry) =>
@@ -34,142 +55,279 @@ const once = (entry: LigaEntry) =>
       return { ...p, position: catalog?.position ?? 0 };
     })
     .sort((a, b) => a.position - b.position);
+
+const fmt = (n: number) => n.toFixed(1).replace(".", ",");
+const fmtM = (euros: number) =>
+  `${(euros / 1_000_000).toFixed(1).replace(".0", "").replace(".", ",")}M`;
 ---
 
-{
-  jornada && familia.length > 0 && (
-    <section aria-labelledby="mi-jornada-title">
-      <h2 id="mi-jornada-title" class="sr-only">
-        Tu jornada
-      </h2>
+<section aria-labelledby="semana-title" class="space-y-4">
+  <div
+    class="rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-emerald-500/10 to-slate-900/60 p-5"
+  >
+    <p class="text-sm text-slate-400">{nextGameweek.name}</p>
+    <h1 id="semana-title" class="mt-0.5 text-2xl font-black text-white">
+      {
+        cierre ? (
+          <span data-countdown data-ts={cierre.ts}>
+            Cierra pronto
+          </span>
+        ) : (
+          "Tu semana"
+        )
+      }
+    </h1>
+    {
+      cierreLabel && (
+        <p class="mt-1 text-sm text-slate-400">
+          Primer partido: {cierre?.label}, {cierreLabel}
+        </p>
+      )
+    }
+  </div>
 
-      <div
-        data-yo-placeholder
-        class="rounded-2xl border border-dashed border-white/15 p-6 text-center text-sm text-slate-400"
-      >
-        Elige quién eres en <span class="text-slate-200">¿Quién eres?</span>,
-        arriba, para ver tu clasificación, tu once de la Jornada{" "}
-        {jornada.number} y preparar el de la {nextGameweek.name}.
-      </div>
+  <div
+    data-yo-placeholder
+    class="rounded-2xl border border-dashed border-white/15 p-6 text-center text-sm text-slate-400"
+  >
+    Toca <span class="text-slate-200">¿Quién eres?</span> arriba para ver tu 11, tus
+    avisos y qué cambios te convienen esta jornada.
+  </div>
 
-      {familia.map(({ name, entry, rank }) => (
-        <div
-          data-yo-panel={name}
-          hidden
-          class="rounded-2xl border border-white/10 bg-slate-900/60 p-5 sm:p-6"
-        >
-          <div class="flex flex-wrap items-start justify-between gap-4">
-            <div>
-              <p class="text-sm text-slate-400">
-                Liga Fantástica · tras la Jornada {jornada.number}
-              </p>
-              <p class="mt-1 text-2xl font-black text-white">
-                {name}: {rank}º de {jornada.entries.length}
-              </p>
+  {
+    jornada &&
+      familia.map(({ name, entry, rank, plan }) => (
+        <div data-yo-panel={name} hidden class="space-y-4">
+          <a
+            href={url("/crear-once?liga=1")}
+            class="flex items-center justify-between gap-3 rounded-2xl bg-emerald-500 px-5 py-4 text-slate-950 shadow-lg shadow-emerald-500/20"
+          >
+            <span>
+              <span class="block text-lg font-black">Preparar mi 11</span>
+              <span class="block text-sm font-medium text-slate-900/80">
+                {entry.changes ?? 11} cambios · tu 11 actual ≈
+                {Math.round(plan.expectedTotal)} pts esperados
+              </span>
+            </span>
+            <span aria-hidden="true" class="text-2xl">
+              →
+            </span>
+          </a>
+
+          {plan.alerts.length > 0 && (
+            <div class="rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4">
+              <h2 class="mb-2 text-sm font-semibold text-amber-200">
+                Revisa estos de tu 11
+              </h2>
+              <ul class="space-y-1.5 text-sm text-amber-100">
+                {plan.alerts.map((a) => (
+                  <li>
+                    ⚠ <b>{a.player.summary.name}</b>: {a.text}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <a
-              href={url("/crear-once?liga=1")}
-              class="rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/20 transition-transform hover:-translate-y-0.5 hover:bg-emerald-400"
-            >
-              Preparar mi once de la {nextGameweek.name}
-            </a>
+          )}
+
+          <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+            <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+              <h2 class="text-sm font-semibold text-white">
+                Capitán recomendado
+              </h2>
+              <p class="mb-3 text-xs text-slate-500">
+                De tu 11, entre los que cuestan menos de 18M. Puntos esperados
+                ya doblados.
+              </p>
+              <ol class="space-y-2">
+                {plan.captains.map((c, i) => (
+                  <li class="flex items-center gap-3">
+                    <img
+                      src={playerPhotoUrl(c.summary.id)}
+                      alt=""
+                      class="h-10 w-10 shrink-0 rounded-full bg-slate-800 object-cover"
+                      loading="lazy"
+                    />
+                    <span class="min-w-0 flex-1">
+                      <span class="block truncate font-semibold text-white">
+                        {i === 0 && "★ "}
+                        {c.summary.name}
+                      </span>
+                      <span class="flex items-center gap-1.5 text-xs text-slate-400">
+                        {c.rivalName
+                          ? `vs ${c.rivalName} (${c.home ? "casa" : "fuera"})`
+                          : "sin partido"}
+                        <DifficultyChip level={c.difficulty} />
+                      </span>
+                    </span>
+                    <span class="shrink-0 font-bold text-emerald-300">
+                      ≈{fmt(c.xp * 2)}
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+              <h2 class="text-sm font-semibold text-white">
+                Cambios que suman
+              </h2>
+              <p class="mb-3 text-xs text-slate-500">
+                Los de tu 11 que menos se espera que sumen y quién te cabe en su
+                lugar (su precio + tu saldo de {entry.saldo ?? 0}M).
+              </p>
+              {plan.changes.length === 0 ? (
+                <p class="text-sm text-slate-400">
+                  No hay cambios claros: tu 11 está bien para esta jornada.
+                </p>
+              ) : (
+                <ul class="space-y-3">
+                  {plan.changes.map((c) => (
+                    <li>
+                      <p class="text-sm text-slate-300">
+                        <span class="text-rose-300">Sale</span>{" "}
+                        <b class="text-white">{c.out.summary.name}</b>{" "}
+                        <span class="text-slate-500">
+                          ≈{fmt(c.out.xp)} · hasta {fmtM(c.budget)}
+                        </span>
+                      </p>
+                      <ul class="mt-1 space-y-1">
+                        {c.options.map((o) => (
+                          <li class="flex items-center gap-2 text-sm">
+                            <span class="text-emerald-400">Entra</span>
+                            <a
+                              href={url(`/jugadores/${o.summary.id}`)}
+                              class="min-w-0 flex-1 truncate text-slate-200 hover:text-white"
+                            >
+                              {o.summary.name}
+                            </a>
+                            <DifficultyChip level={o.difficulty} />
+                            <span class="shrink-0 text-xs text-slate-500">
+                              {fmtM(o.summary.precioFantastica ?? 0)}
+                            </span>
+                            <span class="w-12 shrink-0 text-right font-semibold text-emerald-300">
+                              +{fmt(o.xp - c.out.xp)}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </div>
 
-          <dl class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <div class="rounded-xl bg-slate-950/40 p-3">
+          <dl class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div class="rounded-xl bg-slate-900/60 p-3">
+              <dt class="text-xs text-slate-500">Puesto</dt>
+              <dd class="text-xl font-bold text-white">
+                {rank}º{" "}
+                <span class="text-sm text-slate-500">
+                  de {jornada.entries.length}
+                </span>
+              </dd>
+            </div>
+            <div class="rounded-xl bg-slate-900/60 p-3">
               <dt class="text-xs text-slate-500">Total</dt>
               <dd class="text-xl font-bold text-white">{entry.total} pts</dd>
             </div>
-            <div class="rounded-xl bg-slate-950/40 p-3">
+            <div class="rounded-xl bg-slate-900/60 p-3">
               <dt class="text-xs text-slate-500">Jornada {jornada.number}</dt>
               <dd class="text-xl font-bold text-white">{entry.points} pts</dd>
             </div>
-            <div class="rounded-xl bg-slate-950/40 p-3">
+            <div class="rounded-xl bg-slate-900/60 p-3">
               <dt class="text-xs text-slate-500">Al líder</dt>
               <dd class="text-xl font-bold text-white">
                 {entry.dif ? `-${entry.dif}` : "Líder"}
               </dd>
             </div>
-            <div class="rounded-xl bg-slate-950/40 p-3">
-              <dt class="text-xs text-slate-500">
-                Cambios para la {nextGameweek.name}
-              </dt>
-              <dd class="text-xl font-bold text-emerald-400">
-                {entry.changes ?? "—"}
-              </dd>
-            </div>
           </dl>
 
-          <p class="mt-3 text-xs text-slate-500">
-            Jornadas ganadas: {String(entry.won).replace(".", ",")} · perdidas:{" "}
-            {entry.lost} · saldo: {entry.saldo ?? 0} M€
-          </p>
+          <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+            <h2 class="mb-2 text-sm font-semibold text-white">Los Payás</h2>
+            <table class="w-full text-left text-sm">
+              <thead class="text-xs text-slate-500">
+                <tr>
+                  <th class="pb-2 font-medium">Puesto</th>
+                  <th class="pb-2 font-medium">Participante</th>
+                  <th class="pb-2 text-right font-medium">J{jornada.number}</th>
+                  <th class="pb-2 text-right font-medium">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[...familia]
+                  .sort((a, b) => a.rank - b.rank)
+                  .map((f) => (
+                    <tr
+                      class={`border-t border-white/5 ${f.name === name ? "font-semibold text-emerald-400" : "text-slate-300"}`}
+                    >
+                      <td class="py-1.5">{f.rank}º</td>
+                      <td class="py-1.5">{f.name}</td>
+                      <td class="py-1.5 text-right">{f.entry.points}</td>
+                      <td class="py-1.5 text-right">{f.entry.total}</td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
 
-          <h3 class="mt-6 mb-3 text-sm font-semibold text-slate-300">
-            Tu once de la Jornada {jornada.number}
-          </h3>
-          <ul class="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-6">
-            {once(entry).map((p) => (
-              <li
-                class="flex items-center gap-2 rounded-xl bg-slate-950/40 p-2"
-                style={`border-left: 3px solid ${POSITION_COLORS[p.position] ?? "#64748b"}`}
-              >
-                {p.id !== null && (
-                  <img
-                    src={playerPhotoUrl(p.id)}
-                    alt=""
-                    class="h-8 w-8 shrink-0 rounded-full bg-slate-800 object-cover"
-                    loading="lazy"
-                  />
-                )}
-                <span class="min-w-0 flex-1">
-                  <span class="block truncate text-xs font-medium text-white">
-                    {p.name}
-                    {p.captain && (
-                      <span class="ml-1 rounded bg-amber-400 px-1 text-[10px] font-bold text-slate-950">
-                        C
-                      </span>
-                    )}
+          <details class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+            <summary class="cursor-pointer text-sm font-semibold text-white">
+              Tu 11 de la Jornada {jornada.number} ({entry.points} pts)
+            </summary>
+            <ul class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+              {once(entry).map((p) => (
+                <li class="flex items-center gap-2 rounded-xl bg-slate-950/40 p-2">
+                  {p.id !== null && (
+                    <img
+                      src={playerPhotoUrl(p.id)}
+                      alt=""
+                      class="h-8 w-8 shrink-0 rounded-full bg-slate-800 object-cover"
+                      loading="lazy"
+                    />
+                  )}
+                  <span class="min-w-0 flex-1">
+                    <span class="block truncate text-sm font-medium text-white">
+                      {p.name}
+                      {p.captain && (
+                        <span class="ml-1 rounded bg-amber-400 px-1 text-[10px] font-bold text-slate-950">
+                          C
+                        </span>
+                      )}
+                    </span>
+                    <span class="text-xs text-slate-400">
+                      {p.captain
+                        ? `${p.points * 2} pts (x2)`
+                        : `${p.points} pts`}
+                    </span>
                   </span>
-                  <span class="text-[11px] text-slate-400">
-                    {p.captain ? `${p.points * 2} pts (x2)` : `${p.points} pts`}
-                  </span>
-                </span>
-              </li>
-            ))}
-          </ul>
-
-          <h3 class="mt-6 mb-3 text-sm font-semibold text-slate-300">
-            Los Payás
-          </h3>
-          <table class="w-full text-left text-sm">
-            <thead class="text-xs text-slate-500">
-              <tr>
-                <th class="pb-2 font-medium">Puesto</th>
-                <th class="pb-2 font-medium">Participante</th>
-                <th class="pb-2 text-right font-medium">J{jornada.number}</th>
-                <th class="pb-2 text-right font-medium">Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[...familia]
-                .sort((a, b) => a.rank - b.rank)
-                .map((f) => (
-                  <tr
-                    class={`border-t border-white/5 ${f.name === name ? "font-semibold text-emerald-400" : "text-slate-300"}`}
-                  >
-                    <td class="py-1.5">{f.rank}º</td>
-                    <td class="py-1.5">{f.name}</td>
-                    <td class="py-1.5 text-right">{f.entry.points}</td>
-                    <td class="py-1.5 text-right">{f.entry.total}</td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
+                </li>
+              ))}
+            </ul>
+          </details>
         </div>
-      ))}
-    </section>
-  )
-}
+      ))
+  }
+</section>
 
 <YoScript />
+
+<script>
+  const el = document.querySelector<HTMLElement>("[data-countdown]");
+  if (el) {
+    const target = Number(el.dataset.ts) * 1000;
+    const tick = () => {
+      const diff = target - Date.now();
+      if (diff <= 0) {
+        el.textContent = "Ya ha empezado la jornada";
+        return false;
+      }
+      const d = Math.floor(diff / 86_400_000);
+      const h = Math.floor((diff % 86_400_000) / 3_600_000);
+      const m = Math.floor((diff % 3_600_000) / 60_000);
+      el.textContent = `Cierra en ${d ? `${d}d ` : ""}${h}h ${m}min`;
+      return true;
+    };
+    if (tick()) setInterval(tick, 30_000);
+  }
+</script>
