@@ -450,3 +450,64 @@ export function efficiency(participant: string) {
   const lost = rows.reduce((s, r) => s + r.captainLoss, 0);
   return { rows, avgPct: avg, captainLoss: lost };
 }
+
+// --- Índice por jugador (fichas y listado de jugadores) ---------------------
+
+export interface LigaPlayerInfo {
+  perJornada: { jornada: number; count: number; pct: number }[];
+  /** Quién lo llevaba en la última jornada. */
+  owners: string[];
+  /** Quién lo hizo capitán en la última jornada. */
+  captainedBy: string[];
+  captainTimes: number;
+}
+
+let playerIndex: Map<number, LigaPlayerInfo> | null = null;
+
+export function ligaPlayerInfo(id: number): LigaPlayerInfo | null {
+  if (!playerIndex) {
+    playerIndex = new Map();
+    const jornadas = getLigaJornadas();
+    const lastNumber = jornadas.at(-1)?.number;
+    for (const j of jornadas) {
+      const counts = ownershipCounts(j);
+      for (const [pid, count] of counts) {
+        let info = playerIndex.get(pid);
+        if (!info) {
+          info = {
+            perJornada: [],
+            owners: [],
+            captainedBy: [],
+            captainTimes: 0,
+          };
+          playerIndex.set(pid, info);
+        }
+        info.perJornada.push({
+          jornada: j.number,
+          count,
+          pct: (count / j.entries.length) * 100,
+        });
+      }
+      for (const e of j.entries) {
+        for (const p of e.players) {
+          if (p.id === null) continue;
+          const info = playerIndex.get(p.id);
+          if (!info) continue;
+          if (p.captain) info.captainTimes++;
+          if (j.number === lastNumber) {
+            info.owners.push(e.participant);
+            if (p.captain) info.captainedBy.push(e.participant);
+          }
+        }
+      }
+    }
+  }
+  return playerIndex.get(id) ?? null;
+}
+
+/** % de la liga que lo llevaba en la última jornada (0 si nadie). */
+export function latestOwnershipPct(id: number): number {
+  const last = getLigaJornadas().at(-1);
+  const info = ligaPlayerInfo(id);
+  return info?.perJornada.find((p) => p.jornada === last?.number)?.pct ?? 0;
+}

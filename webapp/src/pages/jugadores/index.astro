@@ -9,6 +9,16 @@ import {
   playerPhotoUrl,
   teamLogoUrl,
 } from "../../lib/data";
+import { latestOwnershipPct, ligaPlayerInfo } from "../../lib/liga";
+import { FAMILIA } from "../../lib/yo";
+
+const ligaOf = (id: number) => ({
+  pct: latestOwnershipPct(id),
+  // Solo los Payás: es para el filtro "en mi 11" de quien esté mirando.
+  owners: (ligaPlayerInfo(id)?.owners ?? []).filter((o) =>
+    (FAMILIA as readonly string[]).includes(o),
+  ),
+});
 
 const players = [...getAllPlayerSummaries()].sort((a, b) => b.value - a.value);
 const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
@@ -77,7 +87,18 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       <option value="fantastica_asc">Fantástica: menor a mayor</option>
       <option value="clause_desc">Cláusula: mayor a menor</option>
       <option value="points_desc">Puntos: mayor a menor</option>
+      <option value="liga_desc">% en la liga: mayor a menor</option>
       <option value="name_asc">Nombre: A-Z</option>
+    </select>
+    <select
+      id="mine-filter"
+      aria-label="Filtrar por tu 11 de la liga"
+      title="Según tu 11 de la última jornada de la liga (elige quién eres arriba)"
+      class="rounded-xl border border-white/10 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none disabled:opacity-40"
+    >
+      <option value="all">Mi 11: todos</option>
+      <option value="in">En mi 11</option>
+      <option value="out">Fuera de mi 11</option>
     </select>
     <button
       type="button"
@@ -98,36 +119,44 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
     class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3"
   >
     {
-      players.map((player) => (
-        <div
-          data-player-card
-          data-id={player.id}
-          data-name={player.name.toLowerCase()}
-          data-team-name={player.team_name.toLowerCase()}
-          data-team={player.id_team}
-          data-position={player.position}
-          data-value={player.value}
-          data-fantastica={player.precioFantastica ?? -1}
-          data-clause={player.clauseValue}
-          data-points={player.points}
-        >
-          <PlayerCard
-            id={player.id}
-            name={player.name}
-            teamName={player.team_name}
-            position={player.position}
-            photoUrl={playerPhotoUrl(player.id)}
-            teamLogoUrl={teamLogoUrl(player.id_team)}
-            valueLabel={formatMoney(player.value)}
-            precioFantasticaLabel={
-              player.precioFantastica
-                ? formatMoney(player.precioFantastica)
-                : undefined
-            }
-            status={player.status}
-          />
-        </div>
-      ))
+      players.map((player) => {
+        const liga = ligaOf(player.id);
+        return (
+          <div
+            data-player-card
+            data-id={player.id}
+            data-name={player.name.toLowerCase()}
+            data-team-name={player.team_name.toLowerCase()}
+            data-team={player.id_team}
+            data-position={player.position}
+            data-value={player.value}
+            data-fantastica={player.precioFantastica ?? -1}
+            data-clause={player.clauseValue}
+            data-points={player.points}
+            data-liga={liga.pct}
+            data-owners={liga.owners.join(",")}
+          >
+            <PlayerCard
+              id={player.id}
+              name={player.name}
+              teamName={player.team_name}
+              position={player.position}
+              photoUrl={playerPhotoUrl(player.id)}
+              teamLogoUrl={teamLogoUrl(player.id_team)}
+              valueLabel={formatMoney(player.value)}
+              precioFantasticaLabel={
+                player.precioFantastica
+                  ? formatMoney(player.precioFantastica)
+                  : undefined
+              }
+              ligaLabel={
+                liga.pct > 0 ? `${Math.round(liga.pct)}% de la liga` : undefined
+              }
+              status={player.status}
+            />
+          </div>
+        );
+      })
     }
   </div>
 
@@ -136,6 +165,8 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
   </p>
 
   <script>
+    import { getYo, YO_EVENT } from "../../lib/yo";
+
     const input = document.getElementById("search-input") as HTMLInputElement;
     const teamSelect = document.getElementById(
       "team-filter",
@@ -145,6 +176,9 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
     ) as HTMLSelectElement;
     const sortSelect = document.getElementById(
       "sort-select",
+    ) as HTMLSelectElement;
+    const mineSelect = document.getElementById(
+      "mine-filter",
     ) as HTMLSelectElement;
     const favoritesToggle = document.getElementById(
       "favorites-toggle",
@@ -189,6 +223,7 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       if (sortSelect.value !== "value_desc")
         params.set("orden", sortSelect.value);
       if (favoritesOnly) params.set("favoritos", "1");
+      if (mineSelect.value !== "all") params.set("mi11", mineSelect.value);
       const qs = params.toString();
       window.history.replaceState(
         null,
@@ -202,6 +237,8 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       const team = teamSelect.value;
       const position = positionSelect.value;
       const favoriteIds = favoritesOnly ? loadFavoriteIds() : null;
+      const yo = getYo();
+      const mine = yo ? mineSelect.value : "all";
       let visible = 0;
 
       cards.forEach((card) => {
@@ -214,8 +251,16 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
           position === "0" || card.dataset.position === position;
         const matchesFavorite =
           !favoriteIds || favoriteIds.has(Number(card.dataset.id));
+        const inMine =
+          yo !== null && (card.dataset.owners ?? "").split(",").includes(yo);
+        const matchesMine =
+          mine === "all" || (mine === "in" ? inMine : !inMine);
         const show =
-          matchesQuery && matchesTeam && matchesPosition && matchesFavorite;
+          matchesQuery &&
+          matchesTeam &&
+          matchesPosition &&
+          matchesFavorite &&
+          matchesMine;
         card.classList.toggle("hidden", !show);
         if (show) visible++;
       });
@@ -254,6 +299,11 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
               parseFloat(b.dataset.points ?? "0") -
               parseFloat(a.dataset.points ?? "0")
             );
+          case "liga_desc":
+            return (
+              parseFloat(b.dataset.liga ?? "0") -
+              parseFloat(a.dataset.liga ?? "0")
+            );
           case "name_asc":
             return (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "");
           case "value_desc":
@@ -283,6 +333,15 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
     teamSelect.addEventListener("change", applyFilters);
     positionSelect.addEventListener("change", applyFilters);
     sortSelect.addEventListener("change", applySort);
+    mineSelect.addEventListener("change", applyFilters);
+    // Sin "¿Quién eres?" no hay 11 con el que comparar.
+    const syncMineSelect = () => {
+      mineSelect.disabled = getYo() === null;
+    };
+    window.addEventListener(YO_EVENT, () => {
+      syncMineSelect();
+      applyFilters();
+    });
     favoritesToggle.addEventListener("click", () => {
       setFavoritesOnly(!favoritesOnly);
       applyFilters();
@@ -300,6 +359,8 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
     positionSelect.value = initialParams.get("posicion") ?? "0";
     sortSelect.value = initialParams.get("orden") ?? "value_desc";
     setFavoritesOnly(initialParams.get("favoritos") === "1");
+    mineSelect.value = initialParams.get("mi11") ?? "all";
+    syncMineSelect();
     applyFilters();
     applySort();
   </script>

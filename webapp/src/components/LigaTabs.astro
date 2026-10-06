@@ -2,7 +2,7 @@
 import { url } from "../lib/data";
 
 interface Props {
-  active: "clasificacion" | "estadisticas";
+  active: "clasificacion" | "estadisticas" | "cara-a-cara";
 }
 
 const { active } = Astro.props;
@@ -13,6 +13,7 @@ const tabs = [
     label: "Estadísticas de la liga",
     href: url("/liga/estadisticas"),
   },
+  { key: "cara-a-cara", label: "Cara a cara", href: url("/liga/cara-a-cara") },
 ];
 ---
 

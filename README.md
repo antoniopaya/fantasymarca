@@ -27,6 +27,9 @@ En vivo: **https://antoniopaya.github.io/fantasymarca/**
   jornadas y ganadores de cada jornada; y estadísticas: jugadores más usados,
   capitanes, diferenciales, el 11 de la liga, el 11 ideal de cada jornada,
   y por persona sus fijos, su eficiencia y a quién se parece su equipo.
+  "Cara a cara" compara a dos participantes jornada a jornada y separa sus
+  jugadores en común de los exclusivos. Las fichas y el listado de jugadores
+  muestran qué % de la liga lleva a cada uno (y filtran por "mi 11").
 
 ## Estructura del repo
 

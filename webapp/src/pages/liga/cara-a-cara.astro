@@ -1,0 +1,317 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import LigaTabs from "../../components/LigaTabs.astro";
+import { getLigaJornadas, POSITION_SHORT, url } from "../../lib/data";
+import { rankIn, standings, summaryOf } from "../../lib/liga";
+import { FAMILIA, YO_EVENT, YO_STORAGE_KEY } from "../../lib/yo";
+
+const jornadas = getLigaJornadas();
+const order = standings().map((r) => r.entry.participant);
+
+// Todo lo necesario para comparar a cualquier pareja en el navegador, en
+// forma compacta: [id, puntos, capitán] por jugador.
+const players: Record<number, [string, string, string]> = {};
+const DATA = {
+  order,
+  family: [...FAMILIA],
+  jornadas: jornadas.map((j) => ({
+    number: j.number,
+    entries: Object.fromEntries(
+      j.entries.map((e) => {
+        for (const p of e.players) {
+          if (p.id === null || players[p.id]) continue;
+          const s = summaryOf(p.id);
+          if (s) {
+            players[p.id] = [
+              s.name,
+              s.team_name,
+              POSITION_SHORT[s.position] ?? "",
+            ];
+          }
+        }
+        return [
+          e.participant,
+          {
+            points: e.points,
+            total: e.total,
+            rank: rankIn(j, e.participant),
+            changes: e.changes,
+            players: e.players.map((p) => [
+              p.id ?? p.name,
+              p.points,
+              p.captain ? 1 : 0,
+            ]),
+          },
+        ];
+      }),
+    ),
+  })),
+  players,
+};
+const playerUrlBase = url("/jugadores/");
+---
+
+<Layout
+  title="Cara a cara"
+  description="Compara a dos participantes de la liga Fantástica: puntos jornada a jornada, jugadores en común y lo que les separa."
+>
+  <h1 class="text-3xl font-black text-white">Liga Fantástica</h1>
+  <p class="mt-1 mb-6 text-sm text-slate-400">
+    Compara a dos participantes jornada a jornada.
+  </p>
+
+  <LigaTabs active="cara-a-cara" />
+
+  <div class="mb-6 flex flex-wrap items-center gap-3">
+    <label class="flex items-center gap-2 text-sm text-slate-400">
+      <span class="sr-only">Participante A</span>
+      <select
+        id="pick-a"
+        class="rounded-full border border-white/10 bg-slate-900/60 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
+      ></select>
+    </label>
+    <span class="text-sm font-bold text-slate-500">vs</span>
+    <label class="flex items-center gap-2 text-sm text-slate-400">
+      <span class="sr-only">Participante B</span>
+      <select
+        id="pick-b"
+        class="rounded-full border border-white/10 bg-slate-900/60 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
+      ></select>
+    </label>
+    <button
+      type="button"
+      id="swap"
+      class="rounded-full border border-white/10 px-3 py-2 text-xs font-medium text-slate-300 hover:bg-white/5 hover:text-white"
+    >
+      ⇄ Intercambiar
+    </button>
+  </div>
+
+  <div id="h2h" class="space-y-8"></div>
+
+  <script define:vars={{ DATA, YO_STORAGE_KEY, YO_EVENT, playerUrlBase }}>
+    const pickA = document.getElementById("pick-a");
+    const pickB = document.getElementById("pick-b");
+    const root = document.getElementById("h2h");
+    const last = DATA.jornadas[DATA.jornadas.length - 1];
+
+    function escapeHtml(text) {
+      return String(text).replace(
+        /[&<>"]/g,
+        (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c],
+      );
+    }
+
+    function options() {
+      const fam = DATA.order.filter((n) => DATA.family.includes(n));
+      const rest = DATA.order.filter((n) => !DATA.family.includes(n));
+      const opt = (n) =>
+        `<option value="${escapeHtml(n)}">${last.entries[n].rank}º · ${escapeHtml(n)}</option>`;
+      return `<optgroup label="Los Payás">${fam.map(opt).join("")}</optgroup><optgroup label="Resto de la liga">${rest.map(opt).join("")}</optgroup>`;
+    }
+    pickA.innerHTML = options();
+    pickB.innerHTML = options();
+
+    function yo() {
+      try {
+        const v = localStorage.getItem(YO_STORAGE_KEY);
+        return DATA.order.includes(v) ? v : null;
+      } catch {
+        return null;
+      }
+    }
+
+    function defaults() {
+      const params = new URLSearchParams(window.location.search);
+      const a = DATA.order.includes(params.get("a"))
+        ? params.get("a")
+        : (yo() ?? DATA.family[0]);
+      let b = DATA.order.includes(params.get("b")) ? params.get("b") : null;
+      if (!b || b === a)
+        b = DATA.order[0] === a ? DATA.order[1] : DATA.order[0];
+      return { a, b };
+    }
+
+    const nameOf = (id) =>
+      typeof id === "number" ? (DATA.players[id]?.[0] ?? `#${id}`) : id;
+
+    // `captainOf`: en la columna de comunes, de quién es capitán (si de alguien),
+    // porque ahí el mismo jugador puede contar doble solo para uno de los dos.
+    function playerLi(entry, captainOf) {
+      const [id, pts, cap] = entry;
+      const info = typeof id === "number" ? DATA.players[id] : null;
+      const label = info
+        ? `<a href="${playerUrlBase}${id}" class="hover:text-white">${escapeHtml(info[0])}</a>`
+        : escapeHtml(id);
+      const shown =
+        captainOf !== undefined
+          ? `${pts}${captainOf ? ` · C de ${escapeHtml(captainOf)}` : ""}`
+          : cap
+            ? `${pts * 2} (C)`
+            : `${pts}`;
+      return `<li class="flex items-center gap-2 py-0.5">
+          <span class="w-8 shrink-0 text-[10px] font-semibold text-slate-500">${info ? info[2] : ""}</span>
+          <span class="min-w-0 flex-1 truncate text-slate-300">${label}</span>
+          <span class="shrink-0 text-slate-400">${shown}</span>
+        </li>`;
+    }
+
+    function render() {
+      const a = pickA.value;
+      const b = pickB.value;
+      const params = new URLSearchParams({ a, b });
+      window.history.replaceState(null, "", `?${params}`);
+
+      const ea = last.entries[a];
+      const eb = last.entries[b];
+      const gap = ea.total - eb.total;
+
+      let winsA = 0;
+      let winsB = 0;
+      let draws = 0;
+      const rows = DATA.jornadas
+        .filter((j) => j.entries[a] && j.entries[b])
+        .map((j) => {
+          const pa = j.entries[a].points;
+          const pb = j.entries[b].points;
+          if (pa > pb) winsA++;
+          else if (pb > pa) winsB++;
+          else draws++;
+          return {
+            number: j.number,
+            pa,
+            pb,
+            diff: pa - pb,
+            acc: j.entries[a].total - j.entries[b].total,
+          };
+        });
+
+      const recent = rows.slice(-3);
+      const pace =
+        recent.reduce((s, r) => s + r.diff, 0) / (recent.length || 1);
+      let paceText = "";
+      if (gap < 0 && pace > 0) {
+        paceText = `Al ritmo de las últimas ${recent.length} jornadas (${pace.toFixed(1).replace(".", ",")} pts más por jornada), ${escapeHtml(a)} alcanzaría a ${escapeHtml(b)} en unas ${Math.ceil(-gap / pace)} jornadas.`;
+      } else if (gap < 0) {
+        paceText = `En las últimas ${recent.length} jornadas ${escapeHtml(b)} le ha sacado ${Math.abs(pace).toFixed(1).replace(".", ",")} pts por jornada: la distancia crece.`;
+      } else if (gap > 0 && pace < 0) {
+        paceText = `Ojo: en las últimas ${recent.length} jornadas ${escapeHtml(b)} recorta ${Math.abs(pace).toFixed(1).replace(".", ",")} pts por jornada.`;
+      } else if (gap > 0) {
+        paceText = `Y en las últimas ${recent.length} jornadas la ventaja sigue creciendo (${pace.toFixed(1).replace(".", ",")} pts por jornada).`;
+      }
+
+      const key = (p) => (typeof p[0] === "number" ? `id${p[0]}` : p[0]);
+      const keysB = new Set(eb.players.map(key));
+      const keysA = new Set(ea.players.map(key));
+      const shared = ea.players.filter((p) => keysB.has(key(p)));
+      const onlyA = ea.players.filter((p) => !keysB.has(key(p)));
+      const onlyB = eb.players.filter((p) => !keysA.has(key(p)));
+      const sum = (list) => list.reduce((s, p) => s + p[1] * (p[2] ? 2 : 1), 0);
+      const capA = ea.players.find((p) => p[2]);
+      const capB = eb.players.find((p) => p[2]);
+
+      const card = (name, e, color) => `
+        <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+          <p class="flex items-center gap-2 text-sm text-slate-400">
+            <span class="inline-block h-2.5 w-2.5 rounded-full" style="background:${color}"></span>
+            ${escapeHtml(name)}
+          </p>
+          <p class="mt-1 text-2xl font-black text-white">${e.rank}º · ${e.total} pts</p>
+          <p class="text-xs text-slate-500">J${last.number}: ${e.points} pts · ${e.changes ?? "—"} cambios para la siguiente</p>
+        </div>`;
+
+      root.innerHTML = `
+        <section class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          ${card(a, ea, "#3987e5")}
+          <div class="flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-slate-900/60 p-4 text-center">
+            <p class="text-3xl font-black ${gap >= 0 ? "text-emerald-400" : "text-rose-400"}">${gap > 0 ? "+" : ""}${gap}</p>
+            <p class="text-xs text-slate-400">pts de ${escapeHtml(a)} sobre ${escapeHtml(b)}</p>
+            <p class="mt-2 text-xs text-slate-300">Jornada a jornada: ${winsA} – ${winsB}${draws ? ` (${draws} empate${draws > 1 ? "s" : ""})` : ""}</p>
+          </div>
+          ${card(b, eb, "#d95926")}
+        </section>
+        ${paceText ? `<p class="text-sm text-slate-300">${paceText}</p>` : ""}
+
+        <section>
+          <h2 class="mb-1 text-xl font-bold text-white">Sus 11 de la Jornada ${last.number}</h2>
+          <p class="mb-4 text-sm text-slate-400">
+            Los jugadores en común se anulan: lo que decide es lo que no compartís.
+            ${capA && capB && key(capA) !== key(capB) ? `Además, capitanes distintos: ${escapeHtml(nameOf(capA[0]))} y ${escapeHtml(nameOf(capB[0]))}.` : ""}
+          </p>
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+              <p class="mb-2 text-sm font-semibold text-white">Solo ${escapeHtml(a)} (${onlyA.length}) · ${sum(onlyA)} pts</p>
+              <ul class="text-sm">${onlyA.map((p) => playerLi(p)).join("") || '<li class="text-slate-500">—</li>'}</ul>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+              <p class="mb-2 text-sm font-semibold text-white">En común (${shared.length})</p>
+              <ul class="text-sm">${
+                shared
+                  .map((p) => {
+                    const inB = eb.players.find((q) => key(q) === key(p));
+                    const capOf = [p[2] ? a : "", inB?.[2] ? b : ""]
+                      .filter(Boolean)
+                      .join(" y ");
+                    return playerLi(p, capOf);
+                  })
+                  .join("") || '<li class="text-slate-500">—</li>'
+              }</ul>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+              <p class="mb-2 text-sm font-semibold text-white">Solo ${escapeHtml(b)} (${onlyB.length}) · ${sum(onlyB)} pts</p>
+              <ul class="text-sm">${onlyB.map((p) => playerLi(p)).join("") || '<li class="text-slate-500">—</li>'}</ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="mb-4 text-xl font-bold text-white">Jornada a jornada</h2>
+          <div class="overflow-x-auto rounded-2xl border border-white/10 bg-slate-900/60">
+            <table class="w-full min-w-[420px] text-sm">
+              <thead class="text-xs text-slate-500">
+                <tr class="border-b border-white/10">
+                  <th class="px-3 py-2 text-left font-medium">Jornada</th>
+                  <th class="px-3 py-2 text-right font-medium">${escapeHtml(a)}</th>
+                  <th class="px-3 py-2 text-right font-medium">${escapeHtml(b)}</th>
+                  <th class="px-3 py-2 text-right font-medium">Diferencia</th>
+                  <th class="px-3 py-2 text-right font-medium">Acumulado</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${rows
+                  .map(
+                    (r) => `<tr class="border-b border-white/5 text-slate-300">
+                      <td class="px-3 py-2">J${r.number}</td>
+                      <td class="px-3 py-2 text-right ${r.pa > r.pb ? "font-semibold text-white" : ""}">${r.pa}</td>
+                      <td class="px-3 py-2 text-right ${r.pb > r.pa ? "font-semibold text-white" : ""}">${r.pb}</td>
+                      <td class="px-3 py-2 text-right ${r.diff > 0 ? "text-emerald-400" : r.diff < 0 ? "text-rose-400" : ""}">${r.diff > 0 ? "+" : ""}${r.diff}</td>
+                      <td class="px-3 py-2 text-right">${r.acc > 0 ? "+" : ""}${r.acc}</td>
+                    </tr>`,
+                  )
+                  .join("")}
+              </tbody>
+            </table>
+          </div>
+        </section>`;
+    }
+
+    const initial = defaults();
+    pickA.value = initial.a;
+    pickB.value = initial.b;
+    pickA.addEventListener("change", render);
+    pickB.addEventListener("change", render);
+    document.getElementById("swap").addEventListener("click", () => {
+      const a = pickA.value;
+      pickA.value = pickB.value;
+      pickB.value = a;
+      render();
+    });
+    window.addEventListener(YO_EVENT, (e) => {
+      if (e.detail && e.detail !== pickB.value) {
+        pickA.value = e.detail;
+        render();
+      }
+    });
+    render();
+  </script>
+</Layout>

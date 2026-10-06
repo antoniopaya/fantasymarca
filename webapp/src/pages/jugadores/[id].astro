@@ -1,17 +1,21 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import LineChart from "../../components/charts/LineChart.astro";
+import YoScript from "../../components/YoScript.astro";
 import {
   getPlayers,
   getPlayerById,
   getPlayerDetail,
   getPrecioFantastica,
   getAllPlayerSummaries,
+  getLigaJornadas,
   formatMoney,
   POSITION_NAMES,
   teamLogoUrl,
   url,
 } from "../../lib/data";
+import { FAMILIA_COLORS, ligaPlayerInfo } from "../../lib/liga";
+import { FAMILIA } from "../../lib/yo";
 
 export function getStaticPaths() {
   return getPlayers().map((p) => ({ params: { id: String(p.id) } }));
@@ -36,6 +40,15 @@ const upcoming = detail?.points.slice(0, 6) ?? [];
 const valueDiff = player ? player.value - player.previousValue : 0;
 
 const precioFantastica = getPrecioFantastica(playerId);
+
+const ligaJornadas = getLigaJornadas();
+const ligaLast = ligaJornadas.at(-1);
+const ligaInfo = ligaPlayerInfo(playerId);
+const ligaOwners = ligaInfo?.owners ?? [];
+const ligaPerJornada = ligaJornadas.map((j) => ({
+  jornada: j.number,
+  pct: ligaInfo?.perJornada.find((p) => p.jornada === j.number)?.pct ?? 0,
+}));
 const vsFantastica =
   player && precioFantastica ? player.value - precioFantastica : 0;
 const vsFantasticaPct = precioFantastica
@@ -229,6 +242,67 @@ const comparisonCandidates = player
           </section>
         )}
 
+        {ligaLast && (
+          <section class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
+            <h2 class="text-xl font-bold text-white">En la liga Fantástica</h2>
+            <p class="mt-1 text-sm text-slate-400">
+              {ligaOwners.length > 0
+                ? `Lo llevaban ${ligaOwners.length} de ${ligaLast.entries.length} participantes en la Jornada ${ligaLast.number}`
+                : `Nadie lo llevaba en la Jornada ${ligaLast.number}`}
+              {ligaInfo && ligaInfo.captainTimes > 0
+                ? ` · capitán ${ligaInfo.captainTimes} ${ligaInfo.captainTimes === 1 ? "vez" : "veces"} en la temporada`
+                : ""}
+              .
+            </p>
+            {FAMILIA.map((name) => (
+              <p
+                data-yo-panel={name}
+                hidden
+                class={`mt-3 text-sm font-semibold ${ligaOwners.includes(name) ? "text-emerald-400" : "text-slate-300"}`}
+              >
+                {ligaOwners.includes(name)
+                  ? `Lo tienes en tu 11 de la Jornada ${ligaLast.number}${ligaInfo?.captainedBy.includes(name) ? ", de capitán" : ""}.`
+                  : `No está en tu 11 de la Jornada ${ligaLast.number}.`}
+              </p>
+            ))}
+
+            <div class="mt-4 flex flex-wrap gap-2">
+              {ligaPerJornada.map((j) => (
+                <div class="w-14 rounded-lg bg-slate-950/40 px-2 py-1.5 text-center">
+                  <p class="text-[10px] text-slate-500">J{j.jornada}</p>
+                  <p class="text-sm font-semibold text-white">
+                    {Math.round(j.pct)}%
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {ligaOwners.length > 0 && (
+              <ul class="mt-4 flex flex-wrap gap-1.5 text-xs">
+                {ligaOwners.map((owner) => (
+                  <li
+                    data-participant={owner}
+                    class="flex items-center gap-1.5 rounded-full border border-white/10 px-2.5 py-1 text-slate-300 data-[yo=true]:border-emerald-500/50 data-[yo=true]:text-emerald-400"
+                  >
+                    {FAMILIA_COLORS[owner] && (
+                      <span
+                        class="inline-block h-2 w-2 rounded-full"
+                        style={`background:${FAMILIA_COLORS[owner]}`}
+                      />
+                    )}
+                    {owner}
+                    {ligaInfo?.captainedBy.includes(owner) && (
+                      <span class="rounded bg-amber-400 px-1 text-[10px] font-bold text-slate-950">
+                        C
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        )}
+
         {detail && !Array.isArray(detail.values_chart) && (
           <section class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
             <div class="mb-4 flex items-center justify-between">
@@ -393,4 +467,5 @@ const comparisonCandidates = player
       });
     }
   </script>
+  <YoScript />
 </Layout>
