@@ -7,10 +7,12 @@ import {
   playerPhotoUrl,
   teamLogoUrl,
   POSITION_SHORT,
-  POSITION_COLORS,
   PLAYER_STATUS_LABELS,
   formatMoney,
   getLatestLigaJornada,
+  getLigaJornadas,
+  getGameweekPoints,
+  url,
   FORMATIONS,
   MAX_BUDGET,
   MAX_CAPTAIN_PRICE,
@@ -28,6 +30,21 @@ for (const entry of ligaJornada?.entries ?? []) {
 }
 const ligaSize = ligaJornada?.entries.length ?? 0;
 
+// Nombre corto para las fichas del campo: el que usa la liga en sus PDFs
+// ("Fermín L.", "Vinicius Jr.") si lo ha usado alguna vez; si no, el apellido.
+const ligaShortNames = new Map<number, string>();
+for (const j of getLigaJornadas()) {
+  for (const e of j.entries) {
+    for (const p of e.players)
+      if (p.id !== null) ligaShortNames.set(p.id, p.name);
+  }
+}
+const shortName = (id: number, name: string) =>
+  ligaShortNames.get(id) ?? name.split(" ").slice(-1)[0];
+
+const nextGameweek = getNextGameweek();
+const lastPlayedGw = nextGameweek.number - 1;
+
 // Solo entran jugadores con precio Fantástica: es el único precio que cuenta
 // para el tope de 180M, así que uno sin precio no se puede valorar ni incluir.
 const players = getAllPlayerSummaries()
@@ -42,7 +59,9 @@ const players = getAllPlayerSummaries()
     photoUrl: playerPhotoUrl(p.id),
     teamLogoUrl: teamLogoUrl(p.id_team),
     status: p.status,
-    lastSeasonAvg: p.lastSeason?.avg ?? null,
+    shortName: shortName(p.id, p.name),
+    avg: p.avg,
+    lastGwPoints: getGameweekPoints(p.id, lastPlayedGw),
     points: p.points,
     form: p.form,
     ownershipPct: ligaSize
@@ -97,7 +116,6 @@ for (const name of FAMILIA) {
 // Para el resumen de "próximos rivales": qué equipo le toca a cada equipo en
 // la próxima jornada, con su escudo, para poder cruzarlo con los equipos
 // presentes en el once.
-const nextGameweek = getNextGameweek();
 let nextGwMatches: ReturnType<typeof getMatches> = [];
 try {
   nextGwMatches = getMatches(nextGameweek.number);
@@ -119,154 +137,152 @@ for (const m of nextGwMatches) {
 ---
 
 <Layout
-  title="Crear once"
-  description="Monta tu once con la táctica que quieras, sin superar los 180M€ de precio Fantástica."
+  title="Mi 11"
+  description="Prepara tu 11 de la liga Fantástica: cambios, capitán y presupuesto de 180M€."
 >
-  <div class="mb-6 flex flex-wrap items-start justify-between gap-3">
-    <div>
-      <h1 class="text-3xl font-black text-white">Crear once</h1>
-      <p class="mt-1 text-sm text-slate-400">
-        Máximo {formatMoney(MAX_BUDGET)} en precio Fantástica · el capitán debe costar
-        menos de {formatMoney(MAX_CAPTAIN_PRICE)}
-      </p>
-    </div>
-    <div class="flex shrink-0 flex-wrap gap-2">
-      <button
-        type="button"
-        id="share-whatsapp"
-        class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-medium text-emerald-400 transition-colors hover:bg-emerald-500/20 disabled:pointer-events-none disabled:opacity-40"
-      >
-        Compartir por WhatsApp
-      </button>
-      <button
-        type="button"
-        id="undo-btn"
-        disabled
-        class="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-400 transition-colors hover:bg-white/5 hover:text-white disabled:pointer-events-none disabled:opacity-40"
-      >
-        Deshacer
-      </button>
-      <button
-        type="button"
-        id="clear-team"
-        data-confirming="false"
-        class="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-400 transition-colors hover:border-rose-500/40 hover:text-rose-300"
-      >
-        Vaciar equipo
-      </button>
-    </div>
-  </div>
+  <h1 class="sr-only">Mi 11</h1>
 
   <div
     id="page-notice"
-    class="mb-6 hidden rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-300"
+    class="mb-4 hidden rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-300"
   >
-  </div>
-
-  <div class="mb-6 flex flex-wrap items-center gap-2">
-    <label for="lineup-select" class="text-xs font-medium text-slate-500">
-      Convocatoria:
-    </label>
-    <select
-      id="lineup-select"
-      class="rounded-full border border-white/10 bg-slate-900/60 px-3 py-1.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
-    >
-    </select>
-    <button
-      type="button"
-      id="lineup-new"
-      class="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
-    >
-      + Nueva
-    </button>
-    <button
-      type="button"
-      id="lineup-delete"
-      data-confirming="false"
-      class="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-400 transition-colors hover:border-rose-500/40 hover:text-rose-300 disabled:pointer-events-none disabled:opacity-40"
-    >
-      Eliminar
-    </button>
   </div>
 
   <div
     id="liga-panel"
-    class="mb-6 hidden rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-4"
+    class="mb-4 hidden rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-4"
   >
-  </div>
-
-  <div class="mb-6 rounded-2xl border border-white/10 bg-slate-900/60 p-4">
-    <p
-      class="mb-3 text-xs font-semibold tracking-wide text-slate-500 uppercase"
-    >
-      Cambios de jornada
-    </p>
-    <div id="changes-panel"></div>
   </div>
 
   <div
-    class="mb-6 flex flex-wrap gap-2"
-    id="formation-selector"
-    role="group"
-    aria-label="Formación"
+    id="once-bar"
+    class="sticky top-[calc(62px+env(safe-area-inset-top))] z-30 -mx-4 mb-4 border-b border-white/10 bg-slate-950/95 px-4 py-2.5 backdrop-blur-md sm:mx-0 sm:rounded-2xl sm:border"
   >
-    {
-      FORMATIONS.map((f) => (
-        <button
-          type="button"
-          data-formation={f.key}
-          aria-pressed={f.key === DEFAULT_FORMATION ? "true" : "false"}
-          class="formation-btn rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+    <div class="flex items-center gap-2">
+      <label for="lineup-select" class="sr-only">Convocatoria</label>
+      <select
+        id="lineup-select"
+        class="min-w-0 flex-1 truncate rounded-full border border-white/10 bg-slate-900/60 px-3 py-2 text-sm font-semibold text-white focus:border-emerald-500/50 focus:outline-none sm:max-w-xs sm:flex-none"
+      >
+      </select>
+      <button
+        type="button"
+        id="share-whatsapp"
+        class="shrink-0 rounded-full bg-emerald-500 px-3.5 py-2 text-sm font-semibold text-slate-950 disabled:pointer-events-none disabled:opacity-40"
+      >
+        WhatsApp
+      </button>
+      <details id="once-menu" class="relative shrink-0">
+        <summary
+          aria-label="Más opciones"
+          class="flex h-9 w-9 cursor-pointer list-none items-center justify-center rounded-full border border-white/10 text-lg text-slate-200 hover:bg-white/5 [&::-webkit-details-marker]:hidden"
         >
-          {f.key}
-        </button>
-      ))
-    }
-  </div>
+          ⋯
+        </summary>
+        <div
+          class="absolute right-0 z-40 mt-2 w-72 space-y-4 rounded-2xl border border-white/10 bg-slate-900 p-4 shadow-2xl"
+        >
+          <div>
+            <p
+              class="mb-2 text-xs font-semibold tracking-wide text-slate-500 uppercase"
+            >
+              Cambios de jornada
+            </p>
+            <div id="changes-panel"></div>
+          </div>
+          <div>
+            <label
+              for="formation-select"
+              class="mb-2 block text-xs font-semibold tracking-wide text-slate-500 uppercase"
+            >
+              Formación
+            </label>
+            <select
+              id="formation-select"
+              class="w-full rounded-xl border border-white/10 bg-slate-950/60 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
+            >
+              {FORMATIONS.map((f) => <option value={f.key}>{f.key}</option>)}
+            </select>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <button
+              type="button"
+              id="undo-btn"
+              disabled
+              class="rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-white/5 disabled:pointer-events-none disabled:opacity-40"
+            >
+              Deshacer
+            </button>
+            <button
+              type="button"
+              id="clear-team"
+              data-confirming="false"
+              class="rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 hover:border-rose-500/40 hover:text-rose-300"
+            >
+              Vaciar equipo
+            </button>
+            <button
+              type="button"
+              id="lineup-new"
+              class="rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-white/5"
+            >
+              + Nueva convocatoria
+            </button>
+            <button
+              type="button"
+              id="lineup-delete"
+              data-confirming="false"
+              class="rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 hover:border-rose-500/40 hover:text-rose-300 disabled:pointer-events-none disabled:opacity-40"
+            >
+              Eliminar
+            </button>
+          </div>
+          <p class="text-xs text-slate-500">
+            Tope de {formatMoney(MAX_BUDGET)} en precio Fantástica; el capitán debe
+            costar menos de {formatMoney(MAX_CAPTAIN_PRICE)}.
+          </p>
+        </div>
+      </details>
+    </div>
 
-  <div class="mb-6 rounded-2xl border border-white/10 bg-slate-900/60 p-4">
-    <div class="flex flex-wrap items-center justify-between gap-2 text-sm">
-      <span class="font-medium text-white">
-        Presupuesto: <span id="budget-used">0.00</span> / {
-          formatMoney(MAX_BUDGET).replace(" M€", "")
-        } M€
+    <div class="mt-2 flex items-center gap-3 text-sm">
+      <span class="shrink-0 font-semibold text-white">
+        <span id="budget-used">0,0</span><span class="text-slate-500"
+          >&nbsp;/ 180 M€</span
+        >
       </span>
-      <span class="text-slate-400" id="budget-remaining"
-        >Quedan {formatMoney(MAX_BUDGET)} disponibles</span
-      >
-    </div>
-    <div class="mt-2 h-2 overflow-hidden rounded-full bg-slate-800">
       <div
-        id="budget-bar"
-        class="h-full w-0 rounded-full bg-emerald-500 transition-all"
+        class="h-1.5 min-w-8 flex-1 overflow-hidden rounded-full bg-slate-800"
       >
+        <div
+          id="budget-bar"
+          class="h-full w-0 rounded-full bg-emerald-500 transition-all"
+        >
+        </div>
       </div>
+      <span id="sticky-changes" class="hidden shrink-0 font-semibold"></span>
+      <span
+        id="captain-status"
+        class="max-w-28 shrink-0 truncate text-slate-400"></span>
     </div>
-    <div class="mt-3 flex flex-wrap items-center gap-4 text-sm text-slate-400">
-      <span id="slots-status">0 / 11 jugadores</span>
-      <span id="captain-status">Sin capitán elegido</span>
-      <span id="estimated-points"
-        >Sin datos suficientes para estimar puntos</span
-      >
-    </div>
-    <ul id="warnings" class="mt-3 space-y-1 text-sm text-amber-300"></ul>
+    <p id="budget-remaining" class="sr-only"></p>
   </div>
 
   <section
     id="pitch"
-    class="space-y-3 rounded-2xl border border-white/10 bg-gradient-to-b from-emerald-950/30 to-slate-900/60 p-4 sm:p-6"
+    aria-label="Tu 11"
+    class="space-y-4 rounded-2xl border border-white/10 bg-gradient-to-b from-emerald-950/40 to-slate-900/60 px-2 py-4 sm:p-6"
   >
   </section>
 
+  <ul id="warnings" class="mt-4 space-y-1.5 text-sm text-amber-300"></ul>
+
+  <p class="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-slate-400">
+    <span id="slots-status">0 / 11 jugadores</span>
+    <span id="estimated-points"></span>
+  </p>
+
   <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-    <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
-      <p
-        class="mb-3 text-xs font-semibold tracking-wide text-slate-500 uppercase"
-      >
-        Equipos representados
-      </p>
-      <div id="team-summary" class="flex flex-wrap gap-3"></div>
-    </div>
     <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
       <p
         class="mb-3 text-xs font-semibold tracking-wide text-slate-500 uppercase"
@@ -275,35 +291,93 @@ for (const m of nextGwMatches) {
       </p>
       <div id="rivals-summary" class="flex flex-wrap gap-3"></div>
     </div>
+    <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+      <p
+        class="mb-3 text-xs font-semibold tracking-wide text-slate-500 uppercase"
+      >
+        Equipos en tu 11
+      </p>
+      <div id="team-summary" class="flex flex-wrap gap-3"></div>
+    </div>
   </div>
 
-  <p class="mt-4 text-xs text-slate-500">
-    Los jugadores sin precio Fantástica todavía (fichajes muy recientes que
-    Marca no ha dado de alta) no aparecen en el buscador.
-  </p>
+  <div
+    id="sheet-backdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="sheet-title"
+    class="fixed inset-0 z-[70] hidden items-end justify-center bg-black/60 sm:items-center sm:p-4"
+  >
+    <div
+      class="w-full max-w-md rounded-t-3xl border border-white/10 bg-slate-900 p-5 pb-[calc(1.25rem+env(safe-area-inset-bottom))] shadow-2xl sm:rounded-3xl sm:pb-5"
+    >
+      <div id="sheet-header" class="mb-4 flex items-center gap-3"></div>
+      <div class="grid gap-2">
+        <button
+          type="button"
+          data-sheet="change"
+          class="rounded-xl bg-emerald-500 px-4 py-3.5 text-base font-semibold text-slate-950"
+        >
+          Cambiar jugador
+        </button>
+        <button
+          type="button"
+          data-sheet="captain"
+          class="rounded-xl border border-amber-400/40 px-4 py-3.5 text-base font-semibold text-amber-300 disabled:border-white/10 disabled:text-slate-500"
+        >
+          Hacer capitán
+        </button>
+        <button
+          type="button"
+          data-sheet="remove"
+          class="rounded-xl border border-white/10 px-4 py-3.5 text-base font-semibold text-rose-300"
+        >
+          Quitar del 11
+        </button>
+        <a
+          data-sheet="profile"
+          href={url("/jugadores")}
+          class="rounded-xl border border-white/10 px-4 py-3.5 text-center text-base font-semibold text-slate-200"
+        >
+          Ver ficha
+        </a>
+        <button
+          type="button"
+          data-sheet="close"
+          class="px-4 py-2 text-sm text-slate-400"
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
 
   <div
     id="picker-backdrop"
     role="dialog"
     aria-modal="true"
     aria-labelledby="picker-title"
-    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4"
+    class="fixed inset-0 z-[70] hidden items-end justify-center bg-black/60 sm:items-center sm:p-4"
   >
     <div
-      class="flex max-h-[80vh] w-full max-w-md flex-col rounded-2xl border border-white/10 bg-slate-900 p-4 shadow-2xl"
+      class="flex h-[92dvh] w-full max-w-lg flex-col rounded-t-3xl border border-white/10 bg-slate-900 p-4 shadow-2xl sm:h-auto sm:max-h-[85vh] sm:rounded-3xl"
     >
-      <div class="mb-3 flex items-center justify-between">
-        <h2 id="picker-title" class="text-lg font-bold text-white">
-          Elegir jugador
-        </h2>
+      <div class="mb-3 flex items-start justify-between gap-3">
+        <div>
+          <h2 id="picker-title" class="text-lg font-bold text-white">
+            Elegir jugador
+          </h2>
+          <p id="picker-budget" class="text-sm text-slate-400"></p>
+        </div>
         <button
           type="button"
           id="picker-close"
-          class="rounded-lg p-1 text-slate-400 hover:bg-white/10 hover:text-white"
+          aria-label="Cerrar"
+          class="rounded-full p-2 text-slate-400 hover:bg-white/10 hover:text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
+            class="h-6 w-6"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -318,44 +392,53 @@ for (const m of nextGwMatches) {
       </div>
       <input
         id="picker-search"
-        type="text"
-        placeholder="Buscar jugador..."
+        type="search"
+        placeholder="Buscar jugador o equipo..."
         aria-label="Buscar jugador"
         autocomplete="off"
-        class="mb-3 w-full rounded-xl border border-white/10 bg-slate-950/60 px-3 py-2 text-sm text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
+        class="mb-3 w-full rounded-xl border border-white/10 bg-slate-950/60 px-3 py-2.5 text-base text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
       />
-      <div
-        id="picker-sort"
-        role="group"
-        aria-label="Ordenar por"
-        class="mb-3 flex flex-wrap gap-1.5"
-      >
-        {
-          [
-            ["price", "Precio"],
-            ["points", "Puntos"],
-            ["form", "Forma"],
-            ["value", "Pts/M€"],
-          ].map(([key, label]) => (
-            <button
-              type="button"
-              data-sort={key}
-              aria-pressed={key === "price" ? "true" : "false"}
-              class="rounded-full border border-white/10 px-2.5 py-1 text-xs font-medium text-slate-300 hover:bg-white/5 aria-pressed:border-emerald-500/40 aria-pressed:bg-emerald-500/10 aria-pressed:text-emerald-400"
-            >
-              {label}
-            </button>
-          ))
-        }
+      <div class="mb-3 flex flex-wrap items-center gap-1.5">
+        <div
+          id="picker-sort"
+          role="group"
+          aria-label="Ordenar por"
+          class="flex flex-wrap gap-1.5"
+        >
+          {
+            [
+              ["form", "Forma"],
+              ["points", "Puntos"],
+              ["value", "Pts/M€"],
+              ["price", "Precio"],
+            ].map(([key, label]) => (
+              <button
+                type="button"
+                data-sort={key}
+                aria-pressed={key === "form" ? "true" : "false"}
+                class="rounded-full border border-white/10 px-3 py-1.5 text-sm font-medium text-slate-300 hover:bg-white/5 aria-pressed:border-emerald-500/40 aria-pressed:bg-emerald-500/10 aria-pressed:text-emerald-400"
+              >
+                {label}
+              </button>
+            ))
+          }
+        </div>
+        <label
+          class="ml-auto flex items-center gap-2 text-sm text-slate-300 select-none"
+        >
+          <input
+            id="picker-affordable"
+            type="checkbox"
+            checked
+            class="h-4 w-4 accent-emerald-500"
+          />
+          Solo los que caben
+        </label>
       </div>
-      <button
-        type="button"
-        id="picker-remove"
-        class="mb-2 hidden rounded-xl border border-rose-500/30 bg-rose-500/10 px-3 py-2 text-sm font-medium text-rose-300 hover:bg-rose-500/20"
+      <ul
+        id="picker-list"
+        class="-mx-1 min-h-0 flex-1 space-y-1 overflow-y-auto overscroll-contain"
       >
-        Quitar jugador de este puesto
-      </button>
-      <ul id="picker-list" class="min-h-0 flex-1 space-y-1 overflow-y-auto">
       </ul>
     </div>
   </div>
@@ -368,13 +451,13 @@ for (const m of nextGwMatches) {
       MAX_BUDGET,
       MAX_CAPTAIN_PRICE,
       POSITION_SHORT,
-      POSITION_COLORS,
       PLAYER_STATUS_LABELS,
       TEAM_NEXT_OPPONENT,
       LIGA_ONCES,
       YO_STORAGE_KEY,
       YO_EVENT,
       NEXT_GW_NAME: nextGameweek.name,
+      PLAYER_URL_BASE: url("/jugadores/"),
     }}
   >
     const playersById = new Map(players.map((p) => [p.id, p]));
@@ -599,77 +682,70 @@ for (const m of nextGwMatches) {
       return text.normalize("NFD").replace(diacriticsPattern, "").toLowerCase();
     }
 
-    function statusBadge(player, sizeClass) {
-      if (!player.status) return "";
-      const label = PLAYER_STATUS_LABELS[player.status] ?? "Baja";
-      return `<span class="absolute left-0 top-0 flex ${sizeClass} items-center justify-center rounded-br-md bg-rose-500 text-[8px] font-bold text-white" title="${label}" aria-label="${label}">!</span>`;
+    function formatMillions(value) {
+      return `${(value / 1_000_000).toFixed(1).replace(".0", "")}M`;
     }
+
+    // Ancho para que quepan 5 por línea en un móvil de 360px (gap-1.5 = 0.375rem).
+    const CARD_WIDTH = "w-[calc((100%-1.5rem)/5)] max-w-[5.75rem]";
 
     function slotCard(slot) {
       const player =
         slot.playerId !== null ? playersById.get(slot.playerId) : null;
       const label = POSITION_SHORT[slot.position] ?? "?";
       const positionLower = POSITION_LABEL_LOWER[slot.position] ?? "jugador";
-      const color = POSITION_COLORS[slot.position] ?? "#64748b";
 
       if (!player) {
         return `
           <button type="button" data-slot="${slot.id}" data-action="open"
             aria-label="Elegir ${positionLower}"
-            class="flex h-24 w-20 flex-col items-center justify-center gap-1 rounded-xl border-2 border-dashed border-white/15 text-slate-400 transition-colors hover:border-emerald-500/50 hover:text-emerald-400 sm:h-28 sm:w-24">
+            class="${CARD_WIDTH} flex aspect-[3/4] flex-col items-center justify-center gap-1 rounded-2xl border-2 border-dashed border-white/20 text-slate-400 transition-colors hover:border-emerald-500/50 hover:text-emerald-400">
             <span class="text-2xl leading-none">+</span>
-            <span class="text-[10px] font-semibold uppercase tracking-wide">${label}</span>
+            <span class="text-[11px] font-semibold uppercase tracking-wide">${label}</span>
           </button>`;
       }
 
       const isCaptain = state.captainId === player.id;
-      const captainEligible = player.price < MAX_CAPTAIN_PRICE;
-      const captainTitle = isCaptain
-        ? `Quitar a ${player.name} como capitán`
-        : captainEligible
-          ? `Nombrar capitán a ${player.name}`
-          : `${player.name} no puede ser capitán: debe costar menos de ${formatMoneyClient(MAX_CAPTAIN_PRICE)}`;
       const isNew = isNewInChangesMode(player.id);
       const noMatch = hasNoMatch(player);
-      const cardTitle = [
-        isNew ? "Nuevo desde el último once" : "",
-        noMatch ? `Su equipo no juega en la ${NEXT_GW_NAME}` : "",
+      const rival = TEAM_NEXT_OPPONENT[player.id_team];
+      const statusLabel = player.status
+        ? (PLAYER_STATUS_LABELS[player.status] ?? "Baja")
+        : "";
+      const description = [
+        player.name,
+        isCaptain ? "capitán" : "",
+        statusLabel.toLowerCase(),
+        noMatch
+          ? `no juega en la ${NEXT_GW_NAME}`
+          : rival
+            ? `contra ${rival.name}`
+            : "",
+        isNew ? "nuevo" : "",
       ]
         .filter(Boolean)
-        .join(" · ");
+        .join(", ");
 
       return `
-        <div class="relative flex h-24 w-20 flex-col items-center rounded-xl border pt-1.5 sm:h-28 sm:w-24 ${
-          isNew
-            ? "border-emerald-500/60 bg-emerald-500/10 ring-2 ring-emerald-500/30"
-            : "border-white/10 bg-slate-900/80"
-        } ${noMatch ? "opacity-50" : ""}" data-slot="${slot.id}" ${cardTitle ? `title="${cardTitle}"` : ""}>
-          <button type="button" data-slot="${slot.id}" data-action="remove"
-            aria-label="Quitar a ${player.name} del equipo"
-            class="absolute -right-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-rose-500 text-[10px] font-bold text-white hover:bg-rose-400">
-            ×
-          </button>
-          <button type="button" data-slot="${slot.id}" data-action="captain" ${captainEligible ? "" : "disabled"}
-            title="${captainTitle}" aria-label="${captainTitle}"
-            class="absolute -left-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${
-              isCaptain
-                ? "bg-amber-400 text-slate-950"
-                : captainEligible
-                  ? "bg-slate-700 text-slate-300 hover:bg-amber-400/80 hover:text-slate-950"
-                  : "cursor-not-allowed bg-slate-800 text-slate-500"
-            }">
-            C
-          </button>
-          <button type="button" data-slot="${slot.id}" data-action="open" class="flex flex-1 flex-col items-center px-1 text-center">
-            <div class="relative h-10 w-10 overflow-hidden rounded-full bg-slate-800">
-              <img src="${player.photoUrl}" alt="" class="h-full w-full object-cover" loading="lazy" />
-              <img src="${player.teamLogoUrl}" alt="" class="absolute -bottom-0.5 -right-0.5 h-4 w-4 rounded-full bg-slate-950 p-0.5" />
-              ${statusBadge(player, "h-3.5 w-3.5")}
-            </div>
-            <span class="mt-1 line-clamp-1 w-full text-[11px] font-medium leading-tight text-white">${player.name}</span>
-            <span class="text-[10px] font-semibold" style="color:${color}">${formatMoneyClient(player.price)}</span>
-          </button>
-        </div>`;
+        <button type="button" data-slot="${slot.id}" data-action="sheet"
+          aria-label="${description}"
+          class="${CARD_WIDTH} relative flex flex-col items-center rounded-2xl border px-0.5 pt-2 pb-1.5 text-center transition-colors ${
+            isNew
+              ? "border-emerald-500/70 bg-emerald-500/15"
+              : "border-white/10 bg-slate-900/90 hover:border-white/25"
+          } ${noMatch ? "opacity-50" : ""}">
+          ${isCaptain ? '<span class="absolute left-1 top-1 z-10 flex h-5 w-5 items-center justify-center rounded-full bg-amber-400 text-[11px] font-black text-slate-950">C</span>' : ""}
+          <span class="relative block h-11 w-11">
+            <img src="${player.photoUrl}" alt="" class="h-full w-full rounded-full bg-slate-800 object-cover" loading="lazy" />
+            <img src="${player.teamLogoUrl}" alt="" class="absolute -bottom-0.5 -right-1 h-5 w-5 rounded-full bg-slate-950 p-0.5" />
+            ${player.status ? '<span class="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-rose-500 text-[10px] font-black text-white ring-2 ring-slate-950">!</span>' : ""}
+          </span>
+          <span class="mt-1 block w-full truncate text-xs font-semibold leading-tight text-white">${player.shortName}</span>
+          <span class="mt-0.5 flex items-center gap-1 text-[11px] leading-none text-slate-400">
+            ${rival ? `<img src="${rival.logoUrl}" alt="" class="h-3.5 w-3.5" />` : noMatch ? "—" : ""}
+            ${formatMillions(player.price)}
+          </span>
+        </button>`;
     }
 
     // Sin calendario cargado para la jornada no se puede saber quién juega:
@@ -776,21 +852,22 @@ for (const m of nextGwMatches) {
               .join("");
     }
 
-    // Estimación simple: suma de la media de puntos de la temporada anterior
-    // de cada titular. No modela el doble de puntos del capitán porque esta
-    // liga privada no tiene esa regla confirmada en ningún sitio.
+    // Estimación simple hasta tener puntos esperados por partido: media de
+    // puntos de esta temporada de cada titular, con el capitán doblado.
     function renderEstimatedPoints() {
       const filled = state.slots
         .filter((s) => s.playerId !== null)
         .map((s) => playersById.get(s.playerId));
-      const withAvg = filled.filter((p) => p.lastSeasonAvg !== null);
       const label = document.getElementById("estimated-points");
-      if (withAvg.length === 0) {
-        label.textContent = "Sin datos suficientes para estimar puntos";
+      if (filled.length === 0) {
+        label.textContent = "";
         return;
       }
-      const total = withAvg.reduce((sum, p) => sum + p.lastSeasonAvg, 0);
-      label.textContent = `≈ ${total.toFixed(0)} pts esperados (según la temporada anterior)`;
+      const total = filled.reduce(
+        (sum, p) => sum + p.avg * (p.id === state.captainId ? 2 : 1),
+        0,
+      );
+      label.textContent = `≈ ${total.toFixed(0)} pts esperados (media de la temporada)`;
     }
 
     // --- Cambios entre jornada y jornada (3, 6 u 11) ------------------------
@@ -885,7 +962,7 @@ for (const m of nextGwMatches) {
             ${CHANGE_LIMIT_OPTIONS.map(
               (n) => `
               <button type="button" data-changes-limit="${n}"
-                class="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white">
+                class="rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white">
                 ${n} cambios
               </button>`,
             ).join("")}
@@ -1005,11 +1082,8 @@ for (const m of nextGwMatches) {
         .map((row) => {
           const slots = state.slots.filter((s) => s.position === row.position);
           return `
-            <div>
-              <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">${row.role}</p>
-              <div class="flex flex-wrap justify-center gap-3">
-                ${slots.map(slotCard).join("")}
-              </div>
+            <div role="group" aria-label="${row.role}" class="flex justify-center gap-1.5">
+              ${slots.map(slotCard).join("")}
             </div>`;
         })
         .join("");
@@ -1019,15 +1093,13 @@ for (const m of nextGwMatches) {
       const pct = Math.min(100, (cost / MAX_BUDGET) * 100);
       const overBudget = cost > MAX_BUDGET;
 
-      document.getElementById("budget-used").textContent = (
-        cost / 1_000_000
-      ).toFixed(2);
+      const budgetUsed = document.getElementById("budget-used");
+      budgetUsed.textContent = (cost / 1_000_000).toFixed(1).replace(".", ",");
+      budgetUsed.className = overBudget ? "text-rose-400" : "";
       document.getElementById("budget-remaining").textContent = overBudget
         ? `Superado por ${formatMoneyClient(cost - MAX_BUDGET)}`
         : `Quedan ${formatMoneyClient(MAX_BUDGET - cost)} disponibles`;
-      document.getElementById("budget-remaining").className = overBudget
-        ? "text-rose-400"
-        : "text-slate-400";
+      document.getElementById("budget-remaining").className = "sr-only";
 
       const bar = document.getElementById("budget-bar");
       bar.style.width = `${pct}%`;
@@ -1038,19 +1110,24 @@ for (const m of nextGwMatches) {
 
       const captainStatus = document.getElementById("captain-status");
       captainStatus.textContent = state.captainId
-        ? `Capitán: ${playersById.get(state.captainId).name}`
-        : "Sin capitán elegido";
-      captainStatus.className = state.captainId
-        ? "text-emerald-400"
-        : "text-slate-400";
+        ? `C: ${playersById.get(state.captainId).shortName}`
+        : "Sin capitán";
+      captainStatus.className = `max-w-28 shrink-0 truncate ${
+        state.captainId ? "text-amber-300" : "text-slate-500"
+      }`;
 
-      for (const btn of document.querySelectorAll(".formation-btn")) {
-        const active = btn.dataset.formation === state.formationKey;
-        btn.classList.toggle("bg-emerald-500/10", active);
-        btn.classList.toggle("text-emerald-400", active);
-        btn.classList.toggle("border-emerald-500/40", active);
-        btn.setAttribute("aria-pressed", String(active));
+      const stickyChanges = document.getElementById("sticky-changes");
+      if (changesMode) {
+        const used = computeChangesUsed();
+        stickyChanges.textContent = `${used}/${changesMode.limit} cambios`;
+        stickyChanges.className = `shrink-0 font-semibold ${
+          used > changesMode.limit ? "text-rose-400" : "text-emerald-400"
+        }`;
+      } else {
+        stickyChanges.className = "hidden";
       }
+
+      document.getElementById("formation-select").value = state.formationKey;
 
       document.getElementById("share-whatsapp").disabled = filled.length === 0;
 
@@ -1077,16 +1154,13 @@ for (const m of nextGwMatches) {
       document.getElementById("undo-btn").disabled = lastSnapshot === null;
     }
 
-    // Mientras el selector está abierto, el resto de la página se marca
-    // `inert`: así ni el ratón ni Tab pueden llegar a la navbar/formación de
-    // fondo ni al enlace "saltar al contenido" (evita tener que reimplementar
-    // un trap de foco a mano) y un lector de pantalla deja de verla. Se
-    // recorren los hijos de <body> en vez de fijar selectores concretos
-    // (header/footer/...) para que cubra cualquier cosa que haya alrededor.
-    function setBackgroundInert(isInert) {
-      const backdrop = document.getElementById("picker-backdrop");
+    // Mientras un panel (selector o acciones de jugador) está abierto, el
+    // resto de la página se marca `inert`: así ni el ratón ni Tab llegan al
+    // fondo (sin reimplementar un trap de foco) y un lector de pantalla deja
+    // de verlo. Se recorren los hijos de <body> para cubrir todo lo que haya.
+    function setBackgroundInert(isInert, backdrop) {
       for (const child of document.body.children) {
-        if (child.contains(backdrop)) {
+        if (backdrop && child.contains(backdrop)) {
           for (const grandchild of child.children) {
             if (grandchild === backdrop) continue;
             if (isInert) grandchild.setAttribute("inert", "");
@@ -1100,35 +1174,130 @@ for (const m of nextGwMatches) {
       }
     }
 
+    function showBackdrop(id) {
+      const backdrop = document.getElementById(id);
+      backdrop.classList.remove("hidden");
+      backdrop.classList.add("flex");
+      setBackgroundInert(true, backdrop);
+      return backdrop;
+    }
+
+    function hideBackdrop(id) {
+      const backdrop = document.getElementById(id);
+      if (backdrop.classList.contains("hidden")) return false;
+      backdrop.classList.add("hidden");
+      backdrop.classList.remove("flex");
+      setBackgroundInert(false, backdrop);
+      return true;
+    }
+
+    // En el móvil, abrir el teclado nada más abrir el selector tapa la lista.
+    const finePointer = window.matchMedia("(pointer: fine)").matches;
+
     function openPicker(slotId, triggerEl) {
       activeSlotId = slotId;
-      lastTrigger = triggerEl ?? null;
+      lastTrigger = triggerEl ?? lastTrigger ?? null;
       const slot = state.slots.find((s) => s.id === slotId);
       const label = POSITION_LABEL_LOWER[slot.position] ?? "jugador";
-      document.getElementById("picker-title").textContent = `Elegir ${label}`;
+      const current =
+        slot.playerId !== null ? playersById.get(slot.playerId) : null;
+      document.getElementById("picker-title").textContent = current
+        ? `Cambiar a ${current.shortName}`
+        : `Elegir ${label}`;
       document.getElementById("picker-search").value = "";
-      document
-        .getElementById("picker-remove")
-        .classList.toggle("hidden", slot.playerId === null);
       renderPickerList("");
-      document.getElementById("picker-backdrop").classList.remove("hidden");
-      document.getElementById("picker-backdrop").classList.add("flex");
-      setBackgroundInert(true);
-      document.getElementById("picker-search").focus();
+      showBackdrop("picker-backdrop");
+      document.getElementById("picker-list").scrollTop = 0;
+      if (finePointer) document.getElementById("picker-search").focus();
     }
 
     function closePicker() {
-      const backdrop = document.getElementById("picker-backdrop");
-      if (backdrop.classList.contains("hidden")) return;
+      if (!hideBackdrop("picker-backdrop")) return;
       activeSlotId = null;
-      backdrop.classList.add("hidden");
-      backdrop.classList.remove("flex");
-      setBackgroundInert(false);
       lastTrigger?.focus();
       lastTrigger = null;
     }
 
-    let pickerSort = "price";
+    // --- Acciones de un jugador del campo (panel desde abajo) --------------
+
+    let sheetSlotId = null;
+
+    function openSheet(slotId, triggerEl) {
+      const slot = state.slots.find((s) => s.id === slotId);
+      const player = playersById.get(slot.playerId);
+      if (!player) return;
+      sheetSlotId = slotId;
+      lastTrigger = triggerEl ?? null;
+      const rival = TEAM_NEXT_OPPONENT[player.id_team];
+      const status = player.status
+        ? `<span class="text-rose-300">${PLAYER_STATUS_LABELS[player.status] ?? "Baja"}</span> · `
+        : "";
+      document.getElementById("sheet-header").innerHTML = `
+        <img src="${player.photoUrl}" alt="" class="h-14 w-14 shrink-0 rounded-full bg-slate-800 object-cover" />
+        <div class="min-w-0">
+          <p id="sheet-title" class="truncate text-lg font-bold text-white">${player.name}</p>
+          <p class="text-sm text-slate-400">${status}${player.teamName} · ${formatMoneyClient(player.price)}</p>
+          <p class="text-sm text-slate-400">
+            ${rival ? `Rival: ${rival.name}` : `Sin partido en la ${NEXT_GW_NAME}`}
+            · J anterior: ${player.lastGwPoints ?? "–"} pts · forma ${player.form}
+          </p>
+        </div>`;
+      const isCaptain = state.captainId === player.id;
+      const eligible = player.price < MAX_CAPTAIN_PRICE;
+      const captainBtn = document.querySelector('[data-sheet="captain"]');
+      captainBtn.disabled = !isCaptain && !eligible;
+      captainBtn.textContent = isCaptain
+        ? "Quitar capitán"
+        : eligible
+          ? "Hacer capitán"
+          : `No puede ser capitán (cuesta ${formatMillions(MAX_CAPTAIN_PRICE)} o más)`;
+      document.querySelector('[data-sheet="profile"]').href =
+        `${PLAYER_URL_BASE}${player.id}/`;
+      showBackdrop("sheet-backdrop");
+      document.querySelector('[data-sheet="change"]').focus();
+    }
+
+    function closeSheet(restoreFocus = true) {
+      if (!hideBackdrop("sheet-backdrop")) return;
+      sheetSlotId = null;
+      if (restoreFocus) {
+        lastTrigger?.focus();
+        lastTrigger = null;
+      }
+    }
+
+    document.getElementById("sheet-backdrop").addEventListener("click", (e) => {
+      if (e.target.id === "sheet-backdrop") {
+        closeSheet();
+        return;
+      }
+      const btn = e.target.closest("[data-sheet]");
+      if (!btn || sheetSlotId === null) return;
+      const slot = state.slots.find((s) => s.id === sheetSlotId);
+      const action = btn.dataset.sheet;
+      if (action === "profile") return; // enlace normal
+      if (action === "close") {
+        closeSheet();
+      } else if (action === "change") {
+        const slotId = sheetSlotId;
+        closeSheet(false);
+        openPicker(slotId);
+      } else if (action === "captain") {
+        state.captainId =
+          state.captainId === slot.playerId ? null : slot.playerId;
+        closeSheet();
+        render();
+      } else if (action === "remove") {
+        snapshotForUndo();
+        if (state.captainId === slot.playerId) state.captainId = null;
+        slot.playerId = null;
+        closeSheet(false);
+        lastTrigger = null;
+        render();
+      }
+    });
+
+    let pickerSort = "form";
     const PICKER_SORTS = {
       price: (p) => p.price,
       points: (p) => p.points,
@@ -1140,50 +1309,70 @@ for (const m of nextGwMatches) {
       const slot = state.slots.find((s) => s.id === activeSlotId);
       const used = usedIds(activeSlotId);
       const remaining = MAX_BUDGET - totalCost(activeSlotId);
+      const onlyAffordable =
+        document.getElementById("picker-affordable").checked;
       const q = normalize(query.trim());
       const sortKey = PICKER_SORTS[pickerSort];
 
+      document.getElementById("picker-budget").textContent =
+        remaining >= 0
+          ? `Te caben jugadores de hasta ${formatMillions(remaining)}`
+          : `Te pasas del presupuesto en ${formatMillions(-remaining)}`;
+
       const candidates = players
         .filter((p) => p.position === slot.position && !used.has(p.id))
-        .filter((p) => !q || normalize(p.name).includes(q))
+        .filter(
+          (p) =>
+            !q ||
+            normalize(p.name).includes(q) ||
+            normalize(p.teamName).includes(q),
+        )
+        .filter(
+          (p) =>
+            !onlyAffordable || p.price <= remaining || p.id === slot.playerId,
+        )
         .sort((a, b) => sortKey(b) - sortKey(a) || b.price - a.price);
 
       const list = document.getElementById("picker-list");
       if (candidates.length === 0) {
-        list.innerHTML = `<li class="p-3 text-center text-sm text-slate-500">Sin resultados.</li>`;
+        list.innerHTML = `<li class="p-6 text-center text-sm text-slate-500">Sin resultados${onlyAffordable ? " que quepan en tu presupuesto" : ""}.</li>`;
         return;
       }
 
       list.innerHTML = candidates
         .map((p) => {
           const affordable = p.price <= remaining || p.id === slot.playerId;
+          const rival = TEAM_NEXT_OPPONENT[p.id_team];
+          const isCurrent = p.id === slot.playerId;
           return `
             <li>
               <button type="button" data-pick="${p.id}" ${affordable ? "" : "disabled"}
-                class="flex w-full items-center gap-3 rounded-xl px-2 py-2 text-left ${
-                  affordable
-                    ? "hover:bg-white/5"
-                    : "cursor-not-allowed opacity-40"
-                }">
-                <div class="relative h-9 w-9 shrink-0">
+                class="flex w-full items-center gap-3 rounded-xl px-2 py-2.5 text-left ${
+                  isCurrent ? "bg-emerald-500/10" : ""
+                } ${affordable ? "hover:bg-white/5" : "cursor-not-allowed opacity-40"}">
+                <span class="relative h-11 w-11 shrink-0">
                   <img src="${p.photoUrl}" alt="" class="h-full w-full rounded-full bg-slate-800 object-cover" loading="lazy" />
                   ${
                     p.status
-                      ? `<span class="absolute -right-1 -top-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-rose-500 text-[8px] font-bold text-white ring-1 ring-slate-900" title="${PLAYER_STATUS_LABELS[p.status] ?? "Baja"}" aria-label="${PLAYER_STATUS_LABELS[p.status] ?? "Baja"}">!</span>`
+                      ? `<span class="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-rose-500 text-[10px] font-black text-white ring-2 ring-slate-900" title="${PLAYER_STATUS_LABELS[p.status] ?? "Baja"}" aria-label="${PLAYER_STATUS_LABELS[p.status] ?? "Baja"}">!</span>`
                       : ""
                   }
-                </div>
-                <span class="min-w-0 flex-1">
-                  <span class="block truncate text-sm font-medium text-white">${p.name}</span>
-                  <span class="block truncate text-xs text-slate-500">${p.teamName} · ${p.points} pts · forma ${p.form} · ${p.ownershipPct}% liga</span>
                 </span>
-                ${
-                  TEAM_NEXT_OPPONENT[p.id_team]
-                    ? `<img src="${TEAM_NEXT_OPPONENT[p.id_team].logoUrl}" alt="" title="Rival: ${TEAM_NEXT_OPPONENT[p.id_team].name}" class="h-6 w-6 shrink-0 rounded-full bg-slate-800 object-contain p-0.5" />`
-                    : `<span class="shrink-0 text-[10px] text-amber-400" title="Su equipo no juega en la ${NEXT_GW_NAME}">sin partido</span>`
-                }
-                <span class="shrink-0 text-sm font-semibold ${affordable ? "text-emerald-400" : "text-rose-400"}">
-                  ${formatMoneyClient(p.price)}
+                <span class="min-w-0 flex-1">
+                  <span class="flex items-baseline justify-between gap-2">
+                    <span class="truncate text-[15px] font-semibold text-white">${p.name}</span>
+                    <span class="shrink-0 text-[15px] font-semibold ${affordable ? "text-emerald-400" : "text-rose-400"}">${formatMillions(p.price)}</span>
+                  </span>
+                  <span class="mt-0.5 flex items-center gap-1.5 text-[13px] text-slate-400">
+                    ${
+                      rival
+                        ? `<img src="${rival.logoUrl}" alt="" class="h-4 w-4 shrink-0" /><span class="truncate">vs ${rival.name}</span>`
+                        : `<span class="text-amber-400">sin partido</span>`
+                    }
+                  </span>
+                  <span class="mt-0.5 block text-[13px] text-slate-400">
+                    Forma <b class="text-slate-200">${p.form}</b> · ${p.points} pts · ${p.ownershipPct}% liga
+                  </span>
                 </span>
               </button>
             </li>`;
@@ -1192,13 +1381,11 @@ for (const m of nextGwMatches) {
     }
 
     document
-      .getElementById("formation-selector")
-      .addEventListener("click", (e) => {
-        const btn = e.target.closest(".formation-btn");
-        if (!btn) return;
+      .getElementById("formation-select")
+      .addEventListener("change", (e) => {
         snapshotForUndo();
-        state.slots = buildSlots(btn.dataset.formation, state.slots);
-        state.formationKey = btn.dataset.formation;
+        state.slots = buildSlots(e.target.value, state.slots);
+        state.formationKey = e.target.value;
         render();
       });
 
@@ -1206,20 +1393,8 @@ for (const m of nextGwMatches) {
       const btn = e.target.closest("button[data-slot]");
       if (!btn) return;
       const slot = state.slots.find((s) => s.id === btn.dataset.slot);
-      const action = btn.dataset.action;
-
-      if (action === "open") {
-        openPicker(slot.id, btn);
-      } else if (action === "remove") {
-        snapshotForUndo();
-        if (state.captainId === slot.playerId) state.captainId = null;
-        slot.playerId = null;
-        render();
-      } else if (action === "captain") {
-        state.captainId =
-          state.captainId === slot.playerId ? null : slot.playerId;
-        render();
-      }
+      if (btn.dataset.action === "open") openPicker(slot.id, btn);
+      else if (btn.dataset.action === "sheet") openSheet(slot.id, btn);
     });
 
     document.getElementById("picker-list").addEventListener("click", (e) => {
@@ -1232,18 +1407,15 @@ for (const m of nextGwMatches) {
       render();
     });
 
-    document.getElementById("picker-remove").addEventListener("click", () => {
-      const slot = state.slots.find((s) => s.id === activeSlotId);
-      snapshotForUndo();
-      if (state.captainId === slot.playerId) state.captainId = null;
-      slot.playerId = null;
-      closePicker();
-      render();
-    });
-
     document.getElementById("picker-search").addEventListener("input", (e) => {
       renderPickerList(e.target.value);
     });
+
+    document
+      .getElementById("picker-affordable")
+      .addEventListener("change", () =>
+        renderPickerList(document.getElementById("picker-search").value),
+      );
 
     document.getElementById("picker-sort").addEventListener("click", (e) => {
       const btn = e.target.closest("[data-sort]");
@@ -1264,7 +1436,15 @@ for (const m of nextGwMatches) {
         if (e.target.id === "picker-backdrop") closePicker();
       });
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closePicker();
+      if (e.key !== "Escape") return;
+      closePicker();
+      closeSheet();
+    });
+
+    // El menú ⋯ se cierra al tocar fuera de él.
+    const onceMenu = document.getElementById("once-menu");
+    document.addEventListener("click", (e) => {
+      if (onceMenu.open && !onceMenu.contains(e.target)) onceMenu.open = false;
     });
 
     document.getElementById("undo-btn").addEventListener("click", () => {
