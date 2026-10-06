@@ -1,4 +1,5 @@
 ---
+import SubTabs from "./SubTabs.astro";
 import { url } from "../lib/data";
 
 interface Props {
@@ -6,31 +7,22 @@ interface Props {
 }
 
 const { active } = Astro.props;
-const tabs = [
-  { key: "clasificacion", label: "Clasificación", href: url("/liga") },
-  {
-    key: "estadisticas",
-    label: "Estadísticas de la liga",
-    href: url("/liga/estadisticas"),
-  },
-  { key: "cara-a-cara", label: "Cara a cara", href: url("/liga/cara-a-cara") },
-];
 ---
 
-<nav aria-label="Secciones de la liga" class="mb-8 flex flex-wrap gap-2">
-  {
-    tabs.map((t) => (
-      <a
-        href={t.href}
-        aria-current={t.key === active ? "page" : undefined}
-        class={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
-          t.key === active
-            ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-400"
-            : "border-white/10 text-slate-300 hover:bg-white/5 hover:text-white"
-        }`}
-      >
-        {t.label}
-      </a>
-    ))
-  }
-</nav>
+<SubTabs
+  label="Secciones de la liga"
+  active={active}
+  tabs={[
+    { key: "clasificacion", label: "Clasificación", href: url("/liga") },
+    {
+      key: "estadisticas",
+      label: "Estadísticas",
+      href: url("/liga/estadisticas"),
+    },
+    {
+      key: "cara-a-cara",
+      label: "Cara a cara",
+      href: url("/liga/cara-a-cara"),
+    },
+  ]}
+/>

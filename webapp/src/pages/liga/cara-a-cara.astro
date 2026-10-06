@@ -141,7 +141,7 @@ const playerUrlBase = url("/jugadores/");
       const [id, pts, cap] = entry;
       const info = typeof id === "number" ? DATA.players[id] : null;
       const label = info
-        ? `<a href="${playerUrlBase}${id}" class="hover:text-white">${escapeHtml(info[0])}</a>`
+        ? `<a href="${playerUrlBase}${id}/" class="hover:text-white">${escapeHtml(info[0])}</a>`
         : escapeHtml(id);
       const shown =
         captainOf !== undefined

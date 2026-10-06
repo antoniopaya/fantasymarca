@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import RankingList from "../components/RankingList.astro";
+import JugadoresTabs from "../components/JugadoresTabs.astro";
 import PlayersTable from "../components/PlayersTable.astro";
 import DonutChart from "../components/charts/DonutChart.astro";
 import CategoryBarChart from "../components/charts/CategoryBarChart.astro";
@@ -193,12 +194,8 @@ const sections = [
   title="Estadísticas"
   description="Puntos, precio Fantástica, valor de mercado y cláusulas en Fantasy Marca"
 >
-  <div class="mb-8">
-    <h1 class="text-3xl font-black text-white">Estadísticas y análisis</h1>
-    <p class="mt-1 text-sm text-slate-400">
-      Basado en el catálogo completo de {summaries.length} jugadores
-    </p>
-  </div>
+  <h1 class="mb-4 text-3xl font-black text-white">Jugadores</h1>
+  <JugadoresTabs active="estadisticas" />
 
   <nav
     id="stats-mobile-nav"

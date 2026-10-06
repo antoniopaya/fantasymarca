@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { url } from "../lib/data";
+---
+
+<Layout title="Sin conexión">
+  <div class="py-16 text-center">
+    <h1 class="text-2xl font-black text-white">Sin conexión</h1>
+    <p class="mx-auto mt-2 max-w-sm text-sm text-slate-400">
+      Esta página no estaba guardada en el móvil. Las que ya has abierto
+      (Inicio, Mi 11, Jornada, Liga...) sí funcionan sin conexión.
+    </p>
+    <a
+      href={url("/")}
+      class="mt-6 inline-block rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-slate-950"
+    >
+      Ir al inicio
+    </a>
+  </div>
+</Layout>

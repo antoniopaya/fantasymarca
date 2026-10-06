@@ -2,28 +2,60 @@
 import { url } from "../lib/data";
 import { FAMILIA } from "../lib/yo";
 
+// Las 5 secciones, en el orden de uso semanal: arriba en escritorio, como
+// barra de pestañas abajo en el móvil (como una app).
 const navItems = [
-  { href: url("/"), label: "Inicio", match: "/" },
-  { href: url("/jornada"), label: "Próxima jornada", match: "/jornada" },
-  { href: url("/jugadores"), label: "Jugadores", match: "/jugadores" },
-  { href: url("/crear-once"), label: "Crear once", match: "/crear-once" },
-  { href: url("/liga"), label: "Liga", match: "/liga" },
-  { href: url("/estadisticas"), label: "Estadísticas", match: "/estadisticas" },
+  {
+    href: url("/"),
+    label: "Inicio",
+    match: ["/"],
+    icon: "M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z",
+  },
+  {
+    href: url("/crear-once"),
+    label: "Mi 11",
+    match: ["/crear-once"],
+    icon: "M4 4h16v16H4zM4 12h16M12 4v4m0 8v4M9 12a3 3 0 0 0 6 0 3 3 0 0 0-6 0",
+  },
+  {
+    href: url("/jugadores"),
+    label: "Jugadores",
+    match: ["/jugadores", "/estadisticas"],
+    icon: "M16 19v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1M9 10a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m13 9v-1a4 4 0 0 0-3-3.9M16 3.1a3.5 3.5 0 0 1 0 6.8",
+  },
+  {
+    href: url("/jornada"),
+    label: "Jornada",
+    match: ["/jornada"],
+    icon: "M4 6h16v14H4zM4 10h16M8 3v4m8-4v4",
+  },
+  {
+    href: url("/liga"),
+    label: "Liga",
+    match: ["/liga"],
+    icon: "M8 21h8m-4-4v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4v1a3 3 0 0 0 3 3m10-4h3v1a3 3 0 0 1-3 3",
+  },
 ];
 
 // No fiarse de si Astro.url.pathname incluye o no el `base` configurado (varía
 // entre dev/build): se le quita a mano antes de comparar contra `match`.
 const baseStripped = import.meta.env.BASE_URL.replace(/\/$/, "");
-const currentPath = Astro.url.pathname.startsWith(baseStripped)
+const rawPath = Astro.url.pathname.startsWith(baseStripped)
   ? Astro.url.pathname.slice(baseStripped.length) || "/"
   : Astro.url.pathname;
+const currentPath = rawPath.replace(/(.)\/$/, "$1");
+const isActive = (match: string[]) =>
+  match.some((m) =>
+    m === "/" ? currentPath === "/" : currentPath.startsWith(m),
+  );
 ---
 
 <header
-  class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-md"
+  class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 pt-[env(safe-area-inset-top)] backdrop-blur-md"
 >
   <nav
-    class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6"
+    class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6"
+    aria-label="Principal"
   >
     <a
       href={url("/")}
@@ -39,71 +71,49 @@ const currentPath = Astro.url.pathname.startsWith(baseStripped)
       </span>
     </a>
 
-    <div class="hidden items-center gap-1 sm:flex">
+    <div class="hidden items-center gap-1 md:flex">
       {
-        navItems.map((item) => {
-          const isActive =
-            item.match === "/"
-              ? currentPath === "/"
-              : currentPath.startsWith(item.match);
-          return (
-            <a
-              href={item.href}
-              class={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                isActive
-                  ? "bg-emerald-500/10 text-emerald-400"
-                  : "text-slate-300 hover:bg-white/5 hover:text-white"
-              }`}
-            >
-              {item.label}
-            </a>
-          );
-        })
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            aria-current={isActive(item.match) ? "page" : undefined}
+            class={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+              isActive(item.match)
+                ? "bg-emerald-500/10 text-emerald-400"
+                : "text-slate-300 hover:bg-white/5 hover:text-white"
+            }`}
+          >
+            {item.label}
+          </a>
+        ))
       }
     </div>
 
-    <label class="ml-auto flex items-center gap-2 sm:ml-2">
-      <span class="sr-only sm:not-sr-only sm:text-xs sm:text-slate-500"
-        >¿Quién eres?</span
-      >
-      <select
-        id="yo-select"
-        class="rounded-full border border-white/10 bg-slate-900/60 px-3 py-1.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
-      >
-        <option value="">Elegir…</option>
-        {FAMILIA.map((name) => <option value={name}>{name}</option>)}
-      </select>
-    </label>
-
-    <details class="relative ml-2 sm:hidden">
+    <details class="yo-menu relative">
       <summary
-        class="flex h-9 w-9 cursor-pointer list-none items-center justify-center rounded-lg border border-white/10 text-slate-200 [&::-webkit-details-marker]:hidden"
+        class="flex cursor-pointer list-none items-center gap-2 rounded-full border border-white/10 py-1 pr-3 pl-1 text-sm text-slate-200 hover:bg-white/5 [&::-webkit-details-marker]:hidden"
+        aria-label="¿Quién eres?"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
+        <span
+          data-yo-initial
+          class="flex h-7 w-7 items-center justify-center rounded-full bg-slate-800 text-xs font-bold text-slate-300"
+          >?</span
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
+        <span data-yo-name class="max-w-24 truncate">¿Quién eres?</span>
       </summary>
       <div
         class="absolute right-0 mt-2 w-48 rounded-xl border border-white/10 bg-slate-900 p-2 shadow-xl"
       >
+        <p class="px-3 pt-1 pb-2 text-xs text-slate-500">¿Quién eres?</p>
         {
-          navItems.map((item) => (
-            <a
-              href={item.href}
-              class="block rounded-lg px-3 py-2 text-sm text-slate-200 hover:bg-white/5"
+          FAMILIA.map((name) => (
+            <button
+              type="button"
+              data-yo-set={name}
+              class="block w-full rounded-lg px-3 py-2.5 text-left text-sm text-slate-200 hover:bg-white/5 data-[active=true]:text-emerald-400"
             >
-              {item.label}
-            </a>
+              {name}
+            </button>
           ))
         }
       </div>
@@ -111,15 +121,133 @@ const currentPath = Astro.url.pathname.startsWith(baseStripped)
   </nav>
 </header>
 
+<nav
+  aria-label="Secciones"
+  class="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-slate-950/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden"
+>
+  <ul class="grid grid-cols-5">
+    {
+      navItems.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            aria-current={isActive(item.match) ? "page" : undefined}
+            class={`flex flex-col items-center gap-1 py-2 text-[11px] font-medium ${
+              isActive(item.match) ? "text-emerald-400" : "text-slate-400"
+            }`}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d={item.icon} />
+            </svg>
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<dialog
+  id="yo-onboarding"
+  class="m-auto w-[min(22rem,calc(100%-2rem))] rounded-2xl border border-white/10 bg-slate-900 p-6 text-slate-100 shadow-2xl backdrop:bg-black/70"
+  aria-labelledby="yo-onboarding-title"
+>
+  <h2 id="yo-onboarding-title" class="text-xl font-black text-white">
+    ¿Quién eres?
+  </h2>
+  <p class="mt-1 text-sm text-slate-400">
+    Así la web te enseña tu clasificación, tu 11 y tus cambios. Se recuerda en
+    este móvil.
+  </p>
+  <div class="mt-5 grid gap-2">
+    {
+      FAMILIA.map((name) => (
+        <button
+          type="button"
+          data-yo-set={name}
+          class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-3.5 text-left text-base font-semibold text-white hover:border-emerald-500/50"
+        >
+          {name}
+        </button>
+      ))
+    }
+  </div>
+  <button
+    type="button"
+    data-yo-dismiss
+    class="mt-4 w-full rounded-xl px-4 py-2 text-sm text-slate-400 hover:text-white"
+  >
+    Ahora no
+  </button>
+</dialog>
+
 <script>
   import { FAMILIA, getYo, setYo, YO_EVENT } from "../lib/yo";
 
-  const select = document.getElementById("yo-select") as HTMLSelectElement;
-  select.value = getYo() ?? "";
-  select.addEventListener("change", () => {
-    setYo(FAMILIA.find((f) => f === select.value) ?? null);
+  const DISMISS_KEY = "fantasymarca:yo-onboarding-dismissed";
+  const menu = document.querySelector<HTMLDetailsElement>(".yo-menu");
+  const dialog = document.getElementById("yo-onboarding") as HTMLDialogElement;
+
+  function paint(yo: string | null) {
+    const initial = document.querySelector<HTMLElement>("[data-yo-initial]");
+    const name = document.querySelector<HTMLElement>("[data-yo-name]");
+    if (initial) {
+      initial.textContent = yo ? yo.charAt(0) : "?";
+      initial.className = yo
+        ? "flex h-7 w-7 items-center justify-center rounded-full bg-emerald-500 text-xs font-bold text-slate-950"
+        : "flex h-7 w-7 items-center justify-center rounded-full bg-slate-800 text-xs font-bold text-slate-300";
+    }
+    if (name) name.textContent = yo ?? "¿Quién eres?";
+    for (const btn of document.querySelectorAll<HTMLElement>(
+      ".yo-menu [data-yo-set]",
+    )) {
+      btn.dataset.active = String(btn.dataset.yoSet === yo);
+    }
+  }
+
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    const setBtn = target.closest<HTMLElement>("[data-yo-set]");
+    if (setBtn) {
+      setYo(FAMILIA.find((f) => f === setBtn.dataset.yoSet) ?? null);
+      if (menu) menu.open = false;
+      if (dialog.open) dialog.close();
+      return;
+    }
+    if (target.closest("[data-yo-dismiss]")) {
+      try {
+        sessionStorage.setItem(DISMISS_KEY, "1");
+      } catch {
+        // sin sessionStorage: se volverá a preguntar en la próxima página
+      }
+      dialog.close();
+      return;
+    }
+    // Cerrar el menú al tocar fuera.
+    if (menu?.open && !menu.contains(target)) menu.open = false;
   });
-  window.addEventListener(YO_EVENT, (e) => {
-    select.value = (e as CustomEvent<string | null>).detail ?? "";
-  });
+
+  window.addEventListener(YO_EVENT, (e) =>
+    paint((e as CustomEvent<string | null>).detail),
+  );
+
+  const yo = getYo();
+  paint(yo);
+  let dismissed = false;
+  try {
+    dismissed = sessionStorage.getItem(DISMISS_KEY) === "1";
+  } catch {
+    dismissed = false;
+  }
+  if (!yo && !dismissed) dialog.showModal();
 </script>

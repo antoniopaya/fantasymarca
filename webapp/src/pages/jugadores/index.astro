@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import PlayerCard from "../../components/PlayerCard.astro";
+import JugadoresTabs from "../../components/JugadoresTabs.astro";
 import {
   getAllPlayerSummaries,
   getTeams,
@@ -28,15 +29,11 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
   title="Jugadores"
   description="Busca, filtra y ordena jugadores de LaLiga Fantasy por nombre, equipo, posición o valor."
 >
-  <div class="mb-8">
-    <h1 class="text-3xl font-black text-white">Buscar jugadores</h1>
-    <p class="mt-1 text-sm text-slate-400">
-      {players.length} jugadores en el catálogo
-    </p>
-  </div>
+  <h1 class="mb-4 text-3xl font-black text-white">Jugadores</h1>
+  <JugadoresTabs active="buscar" />
 
   <div
-    class="sticky top-[61px] z-10 -mx-4 mb-6 flex flex-col gap-3 border-b border-white/10 bg-slate-950/95 px-4 py-3 backdrop-blur-md sm:flex-row sm:items-center"
+    class="sticky top-[calc(62px+env(safe-area-inset-top))] z-10 -mx-4 mb-6 flex flex-col gap-3 border-b border-white/10 bg-slate-950/95 px-4 py-3 backdrop-blur-md sm:flex-row sm:items-center"
   >
     <div class="relative flex-1">
       <svg

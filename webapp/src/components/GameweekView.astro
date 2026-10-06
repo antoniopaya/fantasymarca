@@ -174,7 +174,7 @@ for (const match of sortedMatches) {
   const jump = document.getElementById("jornada-jump") as HTMLSelectElement;
   const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   jump.addEventListener("change", () => {
-    window.location.href = `${base}/jornada/${jump.value}`;
+    window.location.href = `${base}/jornada/${jump.value}/`;
   });
 
   const countdownEl = document.getElementById("kickoff-countdown");

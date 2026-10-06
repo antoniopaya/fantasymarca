@@ -11,21 +11,37 @@ interface Props {
 
 const {
   title,
-  description = "Panel de Fantasy Marca: jornadas, jugadores y estadísticas.",
+  description = "Prepara el 11 de la liga Fantástica: tu once, cambios, capitán, rivales y estadísticas.",
 } = Astro.props;
 const fullTitle = title ? `${title} · FantasyMarca` : "FantasyMarca";
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <link rel="icon" type="image/svg+xml" href={url("/favicon.svg")} />
+    <link rel="manifest" href={url("/manifest.webmanifest")} />
+    <link rel="apple-touch-icon" href={url("/icons/apple-touch-icon.png")} />
+    <meta name="theme-color" content="#020617" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="FantasyMarca" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <meta name="description" content={description} />
     <title>{fullTitle}</title>
   </head>
-  <body class="min-h-screen bg-slate-950 text-slate-100">
+  <body class="min-h-screen bg-slate-950 text-slate-100" data-base={base}>
     <a
       href="#main-content"
       class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[100] focus:rounded-full focus:bg-emerald-500 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-slate-950"
@@ -34,10 +50,29 @@ const fullTitle = title ? `${title} · FantasyMarca` : "FantasyMarca";
     </a>
     <div class="bg-grid pointer-events-none fixed inset-0 -z-10"></div>
     <Navbar />
-    <main id="main-content" class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+    <main id="main-content" class="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
       <slot />
     </main>
     <Footer />
+    <!-- Hueco para la barra de pestañas fija del móvil -->
+    <div class="h-[calc(4.5rem+env(safe-area-inset-bottom))] md:hidden"></div>
+
+    <div
+      id="sw-update"
+      hidden
+      role="status"
+      class="fixed inset-x-4 bottom-[calc(5rem+env(safe-area-inset-bottom))] z-[60] mx-auto flex max-w-sm items-center justify-between gap-3 rounded-2xl border border-emerald-500/30 bg-slate-900 px-4 py-3 text-sm text-slate-200 shadow-2xl md:bottom-6"
+    >
+      <span>Hay datos nuevos.</span>
+      <button
+        type="button"
+        id="sw-reload"
+        class="rounded-full bg-emerald-500 px-4 py-1.5 text-sm font-semibold text-slate-950"
+      >
+        Recargar
+      </button>
+    </div>
+
     <script>
       // Todas las fotos de jugador/escudo salen del CDN de fantasy.marca.com:
       // si un jugador nuevo o un escudo todavía no está dado de alta ahí, la
@@ -55,5 +90,6 @@ const fullTitle = title ? `${title} · FantasyMarca` : "FantasyMarca";
         true,
       );
     </script>
+    <script src="../lib/pwa.ts"></script>
   </body>
 </html>

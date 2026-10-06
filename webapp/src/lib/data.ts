@@ -390,7 +390,20 @@ export function teamLogoUrl(id: number): string {
  */
 export function url(path: string): string {
   const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-  return `${base}${path}`;
+  return `${base}${withTrailingSlash(path)}`;
+}
+
+/**
+ * GitHub Pages redirige /pagina a /pagina/, y un service worker no puede
+ * devolver respuestas redirigidas a una navegación: sin la barra final, esas
+ * páginas no funcionarían sin conexión. Los ficheros (favicon.svg...) se dejan igual.
+ */
+function withTrailingSlash(path: string): string {
+  const match = path.match(/^([^?#]*)(.*)$/);
+  const [pathname, rest] = match ? [match[1], match[2]] : [path, ""];
+  const last = pathname.split("/").pop() ?? "";
+  if (pathname.endsWith("/") || last.includes(".")) return path;
+  return `${pathname}/${rest}`;
 }
 
 export function formatMoney(value: number): string {

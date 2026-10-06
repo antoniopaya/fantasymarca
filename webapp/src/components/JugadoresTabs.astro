@@ -1,0 +1,19 @@
+---
+import SubTabs from "./SubTabs.astro";
+import { url } from "../lib/data";
+
+interface Props {
+  active: "buscar" | "estadisticas";
+}
+
+const { active } = Astro.props;
+---
+
+<SubTabs
+  label="Secciones de jugadores"
+  active={active}
+  tabs={[
+    { key: "buscar", label: "Buscar", href: url("/jugadores") },
+    { key: "estadisticas", label: "Estadísticas", href: url("/estadisticas") },
+  ]}
+/>
