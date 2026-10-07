@@ -16,6 +16,15 @@ on:
         description: "Dispara deploy.yml aunque no cambien los datos"
         type: boolean
         default: false
+      runner:
+        # analiticafantasy bloquea (403) a los servidores de GitHub. "local"
+        # ejecuta el refresco en el runner del ordenador de casa, que solo
+        # está conectado mientras corre ./actualizar.sh. Solo se puede elegir
+        # lanzándolo a mano (los cron y los pull requests nunca lo usan).
+        description: "Dónde ejecutarlo"
+        type: choice
+        options: [github, local]
+        default: github
 
 permissions:
   contents: write
@@ -24,15 +33,26 @@ permissions:
 
 jobs:
   refresh:
-    runs-on: ubuntu-latest
+    runs-on: ${{ inputs.runner == 'local' && fromJSON('["self-hosted", "fantasymarca-local"]') || 'ubuntu-latest' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Python
+        if: inputs.runner != 'local'
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
+
+      - name: Python del ordenador local (venv reutilizable)
+        # setup-python no tiene versiones para todas las distribuciones; en
+        # local se usa el python3 del sistema en un venv que se conserva
+        # entre ejecuciones para no reinstalar pandas/scikit-learn cada vez.
+        if: inputs.runner == 'local'
+        run: |
+          VENV="$RUNNER_TOOL_CACHE/fantasymarca-venv"
+          [ -x "$VENV/bin/python" ] || python3 -m venv "$VENV"
+          echo "$VENV/bin" >> "$GITHUB_PATH"
 
       - name: Install dependencies
         run: pip install -r fantasy_api/requirements.txt
@@ -54,7 +74,7 @@ jobs:
         working-directory: fantasy_api
         run: python main.py
 
-      - name: Scrape alineaciones probables (futbolfantasy)
+      - name: Scrape alineaciones probables (futbolfantasy + analiticafantasy)
         # Si la web de futbolfantasy falla o cambia, el modelo sigue
         # funcionando sin alineaciones: no debe bloquear el refresco.
         continue-on-error: true
@@ -76,6 +96,7 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Actualiza datos de fantasy.marca.com [automated]"
+            git pull --rebase
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
@@ -90,3 +111,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run deploy.yml --ref main
+
+      - name: Borrar credenciales
+        # En el runner local el directorio de trabajo se queda en disco.
+        if: always()
+        run: rm -f fantasy_api/auth_store.json
