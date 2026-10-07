@@ -72,7 +72,10 @@ const players = getAllPlayerSummaries()
         ? difficulty(fixture.rivalId, p.position, fixture.home)
         : null,
       home: fixture?.home ?? null,
-      ffProb: prediction(p.id, nextGameweek.number)?.ff_prob ?? null,
+      ffProb: prediction(p.id, nextGameweek.number)?.prob ?? null,
+      probFf: prediction(p.id, nextGameweek.number)?.prob_ff ?? null,
+      probAf: prediction(p.id, nextGameweek.number)?.prob_af ?? null,
+      discrepancy: prediction(p.id, nextGameweek.number)?.discrepancy ?? false,
       ...(() => {
         const h = expectedPointsHorizon(p);
         return { xp3: h.total, xpByGw: h.perGw };
@@ -807,7 +810,12 @@ for (const m of nextGwMatches) {
         (p) => !p.status && p.ffProb !== null && p.ffProb <= 30,
       )) {
         warnings.push(
-          `${p.name}: probable suplente (${p.ffProb}% de titular según futbolfantasy)`,
+          `${p.name}: probable suplente (${p.ffProb}% de titular según las alineaciones probables)`,
+        );
+      }
+      for (const p of filled.filter((p) => p.discrepancy)) {
+        warnings.push(
+          `${p.name}: las alineaciones no coinciden (futbolfantasy ${p.probFf}%, analiticafantasy ${p.probAf}%)`,
         );
       }
       if (totalCost(null) > MAX_BUDGET) {
@@ -1290,7 +1298,7 @@ for (const m of nextGwMatches) {
             ${rival ? `vs ${rival.name} ${player.home ? "(casa)" : "(fuera)"} ${diffChip(player)}` : `Sin partido en la ${NEXT_GW_NAME}`}
           </p>
           <p class="text-sm text-slate-400">
-            <b class="text-emerald-300">≈${formatXp(player.xp)} pts</b> esperados${player.ffProb !== null ? ` · titular ${player.ffProb}%` : ""} · J anterior: ${player.lastGwPoints ?? "–"} · forma ${player.form}
+            <b class="text-emerald-300">≈${formatXp(player.xp)} pts</b> esperados${player.ffProb !== null ? ` · titular ${player.ffProb}%${player.probFf !== null && player.probAf !== null ? ` (futbolfantasy ${player.probFf}%, analiticafantasy ${player.probAf}%)` : ""}` : ""} · J anterior: ${player.lastGwPoints ?? "–"} · forma ${player.form}
           </p>
           <p class="text-sm text-slate-400">
             Próximas: ${player.xpByGw.map((x) => `J${x.gw} ≈${formatXp(x.xp)}`).join(" · ")} = <b class="text-slate-200">≈${formatXp(player.xp3)}</b>
@@ -1433,7 +1441,7 @@ for (const m of nextGwMatches) {
                     }
                   </span>
                   <span class="mt-0.5 block text-[13px] text-slate-400">
-                    <b class="text-emerald-300">≈${formatXp(p.xp)}</b> · 3 jorn. ≈${formatXp(p.xp3)}${p.ffProb !== null ? ` · tit. ${p.ffProb}%` : ""} · forma ${p.form} · ${p.ownershipPct}% liga
+                    <b class="text-emerald-300">≈${formatXp(p.xp)}</b> · 3 jorn. ≈${formatXp(p.xp3)}${p.ffProb !== null ? ` · tit. ${p.ffProb}%${p.discrepancy ? " ≠" : ""}` : ""} · forma ${p.form} · ${p.ownershipPct}% liga
                   </span>
                 </span>
               </button>

@@ -22,7 +22,7 @@ temporada pasada no se usa: no mejoraba la validación.
 
 Alineaciones probables (scrape_alineaciones.py): para la jornada a predecir
 se combinan con P(juega) del modelo. Cuando haya al menos 2 jornadas con
-alineaciones guardadas en alineaciones_hist/, la probabilidad de futbolfantasy
+alineaciones guardadas en alineaciones_hist/, la probabilidad de titular
 entra además como variable del modelo y aprende su peso sola.
 
 Validación: "origen móvil". Para cada jornada k ya jugada (desde la 4), se
@@ -364,8 +364,9 @@ def summarize(results):
 
 def blend_with_lineups(p_model: np.ndarray, ff_prob: np.ndarray) -> np.ndarray:
     """Mientras el modelo no tenga historia de alineaciones para aprender su
-    peso: 70% futbolfantasy (sabe de lesiones y rotaciones de esta semana),
-    30% lo que dice la historia del jugador. Un 0% de futbolfantasy (baja,
+    peso: 70% alineaciones probables (media de futbolfantasy y
+    analiticafantasy, que saben de lesiones y rotaciones de esta semana),
+    30% lo que dice la historia del jugador. Un 0% en las alineaciones (baja,
     descartado) manda casi del todo."""
     ff = ff_prob / 100
     blended = 0.7 * ff + 0.3 * p_model
@@ -435,7 +436,7 @@ def main() -> None:
         if g == next_gw:
             ff_prob = rows["id"].map(lambda i: ff_now[i]["prob"] if i in ff_now else np.nan).to_numpy(dtype=float)
             p_play = p_model if use_ff_feature else blend_with_lineups(p_model, ff_prob)
-            # Sin dato de futbolfantasy, el estado de Marca (lesión/sanción) manda.
+            # Sin alineación probable, el estado de Marca (lesión/sanción) manda.
             out_status = status.isin(["injury", "red", "other"]).to_numpy() & np.isnan(ff_prob)
             p_play = np.where(out_status, 0.0, p_play)
             p_play = np.where(status.eq("doubt").to_numpy() & np.isnan(ff_prob), p_play * 0.5, p_play)
@@ -455,8 +456,11 @@ def main() -> None:
                         "xp": round(float(r.xp), 2),
                         "p_play": round(float(r.p_play), 3),
                         "if_plays": round(float(r.if_plays), 2),
-                        "ff_prob": ff["prob"] if ff else None,
-                        "ff_status": ff["status"] if ff else None,
+                        # Probabilidad de titular: media de las dos fuentes y cada una.
+                        "prob": ff["prob"] if ff else None,
+                        "prob_ff": ff.get("prob_ff") if ff else None,
+                        "prob_af": ff.get("prob_af") if ff else None,
+                        "discrepancy": bool(ff.get("discrepancy")) if ff else False,
                     }
                 )
         if g == next_gw:
@@ -486,7 +490,7 @@ def main() -> None:
         ff = ff_now.get(r.id)
         print(
             f"  {names.get(r.id, r.id):24} xp {r.xp:5.2f} = P {r.p_play:.2f} x {r.if_plays:5.2f}"
-            f"  (ff {ff['prob'] if ff else '-'}%)",
+            f"  (alineaciones {ff['prob'] if ff else '-'}%)",
             file=sys.stderr,
         )
 

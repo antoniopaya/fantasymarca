@@ -224,9 +224,12 @@ export interface Prediction {
   p_play: number;
   /** Puntos esperados si juega. */
   if_plays: number;
-  /** Probabilidad de titular según futbolfantasy (0-100), si la hay. */
-  ff_prob: number | null;
-  ff_status: "titular" | "suplente" | null;
+  /** Probabilidad de titular (0-100): media de futbolfantasy y analiticafantasy. */
+  prob: number | null;
+  prob_ff: number | null;
+  prob_af: number | null;
+  /** Una fuente lo pone de titular y la otra no, o se separan 40+ puntos. */
+  discrepancy: boolean;
   /** Puntos esperados en cada jornada del horizonte ("8": 6.4, "9": ...). */
   next: Record<string, number>;
 }

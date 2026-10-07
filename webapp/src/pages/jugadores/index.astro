@@ -125,7 +125,8 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       players.map((player) => {
         const liga = ligaOf(player.id);
         const xp = expectedPoints(player);
-        const ffProb = prediction(player.id)?.ff_prob ?? null;
+        const lineup = prediction(player.id);
+        const ffProb = lineup?.prob ?? null;
         return (
           <div
             data-player-card
@@ -156,7 +157,9 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
               }
               ligaLabel={[
                 `≈${xp.toFixed(1).replace(".", ",")} pts esperados`,
-                ffProb !== null ? `titular ${ffProb}%` : "",
+                ffProb !== null
+                  ? `titular ${ffProb}%${lineup?.discrepancy ? " (las fuentes no coinciden)" : ""}`
+                  : "",
                 liga.pct > 0 ? `${Math.round(liga.pct)}% de la liga` : "",
               ]
                 .filter(Boolean)

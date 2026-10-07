@@ -38,6 +38,9 @@ interface Rec {
   home: boolean | null;
   diff: number | null;
   prob: number | null;
+  probFf: number | null;
+  probAf: number | null;
+  discrepancy: boolean;
   owned: number;
   xp3: number;
   perGw: {
@@ -60,7 +63,10 @@ const recs: Rec[] = getAllPlayerSummaries()
       rival: f?.rivalName ?? null,
       home: f?.home ?? null,
       diff: f ? difficulty(f.rivalId, s.position, f.home) : null,
-      prob: prediction(s.id, gw.number)?.ff_prob ?? null,
+      prob: prediction(s.id, gw.number)?.prob ?? null,
+      probFf: prediction(s.id, gw.number)?.prob_ff ?? null,
+      probAf: prediction(s.id, gw.number)?.prob_af ?? null,
+      discrepancy: prediction(s.id, gw.number)?.discrepancy ?? false,
       owned: latestOwnershipPct(s.id),
       ...(() => {
         const h = expectedPointsHorizon(s);
@@ -146,7 +152,7 @@ const baseline = summary?.media_previa;
           puntos si juega, según forma, titularidades, rival, casa/fuera, precio
           y temporada pasada
           {preds.lineups_jornada === gw.number &&
-            ", con las alineaciones probables de futbolfantasy"}
+            ", con las alineaciones probables de futbolfantasy y analiticafantasy"}
           .
         </p>
       ) : (
@@ -178,7 +184,8 @@ const baseline = summary?.media_previa;
     {
       scrapedAt && (
         <p class="mt-2 text-xs text-slate-500">
-          Alineaciones probables (futbolfantasy.com): {fmtDate(scrapedAt)}
+          Alineaciones probables (futbolfantasy.com y analiticafantasy.com,
+          media de las dos; ≠ = no coinciden): {fmtDate(scrapedAt)}
         </p>
       )
     }
@@ -320,7 +327,12 @@ const baseline = summary?.media_previa;
                       <span class="flex flex-wrap items-center gap-1.5 text-xs text-slate-400">
                         vs {r.rival} ({r.home ? "c" : "f"})
                         <DifficultyChip level={r.diff} />
-                        <ProbPill prob={r.prob} />
+                        <ProbPill
+                          prob={r.prob}
+                          probFf={r.probFf}
+                          probAf={r.probAf}
+                          discrepancy={r.discrepancy}
+                        />
                         <span>{fmtM(millions(r))}</span>
                       </span>
                     </span>
@@ -363,7 +375,12 @@ const baseline = summary?.media_previa;
                 <span class="min-w-0 flex-1 truncate text-white">
                   {r.s.name}
                 </span>
-                <ProbPill prob={r.prob} />
+                <ProbPill
+                  prob={r.prob}
+                  probFf={r.probFf}
+                  probAf={r.probAf}
+                  discrepancy={r.discrepancy}
+                />
                 <span class="shrink-0 text-slate-400">{fmtM(millions(r))}</span>
                 <span class="w-12 shrink-0 text-right font-semibold text-emerald-300">
                   ≈{fmt(r.xp)}

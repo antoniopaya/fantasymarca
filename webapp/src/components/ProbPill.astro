@@ -1,20 +1,30 @@
 ---
-// Probabilidad de ser titular según futbolfantasy (texto, sin color: no
-// es una categoría ni un estado, solo un número).
+// Probabilidad de ser titular (media de futbolfantasy y analiticafantasy).
+// Texto, sin color: es un número, no una categoría. "≠" si las fuentes no
+// se ponen de acuerdo.
 interface Props {
   prob: number | null;
+  probFf?: number | null;
+  probAf?: number | null;
+  discrepancy?: boolean;
 }
 
-const { prob } = Astro.props;
+const { prob, probFf = null, probAf = null, discrepancy = false } = Astro.props;
+const detail = [
+  probFf !== null ? `futbolfantasy ${probFf}%` : "",
+  probAf !== null ? `analiticafantasy ${probAf}%` : "",
+]
+  .filter(Boolean)
+  .join(" · ");
 ---
 
 {
   prob !== null && (
     <span
       class="inline-flex items-center rounded bg-slate-800 px-1.5 py-0.5 text-[11px] font-semibold text-slate-200"
-      title="Probabilidad de ser titular según futbolfantasy.com"
+      title={`Probabilidad de ser titular${detail ? ` (${detail})` : ""}${discrepancy ? ". Las fuentes no coinciden" : ""}`}
     >
-      {prob}% tit.
+      {prob}% tit.{discrepancy && <span class="ml-1 text-amber-300">≠</span>}
     </span>
   )
 }

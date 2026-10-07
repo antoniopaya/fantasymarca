@@ -98,13 +98,18 @@ mano; ver `MANUAL_OVERRIDES` dentro del script para los casos ya resueltos.
    11 precios Fantástica + saldo sumen 180M. Lo que no resuelva lo lista al
    final para añadirlo a `LIGA_ALIASES`.
 
-4. **Alineaciones probables** (`fantasy_api/scrape_alineaciones.py`) — lee
-   la "Posible alineación" de la página de cada equipo en
-   [futbolfantasy.com](https://www.futbolfantasy.com/laliga/equipos/real-madrid)
-   (probabilidad de ser titular, suplentes, bajas) y la empareja con los ids
-   de Marca. Escribe `alineaciones.json` y guarda una copia por jornada
-   (la de antes del cierre) en `alineaciones_hist/`. 20 peticiones con pausa
-   entre ellas, solo cuando se refrescan los datos; su robots.txt lo permite.
+4. **Alineaciones probables** (`fantasy_api/scrape_alineaciones.py`) — dos
+   fuentes contrastadas: la "Posible alineación" de la página de cada equipo
+   en [futbolfantasy.com](https://www.futbolfantasy.com/laliga/equipos/real-madrid)
+   y la página de la jornada de
+   [analiticafantasy.com](https://www.analiticafantasy.com/la-liga/alineaciones-probables)
+   (datos incrustados en el HTML; su robots.txt prohíbe /api/, así que no se
+   usa). Empareja a cada jugador con su id de Marca, guarda la probabilidad
+   de titular de cada fuente y su media, y marca cuándo no coinciden (una lo
+   pone de titular y la otra no, o se separan 40+ puntos). Escribe
+   `alineaciones.json` y una copia por jornada (la de antes del cierre) en
+   `alineaciones_hist/`. Unas 22 peticiones con pausa entre ellas, solo
+   cuando se refrescan los datos.
 5. **Modelo de puntos esperados** (`fantasy_api/ml_model.py`) — machine
    learning con scikit-learn: P(juega) × puntos si juega, con variables
    calculadas solo con lo que se sabía antes de cada jornada (forma,
