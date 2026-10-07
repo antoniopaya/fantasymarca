@@ -53,6 +53,10 @@ DELAY_SECONDS = 3
 USER_AGENT = "FantasyMarcaPayas/1.0 (uso personal; github.com/antoniopaya/fantasymarca)"
 MIN_NAME_SCORE = 0.7
 DISCREPANCY_POINTS = 40
+# analiticafantasy responde 403 a los servidores de GitHub Actions (bloquea
+# por IP, y no se intenta esquivar). Si falla, se reutiliza su última lectura
+# de la misma jornada (hecha desde otro sitio) mientras no sea muy antigua.
+AF_REUSE_MAX_HOURS = 48
 AF_ABSENT_PROB = 10
 
 FF_BASE_URL = "https://www.futbolfantasy.com/laliga/equipos/"
@@ -334,6 +338,37 @@ def combine(ff: dict[int, list[dict]], af: dict[int, list[dict]]) -> dict[str, l
     return teams
 
 
+def previous_af(jornada: int | None) -> tuple[dict[int, list[dict]], str | None]:
+    """Lectura anterior de analiticafantasy para la misma jornada, si es reciente."""
+    try:
+        with open(os.path.join(DATA_DIR, "alineaciones.json"), encoding="utf-8") as f:
+            prev = json.load(f)
+    except FileNotFoundError:
+        return {}, None
+    when = (prev.get("sources") or {}).get("analiticafantasy_at")
+    if not when or prev.get("jornada") != jornada:
+        return {}, None
+    age_h = (datetime.now(timezone.utc) - datetime.fromisoformat(when)).total_seconds() / 3600
+    if age_h > AF_REUSE_MAX_HOURS:
+        return {}, None
+    teams: dict[int, list[dict]] = {}
+    for team_id, rows in prev["teams"].items():
+        listed = [r for r in rows if r.get("starter_af") is not None]
+        if listed:
+            teams[int(team_id)] = [
+                {
+                    "id": r["id"],
+                    "name": r["name"],
+                    "prob": r["prob_af"],
+                    "starter": r["starter_af"],
+                    "info": r.get("af_info"),
+                    "sanctioned": r.get("sanctioned", False),
+                }
+                for r in listed
+            ]
+    return teams, when
+
+
 def jornada_started(jornada: int) -> bool:
     try:
         with open(os.path.join(DATA_DIR, "matches", f"{jornada}.json"), encoding="utf-8") as f:
@@ -376,14 +411,22 @@ def main() -> None:
         for team_id, players in data.items():
             match_players(team_id, players, catalog, source, problems)
 
+    now = datetime.now(timezone.utc).isoformat(timespec="minutes")
+    af_at = now if af else None
+    if not af:
+        af, af_at = previous_af(jornada)
+        if af:
+            problems.append(f"analiticafantasy: se reutiliza su lectura de {af_at}")
+
     teams = combine(ff, af)
     discrepancies = sum(1 for t in teams.values() for p in t if p["discrepancy"])
     payload = {
         "jornada": jornada,
-        "scraped_at": datetime.now(timezone.utc).isoformat(timespec="minutes"),
+        "scraped_at": now,
         "sources": {
             "futbolfantasy": len(ff),
             "analiticafantasy": len(af),
+            "analiticafantasy_at": af_at,
         },
         "teams": teams,
     }
