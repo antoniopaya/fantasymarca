@@ -125,7 +125,29 @@ mano; ver `MANUAL_OVERRIDES` dentro del script para los casos ya resueltos.
    que más puntos espera). Si falta, la web vuelve a la fórmula sencilla.
 
 `refresh-data.yml` ejecuta los tres seguidos: `main.py`, el scraper (si
-falla, se sigue sin alineaciones) y el modelo.
+falla, se sigue sin alineaciones) y el modelo. El modelo ajusta además los
+puntos si juega por la dificultad del rival (a media fuerza: con pocas
+jornadas no aprende solo el efecto en los atacantes, y la validación dice que
+así no pierde precisión).
+
+### Actualizar todo a mano: `./actualizar.sh`
+
+analiticafantasy bloquea a los servidores de GitHub, así que los refrescos
+automáticos solo traen futbolfantasy (y reutilizan la última lectura de
+analiticafantasy de menos de 48 h). Para tener todo al día cuando quieras:
+
+```bash
+./actualizar.sh
+```
+
+Lanza `refresh-data.yml` en un runner de GitHub Actions instalado en este
+ordenador (la primera vez lo descarga y registra, verificando su SHA-256, en
+`~/.local/share/fantasymarca-runner`), de modo que todo sale desde tu
+conexión: datos de Marca (con los secrets del repo, sin credenciales en
+local), las dos fuentes de alineaciones y el modelo. Espera al despliegue y
+hace `git pull`. El runner solo está conectado mientras dura el script (el
+repo es público) y solo `refresh-data.yml` lanzado a mano con `runner=local`
+puede usarlo. Requiere `gh auth login`.
 
 ## Correr en local
 

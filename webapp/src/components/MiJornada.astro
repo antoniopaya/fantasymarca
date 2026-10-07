@@ -185,9 +185,10 @@ const fmtM = (euros: number) =>
                 Cambios que suman
               </h2>
               <p class="mb-3 text-xs text-slate-500">
-                Los de tu 11 que menos se espera que sumen en las próximas 3
-                jornadas y quién te cabe en su lugar (su precio + tu saldo de{" "}
-                {entry.saldo ?? 0}M). Ganancia en esta jornada / en las 3.
+                {plan.horizon === "tres"
+                  ? "Con 3 cambios cada fichaje se queda varias semanas: se ordena por lo que ganas en las próximas 3 jornadas."
+                  : `Jornada a jornada: con ${entry.changes ?? 11} cambios puedes rehacer el equipo cada semana, así que se ordena por lo que ganas en la ${nextGameweek.name}.`}{" "}
+                Caben con su precio + tu saldo de {entry.saldo ?? 0}M.
               </p>
               {plan.changes.length === 0 ? (
                 <p class="text-sm text-slate-400">
@@ -201,7 +202,9 @@ const fmtM = (euros: number) =>
                         <span class="text-rose-300">Sale</span>{" "}
                         <b class="text-white">{c.out.summary.name}</b>{" "}
                         <span class="text-slate-500">
-                          ≈{fmt(c.out.xp3)} en 3 jorn. · hasta {fmtM(c.budget)}
+                          ≈{fmt(plan.horizon === "tres" ? c.out.xp3 : c.out.xp)}
+                          {plan.horizon === "tres" ? " en 3 jorn." : ""} · hasta{" "}
+                          {fmtM(c.budget)}
                         </span>
                       </p>
                       <ul class="mt-1 space-y-1">
@@ -218,9 +221,10 @@ const fmtM = (euros: number) =>
                             <span class="shrink-0 text-xs text-slate-500">
                               {fmtM(o.summary.precioFantastica ?? 0)}
                             </span>
-                            <span class="w-20 shrink-0 text-right font-semibold text-emerald-300">
-                              {o.xp - c.out.xp >= 0 ? "+" : ""}
-                              {fmt(o.xp - c.out.xp)} / +{fmt(o.xp3 - c.out.xp3)}
+                            <span class="w-12 shrink-0 text-right font-semibold text-emerald-300">
+                              {plan.horizon === "tres"
+                                ? `+${fmt(o.xp3 - c.out.xp3)}`
+                                : `+${fmt(o.xp - c.out.xp)}`}
                             </span>
                           </li>
                         ))}

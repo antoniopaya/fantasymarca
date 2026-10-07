@@ -241,61 +241,6 @@ const baseline = summary?.media_previa;
     )
   }
 
-  <section class="mb-10" aria-labelledby="proximas-3">
-    <h2 id="proximas-3" class="text-xl font-bold text-white">
-      Para las próximas {horizon.length} jornadas
-    </h2>
-    <p class="mb-4 text-sm text-slate-400">
-      Con los cambios contados, conviene fichar pensando en más de una semana:
-      puntos esperados en cada jornada (J{horizon.join(", J")}) y su suma. Más
-      allá de la próxima no hay alineaciones probables, así que cuenta solo lo
-      que dice el modelo.
-    </p>
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-      {
-        next3.map(({ pos, list }) => (
-          <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
-            <h3 class="mb-1 text-sm font-semibold text-white">
-              {POSITION_NAMES[pos]}s
-            </h3>
-            <ol class="divide-y divide-white/5">
-              {list.map((r) => (
-                <li class="py-2">
-                  <a
-                    href={url(`/jugadores/${r.s.id}`)}
-                    class="flex items-baseline justify-between gap-2"
-                  >
-                    <span class="min-w-0 truncate font-semibold text-white">
-                      {r.s.name}
-                      <span class="ml-1 text-xs font-normal text-slate-500">
-                        {fmtM(millions(r))}
-                      </span>
-                    </span>
-                    <span class="shrink-0 font-bold text-emerald-300">
-                      ≈{fmt(r.xp3)}
-                    </span>
-                  </a>
-                  <div class="mt-1 grid grid-cols-3 gap-1 text-xs text-slate-300">
-                    {r.perGw.map((x) => (
-                      <span
-                        class="flex items-center gap-1"
-                        title={x.rival ? `vs ${x.rival}` : "Sin partido"}
-                      >
-                        <span class="text-slate-500">J{x.gw}</span>
-                        <DifficultyChip level={x.diff} />
-                        {x.rival ? fmt(x.xp) : "—"}
-                      </span>
-                    ))}
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        ))
-      }
-    </div>
-  </section>
-
   <section class="mb-10" aria-labelledby="por-posicion">
     <h2 id="por-posicion" class="mb-4 text-xl font-bold text-white">
       Los mejores para la {gw.name}
@@ -345,6 +290,61 @@ const baseline = summary?.media_previa;
                       </span>
                     </span>
                   </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mb-10" aria-labelledby="proximas-3">
+    <h2 id="proximas-3" class="text-xl font-bold text-white">
+      Para las próximas {horizon.length} jornadas
+    </h2>
+    <p class="mb-4 text-sm text-slate-400">
+      Solo si tienes 3 cambios (vas arriba): cada fichaje se queda varias
+      semanas y conviene mirar el calendario. Con 6 u 11 cambios manda la
+      jornada de arriba. Puntos esperados en J{horizon.join(", J")} y su suma; más
+      allá de la próxima no hay alineaciones probables.
+    </p>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+      {
+        next3.map(({ pos, list }) => (
+          <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+            <h3 class="mb-1 text-sm font-semibold text-white">
+              {POSITION_NAMES[pos]}s
+            </h3>
+            <ol class="divide-y divide-white/5">
+              {list.map((r) => (
+                <li class="py-2">
+                  <a
+                    href={url(`/jugadores/${r.s.id}`)}
+                    class="flex items-baseline justify-between gap-2"
+                  >
+                    <span class="min-w-0 truncate font-semibold text-white">
+                      {r.s.name}
+                      <span class="ml-1 text-xs font-normal text-slate-500">
+                        {fmtM(millions(r))}
+                      </span>
+                    </span>
+                    <span class="shrink-0 font-bold text-emerald-300">
+                      ≈{fmt(r.xp3)}
+                    </span>
+                  </a>
+                  <div class="mt-1 grid grid-cols-3 gap-1 text-xs text-slate-300">
+                    {r.perGw.map((x) => (
+                      <span
+                        class="flex items-center gap-1"
+                        title={x.rival ? `vs ${x.rival}` : "Sin partido"}
+                      >
+                        <span class="text-slate-500">J{x.gw}</span>
+                        <DifficultyChip level={x.diff} />
+                        {x.rival ? fmt(x.xp) : "—"}
+                      </span>
+                    ))}
+                  </div>
                 </li>
               ))}
             </ol>

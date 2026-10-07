@@ -122,8 +122,8 @@ for _ in $(seq 1 30); do
   sleep 2
 done
 [ -n "$RUN_ID" ] || fallo "No encuentro el refresco que acabo de lanzar."
-echo "https://github.com/$REPO/actions/runs/$RUN_ID"
-gh run watch "$RUN_ID" --repo "$REPO" --exit-status --interval 10 ||
+echo "En marcha (unos 6 minutos): https://github.com/$REPO/actions/runs/$RUN_ID"
+gh run watch "$RUN_ID" --repo "$REPO" --exit-status --interval 15 >/dev/null 2>&1 ||
   fallo "El refresco ha fallado: https://github.com/$REPO/actions/runs/$RUN_ID"
 
 gh run view "$RUN_ID" --repo "$REPO" --log 2>/dev/null |
@@ -144,7 +144,7 @@ for _ in $(seq 1 30); do
   sleep 2
 done
 if [ -n "$DEPLOY_ID" ]; then
-  gh run watch "$DEPLOY_ID" --repo "$REPO" --exit-status --interval 10 ||
+  gh run watch "$DEPLOY_ID" --repo "$REPO" --exit-status --interval 10 >/dev/null 2>&1 ||
     fallo "El despliegue ha fallado: https://github.com/$REPO/actions/runs/$DEPLOY_ID"
 else
   aviso "No he visto el despliegue; puede que no hubiera cambios que publicar."

@@ -90,9 +90,15 @@ export function weekPlan(entry: LigaEntry) {
     .sort((a, b) => b.xp - a.xp)
     .slice(0, 3);
 
-  // Los 3 que menos se espera que sumen en las próximas 3 jornadas (un
-  // cambio se queda varias semanas), y para cada uno los mejores que podrías
-  // fichar con su precio más tu saldo (un cambio cada vez).
+  // Jornada a jornada: con 6 u 11 cambios cada semana se puede rehacer el
+  // equipo, así que manda la próxima jornada. Solo con 3 cambios (los de
+  // arriba de la tabla) un fichaje se queda varias semanas y se mira el
+  // calendario de las 3 próximas. Para cada uno de los 3 que menos se espera
+  // que sumen, los mejores que caben con su precio + tu saldo.
+  const horizon: "jornada" | "tres" =
+    (entry.changes ?? 11) <= 3 ? "tres" : "jornada";
+  const value = (p: WeekPlayer) => (horizon === "tres" ? p.xp3 : p.xp);
+  const minGain = horizon === "tres" ? 2 : 1;
   const saldo = (entry.saldo ?? 0) * 1_000_000;
   const candidates = getAllPlayerSummaries().filter(
     (s) =>
@@ -102,7 +108,7 @@ export function weekPlan(entry: LigaEntry) {
       isRecommendable(s),
   );
   const changes = [...mine]
-    .sort((a, b) => a.xp3 - b.xp3)
+    .sort((a, b) => value(a) - value(b))
     .slice(0, 3)
     .map((out) => {
       const budget = (out.summary.precioFantastica ?? 0) + saldo;
@@ -113,8 +119,8 @@ export function weekPlan(entry: LigaEntry) {
             (s.precioFantastica as number) <= budget,
         )
         .map((s) => toWeekPlayer(s, gameweek))
-        .filter((s) => s.xp3 >= out.xp3 + 2)
-        .sort((a, b) => b.xp3 - a.xp3)
+        .filter((s) => value(s) >= value(out) + minGain)
+        .sort((a, b) => value(b) - value(a))
         .slice(0, 3);
       return { out, budget, options };
     })
@@ -125,5 +131,5 @@ export function weekPlan(entry: LigaEntry) {
     (mine.find((p) => entry.players.find((x) => x.id === p.summary.id)?.captain)
       ?.xp ?? 0);
 
-  return { mine, alerts, captains, changes, expectedTotal };
+  return { mine, alerts, captains, changes, expectedTotal, horizon };
 }

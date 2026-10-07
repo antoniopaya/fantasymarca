@@ -57,6 +57,15 @@ MIN_TRAIN_GW = 3  # jornadas mínimas de historia antes de validar
 SEED = 0
 HORIZON = 3  # jornadas que se predicen: la próxima y las dos siguientes
 
+# Ajuste por dificultad del rival (1 fácil ... 5 muy difícil, igual que en la
+# web: según lo que marca el rival para porteros/defensas y lo que encaja para
+# medios/delanteros, por quintiles, y casa/fuera). Con pocas jornadas el
+# modelo apenas aprende el efecto del rival en los atacantes, aunque en
+# fantasy está más que comprobado; se mete como conocimiento previo a media
+# fuerza, que en la validación no pierde precisión (a fuerza completa sí).
+DIFFICULTY_FACTOR = {1: 1.25, 2: 1.1, 3: 1.0, 4: 0.9, 5: 0.78}
+RIVAL_ADJUST_STRENGTH = 0.5
+
 FEATURES = [
     "is_gk",
     "is_def",
@@ -221,6 +230,33 @@ def player_history_features(pl: dict, gw: int) -> dict:
     }
 
 
+def difficulty_levels(df: pd.DataFrame, matches: pd.DataFrame) -> np.ndarray:
+    """Dificultad 1-5 de cada fila con la fuerza de los equipos antes de su jornada."""
+    out = np.full(len(df), 3, dtype=int)
+    gw_values = df.gw.to_numpy()
+    for gw in np.unique(gw_values):
+        gw_matches = matches[matches.gw == gw]
+        if gw_matches.empty:
+            continue
+        strength = team_strength_before(matches, gw_matches.ts.min())
+        thresholds = {}
+        for kind in ("def", "att"):
+            vals = sorted(
+                (s["gf"] + 0.4 * s["ppg"]) if kind == "def" else (-s["ga"] + 0.4 * s["ppg"])
+                for s in strength.values()
+            )
+            thresholds[kind] = [vals[min(len(vals) - 1, int(q * len(vals)))] for q in (0.2, 0.4, 0.6, 0.8)]
+        for j in np.where(gw_values == gw)[0]:
+            r = df.iloc[j]
+            kind = "def" if r.position <= 2 else "att"
+            t = thresholds[kind]
+            spread = (t[3] - t[0]) / 3 or 0.1
+            v = (r.rival_gf + 0.4 * r.rival_ppg) if kind == "def" else (-r.rival_ga + 0.4 * r.rival_ppg)
+            v += (-0.35 if r.home == 1 else 0.35) * spread
+            out[j] = 1 + sum(v > x for x in t)
+    return out
+
+
 def build_rows(players, matches, gws, ff_hist):
     rows = []
     for gw in gws:
@@ -269,6 +305,7 @@ def build_rows(players, matches, gws, ff_hist):
     df["team_ga_x_def"] = df.team_ga * defense
     df["team_gf_x_att"] = df.team_gf * attack
     df["home_x_def"] = df.home * defense
+    df["difficulty"] = difficulty_levels(df, matches)
     df["y_played"] = df.y_points.notna()
     df["y_total"] = df.y_points.fillna(0)
     return df
@@ -309,6 +346,8 @@ def predict(models, df: pd.DataFrame, features: list[str]):
     clf, reg = models
     p_play = clf.predict_proba(df[features])[:, 1]
     if_plays = np.clip(reg.predict(df[features]), -2, None)
+    factor = df["difficulty"].map(DIFFICULTY_FACTOR).to_numpy(dtype=float)
+    if_plays = if_plays * (1 + RIVAL_ADJUST_STRENGTH * (factor - 1))
     return p_play, if_plays
 
 
