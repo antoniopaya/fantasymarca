@@ -114,7 +114,7 @@ ultimo_run() { # $1 = workflow; id del run más reciente lanzado a mano después
 
 paso "Lanzando el refresco de datos (Marca, alineaciones, modelo)"
 DESDE="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-gh workflow run refresh-data.yml --repo "$REPO" --ref main -f runner=local -f force_deploy=true
+gh workflow run refresh-data.yml --repo "$REPO" --ref main -f runner=local -f force_deploy=true >/dev/null
 RUN_ID=""
 for _ in $(seq 1 30); do
   RUN_ID="$(ultimo_run refresh-data.yml)"
