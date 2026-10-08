@@ -5,13 +5,17 @@
     "position": 4,
     "points": 20,
     "avg": 2.9,
-    "status": null,
+    "status": "doubt",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "doubt",
+      "description": "Molestias",
+      "duration": "Duda esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/31226.png?version=20240702124019",
     "isFavorite": 0,
-    "value": 15203000,
-    "previousValue": 14796000,
+    "value": 15456000,
+    "previousValue": 15203000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 15203000,
+      "floor": 15456000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 22804500,
+      "value": 23184000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 15203000,
+      "price": 15456000,
       "loanable": null
     },
     "bid": {
@@ -727,35 +731,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 14796000,
-      "change": 407000,
-      "sign": 407
+      "value": 15203000,
+      "change": 253000,
+      "sign": 253
     },
     {
       "time": "Una semana",
-      "value": 12376000,
-      "change": 2827000,
-      "sign": "+2.827.000"
+      "value": 12717000,
+      "change": 2739000,
+      "sign": "+2.739.000"
     },
     {
       "time": "Un mes",
       "value": 9223000,
-      "change": 5980000,
-      "sign": "+5.980.000"
+      "change": 6233000,
+      "sign": "+6.233.000"
     },
     {
       "time": "Un año",
-      "value": 24136000,
-      "change": -8933000,
-      "sign": "-8.933.000"
+      "value": 24537000,
+      "change": -9081000,
+      "sign": "-9.081.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 24136000,
-        "date": "7 oct 2025"
-      },
       {
         "value": 24537000,
         "date": "8 oct 2025"
@@ -2215,6 +2215,10 @@
       {
         "value": 15203000,
         "date": "7 oct 2026"
+      },
+      {
+        "value": 15456000,
+        "date": "8 oct 2026"
       }
     ],
     "max": {

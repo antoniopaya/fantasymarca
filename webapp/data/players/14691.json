@@ -5,13 +5,17 @@
     "position": 2,
     "points": 32,
     "avg": 6.4,
-    "status": null,
+    "status": "doubt",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "doubt",
+      "description": "Molestias",
+      "duration": "Duda esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/14691.png?version=20251006022606",
     "isFavorite": 0,
-    "value": 10466000,
-    "previousValue": 10020000,
+    "value": 10886000,
+    "previousValue": 10466000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,26 +38,26 @@
       "price": null
     },
     "clause": {
-      "floor": 10466000,
+      "floor": 10886000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 15699000,
+      "value": 16329000,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 10466000,
-      "loanable": null
+      "id": 1848028469,
+      "isPublic": 1,
+      "price": 10886000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 10886000,
       "barter": [],
       "type": null,
       "days": null
@@ -68,7 +72,7 @@
       "height": 176,
       "weight": 69
     },
-    "clausesRanking": 16
+    "clausesRanking": 17
   },
   "id": 14691,
   "player_extra": {
@@ -737,35 +741,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 10020000,
-      "change": 446000,
-      "sign": 446
+      "value": 10466000,
+      "change": 420000,
+      "sign": 420
     },
     {
       "time": "Una semana",
-      "value": 7713000,
-      "change": 2753000,
-      "sign": "+2.753.000"
+      "value": 8070000,
+      "change": 2816000,
+      "sign": "+2.816.000"
     },
     {
       "time": "Un mes",
-      "value": 2533000,
-      "change": 7933000,
-      "sign": "+7.933.000"
+      "value": 2702000,
+      "change": 8184000,
+      "sign": "+8.184.000"
     },
     {
       "time": "Un año",
-      "value": 1891000,
-      "change": 8575000,
-      "sign": "+8.575.000"
+      "value": 1871000,
+      "change": 9015000,
+      "sign": "+9.015.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 1891000,
-        "date": "7 oct 2025"
-      },
       {
         "value": 1871000,
         "date": "8 oct 2025"
@@ -2225,11 +2225,15 @@
       {
         "value": 10466000,
         "date": "7 oct 2026"
+      },
+      {
+        "value": 10886000,
+        "date": "8 oct 2026"
       }
     ],
     "max": {
-      "value": 10466000,
-      "date": "7 oct 2026"
+      "value": 10886000,
+      "date": "8 oct 2026"
     },
     "min": {
       "value": 329000,
