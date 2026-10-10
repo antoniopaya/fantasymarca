@@ -3,15 +3,15 @@
     "id": 71008,
     "name": "Rafita Garrido",
     "position": 2,
-    "points": 26,
-    "avg": 3.3,
+    "points": 33,
+    "avg": 4.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71008.png?version=20260621200119",
     "isFavorite": 0,
-    "value": 7249000,
-    "previousValue": 7180000,
+    "value": 7287000,
+    "previousValue": 7249000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 7249000,
+      "floor": 7287000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 10873500,
+      "value": 10930500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 7249000,
+      "price": 7287000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 114
+    "clausesRanking": 110
   },
   "id": 71008,
   "player_extra": {
@@ -201,12 +201,14 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 8,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -694,30 +696,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 27,
-      "avg": 3.8571,
+      "points": 35,
+      "avg": 4.375,
       "id_team": 13,
-      "last_gameweek": 7
+      "last_gameweek": 8
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 7180000,
-      "change": 69000,
-      "sign": 69
+      "value": 7249000,
+      "change": 38000,
+      "sign": 38
     },
     {
       "time": "Una semana",
-      "value": 7775000,
-      "change": -526000,
-      "sign": -526
+      "value": 7564000,
+      "change": -277000,
+      "sign": -277
     },
     {
       "time": "Un mes",
-      "value": 5679000,
-      "change": 1570000,
-      "sign": "+1.570.000"
+      "value": 5875000,
+      "change": 1412000,
+      "sign": "+1.412.000"
     }
   ],
   "values_chart": {
@@ -1161,6 +1163,10 @@
       {
         "value": 7249000,
         "date": "9 oct 2026"
+      },
+      {
+        "value": 7287000,
+        "date": "10 oct 2026"
       }
     ],
     "max": {
@@ -1204,8 +1210,8 @@
   "home": {
     "71008": {
       "id": 71008,
-      "points": 15,
-      "avg": 5
+      "points": 23,
+      "avg": 5.75
     }
   },
   "away": {

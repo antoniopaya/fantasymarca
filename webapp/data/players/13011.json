@@ -3,15 +3,15 @@
     "id": 13011,
     "name": "Fernando Calero",
     "position": 2,
-    "points": 1,
-    "avg": 1,
+    "points": 2,
+    "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/13011.png?version=20240626191613",
     "isFavorite": 0,
-    "value": 1135000,
-    "previousValue": 1047000,
+    "value": 1229000,
+    "previousValue": 1135000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1135000,
+      "floor": 1229000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1702500,
+      "value": 1843500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1135000,
+      "price": 1229000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 79
+    "clausesRanking": 75
   },
   "id": 13011,
   "player_extra": {
@@ -250,12 +250,14 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -742,6 +744,13 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 2,
+      "avg": 2,
+      "id_team": 13,
+      "last_gameweek": 8
+    },
+    {
       "season": "25/26",
       "points": 114,
       "avg": 4.0714,
@@ -759,35 +768,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1047000,
-      "change": 88000,
-      "sign": 88
+      "value": 1135000,
+      "change": 94000,
+      "sign": 94
     },
     {
       "time": "Una semana",
-      "value": 1206000,
-      "change": -71000,
-      "sign": -71
+      "value": 1234000,
+      "change": -5000,
+      "sign": -5
     },
     {
       "time": "Un mes",
-      "value": 427000,
-      "change": 708000,
-      "sign": 708
+      "value": 483000,
+      "change": 746000,
+      "sign": 746
     },
     {
       "time": "Un año",
-      "value": 10867000,
-      "change": -9732000,
-      "sign": "-9.732.000"
+      "value": 11066000,
+      "change": -9837000,
+      "sign": "-9.837.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 10867000,
-        "date": "9 oct 2025"
-      },
       {
         "value": 11066000,
         "date": "10 oct 2025"
@@ -2147,6 +2152,10 @@
       {
         "value": 1135000,
         "date": "9 oct 2026"
+      },
+      {
+        "value": 1229000,
+        "date": "10 oct 2026"
       }
     ],
     "max": {
@@ -2189,8 +2198,9 @@
   "starter": false,
   "home": {
     "13011": {
-      "points": 0,
-      "avg": 0
+      "id": 13011,
+      "points": 2,
+      "avg": 2
     }
   },
   "away": {

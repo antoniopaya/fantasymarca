@@ -5,13 +5,17 @@
     "position": 3,
     "points": 26,
     "avg": 3.7,
-    "status": null,
+    "status": "other",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "other",
+      "description": "No convocado",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/78750.png?version=20260807223509",
     "isFavorite": 0,
-    "value": 5182000,
-    "previousValue": 5371000,
+    "value": 5031000,
+    "previousValue": 5182000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5182000,
+      "floor": 5031000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7773000,
+      "value": 7546500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5182000,
+      "price": 5031000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 316
+    "clausesRanking": 268
   },
   "id": 78750,
   "player_extra": {
@@ -708,21 +712,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5371000,
-      "change": -189000,
-      "sign": -189
+      "value": 5182000,
+      "change": -151000,
+      "sign": -151
     },
     {
       "time": "Una semana",
-      "value": 6668000,
-      "change": -1486000,
-      "sign": "-1.486.000"
+      "value": 6442000,
+      "change": -1411000,
+      "sign": "-1.411.000"
     },
     {
       "time": "Un mes",
-      "value": 11364000,
-      "change": -6182000,
-      "sign": "-6.182.000"
+      "value": 11355000,
+      "change": -6324000,
+      "sign": "-6.324.000"
     }
   ],
   "values_chart": {
@@ -974,6 +978,10 @@
       {
         "value": 5182000,
         "date": "9 oct 2026"
+      },
+      {
+        "value": 5031000,
+        "date": "10 oct 2026"
       }
     ],
     "max": {
@@ -981,8 +989,8 @@
       "date": "5 sept 2026"
     },
     "min": {
-      "value": 5182000,
-      "date": "9 oct 2026"
+      "value": 5031000,
+      "date": "10 oct 2026"
     }
   },
   "next_match": {
@@ -995,16 +1003,16 @@
       "id_away": 9,
       "date": {
         "ts": 1791649800,
-        "text": "sáb 18:30",
-        "format": "EEE H:mm",
+        "text": "Hoy 18:30",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "sáb",
+          "date": "Hoy",
           "time": "18:30",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Barcelona",
       "away": "Getafe",

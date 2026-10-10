@@ -3,15 +3,15 @@
     "id": 71061,
     "name": "Álex Calatrava",
     "position": 3,
-    "points": 22,
-    "avg": 3.1,
+    "points": 24,
+    "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71061.png?version=20260702123349",
     "isFavorite": 0,
-    "value": 9741000,
-    "previousValue": 9933000,
+    "value": 9393000,
+    "previousValue": 9741000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9741000,
+      "floor": 9393000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 14611500,
+      "value": 14089500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9741000,
+      "price": 9393000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 301
+    "clausesRanking": 298
   },
   "id": 71061,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 1,
     "cards": 3
   },
@@ -212,12 +212,14 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 13,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
@@ -705,30 +707,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 22,
-      "avg": 3.1429,
+      "points": 24,
+      "avg": 3,
       "id_team": 8,
-      "last_gameweek": 7
+      "last_gameweek": 8
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 9933000,
-      "change": -192000,
-      "sign": -192
+      "value": 9741000,
+      "change": -348000,
+      "sign": -348
     },
     {
       "time": "Una semana",
-      "value": 11838000,
-      "change": -2097000,
-      "sign": "-2.097.000"
+      "value": 11465000,
+      "change": -2072000,
+      "sign": "-2.072.000"
     },
     {
       "time": "Un mes",
-      "value": 20498000,
-      "change": -10757000,
-      "sign": "-10.757.000"
+      "value": 20392000,
+      "change": -10999000,
+      "sign": "-10.999.000"
     }
   ],
   "values_chart": {
@@ -1128,6 +1130,10 @@
       {
         "value": 9741000,
         "date": "9 oct 2026"
+      },
+      {
+        "value": 9393000,
+        "date": "10 oct 2026"
       }
     ],
     "max": {
@@ -1149,12 +1155,12 @@
       "id_away": 2,
       "date": {
         "ts": 1792238400,
-        "text": "17 oct 14:00",
-        "format": "d MMM H:mm",
+        "text": "sáb 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "17 oct",
+          "date": "sáb",
           "time": "14:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -1178,7 +1184,7 @@
   "away": {
     "71061": {
       "id": 71061,
-      "points": 6,
+      "points": 8,
       "avg": 2
     }
   },

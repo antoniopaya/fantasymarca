@@ -3,8 +3,8 @@
     "id": 61167,
     "name": "Adam Aznou",
     "position": 2,
-    "points": 0,
-    "avg": 0,
+    "points": 1,
+    "avg": 1,
     "status": null,
     "id_competition": 1,
     "injury": [],
@@ -68,13 +68,13 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 322
+    "clausesRanking": 321
   },
   "id": 61167,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -205,12 +205,15 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 1,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -697,6 +700,13 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 1,
+      "avg": 1,
+      "id_team": 13,
+      "last_gameweek": 8
+    },
+    {
       "season": "24/25",
       "points": 34,
       "avg": 2.6154,
@@ -713,15 +723,15 @@
     },
     {
       "time": "Una semana",
-      "value": 425000,
-      "change": -96000,
-      "sign": -96
+      "value": 333000,
+      "change": -4000,
+      "sign": -4
     },
     {
       "time": "Un mes",
-      "value": 329000,
-      "change": 0,
-      "sign": 0
+      "value": 493000,
+      "change": -164000,
+      "sign": -164
     }
   ],
   "values_chart": {
@@ -877,6 +887,10 @@
       {
         "value": 329000,
         "date": "9 oct 2026"
+      },
+      {
+        "value": 329000,
+        "date": "10 oct 2026"
       }
     ],
     "max": {
@@ -885,7 +899,7 @@
     },
     "min": {
       "value": 329000,
-      "date": "13 sept 2026"
+      "date": "10 oct 2026"
     }
   },
   "next_match": {
@@ -919,8 +933,9 @@
   "starter": false,
   "home": {
     "61167": {
-      "points": 0,
-      "avg": 0
+      "id": 61167,
+      "points": 1,
+      "avg": 1
     }
   },
   "away": {

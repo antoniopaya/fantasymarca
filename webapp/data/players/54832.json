@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/54832.png?version=20251006021354",
     "isFavorite": 0,
-    "value": 7679000,
-    "previousValue": 7767000,
+    "value": 7553000,
+    "previousValue": 7679000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 7679000,
+      "floor": 7553000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 11518500,
+      "value": 11329500,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 7679000,
-      "loanable": null
+      "id": 1854280581,
+      "isPublic": 1,
+      "price": 7553000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 7553000,
       "barter": [],
       "type": null,
       "days": null
@@ -68,7 +68,7 @@
       "height": 186,
       "weight": 76
     },
-    "clausesRanking": 388
+    "clausesRanking": 383
   },
   "id": 54832,
   "player_extra": {
@@ -725,35 +725,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 7767000,
-      "change": -88000,
-      "sign": -88
+      "value": 7679000,
+      "change": -126000,
+      "sign": -126
     },
     {
       "time": "Una semana",
-      "value": 9439000,
-      "change": -1760000,
-      "sign": "-1.760.000"
+      "value": 9083000,
+      "change": -1530000,
+      "sign": "-1.530.000"
     },
     {
       "time": "Un mes",
-      "value": 18402000,
-      "change": -10723000,
-      "sign": "-10.723.000"
+      "value": 17755000,
+      "change": -10202000,
+      "sign": "-10.202.000"
     },
     {
       "time": "Un año",
-      "value": 23834000,
-      "change": -16155000,
-      "sign": "-16.155.000"
+      "value": 23363000,
+      "change": -15810000,
+      "sign": "-15.810.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 23834000,
-        "date": "9 oct 2025"
-      },
       {
         "value": 23363000,
         "date": "10 oct 2025"
@@ -2213,6 +2209,10 @@
       {
         "value": 7679000,
         "date": "9 oct 2026"
+      },
+      {
+        "value": 7553000,
+        "date": "10 oct 2026"
       }
     ],
     "max": {
@@ -2220,8 +2220,8 @@
       "date": "24 abr 2026"
     },
     "min": {
-      "value": 7679000,
-      "date": "9 oct 2026"
+      "value": 7553000,
+      "date": "10 oct 2026"
     }
   },
   "next_match": {
@@ -2234,12 +2234,12 @@
       "id_away": 20,
       "date": {
         "ts": 1791658800,
-        "text": "sáb 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "sáb",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

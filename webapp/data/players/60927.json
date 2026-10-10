@@ -3,15 +3,15 @@
     "id": 60927,
     "name": "Adrián Niño",
     "position": 4,
-    "points": 11,
-    "avg": 3.7,
+    "points": 19,
+    "avg": 4.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60927.png?version=20260621200950",
     "isFavorite": 0,
-    "value": 4061000,
-    "previousValue": 4116000,
+    "value": 4185000,
+    "previousValue": 4061000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4061000,
+      "floor": 4185000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6091500,
+      "value": 6277500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4061000,
+      "price": 4185000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 89
+    "clausesRanking": 50
   },
   "id": 60927,
   "player_extra": {
-    "matches": 3,
-    "goals": 1,
+    "matches": 4,
+    "goals": 2,
     "cards": 0
   },
   "points": [
@@ -239,12 +239,15 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 8,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -732,10 +735,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 11,
-      "avg": 3.6667,
+      "points": 19,
+      "avg": 4.75,
       "id_team": 13,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "24/25",
@@ -748,21 +751,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4116000,
-      "change": -55000,
-      "sign": -55
+      "value": 4061000,
+      "change": 124000,
+      "sign": 124
     },
     {
       "time": "Una semana",
-      "value": 3560000,
-      "change": 501000,
-      "sign": 501
+      "value": 3683000,
+      "change": 502000,
+      "sign": 502
     },
     {
       "time": "Un mes",
-      "value": 455000,
-      "change": 3606000,
-      "sign": "+3.606.000"
+      "value": 376000,
+      "change": 3809000,
+      "sign": "+3.809.000"
     }
   ],
   "values_chart": {
@@ -1206,6 +1209,10 @@
       {
         "value": 4061000,
         "date": "9 oct 2026"
+      },
+      {
+        "value": 4185000,
+        "date": "10 oct 2026"
       }
     ],
     "max": {
@@ -1249,8 +1256,8 @@
   "home": {
     "60927": {
       "id": 60927,
-      "points": 2,
-      "avg": 2
+      "points": 10,
+      "avg": 5
     }
   },
   "away": {

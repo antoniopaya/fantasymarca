@@ -3,15 +3,15 @@
     "id": 54900,
     "name": "Carlos Dotor",
     "position": 3,
-    "points": 25,
-    "avg": 4.2,
+    "points": 26,
+    "avg": 3.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/54900.png?version=20260621195143",
     "isFavorite": 0,
-    "value": 9865000,
-    "previousValue": 9703000,
+    "value": 9871000,
+    "previousValue": 9865000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9865000,
+      "floor": 9871000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 14797500,
+      "value": 14806500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9865000,
+      "price": 9871000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 180,
       "weight": 68
     },
-    "clausesRanking": 69
+    "clausesRanking": 79
   },
   "id": 54900,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 1,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -205,12 +205,15 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 1,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -698,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 25,
-      "avg": 4.1667,
+      "points": 26,
+      "avg": 3.7143,
       "id_team": 13,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "23/24",
@@ -714,21 +717,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 9703000,
-      "change": 162000,
-      "sign": 162
+      "value": 9865000,
+      "change": 6000,
+      "sign": 6
     },
     {
       "time": "Una semana",
-      "value": 8383000,
-      "change": 1482000,
-      "sign": "+1.482.000"
+      "value": 8608000,
+      "change": 1263000,
+      "sign": "+1.263.000"
     },
     {
       "time": "Un mes",
-      "value": 5760000,
-      "change": 4105000,
-      "sign": "+4.105.000"
+      "value": 5865000,
+      "change": 4006000,
+      "sign": "+4.006.000"
     }
   ],
   "values_chart": {
@@ -1172,11 +1175,15 @@
       {
         "value": 9865000,
         "date": "9 oct 2026"
+      },
+      {
+        "value": 9871000,
+        "date": "10 oct 2026"
       }
     ],
     "max": {
-      "value": 9865000,
-      "date": "9 oct 2026"
+      "value": 9871000,
+      "date": "10 oct 2026"
     },
     "min": {
       "value": 329000,
@@ -1215,8 +1222,8 @@
   "home": {
     "54900": {
       "id": 54900,
-      "points": 15,
-      "avg": 5
+      "points": 16,
+      "avg": 4
     }
   },
   "away": {

@@ -3,15 +3,15 @@
     "id": 71140,
     "name": "Quilindschy Hartman",
     "position": 2,
-    "points": 6,
-    "avg": 1.5,
+    "points": 7,
+    "avg": 1.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71140.png?version=20260707175228",
     "isFavorite": 0,
-    "value": 2734000,
-    "previousValue": 2634000,
+    "value": 2784000,
+    "previousValue": 2734000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2734000,
+      "floor": 2784000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 4101000,
+      "value": 4176000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2734000,
+      "price": 2784000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 82
+    "clausesRanking": 89
   },
   "id": 71140,
   "player_extra": {
@@ -200,12 +200,12 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 13,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
@@ -693,30 +693,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 5,
-      "avg": 1.6667,
+      "points": 7,
+      "avg": 1.75,
       "id_team": 8,
-      "last_gameweek": 7
+      "last_gameweek": 8
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 2634000,
-      "change": 100000,
-      "sign": 100
+      "value": 2734000,
+      "change": 50000,
+      "sign": 50
     },
     {
       "time": "Una semana",
-      "value": 2188000,
-      "change": 546000,
-      "sign": 546
+      "value": 2281000,
+      "change": 503000,
+      "sign": 503
     },
     {
       "time": "Un mes",
-      "value": 5994000,
-      "change": -3260000,
-      "sign": "-3.260.000"
+      "value": 5709000,
+      "change": -2925000,
+      "sign": "-2.925.000"
     }
   ],
   "values_chart": {
@@ -1096,6 +1096,10 @@
       {
         "value": 2734000,
         "date": "9 oct 2026"
+      },
+      {
+        "value": 2784000,
+        "date": "10 oct 2026"
       }
     ],
     "max": {
@@ -1117,12 +1121,12 @@
       "id_away": 2,
       "date": {
         "ts": 1792238400,
-        "text": "17 oct 14:00",
-        "format": "d MMM H:mm",
+        "text": "sáb 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "17 oct",
+          "date": "sáb",
           "time": "14:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -1146,7 +1150,7 @@
   "away": {
     "71140": {
       "id": 71140,
-      "points": 2,
+      "points": 4,
       "avg": 2
     }
   },
