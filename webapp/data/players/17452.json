@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/17452.png?version=20251003183705",
     "isFavorite": 0,
-    "value": 9459000,
-    "previousValue": 9193000,
+    "value": 9733000,
+    "previousValue": 9459000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9459000,
+      "floor": 9733000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 14188500,
+      "value": 14599500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9459000,
+      "price": 9733000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 186,
       "weight": 78
     },
-    "clausesRanking": 54
+    "clausesRanking": 48
   },
   "id": 17452,
   "player_extra": {
@@ -258,8 +258,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 308469,
+        "id_player": 17452,
+        "category": "injury",
+        "description": "Lesión en el bíceps femoral",
+        "duration": "Baja esta jornada",
+        "since": "2026-09-29 11:47:44",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 20,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     },
@@ -770,35 +779,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 9193000,
-      "change": 266000,
-      "sign": 266
+      "value": 9459000,
+      "change": 274000,
+      "sign": 274
     },
     {
       "time": "Una semana",
-      "value": 7675000,
-      "change": 1784000,
-      "sign": "+1.784.000"
+      "value": 7936000,
+      "change": 1797000,
+      "sign": "+1.797.000"
     },
     {
       "time": "Un mes",
-      "value": 5931000,
-      "change": 3528000,
-      "sign": "+3.528.000"
+      "value": 5846000,
+      "change": 3887000,
+      "sign": "+3.887.000"
     },
     {
       "time": "Un año",
-      "value": 38689000,
-      "change": -29230000,
-      "sign": "-29.230.000"
+      "value": 39104000,
+      "change": -29371000,
+      "sign": "-29.371.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 38689000,
-        "date": "10 oct 2025"
-      },
       {
         "value": 39104000,
         "date": "11 oct 2025"
@@ -2258,6 +2263,10 @@
       {
         "value": 9459000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 9733000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
@@ -2273,28 +2282,28 @@
     "17452": {
       "id": 17452,
       "id_team": 15,
-      "id_match": 38002,
-      "id_gameweek": 4049,
+      "id_match": 38014,
+      "id_gameweek": 4050,
       "id_home": 15,
-      "id_away": 20,
+      "id_away": 17,
       "date": {
-        "ts": 1791658800,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792350000,
+        "text": "18 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "18 oct",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Real Madrid",
-      "away": "Villarreal",
+      "away": "Sevilla",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,

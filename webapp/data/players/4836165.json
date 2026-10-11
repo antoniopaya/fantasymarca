@@ -3,19 +3,15 @@
     "id": 4836165,
     "name": "Roy Revivo",
     "position": 2,
-    "points": 20,
-    "avg": 5,
-    "status": "doubt",
+    "points": 26,
+    "avg": 5.2,
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "doubt",
-      "description": "Molestias",
-      "duration": "Duda esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4836165.png?version=20260901213742",
     "isFavorite": 0,
-    "value": 4832000,
-    "previousValue": 4848000,
+    "value": 4722000,
+    "previousValue": 4832000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4832000,
+      "floor": 4722000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7248000,
+      "value": 7083000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4832000,
+      "price": 4722000,
       "loanable": null
     },
     "bid": {
@@ -72,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 106
+    "clausesRanking": 117
   },
   "id": 4836165,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 0
   },
@@ -206,12 +202,12 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -699,30 +695,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 20,
-      "avg": 5,
+      "points": 26,
+      "avg": 5.2,
       "id_team": 23,
-      "last_gameweek": 7
+      "last_gameweek": 8
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 4848000,
-      "change": -16000,
-      "sign": -16
+      "value": 4832000,
+      "change": -110000,
+      "sign": -110
     },
     {
       "time": "Una semana",
-      "value": 4673000,
-      "change": 159000,
-      "sign": 159
+      "value": 4730000,
+      "change": -8000,
+      "sign": -8
     },
     {
       "time": "Un mes",
-      "value": 2195000,
-      "change": 2637000,
-      "sign": "+2.637.000"
+      "value": 2028000,
+      "change": 2694000,
+      "sign": "+2.694.000"
     }
   ],
   "values_chart": {
@@ -882,6 +878,10 @@
       {
         "value": 4832000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 4722000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
@@ -897,36 +897,36 @@
     "4836165": {
       "id": 4836165,
       "id_team": 23,
-      "id_match": 38006,
-      "id_gameweek": 4049,
-      "id_home": 23,
-      "id_away": 5,
+      "id_match": 38016,
+      "id_gameweek": 4050,
+      "id_home": 20,
+      "id_away": 23,
       "date": {
-        "ts": 1791720000,
-        "text": "dom 14:00",
+        "ts": 1792246500,
+        "text": "sáb 16:15",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
+          "date": "sáb",
+          "time": "16:15",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Elche",
-      "away": "Celta",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "home": "Villarreal",
+      "away": "Elche",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   },
   "starter": false,
   "home": {
     "4836165": {
       "id": 4836165,
-      "points": 1,
-      "avg": 0.5
+      "points": 7,
+      "avg": 2.3333
     }
   },
   "away": {

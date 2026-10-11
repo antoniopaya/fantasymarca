@@ -3,15 +3,15 @@
     "id": 29166,
     "name": "Joan Garcia",
     "position": 1,
-    "points": 34,
-    "avg": 5.7,
+    "points": 41,
+    "avg": 5.9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/29166.png?version=20260217184424",
     "isFavorite": 0,
-    "value": 38968000,
-    "previousValue": 39063000,
+    "value": 39144000,
+    "previousValue": 38968000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 38968000,
+      "floor": 39144000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 58452000,
+      "value": 58716000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 38968000,
+      "price": 39144000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 193,
       "weight": null
     },
-    "clausesRanking": 288
+    "clausesRanking": 296
   },
   "id": 29166,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 0
   },
@@ -207,12 +207,12 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -700,10 +700,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 34,
-      "avg": 5.6667,
+      "points": 41,
+      "avg": 5.8571,
       "id_team": 3,
-      "last_gameweek": 6
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -723,35 +723,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 39063000,
-      "change": -95000,
-      "sign": -95
+      "value": 38968000,
+      "change": 176000,
+      "sign": 176
     },
     {
       "time": "Una semana",
-      "value": 41169000,
-      "change": -2201000,
-      "sign": "-2.201.000"
+      "value": 40891000,
+      "change": -1747000,
+      "sign": "-1.747.000"
     },
     {
       "time": "Un mes",
-      "value": 48328000,
-      "change": -9360000,
-      "sign": "-9.360.000"
+      "value": 48174000,
+      "change": -9030000,
+      "sign": "-9.030.000"
     },
     {
       "time": "Un año",
-      "value": 34798000,
-      "change": 4170000,
-      "sign": "+4.170.000"
+      "value": 34308000,
+      "change": 4836000,
+      "sign": "+4.836.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 34798000,
-        "date": "10 oct 2025"
-      },
       {
         "value": 34308000,
         "date": "11 oct 2025"
@@ -2211,6 +2207,10 @@
       {
         "value": 38968000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 39144000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
@@ -2226,36 +2226,36 @@
     "29166": {
       "id": 29166,
       "id_team": 3,
-      "id_match": 37997,
-      "id_gameweek": 4049,
-      "id_home": 3,
-      "id_away": 9,
+      "id_match": 38013,
+      "id_gameweek": 4050,
+      "id_home": 4,
+      "id_away": 3,
       "date": {
-        "ts": 1791649800,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1792254600,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "sáb",
           "time": "18:30",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Barcelona",
-      "away": "Getafe",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Betis",
+      "away": "Barcelona",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,
   "home": {
     "29166": {
       "id": 29166,
-      "points": 11,
-      "avg": 3.6667
+      "points": 18,
+      "avg": 4.5
     }
   },
   "away": {

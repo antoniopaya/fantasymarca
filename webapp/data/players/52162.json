@@ -3,15 +3,15 @@
     "id": 52162,
     "name": "Pape Gueye",
     "position": 3,
-    "points": 33,
-    "avg": 4.7,
+    "points": 38,
+    "avg": 4.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/52162.png?version=20260312150047",
     "isFavorite": 0,
-    "value": 34672000,
-    "previousValue": 34963000,
+    "value": 34401000,
+    "previousValue": 34672000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 34672000,
+      "floor": 34401000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 52008000,
+      "value": 51601500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 34672000,
+      "price": 34401000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 52162,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 3,
     "cards": 1
   },
@@ -209,12 +209,12 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -702,10 +702,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 33,
-      "avg": 4.7143,
+      "points": 38,
+      "avg": 4.75,
       "id_team": 20,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -725,35 +725,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 34963000,
-      "change": -291000,
-      "sign": -291
+      "value": 34672000,
+      "change": -271000,
+      "sign": -271
     },
     {
       "time": "Una semana",
-      "value": 38703000,
-      "change": -4031000,
-      "sign": "-4.031.000"
+      "value": 38070000,
+      "change": -3669000,
+      "sign": "-3.669.000"
     },
     {
       "time": "Un mes",
-      "value": 37197000,
-      "change": -2525000,
-      "sign": "-2.525.000"
+      "value": 36846000,
+      "change": -2445000,
+      "sign": "-2.445.000"
     },
     {
       "time": "Un año",
-      "value": 41018000,
-      "change": -6346000,
-      "sign": "-6.346.000"
+      "value": 41043000,
+      "change": -6642000,
+      "sign": "-6.642.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 41018000,
-        "date": "10 oct 2025"
-      },
       {
         "value": 41043000,
         "date": "11 oct 2025"
@@ -2213,6 +2209,10 @@
       {
         "value": 34672000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 34401000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
@@ -2228,28 +2228,28 @@
     "52162": {
       "id": 52162,
       "id_team": 20,
-      "id_match": 38002,
-      "id_gameweek": 4049,
-      "id_home": 15,
-      "id_away": 20,
+      "id_match": 38016,
+      "id_gameweek": 4050,
+      "id_home": 20,
+      "id_away": 23,
       "date": {
-        "ts": 1791658800,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792246500,
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "16:15",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Real Madrid",
-      "away": "Villarreal",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+      "home": "Villarreal",
+      "away": "Elche",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   },
   "starter": false,
@@ -2263,8 +2263,8 @@
   "away": {
     "52162": {
       "id": 52162,
-      "points": 26,
-      "avg": 6.5
+      "points": 31,
+      "avg": 6.2
     }
   },
   "owners": [],

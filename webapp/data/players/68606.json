@@ -3,15 +3,15 @@
     "id": 68606,
     "name": "Ángel Pérez",
     "position": 3,
-    "points": 53,
-    "avg": 6.6,
+    "points": 52,
+    "avg": 6.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68606.png?version=20260323141026",
     "isFavorite": 0,
-    "value": 33369000,
-    "previousValue": 33442000,
+    "value": 32845000,
+    "previousValue": 33369000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 33369000,
+      "floor": 32845000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 50053500,
+      "value": 49267500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 33369000,
+      "price": 32845000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 412
   },
   "id": 68606,
   "player_extra": {
     "matches": 8,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -212,12 +212,14 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 0,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "red"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -706,9 +708,9 @@
     {
       "season": "26/27",
       "points": 52,
-      "avg": 7.4286,
+      "avg": 6.5,
       "id_team": 48,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -721,21 +723,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 33442000,
-      "change": -73000,
-      "sign": -73
+      "value": 33369000,
+      "change": -524000,
+      "sign": -524
     },
     {
       "time": "Una semana",
-      "value": 34452000,
-      "change": -1083000,
-      "sign": "-1.083.000"
+      "value": 34562000,
+      "change": -1717000,
+      "sign": "-1.717.000"
     },
     {
       "time": "Un mes",
-      "value": 25441000,
-      "change": 7928000,
-      "sign": "+7.928.000"
+      "value": 25931000,
+      "change": 6914000,
+      "sign": "+6.914.000"
     }
   ],
   "values_chart": {
@@ -1763,6 +1765,10 @@
       {
         "value": 33369000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 32845000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
@@ -1784,12 +1790,12 @@
       "id_away": 48,
       "date": {
         "ts": 1792332900,
-        "text": "18 oct 16:15",
-        "format": "d MMM H:mm",
+        "text": "dom 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "18 oct",
+          "date": "dom",
           "time": "16:15",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -1807,7 +1813,7 @@
     "68606": {
       "id": 68606,
       "points": 42,
-      "avg": 10.5
+      "avg": 8.4
     }
   },
   "away": {

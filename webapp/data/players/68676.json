@@ -3,15 +3,15 @@
     "id": 68676,
     "name": "Ademola Lookman",
     "position": 4,
-    "points": 27,
-    "avg": 3.4,
+    "points": 25,
+    "avg": 3.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68676.png?version=20260323141155",
     "isFavorite": 0,
-    "value": 25064000,
-    "previousValue": 25223000,
+    "value": 24606000,
+    "previousValue": 25064000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 25064000,
+      "floor": 24606000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 37596000,
+      "value": 36909000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 25064000,
+      "price": 24606000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 174,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 406
   },
   "id": 68676,
   "player_extra": {
     "matches": 8,
     "goals": 1,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -210,12 +210,15 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": -1,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -703,10 +706,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 26,
-      "avg": 3.7143,
+      "points": 25,
+      "avg": 3.125,
       "id_team": 2,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -719,21 +722,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 25223000,
-      "change": -159000,
-      "sign": -159
+      "value": 25064000,
+      "change": -458000,
+      "sign": -458
     },
     {
       "time": "Una semana",
-      "value": 27403000,
-      "change": -2339000,
-      "sign": "-2.339.000"
+      "value": 26911000,
+      "change": -2305000,
+      "sign": "-2.305.000"
     },
     {
       "time": "Un mes",
-      "value": 37906000,
-      "change": -12842000,
-      "sign": "-12.842.000"
+      "value": 37584000,
+      "change": -12978000,
+      "sign": "-12.978.000"
     }
   ],
   "values_chart": {
@@ -1741,6 +1744,10 @@
       {
         "value": 25064000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 24606000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
@@ -1748,8 +1755,8 @@
       "date": "6 mar 2026"
     },
     "min": {
-      "value": 25064000,
-      "date": "10 oct 2026"
+      "value": 24606000,
+      "date": "11 oct 2026"
     }
   },
   "next_match": {
@@ -1791,8 +1798,8 @@
   "away": {
     "68676": {
       "id": 68676,
-      "points": 11,
-      "avg": 3.6667
+      "points": 10,
+      "avg": 2.5
     }
   },
   "owners": [],

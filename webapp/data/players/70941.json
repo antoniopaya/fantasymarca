@@ -3,15 +3,15 @@
     "id": 70941,
     "name": "Bil Nsongo",
     "position": 4,
-    "points": 27,
-    "avg": 3.9,
+    "points": 28,
+    "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70941.png?version=20260621101823",
     "isFavorite": 0,
-    "value": 21566000,
-    "previousValue": 21822000,
+    "value": 21489000,
+    "previousValue": 21566000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 21566000,
+      "floor": 21489000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 32349000,
+      "value": 32233500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 21566000,
+      "price": 21489000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 122
+    "clausesRanking": 125
   },
   "id": 70941,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 1
   },
@@ -211,8 +211,8 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 1,
+        "isLive": true
       },
       "events": null,
       "injury": null,
@@ -713,21 +713,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 21822000,
-      "change": -256000,
-      "sign": -256
+      "value": 21566000,
+      "change": -77000,
+      "sign": -77
     },
     {
       "time": "Una semana",
-      "value": 22193000,
-      "change": -627000,
-      "sign": -627
+      "value": 22312000,
+      "change": -823000,
+      "sign": -823
     },
     {
       "time": "Un mes",
-      "value": 13414000,
-      "change": 8152000,
-      "sign": "+8.152.000"
+      "value": 13925000,
+      "change": 7564000,
+      "sign": "+7.564.000"
     }
   ],
   "values_chart": {
@@ -1175,6 +1175,10 @@
       {
         "value": 21566000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 21489000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
@@ -1190,28 +1194,28 @@
     "70941": {
       "id": 70941,
       "id_team": 6,
-      "id_match": 38004,
-      "id_gameweek": 4049,
-      "id_home": 16,
-      "id_away": 6,
+      "id_match": 38008,
+      "id_gameweek": 4050,
+      "id_home": 6,
+      "id_away": 12,
       "date": {
-        "ts": 1791728100,
-        "text": "dom 16:15",
+        "ts": 1792177200,
+        "text": "vie 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "16:15",
+          "date": "vie",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Real Sociedad",
-      "away": "Deportivo da Coruña",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Levante",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
   "starter": false,

@@ -3,15 +3,15 @@
     "id": 7893,
     "name": "Antonio Sivera",
     "position": 1,
-    "points": 50,
-    "avg": 7.1,
+    "points": 54,
+    "avg": 6.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/7893.png?version=20251006023923",
     "isFavorite": 0,
-    "value": 40635000,
-    "previousValue": 40287000,
+    "value": 40950000,
+    "previousValue": 40635000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 40635000,
+      "floor": 40950000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 60952500,
+      "value": 61425000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 40635000,
+      "price": 40950000,
       "loanable": null
     },
     "bid": {
@@ -202,12 +202,12 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 4,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -695,10 +695,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 50,
-      "avg": 7.1429,
+      "points": 54,
+      "avg": 6.75,
       "id_team": 48,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -725,35 +725,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 40287000,
-      "change": 348000,
-      "sign": 348
+      "value": 40635000,
+      "change": 315000,
+      "sign": 315
     },
     {
       "time": "Una semana",
-      "value": 38631000,
-      "change": 2004000,
-      "sign": "+2.004.000"
+      "value": 38974000,
+      "change": 1976000,
+      "sign": "+1.976.000"
     },
     {
       "time": "Un mes",
-      "value": 31614000,
-      "change": 9021000,
-      "sign": "+9.021.000"
+      "value": 31919000,
+      "change": 9031000,
+      "sign": "+9.031.000"
     },
     {
       "time": "Un año",
-      "value": 26412000,
-      "change": 14223000,
-      "sign": "+14.223.000"
+      "value": 25972000,
+      "change": 14978000,
+      "sign": "+14.978.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 26412000,
-        "date": "10 oct 2025"
-      },
       {
         "value": 25972000,
         "date": "11 oct 2025"
@@ -2213,11 +2209,15 @@
       {
         "value": 40635000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 40950000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
-      "value": 40635000,
-      "date": "10 oct 2026"
+      "value": 40950000,
+      "date": "11 oct 2026"
     },
     "min": {
       "value": 13133000,
@@ -2234,12 +2234,12 @@
       "id_away": 48,
       "date": {
         "ts": 1792332900,
-        "text": "18 oct 16:15",
-        "format": "d MMM H:mm",
+        "text": "dom 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "18 oct",
+          "date": "dom",
           "time": "16:15",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2256,8 +2256,8 @@
   "home": {
     "7893": {
       "id": 7893,
-      "points": 28,
-      "avg": 7
+      "points": 32,
+      "avg": 6.4
     }
   },
   "away": {

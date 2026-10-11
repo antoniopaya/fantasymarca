@@ -3,15 +3,15 @@
     "id": 36048,
     "name": "Nahuel Tenaglia",
     "position": 2,
-    "points": 43,
-    "avg": 5.4,
+    "points": 45,
+    "avg": 5.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/36048.png?version=20251006024418",
     "isFavorite": 0,
-    "value": 31795000,
-    "previousValue": 32136000,
+    "value": 31405000,
+    "previousValue": 31795000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 31795000,
+      "floor": 31405000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 47692500,
+      "value": 47107500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 31795000,
+      "price": 31405000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 182,
       "weight": 71
     },
-    "clausesRanking": 341
+    "clausesRanking": null
   },
   "id": 36048,
   "player_extra": {
@@ -203,12 +203,12 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 3,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -696,10 +696,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 42,
-      "avg": 6,
+      "points": 45,
+      "avg": 5.625,
       "id_team": 48,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -726,35 +726,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 32136000,
-      "change": -341000,
-      "sign": -341
+      "value": 31795000,
+      "change": -390000,
+      "sign": -390
     },
     {
       "time": "Una semana",
-      "value": 34973000,
-      "change": -3178000,
-      "sign": "-3.178.000"
+      "value": 34906000,
+      "change": -3501000,
+      "sign": "-3.501.000"
     },
     {
       "time": "Un mes",
-      "value": 32733000,
-      "change": -938000,
-      "sign": -938
+      "value": 32862000,
+      "change": -1457000,
+      "sign": "-1.457.000"
     },
     {
       "time": "Un año",
-      "value": 29160000,
-      "change": 2635000,
-      "sign": "+2.635.000"
+      "value": 29452000,
+      "change": 1953000,
+      "sign": "+1.953.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 29160000,
-        "date": "10 oct 2025"
-      },
       {
         "value": 29452000,
         "date": "11 oct 2025"
@@ -2214,6 +2210,10 @@
       {
         "value": 31795000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 31405000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
@@ -2235,12 +2235,12 @@
       "id_away": 48,
       "date": {
         "ts": 1792332900,
-        "text": "18 oct 16:15",
-        "format": "d MMM H:mm",
+        "text": "dom 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "18 oct",
+          "date": "dom",
           "time": "16:15",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2257,8 +2257,8 @@
   "home": {
     "36048": {
       "id": 36048,
-      "points": 28,
-      "avg": 7
+      "points": 31,
+      "avg": 6.2
     }
   },
   "away": {

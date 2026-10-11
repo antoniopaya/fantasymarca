@@ -3,15 +3,15 @@
     "id": 392,
     "name": "Denis Suárez",
     "position": 3,
-    "points": 16,
-    "avg": 2.7,
+    "points": 22,
+    "avg": 3.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/392.png?version=20251006024015",
     "isFavorite": 0,
-    "value": 1982000,
-    "previousValue": 2084000,
+    "value": 2091000,
+    "previousValue": 1982000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1982000,
+      "floor": 2091000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 1,
-      "shield2WeeksSku": "shield_t1_2w",
-      "shield1MonthSku": "shield_t1_1m",
-      "value": 2973000,
+      "tier": 2,
+      "shield2WeeksSku": "shield_t2_2w",
+      "shield1MonthSku": "shield_t2_1m",
+      "value": 3136500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1982000,
+      "price": 2091000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 176,
       "weight": 69
     },
-    "clausesRanking": 330
+    "clausesRanking": 227
   },
   "id": 392,
   "player_extra": {
@@ -207,12 +207,14 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 6,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -700,10 +702,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 16,
-      "avg": 2.6667,
+      "points": 22,
+      "avg": 3.1429,
       "id_team": 48,
-      "last_gameweek": 6
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -730,35 +732,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2084000,
-      "change": -102000,
-      "sign": -102
+      "value": 1982000,
+      "change": 109000,
+      "sign": 109
     },
     {
       "time": "Una semana",
-      "value": 2672000,
-      "change": -690000,
-      "sign": -690
+      "value": 2577000,
+      "change": -486000,
+      "sign": -486
     },
     {
       "time": "Un mes",
-      "value": 4143000,
-      "change": -2161000,
-      "sign": "-2.161.000"
+      "value": 4129000,
+      "change": -2038000,
+      "sign": "-2.038.000"
     },
     {
       "time": "Un año",
-      "value": 3375000,
-      "change": -1393000,
-      "sign": "-1.393.000"
+      "value": 3268000,
+      "change": -1177000,
+      "sign": "-1.177.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 3375000,
-        "date": "10 oct 2025"
-      },
       {
         "value": 3268000,
         "date": "11 oct 2025"
@@ -2218,6 +2216,10 @@
       {
         "value": 1982000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 2091000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
@@ -2239,12 +2241,12 @@
       "id_away": 48,
       "date": {
         "ts": 1792332900,
-        "text": "18 oct 16:15",
-        "format": "d MMM H:mm",
+        "text": "dom 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "18 oct",
+          "date": "dom",
           "time": "16:15",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2261,8 +2263,8 @@
   "home": {
     "392": {
       "id": 392,
-      "points": 11,
-      "avg": 2.75
+      "points": 17,
+      "avg": 3.4
     }
   },
   "away": {

@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/5358737.png?version=20260916195420",
     "isFavorite": 0,
-    "value": 831000,
-    "previousValue": 763000,
+    "value": 787000,
+    "previousValue": 831000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 831000,
+      "floor": 787000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1246500,
+      "value": 1180500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 831000,
+      "price": 787000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 94
+    "clausesRanking": 105
   },
   "id": 5358737,
   "player_extra": {
@@ -700,15 +700,15 @@
   "values": [
     {
       "time": "Un día",
-      "value": 763000,
-      "change": 68000,
-      "sign": 68
+      "value": 831000,
+      "change": -44000,
+      "sign": -44
     },
     {
       "time": "Una semana",
-      "value": 413000,
-      "change": 418000,
-      "sign": 418
+      "value": 436000,
+      "change": 351000,
+      "sign": 351
     }
   ],
   "values_chart": {
@@ -808,6 +808,10 @@
       {
         "value": 831000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 787000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
@@ -829,12 +833,12 @@
       "id_away": 50,
       "date": {
         "ts": 1791736200,
-        "text": "dom 18:30",
-        "format": "EEE H:mm",
+        "text": "Hoy 18:30",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "dom",
+          "date": "Hoy",
           "time": "18:30",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

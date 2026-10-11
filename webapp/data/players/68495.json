@@ -3,8 +3,8 @@
     "id": 68495,
     "name": "Martín Satriano",
     "position": 4,
-    "points": 40,
-    "avg": 5.7,
+    "points": 42,
+    "avg": 5.3,
     "status": "doubt",
     "id_competition": 1,
     "injury": {
@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68495.png?version=20260116190325",
     "isFavorite": 0,
-    "value": 25753000,
-    "previousValue": 26205000,
+    "value": 25446000,
+    "previousValue": 25753000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 25753000,
+      "floor": 25446000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 38629500,
+      "value": 38169000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 25753000,
+      "price": 25446000,
       "loanable": null
     },
     "bid": {
@@ -72,11 +72,11 @@
       "height": 187,
       "weight": null
     },
-    "clausesRanking": 289
+    "clausesRanking": 269
   },
   "id": 68495,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 1,
     "cards": 0
   },
@@ -216,12 +216,23 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "events": [
+        "sub_in"
+      ],
+      "injury": {
+        "id": 308822,
+        "id_player": 68495,
+        "category": "injury",
+        "description": "Molestias",
+        "duration": "Duda esta jornada",
+        "since": "2026-10-05 15:01:58",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 3,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     },
@@ -709,10 +720,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 40,
-      "avg": 5.7143,
+      "points": 42,
+      "avg": 5.25,
       "id_team": 9,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -725,21 +736,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 26205000,
-      "change": -452000,
-      "sign": -452
+      "value": 25753000,
+      "change": -307000,
+      "sign": -307
     },
     {
       "time": "Una semana",
-      "value": 27824000,
-      "change": -2071000,
-      "sign": "-2.071.000"
+      "value": 27971000,
+      "change": -2525000,
+      "sign": "-2.525.000"
     },
     {
       "time": "Un mes",
-      "value": 23194000,
-      "change": 2559000,
-      "sign": "+2.559.000"
+      "value": 23363000,
+      "change": 2083000,
+      "sign": "+2.083.000"
     }
   ],
   "values_chart": {
@@ -1815,6 +1826,10 @@
       {
         "value": 25753000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 25446000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
@@ -1830,28 +1845,28 @@
     "68495": {
       "id": 68495,
       "id_team": 9,
-      "id_match": 37997,
-      "id_gameweek": 4049,
-      "id_home": 3,
-      "id_away": 9,
+      "id_match": 38010,
+      "id_gameweek": 4050,
+      "id_home": 9,
+      "id_away": 14,
       "date": {
-        "ts": 1791649800,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1792436400,
+        "text": "19 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "19 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Barcelona",
-      "away": "Getafe",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Getafe",
+      "away": "Rayo Vallecano",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,
@@ -1865,8 +1880,8 @@
   "away": {
     "68495": {
       "id": 68495,
-      "points": 9,
-      "avg": 3
+      "points": 11,
+      "avg": 2.75
     }
   },
   "owners": [],

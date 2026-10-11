@@ -3,15 +3,15 @@
     "id": 15107,
     "name": "Marc Cucurella",
     "position": 2,
-    "points": 19,
-    "avg": 2.7,
+    "points": 23,
+    "avg": 2.9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/15107.png?version=20260615114322",
     "isFavorite": 0,
-    "value": 30610000,
-    "previousValue": 30965000,
+    "value": 30204000,
+    "previousValue": 30610000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 30610000,
+      "floor": 30204000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 45915000,
+      "value": 45306000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 30610000,
+      "price": 30204000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": 67
     },
-    "clausesRanking": null
+    "clausesRanking": 407
   },
   "id": 15107,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 0
   },
@@ -204,12 +204,14 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 20,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     },
@@ -697,30 +699,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 19,
-      "avg": 2.7143,
+      "points": 23,
+      "avg": 2.875,
       "id_team": 15,
-      "last_gameweek": 7
+      "last_gameweek": 8
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 30965000,
-      "change": -355000,
-      "sign": -355
+      "value": 30610000,
+      "change": -406000,
+      "sign": -406
     },
     {
       "time": "Una semana",
-      "value": 33885000,
-      "change": -3275000,
-      "sign": "-3.275.000"
+      "value": 33490000,
+      "change": -3286000,
+      "sign": "-3.286.000"
     },
     {
       "time": "Un mes",
-      "value": 44045000,
-      "change": -13435000,
-      "sign": "-13.435.000"
+      "value": 43707000,
+      "change": -13503000,
+      "sign": "-13.503.000"
     }
   ],
   "values_chart": {
@@ -1196,6 +1198,10 @@
       {
         "value": 30610000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 30204000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
@@ -1203,44 +1209,44 @@
       "date": "19 ago 2026"
     },
     "min": {
-      "value": 30610000,
-      "date": "10 oct 2026"
+      "value": 30204000,
+      "date": "11 oct 2026"
     }
   },
   "next_match": {
     "15107": {
       "id": 15107,
       "id_team": 15,
-      "id_match": 38002,
-      "id_gameweek": 4049,
+      "id_match": 38014,
+      "id_gameweek": 4050,
       "id_home": 15,
-      "id_away": 20,
+      "id_away": 17,
       "date": {
-        "ts": 1791658800,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792350000,
+        "text": "18 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "18 oct",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Real Madrid",
-      "away": "Villarreal",
+      "away": "Sevilla",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,
   "home": {
     "15107": {
       "id": 15107,
-      "points": 11,
-      "avg": 3.6667
+      "points": 15,
+      "avg": 3.75
     }
   },
   "away": {

@@ -3,15 +3,15 @@
     "id": 56578,
     "name": "Johnny Cardoso",
     "position": 3,
-    "points": 20,
-    "avg": 3.3,
+    "points": 24,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/56578.png?version=20250818184253",
     "isFavorite": 0,
-    "value": 6199000,
-    "previousValue": 6016000,
+    "value": 6411000,
+    "previousValue": 6199000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6199000,
+      "floor": 6411000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 9298500,
+      "value": 9616500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6199000,
+      "price": 6411000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 34
+    "clausesRanking": 33
   },
   "id": 56578,
   "player_extra": {
     "matches": 6,
     "goals": 0,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -206,12 +206,14 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 5,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -699,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 19,
-      "avg": 3.8,
+      "points": 24,
+      "avg": 4,
       "id_team": 2,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -729,35 +731,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 6016000,
-      "change": 183000,
-      "sign": 183
+      "value": 6199000,
+      "change": 212000,
+      "sign": 212
     },
     {
       "time": "Una semana",
-      "value": 4941000,
-      "change": 1258000,
-      "sign": "+1.258.000"
+      "value": 5098000,
+      "change": 1313000,
+      "sign": "+1.313.000"
     },
     {
       "time": "Un mes",
-      "value": 1215000,
-      "change": 4984000,
-      "sign": "+4.984.000"
+      "value": 1199000,
+      "change": 5212000,
+      "sign": "+5.212.000"
     },
     {
       "time": "Un año",
-      "value": 15850000,
-      "change": -9651000,
-      "sign": "-9.651.000"
+      "value": 15445000,
+      "change": -9034000,
+      "sign": "-9.034.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 15850000,
-        "date": "10 oct 2025"
-      },
       {
         "value": 15445000,
         "date": "11 oct 2025"
@@ -2217,11 +2215,15 @@
       {
         "value": 6199000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 6411000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
-      "value": 15850000,
-      "date": "10 oct 2025"
+      "value": 15445000,
+      "date": "11 oct 2025"
     },
     "min": {
       "value": 329000,
@@ -2267,8 +2269,8 @@
   "away": {
     "56578": {
       "id": 56578,
-      "points": 4,
-      "avg": 1.3333
+      "points": 9,
+      "avg": 2.25
     }
   },
   "owners": [],

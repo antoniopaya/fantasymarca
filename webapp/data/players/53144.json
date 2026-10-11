@@ -3,15 +3,15 @@
     "id": 53144,
     "name": "Carlos Benavídez",
     "position": 3,
-    "points": 12,
-    "avg": 4,
+    "points": 14,
+    "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/53144.png?version=20251006024142",
     "isFavorite": 0,
-    "value": 1876000,
-    "previousValue": 2057000,
+    "value": 1501000,
+    "previousValue": 1876000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1876000,
+      "floor": 1501000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2814000,
+      "value": 2251500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1876000,
+      "price": 1501000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": 76
     },
-    "clausesRanking": 128
+    "clausesRanking": 148
   },
   "id": 53144,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 0
   },
@@ -202,12 +202,14 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -695,10 +697,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 12,
-      "avg": 4,
+      "points": 14,
+      "avg": 3.5,
       "id_team": 48,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -725,35 +727,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2057000,
-      "change": -181000,
-      "sign": -181
+      "value": 1876000,
+      "change": -375000,
+      "sign": -375
     },
     {
       "time": "Una semana",
-      "value": 2109000,
-      "change": -233000,
-      "sign": -233
+      "value": 2161000,
+      "change": -660000,
+      "sign": -660
     },
     {
       "time": "Un mes",
-      "value": 385000,
-      "change": 1491000,
-      "sign": "+1.491.000"
+      "value": 429000,
+      "change": 1072000,
+      "sign": "+1.072.000"
     },
     {
       "time": "Un año",
-      "value": 329000,
-      "change": 1547000,
-      "sign": "+1.547.000"
+      "value": 425000,
+      "change": 1076000,
+      "sign": "+1.076.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 329000,
-        "date": "10 oct 2025"
-      },
       {
         "value": 425000,
         "date": "11 oct 2025"
@@ -2213,6 +2211,10 @@
       {
         "value": 1876000,
         "date": "10 oct 2026"
+      },
+      {
+        "value": 1501000,
+        "date": "11 oct 2026"
       }
     ],
     "max": {
@@ -2234,12 +2236,12 @@
       "id_away": 48,
       "date": {
         "ts": 1792332900,
-        "text": "18 oct 16:15",
-        "format": "d MMM H:mm",
+        "text": "dom 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "18 oct",
+          "date": "dom",
           "time": "16:15",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2256,7 +2258,7 @@
   "home": {
     "53144": {
       "id": 53144,
-      "points": 2,
+      "points": 4,
       "avg": 2
     }
   },
