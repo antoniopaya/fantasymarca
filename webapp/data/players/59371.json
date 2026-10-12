@@ -3,15 +3,15 @@
     "id": 59371,
     "name": "Luka Sučić",
     "position": 3,
-    "points": 39,
-    "avg": 4.9,
+    "points": 41,
+    "avg": 5.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59371.png?version=20240802114718",
     "isFavorite": 0,
-    "value": 28302000,
-    "previousValue": 27907000,
+    "value": 28656000,
+    "previousValue": 28302000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 28302000,
+      "floor": 28656000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 42453000,
+      "value": 42984000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 28302000,
+      "price": 28656000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 67
+    "clausesRanking": 82
   },
   "id": 59371,
   "player_extra": {
@@ -211,12 +211,12 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 3,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -256,7 +256,7 @@
       "id": 4052,
       "number": 11,
       "shortName": "J11",
-      "startDate": "2026-10-31 14:00:00",
+      "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
         "points": null,
@@ -272,8 +272,8 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-08 20:00:00",
-      "endDate": "2026-11-08 20:00:00",
+      "startDate": "2026-11-07 14:00:00",
+      "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -704,10 +704,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 38,
-      "avg": 5.4286,
+      "points": 41,
+      "avg": 5.125,
       "id_team": 16,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -727,35 +727,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 27907000,
-      "change": 395000,
-      "sign": 395
+      "value": 28302000,
+      "change": 354000,
+      "sign": 354
     },
     {
       "time": "Una semana",
-      "value": 25220000,
-      "change": 3082000,
-      "sign": "+3.082.000"
+      "value": 25724000,
+      "change": 2932000,
+      "sign": "+2.932.000"
     },
     {
       "time": "Un mes",
-      "value": 12962000,
-      "change": 15340000,
-      "sign": "+15.340.000"
+      "value": 13452000,
+      "change": 15204000,
+      "sign": "+15.204.000"
     },
     {
       "time": "Un año",
-      "value": 469000,
-      "change": 27833000,
-      "sign": "+27.833.000"
+      "value": 346000,
+      "change": 28310000,
+      "sign": "+28.310.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 469000,
-        "date": "11 oct 2025"
-      },
       {
         "value": 346000,
         "date": "12 oct 2025"
@@ -2215,11 +2211,15 @@
       {
         "value": 28302000,
         "date": "11 oct 2026"
+      },
+      {
+        "value": 28656000,
+        "date": "12 oct 2026"
       }
     ],
     "max": {
-      "value": 28302000,
-      "date": "11 oct 2026"
+      "value": 28656000,
+      "date": "12 oct 2026"
     },
     "min": {
       "value": 329000,
@@ -2236,12 +2236,12 @@
       "id_away": 16,
       "date": {
         "ts": 1792341000,
-        "text": "18 oct 18:30",
-        "format": "d MMM H:mm",
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "18 oct",
+          "date": "dom",
           "time": "18:30",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2258,7 +2258,7 @@
   "home": {
     "59371": {
       "id": 59371,
-      "points": 9,
+      "points": 12,
       "avg": 3
     }
   },

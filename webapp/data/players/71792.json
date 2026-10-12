@@ -5,13 +5,17 @@
     "position": 3,
     "points": 5,
     "avg": 2.5,
-    "status": null,
+    "status": "other",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "other",
+      "description": "No convocado",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71792.png?version=20260805081843",
     "isFavorite": 0,
-    "value": 465000,
-    "previousValue": 329000,
+    "value": 350000,
+    "previousValue": 465000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -47,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 465000,
+      "price": 350000,
       "loanable": null
     },
     "bid": {
@@ -255,7 +259,7 @@
       "id": 4052,
       "number": 11,
       "shortName": "J11",
-      "startDate": "2026-10-31 14:00:00",
+      "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
         "points": null,
@@ -271,8 +275,8 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-08 20:00:00",
-      "endDate": "2026-11-08 20:00:00",
+      "startDate": "2026-11-07 14:00:00",
+      "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -712,21 +716,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 136000,
-      "sign": 136
+      "value": 465000,
+      "change": -115000,
+      "sign": -115
     },
     {
       "time": "Una semana",
       "value": 329000,
-      "change": 136000,
-      "sign": 136
+      "change": 21000,
+      "sign": 21
     },
     {
       "time": "Un mes",
-      "value": 525000,
-      "change": -60000,
-      "sign": -60
+      "value": 413000,
+      "change": -63000,
+      "sign": -63
     }
   ],
   "values_chart": {
@@ -998,6 +1002,10 @@
       {
         "value": 465000,
         "date": "11 oct 2026"
+      },
+      {
+        "value": 350000,
+        "date": "12 oct 2026"
       }
     ],
     "max": {
@@ -1019,12 +1027,12 @@
       "id_away": 17,
       "date": {
         "ts": 1791831600,
-        "text": "lun 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "lun",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

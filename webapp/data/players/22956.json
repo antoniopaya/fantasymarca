@@ -3,15 +3,15 @@
     "id": 22956,
     "name": "Sergio Gómez",
     "position": 2,
-    "points": 19,
-    "avg": 2.4,
+    "points": 21,
+    "avg": 2.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22956.png?version=20251004234305",
     "isFavorite": 0,
-    "value": 18677000,
-    "previousValue": 18142000,
+    "value": 19262000,
+    "previousValue": 18677000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 18677000,
+      "floor": 19262000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 28015500,
+      "value": 28893000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 18677000,
+      "price": 19262000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 171,
       "weight": 68
     },
-    "clausesRanking": 217
+    "clausesRanking": 175
   },
   "id": 22956,
   "player_extra": {
@@ -201,12 +201,12 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 3,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -246,7 +246,7 @@
       "id": 4052,
       "number": 11,
       "shortName": "J11",
-      "startDate": "2026-10-31 14:00:00",
+      "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
         "points": null,
@@ -262,8 +262,8 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-08 20:00:00",
-      "endDate": "2026-11-08 20:00:00",
+      "startDate": "2026-11-07 14:00:00",
+      "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -694,10 +694,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 18,
-      "avg": 2.5714,
+      "points": 21,
+      "avg": 2.625,
       "id_team": 16,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -717,35 +717,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 18142000,
-      "change": 535000,
-      "sign": 535
+      "value": 18677000,
+      "change": 585000,
+      "sign": 585
     },
     {
       "time": "Una semana",
-      "value": 18699000,
-      "change": -22000,
-      "sign": -22
+      "value": 18145000,
+      "change": 1117000,
+      "sign": "+1.117.000"
     },
     {
       "time": "Un mes",
-      "value": 20217000,
-      "change": -1540000,
-      "sign": "-1.540.000"
+      "value": 20067000,
+      "change": -805000,
+      "sign": -805
     },
     {
       "time": "Un año",
-      "value": 10202000,
-      "change": 8475000,
-      "sign": "+8.475.000"
+      "value": 10423000,
+      "change": 8839000,
+      "sign": "+8.839.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 10202000,
-        "date": "11 oct 2025"
-      },
       {
         "value": 10423000,
         "date": "12 oct 2025"
@@ -2205,6 +2201,10 @@
       {
         "value": 18677000,
         "date": "11 oct 2026"
+      },
+      {
+        "value": 19262000,
+        "date": "12 oct 2026"
       }
     ],
     "max": {
@@ -2226,12 +2226,12 @@
       "id_away": 16,
       "date": {
         "ts": 1792341000,
-        "text": "18 oct 18:30",
-        "format": "d MMM H:mm",
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "18 oct",
+          "date": "dom",
           "time": "18:30",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2248,8 +2248,8 @@
   "home": {
     "22956": {
       "id": 22956,
-      "points": 10,
-      "avg": 3.3333
+      "points": 13,
+      "avg": 3.25
     }
   },
   "away": {

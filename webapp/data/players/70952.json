@@ -5,13 +5,17 @@
     "position": 1,
     "points": 0,
     "avg": 0,
-    "status": null,
+    "status": "other",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "other",
+      "description": "No convocado",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70952.png?version=20260621102110",
     "isFavorite": 0,
-    "value": 517000,
-    "previousValue": 329000,
+    "value": 399000,
+    "previousValue": 517000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -47,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 517000,
+      "price": 399000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 189,
       "weight": null
     },
-    "clausesRanking": 400
+    "clausesRanking": 392
   },
   "id": 70952,
   "player_extra": {
@@ -196,12 +200,12 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": null,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -241,7 +245,7 @@
       "id": 4052,
       "number": 11,
       "shortName": "J11",
-      "startDate": "2026-10-31 14:00:00",
+      "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
         "points": null,
@@ -257,8 +261,8 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-08 20:00:00",
-      "endDate": "2026-11-08 20:00:00",
+      "startDate": "2026-11-07 14:00:00",
+      "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -690,21 +694,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 188000,
-      "sign": 188
+      "value": 517000,
+      "change": -118000,
+      "sign": -118
     },
     {
       "time": "Una semana",
-      "value": 453000,
-      "change": 64000,
-      "sign": 64
+      "value": 331000,
+      "change": 68000,
+      "sign": 68
     },
     {
       "time": "Un mes",
-      "value": 363000,
-      "change": 154000,
-      "sign": 154
+      "value": 437000,
+      "change": -38000,
+      "sign": -38
     }
   ],
   "values_chart": {
@@ -1156,6 +1160,10 @@
       {
         "value": 517000,
         "date": "11 oct 2026"
+      },
+      {
+        "value": 399000,
+        "date": "12 oct 2026"
       }
     ],
     "max": {

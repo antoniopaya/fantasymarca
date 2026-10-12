@@ -3,15 +3,15 @@
     "id": 3849388,
     "name": "Mamadou Sarr",
     "position": 2,
-    "points": 6,
-    "avg": 2,
+    "points": 10,
+    "avg": 3.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3849388.png?version=20260828114618",
     "isFavorite": 0,
-    "value": 5420000,
-    "previousValue": 5515000,
+    "value": 5465000,
+    "previousValue": 5420000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5420000,
+      "floor": 5465000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8130000,
+      "value": 8197500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5420000,
+      "price": 5465000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 194,
       "weight": null
     },
-    "clausesRanking": 274
+    "clausesRanking": 149
   },
   "id": 3849388,
   "player_extra": {
@@ -198,12 +198,12 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 5,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -243,7 +243,7 @@
       "id": 4052,
       "number": 11,
       "shortName": "J11",
-      "startDate": "2026-10-31 14:00:00",
+      "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
         "points": null,
@@ -259,8 +259,8 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-08 20:00:00",
-      "endDate": "2026-11-08 20:00:00",
+      "startDate": "2026-11-07 14:00:00",
+      "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -691,30 +691,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 5,
-      "avg": 2.5,
+      "points": 10,
+      "avg": 3.3333,
       "id_team": 16,
-      "last_gameweek": 5
+      "last_gameweek": 8
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 5515000,
-      "change": -95000,
-      "sign": -95
+      "value": 5420000,
+      "change": 45000,
+      "sign": 45
     },
     {
       "time": "Una semana",
-      "value": 6477000,
-      "change": -1057000,
-      "sign": "-1.057.000"
+      "value": 6233000,
+      "change": -768000,
+      "sign": -768
     },
     {
       "time": "Un mes",
-      "value": 12244000,
-      "change": -6824000,
-      "sign": "-6.824.000"
+      "value": 11859000,
+      "change": -6394000,
+      "sign": "-6.394.000"
     }
   ],
   "values_chart": {
@@ -894,6 +894,10 @@
       {
         "value": 5420000,
         "date": "11 oct 2026"
+      },
+      {
+        "value": 5465000,
+        "date": "12 oct 2026"
       }
     ],
     "max": {
@@ -915,12 +919,12 @@
       "id_away": 16,
       "date": {
         "ts": 1792341000,
-        "text": "18 oct 18:30",
-        "format": "d MMM H:mm",
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "18 oct",
+          "date": "dom",
           "time": "18:30",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -937,8 +941,8 @@
   "home": {
     "3849388": {
       "id": 3849388,
-      "points": 3,
-      "avg": 3
+      "points": 8,
+      "avg": 4
     }
   },
   "away": {

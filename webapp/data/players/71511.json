@@ -14,7 +14,7 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71511.png?version=20260716182159",
     "isFavorite": 0,
-    "value": 457000,
+    "value": 329000,
     "previousValue": 457000,
     "videoFrame": null,
     "team": {
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 457000,
+      "price": 329000,
       "loanable": null
     },
     "bid": {
@@ -290,7 +290,7 @@
       "id": 4052,
       "number": 11,
       "shortName": "J11",
-      "startDate": "2026-10-31 14:00:00",
+      "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
         "points": null,
@@ -306,8 +306,8 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-08 20:00:00",
-      "endDate": "2026-11-08 20:00:00",
+      "startDate": "2026-11-07 14:00:00",
+      "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -748,20 +748,20 @@
     {
       "time": "Un día",
       "value": 457000,
+      "change": -128000,
+      "sign": -128
+    },
+    {
+      "time": "Una semana",
+      "value": 329000,
       "change": 0,
       "sign": 0
     },
     {
-      "time": "Una semana",
-      "value": 335000,
-      "change": 122000,
-      "sign": 122
-    },
-    {
       "time": "Un mes",
-      "value": 394000,
-      "change": 63000,
-      "sign": 63
+      "value": 413000,
+      "change": -84000,
+      "sign": -84
     }
   ],
   "values_chart": {
@@ -1113,6 +1113,10 @@
       {
         "value": 457000,
         "date": "11 oct 2026"
+      },
+      {
+        "value": 329000,
+        "date": "12 oct 2026"
       }
     ],
     "max": {
@@ -1134,12 +1138,12 @@
       "id_away": 16,
       "date": {
         "ts": 1792341000,
-        "text": "18 oct 18:30",
-        "format": "d MMM H:mm",
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "18 oct",
+          "date": "dom",
           "time": "18:30",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",

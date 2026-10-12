@@ -3,15 +3,15 @@
     "id": 4886,
     "name": "Asier Villalibre",
     "position": 4,
-    "points": 9,
-    "avg": 1.5,
+    "points": 10,
+    "avg": 1.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4886.png?version=20260619115232",
     "isFavorite": 0,
-    "value": 2064000,
-    "previousValue": 2228000,
+    "value": 1892000,
+    "previousValue": 2064000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2064000,
+      "floor": 1892000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 2,
-      "shield2WeeksSku": "shield_t2_2w",
-      "shield1MonthSku": "shield_t2_1m",
-      "value": 3096000,
+      "tier": 1,
+      "shield2WeeksSku": "shield_t1_2w",
+      "shield1MonthSku": "shield_t1_1m",
+      "value": 2838000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2064000,
+      "price": 1892000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": 80
     },
-    "clausesRanking": 297
+    "clausesRanking": null
   },
   "id": 4886,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 0
   },
@@ -210,12 +210,14 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -255,7 +257,7 @@
       "id": 4052,
       "number": 11,
       "shortName": "J11",
-      "startDate": "2026-10-31 14:00:00",
+      "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
         "points": null,
@@ -271,8 +273,8 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-08 20:00:00",
-      "endDate": "2026-11-08 20:00:00",
+      "startDate": "2026-11-07 14:00:00",
+      "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -703,10 +705,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 9,
-      "avg": 1.5,
+      "points": 10,
+      "avg": 1.4286,
       "id_team": 1490,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "24/25",
@@ -726,21 +728,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2228000,
-      "change": -164000,
-      "sign": -164
+      "value": 2064000,
+      "change": -172000,
+      "sign": -172
     },
     {
       "time": "Una semana",
-      "value": 3291000,
-      "change": -1227000,
-      "sign": "-1.227.000"
+      "value": 3073000,
+      "change": -1181000,
+      "sign": "-1.181.000"
     },
     {
       "time": "Un mes",
-      "value": 9258000,
-      "change": -7194000,
-      "sign": "-7.194.000"
+      "value": 8964000,
+      "change": -7072000,
+      "sign": "-7.072.000"
     }
   ],
   "values_chart": {
@@ -1204,6 +1206,10 @@
       {
         "value": 2064000,
         "date": "11 oct 2026"
+      },
+      {
+        "value": 1892000,
+        "date": "12 oct 2026"
       }
     ],
     "max": {
@@ -1211,43 +1217,43 @@
       "date": "28 ago 2026"
     },
     "min": {
-      "value": 2064000,
-      "date": "11 oct 2026"
+      "value": 1892000,
+      "date": "12 oct 2026"
     }
   },
   "next_match": {
     "4886": {
       "id": 4886,
       "id_team": 1490,
-      "id_match": 38003,
-      "id_gameweek": 4049,
-      "id_home": 1490,
-      "id_away": 19,
+      "id_match": 38012,
+      "id_gameweek": 4050,
+      "id_home": 50,
+      "id_away": 1490,
       "date": {
-        "ts": 1791745200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792324800,
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
-      "away": "Valencia",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
+      "home": "Osasuna",
+      "away": "Racing de Santander",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,
   "home": {
     "4886": {
       "id": 4886,
-      "points": 3,
+      "points": 4,
       "avg": 1
     }
   },

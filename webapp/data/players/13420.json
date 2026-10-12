@@ -3,15 +3,15 @@
     "id": 13420,
     "name": "Mouctar Diakhaby",
     "position": 2,
-    "points": 6,
-    "avg": 1.5,
+    "points": 9,
+    "avg": 1.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/13420.png?version=20251006020255",
     "isFavorite": 0,
-    "value": 547000,
-    "previousValue": 518000,
+    "value": 689000,
+    "previousValue": 547000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 666666.6666666666,
+      "floor": 689000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1000000,
+      "value": 1033500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 547000,
+      "price": 689000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 192,
       "weight": 74
     },
-    "clausesRanking": 206
+    "clausesRanking": 104
   },
   "id": 13420,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 2
   },
@@ -223,12 +223,14 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -268,7 +270,7 @@
       "id": 4052,
       "number": 11,
       "shortName": "J11",
-      "startDate": "2026-10-31 14:00:00",
+      "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
         "points": null,
@@ -284,8 +286,8 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-08 20:00:00",
-      "endDate": "2026-11-08 20:00:00",
+      "startDate": "2026-11-07 14:00:00",
+      "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -716,10 +718,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 6,
-      "avg": 1.5,
+      "points": 9,
+      "avg": 1.8,
       "id_team": 19,
-      "last_gameweek": 4
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -746,35 +748,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 518000,
-      "change": 29000,
-      "sign": 29
+      "value": 547000,
+      "change": 142000,
+      "sign": 142
     },
     {
       "time": "Una semana",
-      "value": 363000,
-      "change": 184000,
-      "sign": 184
+      "value": 407000,
+      "change": 282000,
+      "sign": 282
     },
     {
       "time": "Un mes",
-      "value": 4170000,
-      "change": -3623000,
-      "sign": "-3.623.000"
+      "value": 3974000,
+      "change": -3285000,
+      "sign": "-3.285.000"
     },
     {
       "time": "Un año",
-      "value": 18071000,
-      "change": -17524000,
-      "sign": "-17.524.000"
+      "value": 17256000,
+      "change": -16567000,
+      "sign": "-16.567.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 18071000,
-        "date": "11 oct 2025"
-      },
       {
         "value": 17256000,
         "date": "12 oct 2025"
@@ -2234,11 +2232,15 @@
       {
         "value": 547000,
         "date": "11 oct 2026"
+      },
+      {
+        "value": 689000,
+        "date": "12 oct 2026"
       }
     ],
     "max": {
-      "value": 18071000,
-      "date": "11 oct 2025"
+      "value": 17256000,
+      "date": "12 oct 2025"
     },
     "min": {
       "value": 329000,
@@ -2249,28 +2251,28 @@
     "13420": {
       "id": 13420,
       "id_team": 19,
-      "id_match": 38003,
-      "id_gameweek": 4049,
-      "id_home": 1490,
-      "id_away": 19,
+      "id_match": 38015,
+      "id_gameweek": 4050,
+      "id_home": 19,
+      "id_away": 1,
       "date": {
-        "ts": 1791745200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792263600,
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "sáb",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
-      "away": "Valencia",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
+      "home": "Valencia",
+      "away": "Athletic Club",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
@@ -2284,8 +2286,8 @@
   "away": {
     "13420": {
       "id": 13420,
-      "points": -1,
-      "avg": -1
+      "points": 2,
+      "avg": 1
     }
   },
   "owners": [],

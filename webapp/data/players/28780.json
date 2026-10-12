@@ -3,15 +3,15 @@
     "id": 28780,
     "name": "Luismi Cruz",
     "position": 3,
-    "points": 38,
-    "avg": 4.8,
+    "points": 40,
+    "avg": 5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/28780.png?version=20260621103122",
     "isFavorite": 0,
-    "value": 19781000,
-    "previousValue": 19889000,
+    "value": 19614000,
+    "previousValue": 19781000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 19781000,
+      "floor": 19614000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 29671500,
+      "value": 29421000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 19781000,
+      "price": 19614000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 166,
       "weight": null
     },
-    "clausesRanking": 285
+    "clausesRanking": 295
   },
   "id": 28780,
   "player_extra": {
@@ -212,12 +212,14 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 3,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -257,7 +259,7 @@
       "id": 4052,
       "number": 11,
       "shortName": "J11",
-      "startDate": "2026-10-31 14:00:00",
+      "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
         "points": null,
@@ -273,8 +275,8 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-08 20:00:00",
-      "endDate": "2026-11-08 20:00:00",
+      "startDate": "2026-11-07 14:00:00",
+      "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -705,30 +707,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 37,
-      "avg": 5.2857,
+      "points": 40,
+      "avg": 5,
       "id_team": 6,
-      "last_gameweek": 7
+      "last_gameweek": 8
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 19889000,
-      "change": -108000,
-      "sign": -108
+      "value": 19781000,
+      "change": -167000,
+      "sign": -167
     },
     {
       "time": "Una semana",
-      "value": 21112000,
-      "change": -1331000,
-      "sign": "-1.331.000"
+      "value": 20993000,
+      "change": -1379000,
+      "sign": "-1.379.000"
     },
     {
       "time": "Un mes",
-      "value": 10488000,
-      "change": 9293000,
-      "sign": "+9.293.000"
+      "value": 10914000,
+      "change": 8700000,
+      "sign": "+8.700.000"
     }
   ],
   "values_chart": {
@@ -1180,6 +1182,10 @@
       {
         "value": 19781000,
         "date": "11 oct 2026"
+      },
+      {
+        "value": 19614000,
+        "date": "12 oct 2026"
       }
     ],
     "max": {
@@ -1230,8 +1236,8 @@
   "away": {
     "28780": {
       "id": 28780,
-      "points": 24,
-      "avg": 8
+      "points": 27,
+      "avg": 6.75
     }
   },
   "owners": [],

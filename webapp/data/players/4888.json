@@ -3,15 +3,15 @@
     "id": 4888,
     "name": "Carlos Soler",
     "position": 3,
-    "points": 34,
-    "avg": 4.3,
+    "points": 38,
+    "avg": 4.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4888.png?version=20250901203628",
     "isFavorite": 0,
-    "value": 24230000,
-    "previousValue": 24052000,
+    "value": 24456000,
+    "previousValue": 24230000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 24230000,
+      "floor": 24456000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 36345000,
+      "value": 36684000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 24230000,
+      "price": 24456000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 180,
       "weight": 76
     },
-    "clausesRanking": 96
+    "clausesRanking": 95
   },
   "id": 4888,
   "player_extra": {
@@ -207,12 +207,15 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 5,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -252,7 +255,7 @@
       "id": 4052,
       "number": 11,
       "shortName": "J11",
-      "startDate": "2026-10-31 14:00:00",
+      "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
         "points": null,
@@ -268,8 +271,8 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-08 20:00:00",
-      "endDate": "2026-11-08 20:00:00",
+      "startDate": "2026-11-07 14:00:00",
+      "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -700,10 +703,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 33,
-      "avg": 4.7143,
+      "points": 38,
+      "avg": 4.75,
       "id_team": 16,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -716,35 +719,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 24052000,
-      "change": 178000,
-      "sign": 178
+      "value": 24230000,
+      "change": 226000,
+      "sign": 226
     },
     {
       "time": "Una semana",
-      "value": 23294000,
-      "change": 936000,
-      "sign": 936
+      "value": 23422000,
+      "change": 1034000,
+      "sign": "+1.034.000"
     },
     {
       "time": "Un mes",
-      "value": 22600000,
-      "change": 1630000,
-      "sign": "+1.630.000"
+      "value": 22249000,
+      "change": 2207000,
+      "sign": "+2.207.000"
     },
     {
       "time": "Un año",
-      "value": 17912000,
-      "change": 6318000,
-      "sign": "+6.318.000"
+      "value": 17361000,
+      "change": 7095000,
+      "sign": "+7.095.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 17912000,
-        "date": "11 oct 2025"
-      },
       {
         "value": 17361000,
         "date": "12 oct 2025"
@@ -2204,6 +2203,10 @@
       {
         "value": 24230000,
         "date": "11 oct 2026"
+      },
+      {
+        "value": 24456000,
+        "date": "12 oct 2026"
       }
     ],
     "max": {
@@ -2225,12 +2228,12 @@
       "id_away": 16,
       "date": {
         "ts": 1792341000,
-        "text": "18 oct 18:30",
-        "format": "d MMM H:mm",
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "18 oct",
+          "date": "dom",
           "time": "18:30",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2247,8 +2250,8 @@
   "home": {
     "4888": {
       "id": 4888,
-      "points": 11,
-      "avg": 3.6667
+      "points": 16,
+      "avg": 4
     }
   },
   "away": {

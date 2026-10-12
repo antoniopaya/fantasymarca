@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70945.png?version=20260621102017",
     "isFavorite": 0,
-    "value": 3170000,
-    "previousValue": 3111000,
+    "value": 3302000,
+    "previousValue": 3170000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3170000,
+      "floor": 3302000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 4755000,
+      "value": 4953000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3170000,
+      "price": 3302000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 126
+    "clausesRanking": 117
   },
   "id": 70945,
   "player_extra": {
@@ -204,11 +204,13 @@
       "endDate": "2026-10-12 21:00:00",
       "points": {
         "points": 1,
-        "isLive": true
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -248,7 +250,7 @@
       "id": 4052,
       "number": 11,
       "shortName": "J11",
-      "startDate": "2026-10-31 14:00:00",
+      "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
         "points": null,
@@ -264,8 +266,8 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-08 20:00:00",
-      "endDate": "2026-11-08 20:00:00",
+      "startDate": "2026-11-07 14:00:00",
+      "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -696,30 +698,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 13,
-      "avg": 4.3333,
+      "points": 14,
+      "avg": 3.5,
       "id_team": 6,
-      "last_gameweek": 7
+      "last_gameweek": 8
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 3111000,
-      "change": 59000,
-      "sign": 59
+      "value": 3170000,
+      "change": 132000,
+      "sign": 132
     },
     {
       "time": "Una semana",
-      "value": 2711000,
-      "change": 459000,
-      "sign": 459
+      "value": 2833000,
+      "change": 469000,
+      "sign": 469
     },
     {
       "time": "Un mes",
-      "value": 445000,
-      "change": 2725000,
-      "sign": "+2.725.000"
+      "value": 340000,
+      "change": 2962000,
+      "sign": "+2.962.000"
     }
   ],
   "values_chart": {
@@ -1171,11 +1173,15 @@
       {
         "value": 3170000,
         "date": "11 oct 2026"
+      },
+      {
+        "value": 3302000,
+        "date": "12 oct 2026"
       }
     ],
     "max": {
-      "value": 3170000,
-      "date": "11 oct 2026"
+      "value": 3302000,
+      "date": "12 oct 2026"
     },
     "min": {
       "value": 329000,
@@ -1221,8 +1227,8 @@
   "away": {
     "70945": {
       "id": 70945,
-      "points": 3,
-      "avg": 3
+      "points": 4,
+      "avg": 2
     }
   },
   "owners": [],

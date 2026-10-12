@@ -3,15 +3,15 @@
     "id": 15566,
     "name": "Yangel Herrera",
     "position": 3,
-    "points": 26,
-    "avg": 3.3,
+    "points": 28,
+    "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/15566.png?version=20251004234650",
     "isFavorite": 0,
-    "value": 13214000,
-    "previousValue": 13357000,
+    "value": 12831000,
+    "previousValue": 13214000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 13214000,
+      "floor": 12831000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 19821000,
+      "value": 19246500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 13214000,
+      "price": 12831000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 184,
       "weight": 75
     },
-    "clausesRanking": 177
+    "clausesRanking": 213
   },
   "id": 15566,
   "player_extra": {
     "matches": 8,
     "goals": 1,
-    "cards": 3
+    "cards": 4
   },
   "points": [
     {
@@ -214,12 +214,14 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 3,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -259,7 +261,7 @@
       "id": 4052,
       "number": 11,
       "shortName": "J11",
-      "startDate": "2026-10-31 14:00:00",
+      "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
         "points": null,
@@ -275,8 +277,8 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-08 20:00:00",
-      "endDate": "2026-11-08 20:00:00",
+      "startDate": "2026-11-07 14:00:00",
+      "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -707,10 +709,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 25,
-      "avg": 3.5714,
+      "points": 28,
+      "avg": 3.5,
       "id_team": 16,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -744,35 +746,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 13357000,
-      "change": -143000,
-      "sign": -143
+      "value": 13214000,
+      "change": -383000,
+      "sign": -383
     },
     {
       "time": "Una semana",
-      "value": 14075000,
-      "change": -861000,
-      "sign": -861
+      "value": 14087000,
+      "change": -1256000,
+      "sign": "-1.256.000"
     },
     {
       "time": "Un mes",
-      "value": 8464000,
-      "change": 4750000,
-      "sign": "+4.750.000"
+      "value": 8686000,
+      "change": 4145000,
+      "sign": "+4.145.000"
     },
     {
       "time": "Un año",
-      "value": 5149000,
-      "change": 8065000,
-      "sign": "+8.065.000"
+      "value": 5282000,
+      "change": 7549000,
+      "sign": "+7.549.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 5149000,
-        "date": "11 oct 2025"
-      },
       {
         "value": 5282000,
         "date": "12 oct 2025"
@@ -2232,6 +2230,10 @@
       {
         "value": 13214000,
         "date": "11 oct 2026"
+      },
+      {
+        "value": 12831000,
+        "date": "12 oct 2026"
       }
     ],
     "max": {
@@ -2253,12 +2255,12 @@
       "id_away": 16,
       "date": {
         "ts": 1792341000,
-        "text": "18 oct 18:30",
-        "format": "d MMM H:mm",
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "18 oct",
+          "date": "dom",
           "time": "18:30",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2275,8 +2277,8 @@
   "home": {
     "15566": {
       "id": 15566,
-      "points": 8,
-      "avg": 2.6667
+      "points": 11,
+      "avg": 2.75
     }
   },
   "away": {

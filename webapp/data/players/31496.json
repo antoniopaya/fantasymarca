@@ -3,15 +3,15 @@
     "id": 31496,
     "name": "Héctor Bellerín",
     "position": 2,
-    "points": 26,
-    "avg": 3.7,
+    "points": 30,
+    "avg": 3.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/31496.png?version=20251003194443",
     "isFavorite": 0,
-    "value": 16696000,
-    "previousValue": 16651000,
+    "value": 16978000,
+    "previousValue": 16696000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 16696000,
+      "floor": 16978000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 25044000,
+      "value": 25467000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 16696000,
+      "price": 16978000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 178,
       "weight": 74
     },
-    "clausesRanking": 305
+    "clausesRanking": 345
   },
   "id": 31496,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 1
   },
@@ -202,12 +202,14 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -247,7 +249,7 @@
       "id": 4052,
       "number": 11,
       "shortName": "J11",
-      "startDate": "2026-10-31 14:00:00",
+      "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
         "points": null,
@@ -263,8 +265,8 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-08 20:00:00",
-      "endDate": "2026-11-08 20:00:00",
+      "startDate": "2026-11-07 14:00:00",
+      "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -695,10 +697,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 26,
-      "avg": 3.7143,
+      "points": 30,
+      "avg": 3.75,
       "id_team": 4,
-      "last_gameweek": 7
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -725,35 +727,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 16651000,
-      "change": 45000,
-      "sign": 45
+      "value": 16696000,
+      "change": 282000,
+      "sign": 282
     },
     {
       "time": "Una semana",
-      "value": 17631000,
-      "change": -935000,
-      "sign": -935
+      "value": 17450000,
+      "change": -472000,
+      "sign": -472
     },
     {
       "time": "Un mes",
-      "value": 17099000,
-      "change": -403000,
-      "sign": -403
+      "value": 17398000,
+      "change": -420000,
+      "sign": -420
     },
     {
       "time": "Un año",
-      "value": 25865000,
-      "change": -9169000,
-      "sign": "-9.169.000"
+      "value": 26248000,
+      "change": -9270000,
+      "sign": "-9.270.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 25865000,
-        "date": "11 oct 2025"
-      },
       {
         "value": 26248000,
         "date": "12 oct 2025"
@@ -2213,6 +2211,10 @@
       {
         "value": 16696000,
         "date": "11 oct 2026"
+      },
+      {
+        "value": 16978000,
+        "date": "12 oct 2026"
       }
     ],
     "max": {
@@ -2228,36 +2230,36 @@
     "31496": {
       "id": 31496,
       "id_team": 4,
-      "id_match": 38001,
-      "id_gameweek": 4049,
+      "id_match": 38013,
+      "id_gameweek": 4050,
       "id_home": 4,
-      "id_away": 50,
+      "id_away": 3,
       "date": {
-        "ts": 1791736200,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1792254600,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "sáb",
           "time": "18:30",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Betis",
-      "away": "Osasuna",
+      "away": "Barcelona",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,
   "home": {
     "31496": {
       "id": 31496,
-      "points": 15,
-      "avg": 5
+      "points": 19,
+      "avg": 4.75
     }
   },
   "away": {
