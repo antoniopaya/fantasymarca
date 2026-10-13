@@ -407,6 +407,42 @@ export function getAllPlayerSummaries(): PlayerSummary[] {
   return summariesCache;
 }
 
+// --- Desglose de puntos (fantasy_api/player_stats.py) ------------------------
+
+/** Un partido de un jugador: de qué estadísticas salieron sus puntos. */
+export interface PlayerGameStats {
+  points: number;
+  /** Minutos jugados, xG y xA (Sofascore). */
+  min: number;
+  xg: number;
+  xa: number;
+  /** Nota de Sofascore. */
+  ss: number | null;
+  /** Componente de la puntuación -> [valor de la estadística, puntos que da]. null = sin desglose. */
+  c: Record<string, [number, number]> | null;
+}
+
+let playerStatsCache: Map<number, Record<string, PlayerGameStats>> | null =
+  null;
+
+/** Jornada -> id de jugador -> desglose. Vacío si aún no se ha descargado nada. */
+export function getPlayerStats(): Map<number, Record<string, PlayerGameStats>> {
+  if (playerStatsCache) return playerStatsCache;
+  playerStatsCache = new Map();
+  const dir = path.join(DATA_DIR, "player_stats");
+  if (!fs.existsSync(dir)) return playerStatsCache;
+  for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json"))) {
+    playerStatsCache.set(
+      Number(f.replace(".json", "")),
+      loadJson<Record<string, PlayerGameStats>>(`player_stats/${f}`),
+    );
+  }
+  playerStatsCache = new Map(
+    [...playerStatsCache.entries()].sort((a, b) => a[0] - b[0]),
+  );
+  return playerStatsCache;
+}
+
 // --- Liga Fantástica (fantasy_api/build_liga.py, a partir de los PDFs) ------
 
 export interface LigaPlayer {

@@ -24,9 +24,10 @@ Cinco pestañas (abajo en el móvil, arriba en escritorio):
   quitar. El selector ordena por puntos esperados y filtra lo que te cabe.
   Compartir por WhatsApp manda solo los cambios ("sale - entra") y el capitán.
   Se guarda en el navegador (`localStorage`), no hay cuentas ni servidor.
-- **Jugadores** — buscador (orden por puntos esperados, filtro "mi 11") y
+- **Jugadores** — buscador (orden por puntos esperados, filtro "mi 11"),
   estadísticas (precio vs. puntos, puntos por millón...; lo del mercado de
-  Marca, al final). La ficha de cada jugador trae sus próximos partidos con la
+  Marca, al final) y puntos por estadística (qué pesa y qué marca la
+  diferencia en los puntos, por posición, y quién suma más con cada una). La ficha de cada jugador trae sus próximos partidos con la
   dificultad, sus últimas jornadas y quién lo lleva en la liga.
 - **Jornada** — calendario con tus jugadores y sus puntos esperados en cada
   partido.
@@ -48,6 +49,7 @@ estimación sencilla para ordenar opciones, no una predicción fina.
 fantasy_api/    Scripts en Python que hablan con fantasy.marca.com
   main.py               genera todo lo que consume la webapp (ver más abajo)
   build_precios_fantastica.py   cruza el Excel de precios con el catálogo
+  player_stats.py       desglose de puntos por estadística (incremental)
   client.py, auth_store.py      autenticación y cliente HTTP compartidos
   get_*.py, search_players.py   scripts sueltos para explorar la API a mano
 webapp/         Sitio Astro + Tailwind, 100% estático
@@ -126,8 +128,18 @@ mano; ver `MANUAL_OVERRIDES` dentro del script para los casos ya resueltos.
    esperados y la pestaña Jugadores → Recomendados (incluido el 11 de 180M
    que más puntos espera). Si falta, la web vuelve a la fórmula sencilla.
 
-`refresh-data.yml` ejecuta los tres seguidos: `main.py`, el scraper (si
-falla, se sigue sin alineaciones) y el modelo. El modelo ajusta además los
+6. **Desglose de puntos** (`fantasy_api/player_stats.py`) — de qué
+   estadísticas salieron los puntos de cada jugador en cada jornada (minutos,
+   estrellas de Marca, goles, asistencias, portería, paradas, pases clave,
+   regates, balones perdidos, tarjetas...) y su xG/xA, minutos y nota de
+   Sofascore, del endpoint `/ajax/player-gameweek`. Incremental: solo pide
+   lo que falta o ha cambiado (~280 peticiones por jornada nueva). Escribe
+   `player_stats/<n>.json`, que usan Jugadores → Puntos por estadística y la
+   ficha de cada jugador. Probado como variables del modelo con J1–J8: no
+   mejoraba la validación; se guarda para volver a probar con más jornadas.
+
+`refresh-data.yml` ejecuta todo seguido: `main.py`, el desglose (si falla,
+sigue), el scraper (si falla, se sigue sin alineaciones) y el modelo. El modelo ajusta además los
 puntos si juega por la dificultad del rival (a un cuarto de fuerza: con pocas
 jornadas no aprende solo el efecto en los atacantes, y en la validación más
 fuerza ordena peor). Los partidos aplazados no cuentan como jugados aunque

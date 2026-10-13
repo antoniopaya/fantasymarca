@@ -74,6 +74,13 @@ jobs:
         working-directory: fantasy_api
         run: python main.py
 
+      - name: Desglose de puntos por jugador y jornada
+        # Incremental (~280 peticiones por jornada nueva). Si falla, el resto
+        # del refresco sigue: la web solo pierde el desglose más reciente.
+        continue-on-error: true
+        working-directory: fantasy_api
+        run: python player_stats.py
+
       - name: Scrape alineaciones probables (futbolfantasy + analiticafantasy)
         # Si la web de futbolfantasy falla o cambia, el modelo sigue
         # funcionando sin alineaciones: no debe bloquear el refresco.

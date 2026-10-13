@@ -242,7 +242,8 @@ def player_history_features(pl: dict, gw: int) -> dict:
     pts_all = [g["points"] or 0 for g in prev]
     pts_played = [g["points"] for g in played]
     started = [g for g in played if "sub_in" not in g["events"]]
-    goals = sum(g["events"].count("goal") for g in played)
+    # Marca apunta los goles de penalti como evento "penalty", aparte de "goal".
+    goals = sum(g["events"].count("goal") + g["events"].count("penalty") for g in played)
     assists = sum(g["events"].count("assist") for g in played)
     n = len(prev)
     return {

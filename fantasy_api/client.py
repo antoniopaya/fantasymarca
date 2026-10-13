@@ -1,5 +1,5 @@
 """
-Cliente HTTP compartido para los endpoints /ajax/sw/* de Fantasy Marca.
+Cliente HTTP compartido para los endpoints /ajax/sw/* (y algún /ajax/*) de Fantasy Marca.
 
 Usa `curl_cffi` (no `requests` normal) porque Cloudflare bloquea con 403 las
 peticiones que no imitan la huella TLS de un navegador real, aunque los
@@ -28,6 +28,18 @@ def post(endpoint: str, payload: dict) -> dict:
     response.raise_for_status()
     auth_store.update_from_response(response)
     return response.json()
+
+
+def post_ajax(path: str, payload: dict) -> requests.Response:
+    """Llama a /ajax/<path> (fuera de /sw, p.ej. player-gameweek). Devuelve la
+    respuesta sin comprobar el código: algunos endpoints responden 400 con un
+    mensaje normal ("El jugador no ha puntuado esta jornada")."""
+    headers = auth_store.headers() | {"origin": "https://fantasy.marca.com", "referer": "https://fantasy.marca.com/feed"}
+    response = requests.post(f"https://fantasy.marca.com/ajax/{path}", headers=headers, data=payload, impersonate="chrome")
+    if response.status_code >= 500 or response.status_code in (401, 403):
+        response.raise_for_status()
+    auth_store.update_from_response(response)
+    return response
 
 
 def call(endpoint: str, id, slug, comments: int = 0) -> dict:

@@ -3,7 +3,7 @@ import SubTabs from "./SubTabs.astro";
 import { url } from "../lib/data";
 
 interface Props {
-  active: "buscar" | "recomendados" | "estadisticas";
+  active: "buscar" | "recomendados" | "estadisticas" | "desglose";
 }
 
 const { active } = Astro.props;
@@ -20,5 +20,10 @@ const { active } = Astro.props;
       href: url("/jugadores/recomendados"),
     },
     { key: "estadisticas", label: "Estadísticas", href: url("/estadisticas") },
+    {
+      key: "desglose",
+      label: "Puntos por estadística",
+      href: url("/jugadores/desglose"),
+    },
   ]}
 />
