@@ -4,14 +4,14 @@
     "name": "Julio Díaz",
     "position": 2,
     "points": 7,
-    "avg": 1.8,
+    "avg": 1.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/69744.png?version=20260227153903",
     "isFavorite": 0,
     "value": 329000,
-    "previousValue": 383000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -68,11 +68,11 @@
       "height": 174,
       "weight": null
     },
-    "clausesRanking": 274
+    "clausesRanking": 283
   },
   "id": 69744,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 0
   },
@@ -204,12 +204,14 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -698,9 +700,9 @@
     {
       "season": "26/27",
       "points": 7,
-      "avg": 1.75,
+      "avg": 1.4,
       "id_team": 17,
-      "last_gameweek": 6
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -713,21 +715,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 383000,
-      "change": -54000,
-      "sign": -54
+      "value": 329000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Una semana",
-      "value": 381000,
-      "change": -52000,
-      "sign": -52
+      "value": 361000,
+      "change": -32000,
+      "sign": -32
     },
     {
       "time": "Un mes",
-      "value": 1370000,
-      "change": -1041000,
-      "sign": "-1.041.000"
+      "value": 1176000,
+      "change": -847000,
+      "sign": -847
     }
   ],
   "values_chart": {
@@ -1643,6 +1645,10 @@
       {
         "value": 329000,
         "date": "12 oct 2026"
+      },
+      {
+        "value": 329000,
+        "date": "13 oct 2026"
       }
     ],
     "max": {
@@ -1658,27 +1664,27 @@
     "69744": {
       "id": 69744,
       "id_team": 17,
-      "id_match": 37998,
-      "id_gameweek": 4049,
-      "id_home": 12,
+      "id_match": 38014,
+      "id_gameweek": 4050,
+      "id_home": 15,
       "id_away": 17,
       "date": {
-        "ts": 1791831600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792350000,
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "dom",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Levante",
+      "home": "Real Madrid",
       "away": "Sevilla",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
@@ -1694,7 +1700,7 @@
     "69744": {
       "id": 69744,
       "points": 3,
-      "avg": 1.5
+      "avg": 1
     }
   },
   "owners": [],

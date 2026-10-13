@@ -3,15 +3,15 @@
     "id": 49424,
     "name": "Kike Salas",
     "position": 2,
-    "points": 24,
-    "avg": 4.8,
+    "points": 30,
+    "avg": 5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/49424.png?version=20251006013823",
     "isFavorite": 0,
-    "value": 20061000,
-    "previousValue": 19921000,
+    "value": 20253000,
+    "previousValue": 20061000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 20061000,
+      "floor": 20253000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 30091500,
+      "value": 30379500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 20061000,
+      "price": 20253000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 225
+    "clausesRanking": 186
   },
   "id": 49424,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 0,
     "cards": 2
   },
@@ -209,12 +209,12 @@
       "startDate": "2026-10-09 21:00:00",
       "endDate": "2026-10-12 21:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -702,10 +702,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 24,
-      "avg": 4.8,
+      "points": 30,
+      "avg": 5,
       "id_team": 17,
-      "last_gameweek": 6
+      "last_gameweek": 8
     },
     {
       "season": "25/26",
@@ -732,35 +732,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 19921000,
-      "change": 140000,
-      "sign": 140
+      "value": 20061000,
+      "change": 192000,
+      "sign": 192
     },
     {
       "time": "Una semana",
-      "value": 20902000,
-      "change": -841000,
-      "sign": -841
+      "value": 20749000,
+      "change": -496000,
+      "sign": -496
     },
     {
       "time": "Un mes",
-      "value": 14460000,
-      "change": 5601000,
-      "sign": "+5.601.000"
+      "value": 14954000,
+      "change": 5299000,
+      "sign": "+5.299.000"
     },
     {
       "time": "Un año",
-      "value": 12505000,
-      "change": 7556000,
-      "sign": "+7.556.000"
+      "value": 12189000,
+      "change": 8064000,
+      "sign": "+8.064.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 12505000,
-        "date": "12 oct 2025"
-      },
       {
         "value": 12189000,
         "date": "13 oct 2025"
@@ -2220,6 +2216,10 @@
       {
         "value": 20061000,
         "date": "12 oct 2026"
+      },
+      {
+        "value": 20253000,
+        "date": "13 oct 2026"
       }
     ],
     "max": {
@@ -2235,27 +2235,27 @@
     "49424": {
       "id": 49424,
       "id_team": 17,
-      "id_match": 37998,
-      "id_gameweek": 4049,
-      "id_home": 12,
+      "id_match": 38014,
+      "id_gameweek": 4050,
+      "id_home": 15,
       "id_away": 17,
       "date": {
-        "ts": 1791831600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792350000,
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "dom",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Levante",
+      "home": "Real Madrid",
       "away": "Sevilla",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
@@ -2270,7 +2270,7 @@
   "away": {
     "49424": {
       "id": 49424,
-      "points": 12,
+      "points": 18,
       "avg": 6
     }
   },
