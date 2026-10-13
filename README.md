@@ -113,22 +113,25 @@ mano; ver `MANUAL_OVERRIDES` dentro del script para los casos ya resueltos.
 5. **Modelo de puntos esperados** (`fantasy_api/ml_model.py`) — machine
    learning con scikit-learn: P(juega) × puntos si juega, con variables
    calculadas solo con lo que se sabía antes de cada jornada (forma,
-   titularidades, goles/asistencias, precio, fuerza del rival y de su equipo,
-   casa/fuera, y cruces posición × rival: un rival goleador no afecta igual a
-   un portero que a un delantero). Predice la próxima jornada y las dos
+   titularidades, goles/asistencias, precio, valor de mercado de Marca y su
+   cambio en la última semana, fuerza del rival y de su equipo, casa/fuera, y
+   cruces posición × rival: un rival goleador no afecta igual a un portero que
+   a un delantero). Los puntos si juega se encogen hacia la media de su
+   posición, porque sin eso prometía de más a los de arriba. Predice la próxima jornada y las dos
    siguientes, para fichar pensando en varias semanas. Prueba un modelo lineal y uno de boosting, valida cada jornada
    pasada entrenando solo con las anteriores y se queda el mejor; para la
-   jornada a predecir combina su P(juega) con las alineaciones probables
-   (cuando haya 2+ jornadas guardadas, las usa como variable y aprende su
+   jornada a predecir combina su P(juega) con las alineaciones probables,
+   pasando su probabilidad de titular a probabilidad de jugar (cuando haya 2+ jornadas guardadas, las usa como variable y aprende su
    peso). Escribe `predicciones.json`, que la web usa para los puntos
    esperados y la pestaña Jugadores → Recomendados (incluido el 11 de 180M
    que más puntos espera). Si falta, la web vuelve a la fórmula sencilla.
 
 `refresh-data.yml` ejecuta los tres seguidos: `main.py`, el scraper (si
 falla, se sigue sin alineaciones) y el modelo. El modelo ajusta además los
-puntos si juega por la dificultad del rival (a media fuerza: con pocas
-jornadas no aprende solo el efecto en los atacantes, y la validación dice que
-así no pierde precisión).
+puntos si juega por la dificultad del rival (a un cuarto de fuerza: con pocas
+jornadas no aprende solo el efecto en los atacantes, y en la validación más
+fuerza ordena peor). Los partidos aplazados no cuentan como jugados aunque
+Marca ya hubiera cargado puntos (0) a los titulares.
 
 ### Actualizar todo a mano: `./actualizar.sh`
 

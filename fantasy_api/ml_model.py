@@ -16,14 +16,21 @@ que se sabía antes de g (jornadas anteriores, partidos ya jugados antes
 del primero de g), para no hacer trampas con información del futuro:
 posición, precio Fantástica, medias/forma/titularidades previas, goles y
 asistencias previas, fuerza del equipo y del rival (puntos, goles a favor
-y en contra por partido), si juega en casa, y cruces posición × rival (no
-es lo mismo un rival goleador para un portero que para un delantero). La
+y en contra por partido), si juega en casa, cruces posición × rival (no
+es lo mismo un rival goleador para un portero que para un delantero) y el
+valor de mercado de Marca la víspera de la jornada y su cambio en la última
+semana (el mercado reacciona a noticias que la forma aún no refleja). La
 temporada pasada no se usa: no mejoraba la validación.
 
+Los puntos si juega se encogen hacia la media de su posición: la regresión
+sola prometía ~7,7 pts al top-20 y daba ~6,4.
+
 Alineaciones probables (scrape_alineaciones.py): para la jornada a predecir
-se combinan con P(juega) del modelo. Cuando haya al menos 2 jornadas con
-alineaciones guardadas en alineaciones_hist/, la probabilidad de titular
-entra además como variable del modelo y aprende su peso sola.
+se combinan con P(juega) del modelo (pasando antes su probabilidad de
+titular a probabilidad de jugar, que incluye salir desde el banquillo).
+Cuando haya al menos 2 jornadas con alineaciones guardadas en
+alineaciones_hist/, la probabilidad de titular entra además como variable
+del modelo y aprende su peso sola.
 
 Validación: "origen móvil". Para cada jornada k ya jugada (desde la 4), se
 entrena con las anteriores y se predice k; se compara con dos referencias
@@ -56,15 +63,21 @@ SHRINK = 3  # partidos "de media" con los que se encoge la fuerza de cada equipo
 MIN_TRAIN_GW = 3  # jornadas mínimas de historia antes de validar
 SEED = 0
 HORIZON = 3  # jornadas que se predicen: la próxima y las dos siguientes
+# Cuánto se queda de la diferencia entre los puntos si juega predichos y la
+# media de su posición (1 = nada de encogido). Con 0,75 lo prometido al top-20
+# cuadra con lo real y el orden mejora un poco en la validación.
+IF_PLAYS_SHRINK = 0.75
+MONTHS = {m: i + 1 for i, m in enumerate("ene feb mar abr may jun jul ago sep oct nov dic".split())}
 
 # Ajuste por dificultad del rival (1 fácil ... 5 muy difícil, igual que en la
 # web: según lo que marca el rival para porteros/defensas y lo que encaja para
 # medios/delanteros, por quintiles, y casa/fuera). Con pocas jornadas el
 # modelo apenas aprende el efecto del rival en los atacantes, aunque en
-# fantasy está más que comprobado; se mete como conocimiento previo a media
-# fuerza, que en la validación no pierde precisión (a fuerza completa sí).
+# fantasy está más que comprobado; se mete como conocimiento previo a un
+# cuarto de fuerza: en la validación J4-J8, a media fuerza ordenaba algo peor
+# y a fuerza completa bastante peor.
 DIFFICULTY_FACTOR = {1: 1.25, 2: 1.1, 3: 1.0, 4: 0.9, 5: 0.78}
-RIVAL_ADJUST_STRENGTH = 0.5
+RIVAL_ADJUST_STRENGTH = 0.25
 
 FEATURES = [
     "is_gk",
@@ -99,6 +112,8 @@ FEATURES = [
     "team_ga_x_def",
     "team_gf_x_att",
     "home_x_def",
+    "market_value",
+    "market_value_chg7",
 ]
 FF_FEATURE = "ff_prob"
 
@@ -159,7 +174,12 @@ def team_strength_before(matches: pd.DataFrame, ts: float) -> dict:
     }
 
 
-def load_players(current_season: str):
+def load_players(current_season: str, matches: pd.DataFrame):
+    # Un partido aplazado a última hora puede venir de Marca con teamPlayed y
+    # 0 puntos a los once que ya tenía cargados (el Athletic-Rayo de la J8):
+    # si el partido de su equipo no se ha jugado, esa jornada no cuenta.
+    pending = matches[~matches.played]
+    unplayed = set(zip(pending.gw, pending.home)) | set(zip(pending.gw, pending.away))
     catalog = load_json("players.json")
     prices = load_json("precios_fantastica.json")
     players = []
@@ -169,6 +189,12 @@ def load_players(current_season: str):
         except FileNotFoundError:
             continue
         last = next((h for h in detail["points_history"] if h["season"] != current_season), None)
+        values = []
+        for v in (detail.get("values_chart") or {}).get("points") or []:
+            day, month, year = v["date"].split()  # "13 oct 2025", "2 sept 2026"
+            ts = datetime(int(year), MONTHS[month[:3]], int(day), tzinfo=timezone.utc).timestamp()
+            values.append((ts, v["value"]))
+        values.sort()
         players.append(
             {
                 "id": p["id"],
@@ -178,10 +204,12 @@ def load_players(current_season: str):
                 "status": detail["player"]["status"],
                 "ls_avg": last["avg"] if last else np.nan,
                 "ls_points": last["points"] if last else np.nan,
+                "values_ts": np.array([t for t, _ in values]),
+                "values": np.array([v for _, v in values], dtype=float),
                 "gws": {
                     g["number"]: {
                         "points": g["points"]["points"],
-                        "team_played": g.get("teamPlayed"),
+                        "team_played": bool(g.get("teamPlayed")) and (g["number"], p["id_team"]) not in unplayed,
                         "events": g.get("events") or [],
                     }
                     for g in detail["points"]
@@ -258,13 +286,28 @@ def difficulty_levels(df: pd.DataFrame, matches: pd.DataFrame) -> np.ndarray:
     return out
 
 
+def market_value_features(pl: dict, ts: float) -> dict:
+    """Valor de mercado (log, millones) la víspera de `ts` y su cambio en 7 días.
+    Para jornadas futuras es el último valor conocido."""
+    i = np.searchsorted(pl["values_ts"], ts - 43200) - 1
+    if i < 0:
+        return {"market_value": np.nan, "market_value_chg7": np.nan}
+    j = np.searchsorted(pl["values_ts"], ts - 8 * 86400) - 1
+    value = pl["values"][i]
+    return {
+        "market_value": float(np.log(value / 1e6)) if value > 0 else np.nan,
+        "market_value_chg7": float(value / pl["values"][j] - 1) if j >= 0 and pl["values"][j] > 0 else np.nan,
+    }
+
+
 def build_rows(players, matches, gws, ff_hist):
     rows = []
     for gw in gws:
         gw_matches = matches[matches.gw == gw]
         if gw_matches.empty:
             continue
-        strength = team_strength_before(matches, gw_matches.ts.min())
+        start = gw_matches.ts.min()
+        strength = team_strength_before(matches, start)
         fixture = {}
         for m in gw_matches.itertuples():
             fixture[m.home] = (m.away, 1, m.played)
@@ -289,6 +332,7 @@ def build_rows(players, matches, gws, ff_hist):
                 "rival_gf": strength[rival]["gf"],
                 "rival_ga": strength[rival]["ga"],
                 "home": home,
+                **market_value_features(pl, start),
                 FF_FEATURE: ff_hist.get(gw, {}).get(pl["id"], np.nan),
                 "team_played": bool(target.get("team_played")),
                 "y_points": target.get("points"),
@@ -340,13 +384,16 @@ def fit(train: pd.DataFrame, features: list[str], family: str):
     clf = make_clf().fit(train[features], train.y_played)
     played = train[train.y_played]
     reg = make_reg().fit(played[features], played.y_points)
-    return clf, reg
+    position_mean = played.groupby("position").y_points.mean()
+    return clf, reg, position_mean
 
 
 def predict(models, df: pd.DataFrame, features: list[str]):
-    clf, reg = models
+    clf, reg, position_mean = models
     p_play = clf.predict_proba(df[features])[:, 1]
-    if_plays = np.clip(reg.predict(df[features]), -2, None)
+    mean = df["position"].map(position_mean).to_numpy(dtype=float)
+    if_plays = mean + IF_PLAYS_SHRINK * (reg.predict(df[features]) - mean)
+    if_plays = np.clip(if_plays, -2, None)
     factor = df["difficulty"].map(DIFFICULTY_FACTOR).to_numpy(dtype=float)
     if_plays = if_plays * (1 + RIVAL_ADJUST_STRENGTH * (factor - 1))
     return p_play, if_plays
@@ -407,9 +454,16 @@ def blend_with_lineups(p_model: np.ndarray, ff_prob: np.ndarray) -> np.ndarray:
     peso: 70% alineaciones probables (media de futbolfantasy y
     analiticafantasy, que saben de lesiones y rotaciones de esta semana),
     30% lo que dice la historia del jugador. Un 0% en las alineaciones (baja,
-    descartado) manda casi del todo."""
+    descartado) manda casi del todo.
+
+    Las alineaciones dan la probabilidad de ser titular, y P(juega) incluye
+    salir desde el banquillo: en la J8, de los que tenían un 10-40% de
+    titular jugó el 58%. Se pasa a P(sale) = titular + no titular x la mitad
+    de lo que el modelo espera que juegue (a ojo de esa jornada, la única
+    con alineaciones guardadas: el sesgo de P(juega) baja de -0,13 a -0,05)."""
     ff = ff_prob / 100
-    blended = 0.7 * ff + 0.3 * p_model
+    appears = ff + (1 - ff) * 0.5 * p_model
+    blended = 0.7 * appears + 0.3 * p_model
     blended = np.where(ff_prob == 0, 0.03, blended)
     return np.where(np.isnan(ff_prob), p_model, blended)
 
@@ -430,7 +484,7 @@ def main() -> None:
         if len(stragglers) == len(pending[pending.gw == next_gw]):
             next_gw = int(later.gw.min())
 
-    players = load_players(season)
+    players = load_players(season, matches)
     ff_hist = load_ff_history()
     try:
         lineups = load_json("alineaciones.json")
