@@ -306,6 +306,8 @@ export function getPlayerById(id: number): Player | undefined {
  * "ongoing" durante semanas (p.ej. la 6, con un partido movido al 21 oct): con
  * esta regla ese rezagado no cuenta, porque se juega después de que empiece la
  * jornada siguiente, mientras que una jornada a medio jugar el fin de semana sí.
+ * Un aplazado aún sin nueva fecha ("postponed") conserva la original, ya pasada:
+ * tampoco cuenta (p.ej. el de la 8, que si no dejaba la app parada en la 8).
  */
 export function getNextGameweek(): Gameweek {
   const gameweeks = getGameweeks();
@@ -316,7 +318,10 @@ export function getNextGameweek(): Gameweek {
       ? firstKickoff(gameweeks[i + 1].number)
       : Infinity;
     const pendingBeforeNext = getMatches(gw.number).some(
-      (m) => m.status !== "played" && (m.date.ts ?? Infinity) < nextStart,
+      (m) =>
+        m.status !== "played" &&
+        m.status !== "postponed" &&
+        (m.date.ts ?? Infinity) < nextStart,
     );
     if (pendingBeforeNext) return gw;
   }

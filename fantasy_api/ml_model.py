@@ -125,6 +125,7 @@ def load_matches():
                     "gh": m["goals_home"] if m["status"] == "played" else None,
                     "ga": m["goals_away"] if m["status"] == "played" else None,
                     "played": m["status"] == "played",
+                    "postponed": m["status"] == "postponed",
                     "ts": m["date"]["ts"],
                 }
             )
@@ -419,8 +420,9 @@ def main() -> None:
     matches = load_matches()
 
     # Próxima jornada: la primera con partidos pendientes (igual que la web,
-    # sin contar aplazados de jornadas anteriores).
-    pending = matches[~matches.played]
+    # sin contar aplazados de jornadas anteriores ni los que aún no tienen
+    # nueva fecha, que conservan la original ya pasada).
+    pending = matches[~matches.played & ~matches.postponed]
     next_gw = int(pending.gw.min()) if not pending.empty else int(matches.gw.max())
     later = pending[pending.gw > next_gw]
     if not later.empty:
