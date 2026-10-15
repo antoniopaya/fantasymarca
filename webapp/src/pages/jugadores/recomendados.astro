@@ -143,52 +143,58 @@ const baseline = summary?.media_previa;
     <h2 class="text-lg font-bold text-white">
       Recomendados para la {gw.name}
     </h2>
-    {
-      usingModel && preds ? (
-        <p class="mt-1">
-          Puntos esperados de un modelo de machine learning ({preds.model},
-          entrenado con {preds.n_train} partidos de jugador de las{" "}
-          {preds.train_gameweeks} jornadas jugadas): probabilidad de jugar ×
-          puntos si juega, según forma, titularidades, rival, casa/fuera, precio
-          y valor de mercado
-          {preds.lineups_jornada === gw.number &&
-            ", con las alineaciones probables de futbolfantasy y analiticafantasy"}
-          .
-        </p>
-      ) : (
-        <p class="mt-1">
-          Todavía no hay predicción del modelo para esta jornada: se usa la
-          fórmula sencilla (media y forma ajustadas por rival).
-        </p>
-      )
-    }
-    {
-      chosen && baseline && (
-        <p class="mt-2 text-slate-400">
-          Fiabilidad, prediciendo cada jornada pasada solo con las anteriores:
-          los 50 jugadores que el modelo ponía arriba sacaron de media{" "}
-          <b class="text-white">{fmt(chosen.top50)} pts</b> reales (frente a{" "}
-          {fmt(baseline.top50)} eligiendo por media de puntos), con un error
-          medio de {fmt(chosen.mae)} pts por jugador. Con pocas jornadas es una
-          ayuda para ordenar opciones, no una bola de cristal.
-        </p>
-      )
-    }
-    {
-      (
-        <p class="mt-2 text-xs text-slate-500">
-          Sin jugadores del Barcelona: aquí somos del Madrid.
-        </p>
-      )
-    }
-    {
-      scrapedAt && (
-        <p class="mt-2 text-xs text-slate-500">
-          Alineaciones probables (futbolfantasy.com y analiticafantasy.com,
-          media de las dos; ≠ = no coinciden): {fmtDate(scrapedAt)}
-        </p>
-      )
-    }
+    <p class="mt-1 text-slate-400">
+      Puntos esperados por el modelo
+      {scrapedAt && `, con las alineaciones probables (${fmtDate(scrapedAt)})`}.
+      Sin jugadores del Barcelona: aquí somos del Madrid.
+    </p>
+    <details class="group mt-2">
+      <summary
+        class="inline-flex cursor-pointer list-none items-center gap-1 py-1 text-sm font-medium text-emerald-400 [&::-webkit-details-marker]:hidden"
+      >
+        <span class="transition-transform group-open:rotate-90">▸</span>
+        Cómo se calcula y cuánto acierta
+      </summary>
+      {
+        usingModel && preds ? (
+          <p class="mt-1">
+            Puntos esperados de un modelo de machine learning ({preds.model},
+            entrenado con {preds.n_train} partidos de jugador de las{" "}
+            {preds.train_gameweeks} jornadas jugadas): probabilidad de jugar ×
+            puntos si juega, según forma, titularidades, rival, casa/fuera,
+            precio y valor de mercado
+            {preds.lineups_jornada === gw.number &&
+              ", con las alineaciones probables de futbolfantasy y analiticafantasy"}
+            .
+          </p>
+        ) : (
+          <p class="mt-1">
+            Todavía no hay predicción del modelo para esta jornada: se usa la
+            fórmula sencilla (media y forma ajustadas por rival).
+          </p>
+        )
+      }
+      {
+        chosen && baseline && (
+          <p class="mt-2 text-slate-400">
+            Fiabilidad, prediciendo cada jornada pasada solo con las anteriores:
+            los 50 jugadores que el modelo ponía arriba sacaron de media{" "}
+            <b class="text-white">{fmt(chosen.top50)} pts</b> reales (frente a{" "}
+            {fmt(baseline.top50)} eligiendo por media de puntos), con un error
+            medio de {fmt(chosen.mae)} pts por jugador. Con pocas jornadas es
+            una ayuda para ordenar opciones, no una bola de cristal.
+          </p>
+        )
+      }
+      {
+        scrapedAt && (
+          <p class="mt-2 text-xs text-slate-500">
+            Alineaciones probables (futbolfantasy.com y analiticafantasy.com,
+            media de las dos; ≠ = no coinciden): {fmtDate(scrapedAt)}
+          </p>
+        )
+      }
+    </details>
   </section>
 
   {
@@ -197,11 +203,21 @@ const baseline = summary?.media_previa;
         <h2 id="once-modelo" class="text-xl font-bold text-white">
           El 11 del modelo
         </h2>
-        <p class="mb-4 text-sm text-slate-400">
-          Máximos puntos esperados con 180M ({eleven.formationKey},{" "}
-          {fmtM(eleven.cost / 1_000_000)}): ≈{fmt(elevenXp)} pts con el capitán
-          doblado.
-        </p>
+        <div class="mb-4 flex flex-wrap items-end justify-between gap-3">
+          <p class="text-sm text-slate-400">
+            Máximos puntos esperados con 180M ({eleven.formationKey},{" "}
+            {fmtM(eleven.cost / 1_000_000)}): ≈{fmt(elevenXp)} pts con el
+            capitán doblado.
+          </p>
+          <a
+            href={url(
+              `/crear-once?modelo=${eleven.formationKey}&j=${eleven.players.map((p) => p.summary.id).join(",")}&c=${eleven.players.find((p) => p.captain)?.summary.id ?? ""}`,
+            )}
+            class="shrink-0 rounded-full bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-slate-950 hover:bg-emerald-400"
+          >
+            Usar este 11 en Mi 11
+          </a>
+        </div>
         <div class="space-y-3 rounded-2xl border border-white/10 bg-gradient-to-b from-emerald-950/40 to-slate-900/60 px-2 py-4">
           {[1, 2, 3, 4].map((pos) => (
             <div class="flex justify-center gap-1.5">

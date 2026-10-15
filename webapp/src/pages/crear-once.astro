@@ -483,6 +483,8 @@ for (const m of nextGwMatches) {
     const LINEUPS_KEY = "fantasymarca:crear-once:lineups";
     const ACTIVE_KEY = "fantasymarca:crear-once:active";
     const LEGACY_KEY = "fantasymarca:crear-once";
+    // "Usar este 11" de Recomendados: una convocatoria por jornada.
+    const MODEL_LINEUP_ID = `modelo-${NEXT_GW_NAME.replace(/\D/g, "")}`;
 
     const POSITION_LABEL_LOWER = {
       1: "portero",
@@ -588,6 +590,8 @@ for (const m of nextGwMatches) {
       const match = id.match(/^liga-(.+)-(\d+)$/);
       const once = match ? LIGA_ONCES[match[1]] : null;
       if (once && Number(match[2]) < once.jornada) delete lineups[id];
+      if (id.startsWith("modelo-") && id !== MODEL_LINEUP_ID)
+        delete lineups[id];
     }
 
     function saveAllLineups() {
@@ -1890,6 +1894,46 @@ for (const m of nextGwMatches) {
       renderLigaPanel();
     });
 
+    // Llegada desde "Usar este 11" de Recomendados:
+    // ?modelo=<formación>&j=<ids separados por comas>&c=<id del capitán>.
+    // Se guarda como convocatoria aparte (se rehace cada vez que se pulsa).
+    function tryLoadModelFromQuery() {
+      const params = new URLSearchParams(window.location.search);
+      const formationKey = params.get("modelo");
+      if (!formationKey) return;
+      window.history.replaceState(null, "", window.location.pathname);
+      if (!FORMATIONS.some((f) => f.key === formationKey)) return;
+      const ids = (params.get("j") ?? "")
+        .split(",")
+        .map(Number)
+        .filter((id) => playersById.has(id));
+      const captainId = Number(params.get("c"));
+      const slots = buildSlots(
+        formationKey,
+        ids
+          .map((id) => ({
+            position: playersById.get(id).position,
+            playerId: id,
+          }))
+          .sort((a, b) => a.position - b.position),
+      );
+      lineups[MODEL_LINEUP_ID] = {
+        name: `11 del modelo · ${NEXT_GW_NAME}`,
+        formationKey,
+        slots,
+        captainId: ids.includes(captainId) ? captainId : null,
+      };
+      saveAllLineups();
+      setActiveLineupId(MODEL_LINEUP_ID);
+      applyLineup(MODEL_LINEUP_ID);
+      renderLineupSelect();
+      updateUndoButton();
+      render();
+      showNotice(
+        "Cargado el 11 del modelo como convocatoria aparte; tus otras convocatorias siguen en el desplegable.",
+      );
+    }
+
     // Llegada desde "Preparar mi once" de la home, vía ?liga=1.
     function tryLoadLigaFromQuery() {
       const params = new URLSearchParams(window.location.search);
@@ -1909,6 +1953,7 @@ for (const m of nextGwMatches) {
     updateUndoButton();
     render();
     tryLoadLigaFromQuery();
+    tryLoadModelFromQuery();
     autoLoadLiga();
     renderLigaPanel();
   </script>
