@@ -85,35 +85,6 @@ const vsFantastica =
 const vsFantasticaPct = precioFantastica
   ? (vsFantastica / precioFantastica) * 100
   : 0;
-
-// Comparador: cualquier otro jugador de la misma posición, con las mismas
-// métricas que ya se muestran arriba para poder ponerlas lado a lado.
-const currentPlayerStats = player
-  ? {
-      name: player.name,
-      value: player.value,
-      precioFantastica,
-      clauseValue: player.clause.value,
-      points: player.points,
-      avg: player.avg,
-    }
-  : null;
-
-const comparisonCandidates = player
-  ? getAllPlayerSummaries()
-      .filter((p) => p.position === catalogEntry.position && p.id !== playerId)
-      .map((p) => ({
-        id: p.id,
-        name: p.name,
-        teamName: p.team_name,
-        value: p.value,
-        precioFantastica: p.precioFantastica,
-        clauseValue: p.clauseValue,
-        points: p.points,
-        avg: p.avg,
-      }))
-      .sort((a, b) => a.name.localeCompare(b.name))
-  : [];
 ---
 
 <Layout
@@ -552,7 +523,7 @@ const comparisonCandidates = player
           </section>
         )}
 
-        {comparisonCandidates.length > 0 && (
+        {player && (
           <section class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
             <h2 class="mb-4 text-xl font-bold text-white">
               Comparar con otro{" "}
@@ -560,14 +531,12 @@ const comparisonCandidates = player
             </h2>
             <select
               id="compare-select"
-              class="w-full max-w-sm rounded-xl border border-white/10 bg-slate-950/60 px-3 py-2 text-sm text-white focus:border-emerald-500/50 focus:outline-none sm:w-auto"
+              aria-label="Jugador con el que comparar"
+              data-position={catalogEntry.position}
+              data-player={playerId}
+              class="w-full max-w-sm rounded-xl border border-white/10 bg-slate-950/60 px-3 py-2.5 text-sm text-white focus:border-emerald-500/50 focus:outline-none sm:w-auto"
             >
               <option value="">Elige un jugador...</option>
-              {comparisonCandidates.map((c) => (
-                <option value={c.id}>
-                  {c.name} ({c.teamName})
-                </option>
-              ))}
             </select>
             <div id="compare-result" class="mt-4 hidden overflow-x-auto" />
           </section>
@@ -580,68 +549,111 @@ const comparisonCandidates = player
     )
   }
 
-  <script define:vars={{ comparisonCandidates, currentPlayerStats }}>
-    if (currentPlayerStats) {
-      const candidatesById = new Map(
-        comparisonCandidates.map((c) => [c.id, c]),
+  <script>
+    // El comparador descarga los jugadores de la posición (comparar/N.json)
+    // en vez de llevarlos incrustados en cada ficha.
+    interface Row {
+      id: number;
+      name: string;
+      team: string;
+      price: number | null;
+      points: number;
+      avg: number;
+      value: number;
+      clause: number;
+      xp: number;
+      prob: number | null;
+    }
+
+    const select = document.getElementById(
+      "compare-select",
+    ) as HTMLSelectElement | null;
+    const result = document.getElementById("compare-result");
+
+    const money = new Intl.NumberFormat("es-ES", { maximumFractionDigits: 2 });
+    const decimal = (digits: number) =>
+      new Intl.NumberFormat("es-ES", {
+        minimumFractionDigits: digits,
+        maximumFractionDigits: digits,
+      });
+    const millions = (v: number | null) =>
+      v === null ? "—" : `${money.format(v / 1_000_000)} M€`;
+    const escapeHtml = (text: string) =>
+      text.replace(
+        /[&<>"]/g,
+        (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!,
       );
 
-      const money = new Intl.NumberFormat("es-ES", {
-        maximumFractionDigits: 2,
-      });
-      const decimal = new Intl.NumberFormat("es-ES", {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      });
-      function formatMoneyClient(value) {
-        return value === null || value === undefined
-          ? "—"
-          : `${money.format(value / 1_000_000)} M€`;
-      }
+    // better: "high" (gana el mayor), "low" (gana el menor: en la
+    // Fantástica, el más barato) o null (no hay uno mejor).
+    function metricRow(
+      label: string,
+      a: number | null,
+      b: number | null,
+      format: (v: number | null) => string,
+      better: "high" | "low" | null = "high",
+    ) {
+      const both = better && a !== null && b !== null && a !== b;
+      const aWins = both && (better === "high" ? a! > b! : a! < b!);
+      const bWins = both && !aWins;
+      return `
+        <tr class="border-b border-white/5">
+          <td class="px-3 py-2 text-slate-400">${label}</td>
+          <td class="px-3 py-2 text-right font-semibold ${aWins ? "text-emerald-400" : "text-white"}">${format(a)}</td>
+          <td class="px-3 py-2 text-right font-semibold ${bWins ? "text-emerald-400" : "text-white"}">${format(b)}</td>
+        </tr>`;
+    }
 
-      // better: "high" (gana el mayor), "low" (gana el menor: en la
-      // Fantástica, el más barato) o null (no hay uno mejor).
-      function metricRow(label, a, b, formatter, better = "high") {
-        const aFmt = formatter(a);
-        const bFmt = formatter(b);
-        const both = better && a !== null && b !== null && a !== b;
-        const aWins = both && (better === "high" ? a > b : a < b);
-        const bWins = both && !aWins;
-        return `
-          <tr class="border-b border-white/5">
-            <td class="px-3 py-2 text-slate-400">${label}</td>
-            <td class="px-3 py-2 text-right font-semibold ${aWins ? "text-emerald-400" : "text-white"}">${aFmt}</td>
-            <td class="px-3 py-2 text-right font-semibold ${bWins ? "text-emerald-400" : "text-white"}">${bFmt}</td>
-          </tr>`;
-      }
-
-      const select = document.getElementById("compare-select");
-      const result = document.getElementById("compare-result");
-
+    async function setup(select: HTMLSelectElement, result: HTMLElement) {
+      const base = document.body.dataset.base ?? "/";
+      const response = await fetch(
+        `${base}comparar/${select.dataset.position}.json`,
+      );
+      const rows = (await response.json()) as Row[];
+      const me = rows.find((r) => r.id === Number(select.dataset.player));
+      if (!me) return;
+      const byId = new Map(rows.map((r) => [r.id, r]));
+      select.insertAdjacentHTML(
+        "beforeend",
+        rows
+          .filter((r) => r !== me)
+          .map(
+            (r) =>
+              `<option value="${r.id}">${escapeHtml(r.name)} (${escapeHtml(r.team)})</option>`,
+          )
+          .join(""),
+      );
       select.addEventListener("change", () => {
-        const candidate = candidatesById.get(Number(select.value));
-        if (!candidate) {
-          result.classList.add("hidden");
-          return;
-        }
+        const other = byId.get(Number(select.value));
+        result.classList.toggle("hidden", !other);
+        if (!other) return;
+        const pts = (v: number | null) => (v === null ? "—" : String(v));
         result.innerHTML = `
-          <table class="w-full min-w-[420px] text-sm">
+          <table class="w-full text-sm">
             <thead>
-              <tr class="border-b border-white/10 text-left text-xs tracking-wide text-slate-500 uppercase">
+              <tr class="border-b border-white/10 text-left text-xs text-slate-500">
                 <th class="px-3 py-2"></th>
-                <th class="px-3 py-2 text-right">${currentPlayerStats.name}</th>
-                <th class="px-3 py-2 text-right">${candidate.name}</th>
+                <th class="px-3 py-2 text-right">${escapeHtml(me.name)}</th>
+                <th class="px-3 py-2 text-right">${escapeHtml(other.name)}</th>
               </tr>
             </thead>
             <tbody>
-              ${metricRow("Precio Fantástica", currentPlayerStats.precioFantastica, candidate.precioFantastica, formatMoneyClient, "low")}
-              ${metricRow("Puntos", currentPlayerStats.points, candidate.points, (v) => String(v))}
-              ${metricRow("Media", currentPlayerStats.avg, candidate.avg, (v) => decimal.format(v))}
-              ${metricRow("Valor de mercado", currentPlayerStats.value, candidate.value, formatMoneyClient, null)}
-              ${metricRow("Cláusula", currentPlayerStats.clauseValue, candidate.clauseValue, formatMoneyClient, null)}
+              ${metricRow("Precio Fantástica", me.price, other.price, millions, "low")}
+              ${metricRow("Puntos esperados", me.xp, other.xp, (v) => (v === null ? "—" : `≈${decimal(1).format(v)}`))}
+              ${metricRow("Titular", me.prob, other.prob, (v) => (v === null ? "—" : `${v}%`))}
+              ${metricRow("Puntos", me.points, other.points, pts)}
+              ${metricRow("Media", me.avg, other.avg, (v) => (v === null ? "—" : decimal(2).format(v)))}
+              ${metricRow("Valor de mercado", me.value, other.value, millions, null)}
+              ${metricRow("Cláusula", me.clause, other.clause, millions, null)}
             </tbody>
           </table>`;
-        result.classList.remove("hidden");
+      });
+    }
+
+    if (select && result) {
+      setup(select, result).catch(() => {
+        select.disabled = true;
+        select.options[0].textContent = "Sin conexión: no se puede comparar";
       });
     }
   </script>

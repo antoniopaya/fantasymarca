@@ -111,17 +111,28 @@ function probableFor(teamId: number) {
             : `futbolfantasy ${p.prob_ff ?? "?"}% · analiticafantasy ${p.prob_af ?? "?"}%`,
     };
   });
-  const status = new Map(
-    (lineups?.teams[String(teamId)] ?? []).map((p) => [p.id, p.status]),
+  // "titular" en los datos es la unión de las dos fuentes (12-15 por
+  // equipo cuando no coinciden). El once probable son exactamente 11: el
+  // portero más probable y los 10 de campo más probables; a igualdad, el que
+  // ponen de titular las dos fuentes.
+  const raw = new Map(
+    (lineups?.teams[String(teamId)] ?? []).map((p) => [p.id, p]),
   );
-  const starters = rows
-    .filter((r) => status.get(r.id) === "titular")
-    .sort((a, b) => a.position - b.position || b.prob - a.prob);
-  const doubts = rows
-    .filter((r) => status.get(r.id) !== "titular" && r.prob >= 20)
-    .sort((a, b) => b.prob - a.prob);
+  const votes = (r: LineupRow) =>
+    Number(raw.get(r.id)?.starter_ff ?? 0) +
+    Number(raw.get(r.id)?.starter_af ?? 0);
+  const ranked = [...rows].sort(
+    (a, b) => b.prob - a.prob || votes(b) - votes(a),
+  );
+  const keeper = ranked.find((r) => r.position === 1);
+  const field = ranked.filter((r) => r.position !== 1).slice(0, 10);
+  const eleven = new Set([...(keeper ? [keeper] : []), ...field]);
+  const starters = [...eleven].sort(
+    (a, b) => a.position - b.position || b.prob - a.prob,
+  );
+  const doubts = ranked.filter((r) => !eleven.has(r) && r.prob >= 20);
   const rest = rows
-    .filter((r) => status.get(r.id) !== "titular" && r.prob < 20)
+    .filter((r) => !eleven.has(r) && r.prob < 20)
     .sort((a, b) => a.position - b.position || b.prob - a.prob);
   return { starters, doubts, rest };
 }
