@@ -272,6 +272,56 @@ export function getLineupsScrapedAt(): Date | null {
   }
 }
 
+export interface ProbableLineupPlayer {
+  id: number;
+  name: string;
+  /** Probabilidad de titular (0-100): media de futbolfantasy y analiticafantasy. */
+  prob: number;
+  status: "titular" | "suplente";
+  prob_ff: number | null;
+  prob_af: number | null;
+  starter_ff: boolean | null;
+  starter_af: boolean | null;
+  /** Nota de analiticafantasy: "Pequeña lesión", "Indisposición"... */
+  af_info: string | null;
+  sanctioned: boolean;
+  discrepancy: boolean;
+}
+
+export interface ProbableLineups {
+  jornada: number;
+  scraped_at: string;
+  /** id de equipo -> jugadores, de más a menos probable. */
+  teams: Record<string, ProbableLineupPlayer[]>;
+}
+
+const lineupsCache = new Map<number, ProbableLineups | null>();
+
+/**
+ * Alineaciones probables de una jornada (fantasy_api/scrape_alineaciones.py):
+ * la actual en alineaciones.json y las pasadas en alineaciones_hist/.
+ */
+export function getProbableLineups(gameweek: number): ProbableLineups | null {
+  if (lineupsCache.has(gameweek)) return lineupsCache.get(gameweek)!;
+  let found: ProbableLineups | null = null;
+  for (const file of [
+    "alineaciones.json",
+    `alineaciones_hist/${gameweek}.json`,
+  ]) {
+    try {
+      const data = loadJson<ProbableLineups>(file);
+      if (data.jornada === gameweek) {
+        found = data;
+        break;
+      }
+    } catch {
+      // no hay fichero para esa jornada
+    }
+  }
+  lineupsCache.set(gameweek, found);
+  return found;
+}
+
 /**
  * Cuándo se descargaron por última vez los datos de Marca (lo escribe
  * fantasy_api/main.py). null si el fichero aún no existe.

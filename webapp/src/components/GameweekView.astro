@@ -1,6 +1,6 @@
 ---
 import MatchCard from "./MatchCard.astro";
-import { getAllPlayerSummaries, url } from "../lib/data";
+import { getAllPlayerSummaries, getNextGameweek, url } from "../lib/data";
 import type { Gameweek, Match } from "../lib/data";
 import { expectedPoints } from "../lib/forecast";
 import { ligaShortName } from "../lib/liga";
@@ -33,6 +33,8 @@ const dayLabelFormatter = new Intl.DateTimeFormat("es-ES", {
 });
 
 const sortedMatches = [...matches].sort((a, b) => a.date.ts - b.date.ts);
+// Hay página de partido para las jornadas jugadas y la próxima.
+const hasMatchPages = selected.number <= getNextGameweek().number;
 
 // Para "tus jugadores en este partido": nombre corto, equipo y, si el partido
 // está por jugar, puntos esperados en esta jornada. Solo de los equipos que juegan.
@@ -168,7 +170,7 @@ for (const match of sortedMatches) {
           <h3 class="mb-3 text-xs font-semibold tracking-wide text-slate-500 uppercase">
             {label}
           </h3>
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3">
             {dayMatches.map((game) => (
               <div
                 data-match-wrap
@@ -185,6 +187,7 @@ for (const match of sortedMatches) {
                   status={game.status}
                   homeTeamId={game.id_home}
                   awayTeamId={game.id_away}
+                  href={hasMatchPages ? url(`/partido/${game.id}`) : undefined}
                 />
                 <p
                   data-my-players

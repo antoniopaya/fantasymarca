@@ -1,0 +1,533 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {
+  getAllPlayerSummaries,
+  getGameweeks,
+  getLigaJornadas,
+  getMatches,
+  getNextGameweek,
+  getPlayerStats,
+  getProbableLineups,
+  playerPhotoUrl,
+  POSITION_COLORS,
+  POSITION_SHORT,
+  teamLogoUrl,
+  url,
+  type Gameweek,
+  type Match,
+  type PlayerSummary,
+} from "../../lib/data";
+import { prediction } from "../../lib/forecast";
+import { FAMILIA } from "../../lib/yo";
+
+// Una página por partido de las jornadas ya jugadas y de la próxima.
+export function getStaticPaths() {
+  const next = getNextGameweek().number;
+  return getGameweeks()
+    .filter((gw) => gw.number <= next)
+    .flatMap((gw) =>
+      getMatches(gw.number).map((match) => ({
+        params: { id: String(match.id) },
+        props: { match, gw },
+      })),
+    );
+}
+
+interface Props {
+  match: Match;
+  gw: Gameweek;
+}
+
+const { match, gw } = Astro.props;
+const isNext = gw.number === getNextGameweek().number;
+const played = match.status === "played";
+const live = match.status === "playing";
+const postponed = match.status === "postponed";
+
+const byId = new Map<number, PlayerSummary>(
+  getAllPlayerSummaries().map((s) => [s.id, s]),
+);
+
+// De quién de los Payás es cada jugador: el 11 de esa jornada si ya está en
+// los PDFs y, si no, el último.
+const ligaJornadas = getLigaJornadas();
+const ligaJornada =
+  ligaJornadas.find((j) => j.number === gw.number) ?? ligaJornadas.at(-1);
+const owners = new Map<number, string[]>();
+for (const e of ligaJornada?.entries ?? []) {
+  if (!(FAMILIA as readonly string[]).includes(e.participant)) continue;
+  for (const p of e.players) {
+    if (p.id === null) continue;
+    owners.set(p.id, [...(owners.get(p.id) ?? []), e.participant]);
+  }
+}
+
+const dateLabel = new Intl.DateTimeFormat("es-ES", {
+  timeZone: "Europe/Madrid",
+  weekday: "long",
+  day: "numeric",
+  month: "long",
+  hour: "2-digit",
+  minute: "2-digit",
+}).format(new Date(match.date.ts * 1000));
+
+const fmt = (n: number) =>
+  n.toLocaleString("es-ES", {
+    minimumFractionDigits: 1,
+    maximumFractionDigits: 1,
+  });
+
+// --- Antes del partido: alineaciones probables -----------------------------
+const lineups = !played && !postponed ? getProbableLineups(gw.number) : null;
+
+interface LineupRow {
+  id: number;
+  name: string;
+  position: number;
+  prob: number;
+  xp: number | null;
+  note: string | null;
+  sources: string | null;
+}
+
+function probableFor(teamId: number) {
+  const rows: LineupRow[] = (lineups?.teams[String(teamId)] ?? []).map((p) => {
+    const s = byId.get(p.id);
+    const pred = isNext ? prediction(p.id) : null;
+    return {
+      id: p.id,
+      name: s?.name ?? p.name,
+      position: s?.position ?? 0,
+      prob: p.prob,
+      xp: pred?.xp ?? null,
+      note: p.sanctioned ? "Sancionado" : p.af_info,
+      // Cuando no coinciden: quién lo pone de titular, o las dos cifras.
+      sources: !p.discrepancy
+        ? null
+        : p.starter_ff && !p.starter_af
+          ? "Titular solo para futbolfantasy"
+          : p.starter_af && !p.starter_ff
+            ? "Titular solo para analiticafantasy"
+            : `futbolfantasy ${p.prob_ff ?? "?"}% · analiticafantasy ${p.prob_af ?? "?"}%`,
+    };
+  });
+  const status = new Map(
+    (lineups?.teams[String(teamId)] ?? []).map((p) => [p.id, p.status]),
+  );
+  const starters = rows
+    .filter((r) => status.get(r.id) === "titular")
+    .sort((a, b) => a.position - b.position || b.prob - a.prob);
+  const doubts = rows
+    .filter((r) => status.get(r.id) !== "titular" && r.prob >= 20)
+    .sort((a, b) => b.prob - a.prob);
+  const rest = rows
+    .filter((r) => status.get(r.id) !== "titular" && r.prob < 20)
+    .sort((a, b) => a.position - b.position || b.prob - a.prob);
+  return { starters, doubts, rest };
+}
+
+// --- Después del partido: puntos de cada jugador ----------------------------
+const gwStats = getPlayerStats().get(gw.number) ?? {};
+
+interface PlayedRow {
+  id: number;
+  name: string;
+  position: number;
+  points: number;
+  min: number;
+  goals: number;
+  assists: number;
+  yellow: number;
+  red: number;
+}
+
+function playedFor(teamId: number): PlayedRow[] {
+  return Object.entries(gwStats)
+    .map(([key, g]) => {
+      const s = byId.get(Number(key));
+      if (!s || s.id_team !== teamId || !g.min) return null;
+      const count = (stat: string) => g.c?.[stat]?.[0] ?? 0;
+      return {
+        id: s.id,
+        name: s.name,
+        position: s.position,
+        points: g.points,
+        min: g.min,
+        goals: count("goals"),
+        assists: count("goalAssist"),
+        yellow: count("yellowCard"),
+        red: count("redCard") + count("doubleYellowCard"),
+      };
+    })
+    .filter((r): r is PlayedRow => r !== null)
+    .sort((a, b) => b.points - a.points || b.min - a.min);
+}
+
+const teams = [
+  { id: match.id_home, name: match.home, side: "Local" },
+  { id: match.id_away, name: match.away, side: "Visitante" },
+].map((t) => ({
+  ...t,
+  probable: probableFor(t.id),
+  played: played ? playedFor(t.id) : [],
+}));
+const hasLineups = teams.some((t) => t.probable.starters.length > 0);
+const hasPoints = teams.some((t) => t.played.length > 0);
+const best = teams
+  .flatMap((t) => t.played.map((p) => ({ ...p, team: t.name })))
+  .sort((a, b) => b.points - a.points)[0];
+
+const probColor = (p: number) =>
+  p >= 70 ? "text-emerald-300" : p >= 40 ? "text-amber-300" : "text-slate-400";
+const ptsColor = (p: number) =>
+  p >= 10
+    ? "text-emerald-300"
+    : p >= 5
+      ? "text-white"
+      : p < 0
+        ? "text-rose-300"
+        : "text-slate-400";
+---
+
+<Layout
+  title={`${match.home}–${match.away}`}
+  description={`${gw.name}: ${match.home}–${match.away}. Alineaciones probables y puntos de cada jugador.`}
+>
+  <a
+    href={url(`/jornada/${gw.number}`)}
+    class="mb-4 inline-flex items-center gap-1 py-2 text-sm font-medium text-slate-400 hover:text-emerald-400"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-4 w-4"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      aria-hidden="true"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"
+      ></path>
+    </svg>
+    {gw.name}
+  </a>
+
+  <header
+    class="mb-6 rounded-2xl border border-white/10 bg-slate-900/60 p-4 sm:p-6"
+  >
+    <p
+      class={`text-center text-xs font-medium tracking-wide uppercase ${live ? "text-rose-400" : "text-slate-500"}`}
+    >
+      {
+        postponed
+          ? "Aplazado"
+          : live
+            ? "En juego"
+            : played
+              ? "Final"
+              : dateLabel
+      }
+    </p>
+    <div class="mt-3 flex items-center justify-between gap-2">
+      {
+        teams.map((t, i) => (
+          <div
+            class={`flex flex-1 flex-col items-center gap-2 text-center ${i === 1 ? "order-3" : ""}`}
+          >
+            <img
+              src={teamLogoUrl(t.id)}
+              alt=""
+              class="h-14 w-14 object-contain"
+            />
+            <h1 class="text-base leading-tight font-bold text-white sm:text-lg">
+              {t.name}
+            </h1>
+          </div>
+        ))
+      }
+      <div class="order-2 shrink-0 px-2 text-center">
+        {
+          played || live ? (
+            <p class="font-mono text-3xl font-black text-white">
+              {match.goals_home} - {match.goals_away}
+            </p>
+          ) : (
+            <p class="rounded-lg bg-slate-800 px-3 py-1.5 text-sm font-bold text-slate-300">
+              {postponed ? "—" : match.date.text.split(" ").at(-1)}
+            </p>
+          )
+        }
+      </div>
+    </div>
+    {
+      best && (
+        <p class="mt-4 text-center text-sm text-slate-400">
+          Mejor del partido en Fantasy:{" "}
+          <a
+            href={url(`/jugadores/${best.id}`)}
+            class="font-semibold text-emerald-300 hover:underline"
+          >
+            {best.name}
+          </a>{" "}
+          ({best.points} pts)
+        </p>
+      )
+    }
+  </header>
+
+  {
+    postponed && (
+      <p class="rounded-xl border border-white/10 bg-slate-900/60 p-6 text-center text-slate-400">
+        Partido aplazado: no cuenta para esta jornada.
+      </p>
+    )
+  }
+
+  {
+    !postponed && (hasLineups || hasPoints) && (
+      <>
+        <div
+          role="tablist"
+          aria-label="Equipo"
+          class="mb-3 grid grid-cols-2 gap-1 rounded-full border border-white/10 p-1 md:hidden"
+        >
+          {teams.map((t, i) => (
+            <button
+              type="button"
+              role="tab"
+              data-team-tab={i}
+              aria-selected={i === 0 ? "true" : "false"}
+              class="truncate rounded-full px-3 py-2 text-sm font-medium text-slate-300 aria-selected:bg-emerald-500/15 aria-selected:text-emerald-300"
+            >
+              {t.name}
+            </button>
+          ))}
+        </div>
+        <p class="mb-3 text-xs text-slate-500">
+          {hasPoints
+            ? "Puntos Fantasy de cada jugador que jugó, de más a menos."
+            : "Once probable según futbolfantasy y analiticafantasy (media de las dos; ≠ = no coinciden). A la derecha, probabilidad de ser titular y puntos esperados."}
+        </p>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          {teams.map((t, i) => (
+            <section
+              data-team-panel={i}
+              class={`rounded-2xl border border-white/10 bg-slate-900/60 p-3 sm:p-4 ${i === 1 ? "max-md:hidden" : ""}`}
+            >
+              <h2 class="mb-2 flex items-center gap-2 text-sm font-semibold text-white">
+                <img
+                  src={teamLogoUrl(t.id)}
+                  alt=""
+                  class="h-5 w-5 object-contain"
+                />
+                {t.name}
+                <span class="text-xs font-normal text-slate-500">
+                  {hasPoints ? "" : "· once probable"}
+                </span>
+              </h2>
+              {hasPoints ? (
+                <ol class="divide-y divide-white/5">
+                  {t.played.map((p) => (
+                    <li data-owners={(owners.get(p.id) ?? []).join(",")}>
+                      <a
+                        href={url(`/jugadores/${p.id}`)}
+                        class="flex items-center gap-2.5 py-2 hover:bg-white/5"
+                      >
+                        <span
+                          class="w-8 shrink-0 text-center text-[11px] font-bold"
+                          style={`color:${POSITION_COLORS[p.position]}`}
+                        >
+                          {POSITION_SHORT[p.position]}
+                        </span>
+                        <img
+                          src={playerPhotoUrl(p.id)}
+                          alt=""
+                          loading="lazy"
+                          class="h-8 w-8 shrink-0 rounded-full bg-slate-800 object-cover"
+                        />
+                        <span class="min-w-0 flex-1">
+                          <span class="block truncate text-sm text-white">
+                            {p.name}
+                            <span
+                              data-mine
+                              hidden
+                              class="ml-1 rounded bg-emerald-500/15 px-1 text-[11px] font-semibold text-emerald-300"
+                            >
+                              Tu 11
+                            </span>
+                          </span>
+                          <span class="block truncate text-xs text-slate-500">
+                            {[
+                              `${p.min}'`,
+                              p.goals ? "⚽".repeat(p.goals) : "",
+                              p.assists ? `${p.assists} asist.` : "",
+                              p.yellow ? "🟨" : "",
+                              p.red ? "🟥" : "",
+                            ]
+                              .filter(Boolean)
+                              .join(" · ")}
+                          </span>
+                        </span>
+                        <span
+                          class={`shrink-0 text-base font-bold tabular-nums ${ptsColor(p.points)}`}
+                        >
+                          {p.points}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              ) : (
+                <>
+                  {[
+                    { title: null, rows: t.probable.starters },
+                    { title: "Dudas y suplentes", rows: t.probable.doubts },
+                  ].map(
+                    (group) =>
+                      group.rows.length > 0 && (
+                        <>
+                          {group.title && (
+                            <h3 class="mt-4 mb-1 text-xs font-semibold tracking-wide text-slate-500 uppercase">
+                              {group.title}
+                            </h3>
+                          )}
+                          <ol class="divide-y divide-white/5">
+                            {group.rows.map((r) => (
+                              <li
+                                data-owners={(owners.get(r.id) ?? []).join(",")}
+                              >
+                                <a
+                                  href={url(`/jugadores/${r.id}`)}
+                                  class="flex items-center gap-2.5 py-2 hover:bg-white/5"
+                                >
+                                  <span
+                                    class="w-8 shrink-0 text-center text-[11px] font-bold"
+                                    style={`color:${POSITION_COLORS[r.position] ?? "#94a3b8"}`}
+                                  >
+                                    {POSITION_SHORT[r.position] ?? "?"}
+                                  </span>
+                                  <img
+                                    src={playerPhotoUrl(r.id)}
+                                    alt=""
+                                    loading="lazy"
+                                    class="h-8 w-8 shrink-0 rounded-full bg-slate-800 object-cover"
+                                  />
+                                  <span class="min-w-0 flex-1">
+                                    <span class="block truncate text-sm text-white">
+                                      {r.name}
+                                      {r.sources && (
+                                        <span
+                                          class="ml-1 text-amber-300"
+                                          title="Las fuentes no coinciden"
+                                        >
+                                          ≠
+                                        </span>
+                                      )}
+                                      <span
+                                        data-mine
+                                        hidden
+                                        class="ml-1 rounded bg-emerald-500/15 px-1 text-[11px] font-semibold text-emerald-300"
+                                      >
+                                        Tu 11
+                                      </span>
+                                    </span>
+                                    {(r.note || r.sources) && (
+                                      <span class="block truncate text-xs">
+                                        {r.note && (
+                                          <span class="text-amber-300">
+                                            {r.note}
+                                          </span>
+                                        )}
+                                        {r.note && r.sources && " · "}
+                                        {r.sources && (
+                                          <span class="text-slate-500">
+                                            {r.sources}
+                                          </span>
+                                        )}
+                                      </span>
+                                    )}
+                                  </span>
+                                  <span class="shrink-0 text-right">
+                                    <span
+                                      class={`block text-sm font-bold tabular-nums ${probColor(r.prob)}`}
+                                    >
+                                      {r.prob}%
+                                    </span>
+                                    {r.xp !== null && (
+                                      <span class="block text-[11px] text-slate-500 tabular-nums">
+                                        ≈{fmt(r.xp)} pts
+                                      </span>
+                                    )}
+                                  </span>
+                                </a>
+                              </li>
+                            ))}
+                          </ol>
+                        </>
+                      ),
+                  )}
+                  {t.probable.rest.length > 0 && (
+                    <details class="mt-3">
+                      <summary class="cursor-pointer py-1 text-xs font-medium text-slate-400">
+                        Resto de la plantilla ({t.probable.rest.length})
+                      </summary>
+                      <p class="mt-1 text-xs leading-relaxed text-slate-500">
+                        {t.probable.rest
+                          .map((r) => `${r.name} ${r.prob}%`)
+                          .join(" · ")}
+                      </p>
+                    </details>
+                  )}
+                </>
+              )}
+            </section>
+          ))}
+        </div>
+      </>
+    )
+  }
+
+  {
+    !postponed && !hasLineups && !hasPoints && (
+      <p class="rounded-xl border border-white/10 bg-slate-900/60 p-6 text-center text-sm text-slate-400">
+        {played
+          ? "Todavía no se han descargado los puntos de este partido."
+          : "Todavía no hay alineaciones probables para esta jornada."}
+      </p>
+    )
+  }
+
+  <script>
+    import { getYo, YO_EVENT } from "../../lib/yo";
+
+    // Pestañas Local / Visitante en el móvil (en pantallas anchas se ven
+    // los dos equipos a la vez).
+    const tabs = document.querySelectorAll<HTMLElement>("[data-team-tab]");
+    const panels = document.querySelectorAll<HTMLElement>("[data-team-panel]");
+    for (const tab of tabs) {
+      tab.addEventListener("click", () => {
+        for (const t of tabs)
+          t.setAttribute("aria-selected", String(t === tab));
+        for (const p of panels)
+          p.classList.toggle(
+            "max-md:hidden",
+            p.dataset.teamPanel !== tab.dataset.teamTab,
+          );
+      });
+    }
+
+    // Marca los jugadores que llevas en tu 11 de la liga.
+    function markMine(yo: string | null) {
+      for (const li of document.querySelectorAll<HTMLElement>(
+        "[data-owners]",
+      )) {
+        const mine = yo !== null && li.dataset.owners!.split(",").includes(yo);
+        li.querySelector<HTMLElement>("[data-mine]")!.hidden = !mine;
+      }
+    }
+    markMine(getYo());
+    window.addEventListener(YO_EVENT, (e) =>
+      markMine((e as CustomEvent<string | null>).detail),
+    );
+  </script>
+</Layout>

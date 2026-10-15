@@ -10,6 +10,8 @@ interface Props {
   status: string;
   homeTeamId: number;
   awayTeamId: number;
+  /** Página del partido (alineaciones probables o puntos), si la hay. */
+  href?: string;
 }
 
 const {
@@ -21,23 +23,27 @@ const {
   status,
   homeTeamId,
   awayTeamId,
+  href,
 } = Astro.props;
 const isFixture = status === "fixture";
 const isLive = status === "playing";
+const isPostponed = status === "postponed";
+const Tag = href ? "a" : "div";
 ---
 
-<div
+<Tag
+  href={href}
   data-match-card
   data-home-team={homeTeamId}
   data-away-team={awayTeamId}
-  class={`rounded-xl border p-4 transition-colors ${
+  class={`block rounded-xl border px-3 py-2.5 transition-colors ${
     isLive
       ? "border-rose-500/40 bg-rose-500/5"
       : "border-white/10 bg-slate-900/60 hover:border-emerald-500/30"
   }`}
 >
   <p
-    class={`mb-3 flex items-center justify-center gap-1.5 text-center text-xs font-medium tracking-wide uppercase ${
+    class={`mb-1.5 flex items-center justify-center gap-1.5 text-center text-[11px] font-medium tracking-wide uppercase ${
       isLive ? "text-rose-400" : "text-slate-500"
     }`}
   >
@@ -46,43 +52,49 @@ const isLive = status === "playing";
         <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-rose-500" />
       )
     }
-    {dateText}
+    {isPostponed ? "Aplazado" : dateText}
   </p>
-  <div class="flex items-center justify-between gap-2">
-    <div class="flex flex-1 flex-col items-center gap-2 text-center">
+  <div class="flex items-center gap-2">
+    <div class="flex min-w-0 flex-1 items-center justify-end gap-2 text-right">
+      <span class="text-sm leading-tight font-medium text-slate-100"
+        >{home}</span
+      >
       <img
         src={teamLogoUrl(homeTeamId)}
-        alt={home}
-        class="h-10 w-10 object-contain"
+        alt=""
+        class="h-8 w-8 shrink-0 object-contain"
         loading="lazy"
       />
-      <span class="text-sm font-medium text-slate-100">{home}</span>
     </div>
 
     <div
-      class={`shrink-0 rounded-lg px-3 py-1.5 text-center ${isLive ? "bg-rose-500/10" : "bg-slate-800/80"}`}
+      class={`w-16 shrink-0 rounded-lg py-1 text-center ${isLive ? "bg-rose-500/10" : "bg-slate-800/80"}`}
     >
       {
-        isFixture ? (
-          <span class="text-xs font-semibold text-slate-400">VS</span>
+        isFixture || isPostponed ? (
+          <span class="text-xs font-semibold text-slate-400">
+            {isPostponed ? "—" : "VS"}
+          </span>
         ) : (
           <span
-            class={`font-mono text-lg font-bold ${isLive ? "text-rose-300" : "text-white"}`}
+            class={`font-mono text-base font-bold ${isLive ? "text-rose-300" : "text-white"}`}
           >
-            {goalsHome} - {goalsAway}
+            {goalsHome}-{goalsAway}
           </span>
         )
       }
     </div>
 
-    <div class="flex flex-1 flex-col items-center gap-2 text-center">
+    <div class="flex min-w-0 flex-1 items-center gap-2">
       <img
         src={teamLogoUrl(awayTeamId)}
-        alt={away}
-        class="h-10 w-10 object-contain"
+        alt=""
+        class="h-8 w-8 shrink-0 object-contain"
         loading="lazy"
       />
-      <span class="text-sm font-medium text-slate-100">{away}</span>
+      <span class="text-sm leading-tight font-medium text-slate-100"
+        >{away}</span
+      >
     </div>
   </div>
-</div>
+</Tag>
