@@ -241,6 +241,21 @@ const isActive = (match: string[]) =>
     paint((e as CustomEvent<string | null>).detail),
   );
 
+  // ?yo=Toño en cualquier enlace deja elegido quién eres (útil para pasar
+  // un enlace o para la app instalada, que no comparte memoria con Safari).
+  const params = new URLSearchParams(location.search);
+  const fromUrl = FAMILIA.find((f) => f === params.get("yo"));
+  if (params.has("yo")) {
+    params.delete("yo");
+    const qs = params.toString();
+    history.replaceState(
+      history.state,
+      "",
+      `${location.pathname}${qs ? `?${qs}` : ""}${location.hash}`,
+    );
+    if (fromUrl) setYo(fromUrl);
+  }
+
   const yo = getYo();
   paint(yo);
   let dismissed = false;
@@ -249,5 +264,13 @@ const isActive = (match: string[]) =>
   } catch {
     dismissed = false;
   }
+  // Cerrar con Escape cuenta como "Ahora no".
+  dialog.addEventListener("cancel", () => {
+    try {
+      sessionStorage.setItem(DISMISS_KEY, "1");
+    } catch {
+      // sin sessionStorage: se volverá a preguntar en la próxima página
+    }
+  });
   if (!yo && !dismissed) dialog.showModal();
 </script>
