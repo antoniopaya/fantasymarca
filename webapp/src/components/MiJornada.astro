@@ -127,6 +127,24 @@ const fmtM = (euros: number) =>
             </span>
           </a>
 
+          <nav aria-label="Accesos rápidos" class="grid grid-cols-3 gap-2">
+            {[
+              { label: "Recomendados", href: url("/jugadores/recomendados") },
+              {
+                label: `Partidos ${nextGameweek.name.replace("Jornada ", "J")}`,
+                href: url("/jornada"),
+              },
+              { label: "Clasificación", href: url("/liga") },
+            ].map((l) => (
+              <a
+                href={l.href}
+                class="rounded-xl border border-white/10 bg-slate-900/60 px-2 py-3 text-center text-sm font-medium text-slate-200 hover:border-emerald-500/40 hover:text-white"
+              >
+                {l.label}
+              </a>
+            ))}
+          </nav>
+
           {plan.alerts.length > 0 && (
             <div class="rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4">
               <h2 class="mb-2 text-sm font-semibold text-amber-200">
@@ -281,7 +299,20 @@ const fmtM = (euros: number) =>
                       class={`border-t border-white/5 ${f.name === name ? "font-semibold text-emerald-400" : "text-slate-300"}`}
                     >
                       <td class="py-1.5">{f.rank}º</td>
-                      <td class="py-1.5">{f.name}</td>
+                      <td class="py-1.5">
+                        {f.name === name ? (
+                          f.name
+                        ) : (
+                          <a
+                            href={url(
+                              `/liga/cara-a-cara?a=${encodeURIComponent(name)}&b=${encodeURIComponent(f.name)}`,
+                            )}
+                            class="underline decoration-white/20 underline-offset-4 hover:text-emerald-400"
+                          >
+                            {f.name}
+                          </a>
+                        )}
+                      </td>
                       <td class="py-1.5 text-right">{f.entry.points}</td>
                       <td class="py-1.5 text-right">{f.entry.total}</td>
                     </tr>

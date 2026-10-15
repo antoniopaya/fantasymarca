@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import LigaTabs from "../../components/LigaTabs.astro";
 import YoScript from "../../components/YoScript.astro";
 import MultiLineChart from "../../components/charts/MultiLineChart.astro";
-import { getLigaJornadas, getNextGameweek } from "../../lib/data";
+import { getLigaJornadas, getNextGameweek, url } from "../../lib/data";
 import {
   averagePoints,
   FAMILIA_COLORS,
@@ -155,14 +155,22 @@ const STICKY_YO = "group-data-[yo=true]:bg-[#0b212c]";
                           </span>
                         )}
                       </td>
-                      <td class={`${STICKY_2} ${STICKY_YO} px-3 py-2`}>
-                        {entry.participant}
-                        {isFamily && (
-                          <span
-                            class="ml-2 inline-block h-2 w-2 rounded-full align-middle"
-                            style={`background:${FAMILIA_COLORS[entry.participant]}`}
-                          />
-                        )}
+                      <td class={`${STICKY_2} ${STICKY_YO} p-0`}>
+                        <a
+                          href={url(
+                            `/liga/cara-a-cara?b=${encodeURIComponent(entry.participant)}`,
+                          )}
+                          title={`Cara a cara con ${entry.participant}`}
+                          class="block px-2 py-2 underline decoration-white/20 underline-offset-4 hover:text-emerald-400 sm:px-3"
+                        >
+                          {entry.participant}
+                          {isFamily && (
+                            <span
+                              class="ml-2 inline-block h-2 w-2 rounded-full align-middle"
+                              style={`background:${FAMILIA_COLORS[entry.participant]}`}
+                            />
+                          )}
+                        </a>
                       </td>
                       <td class="px-3 py-2 text-right">{entry.points}</td>
                       <td class="px-3 py-2 text-right font-semibold">

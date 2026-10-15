@@ -122,7 +122,8 @@ const comparisonCandidates = player
 >
   <a
     href={url("/jugadores")}
-    class="mb-6 inline-flex items-center gap-1 text-sm font-medium text-slate-400 hover:text-emerald-400"
+    data-back
+    class="mb-6 inline-flex items-center gap-1 py-2 text-sm font-medium text-slate-400 hover:text-emerald-400"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -135,8 +136,21 @@ const comparisonCandidates = player
       <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"
       ></path>
     </svg>
-    Volver a jugadores
+    <span data-back-label>Volver a jugadores</span>
   </a>
+  <script>
+    // Si se llega desde otra página de la web (Mi 11, Inicio, Liga, una
+    // búsqueda con filtros...), "Volver" regresa a ella en vez de a la lista.
+    const back = document.querySelector<HTMLAnchorElement>("[data-back]");
+    const ref = document.referrer ? new URL(document.referrer) : null;
+    if (back && ref && ref.origin === location.origin && history.length > 1) {
+      back.querySelector("[data-back-label]")!.textContent = "Volver";
+      back.addEventListener("click", (e) => {
+        e.preventDefault();
+        history.back();
+      });
+    }
+  </script>
 
   {
     loadError ? (
