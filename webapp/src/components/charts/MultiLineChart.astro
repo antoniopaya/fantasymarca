@@ -30,12 +30,8 @@ const {
   yTicks,
 } = Astro.props;
 
-const width = 640;
-const height = 260;
-const padding = { top: 16, right: 86, bottom: 28, left: 40 };
-const plotWidth = width - padding.left - padding.right;
-const plotHeight = height - padding.top - padding.bottom;
-
+// Se dibujan dos versiones: la ancha y una estrecha para el móvil (si no,
+// el SVG de 640 se encogía a la mitad y los textos quedaban ilegibles).
 const all = series.flatMap((s) =>
   s.values.filter((v): v is number => v !== null),
 );
@@ -51,73 +47,112 @@ if (!yDomain) {
   maxV += span * 0.05;
 }
 
-const x = (i: number) =>
-  padding.left + (i / Math.max(xLabels.length - 1, 1)) * plotWidth;
-const y = (v: number) => {
-  const t = (v - minV) / (maxV - minV);
-  return padding.top + (invertY ? t : 1 - t) * plotHeight;
-};
-
-const paths = series.map((s) => {
-  let d = "";
-  let pen = false;
-  s.values.forEach((v, i) => {
-    if (v === null) {
-      pen = false;
-      return;
-    }
-    d += `${pen ? "L" : "M"} ${x(i).toFixed(1)} ${y(v).toFixed(1)} `;
-    pen = true;
-  });
-  const lastIndex = s.values.findLastIndex((v) => v !== null);
-  return {
-    ...s,
-    d,
-    end:
-      lastIndex >= 0
-        ? { x: x(lastIndex), y: y(s.values[lastIndex] as number) }
-        : null,
+function layout(
+  width: number,
+  height: number,
+  padding: { top: number; right: number; bottom: number; left: number },
+  font: number,
+) {
+  const plotWidth = width - padding.left - padding.right;
+  const plotHeight = height - padding.top - padding.bottom;
+  const x = (i: number) =>
+    padding.left + (i / Math.max(xLabels.length - 1, 1)) * plotWidth;
+  const y = (v: number) => {
+    const t = (v - minV) / (maxV - minV);
+    return padding.top + (invertY ? t : 1 - t) * plotHeight;
   };
-});
 
-// Etiquetas al final de cada línea, separadas si se pisan.
-const endLabels = paths
-  .filter((p) => p.end)
-  .map((p) => ({
-    label: p.label,
-    y: (p.end as { y: number }).y,
-    x: (p.end as { x: number }).x,
-  }))
-  .sort((a, b) => a.y - b.y);
-for (let i = 1; i < endLabels.length; i++) {
-  if (endLabels[i].y - endLabels[i - 1].y < 13) {
-    endLabels[i].y = endLabels[i - 1].y + 13;
+  const paths = series.map((s) => {
+    let d = "";
+    let pen = false;
+    s.values.forEach((v, i) => {
+      if (v === null) {
+        pen = false;
+        return;
+      }
+      d += `${pen ? "L" : "M"} ${x(i).toFixed(1)} ${y(v).toFixed(1)} `;
+      pen = true;
+    });
+    const lastIndex = s.values.findLastIndex((v) => v !== null);
+    return {
+      ...s,
+      d,
+      end:
+        lastIndex >= 0
+          ? { x: x(lastIndex), y: y(s.values[lastIndex] as number) }
+          : null,
+    };
+  });
+
+  // Etiquetas al final de cada línea, separadas si se pisan.
+  const gap = font + 2;
+  const endLabels = paths
+    .filter((p) => p.end)
+    .map((p) => ({
+      label: p.label,
+      y: (p.end as { y: number }).y,
+      x: (p.end as { x: number }).x,
+    }))
+    .sort((a, b) => a.y - b.y);
+  for (let i = 1; i < endLabels.length; i++) {
+    if (endLabels[i].y - endLabels[i - 1].y < gap) {
+      endLabels[i].y = endLabels[i - 1].y + gap;
+    }
   }
+
+  const tickCount = 4;
+  const ticks = (
+    yTicks ??
+    Array.from(
+      { length: tickCount + 1 },
+      (_, i) => minV + ((maxV - minV) * i) / tickCount,
+    )
+  ).map((v) => ({ v, y: y(v) }));
+
+  // En el estrecho, solo una de cada dos etiquetas del eje X si no caben.
+  const every = plotWidth / Math.max(xLabels.length, 1) < font * 2.2 ? 2 : 1;
+
+  const chartData = {
+    xLabels,
+    xs: xLabels.map((_, i) => x(i)),
+    series: series.map((s) => ({
+      label: s.label,
+      color: s.reference ? "#94a3b8" : s.color,
+      values: s.values,
+      ys: s.values.map((v) => (v === null ? null : y(v))),
+    })),
+    suffix: valueSuffix,
+  };
+  return {
+    width,
+    height,
+    padding,
+    font,
+    plotWidth,
+    plotHeight,
+    x,
+    paths,
+    endLabels,
+    ticks,
+    every,
+    chartData,
+  };
 }
 
-const tickCount = 4;
-const ticks = (
-  yTicks ??
-  Array.from(
-    { length: tickCount + 1 },
-    (_, i) => minV + ((maxV - minV) * i) / tickCount,
-  )
-).map((v) => ({ v, y: y(v) }));
+const views = [
+  {
+    cls: "sm:hidden",
+    ...layout(340, 230, { top: 12, right: 66, bottom: 26, left: 30 }, 12),
+  },
+  {
+    cls: "hidden sm:block",
+    ...layout(640, 260, { top: 16, right: 86, bottom: 28, left: 40 }, 10.5),
+  },
+];
 
 const fmt = (v: number) =>
   Number.isInteger(v) ? String(v) : v.toFixed(1).replace(".", ",");
 
-const chartData = {
-  xLabels,
-  xs: xLabels.map((_, i) => x(i)),
-  series: series.map((s) => ({
-    label: s.label,
-    color: s.reference ? "#94a3b8" : s.color,
-    values: s.values,
-    ys: s.values.map((v) => (v === null ? null : y(v))),
-  })),
-  suffix: valueSuffix,
-};
 ---
 
 <figure class="mlc rounded-2xl border border-white/10 bg-slate-900/60 p-4">
@@ -142,104 +177,109 @@ const chartData = {
     </span>
   </figcaption>
 
-  <div class="relative">
-    <svg
-      viewBox={`0 0 ${width} ${height}`}
-      class="h-auto w-full"
-      role="img"
-      aria-label={title}
-      data-chart={JSON.stringify(chartData)}
-    >
-      {
-        ticks.map((t) => (
-          <g>
-            <line
-              x1={padding.left}
-              x2={width - padding.right}
-              y1={t.y}
-              y2={t.y}
-              stroke="rgba(255,255,255,0.06)"
-            />
-            <text
-              x={padding.left - 6}
-              y={t.y + 3}
-              text-anchor="end"
-              class="fill-slate-500 text-[10px]"
-            >
-              {Math.round(t.v)}
-            </text>
-          </g>
-        ))
-      }
-      {
-        xLabels.map((label, i) => (
-          <text
-            x={x(i)}
-            y={height - 8}
-            text-anchor="middle"
-            class="fill-slate-500 text-[10px]"
-          >
-            {label}
-          </text>
-        ))
-      }
-      {
-        paths.map((p) => (
-          <path
-            d={p.d}
-            fill="none"
-            stroke={p.reference ? "#94a3b8" : p.color}
-            stroke-width="2"
-            stroke-linejoin="round"
-            stroke-linecap="round"
-            stroke-dasharray={p.reference ? "4 3" : undefined}
-          />
-        ))
-      }
-      {
-        paths.map(
-          (p) =>
-            p.end && (
-              <circle
-                cx={p.end.x}
-                cy={p.end.y}
-                r="4"
-                fill={p.reference ? "#94a3b8" : p.color}
-                stroke="#0b1222"
-                stroke-width="2"
+  {
+    views.map((v) => (
+      <div class={`relative ${v.cls}`}>
+        <svg
+          viewBox={`0 0 ${v.width} ${v.height}`}
+          class="h-auto w-full"
+          role="img"
+          aria-label={title}
+          data-chart={JSON.stringify(v.chartData)}
+        >
+          {v.ticks.map((t) => (
+            <g>
+              <line
+                x1={v.padding.left}
+                x2={v.width - v.padding.right}
+                y1={t.y}
+                y2={t.y}
+                stroke="rgba(255,255,255,0.06)"
               />
-            ),
-        )
-      }
-      {
-        endLabels.map((l) => (
-          <text x={l.x + 8} y={l.y + 3} class="fill-slate-300 text-[11px]">
-            {l.label}
-          </text>
-        ))
-      }
-      <line
-        data-crosshair
-        y1={padding.top}
-        y2={height - padding.bottom}
-        stroke="rgba(255,255,255,0.25)"
-        visibility="hidden"></line>
-      <g data-dots></g>
-      <rect
-        data-hit
-        x={padding.left - 10}
-        y={padding.top}
-        width={plotWidth + 20}
-        height={plotHeight}
-        fill="transparent"></rect>
-    </svg>
-    <div
-      data-tooltip
-      hidden
-      class="pointer-events-none absolute top-2 z-10 rounded-lg border border-white/10 bg-slate-950/95 px-3 py-2 text-xs shadow-xl"
-    >
-    </div>
-  </div>
+              <text
+                x={v.padding.left - 6}
+                y={t.y + v.font * 0.35}
+                text-anchor="end"
+                font-size={v.font}
+                class="fill-slate-500"
+              >
+                {Math.round(t.v)}
+              </text>
+            </g>
+          ))}
+          {xLabels.map(
+            (label, i) =>
+              (i % v.every === 0 || i === xLabels.length - 1) && (
+                <text
+                  x={v.x(i)}
+                  y={v.height - 8}
+                  text-anchor="middle"
+                  font-size={v.font}
+                  class="fill-slate-500"
+                >
+                  {label}
+                </text>
+              ),
+          )}
+          {v.paths.map((p) => (
+            <path
+              d={p.d}
+              fill="none"
+              stroke={p.reference ? "#94a3b8" : p.color}
+              stroke-width="2"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke-dasharray={p.reference ? "4 3" : undefined}
+            />
+          ))}
+          {v.paths.map(
+            (p) =>
+              p.end && (
+                <circle
+                  cx={p.end.x}
+                  cy={p.end.y}
+                  r="4"
+                  fill={p.reference ? "#94a3b8" : p.color}
+                  stroke="#0b1222"
+                  stroke-width="2"
+                />
+              ),
+          )}
+          {v.endLabels.map((l) => (
+            <text
+              x={l.x + 8}
+              y={l.y + v.font * 0.35}
+              font-size={v.font + 0.5}
+              class="fill-slate-300"
+            >
+              {l.label}
+            </text>
+          ))}
+          <line
+            data-crosshair
+            y1={v.padding.top}
+            y2={v.height - v.padding.bottom}
+            stroke="rgba(255,255,255,0.25)"
+            visibility="hidden"
+          />
+          <g data-dots />
+          <rect
+            data-hit
+            x={v.padding.left - 10}
+            y={v.padding.top}
+            width={v.plotWidth + 20}
+            height={v.plotHeight}
+            fill="transparent"
+          />
+        </svg>
+        <div
+          data-tooltip
+          hidden
+          class="pointer-events-none absolute top-2 z-10 rounded-lg border border-white/10 bg-slate-950/95 px-3 py-2 text-xs shadow-xl"
+        />
+      </div>
+    ))
+  }
 
   <details class="mt-2 text-xs text-slate-400">
     <summary class="cursor-pointer select-none">Ver como tabla</summary>
