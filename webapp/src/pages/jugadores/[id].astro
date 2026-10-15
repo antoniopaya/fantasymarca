@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import LineChart from "../../components/charts/LineChart.astro";
 import YoScript from "../../components/YoScript.astro";
+import Icon from "../../components/Icon.astro";
 import {
   getPlayers,
   getPlayerById,
@@ -172,7 +173,8 @@ const vsFantasticaPct = precioFantastica
                 href={url(`/crear-once?add=${player.id}`)}
                 class="mt-4 inline-flex items-center gap-1.5 rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/20 transition-transform hover:-translate-y-0.5 hover:bg-emerald-400"
               >
-                + Añadir a Mi 11
+                <Icon name="plus" />
+                Añadir a Mi 11
               </a>
             )}
           </div>

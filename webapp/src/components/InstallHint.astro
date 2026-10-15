@@ -1,4 +1,5 @@
 ---
+import Icon from "./Icon.astro";
 // Invitación a instalar la web como app. No sale si ya está instalada o si
 // se ha cerrado antes. En Android/Chrome se usa el aviso nativo
 // (beforeinstallprompt); en iPhone no existe, así que se explica a mano.
@@ -28,8 +29,9 @@
       type="button"
       id="install-btn"
       hidden
-      class="mt-2 rounded-full bg-emerald-500 px-4 py-1.5 font-semibold text-slate-950"
+      class="mt-2 inline-flex items-center gap-1.5 rounded-full bg-emerald-500 px-4 py-1.5 font-semibold text-slate-950"
     >
+      <Icon name="download" />
       Instalar
     </button>
   </div>
@@ -39,7 +41,7 @@
     aria-label="No mostrar más"
     class="-m-3 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-slate-500 hover:text-white"
   >
-    ✕
+    <Icon name="x" />
   </button>
 </div>
 

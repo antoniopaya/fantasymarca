@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import JugadoresTabs from "../../components/JugadoresTabs.astro";
+import Icon from "../../components/Icon.astro";
 import {
   getAllPlayerSummaries,
   getTeams,
@@ -78,18 +79,10 @@ const fieldClass =
   >
     <div class="flex gap-2">
       <div class="relative flex-1">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
+        <Icon
+          name="search"
           class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-slate-500"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          aria-hidden="true"
-        >
-          <circle cx="11" cy="11" r="8"></circle>
-          <path stroke-linecap="round" d="m21 21-4.3-4.3"></path>
-        </svg>
+        />
         <input
           id="search-input"
           type="search"
@@ -107,6 +100,7 @@ const fieldClass =
         aria-controls="filters-panel"
         class="flex shrink-0 items-center gap-1.5 rounded-xl border border-white/10 px-3 text-sm font-medium text-slate-200 sm:hidden"
       >
+        <Icon name="sliders" />
         Filtros
         <span
           id="filters-badge"
@@ -182,8 +176,9 @@ const fieldClass =
       type="button"
       id="clear-filters"
       hidden
-      class="rounded-full px-3 py-1.5 text-sm font-medium text-emerald-400 hover:bg-emerald-500/10"
+      class="flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium text-emerald-400 hover:bg-emerald-500/10"
     >
+      <Icon name="x" />
       Limpiar filtros
     </button>
   </div>
@@ -202,8 +197,10 @@ const fieldClass =
       type="button"
       id="show-more"
       hidden
-      class="rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium text-slate-200 hover:bg-white/5"
+      class="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium text-slate-200 hover:bg-white/5"
     >
+      <span data-label></span>
+      <Icon name="chevronDown" />
     </button>
   </div>
 
@@ -425,7 +422,8 @@ const fieldClass =
         .join("");
       const rest = current.length - shown;
       showMore.hidden = rest <= 0;
-      showMore.textContent = `Ver ${Math.min(rest, PAGE)} más (quedan ${rest})`;
+      showMore.querySelector("[data-label]")!.textContent =
+        `Ver ${Math.min(rest, PAGE)} más (quedan ${rest})`;
     }
 
     function apply(resetPage = true) {

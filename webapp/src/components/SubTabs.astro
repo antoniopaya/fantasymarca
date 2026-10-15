@@ -1,7 +1,10 @@
 ---
+import Icon from "./Icon.astro";
+import type { IconName } from "../lib/icons";
+
 interface Props {
   label: string;
-  tabs: { key: string; label: string; href: string }[];
+  tabs: { key: string; label: string; href: string; icon?: IconName }[];
   active: string;
 }
 
@@ -19,12 +22,13 @@ const { label, tabs, active } = Astro.props;
       <a
         href={t.href}
         aria-current={t.key === active ? "page" : undefined}
-        class={`shrink-0 rounded-full border px-4 py-2.5 text-sm font-medium whitespace-nowrap transition-colors ${
+        class={`flex shrink-0 items-center gap-1.5 rounded-full border px-4 py-2.5 text-sm font-medium whitespace-nowrap transition-colors ${
           t.key === active
             ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-400"
             : "border-white/10 text-slate-300 hover:bg-white/5 hover:text-white"
         }`}
       >
+        {t.icon && <Icon name={t.icon} />}
         {t.label}
       </a>
     ))

@@ -13,16 +13,23 @@ const { active } = Astro.props;
   label="Secciones de jugadores"
   active={active}
   tabs={[
-    { key: "buscar", label: "Buscar", href: url("/jugadores") },
+    { key: "buscar", label: "Buscar", href: url("/jugadores"), icon: "search" },
     {
       key: "recomendados",
       label: "Recomendados",
+      icon: "sparkles",
       href: url("/jugadores/recomendados"),
     },
-    { key: "estadisticas", label: "Estadísticas", href: url("/estadisticas") },
+    {
+      key: "estadisticas",
+      label: "Estadísticas",
+      href: url("/estadisticas"),
+      icon: "chart",
+    },
     {
       key: "desglose",
       label: "Puntos por estadística",
+      icon: "pie",
       href: url("/jugadores/desglose"),
     },
   ]}

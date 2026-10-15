@@ -1,4 +1,5 @@
 ---
+import Icon from "../components/Icon.astro";
 import Layout from "../layouts/Layout.astro";
 import {
   getAllPlayerSummaries,
@@ -182,8 +183,9 @@ for (const m of nextGwMatches) {
       <button
         type="button"
         id="share-whatsapp"
-        class="shrink-0 rounded-full bg-emerald-500 px-3.5 py-2 text-sm font-semibold text-slate-950 disabled:pointer-events-none disabled:opacity-40"
+        class="flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500 px-3.5 py-2 text-sm font-semibold text-slate-950 disabled:pointer-events-none disabled:opacity-40"
       >
+        <Icon name="message" />
         WhatsApp
       </button>
       <details id="once-menu" class="relative shrink-0">
@@ -191,7 +193,7 @@ for (const m of nextGwMatches) {
           aria-label="Más opciones"
           class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-white/10 text-lg text-slate-200 hover:bg-white/5 [&::-webkit-details-marker]:hidden"
         >
-          ⋯
+          <Icon name="more" class="h-5 w-5" />
         </summary>
         <div
           class="absolute right-0 z-40 mt-2 w-72 space-y-4 rounded-2xl border border-white/10 bg-slate-900 p-4 shadow-2xl"
@@ -223,32 +225,36 @@ for (const m of nextGwMatches) {
               type="button"
               id="undo-btn"
               disabled
-              class="rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-white/5 disabled:pointer-events-none disabled:opacity-40"
+              class="flex items-center justify-center gap-1.5 rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-white/5 disabled:pointer-events-none disabled:opacity-40"
             >
+              <Icon name="undo" />
               Deshacer
             </button>
             <button
               type="button"
               id="clear-team"
               data-confirming="false"
-              class="rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 hover:border-rose-500/40 hover:text-rose-300"
+              class="flex items-center justify-center gap-1.5 rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 hover:border-rose-500/40 hover:text-rose-300"
             >
-              Vaciar equipo
+              <Icon name="eraser" />
+              <span data-label>Vaciar equipo</span>
             </button>
             <button
               type="button"
               id="lineup-new"
-              class="rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-white/5"
+              class="flex items-center justify-center gap-1.5 rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-white/5"
             >
-              + Nueva convocatoria
+              <Icon name="plus" />
+              Nueva convocatoria
             </button>
             <button
               type="button"
               id="lineup-delete"
               data-confirming="false"
-              class="rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 hover:border-rose-500/40 hover:text-rose-300 disabled:pointer-events-none disabled:opacity-40"
+              class="flex items-center justify-center gap-1.5 rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 hover:border-rose-500/40 hover:text-rose-300 disabled:pointer-events-none disabled:opacity-40"
             >
-              Eliminar
+              <Icon name="trash" />
+              <span data-label>Eliminar</span>
             </button>
           </div>
           <p class="text-xs text-slate-500">
@@ -1594,7 +1600,7 @@ for (const m of nextGwMatches) {
       if (clearConfirmTimer) clearTimeout(clearConfirmTimer);
       clearConfirmTimer = null;
       clearTeamBtn.dataset.confirming = "false";
-      clearTeamBtn.textContent = "Vaciar equipo";
+      clearTeamBtn.querySelector("[data-label]").textContent = "Vaciar equipo";
       clearTeamBtn.classList.remove(
         "border-rose-500/60",
         "bg-rose-500/10",
@@ -1615,7 +1621,8 @@ for (const m of nextGwMatches) {
         return;
       }
       clearTeamBtn.dataset.confirming = "true";
-      clearTeamBtn.textContent = "¿Seguro? Confirmar";
+      clearTeamBtn.querySelector("[data-label]").textContent =
+        "¿Seguro? Confirmar";
       clearTeamBtn.classList.add(
         "border-rose-500/60",
         "bg-rose-500/10",
@@ -1671,7 +1678,7 @@ for (const m of nextGwMatches) {
       if (deleteLineupTimer) clearTimeout(deleteLineupTimer);
       deleteLineupTimer = null;
       lineupDeleteBtn.dataset.confirming = "false";
-      lineupDeleteBtn.textContent = "Eliminar";
+      lineupDeleteBtn.querySelector("[data-label]").textContent = "Eliminar";
       lineupDeleteBtn.classList.remove(
         "border-rose-500/60",
         "bg-rose-500/10",
@@ -1693,7 +1700,8 @@ for (const m of nextGwMatches) {
         return;
       }
       lineupDeleteBtn.dataset.confirming = "true";
-      lineupDeleteBtn.textContent = "¿Seguro? Confirmar";
+      lineupDeleteBtn.querySelector("[data-label]").textContent =
+        "¿Seguro? Confirmar";
       lineupDeleteBtn.classList.add(
         "border-rose-500/60",
         "bg-rose-500/10",

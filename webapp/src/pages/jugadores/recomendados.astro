@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Icon from "../../components/Icon.astro";
 import JugadoresTabs from "../../components/JugadoresTabs.astro";
 import DifficultyChip from "../../components/DifficultyChip.astro";
 import ProbPill from "../../components/ProbPill.astro";
@@ -213,8 +214,9 @@ const baseline = summary?.media_previa;
             href={url(
               `/crear-once?modelo=${eleven.formationKey}&j=${eleven.players.map((p) => p.summary.id).join(",")}&c=${eleven.players.find((p) => p.captain)?.summary.id ?? ""}`,
             )}
-            class="shrink-0 rounded-full bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-slate-950 hover:bg-emerald-400"
+            class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-slate-950 hover:bg-emerald-400"
           >
+            <Icon name="field" />
             Usar este 11 en Mi 11
           </a>
         </div>

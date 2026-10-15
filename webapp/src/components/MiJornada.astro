@@ -11,6 +11,7 @@ import {
 import { deadline, weekPlan } from "../lib/semana";
 import { FAMILIA } from "../lib/yo";
 import DifficultyChip from "./DifficultyChip.astro";
+import Icon from "./Icon.astro";
 import YoScript from "./YoScript.astro";
 
 const jornada = getLatestLigaJornada();
@@ -122,24 +123,32 @@ const fmtM = (euros: number) =>
                 {Math.round(plan.expectedTotal)} pts esperados
               </span>
             </span>
-            <span aria-hidden="true" class="text-2xl">
-              →
-            </span>
+            <Icon name="arrowRight" class="h-6 w-6" />
           </a>
 
           <nav aria-label="Accesos rápidos" class="grid grid-cols-3 gap-2">
             {[
-              { label: "Recomendados", href: url("/jugadores/recomendados") },
+              {
+                label: "Recomendados",
+                href: url("/jugadores/recomendados"),
+                icon: "sparkles" as const,
+              },
               {
                 label: `Partidos ${nextGameweek.name.replace("Jornada ", "J")}`,
                 href: url("/jornada"),
+                icon: "calendar" as const,
               },
-              { label: "Clasificación", href: url("/liga") },
+              {
+                label: "Clasificación",
+                href: url("/liga"),
+                icon: "trophy" as const,
+              },
             ].map((l) => (
               <a
                 href={l.href}
-                class="rounded-xl border border-white/10 bg-slate-900/60 px-2 py-3 text-center text-sm font-medium text-slate-200 hover:border-emerald-500/40 hover:text-white"
+                class="flex flex-col items-center gap-1.5 rounded-xl border border-white/10 bg-slate-900/60 px-2 py-3 text-center text-sm font-medium text-slate-200 hover:border-emerald-500/40 hover:text-white"
               >
+                <Icon name={l.icon} class="h-5 w-5 text-emerald-400" />
                 {l.label}
               </a>
             ))}

@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import Icon from "../components/Icon.astro";
 import { getDataUpdatedAt, url } from "../lib/data";
 
 interface Props {
@@ -72,8 +73,9 @@ const dataVersion = getDataUpdatedAt()?.getTime() ?? 0;
       <button
         type="button"
         id="sw-reload"
-        class="rounded-full bg-emerald-500 px-4 py-1.5 text-sm font-semibold text-slate-950"
+        class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500 px-4 py-1.5 text-sm font-semibold text-slate-950"
       >
+        <Icon name="refresh" />
         Recargar
       </button>
     </div>

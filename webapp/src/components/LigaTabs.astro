@@ -13,16 +13,23 @@ const { active } = Astro.props;
   label="Secciones de la liga"
   active={active}
   tabs={[
-    { key: "clasificacion", label: "Clasificación", href: url("/liga") },
+    {
+      key: "clasificacion",
+      label: "Clasificación",
+      href: url("/liga"),
+      icon: "list",
+    },
     {
       key: "estadisticas",
       label: "Estadísticas",
       href: url("/liga/estadisticas"),
+      icon: "chart",
     },
     {
       key: "cara-a-cara",
       label: "Cara a cara",
       href: url("/liga/cara-a-cara"),
+      icon: "versus",
     },
   ]}
 />
