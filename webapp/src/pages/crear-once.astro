@@ -582,6 +582,14 @@ for (const m of nextGwMatches) {
 
     const lineups = loadAllLineups();
 
+    // Las convocatorias de la liga de jornadas pasadas ya no sirven (cada
+    // jornada se parte del once nuevo): se borran para que no se acumulen.
+    for (const id of Object.keys(lineups)) {
+      const match = id.match(/^liga-(.+)-(\d+)$/);
+      const once = match ? LIGA_ONCES[match[1]] : null;
+      if (once && Number(match[2]) < once.jornada) delete lineups[id];
+    }
+
     function saveAllLineups() {
       try {
         localStorage.setItem(LINEUPS_KEY, JSON.stringify(lineups));
@@ -1864,7 +1872,23 @@ for (const m of nextGwMatches) {
       if (yo && e.target.closest("#liga-load")) loadLigaLineup(yo);
     });
 
-    window.addEventListener(YO_EVENT, renderLigaPanel);
+    // Si sabemos quién eres y la convocatoria activa está vacía, se carga tu
+    // once de la liga sin tener que pulsar nada. Una convocatoria con
+    // jugadores no se toca.
+    function autoLoadLiga() {
+      const yo = currentYo();
+      const active = lineups[activeLineupId];
+      const empty =
+        !active || !(active.slots ?? []).some((s) => s.playerId !== null);
+      if (!yo || !empty) return;
+      if (active) delete lineups[activeLineupId];
+      loadLigaLineup(yo);
+    }
+
+    window.addEventListener(YO_EVENT, () => {
+      autoLoadLiga();
+      renderLigaPanel();
+    });
 
     // Llegada desde "Preparar mi once" de la home, vía ?liga=1.
     function tryLoadLigaFromQuery() {
@@ -1885,5 +1909,7 @@ for (const m of nextGwMatches) {
     updateUndoButton();
     render();
     tryLoadLigaFromQuery();
+    autoLoadLiga();
+    renderLigaPanel();
   </script>
 </Layout>
