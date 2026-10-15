@@ -29,6 +29,13 @@ const record = winners.reduce(
 );
 
 const fmtWins = (n: number) => String(n).replace(".", ",");
+
+// Columnas fijas al deslizar la tabla de lado en el móvil. El fondo tiene que
+// ser opaco: es el slate-900/60 de la tarjeta sobre el fondo de la página (y
+// con el verde de la fila resaltada en la tuya).
+const STICKY_1 = "sticky left-0 z-10 w-16 min-w-16 bg-[#0a1023]";
+const STICKY_2 = "sticky left-16 z-10 bg-[#0a1023]";
+const STICKY_YO = "group-data-[yo=true]:bg-[#0b212c]";
 ---
 
 <Layout
@@ -96,17 +103,21 @@ const fmtWins = (n: number) => String(n).replace(".", ",");
             </p>
           </div>
           <div class="overflow-x-auto rounded-2xl border border-white/10 bg-slate-900/60">
-            <table class="w-full min-w-[640px] text-sm">
+            <table class="w-full text-sm whitespace-nowrap sm:min-w-[640px] [&_td]:px-2 sm:[&_td]:px-3 [&_th]:px-2 sm:[&_th]:px-3">
               <thead class="text-xs text-slate-500">
                 <tr class="border-b border-white/10">
-                  <th class="px-3 py-2 text-left font-medium">#</th>
-                  <th class="px-3 py-2 text-left font-medium">Participante</th>
+                  <th class={`${STICKY_1} px-3 py-2 text-left font-medium`}>
+                    #
+                  </th>
+                  <th class={`${STICKY_2} px-3 py-2 text-left font-medium`}>
+                    Participante
+                  </th>
                   <th class="px-3 py-2 text-right font-medium">
                     J{last.number}
                   </th>
                   <th class="px-3 py-2 text-right font-medium">Total</th>
                   <th class="px-3 py-2 text-right font-medium">Al líder</th>
-                  <th class="px-3 py-2 text-right font-medium">
+                  <th class="hidden px-3 py-2 text-right font-medium sm:table-cell">
                     <abbr
                       title="Jornadas ganadas / perdidas"
                       class="no-underline"
@@ -117,7 +128,9 @@ const fmtWins = (n: number) => String(n).replace(".", ",");
                   <th class="px-3 py-2 text-right font-medium">
                     Cambios {nextGameweek.name.replace("Jornada ", "J")}
                   </th>
-                  <th class="px-3 py-2 text-right font-medium">Premio</th>
+                  <th class="hidden px-3 py-2 text-right font-medium sm:table-cell">
+                    Premio
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -128,9 +141,9 @@ const fmtWins = (n: number) => String(n).replace(".", ",");
                   return (
                     <tr
                       data-participant={entry.participant}
-                      class={`border-b border-white/5 data-[yo=true]:bg-emerald-500/10 ${isFamily ? "font-semibold text-white" : "text-slate-300"}`}
+                      class={`group border-b border-white/5 data-[yo=true]:bg-emerald-500/10 ${isFamily ? "font-semibold text-white" : "text-slate-300"}`}
                     >
-                      <td class="px-3 py-2 whitespace-nowrap">
+                      <td class={`${STICKY_1} ${STICKY_YO} px-3 py-2`}>
                         {rank}
                         {movement !== null && movement !== 0 && (
                           <span
@@ -142,7 +155,7 @@ const fmtWins = (n: number) => String(n).replace(".", ",");
                           </span>
                         )}
                       </td>
-                      <td class="px-3 py-2">
+                      <td class={`${STICKY_2} ${STICKY_YO} px-3 py-2`}>
                         {entry.participant}
                         {isFamily && (
                           <span
@@ -158,13 +171,13 @@ const fmtWins = (n: number) => String(n).replace(".", ",");
                       <td class="px-3 py-2 text-right text-slate-400">
                         {entry.dif ? `-${entry.dif}` : "—"}
                       </td>
-                      <td class="px-3 py-2 text-right text-slate-400">
+                      <td class="hidden px-3 py-2 text-right text-slate-400 sm:table-cell">
                         {fmtWins(entry.won)} / {entry.lost}
                       </td>
                       <td class="px-3 py-2 text-right">
                         {entry.changes ?? "—"}
                       </td>
-                      <td class="px-3 py-2 text-right text-amber-300">
+                      <td class="hidden px-3 py-2 text-right text-amber-300 sm:table-cell">
                         {premio ? `${premio}€` : ""}
                       </td>
                     </tr>
@@ -191,10 +204,12 @@ const fmtWins = (n: number) => String(n).replace(".", ",");
             </p>
           )}
           <div class="overflow-x-auto rounded-2xl border border-white/10 bg-slate-900/60">
-            <table class="w-full min-w-[520px] text-sm">
+            <table class="w-full text-sm whitespace-nowrap sm:min-w-[520px] [&_td]:px-2 sm:[&_td]:px-3 [&_th]:px-2 sm:[&_th]:px-3">
               <thead class="text-xs text-slate-500">
                 <tr class="border-b border-white/10">
-                  <th class="px-3 py-2 text-left font-medium">Jornada</th>
+                  <th class={`${STICKY_1} px-3 py-2 text-left font-medium`}>
+                    Jornada
+                  </th>
                   <th class="px-3 py-2 text-left font-medium">Ganador</th>
                   <th class="px-3 py-2 text-right font-medium">Pts</th>
                   <th class="px-3 py-2 text-right font-medium">Media</th>
@@ -208,7 +223,7 @@ const fmtWins = (n: number) => String(n).replace(".", ",");
                   const jornada = jornadas.find((j) => j.number === w.jornada);
                   return (
                     <tr class="border-b border-white/5 text-slate-300">
-                      <td class="px-3 py-2">J{w.jornada}</td>
+                      <td class={`${STICKY_1} px-3 py-2`}>J{w.jornada}</td>
                       <td class="px-3 py-2 text-white">
                         {w.winners.join(", ")}
                       </td>

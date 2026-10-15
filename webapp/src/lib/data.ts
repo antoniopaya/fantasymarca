@@ -527,6 +527,22 @@ function withTrailingSlash(path: string): string {
   return `${pathname}/${rest}`;
 }
 
+const DECIMALS = [0, 1, 2].map(
+  (d) =>
+    new Intl.NumberFormat("es-ES", {
+      minimumFractionDigits: d,
+      maximumFractionDigits: d,
+    }),
+);
+
+/** Número en formato español con `decimals` decimales fijos: 10,38. */
+export function formatNumber(value: number, decimals = 1): string {
+  return DECIMALS[decimals].format(value);
+}
+
+const MONEY = new Intl.NumberFormat("es-ES", { maximumFractionDigits: 2 });
+
+/** Euros en millones, en formato español y sin ceros de sobra: 26 M€, 79,32 M€. */
 export function formatMoney(value: number): string {
-  return `${(value / 1_000_000).toFixed(2)} M€`;
+  return `${MONEY.format(value / 1_000_000)} M€`;
 }

@@ -5,6 +5,7 @@ import YoScript from "../../components/YoScript.astro";
 import RankingList from "../../components/RankingList.astro";
 import MultiLineChart from "../../components/charts/MultiLineChart.astro";
 import {
+  formatMoney,
   getLigaJornadas,
   playerPhotoUrl,
   POSITION_SHORT,
@@ -251,7 +252,7 @@ const lastWinner = jornadaWinners().at(-1);
               items={diffs.map((d) => ({
                 key: d.summary.id,
                 label: d.summary.name,
-                sublabel: `${d.summary.team_name} · ${fmtPct(d.pct)} de la liga · ${(d.summary.precioFantastica ?? 0) / 1_000_000}M`,
+                sublabel: `${d.summary.team_name} · ${fmtPct(d.pct)} de la liga · ${formatMoney(d.summary.precioFantastica ?? 0)}`,
                 valueLabel: `${d.summary.form} pts`,
                 barPercent:
                   (d.summary.form / (diffs[0]?.summary.form || 1)) * 100,

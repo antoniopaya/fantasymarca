@@ -186,7 +186,7 @@ const chartData = points.map((p) => ({
       crosshairDot.setAttribute("opacity", "1");
 
       tooltipDate.textContent = point.date;
-      tooltipValue.textContent = `${point.value.toFixed(2)} M€`;
+      tooltipValue.textContent = `${point.value.toLocaleString("es-ES", { maximumFractionDigits: 2 })} M€`;
       tooltip.classList.remove("hidden");
 
       const bounds = chart.getBoundingClientRect();

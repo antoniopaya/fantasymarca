@@ -21,9 +21,10 @@ const { count, size, warnings } = await generateSW({
     "offline/index.html",
   ],
   swDest: "dist/sw.js",
-  // Sin skipWaiting: la página enseña "Datos nuevos · Recargar" y manda
-  // SKIP_WAITING cuando se pulsa (workbox añade el listener solo).
-  skipWaiting: false,
+  // El service worker nuevo entra en cuanto se instala: las páginas son red
+  // primero, así que no hace falta esperar a que el usuario recargue. El aviso
+  // de "Hay datos nuevos" lo decide la página comparando version.json.
+  skipWaiting: true,
   clientsClaim: true,
   cleanupOutdatedCaches: true,
   sourcemap: false,

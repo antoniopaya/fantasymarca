@@ -11,6 +11,8 @@ import {
   getLigaJornadas,
   getNextGameweek,
   formatMoney,
+  formatNumber,
+  PLAYER_STATUS_LABELS,
   POSITION_NAMES,
   teamLogoUrl,
   url,
@@ -173,7 +175,9 @@ const comparisonCandidates = player
               <span>{player.bio.age} años</span>
               <span>{player.bio.height} cm</span>
               {player.status && (
-                <span class="text-rose-400">{player.status}</span>
+                <span class="text-rose-400">
+                  {PLAYER_STATUS_LABELS[player.status] ?? "Baja"}
+                </span>
               )}
             </div>
 
@@ -241,7 +245,9 @@ const comparisonCandidates = player
           <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
             <p class="text-xs tracking-wide text-slate-500 uppercase">Puntos</p>
             <p class="mt-1 text-xl font-bold text-white">{player.points}</p>
-            <p class="mt-1 text-xs text-slate-500">Media {player.avg}</p>
+            <p class="mt-1 text-xs text-slate-500">
+              Media {formatNumber(player.avg, 1)}
+            </p>
           </div>
           <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
             <p class="text-xs tracking-wide text-slate-500 uppercase">
@@ -518,7 +524,7 @@ const comparisonCandidates = player
                       </td>
                       <td class="px-3 py-2 text-white">{season.points}</td>
                       <td class="px-3 py-2 text-slate-400">
-                        {season.avg.toFixed(2)}
+                        {formatNumber(season.avg, 2)}
                       </td>
                       <td class="px-3 py-2 text-slate-400">
                         J{season.last_gameweek}
@@ -565,17 +571,27 @@ const comparisonCandidates = player
         comparisonCandidates.map((c) => [c.id, c]),
       );
 
+      const money = new Intl.NumberFormat("es-ES", {
+        maximumFractionDigits: 2,
+      });
+      const decimal = new Intl.NumberFormat("es-ES", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
       function formatMoneyClient(value) {
         return value === null || value === undefined
           ? "—"
-          : `${(value / 1_000_000).toFixed(2)} M€`;
+          : `${money.format(value / 1_000_000)} M€`;
       }
 
-      function metricRow(label, a, b, formatter) {
+      // better: "high" (gana el mayor), "low" (gana el menor: en la
+      // Fantástica, el más barato) o null (no hay uno mejor).
+      function metricRow(label, a, b, formatter, better = "high") {
         const aFmt = formatter(a);
         const bFmt = formatter(b);
-        const aWins = a !== null && b !== null && a > b;
-        const bWins = a !== null && b !== null && b > a;
+        const both = better && a !== null && b !== null && a !== b;
+        const aWins = both && (better === "high" ? a > b : a < b);
+        const bWins = both && !aWins;
         return `
           <tr class="border-b border-white/5">
             <td class="px-3 py-2 text-slate-400">${label}</td>
@@ -603,11 +619,11 @@ const comparisonCandidates = player
               </tr>
             </thead>
             <tbody>
-              ${metricRow("Valor de mercado", currentPlayerStats.value, candidate.value, formatMoneyClient)}
-              ${metricRow("Precio Fantástica", currentPlayerStats.precioFantastica, candidate.precioFantastica, formatMoneyClient)}
-              ${metricRow("Cláusula", currentPlayerStats.clauseValue, candidate.clauseValue, formatMoneyClient)}
+              ${metricRow("Precio Fantástica", currentPlayerStats.precioFantastica, candidate.precioFantastica, formatMoneyClient, "low")}
               ${metricRow("Puntos", currentPlayerStats.points, candidate.points, (v) => String(v))}
-              ${metricRow("Media", currentPlayerStats.avg, candidate.avg, (v) => v.toFixed(2))}
+              ${metricRow("Media", currentPlayerStats.avg, candidate.avg, (v) => decimal.format(v))}
+              ${metricRow("Valor de mercado", currentPlayerStats.value, candidate.value, formatMoneyClient, null)}
+              ${metricRow("Cláusula", currentPlayerStats.clauseValue, candidate.clauseValue, formatMoneyClient, null)}
             </tbody>
           </table>`;
         result.classList.remove("hidden");

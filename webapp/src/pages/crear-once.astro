@@ -503,8 +503,15 @@ for (const m of nextGwMatches) {
     // se está en modo cambios. Ver startChangesMode/computeChangesUsed.
     let changesMode = null;
 
+    const moneyFormat = new Intl.NumberFormat("es-ES", {
+      maximumFractionDigits: 2,
+    });
+    const millionsFormat = new Intl.NumberFormat("es-ES", {
+      maximumFractionDigits: 1,
+    });
+
     function formatMoneyClient(value) {
-      return `${(value / 1_000_000).toFixed(2)} M€`;
+      return `${moneyFormat.format(value / 1_000_000)} M€`;
     }
 
     // Descarta cualquier jugador guardado que ya no exista en el catálogo actual
@@ -702,7 +709,7 @@ for (const m of nextGwMatches) {
     }
 
     function formatMillions(value) {
-      return `${(value / 1_000_000).toFixed(1).replace(".0", "")}M`;
+      return `${millionsFormat.format(value / 1_000_000)}M`;
     }
 
     function formatXp(xp) {
@@ -1231,11 +1238,27 @@ for (const m of nextGwMatches) {
       }
     }
 
+    // Botón atrás del móvil: abrir el selector o el panel de un jugador mete
+    // una entrada en el historial, así que "atrás" los cierra en vez de salir
+    // de la página. Al pasar del panel al selector se reutiliza la entrada.
+    const BACKDROP_IDS = ["picker-backdrop", "sheet-backdrop"];
+    let historyEntry = false;
+
+    function anyBackdropOpen() {
+      return BACKDROP_IDS.some(
+        (id) => !document.getElementById(id).classList.contains("hidden"),
+      );
+    }
+
     function showBackdrop(id) {
       const backdrop = document.getElementById(id);
       backdrop.classList.remove("hidden");
       backdrop.classList.add("flex");
       setBackgroundInert(true, backdrop);
+      if (!historyEntry) {
+        history.pushState({ onceOverlay: true }, "");
+        historyEntry = true;
+      }
       return backdrop;
     }
 
@@ -1245,8 +1268,23 @@ for (const m of nextGwMatches) {
       backdrop.classList.add("hidden");
       backdrop.classList.remove("flex");
       setBackgroundInert(false, backdrop);
+      // Se espera un tick: si justo se abre otro (panel -> selector), la
+      // entrada del historial sigue valiendo.
+      setTimeout(() => {
+        if (historyEntry && !anyBackdropOpen()) {
+          historyEntry = false;
+          history.back();
+        }
+      }, 0);
       return true;
     }
+
+    window.addEventListener("popstate", () => {
+      if (!historyEntry) return;
+      historyEntry = false;
+      closePicker();
+      closeSheet();
+    });
 
     // En el móvil, abrir el teclado nada más abrir el selector tapa la lista.
     const finePointer = window.matchMedia("(pointer: fine)").matches;

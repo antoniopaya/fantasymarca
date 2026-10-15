@@ -8,13 +8,18 @@ interface Props {
 const { label, tabs, active } = Astro.props;
 ---
 
-<nav aria-label={label} class="mb-6 flex flex-wrap gap-2">
+<!-- Una sola fila: en el móvil se desliza de lado en vez de partirse en dos. -->
+<nav
+  aria-label={label}
+  data-subtabs
+  class="-mx-4 mb-6 flex [scrollbar-width:none] gap-2 overflow-x-auto px-4 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden"
+>
   {
     tabs.map((t) => (
       <a
         href={t.href}
         aria-current={t.key === active ? "page" : undefined}
-        class={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+        class={`shrink-0 rounded-full border px-4 py-2.5 text-sm font-medium whitespace-nowrap transition-colors ${
           t.key === active
             ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-400"
             : "border-white/10 text-slate-300 hover:bg-white/5 hover:text-white"
@@ -25,3 +30,14 @@ const { label, tabs, active } = Astro.props;
     ))
   }
 </nav>
+
+<script>
+  // Si la pestaña activa queda fuera de la fila (móvil), se desliza hasta ella.
+  for (const nav of document.querySelectorAll<HTMLElement>("[data-subtabs]")) {
+    const current = nav.querySelector<HTMLElement>("[aria-current=page]");
+    if (current && current.offsetLeft + current.offsetWidth > nav.clientWidth) {
+      nav.scrollLeft =
+        current.offsetLeft - (nav.clientWidth - current.offsetWidth) / 2;
+    }
+  }
+</script>

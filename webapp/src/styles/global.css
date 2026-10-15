@@ -31,3 +31,24 @@ body {
   );
   background-size: 28px 28px;
 }
+
+/* Desplegables nativos y barras de scroll en oscuro. */
+html {
+  color-scheme: dark;
+}
+
+/* Safari de iPhone amplía la página al tocar un campo con letra de menos de
+   16px. Sin capa, esta regla gana a las utilidades text-sm de Tailwind. */
+@media (max-width: 639px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Foco de teclado bien visible (los campos quitan el outline por defecto). */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-emerald-400);
+  outline-offset: 2px;
+}

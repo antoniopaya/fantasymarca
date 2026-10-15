@@ -180,7 +180,7 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
     tooltipName.textContent = p.name;
     tooltipTeam.textContent = p.teamName;
     tooltipPoints.textContent = String(p._pointsValue);
-    tooltipPrice.textContent = `${p.price.toFixed(2)} M€`;
+    tooltipPrice.textContent = `${p.price.toLocaleString("es-ES", { maximumFractionDigits: 2 })} M€`;
 
     tooltip.classList.remove("hidden");
     const tooltipWidth = tooltip.offsetWidth || 224;
@@ -294,7 +294,7 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
       const cy = scaleY(p.price, yMax);
       const link = el("a", {
         href: p.href,
-        "aria-label": `${p.name} (${p.teamName}): ${p._pointsValue} puntos, ${p.price.toFixed(2)} M€`,
+        "aria-label": `${p.name} (${p.teamName}): ${p._pointsValue} puntos, ${p.price.toLocaleString("es-ES", { maximumFractionDigits: 2 })} M€`,
       });
       const dot = el("circle", {
         cx,

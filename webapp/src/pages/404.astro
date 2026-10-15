@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { url } from "../lib/data";
+
+const links = [
+  { label: "Inicio", href: url("/") },
+  { label: "Mi 11", href: url("/crear-once") },
+  { label: "Jugadores", href: url("/jugadores") },
+  { label: "Jornada", href: url("/jornada") },
+  { label: "Liga", href: url("/liga") },
+];
+---
+
+<Layout title="Página no encontrada">
+  <div class="py-16 text-center">
+    <p class="text-5xl font-black text-emerald-400">404</p>
+    <h1 class="mt-3 text-2xl font-black text-white">Esta página no existe</h1>
+    <p class="mx-auto mt-2 max-w-sm text-sm text-slate-400">
+      Puede que el enlace esté mal o que sea de un jugador que ya no está en la
+      liga.
+    </p>
+    <nav
+      aria-label="Ir a"
+      class="mt-6 flex flex-wrap justify-center gap-2 text-sm"
+    >
+      {
+        links.map((l, i) => (
+          <a
+            href={l.href}
+            class={
+              i === 0
+                ? "rounded-full bg-emerald-500 px-5 py-2.5 font-semibold text-slate-950"
+                : "rounded-full border border-white/10 px-5 py-2.5 font-medium text-slate-300 hover:bg-white/5 hover:text-white"
+            }
+          >
+            {l.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</Layout>
