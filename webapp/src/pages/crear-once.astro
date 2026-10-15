@@ -1817,7 +1817,7 @@ for (const m of nextGwMatches) {
       if (activeLineupId === ligaLineupId(yo)) {
         panel.innerHTML = `
           <p class="text-sm text-slate-300">
-            Partes de tu once de la <strong class="text-white">Jornada ${once.jornada}</strong>.
+            Partes de tu 11 de la <strong class="text-white">Jornada ${once.jornada}</strong>.
             Tienes <strong class="text-emerald-400">${once.changes} cambios</strong> para la ${NEXT_GW_NAME};
             los que hagas salen en verde y se cuentan arriba.
           </p>`;
@@ -1831,7 +1831,7 @@ for (const m of nextGwMatches) {
           </p>
           <button type="button" id="liga-load"
             class="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-emerald-400">
-            Cargar mi once de la Jornada ${once.jornada}
+            Cargar mi 11 de la Jornada ${once.jornada}
           </button>
         </div>`;
     }
@@ -1943,7 +1943,7 @@ for (const m of nextGwMatches) {
       if (yo) loadLigaLineup(yo);
       else
         showNotice(
-          "Elige quién eres arriba (¿Quién eres?) para cargar tu once de la liga.",
+          "Elige quién eres arriba (¿Quién eres?) para cargar tu 11 de la liga.",
         );
     }
 
