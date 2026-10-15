@@ -189,7 +189,7 @@ for (const m of nextGwMatches) {
       <details id="once-menu" class="relative shrink-0">
         <summary
           aria-label="Más opciones"
-          class="flex h-9 w-9 cursor-pointer list-none items-center justify-center rounded-full border border-white/10 text-lg text-slate-200 hover:bg-white/5 [&::-webkit-details-marker]:hidden"
+          class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-white/10 text-lg text-slate-200 hover:bg-white/5 [&::-webkit-details-marker]:hidden"
         >
           ⋯
         </summary>
@@ -786,7 +786,7 @@ for (const m of nextGwMatches) {
           <span class="relative block h-11 w-11">
             <img src="${player.photoUrl}" alt="" class="h-full w-full rounded-full bg-slate-800 object-cover" loading="lazy" />
             <img src="${player.teamLogoUrl}" alt="" class="absolute -bottom-0.5 -right-1 h-5 w-5 rounded-full bg-slate-950 p-0.5" />
-            ${player.status ? '<span class="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-rose-500 text-[10px] font-black text-white ring-2 ring-slate-950">!</span>' : ""}
+            ${player.status ? '<span class="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-rose-500 text-[11px] font-black text-white ring-2 ring-slate-950">!</span>' : ""}
           </span>
           <span class="mt-1 block w-full truncate text-xs font-semibold leading-tight text-white">${player.shortName}</span>
           <span class="mt-0.5 flex items-center gap-1 text-[11px] leading-none text-slate-400">
@@ -896,7 +896,7 @@ for (const m of nextGwMatches) {
                 (e) => `
             <div class="relative" title="${e.teamName}: ${e.count} jugador${e.count === 1 ? "" : "es"}">
               <img src="${e.teamLogoUrl}" alt="${e.teamName}" class="h-9 w-9 rounded-full bg-slate-800 object-contain p-1" />
-              <span class="absolute -right-1 -bottom-1 flex h-4 w-4 items-center justify-center rounded-full bg-emerald-500 text-[10px] font-bold text-slate-950 ring-1 ring-slate-950">${e.count}</span>
+              <span class="absolute -right-1 -bottom-1 flex h-4 w-4 items-center justify-center rounded-full bg-emerald-500 text-[11px] font-bold text-slate-950 ring-1 ring-slate-950">${e.count}</span>
             </div>`,
               )
               .join("");
@@ -1474,7 +1474,7 @@ for (const m of nextGwMatches) {
                   <img src="${p.photoUrl}" alt="" class="h-full w-full rounded-full bg-slate-800 object-cover" loading="lazy" />
                   ${
                     p.status
-                      ? `<span class="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-rose-500 text-[10px] font-black text-white ring-2 ring-slate-900" title="${PLAYER_STATUS_LABELS[p.status] ?? "Baja"}" aria-label="${PLAYER_STATUS_LABELS[p.status] ?? "Baja"}">!</span>`
+                      ? `<span class="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-rose-500 text-[11px] font-black text-white ring-2 ring-slate-900" title="${PLAYER_STATUS_LABELS[p.status] ?? "Baja"}" aria-label="${PLAYER_STATUS_LABELS[p.status] ?? "Baja"}">!</span>`
                       : ""
                   }
                 </span>

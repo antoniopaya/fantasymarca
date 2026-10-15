@@ -289,7 +289,7 @@ const vsFantasticaPct = precioFantastica
             <div class="mt-4 flex flex-wrap gap-2">
               {ligaPerJornada.map((j) => (
                 <div class="w-14 rounded-lg bg-slate-950/40 px-2 py-1.5 text-center">
-                  <p class="text-[10px] text-slate-500">J{j.jornada}</p>
+                  <p class="text-[11px] text-slate-500">J{j.jornada}</p>
                   <p class="text-sm font-semibold text-white">
                     {Math.round(j.pct)}%
                   </p>
@@ -312,7 +312,7 @@ const vsFantasticaPct = precioFantastica
                     )}
                     {owner}
                     {ligaInfo?.captainedBy.includes(owner) && (
-                      <span class="rounded bg-amber-400 px-1 text-[10px] font-bold text-slate-950">
+                      <span class="rounded bg-amber-400 px-1 text-[11px] font-bold text-slate-950">
                         C
                       </span>
                     )}

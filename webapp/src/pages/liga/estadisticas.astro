@@ -197,13 +197,13 @@ const lastWinner = jornadaWinners().at(-1);
               <ul class="grid grid-cols-1 gap-1.5 text-sm sm:grid-cols-2">
                 {ideal.players.map((p) => (
                   <li class="flex items-center gap-2 text-slate-300">
-                    <span class="w-8 shrink-0 text-[10px] font-semibold text-slate-500">
+                    <span class="w-8 shrink-0 text-[11px] font-semibold text-slate-500">
                       {POSITION_SHORT[p.summary.position]}
                     </span>
                     <span class="min-w-0 flex-1 truncate">
                       {p.summary.name}
                       {p.captain && (
-                        <span class="ml-1 rounded bg-amber-400 px-1 text-[10px] font-bold text-slate-950">
+                        <span class="ml-1 rounded bg-amber-400 px-1 text-[11px] font-bold text-slate-950">
                           C
                         </span>
                       )}
@@ -331,7 +331,7 @@ const lastWinner = jornadaWinners().at(-1);
                       <span class="mt-1 line-clamp-1 w-full text-[11px] font-medium text-white">
                         {p.summary.name}
                       </span>
-                      <span class="text-[10px] text-slate-400">
+                      <span class="text-[11px] text-slate-400">
                         {fmtPct(p.pct)}
                       </span>
                     </a>
