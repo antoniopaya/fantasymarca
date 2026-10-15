@@ -149,13 +149,36 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
   const hiddenPositions = new Set();
   const container = svg.parentElement;
 
-  const plotWidth = width - padding.left - padding.right;
-  const plotHeight = height - padding.top - padding.bottom;
+  // En el móvil el gráfico se dibuja con un lienzo más estrecho (viewBox de
+  // 380 en vez de 900): así los textos y los puntos no se encogen a la mitad.
+  let W = width;
+  let H = height;
+  let plotWidth = 0;
+  let plotHeight = 0;
+  let dotRadius = 5;
+  function setSize() {
+    const narrow = container.clientWidth < 640;
+    W = narrow ? 380 : width;
+    H = narrow ? 420 : height;
+    dotRadius = narrow ? 4.5 : 5;
+    plotWidth = W - padding.left - padding.right;
+    plotHeight = H - padding.top - padding.bottom;
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    svg.style.aspectRatio = `${W}/${H}`;
+  }
+  // En pantallas táctiles el primer toque enseña el tooltip y el segundo
+  // (sobre el mismo punto) abre la ficha.
+  const touch = window.matchMedia("(hover: none)").matches;
+  let tooltipFor = null;
   const svgNS = "http://www.w3.org/2000/svg";
 
+  // Máximo "redondo" del eje sin dejar medio gráfico vacío (114 -> 120).
   function niceMax(value) {
     const magnitude = 10 ** Math.floor(Math.log10(value || 1));
-    return Math.ceil((value || 1) / magnitude) * magnitude;
+    const step = [1, 1.2, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10].find(
+      (f) => f * magnitude >= (value || 1),
+    );
+    return step * magnitude;
   }
 
   function scaleX(x, xMax) {
@@ -196,9 +219,12 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
 
   function hideTooltip() {
     tooltip.classList.add("hidden");
+    tooltipFor = null;
   }
 
   function render(seasonKey) {
+    setSize();
+    hideTooltip();
     svg.innerHTML = "";
     const withSeason = players
       .map((p) => ({ ...p, _pointsValue: p.pointsBySeason[seasonKey] }))
@@ -231,7 +257,7 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
         el("line", {
           x1: padding.left,
           y1: y,
-          x2: width - padding.right,
+          x2: W - padding.right,
           y2: y,
           stroke: "#2c2c2a",
           "stroke-width": 1,
@@ -251,7 +277,7 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
       const t = Math.round(xMax * f);
       const label = el("text", {
         x: scaleX(t, xMax),
-        y: height - padding.bottom + 18,
+        y: H - padding.bottom + 18,
         "text-anchor": "middle",
         class: "fill-slate-500",
         "font-size": 11,
@@ -262,16 +288,16 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
     svg.appendChild(
       el("line", {
         x1: padding.left,
-        y1: height - padding.bottom,
-        x2: width - padding.right,
-        y2: height - padding.bottom,
+        y1: H - padding.bottom,
+        x2: W - padding.right,
+        y2: H - padding.bottom,
         stroke: "#383835",
         "stroke-width": 1,
       }),
     );
     const xLabelEl = el("text", {
-      x: width / 2,
-      y: height - 6,
+      x: W / 2,
+      y: H - 6,
       "text-anchor": "middle",
       class: "fill-slate-500",
       "font-size": 12,
@@ -279,7 +305,7 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
     xLabelEl.textContent = `Puntos (${seasonLabel})`;
     svg.appendChild(xLabelEl);
     const yLabelEl = el("text", {
-      x: -(height / 2),
+      x: -(H / 2),
       y: 14,
       "text-anchor": "middle",
       transform: "rotate(-90)",
@@ -299,7 +325,7 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
       const dot = el("circle", {
         cx,
         cy,
-        r: 5,
+        r: dotRadius,
         fill: positionColors[p.position] ?? "#64748b",
         "fill-opacity": 0.8,
         stroke: "#1a1a19",
@@ -320,6 +346,13 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
         showTooltip(p, r.left + r.width / 2, r.top + r.height / 2);
       });
       link.addEventListener("blur", hideTooltip);
+      link.addEventListener("click", (e) => {
+        if (!touch || tooltipFor === p.id) return;
+        e.preventDefault();
+        const r = dot.getBoundingClientRect();
+        showTooltip(p, r.left + r.width / 2, r.top + r.height / 2);
+        tooltipFor = p.id;
+      });
       link.appendChild(dot);
       svg.appendChild(link);
     }
@@ -345,5 +378,21 @@ const padding = { top: 16, right: 16, bottom: 40, left: 48 };
   }
 
   seasonSelect.addEventListener("change", () => render(seasonSelect.value));
+  // Tocar fuera de un punto cierra el tooltip.
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest || !e.target.closest("#scatter-svg a")) hideTooltip();
+  });
+  let resizeTimer = null;
+  let lastNarrow = container.clientWidth < 640;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      const narrow = container.clientWidth < 640;
+      if (narrow !== lastNarrow) {
+        lastNarrow = narrow;
+        render(seasonSelect.value);
+      }
+    }, 200);
+  });
   render(defaultSeasonKey);
 </script>

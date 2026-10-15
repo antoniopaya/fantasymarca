@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import RankingList from "../components/RankingList.astro";
 import JugadoresTabs from "../components/JugadoresTabs.astro";
-import PlayersTable from "../components/PlayersTable.astro";
 import DonutChart from "../components/charts/DonutChart.astro";
 import CategoryBarChart from "../components/charts/CategoryBarChart.astro";
 import Histogram from "../components/charts/Histogram.astro";
@@ -181,7 +180,6 @@ const sections = [
   { id: "posiciones", label: "Posiciones" },
   { id: "distribucion-valor", label: "Distribución de precios" },
   { id: "equipos", label: "Por equipo" },
-  { id: "todos", label: "Todos los jugadores" },
   { id: "gangas", label: "Gangas", market: true },
   { id: "sobrevalorados", label: "Sobrevalorados", market: true },
   { id: "mas-valiosos", label: "Más valiosos", market: true },
@@ -253,7 +251,7 @@ const sections = [
           <ScatterPlot
             players={scatterPlayers}
             seasons={scatterSeasons}
-            defaultSeasonKey="lastSeason"
+            defaultSeasonKey="current"
             yLabel="Precio Fantástica (M€)"
             positionColors={POSITION_COLORS}
             positionNames={POSITION_NAMES}
@@ -395,14 +393,19 @@ const sections = [
         </div>
       </section>
 
-      <section id="todos" class="mb-10 scroll-mt-24">
-        <h2 class="mb-4 text-xl font-bold text-white">Todos los jugadores</h2>
-        <p class="mb-4 text-sm text-slate-500">
-          Busca, filtra por equipo/posición y ordena cualquier columna haciendo
-          clic en la cabecera.
-        </p>
-        <PlayersTable players={summaries} teams={teams} />
-      </section>
+      <a
+        href={url("/jugadores?orden=points")}
+        class="mb-10 flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-slate-900/60 p-4 hover:border-emerald-500/40"
+      >
+        <span>
+          <span class="block font-semibold text-white">Todos los jugadores</span
+          >
+          <span class="block text-sm text-slate-400">
+            Busca, filtra por equipo, posición o precio y ordena en Buscar.
+          </span>
+        </span>
+        <span aria-hidden="true" class="text-xl text-emerald-400">→</span>
+      </a>
 
       <div class="mt-4 mb-6 border-t border-white/10 pt-8">
         <h2 class="text-2xl font-black text-white">Mercado de Marca</h2>
