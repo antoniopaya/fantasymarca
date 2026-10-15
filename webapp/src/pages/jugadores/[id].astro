@@ -61,7 +61,8 @@ const nextXp = summary ? expectedPoints(summary) : null;
 const valueDiff = player ? player.value - player.previousValue : 0;
 
 // Desglose de puntos por estadística (fantasy_api/player_stats.py).
-const breakdown = playerBreakdown(playerId);
+// La jornada más reciente primero: en el móvil es la que se ve sin deslizar.
+const breakdown = playerBreakdown(playerId).reverse();
 const breakdownStats = activeStats().filter((k) =>
   breakdown.some(([, g]) => g.c?.[k]?.[1]),
 );
@@ -448,10 +449,10 @@ const comparisonCandidates = player
                       <th class="sticky left-0 bg-slate-900 px-3 py-2 text-left">
                         Estadística
                       </th>
+                      <th class="px-3 py-2 text-right">Total</th>
                       {breakdown.map(([gw]) => (
                         <th class="px-2 py-2 text-center">J{gw}</th>
                       ))}
-                      <th class="px-3 py-2 text-right">Total</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -459,6 +460,9 @@ const comparisonCandidates = player
                       <tr class="border-b border-white/5">
                         <td class="sticky left-0 bg-slate-950 px-3 py-1.5 whitespace-nowrap text-slate-300">
                           {statLabel(k)}
+                        </td>
+                        <td class="px-3 py-1.5 text-right font-semibold text-white tabular-nums">
+                          {statSeason.comp[k]?.pts ?? 0}
                         </td>
                         {breakdown.map(([gw, g]) => {
                           const cell = g.c?.[k];
@@ -476,23 +480,20 @@ const comparisonCandidates = player
                             </td>
                           );
                         })}
-                        <td class="px-3 py-1.5 text-right font-semibold text-white tabular-nums">
-                          {statSeason.comp[k]?.pts ?? 0}
-                        </td>
                       </tr>
                     ))}
                     <tr class="bg-slate-900/80 font-bold">
                       <td class="sticky left-0 bg-slate-900 px-3 py-2 text-white">
                         Puntos
                       </td>
+                      <td class="px-3 py-2 text-right text-white tabular-nums">
+                        {statSeason.points}
+                      </td>
                       {breakdown.map(([, g]) => (
                         <td class="px-2 py-2 text-center text-white tabular-nums">
                           {g.points}
                         </td>
                       ))}
-                      <td class="px-3 py-2 text-right text-white tabular-nums">
-                        {statSeason.points}
-                      </td>
                     </tr>
                   </tbody>
                 </table>
