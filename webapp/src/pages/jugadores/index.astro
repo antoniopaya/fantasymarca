@@ -1,211 +1,275 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import PlayerCard from "../../components/PlayerCard.astro";
 import JugadoresTabs from "../../components/JugadoresTabs.astro";
 import {
   getAllPlayerSummaries,
   getTeams,
-  formatMoney,
+  POSITION_COLORS,
   POSITION_NAMES,
+  POSITION_SHORT,
+  PLAYER_STATUS_LABELS,
   playerPhotoUrl,
   teamLogoUrl,
+  url,
 } from "../../lib/data";
 import { latestOwnershipPct, ligaPlayerInfo } from "../../lib/liga";
 import { expectedPoints, prediction } from "../../lib/forecast";
 import { FAMILIA } from "../../lib/yo";
 
-const ligaOf = (id: number) => ({
-  pct: latestOwnershipPct(id),
-  // Solo los Payás: es para el filtro "en mi 11" de quien esté mirando.
-  owners: (ligaPlayerInfo(id)?.owners ?? []).filter((o) =>
-    (FAMILIA as readonly string[]).includes(o),
-  ),
+const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
+
+// La lista se pinta en el navegador a partir de estos datos (compactos), por
+// tandas: pintar las 530 tarjetas de golpe hacía la página lenta en el móvil.
+const players = getAllPlayerSummaries().map((p) => {
+  const lineup = prediction(p.id);
+  return {
+    id: p.id,
+    name: p.name,
+    team: p.team_name,
+    teamId: p.id_team,
+    pos: p.position,
+    value: p.value,
+    price: p.precioFantastica,
+    clause: p.clauseValue,
+    points: p.points,
+    liga: Math.round(latestOwnershipPct(p.id)),
+    xp: Math.round(expectedPoints(p) * 10) / 10,
+    prob: lineup?.prob ?? null,
+    discrepancy: lineup?.discrepancy ?? false,
+    // Solo los Payás: es para el filtro "en mi 11" de quien esté mirando.
+    owners: (ligaPlayerInfo(p.id)?.owners ?? []).filter((o) =>
+      (FAMILIA as readonly string[]).includes(o),
+    ),
+    status: p.status ? (PLAYER_STATUS_LABELS[p.status] ?? "Baja") : null,
+  };
 });
 
-const players = [...getAllPlayerSummaries()].sort(
-  (a, b) => expectedPoints(b) - expectedPoints(a),
-);
-const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
+const PRICE_RANGES = [
+  { value: "0-12", label: "Menos de 12M" },
+  { value: "12-15", label: "12–15M" },
+  { value: "15-18", label: "15–18M" },
+  { value: "18-21", label: "18–21M" },
+  { value: "21-24", label: "21–24M" },
+  { value: "24-999", label: "24M o más" },
+];
+
+const config = {
+  players,
+  playerUrlBase: url("/jugadores/"),
+  photoBase: playerPhotoUrl(0).replace(/0\.png$/, ""),
+  logoBase: teamLogoUrl(0).replace(/0\.png$/, ""),
+  positionShort: POSITION_SHORT,
+  positionColors: POSITION_COLORS,
+};
+
+const fieldClass =
+  "w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none disabled:opacity-40";
 ---
 
 <Layout
   title="Jugadores"
-  description="Busca, filtra y ordena jugadores de LaLiga Fantasy por nombre, equipo, posición o valor."
+  description="Busca, filtra y ordena jugadores de LaLiga Fantasy por nombre, equipo, posición o precio."
 >
   <h1 class="mb-4 text-3xl font-black text-white">Jugadores</h1>
   <JugadoresTabs active="buscar" />
 
   <div
-    class="-mx-4 mb-6 grid grid-cols-2 gap-2 border-b border-white/10 bg-slate-950/95 px-4 py-3 backdrop-blur-md sm:sticky sm:top-[calc(62px+env(safe-area-inset-top))] sm:z-10 sm:flex sm:flex-row sm:items-center sm:gap-3"
+    class="sticky top-[calc(62px+env(safe-area-inset-top))] z-20 -mx-4 mb-3 border-b border-white/10 bg-slate-950/95 px-4 py-2.5 backdrop-blur-md sm:mx-0 sm:rounded-2xl sm:border sm:px-3"
   >
-    <div class="relative col-span-2 flex-1">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-slate-500"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
+    <div class="flex gap-2">
+      <div class="relative flex-1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-slate-500"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path stroke-linecap="round" d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input
+          id="search-input"
+          type="search"
+          enterkeyhint="search"
+          placeholder="Buscar por nombre o equipo"
+          aria-label="Buscar jugador por nombre o equipo"
+          autocomplete="off"
+          class="w-full rounded-xl border border-white/10 bg-slate-900 py-2.5 pr-3 pl-10 text-sm text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
+        />
+      </div>
+      <button
+        type="button"
+        id="filters-toggle"
+        aria-expanded="false"
+        aria-controls="filters-panel"
+        class="flex shrink-0 items-center gap-1.5 rounded-xl border border-white/10 px-3 text-sm font-medium text-slate-200 sm:hidden"
       >
-        <circle cx="11" cy="11" r="8"></circle>
-        <path stroke-linecap="round" d="m21 21-4.3-4.3"></path>
-      </svg>
-      <input
-        id="search-input"
-        type="text"
-        placeholder="Buscar por nombre o equipo..."
-        aria-label="Buscar jugador por nombre o equipo"
-        autocomplete="off"
-        class="w-full rounded-xl border border-white/10 bg-slate-900/60 py-2.5 pr-4 pl-10 text-sm text-white placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none"
-      />
+        Filtros
+        <span
+          id="filters-badge"
+          hidden
+          class="rounded-full bg-emerald-500 px-1.5 text-xs font-bold text-slate-950"
+        ></span>
+      </button>
     </div>
-    <select
-      id="team-filter"
-      class="rounded-xl border border-white/10 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
+    <div
+      id="filters-panel"
+      class="hidden grid-cols-2 gap-2 pt-2 sm:grid sm:grid-cols-3 lg:grid-cols-6"
     >
-      <option value="0">Todos los equipos</option>
-      {teams.map((team) => <option value={team.id}>{team.name}</option>)}
-    </select>
-    <select
-      id="position-filter"
-      class="rounded-xl border border-white/10 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
-    >
-      <option value="0">Todas las posiciones</option>
-      {
-        Object.entries(POSITION_NAMES).map(([value, label]) => (
-          <option value={value}>{label}</option>
-        ))
-      }
-    </select>
-    <select
-      id="sort-select"
-      class="rounded-xl border border-white/10 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none"
-    >
-      <option value="xp_desc">Puntos esperados</option>
-      <option value="points_desc">Puntos de la temporada</option>
-      <option value="fantastica_desc">Precio: mayor a menor</option>
-      <option value="fantastica_asc">Precio: menor a mayor</option>
-      <option value="liga_desc">% en la liga</option>
-      <option value="name_asc">Nombre: A-Z</option>
-      <optgroup label="Mercado de Marca">
-        <option value="value_desc">Valor: mayor a menor</option>
-        <option value="value_asc">Valor: menor a mayor</option>
-        <option value="clause_desc">Cláusula: mayor a menor</option>
-      </optgroup>
-    </select>
-    <select
-      id="mine-filter"
-      aria-label="Filtrar por tu 11 de la liga"
-      title="Según tu 11 de la última jornada de la liga (elige quién eres arriba)"
-      class="rounded-xl border border-white/10 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 focus:border-emerald-500/50 focus:outline-none disabled:opacity-40"
-    >
-      <option value="all">Mi 11: todos</option>
-      <option value="in">En mi 11</option>
-      <option value="out">Fuera de mi 11</option>
-    </select>
+      <select
+        id="sort-select"
+        aria-label="Ordenar por"
+        class={`${fieldClass} col-span-2 sm:col-span-1`}
+      >
+        <option value="xp">Orden: puntos esperados</option>
+        <option value="points">Orden: puntos de la temporada</option>
+        <option value="price_asc">Orden: más baratos</option>
+        <option value="price_desc">Orden: más caros</option>
+        <option value="liga">Orden: % en la liga</option>
+        <option value="name">Orden: nombre</option>
+        <optgroup label="Mercado de Marca">
+          <option value="value">Orden: valor de mercado</option>
+          <option value="clause">Orden: cláusula</option>
+        </optgroup>
+      </select>
+      <select id="team-filter" aria-label="Equipo" class={fieldClass}>
+        <option value="">Todos los equipos</option>
+        {teams.map((team) => <option value={team.id}>{team.name}</option>)}
+      </select>
+      <select id="position-filter" aria-label="Posición" class={fieldClass}>
+        <option value="">Todas las posiciones</option>
+        {
+          Object.entries(POSITION_NAMES).map(([value, label]) => (
+            <option value={value}>{label}</option>
+          ))
+        }
+      </select>
+      <select
+        id="price-filter"
+        aria-label="Precio en la Fantástica"
+        class={fieldClass}
+      >
+        <option value="">Cualquier precio</option>
+        {PRICE_RANGES.map((r) => <option value={r.value}>{r.label}</option>)}
+      </select>
+      <select
+        id="mine-filter"
+        aria-label="Filtrar por tu 11 de la liga"
+        title="Según tu 11 de la última jornada de la liga (elige quién eres arriba)"
+        class={fieldClass}
+      >
+        <option value="">Mi 11: todos</option>
+        <option value="in">En mi 11</option>
+        <option value="out">Fuera de mi 11</option>
+      </select>
+      <button
+        type="button"
+        id="favorites-toggle"
+        aria-pressed="false"
+        class="rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white aria-pressed:border-amber-400/40 aria-pressed:text-amber-400"
+      >
+        ☆ Favoritos
+      </button>
+    </div>
+  </div>
+
+  <div class="mb-3 flex min-h-8 items-center justify-between gap-3">
+    <p id="results-count" class="text-sm text-slate-500" aria-live="polite"></p>
     <button
       type="button"
-      id="favorites-toggle"
-      aria-pressed="false"
-      class="rounded-xl border border-white/10 px-3 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+      id="clear-filters"
+      hidden
+      class="rounded-full px-3 py-1.5 text-sm font-medium text-emerald-400 hover:bg-emerald-500/10"
     >
-      ☆ Favoritos
+      Limpiar filtros
     </button>
   </div>
 
-  <p id="results-count" class="mb-4 text-sm text-slate-500">
-    {players.length} jugadores
-  </p>
-
-  <div
-    id="players-grid"
-    class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3"
+  <ul
+    id="players-list"
+    class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3"
   >
-    {
-      players.map((player) => {
-        const liga = ligaOf(player.id);
-        const xp = expectedPoints(player);
-        const lineup = prediction(player.id);
-        const ffProb = lineup?.prob ?? null;
-        return (
-          <div
-            data-player-card
-            data-id={player.id}
-            data-name={player.name.toLowerCase()}
-            data-team-name={player.team_name.toLowerCase()}
-            data-team={player.id_team}
-            data-position={player.position}
-            data-value={player.value}
-            data-fantastica={player.precioFantastica ?? -1}
-            data-clause={player.clauseValue}
-            data-points={player.points}
-            data-liga={liga.pct}
-            data-xp={xp}
-            data-owners={liga.owners.join(",")}
-          >
-            <PlayerCard
-              id={player.id}
-              name={player.name}
-              teamName={player.team_name}
-              position={player.position}
-              photoUrl={playerPhotoUrl(player.id)}
-              teamLogoUrl={teamLogoUrl(player.id_team)}
-              precioFantasticaLabel={
-                player.precioFantastica
-                  ? formatMoney(player.precioFantastica)
-                  : undefined
-              }
-              ligaLabel={[
-                `≈${xp.toFixed(1).replace(".", ",")} pts esperados`,
-                ffProb !== null
-                  ? `titular ${ffProb}%${lineup?.discrepancy ? " (las fuentes no coinciden)" : ""}`
-                  : "",
-                liga.pct > 0 ? `${Math.round(liga.pct)}% de la liga` : "",
-              ]
-                .filter(Boolean)
-                .join(" · ")}
-              status={player.status}
-            />
-          </div>
-        );
-      })
-    }
+  </ul>
+
+  <p id="no-results" hidden class="py-12 text-center text-slate-500">
+    No hay jugadores con esos filtros.
+  </p>
+  <div class="mt-4 text-center">
+    <button
+      type="button"
+      id="show-more"
+      hidden
+      class="rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium text-slate-200 hover:bg-white/5"
+    >
+    </button>
   </div>
 
-  <p id="no-results" class="hidden py-12 text-center text-slate-500">
-    No se han encontrado jugadores con esos filtros.
-  </p>
+  <script
+    type="application/json"
+    id="players-data"
+    set:html={JSON.stringify(config)}
+  />
 
   <script>
     import { getYo, YO_EVENT } from "../../lib/yo";
 
-    const input = document.getElementById("search-input") as HTMLInputElement;
-    const teamSelect = document.getElementById(
-      "team-filter",
-    ) as HTMLSelectElement;
-    const positionSelect = document.getElementById(
-      "position-filter",
-    ) as HTMLSelectElement;
-    const sortSelect = document.getElementById(
-      "sort-select",
-    ) as HTMLSelectElement;
-    const mineSelect = document.getElementById(
-      "mine-filter",
-    ) as HTMLSelectElement;
-    const favoritesToggle = document.getElementById(
-      "favorites-toggle",
-    ) as HTMLButtonElement;
-    const countEl = document.getElementById("results-count") as HTMLElement;
-    const noResults = document.getElementById("no-results") as HTMLElement;
-    const grid = document.getElementById("players-grid") as HTMLElement;
-    const cards = Array.from(
-      grid.querySelectorAll<HTMLElement>("[data-player-card]"),
-    );
+    interface Row {
+      id: number;
+      name: string;
+      team: string;
+      teamId: number;
+      pos: number;
+      value: number;
+      price: number | null;
+      clause: number;
+      points: number;
+      liga: number;
+      xp: number;
+      prob: number | null;
+      discrepancy: boolean;
+      owners: string[];
+      status: string | null;
+    }
+
+    const config = JSON.parse(
+      document.getElementById("players-data")!.textContent!,
+    ) as {
+      players: Row[];
+      playerUrlBase: string;
+      photoBase: string;
+      logoBase: string;
+      positionShort: Record<number, string>;
+      positionColors: Record<number, string>;
+    };
+
+    const $ = <T extends HTMLElement>(id: string) =>
+      document.getElementById(id) as T;
+    const input = $<HTMLInputElement>("search-input");
+    const sortSelect = $<HTMLSelectElement>("sort-select");
+    const teamSelect = $<HTMLSelectElement>("team-filter");
+    const positionSelect = $<HTMLSelectElement>("position-filter");
+    const priceSelect = $<HTMLSelectElement>("price-filter");
+    const mineSelect = $<HTMLSelectElement>("mine-filter");
+    const favoritesToggle = $<HTMLButtonElement>("favorites-toggle");
+    const filtersToggle = $<HTMLButtonElement>("filters-toggle");
+    const filtersPanel = $("filters-panel");
+    const filtersBadge = $("filters-badge");
+    const clearButton = $<HTMLButtonElement>("clear-filters");
+    const countEl = $("results-count");
+    const list = $("players-list");
+    const noResults = $("no-results");
+    const showMore = $<HTMLButtonElement>("show-more");
+
+    const PAGE = 40;
+    let shown = PAGE;
+    let favoritesOnly = false;
+    let current: Row[] = [];
 
     const FAVORITES_KEY = "fantasymarca:favoritos";
-    let favoritesOnly = false;
-
-    function loadFavoriteIds(): Set<number> {
+    function loadFavorites(): Set<number> {
       try {
         const raw = localStorage.getItem(FAVORITES_KEY);
         return new Set(raw ? JSON.parse(raw) : []);
@@ -213,126 +277,196 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
         return new Set();
       }
     }
+    function saveFavorites(ids: Set<number>) {
+      try {
+        localStorage.setItem(FAVORITES_KEY, JSON.stringify([...ids]));
+      } catch {
+        // localStorage no disponible (modo privado, cuota llena...)
+      }
+    }
 
-    const diacriticsPattern = new RegExp(
+    const diacritics = new RegExp(
       `[${String.fromCharCode(0x0300)}-${String.fromCharCode(0x036f)}]`,
       "g",
     );
+    const normalize = (text: string) =>
+      text.normalize("NFD").replace(diacritics, "").toLowerCase();
+    const searchText = new Map(
+      config.players.map((p) => [p.id, normalize(`${p.name} ${p.team}`)]),
+    );
 
-    function normalize(text: string): string {
-      return text.normalize("NFD").replace(diacriticsPattern, "").toLowerCase();
-    }
+    const decimal = new Intl.NumberFormat("es-ES", {
+      minimumFractionDigits: 1,
+      maximumFractionDigits: 1,
+    });
+    const money = new Intl.NumberFormat("es-ES", { maximumFractionDigits: 2 });
+    const millions = (v: number | null) =>
+      v === null ? "—" : `${money.format(v / 1_000_000)} M€`;
 
-    // Los filtros se reflejan en la URL (reemplazando la entrada del
-    // historial, no una nueva por cada tecla) para poder recargar, volver
-    // atrás o compartir un enlace ya filtrado.
-    function updateQueryParams() {
-      const params = new URLSearchParams();
-      if (input.value.trim()) params.set("q", input.value.trim());
-      if (teamSelect.value !== "0") params.set("equipo", teamSelect.value);
-      if (positionSelect.value !== "0")
-        params.set("posicion", positionSelect.value);
-      if (sortSelect.value !== "xp_desc") params.set("orden", sortSelect.value);
-      if (favoritesOnly) params.set("favoritos", "1");
-      if (mineSelect.value !== "all") params.set("mi11", mineSelect.value);
-      const qs = params.toString();
-      window.history.replaceState(
-        null,
-        "",
-        qs ? `?${qs}` : window.location.pathname,
+    function escapeHtml(text: string) {
+      return text.replace(
+        /[&<>"]/g,
+        (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!,
       );
     }
 
-    function applyFilters() {
-      const query = normalize(input.value.trim());
-      const team = teamSelect.value;
-      const position = positionSelect.value;
-      const favoriteIds = favoritesOnly ? loadFavoriteIds() : null;
-      const yo = getYo();
-      const mine = yo ? mineSelect.value : "all";
-      let visible = 0;
-
-      cards.forEach((card) => {
-        const matchesQuery =
-          !query ||
-          normalize(card.dataset.name ?? "").includes(query) ||
-          normalize(card.dataset.teamName ?? "").includes(query);
-        const matchesTeam = team === "0" || card.dataset.team === team;
-        const matchesPosition =
-          position === "0" || card.dataset.position === position;
-        const matchesFavorite =
-          !favoriteIds || favoriteIds.has(Number(card.dataset.id));
-        const inMine =
-          yo !== null && (card.dataset.owners ?? "").split(",").includes(yo);
-        const matchesMine =
-          mine === "all" || (mine === "in" ? inMine : !inMine);
-        const show =
-          matchesQuery &&
-          matchesTeam &&
-          matchesPosition &&
-          matchesFavorite &&
-          matchesMine;
-        card.classList.toggle("hidden", !show);
-        if (show) visible++;
-      });
-
-      countEl.textContent = `${visible} jugador${visible === 1 ? "" : "es"}`;
-      noResults.classList.toggle("hidden", visible !== 0);
-      updateQueryParams();
+    // La cifra de la derecha cambia según el orden elegido: lo que se ordena
+    // es lo que se ve.
+    function metric(p: Row, sort: string): [string, string] {
+      const price = `Fantástica ${millions(p.price)}`;
+      switch (sort) {
+        case "points":
+          return [`${p.points} pts`, price];
+        case "liga":
+          return [`${p.liga}%`, "de la liga"];
+        case "value":
+          return [millions(p.value), "valor"];
+        case "clause":
+          return [millions(p.clause), "cláusula"];
+        case "price_asc":
+        case "price_desc":
+          return [millions(p.price), `≈${decimal.format(p.xp)} pts`];
+        default:
+          return [`≈${decimal.format(p.xp)}`, millions(p.price)];
+      }
     }
 
-    function applySort() {
-      const mode = sortSelect.value;
-      const sorted = [...cards].sort((a, b) => {
-        switch (mode) {
-          case "value_asc":
-            return (
-              parseFloat(a.dataset.value ?? "0") -
-              parseFloat(b.dataset.value ?? "0")
-            );
-          case "fantastica_desc":
-            return (
-              parseFloat(b.dataset.fantastica ?? "-1") -
-              parseFloat(a.dataset.fantastica ?? "-1")
-            );
-          case "fantastica_asc":
-            return (
-              parseFloat(a.dataset.fantastica ?? "-1") -
-              parseFloat(b.dataset.fantastica ?? "-1")
-            );
-          case "clause_desc":
-            return (
-              parseFloat(b.dataset.clause ?? "0") -
-              parseFloat(a.dataset.clause ?? "0")
-            );
-          case "points_desc":
-            return (
-              parseFloat(b.dataset.points ?? "0") -
-              parseFloat(a.dataset.points ?? "0")
-            );
-          case "xp_desc":
-            return (
-              parseFloat(b.dataset.xp ?? "0") - parseFloat(a.dataset.xp ?? "0")
-            );
-          case "liga_desc":
-            return (
-              parseFloat(b.dataset.liga ?? "0") -
-              parseFloat(a.dataset.liga ?? "0")
-            );
-          case "name_asc":
-            return (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "");
-          case "value_desc":
-          default:
-            return (
-              parseFloat(b.dataset.value ?? "0") -
-              parseFloat(a.dataset.value ?? "0")
-            );
-        }
-      });
-      // Reordenar el DOM de verdad (no solo `style.order`): si no, el orden de
-      // tabulación y el de un lector de pantalla quedan desincronizados del
-      // orden visual que ve alguien con ratón.
-      for (const card of sorted) grid.appendChild(card);
+    function rowHtml(p: Row, sort: string, favorite: boolean) {
+      const color = config.positionColors[p.pos] ?? "#94a3b8";
+      const details = [
+        `<span style="color:${color}" class="font-semibold">${config.positionShort[p.pos] ?? "?"}</span>`,
+        escapeHtml(p.team),
+        p.status ? `<span class="text-rose-400">${p.status}</span>` : "",
+        p.prob !== null
+          ? `tit. ${p.prob}%${p.discrepancy ? "<sup>≠</sup>" : ""}`
+          : "",
+        sort !== "liga" && p.liga > 0 ? `${p.liga}% liga` : "",
+      ]
+        .filter(Boolean)
+        .join(" · ");
+      const [main, sub] = metric(p, sort);
+      return `<li class="relative">
+        <a href="${config.playerUrlBase}${p.id}/" class="flex items-center gap-3 rounded-xl border border-white/10 bg-slate-900/60 py-2 pr-12 pl-2 transition-colors hover:border-emerald-500/40 hover:bg-slate-900">
+          <span class="relative h-10 w-10 shrink-0">
+            <img src="${config.photoBase}${p.id}.png" alt="" loading="lazy" class="h-10 w-10 rounded-full bg-slate-800 object-cover" />
+            <img src="${config.logoBase}${p.teamId}.png" alt="" loading="lazy" class="absolute -right-1 -bottom-1 h-4 w-4 rounded-full bg-slate-950 p-px" />
+            ${p.status ? `<span class="absolute -top-0.5 -left-0.5 h-3 w-3 rounded-full bg-rose-500 ring-2 ring-slate-950"></span>` : ""}
+          </span>
+          <span class="min-w-0 flex-1">
+            <span class="block truncate text-sm font-semibold text-white">${escapeHtml(p.name)}</span>
+            <span class="block truncate text-xs text-slate-400">${details}</span>
+          </span>
+          <span class="shrink-0 text-right">
+            <span class="block text-sm font-bold text-emerald-300">${main}</span>
+            <span class="block text-[11px] text-slate-500">${sub}</span>
+          </span>
+        </a>
+        <button type="button" data-favorite="${p.id}" aria-pressed="${favorite}" aria-label="Favorito: ${escapeHtml(p.name)}" class="absolute inset-y-0 right-0 flex w-11 items-center justify-center rounded-r-xl text-lg ${favorite ? "text-amber-400" : "text-slate-600 hover:text-amber-400"}">${favorite ? "★" : "☆"}</button>
+      </li>`;
+    }
+
+    function compare(sort: string) {
+      const price = (p: Row) => p.price ?? Number.POSITIVE_INFINITY;
+      switch (sort) {
+        case "points":
+          return (a: Row, b: Row) => b.points - a.points;
+        case "price_asc":
+          return (a: Row, b: Row) => price(a) - price(b) || b.xp - a.xp;
+        case "price_desc":
+          return (a: Row, b: Row) => (b.price ?? -1) - (a.price ?? -1);
+        case "liga":
+          return (a: Row, b: Row) => b.liga - a.liga;
+        case "name":
+          return (a: Row, b: Row) => a.name.localeCompare(b.name, "es");
+        case "value":
+          return (a: Row, b: Row) => b.value - a.value;
+        case "clause":
+          return (a: Row, b: Row) => b.clause - a.clause;
+        default:
+          return (a: Row, b: Row) => b.xp - a.xp;
+      }
+    }
+
+    function activeFilters() {
+      return [
+        teamSelect.value,
+        positionSelect.value,
+        priceSelect.value,
+        mineSelect.value && getYo() ? mineSelect.value : "",
+        favoritesOnly ? "1" : "",
+      ].filter(Boolean).length;
+    }
+
+    // Los filtros se reflejan en la URL (sin entrada nueva en el historial)
+    // para poder recargar, volver atrás o compartir un enlace ya filtrado.
+    function updateQueryParams() {
+      const params = new URLSearchParams();
+      if (input.value.trim()) params.set("q", input.value.trim());
+      if (teamSelect.value) params.set("equipo", teamSelect.value);
+      if (positionSelect.value) params.set("posicion", positionSelect.value);
+      if (priceSelect.value) params.set("precio", priceSelect.value);
+      if (sortSelect.value !== "xp") params.set("orden", sortSelect.value);
+      if (favoritesOnly) params.set("favoritos", "1");
+      if (mineSelect.value) params.set("mi11", mineSelect.value);
+      const qs = params.toString();
+      history.replaceState(
+        history.state,
+        "",
+        qs ? `?${qs}` : location.pathname,
+      );
+    }
+
+    function render() {
+      const sort = sortSelect.value;
+      const favorites = loadFavorites();
+      list.innerHTML = current
+        .slice(0, shown)
+        .map((p) => rowHtml(p, sort, favorites.has(p.id)))
+        .join("");
+      const rest = current.length - shown;
+      showMore.hidden = rest <= 0;
+      showMore.textContent = `Ver ${Math.min(rest, PAGE)} más (quedan ${rest})`;
+    }
+
+    function apply(resetPage = true) {
+      const query = normalize(input.value.trim());
+      const team = Number(teamSelect.value);
+      const position = Number(positionSelect.value);
+      const [minPrice, maxPrice] = priceSelect.value
+        ? priceSelect.value.split("-").map((v) => Number(v) * 1_000_000)
+        : [0, Infinity];
+      const favorites = favoritesOnly ? loadFavorites() : null;
+      const yo = getYo();
+      const mine = yo ? mineSelect.value : "";
+
+      current = config.players
+        .filter((p) => {
+          if (query && !searchText.get(p.id)!.includes(query)) return false;
+          if (team && p.teamId !== team) return false;
+          if (position && p.pos !== position) return false;
+          if (
+            priceSelect.value &&
+            (p.price === null || p.price < minPrice || p.price >= maxPrice)
+          )
+            return false;
+          if (favorites && !favorites.has(p.id)) return false;
+          if (mine) {
+            const inMine = yo !== null && p.owners.includes(yo);
+            if ((mine === "in") !== inMine) return false;
+          }
+          return true;
+        })
+        .sort(compare(sortSelect.value));
+
+      if (resetPage) shown = PAGE;
+      const n = current.length;
+      countEl.textContent = `${n} jugador${n === 1 ? "" : "es"}`;
+      noResults.hidden = n !== 0;
+      const active = activeFilters();
+      filtersBadge.hidden = active === 0;
+      filtersBadge.textContent = String(active);
+      clearButton.hidden = active === 0 && !query;
+      render();
       updateQueryParams();
     }
 
@@ -340,43 +474,86 @@ const teams = [...getTeams()].sort((a, b) => a.name.localeCompare(b.name));
       favoritesOnly = value;
       favoritesToggle.setAttribute("aria-pressed", String(value));
       favoritesToggle.textContent = value ? "★ Favoritos" : "☆ Favoritos";
-      favoritesToggle.classList.toggle("text-amber-400", value);
-      favoritesToggle.classList.toggle("border-amber-400/40", value);
     }
 
-    input.addEventListener("input", applyFilters);
-    teamSelect.addEventListener("change", applyFilters);
-    positionSelect.addEventListener("change", applyFilters);
-    sortSelect.addEventListener("change", applySort);
-    mineSelect.addEventListener("change", applyFilters);
+    input.addEventListener("input", () => apply());
+    for (const select of [
+      sortSelect,
+      teamSelect,
+      positionSelect,
+      priceSelect,
+      mineSelect,
+    ])
+      select.addEventListener("change", () => apply());
+    favoritesToggle.addEventListener("click", () => {
+      setFavoritesOnly(!favoritesOnly);
+      apply();
+    });
+    filtersToggle.addEventListener("click", () => {
+      const open = filtersToggle.getAttribute("aria-expanded") !== "true";
+      filtersToggle.setAttribute("aria-expanded", String(open));
+      filtersPanel.classList.toggle("hidden", !open);
+      filtersPanel.classList.toggle("grid", open);
+    });
+    clearButton.addEventListener("click", () => {
+      input.value = "";
+      teamSelect.value = "";
+      positionSelect.value = "";
+      priceSelect.value = "";
+      mineSelect.value = "";
+      setFavoritesOnly(false);
+      apply();
+    });
+    showMore.addEventListener("click", () => {
+      shown += PAGE;
+      render();
+    });
+    list.addEventListener("click", (e) => {
+      const btn = (e.target as HTMLElement).closest<HTMLElement>(
+        "[data-favorite]",
+      );
+      if (!btn) return;
+      const id = Number(btn.dataset.favorite);
+      const favorites = loadFavorites();
+      if (favorites.has(id)) favorites.delete(id);
+      else favorites.add(id);
+      saveFavorites(favorites);
+      apply(false);
+    });
+
     // Sin "¿Quién eres?" no hay 11 con el que comparar.
     const syncMineSelect = () => {
       mineSelect.disabled = getYo() === null;
     };
     window.addEventListener(YO_EVENT, () => {
       syncMineSelect();
-      applyFilters();
-    });
-    favoritesToggle.addEventListener("click", () => {
-      setFavoritesOnly(!favoritesOnly);
-      applyFilters();
-    });
-    // Si se marca/desmarca una estrella desde una tarjeta mientras el filtro
-    // "solo favoritos" está activo, la lista visible se actualiza sola.
-    document.addEventListener("favorites-changed", () => {
-      if (favoritesOnly) applyFilters();
+      apply(false);
     });
 
-    // Restaura filtros desde la URL (recarga, atrás, o enlace compartido).
-    const initialParams = new URLSearchParams(window.location.search);
-    input.value = initialParams.get("q") ?? "";
-    teamSelect.value = initialParams.get("equipo") ?? "0";
-    positionSelect.value = initialParams.get("posicion") ?? "0";
-    sortSelect.value = initialParams.get("orden") ?? "xp_desc";
-    setFavoritesOnly(initialParams.get("favoritos") === "1");
-    mineSelect.value = initialParams.get("mi11") ?? "all";
+    // Filtros desde la URL (recarga, atrás o enlace compartido). Se aceptan
+    // los valores antiguos (0, xp_desc...) de enlaces guardados.
+    const params = new URLSearchParams(location.search);
+    const legacySort: Record<string, string> = {
+      xp_desc: "xp",
+      points_desc: "points",
+      fantastica_asc: "price_asc",
+      fantastica_desc: "price_desc",
+      liga_desc: "liga",
+      name_asc: "name",
+      value_desc: "value",
+      value_asc: "value",
+      clause_desc: "clause",
+    };
+    const orden = params.get("orden") ?? "xp";
+    input.value = params.get("q") ?? "";
+    sortSelect.value = legacySort[orden] ?? orden;
+    if (!sortSelect.value) sortSelect.value = "xp";
+    teamSelect.value = params.get("equipo")?.replace(/^0$/, "") ?? "";
+    positionSelect.value = params.get("posicion")?.replace(/^0$/, "") ?? "";
+    priceSelect.value = params.get("precio") ?? "";
+    mineSelect.value = params.get("mi11")?.replace(/^all$/, "") ?? "";
+    setFavoritesOnly(params.get("favoritos") === "1");
     syncMineSelect();
-    applyFilters();
-    applySort();
+    apply();
   </script>
 </Layout>
