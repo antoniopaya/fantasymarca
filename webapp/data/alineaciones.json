@@ -1,6 +1,6 @@
 {
  "jornada": 9,
- "scraped_at": "2026-10-15T12:40+00:00",
+ "scraped_at": "2026-10-16T12:19+00:00",
  "sources": {
   "futbolfantasy": 20,
   "analiticafantasy": 20,
@@ -15,6 +15,19 @@
     "status": "titular",
     "prob_ff": 95,
     "prob_af": 90,
+    "starter_ff": true,
+    "starter_af": true,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
+    "id": 4753,
+    "name": "Yeray Álvarez",
+    "prob": 75,
+    "status": "titular",
+    "prob_ff": 80,
+    "prob_af": 70,
     "starter_ff": true,
     "starter_af": true,
     "af_info": null,
@@ -40,19 +53,6 @@
     "prob": 75,
     "status": "titular",
     "prob_ff": 80,
-    "prob_af": 70,
-    "starter_ff": true,
-    "starter_af": true,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
-    "id": 4753,
-    "name": "Yeray Álvarez",
-    "prob": 70,
-    "status": "titular",
-    "prob_ff": 70,
     "prob_af": 70,
     "starter_ff": true,
     "starter_af": true,
@@ -141,9 +141,9 @@
    {
     "id": 10,
     "name": "Aymeric Laporte",
-    "prob": 55,
+    "prob": 50,
     "status": "titular",
-    "prob_ff": 60,
+    "prob_ff": 50,
     "prob_af": 50,
     "starter_ff": true,
     "starter_af": true,
@@ -362,11 +362,11 @@
     "discrepancy": false
    },
    {
-    "id": 1385821,
-    "name": "Cristian Romero",
-    "prob": 80,
+    "id": 64459,
+    "name": "David Hancko",
+    "prob": 75,
     "status": "titular",
-    "prob_ff": 90,
+    "prob_ff": 80,
     "prob_af": 70,
     "starter_ff": true,
     "starter_af": true,
@@ -388,21 +388,8 @@
     "discrepancy": false
    },
    {
-    "id": 64459,
-    "name": "David Hancko",
-    "prob": 70,
-    "status": "titular",
-    "prob_ff": 70,
-    "prob_af": 70,
-    "starter_ff": true,
-    "starter_af": true,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
-    "id": 29222,
-    "name": "Giuliano Simeone",
+    "id": 1385821,
+    "name": "Cristian Romero",
     "prob": 70,
     "status": "titular",
     "prob_ff": 70,
@@ -440,6 +427,32 @@
     "discrepancy": false
    },
    {
+    "id": 68676,
+    "name": "Ademola Lookman",
+    "prob": 60,
+    "status": "titular",
+    "prob_ff": 70,
+    "prob_af": 50,
+    "starter_ff": true,
+    "starter_af": false,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": true
+   },
+   {
+    "id": 29222,
+    "name": "Giuliano Simeone",
+    "prob": 60,
+    "status": "titular",
+    "prob_ff": 50,
+    "prob_af": 70,
+    "starter_ff": true,
+    "starter_af": true,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
     "id": 71021,
     "name": "Álex Grimaldo",
     "prob": 60,
@@ -461,32 +474,6 @@
     "prob_af": 60,
     "starter_ff": false,
     "starter_af": true,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": true
-   },
-   {
-    "id": 56578,
-    "name": "Johnny Cardoso",
-    "prob": 50,
-    "status": "titular",
-    "prob_ff": 50,
-    "prob_af": 50,
-    "starter_ff": false,
-    "starter_af": false,
-    "af_info": "Indisposición",
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
-    "id": 68676,
-    "name": "Ademola Lookman",
-    "prob": 50,
-    "status": "titular",
-    "prob_ff": 50,
-    "prob_af": 50,
-    "starter_ff": true,
-    "starter_af": false,
     "af_info": null,
     "sanctioned": false,
     "discrepancy": true
@@ -518,19 +505,6 @@
     "discrepancy": true
    },
    {
-    "id": 42,
-    "name": "Koke Resurrección",
-    "prob": 50,
-    "status": "titular",
-    "prob_ff": 50,
-    "prob_af": 50,
-    "starter_ff": false,
-    "starter_af": false,
-    "af_info": "Problema personal",
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
     "id": 51135,
     "name": "Pablo Barrios",
     "prob": 50,
@@ -557,11 +531,50 @@
     "discrepancy": true
    },
    {
+    "id": 56578,
+    "name": "Johnny Cardoso",
+    "prob": 25,
+    "status": "suplente",
+    "prob_ff": 0,
+    "prob_af": 50,
+    "starter_ff": false,
+    "starter_af": false,
+    "af_info": "Indisposición",
+    "sanctioned": false,
+    "discrepancy": true
+   },
+   {
     "id": 59476,
     "name": "Julián Álvarez",
     "prob": 25,
     "status": "suplente",
     "prob_ff": 40,
+    "prob_af": 10,
+    "starter_ff": false,
+    "starter_af": null,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
+    "id": 42,
+    "name": "Koke Resurrección",
+    "prob": 25,
+    "status": "suplente",
+    "prob_ff": 0,
+    "prob_af": 50,
+    "starter_ff": false,
+    "starter_af": false,
+    "af_info": "Problema personal",
+    "sanctioned": false,
+    "discrepancy": true
+   },
+   {
+    "id": 63868,
+    "name": "Rodrigo Mendoza",
+    "prob": 20,
+    "status": "suplente",
+    "prob_ff": 30,
     "prob_af": 10,
     "starter_ff": false,
     "starter_af": null,
@@ -596,8 +609,8 @@
     "discrepancy": false
    },
    {
-    "id": 63868,
-    "name": "Rodrigo Mendoza",
+    "id": 68711,
+    "name": "Obed Vargas",
     "prob": 10,
     "status": "suplente",
     "prob_ff": 10,
@@ -614,19 +627,6 @@
     "prob": 8,
     "status": "suplente",
     "prob_ff": 5,
-    "prob_af": 10,
-    "starter_ff": false,
-    "starter_af": null,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
-    "id": 68711,
-    "name": "Obed Vargas",
-    "prob": 5,
-    "status": "suplente",
-    "prob_ff": 0,
     "prob_af": 10,
     "starter_ff": false,
     "starter_af": null,
@@ -1330,8 +1330,8 @@
     "discrepancy": false
    },
    {
-    "id": 25631,
-    "name": "Ilaix Moriba",
+    "id": 55439,
+    "name": "Hugo González",
     "prob": 70,
     "status": "titular",
     "prob_ff": 70,
@@ -1343,21 +1343,8 @@
     "discrepancy": false
    },
    {
-    "id": 33726,
-    "name": "Hugo Álvarez",
-    "prob": 70,
-    "status": "titular",
-    "prob_ff": 70,
-    "prob_af": 70,
-    "starter_ff": true,
-    "starter_af": true,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
-    "id": 18531,
-    "name": "Aleix Febas",
+    "id": 15693,
+    "name": "Javi Galán",
     "prob": 70,
     "status": "titular",
     "prob_ff": 70,
@@ -1382,12 +1369,25 @@
     "discrepancy": false
    },
    {
-    "id": 49382,
-    "name": "Marcos Alonso",
+    "id": 63866,
+    "name": "Álvaro Núñez",
+    "prob": 70,
+    "status": "titular",
+    "prob_ff": 70,
+    "prob_af": 70,
+    "starter_ff": true,
+    "starter_af": true,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
+    "id": 18531,
+    "name": "Aleix Febas",
     "prob": 65,
     "status": "titular",
-    "prob_ff": 80,
-    "prob_af": 50,
+    "prob_ff": 60,
+    "prob_af": 70,
     "starter_ff": true,
     "starter_af": true,
     "af_info": null,
@@ -1408,21 +1408,8 @@
     "discrepancy": false
    },
    {
-    "id": 55439,
-    "name": "Hugo González",
-    "prob": 60,
-    "status": "titular",
-    "prob_ff": 50,
-    "prob_af": 70,
-    "starter_ff": true,
-    "starter_af": true,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
-    "id": 64160,
-    "name": "Javi Rueda",
+    "id": 4836242,
+    "name": "Sebastián Cáceres",
     "prob": 60,
     "status": "titular",
     "prob_ff": 70,
@@ -1434,8 +1421,21 @@
     "discrepancy": true
    },
    {
-    "id": 15693,
-    "name": "Javi Galán",
+    "id": 25631,
+    "name": "Ilaix Moriba",
+    "prob": 60,
+    "status": "titular",
+    "prob_ff": 50,
+    "prob_af": 70,
+    "starter_ff": false,
+    "starter_af": true,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": true
+   },
+   {
+    "id": 33726,
+    "name": "Hugo Burcio",
     "prob": 60,
     "status": "titular",
     "prob_ff": 50,
@@ -1447,12 +1447,12 @@
     "discrepancy": false
    },
    {
-    "id": 63866,
-    "name": "Álvaro Núñez",
-    "prob": 60,
+    "id": 49382,
+    "name": "Marcos Alonso",
+    "prob": 55,
     "status": "titular",
-    "prob_ff": 50,
-    "prob_af": 70,
+    "prob_ff": 60,
+    "prob_af": 50,
     "starter_ff": true,
     "starter_af": true,
     "af_info": null,
@@ -1460,30 +1460,30 @@
     "discrepancy": false
    },
    {
-    "id": 4836242,
-    "name": "Sebastián Cáceres",
-    "prob": 50,
-    "status": "titular",
-    "prob_ff": 50,
+    "id": 130,
+    "name": "Iago Aspas",
+    "prob": 40,
+    "status": "suplente",
+    "prob_ff": 70,
+    "prob_af": 10,
+    "starter_ff": true,
+    "starter_af": null,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": true
+   },
+   {
+    "id": 64160,
+    "name": "Javi Rueda",
+    "prob": 40,
+    "status": "suplente",
+    "prob_ff": 30,
     "prob_af": 50,
     "starter_ff": false,
     "starter_af": false,
     "af_info": null,
     "sanctioned": false,
     "discrepancy": false
-   },
-   {
-    "id": 23664,
-    "name": "Sergio Carreira",
-    "prob": 50,
-    "status": "titular",
-    "prob_ff": 50,
-    "prob_af": 50,
-    "starter_ff": false,
-    "starter_af": true,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": true
    },
    {
     "id": 3844425,
@@ -1499,21 +1499,34 @@
     "discrepancy": false
    },
    {
-    "id": 130,
-    "name": "Iago Aspas",
-    "prob": 30,
+    "id": 23664,
+    "name": "Sergio Carreira",
+    "prob": 40,
     "status": "suplente",
-    "prob_ff": 50,
-    "prob_af": 10,
+    "prob_ff": 30,
+    "prob_af": 50,
     "starter_ff": false,
-    "starter_af": null,
+    "starter_af": true,
     "af_info": null,
     "sanctioned": false,
     "discrepancy": true
    },
    {
-    "id": 48194,
-    "name": "Williot Swedberg",
+    "id": 70189,
+    "name": "Andrés Antañón",
+    "prob": 25,
+    "status": "suplente",
+    "prob_ff": 40,
+    "prob_af": 10,
+    "starter_ff": false,
+    "starter_af": null,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
+    "id": 71642,
+    "name": "Abdoulaye Faye",
     "prob": 25,
     "status": "suplente",
     "prob_ff": 40,
@@ -1538,8 +1551,8 @@
     "discrepancy": false
    },
    {
-    "id": 59506,
-    "name": "Javi Rodríguez",
+    "id": 48194,
+    "name": "Williot Swedberg",
     "prob": 20,
     "status": "suplente",
     "prob_ff": 30,
@@ -1551,24 +1564,11 @@
     "discrepancy": false
    },
    {
-    "id": 70189,
-    "name": "Andrés Antañón",
-    "prob": 15,
+    "id": 59506,
+    "name": "Javi Rodríguez",
+    "prob": 20,
     "status": "suplente",
-    "prob_ff": 20,
-    "prob_af": 10,
-    "starter_ff": false,
-    "starter_af": null,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
-    "id": 71642,
-    "name": "Abdoulaye Faye",
-    "prob": 15,
-    "status": "suplente",
-    "prob_ff": 20,
+    "prob_ff": 30,
     "prob_af": 10,
     "starter_ff": false,
     "starter_af": null,
@@ -1891,19 +1891,6 @@
     "discrepancy": false
    },
    {
-    "id": 70940,
-    "name": "Zakaria Eddahchouri",
-    "prob": 10,
-    "status": "suplente",
-    "prob_ff": 10,
-    "prob_af": 10,
-    "starter_ff": false,
-    "starter_af": null,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
     "id": 71509,
     "name": "Kevin Sánchez",
     "prob": 10,
@@ -1922,6 +1909,19 @@
     "prob": 8,
     "status": "suplente",
     "prob_ff": 5,
+    "prob_af": 10,
+    "starter_ff": false,
+    "starter_af": null,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
+    "id": 70940,
+    "name": "Zakaria Eddahchouri",
+    "prob": 5,
+    "status": "suplente",
+    "prob_ff": 0,
     "prob_af": 10,
     "starter_ff": false,
     "starter_af": null,
@@ -2363,12 +2363,12 @@
     "discrepancy": false
    },
    {
-    "id": 8171,
-    "name": "Dakonam Djené",
-    "prob": 85,
+    "id": 308,
+    "name": "Johan Mojica",
+    "prob": 80,
     "status": "titular",
     "prob_ff": 90,
-    "prob_af": 80,
+    "prob_af": 70,
     "starter_ff": true,
     "starter_af": true,
     "af_info": null,
@@ -2402,11 +2402,11 @@
     "discrepancy": false
    },
    {
-    "id": 68495,
-    "name": "Martín Satriano",
-    "prob": 75,
+    "id": 8171,
+    "name": "Dakonam Djené",
+    "prob": 80,
     "status": "titular",
-    "prob_ff": 70,
+    "prob_ff": 80,
     "prob_af": 80,
     "starter_ff": true,
     "starter_af": true,
@@ -2415,12 +2415,12 @@
     "discrepancy": false
    },
    {
-    "id": 308,
-    "name": "Johan Mojica",
+    "id": 68495,
+    "name": "Martín Satriano",
     "prob": 75,
     "status": "titular",
-    "prob_ff": 80,
-    "prob_af": 70,
+    "prob_ff": 70,
+    "prob_af": 80,
     "starter_ff": true,
     "starter_af": true,
     "af_info": null,
@@ -2443,9 +2443,9 @@
    {
     "id": 48960,
     "name": "Kiko Femenia",
-    "prob": 55,
+    "prob": 60,
     "status": "titular",
-    "prob_ff": 60,
+    "prob_ff": 70,
     "prob_af": 50,
     "starter_ff": true,
     "starter_af": false,
@@ -2508,9 +2508,9 @@
    {
     "id": 78750,
     "name": "Orel Mangala",
-    "prob": 45,
+    "prob": 40,
     "status": "suplente",
-    "prob_ff": 50,
+    "prob_ff": 40,
     "prob_af": 40,
     "starter_ff": false,
     "starter_af": false,
@@ -3199,19 +3199,6 @@
     "discrepancy": false
    },
    {
-    "id": 51060,
-    "name": "Juan Cruz",
-    "prob": 20,
-    "status": "suplente",
-    "prob_ff": 30,
-    "prob_af": 10,
-    "starter_ff": false,
-    "starter_af": null,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
     "id": 70994,
     "name": "Eneko Jauregi",
     "prob": 15,
@@ -3318,6 +3305,19 @@
    {
     "id": 71003,
     "name": "Diego Murillo",
+    "prob": 5,
+    "status": "suplente",
+    "prob_ff": 0,
+    "prob_af": 10,
+    "starter_ff": false,
+    "starter_af": null,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
+    "id": 51060,
+    "name": "Juan Cruz",
     "prob": 5,
     "status": "suplente",
     "prob_ff": 0,
@@ -3448,11 +3448,11 @@
     "discrepancy": false
    },
    {
-    "id": 59395,
-    "name": "Pedro Díaz",
-    "prob": 50,
+    "id": 28619,
+    "name": "Iván Balliu",
+    "prob": 55,
     "status": "titular",
-    "prob_ff": 50,
+    "prob_ff": 60,
     "prob_af": 50,
     "starter_ff": true,
     "starter_af": true,
@@ -3461,21 +3461,8 @@
     "discrepancy": false
    },
    {
-    "id": 25621,
-    "name": "Andrei Ratiu",
-    "prob": 50,
-    "status": "titular",
-    "prob_ff": 50,
-    "prob_af": 50,
-    "starter_ff": false,
-    "starter_af": false,
-    "af_info": "Molestias indeterminadas",
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
-    "id": 28619,
-    "name": "Iván Balliu",
+    "id": 59395,
+    "name": "Pedro Díaz",
     "prob": 50,
     "status": "titular",
     "prob_ff": 50,
@@ -3496,6 +3483,19 @@
     "starter_ff": false,
     "starter_af": false,
     "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
+    "id": 25621,
+    "name": "Andrei Ratiu",
+    "prob": 45,
+    "status": "suplente",
+    "prob_ff": 40,
+    "prob_af": 50,
+    "starter_ff": false,
+    "starter_af": false,
+    "af_info": "Molestias indeterminadas",
     "sanctioned": false,
     "discrepancy": false
    },
@@ -3866,19 +3866,6 @@
     "discrepancy": false
    },
    {
-    "id": 31484,
-    "name": "Eduardo Camavinga",
-    "prob": 45,
-    "status": "suplente",
-    "prob_ff": 40,
-    "prob_af": 50,
-    "starter_ff": false,
-    "starter_af": false,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
     "id": 55666,
     "name": "Álvaro F. Carreras",
     "prob": 40,
@@ -3892,11 +3879,24 @@
     "discrepancy": false
    },
    {
-    "id": 15344,
-    "name": "Brahim Díaz",
-    "prob": 25,
+    "id": 31484,
+    "name": "Eduardo Camavinga",
+    "prob": 40,
     "status": "suplente",
-    "prob_ff": 40,
+    "prob_ff": 30,
+    "prob_af": 50,
+    "starter_ff": false,
+    "starter_af": false,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
+    "id": 58951,
+    "name": "Endrick",
+    "prob": 20,
+    "status": "suplente",
+    "prob_ff": 30,
     "prob_af": 10,
     "starter_ff": false,
     "starter_af": null,
@@ -3905,8 +3905,8 @@
     "discrepancy": false
    },
    {
-    "id": 58951,
-    "name": "Endrick",
+    "id": 15344,
+    "name": "Brahim Díaz",
     "prob": 20,
     "status": "suplente",
     "prob_ff": 30,
@@ -4037,21 +4037,8 @@
     "discrepancy": false
    },
    {
-    "id": 564,
-    "name": "Mikel Oyarzabal",
-    "prob": 75,
-    "status": "titular",
-    "prob_ff": 80,
-    "prob_af": 70,
-    "starter_ff": true,
-    "starter_af": true,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
-    "id": 59623,
-    "name": "Jon Martín",
+    "id": 4888,
+    "name": "Carlos Soler",
     "prob": 75,
     "status": "titular",
     "prob_ff": 80,
@@ -4076,19 +4063,6 @@
     "discrepancy": false
    },
    {
-    "id": 4888,
-    "name": "Carlos Soler",
-    "prob": 70,
-    "status": "titular",
-    "prob_ff": 70,
-    "prob_af": 70,
-    "starter_ff": true,
-    "starter_af": true,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
     "id": 22956,
     "name": "Sergio Gómez",
     "prob": 70,
@@ -4102,11 +4076,50 @@
     "discrepancy": false
    },
    {
-    "id": 15566,
-    "name": "Yangel Herrera",
+    "id": 564,
+    "name": "Mikel Oyarzabal",
     "prob": 70,
     "status": "titular",
     "prob_ff": 70,
+    "prob_af": 70,
+    "starter_ff": true,
+    "starter_af": true,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
+    "id": 59623,
+    "name": "Jon Martín",
+    "prob": 70,
+    "status": "titular",
+    "prob_ff": 70,
+    "prob_af": 70,
+    "starter_ff": true,
+    "starter_af": true,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
+    "id": 15342,
+    "name": "Ander Barrenetxea",
+    "prob": 70,
+    "status": "titular",
+    "prob_ff": 70,
+    "prob_af": 70,
+    "starter_ff": true,
+    "starter_af": true,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
+    "id": 15566,
+    "name": "Yangel Herrera",
+    "prob": 60,
+    "status": "titular",
+    "prob_ff": 50,
     "prob_af": 70,
     "starter_ff": true,
     "starter_af": true,
@@ -4117,41 +4130,15 @@
    {
     "id": 59371,
     "name": "Luka Sucic",
-    "prob": 70,
-    "status": "titular",
-    "prob_ff": 70,
-    "prob_af": 70,
-    "starter_ff": true,
-    "starter_af": true,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
-    "id": 10967,
-    "name": "Gonçalo Guedes",
-    "prob": 65,
-    "status": "titular",
-    "prob_ff": 80,
-    "prob_af": 50,
-    "starter_ff": true,
-    "starter_af": false,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": true
-   },
-   {
-    "id": 15342,
-    "name": "Ander Barrenetxea",
     "prob": 60,
     "status": "titular",
     "prob_ff": 50,
     "prob_af": 70,
-    "starter_ff": true,
+    "starter_ff": false,
     "starter_af": true,
     "af_info": null,
     "sanctioned": false,
-    "discrepancy": false
+    "discrepancy": true
    },
    {
     "id": 3849388,
@@ -4180,6 +4167,19 @@
     "discrepancy": true
    },
    {
+    "id": 10967,
+    "name": "Gonçalo Guedes",
+    "prob": 50,
+    "status": "titular",
+    "prob_ff": 50,
+    "prob_af": 50,
+    "starter_ff": false,
+    "starter_af": false,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
     "id": 68835,
     "name": "Job Ochieng",
     "prob": 40,
@@ -4193,21 +4193,47 @@
     "discrepancy": true
    },
    {
-    "id": 64033,
-    "name": "Jon Gorrotxategi",
-    "prob": 25,
+    "id": 59789,
+    "name": "Orri Steinn Óskarsson",
+    "prob": 30,
     "status": "suplente",
-    "prob_ff": 40,
+    "prob_ff": 50,
+    "prob_af": 10,
+    "starter_ff": true,
+    "starter_af": null,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": true
+   },
+   {
+    "id": 28776,
+    "name": "Beñat Turrientes",
+    "prob": 30,
+    "status": "suplente",
+    "prob_ff": 50,
     "prob_af": 10,
     "starter_ff": false,
     "starter_af": null,
     "af_info": null,
     "sanctioned": false,
-    "discrepancy": false
+    "discrepancy": true
    },
    {
     "id": 19562,
     "name": "Takefusa Kubo",
+    "prob": 30,
+    "status": "suplente",
+    "prob_ff": 50,
+    "prob_af": 10,
+    "starter_ff": true,
+    "starter_af": null,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": true
+   },
+   {
+    "id": 64033,
+    "name": "Jon Gorrotxategi",
     "prob": 25,
     "status": "suplente",
     "prob_ff": 40,
@@ -4232,19 +4258,6 @@
     "discrepancy": false
    },
    {
-    "id": 59789,
-    "name": "Orri Steinn Óskarsson",
-    "prob": 20,
-    "status": "suplente",
-    "prob_ff": 30,
-    "prob_af": 10,
-    "starter_ff": false,
-    "starter_af": null,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
     "id": 55454,
     "name": "Arsen Zakharyan",
     "prob": 20,
@@ -4258,24 +4271,11 @@
     "discrepancy": false
    },
    {
-    "id": 28776,
-    "name": "Beñat Turrientes",
-    "prob": 20,
-    "status": "suplente",
-    "prob_ff": 30,
-    "prob_af": 10,
-    "starter_ff": false,
-    "starter_af": null,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
     "id": 22471,
     "name": "Jon Pacheco",
-    "prob": 10,
+    "prob": 15,
     "status": "suplente",
-    "prob_ff": 10,
+    "prob_ff": 20,
     "prob_af": 10,
     "starter_ff": false,
     "starter_af": null,
@@ -4468,12 +4468,12 @@
     "discrepancy": false
    },
    {
-    "id": 22495,
-    "name": "Giorgi Kochorashvili",
-    "prob": 70,
+    "id": 65179,
+    "name": "Andrés Castrín",
+    "prob": 60,
     "status": "titular",
-    "prob_ff": 70,
-    "prob_af": 70,
+    "prob_ff": 60,
+    "prob_af": 60,
     "starter_ff": true,
     "starter_af": true,
     "af_info": null,
@@ -4481,12 +4481,12 @@
     "discrepancy": false
    },
    {
-    "id": 65179,
-    "name": "Andrés Castrín",
+    "id": 22495,
+    "name": "Giorgi Kochorashvili",
     "prob": 60,
     "status": "titular",
-    "prob_ff": 60,
-    "prob_af": 60,
+    "prob_ff": 50,
+    "prob_af": 70,
     "starter_ff": true,
     "starter_af": true,
     "af_info": null,
@@ -4507,19 +4507,6 @@
     "discrepancy": false
    },
    {
-    "id": 4836172,
-    "name": "Lucas Stassin",
-    "prob": 50,
-    "status": "titular",
-    "prob_ff": 50,
-    "prob_af": 50,
-    "starter_ff": false,
-    "starter_af": true,
-    "af_info": "Lesión miofascial en el aductor largo de la pierna derecha",
-    "sanctioned": false,
-    "discrepancy": true
-   },
-   {
     "id": 58467,
     "name": "Chidera Ejuke",
     "prob": 50,
@@ -4529,6 +4516,19 @@
     "starter_ff": true,
     "starter_af": false,
     "af_info": null,
+    "sanctioned": false,
+    "discrepancy": true
+   },
+   {
+    "id": 4836172,
+    "name": "Lucas Stassin",
+    "prob": 40,
+    "status": "suplente",
+    "prob_ff": 30,
+    "prob_af": 50,
+    "starter_ff": false,
+    "starter_af": true,
+    "af_info": "Lesión miofascial en el aductor largo de la pierna derecha",
     "sanctioned": false,
     "discrepancy": true
    },
@@ -4795,11 +4795,24 @@
     "discrepancy": false
    },
    {
+    "id": 11186,
+    "name": "Daniel Raba",
+    "prob": 60,
+    "status": "titular",
+    "prob_ff": 70,
+    "prob_af": 50,
+    "starter_ff": true,
+    "starter_af": true,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
     "id": 11866,
     "name": "Hugo Duro",
-    "prob": 55,
+    "prob": 60,
     "status": "titular",
-    "prob_ff": 60,
+    "prob_ff": 70,
     "prob_af": 50,
     "starter_ff": true,
     "starter_af": true,
@@ -4821,34 +4834,8 @@
     "discrepancy": false
    },
    {
-    "id": 11186,
-    "name": "Daniel Raba",
-    "prob": 50,
-    "status": "titular",
-    "prob_ff": 50,
-    "prob_af": 50,
-    "starter_ff": true,
-    "starter_af": true,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
     "id": 65090,
     "name": "Filip Ugrinic",
-    "prob": 50,
-    "status": "titular",
-    "prob_ff": 50,
-    "prob_af": 50,
-    "starter_ff": false,
-    "starter_af": false,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
-    "id": 71138,
-    "name": "Ryunosuke Sato",
     "prob": 50,
     "status": "titular",
     "prob_ff": 50,
@@ -4886,11 +4873,24 @@
     "discrepancy": false
    },
    {
+    "id": 71138,
+    "name": "Ryunosuke Sato",
+    "prob": 40,
+    "status": "suplente",
+    "prob_ff": 30,
+    "prob_af": 50,
+    "starter_ff": false,
+    "starter_af": false,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
     "id": 31226,
     "name": "Arnaut Danjuma",
-    "prob": 45,
+    "prob": 40,
     "status": "suplente",
-    "prob_ff": 40,
+    "prob_ff": 30,
     "prob_af": 50,
     "starter_ff": false,
     "starter_af": false,
@@ -5533,11 +5533,11 @@
     "status": "titular",
     "prob_ff": 50,
     "prob_af": 50,
-    "starter_ff": true,
+    "starter_ff": false,
     "starter_af": false,
     "af_info": null,
     "sanctioned": false,
-    "discrepancy": true
+    "discrepancy": false
    },
    {
     "id": 63871,
@@ -5546,11 +5546,11 @@
     "status": "titular",
     "prob_ff": 50,
     "prob_af": 50,
-    "starter_ff": false,
+    "starter_ff": true,
     "starter_af": true,
     "af_info": null,
     "sanctioned": false,
-    "discrepancy": true
+    "discrepancy": false
    },
    {
     "id": 23147,
@@ -5854,11 +5854,11 @@
     "discrepancy": false
    },
    {
-    "id": 78394,
-    "name": "Nicolás Valentini",
-    "prob": 65,
+    "id": 59641,
+    "name": "Toni Martinez",
+    "prob": 60,
     "status": "titular",
-    "prob_ff": 70,
+    "prob_ff": 60,
     "prob_af": 60,
     "starter_ff": true,
     "starter_af": true,
@@ -5867,8 +5867,8 @@
     "discrepancy": false
    },
    {
-    "id": 59641,
-    "name": "Toni Martinez",
+    "id": 78394,
+    "name": "Nicolás Valentini",
     "prob": 60,
     "status": "titular",
     "prob_ff": 60,
@@ -5919,11 +5919,11 @@
     "discrepancy": false
    },
    {
-    "id": 53144,
-    "name": "Carlos Benavidez",
-    "prob": 20,
+    "id": 64411,
+    "name": "Youssef Enríquez",
+    "prob": 25,
     "status": "suplente",
-    "prob_ff": 30,
+    "prob_ff": 40,
     "prob_af": 10,
     "starter_ff": false,
     "starter_af": null,
@@ -5932,8 +5932,8 @@
     "discrepancy": false
    },
    {
-    "id": 64411,
-    "name": "Youssef Enríquez",
+    "id": 53144,
+    "name": "Carlos Benavidez",
     "prob": 20,
     "status": "suplente",
     "prob_ff": 30,
@@ -6142,19 +6142,6 @@
     "discrepancy": false
    },
    {
-    "id": 14379,
-    "name": "Aitor Fernández",
-    "prob": 55,
-    "status": "titular",
-    "prob_ff": 60,
-    "prob_af": 50,
-    "starter_ff": true,
-    "starter_af": true,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": false
-   },
-   {
     "id": 22668,
     "name": "Lucas Torró",
     "prob": 50,
@@ -6168,17 +6155,17 @@
     "discrepancy": true
    },
    {
-    "id": 5358737,
-    "name": "Unai Santos",
+    "id": 14379,
+    "name": "Aitor Fernández",
     "prob": 50,
     "status": "titular",
     "prob_ff": 50,
     "prob_af": 50,
     "starter_ff": true,
-    "starter_af": false,
+    "starter_af": true,
     "af_info": null,
     "sanctioned": false,
-    "discrepancy": true
+    "discrepancy": false
    },
    {
     "id": 65475,
@@ -6192,6 +6179,32 @@
     "af_info": null,
     "sanctioned": false,
     "discrepancy": true
+   },
+   {
+    "id": 58438,
+    "name": "Boyomo",
+    "prob": 50,
+    "status": "titular",
+    "prob_ff": 50,
+    "prob_af": 50,
+    "starter_ff": true,
+    "starter_af": true,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
+   },
+   {
+    "id": 17615,
+    "name": "Sergio Herrera",
+    "prob": 50,
+    "status": "titular",
+    "prob_ff": 50,
+    "prob_af": 50,
+    "starter_ff": false,
+    "starter_af": false,
+    "af_info": null,
+    "sanctioned": false,
+    "discrepancy": false
    },
    {
     "id": 19927,
@@ -6220,21 +6233,8 @@
     "discrepancy": true
    },
    {
-    "id": 58438,
-    "name": "Boyomo",
-    "prob": 45,
-    "status": "suplente",
-    "prob_ff": 40,
-    "prob_af": 50,
-    "starter_ff": false,
-    "starter_af": true,
-    "af_info": null,
-    "sanctioned": false,
-    "discrepancy": true
-   },
-   {
-    "id": 17615,
-    "name": "Sergio Herrera",
+    "id": 5358737,
+    "name": "Unai Santos",
     "prob": 45,
     "status": "suplente",
     "prob_ff": 40,
