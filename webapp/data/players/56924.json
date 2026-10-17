@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/56924.png?version=20251031185323",
     "isFavorite": 0,
-    "value": 2417000,
-    "previousValue": 2495000,
+    "value": 2284000,
+    "previousValue": 2417000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2417000,
+      "floor": 2284000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3625500,
+      "value": 3426000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2417000,
+      "price": 2284000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 181,
       "weight": null
     },
-    "clausesRanking": 309
+    "clausesRanking": 302
   },
   "id": 56924,
   "player_extra": {
@@ -254,8 +254,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 308460,
+        "id_player": 56924,
+        "category": "injury",
+        "description": "Lesión muscular",
+        "duration": "Baja esta jornada",
+        "since": "2026-09-29 11:43:52",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -764,35 +773,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2495000,
-      "change": -78000,
-      "sign": -78
+      "value": 2417000,
+      "change": -133000,
+      "sign": -133
     },
     {
       "time": "Una semana",
-      "value": 3484000,
-      "change": -1067000,
-      "sign": "-1.067.000"
+      "value": 3326000,
+      "change": -1042000,
+      "sign": "-1.042.000"
     },
     {
       "time": "Un mes",
-      "value": 8493000,
-      "change": -6076000,
-      "sign": "-6.076.000"
+      "value": 8135000,
+      "change": -5851000,
+      "sign": "-5.851.000"
     },
     {
       "time": "Un año",
-      "value": 41903000,
-      "change": -39486000,
-      "sign": "-39.486.000"
+      "value": 42277000,
+      "change": -39993000,
+      "sign": "-39.993.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 41903000,
-        "date": "16 oct 2025"
-      },
       {
         "value": 42277000,
         "date": "17 oct 2025"
@@ -2252,6 +2257,10 @@
       {
         "value": 2417000,
         "date": "16 oct 2026"
+      },
+      {
+        "value": 2284000,
+        "date": "17 oct 2026"
       }
     ],
     "max": {
@@ -2267,28 +2276,28 @@
     "56924": {
       "id": 56924,
       "id_team": 12,
-      "id_match": 38008,
-      "id_gameweek": 4050,
-      "id_home": 6,
-      "id_away": 12,
+      "id_match": 37992,
+      "id_gameweek": 4047,
+      "id_home": 12,
+      "id_away": 1,
       "date": {
-        "ts": 1792177200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792605600,
+        "text": "mié 20:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "mié",
+          "time": "20:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Levante",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Levante",
+      "away": "Athletic Club",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,

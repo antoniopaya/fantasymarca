@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/63784.png?version=20250613112544",
     "isFavorite": 0,
-    "value": 485000,
-    "previousValue": 341000,
+    "value": 425000,
+    "previousValue": 485000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 485000,
+      "price": 425000,
       "loanable": null
     },
     "bid": {
@@ -217,7 +217,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -698,35 +698,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 341000,
-      "change": 144000,
-      "sign": 144
+      "value": 485000,
+      "change": -60000,
+      "sign": -60
     },
     {
       "time": "Una semana",
-      "value": 329000,
-      "change": 156000,
-      "sign": 156
+      "value": 385000,
+      "change": 40000,
+      "sign": 40
     },
     {
       "time": "Un mes",
-      "value": 470000,
-      "change": 15000,
-      "sign": 15
+      "value": 497000,
+      "change": -72000,
+      "sign": -72
     },
     {
       "time": "Un año",
-      "value": 452000,
-      "change": 33000,
-      "sign": 33
+      "value": 421000,
+      "change": 4000,
+      "sign": 4
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 452000,
-        "date": "16 oct 2025"
-      },
       {
         "value": 421000,
         "date": "17 oct 2025"
@@ -2186,6 +2182,10 @@
       {
         "value": 485000,
         "date": "16 oct 2026"
+      },
+      {
+        "value": 425000,
+        "date": "17 oct 2026"
       }
     ],
     "max": {
@@ -2201,28 +2201,28 @@
     "63784": {
       "id": 63784,
       "id_team": 12,
-      "id_match": 38008,
-      "id_gameweek": 4050,
-      "id_home": 6,
-      "id_away": 12,
+      "id_match": 37992,
+      "id_gameweek": 4047,
+      "id_home": 12,
+      "id_away": 1,
       "date": {
-        "ts": 1792177200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792605600,
+        "text": "mié 20:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "mié",
+          "time": "20:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Levante",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Levante",
+      "away": "Athletic Club",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,

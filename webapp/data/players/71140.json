@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71140.png?version=20260707175228",
     "isFavorite": 0,
-    "value": 2376000,
-    "previousValue": 2390000,
+    "value": 2242000,
+    "previousValue": 2376000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2376000,
+      "floor": 2242000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3564000,
+      "value": 3363000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2376000,
+      "price": 2242000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 233
+    "clausesRanking": 248
   },
   "id": 71140,
   "player_extra": {
@@ -216,8 +216,8 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": "?",
+        "isLive": true
       },
       "events": null,
       "injury": null,
@@ -702,21 +702,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2390000,
-      "change": -14000,
-      "sign": -14
+      "value": 2376000,
+      "change": -134000,
+      "sign": -134
     },
     {
       "time": "Una semana",
-      "value": 2734000,
-      "change": -358000,
-      "sign": -358
+      "value": 2784000,
+      "change": -542000,
+      "sign": -542
     },
     {
       "time": "Un mes",
-      "value": 4357000,
-      "change": -1981000,
-      "sign": "-1.981.000"
+      "value": 4225000,
+      "change": -1983000,
+      "sign": "-1.983.000"
     }
   ],
   "values_chart": {
@@ -1124,6 +1124,10 @@
       {
         "value": 2376000,
         "date": "16 oct 2026"
+      },
+      {
+        "value": 2242000,
+        "date": "17 oct 2026"
       }
     ],
     "max": {
@@ -1139,28 +1143,28 @@
     "71140": {
       "id": 71140,
       "id_team": 8,
-      "id_match": 38009,
-      "id_gameweek": 4050,
-      "id_home": 8,
-      "id_away": 2,
+      "id_match": 38023,
+      "id_gameweek": 4051,
+      "id_home": 1490,
+      "id_away": 8,
       "date": {
-        "ts": 1792238400,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1792851300,
+        "text": "24 oct 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "24 oct",
+          "time": "16:15",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
-      "away": "Atlético",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "home": "Racing de Santander",
+      "away": "Espanyol",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,

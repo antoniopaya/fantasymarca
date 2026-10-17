@@ -3,15 +3,15 @@
     "id": 70941,
     "name": "Bil Nsongo",
     "position": 4,
-    "points": 32,
-    "avg": 4,
+    "points": 39,
+    "avg": 4.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70941.png?version=20260621101823",
     "isFavorite": 0,
-    "value": 21760000,
-    "previousValue": 21560000,
+    "value": 22041000,
+    "previousValue": 21760000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 21760000,
+      "floor": 22041000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 32640000,
+      "value": 33061500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 21760000,
+      "price": 22041000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 109
+    "clausesRanking": 100
   },
   "id": 70941,
   "player_extra": {
-    "matches": 8,
-    "goals": 0,
+    "matches": 9,
+    "goals": 1,
     "cards": 1
   },
   "points": [
@@ -227,12 +227,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -704,30 +706,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 32,
-      "avg": 4,
+      "points": 39,
+      "avg": 4.3333,
       "id_team": 6,
-      "last_gameweek": 8
+      "last_gameweek": 9
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 21560000,
-      "change": 200000,
-      "sign": 200
+      "value": 21760000,
+      "change": 281000,
+      "sign": 281
     },
     {
       "time": "Una semana",
-      "value": 21822000,
-      "change": -62000,
-      "sign": -62
+      "value": 21566000,
+      "change": 475000,
+      "sign": 475
     },
     {
       "time": "Un mes",
-      "value": 16186000,
-      "change": 5574000,
-      "sign": "+5.574.000"
+      "value": 16469000,
+      "change": 5572000,
+      "sign": "+5.572.000"
     }
   ],
   "values_chart": {
@@ -1199,6 +1201,10 @@
       {
         "value": 21760000,
         "date": "16 oct 2026"
+      },
+      {
+        "value": 22041000,
+        "date": "17 oct 2026"
       }
     ],
     "max": {
@@ -1214,36 +1220,36 @@
     "70941": {
       "id": 70941,
       "id_team": 6,
-      "id_match": 38008,
-      "id_gameweek": 4050,
-      "id_home": 6,
-      "id_away": 12,
+      "id_match": 38018,
+      "id_gameweek": 4051,
+      "id_home": 2,
+      "id_away": 6,
       "date": {
-        "ts": 1792177200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792868400,
+        "text": "24 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "24 oct",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Levante",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Atlético",
+      "away": "Deportivo da Coruña",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,
   "home": {
     "70941": {
       "id": 70941,
-      "points": 19,
-      "avg": 4.75
+      "points": 26,
+      "avg": 5.2
     }
   },
   "away": {

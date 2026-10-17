@@ -3,15 +3,15 @@
     "id": 20131,
     "name": "Manu Sánchez",
     "position": 2,
-    "points": 26,
-    "avg": 3.7,
+    "points": 28,
+    "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/20131.png?version=20251004223947",
     "isFavorite": 0,
-    "value": 7338000,
-    "previousValue": 7206000,
+    "value": 7331000,
+    "previousValue": 7338000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 7338000,
+      "floor": 7331000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 11007000,
+      "value": 10996500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 7338000,
+      "price": 7331000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 179,
       "weight": null
     },
-    "clausesRanking": 133
+    "clausesRanking": 131
   },
   "id": 20131,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 0
   },
@@ -214,12 +214,12 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -691,10 +691,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 26,
-      "avg": 3.7143,
+      "points": 28,
+      "avg": 3.5,
       "id_team": 12,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -721,35 +721,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 7206000,
-      "change": 132000,
-      "sign": 132
+      "value": 7338000,
+      "change": -7000,
+      "sign": -7
     },
     {
       "time": "Una semana",
-      "value": 7099000,
-      "change": 239000,
-      "sign": 239
+      "value": 6948000,
+      "change": 383000,
+      "sign": 383
     },
     {
       "time": "Un mes",
-      "value": 8677000,
-      "change": -1339000,
-      "sign": "-1.339.000"
+      "value": 8866000,
+      "change": -1535000,
+      "sign": "-1.535.000"
     },
     {
       "time": "Un año",
-      "value": 12233000,
-      "change": -4895000,
-      "sign": "-4.895.000"
+      "value": 12548000,
+      "change": -5217000,
+      "sign": "-5.217.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 12233000,
-        "date": "16 oct 2025"
-      },
       {
         "value": 12548000,
         "date": "17 oct 2025"
@@ -2209,6 +2205,10 @@
       {
         "value": 7338000,
         "date": "16 oct 2026"
+      },
+      {
+        "value": 7331000,
+        "date": "17 oct 2026"
       }
     ],
     "max": {
@@ -2224,28 +2224,28 @@
     "20131": {
       "id": 20131,
       "id_team": 12,
-      "id_match": 38008,
-      "id_gameweek": 4050,
-      "id_home": 6,
-      "id_away": 12,
+      "id_match": 37992,
+      "id_gameweek": 4047,
+      "id_home": 12,
+      "id_away": 1,
       "date": {
-        "ts": 1792177200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792605600,
+        "text": "mié 20:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "mié",
+          "time": "20:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": 0,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Levante",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Levante",
+      "away": "Athletic Club",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
@@ -2259,8 +2259,8 @@
   "away": {
     "20131": {
       "id": 20131,
-      "points": 19,
-      "avg": 4.75
+      "points": 21,
+      "avg": 4.2
     }
   },
   "owners": [],

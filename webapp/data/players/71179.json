@@ -5,13 +5,17 @@
     "position": 4,
     "points": 2,
     "avg": 1,
-    "status": null,
+    "status": "other",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "other",
+      "description": "No convocado",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71179.png?version=20260713091445",
     "isFavorite": 0,
-    "value": 452000,
-    "previousValue": 460000,
+    "value": 340000,
+    "previousValue": 452000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -47,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 452000,
+      "price": 340000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 273
+    "clausesRanking": 275
   },
   "id": 71179,
   "player_extra": {
@@ -702,21 +706,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 460000,
-      "change": -8000,
-      "sign": -8
+      "value": 452000,
+      "change": -112000,
+      "sign": -112
     },
     {
       "time": "Una semana",
-      "value": 422000,
-      "change": 30000,
-      "sign": 30
+      "value": 399000,
+      "change": -59000,
+      "sign": -59
     },
     {
       "time": "Un mes",
-      "value": 3976000,
-      "change": -3524000,
-      "sign": "-3.524.000"
+      "value": 3678000,
+      "change": -3338000,
+      "sign": "-3.338.000"
     }
   ],
   "values_chart": {
@@ -1100,6 +1104,10 @@
       {
         "value": 452000,
         "date": "16 oct 2026"
+      },
+      {
+        "value": 340000,
+        "date": "17 oct 2026"
       }
     ],
     "max": {
@@ -1107,8 +1115,8 @@
       "date": "28 ago 2026"
     },
     "min": {
-      "value": 355000,
-      "date": "11 oct 2026"
+      "value": 340000,
+      "date": "17 oct 2026"
     }
   },
   "next_match": {
@@ -1121,12 +1129,12 @@
       "id_away": 3,
       "date": {
         "ts": 1792254600,
-        "text": "sáb 18:30",
-        "format": "EEE H:mm",
+        "text": "Hoy 18:30",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "sáb",
+          "date": "Hoy",
           "time": "18:30",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

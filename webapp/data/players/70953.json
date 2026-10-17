@@ -3,15 +3,15 @@
     "id": 70953,
     "name": "Miguel Loureiro",
     "position": 2,
-    "points": 20,
-    "avg": 5,
+    "points": 21,
+    "avg": 4.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70953.png?version=20260621102344",
     "isFavorite": 0,
-    "value": 1458000,
-    "previousValue": 1532000,
+    "value": 1391000,
+    "previousValue": 1458000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1458000,
+      "floor": 1391000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2187000,
+      "value": 2086500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1458000,
+      "price": 1391000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 403
+    "clausesRanking": 310
   },
   "id": 70953,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 0
   },
@@ -218,12 +218,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -695,30 +697,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 20,
-      "avg": 5,
+      "points": 21,
+      "avg": 4.2,
       "id_team": 6,
-      "last_gameweek": 6
+      "last_gameweek": 9
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 1532000,
-      "change": -74000,
-      "sign": -74
+      "value": 1458000,
+      "change": -67000,
+      "sign": -67
     },
     {
       "time": "Una semana",
-      "value": 2372000,
-      "change": -914000,
-      "sign": -914
+      "value": 2342000,
+      "change": -951000,
+      "sign": -951
     },
     {
       "time": "Un mes",
-      "value": 2766000,
-      "change": -1308000,
-      "sign": "-1.308.000"
+      "value": 2843000,
+      "change": -1452000,
+      "sign": "-1.452.000"
     }
   ],
   "values_chart": {
@@ -1190,6 +1192,10 @@
       {
         "value": 1458000,
         "date": "16 oct 2026"
+      },
+      {
+        "value": 1391000,
+        "date": "17 oct 2026"
       }
     ],
     "max": {
@@ -1205,36 +1211,36 @@
     "70953": {
       "id": 70953,
       "id_team": 6,
-      "id_match": 38008,
-      "id_gameweek": 4050,
-      "id_home": 6,
-      "id_away": 12,
+      "id_match": 38018,
+      "id_gameweek": 4051,
+      "id_home": 2,
+      "id_away": 6,
       "date": {
-        "ts": 1792177200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792868400,
+        "text": "24 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "24 oct",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Levante",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Atlético",
+      "away": "Deportivo da Coruña",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,
   "home": {
     "70953": {
       "id": 70953,
-      "points": 12,
-      "avg": 6
+      "points": 13,
+      "avg": 4.3333
     }
   },
   "away": {

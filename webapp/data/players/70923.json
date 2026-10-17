@@ -3,15 +3,15 @@
     "id": 70923,
     "name": "Enzo Bardeli",
     "position": 3,
-    "points": 31,
-    "avg": 5.2,
+    "points": 34,
+    "avg": 4.9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70923.png?version=20260619102457",
     "isFavorite": 0,
-    "value": 9037000,
-    "previousValue": 9195000,
+    "value": 8760000,
+    "previousValue": 9037000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9037000,
+      "floor": 8760000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 13555500,
+      "value": 13140000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9037000,
+      "price": 8760000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 172,
       "weight": null
     },
-    "clausesRanking": 255
+    "clausesRanking": 252
   },
   "id": 70923,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 1,
     "cards": 0
   },
@@ -224,12 +224,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -701,30 +703,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 31,
-      "avg": 5.1667,
+      "points": 34,
+      "avg": 4.8571,
       "id_team": 12,
-      "last_gameweek": 7
+      "last_gameweek": 9
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 9195000,
-      "change": -158000,
-      "sign": -158
+      "value": 9037000,
+      "change": -277000,
+      "sign": -277
     },
     {
       "time": "Una semana",
-      "value": 9203000,
-      "change": -166000,
-      "sign": -166
+      "value": 9359000,
+      "change": -599000,
+      "sign": -599
     },
     {
       "time": "Un mes",
-      "value": 6818000,
-      "change": 2219000,
-      "sign": "+2.219.000"
+      "value": 7040000,
+      "change": 1720000,
+      "sign": "+1.720.000"
     }
   ],
   "values_chart": {
@@ -1204,6 +1206,10 @@
       {
         "value": 9037000,
         "date": "16 oct 2026"
+      },
+      {
+        "value": 8760000,
+        "date": "17 oct 2026"
       }
     ],
     "max": {
@@ -1219,28 +1225,28 @@
     "70923": {
       "id": 70923,
       "id_team": 12,
-      "id_match": 38008,
-      "id_gameweek": 4050,
-      "id_home": 6,
-      "id_away": 12,
+      "id_match": 37992,
+      "id_gameweek": 4047,
+      "id_home": 12,
+      "id_away": 1,
       "date": {
-        "ts": 1792177200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792605600,
+        "text": "mié 20:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "mié",
+          "time": "20:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": 0,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Levante",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Levante",
+      "away": "Athletic Club",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
@@ -1254,8 +1260,8 @@
   "away": {
     "70923": {
       "id": 70923,
-      "points": 17,
-      "avg": 4.25
+      "points": 20,
+      "avg": 4
     }
   },
   "owners": [],

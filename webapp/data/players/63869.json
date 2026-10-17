@@ -45,15 +45,15 @@
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
+      "id": 1876158290,
+      "isPublic": 1,
       "price": 329000,
-      "loanable": null
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 329000,
       "barter": [],
       "type": null,
       "days": null
@@ -722,29 +722,25 @@
     },
     {
       "time": "Una semana",
-      "value": 329000,
-      "change": 0,
-      "sign": 0
+      "value": 493000,
+      "change": -164000,
+      "sign": -164
     },
     {
       "time": "Un mes",
-      "value": 333000,
-      "change": -4000,
-      "sign": -4
+      "value": 481000,
+      "change": -152000,
+      "sign": -152
     },
     {
       "time": "Un año",
-      "value": 422000,
-      "change": -93000,
-      "sign": -93
+      "value": 334000,
+      "change": -5000,
+      "sign": -5
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 422000,
-        "date": "16 oct 2025"
-      },
       {
         "value": 334000,
         "date": "17 oct 2025"
@@ -1588,6 +1584,10 @@
       {
         "value": 329000,
         "date": "16 oct 2026"
+      },
+      {
+        "value": 329000,
+        "date": "17 oct 2026"
       }
     ],
     "max": {
@@ -1609,12 +1609,12 @@
       "id_away": 23,
       "date": {
         "ts": 1792246500,
-        "text": "sáb 16:15",
-        "format": "EEE H:mm",
+        "text": "Hoy 16:15",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "sáb",
+          "date": "Hoy",
           "time": "16:15",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
