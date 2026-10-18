@@ -3,15 +3,15 @@
     "id": 29,
     "name": "Iñaki Williams",
     "position": 4,
-    "points": 31,
+    "points": 35,
     "avg": 4.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/29.png?version=20251003185351",
     "isFavorite": 0,
-    "value": 17449000,
-    "previousValue": 17208000,
+    "value": 17665000,
+    "previousValue": 17449000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 17449000,
+      "floor": 17665000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 26173500,
+      "value": 26497500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 17449000,
+      "price": 17665000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 186,
       "weight": 76
     },
-    "clausesRanking": 215
+    "clausesRanking": 294
   },
   "id": 29,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 0
   },
@@ -226,12 +226,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -703,10 +705,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 27,
-      "avg": 3.8571,
+      "points": 31,
+      "avg": 3.875,
       "id_team": 1,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -733,35 +735,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 17208000,
-      "change": 241000,
-      "sign": 241
+      "value": 17449000,
+      "change": 216000,
+      "sign": 216
     },
     {
       "time": "Una semana",
-      "value": 18479000,
-      "change": -1030000,
-      "sign": "-1.030.000"
+      "value": 18366000,
+      "change": -701000,
+      "sign": -701
     },
     {
       "time": "Un mes",
-      "value": 24099000,
-      "change": -6650000,
-      "sign": "-6.650.000"
+      "value": 24210000,
+      "change": -6545000,
+      "sign": "-6.545.000"
     },
     {
       "time": "Un año",
-      "value": 24192000,
-      "change": -6743000,
-      "sign": "-6.743.000"
+      "value": 24103000,
+      "change": -6438000,
+      "sign": "-6.438.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 24192000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 24103000,
         "date": "18 oct 2025"
@@ -2221,6 +2219,10 @@
       {
         "value": 17449000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 17665000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -2236,27 +2238,27 @@
     "29": {
       "id": 29,
       "id_team": 1,
-      "id_match": 38015,
-      "id_gameweek": 4050,
-      "id_home": 19,
+      "id_match": 37992,
+      "id_gameweek": 4047,
+      "id_home": 12,
       "id_away": 1,
       "date": {
-        "ts": 1792263600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792605600,
+        "text": "mié 20:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "mié",
+          "time": "20:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Valencia",
+      "home": "Levante",
       "away": "Athletic Club",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
@@ -2271,8 +2273,8 @@
   "away": {
     "29": {
       "id": 29,
-      "points": 8,
-      "avg": 2.6667
+      "points": 12,
+      "avg": 3
     }
   },
   "owners": [],

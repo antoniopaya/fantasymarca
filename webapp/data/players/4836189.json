@@ -3,15 +3,15 @@
     "id": 4836189,
     "name": "Harvey Elliott",
     "position": 3,
-    "points": 7,
+    "points": 9,
     "avg": 1.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4836189.png?version=20260901214753",
     "isFavorite": 0,
-    "value": 4924000,
-    "previousValue": 5124000,
+    "value": 4734000,
+    "previousValue": 4924000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4924000,
+      "floor": 4734000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7386000,
+      "value": 7101000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4924000,
+      "price": 4734000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 4836189,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 0
   },
@@ -220,12 +220,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -697,30 +699,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 7,
-      "avg": 1.75,
+      "points": 9,
+      "avg": 1.8,
       "id_team": 19,
-      "last_gameweek": 8
+      "last_gameweek": 9
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 5124000,
-      "change": -200000,
-      "sign": -200
+      "value": 4924000,
+      "change": -190000,
+      "sign": -190
     },
     {
       "time": "Una semana",
-      "value": 6467000,
-      "change": -1543000,
-      "sign": "-1.543.000"
+      "value": 6227000,
+      "change": -1493000,
+      "sign": "-1.493.000"
     },
     {
       "time": "Un mes",
-      "value": 14960000,
-      "change": -10036000,
-      "sign": "-10.036.000"
+      "value": 14348000,
+      "change": -9614000,
+      "sign": "-9.614.000"
     }
   ],
   "values_chart": {
@@ -908,6 +910,10 @@
       {
         "value": 4924000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 4734000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -915,44 +921,44 @@
       "date": "10 sept 2026"
     },
     "min": {
-      "value": 4924000,
-      "date": "17 oct 2026"
+      "value": 4734000,
+      "date": "18 oct 2026"
     }
   },
   "next_match": {
     "4836189": {
       "id": 4836189,
       "id_team": 19,
-      "id_match": 38015,
-      "id_gameweek": 4050,
+      "id_match": 38026,
+      "id_gameweek": 4051,
       "id_home": 19,
-      "id_away": 1,
+      "id_away": 20,
       "date": {
-        "ts": 1792263600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792859400,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Valencia",
-      "away": "Athletic Club",
+      "away": "Villarreal",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "4836189": {
       "id": 4836189,
-      "points": 3,
-      "avg": 1.5
+      "points": 5,
+      "avg": 1.6667
     }
   },
   "away": {

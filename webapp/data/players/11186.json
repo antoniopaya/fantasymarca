@@ -4,14 +4,14 @@
     "name": "Dani Raba",
     "position": 4,
     "points": 5,
-    "avg": 2.5,
+    "avg": 1.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/11186.png?version=20251006014924",
     "isFavorite": 0,
-    "value": 1619000,
-    "previousValue": 1398000,
+    "value": 1874000,
+    "previousValue": 1619000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1619000,
+      "floor": 1874000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2428500,
+      "value": 2811000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1619000,
+      "price": 1874000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 17
+    "clausesRanking": 18
   },
   "id": 11186,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 1,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -218,12 +218,15 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -696,9 +699,9 @@
     {
       "season": "26/27",
       "points": 5,
-      "avg": 2.5,
+      "avg": 1.6667,
       "id_team": 19,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -718,35 +721,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1398000,
-      "change": 221000,
-      "sign": 221
+      "value": 1619000,
+      "change": 255000,
+      "sign": 255
     },
     {
       "time": "Una semana",
-      "value": 389000,
-      "change": 1230000,
-      "sign": "+1.230.000"
+      "value": 401000,
+      "change": 1473000,
+      "sign": "+1.473.000"
     },
     {
       "time": "Un mes",
-      "value": 341000,
-      "change": 1278000,
-      "sign": "+1.278.000"
+      "value": 329000,
+      "change": 1545000,
+      "sign": "+1.545.000"
     },
     {
       "time": "Un año",
-      "value": 9356000,
-      "change": -7737000,
-      "sign": "-7.737.000"
+      "value": 9050000,
+      "change": -7176000,
+      "sign": "-7.176.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 9356000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 9050000,
         "date": "18 oct 2025"
@@ -2206,11 +2205,15 @@
       {
         "value": 1619000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 1874000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
-      "value": 9356000,
-      "date": "17 oct 2025"
+      "value": 9050000,
+      "date": "18 oct 2025"
     },
     "min": {
       "value": 329000,
@@ -2221,33 +2224,34 @@
     "11186": {
       "id": 11186,
       "id_team": 19,
-      "id_match": 38015,
-      "id_gameweek": 4050,
+      "id_match": 38026,
+      "id_gameweek": 4051,
       "id_home": 19,
-      "id_away": 1,
+      "id_away": 20,
       "date": {
-        "ts": 1792263600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792859400,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Valencia",
-      "away": "Athletic Club",
+      "away": "Villarreal",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "11186": {
+      "id": 11186,
       "points": 0,
       "avg": 0
     }

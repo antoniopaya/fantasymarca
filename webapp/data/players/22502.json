@@ -3,15 +3,15 @@
     "id": 22502,
     "name": "Alex Baena",
     "position": 3,
-    "points": 60,
-    "avg": 7.5,
+    "points": 70,
+    "avg": 7.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22502.png?version=20251228214026",
     "isFavorite": 0,
-    "value": 48944000,
-    "previousValue": 48781000,
+    "value": 49365000,
+    "previousValue": 48944000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 48944000,
+      "floor": 49365000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 73416000,
+      "value": 74047500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 48944000,
+      "price": 49365000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 174,
       "weight": null
     },
-    "clausesRanking": 66
+    "clausesRanking": 40
   },
   "id": 22502,
   "player_extra": {
-    "matches": 8,
-    "goals": 4,
-    "cards": 1
+    "matches": 9,
+    "goals": 5,
+    "cards": 2
   },
   "points": [
     {
@@ -234,12 +234,16 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 10,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -711,10 +715,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 60,
-      "avg": 7.5,
+      "points": 70,
+      "avg": 7.7778,
       "id_team": 2,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -741,35 +745,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 48781000,
-      "change": 163000,
-      "sign": 163
+      "value": 48944000,
+      "change": 421000,
+      "sign": 421
     },
     {
       "time": "Una semana",
-      "value": 47879000,
-      "change": 1065000,
-      "sign": "+1.065.000"
+      "value": 47804000,
+      "change": 1561000,
+      "sign": "+1.561.000"
     },
     {
       "time": "Un mes",
-      "value": 45187000,
-      "change": 3757000,
-      "sign": "+3.757.000"
+      "value": 45300000,
+      "change": 4065000,
+      "sign": "+4.065.000"
     },
     {
       "time": "Un año",
-      "value": 44251000,
-      "change": 4693000,
-      "sign": "+4.693.000"
+      "value": 44109000,
+      "change": 5256000,
+      "sign": "+5.256.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 44251000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 44109000,
         "date": "18 oct 2025"
@@ -2229,6 +2229,10 @@
       {
         "value": 48944000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 49365000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -2250,12 +2254,12 @@
       "id_away": 6,
       "date": {
         "ts": 1792868400,
-        "text": "24 oct 21:00",
-        "format": "d MMM H:mm",
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "24 oct",
+          "date": "sáb",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2279,8 +2283,8 @@
   "away": {
     "22502": {
       "id": 22502,
-      "points": 30,
-      "avg": 7.5
+      "points": 40,
+      "avg": 8
     }
   },
   "owners": [],

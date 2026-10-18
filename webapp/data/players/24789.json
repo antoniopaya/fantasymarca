@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/24789.png?version=20260414174608",
     "isFavorite": 0,
-    "value": 28326000,
-    "previousValue": 28671000,
+    "value": 27833000,
+    "previousValue": 28326000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 28326000,
+      "floor": 27833000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 42489000,
+      "value": 41749500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 28326000,
+      "price": 27833000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 416
+    "clausesRanking": 406
   },
   "id": 24789,
   "player_extra": {
@@ -238,8 +238,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 309859,
+        "id_player": 24789,
+        "category": "injury",
+        "description": "Lesión en el recto anterior",
+        "duration": "Baja esta jornada",
+        "since": "2026-10-16 15:10:06",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -741,35 +750,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 28671000,
-      "change": -345000,
-      "sign": -345
+      "value": 28326000,
+      "change": -493000,
+      "sign": -493
     },
     {
       "time": "Una semana",
-      "value": 32379000,
-      "change": -4053000,
-      "sign": "-4.053.000"
+      "value": 31723000,
+      "change": -3890000,
+      "sign": "-3.890.000"
     },
     {
       "time": "Un mes",
-      "value": 39982000,
-      "change": -11656000,
-      "sign": "-11.656.000"
+      "value": 40007000,
+      "change": -12174000,
+      "sign": "-12.174.000"
     },
     {
       "time": "Un año",
-      "value": 51341000,
-      "change": -23015000,
-      "sign": "-23.015.000"
+      "value": 51335000,
+      "change": -23502000,
+      "sign": "-23.502.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 51341000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 51335000,
         "date": "18 oct 2025"
@@ -2229,6 +2234,10 @@
       {
         "value": 28326000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 27833000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -2244,27 +2253,27 @@
     "24789": {
       "id": 24789,
       "id_team": 1,
-      "id_match": 38015,
-      "id_gameweek": 4050,
-      "id_home": 19,
+      "id_match": 37992,
+      "id_gameweek": 4047,
+      "id_home": 12,
       "id_away": 1,
       "date": {
-        "ts": 1792263600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792605600,
+        "text": "mié 20:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "mié",
+          "time": "20:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Valencia",
+      "home": "Levante",
       "away": "Athletic Club",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },

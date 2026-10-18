@@ -3,15 +3,15 @@
     "id": 60218,
     "name": "Peio Canales",
     "position": 3,
-    "points": 14,
-    "avg": 2.8,
+    "points": 18,
+    "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60218.png?version=20260619120854",
     "isFavorite": 0,
-    "value": 5382000,
-    "previousValue": 5320000,
+    "value": 5486000,
+    "previousValue": 5382000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5382000,
+      "floor": 5486000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8073000,
+      "value": 8229000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5382000,
+      "price": 5486000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 83
+    "clausesRanking": 86
   },
   "id": 60218,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 0,
     "cards": 0
   },
@@ -234,12 +234,12 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -711,10 +711,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 14,
-      "avg": 2.8,
+      "points": 18,
+      "avg": 3,
       "id_team": 1,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "24/25",
@@ -727,21 +727,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5320000,
-      "change": 62000,
-      "sign": 62
+      "value": 5382000,
+      "change": 104000,
+      "sign": 104
     },
     {
       "time": "Una semana",
-      "value": 4812000,
-      "change": 570000,
-      "sign": 570
+      "value": 4880000,
+      "change": 606000,
+      "sign": 606
     },
     {
       "time": "Un mes",
-      "value": 4594000,
-      "change": 788000,
-      "sign": 788
+      "value": 4453000,
+      "change": 1033000,
+      "sign": "+1.033.000"
     }
   ],
   "values_chart": {
@@ -1229,6 +1229,10 @@
       {
         "value": 5382000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 5486000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -1244,27 +1248,27 @@
     "60218": {
       "id": 60218,
       "id_team": 1,
-      "id_match": 38015,
-      "id_gameweek": 4050,
-      "id_home": 19,
+      "id_match": 37992,
+      "id_gameweek": 4047,
+      "id_home": 12,
       "id_away": 1,
       "date": {
-        "ts": 1792263600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792605600,
+        "text": "mié 20:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "mié",
+          "time": "20:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Valencia",
+      "home": "Levante",
       "away": "Athletic Club",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
@@ -1279,8 +1283,8 @@
   "away": {
     "60218": {
       "id": 60218,
-      "points": 4,
-      "avg": 1.3333
+      "points": 8,
+      "avg": 2
     }
   },
   "owners": [],

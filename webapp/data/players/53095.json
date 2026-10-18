@@ -3,15 +3,15 @@
     "id": 53095,
     "name": "Bryan Zaragoza",
     "position": 3,
-    "points": 22,
-    "avg": 4.4,
+    "points": 29,
+    "avg": 4.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/53095.png?version=20260827201514",
     "isFavorite": 0,
-    "value": 18381000,
-    "previousValue": 17752000,
+    "value": 19032000,
+    "previousValue": 18381000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 18381000,
+      "floor": 19032000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 27571500,
+      "value": 28548000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 18381000,
+      "price": 19032000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 165,
       "weight": null
     },
-    "clausesRanking": 104
+    "clausesRanking": 95
   },
   "id": 53095,
   "player_extra": {
@@ -233,12 +233,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 7,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -710,10 +712,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 22,
-      "avg": 4.4,
+      "points": 29,
+      "avg": 4.8333,
       "id_team": 8,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -740,35 +742,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 17752000,
-      "change": 629000,
-      "sign": 629
+      "value": 18381000,
+      "change": 651000,
+      "sign": 651
     },
     {
       "time": "Una semana",
-      "value": 14218000,
-      "change": 4163000,
-      "sign": "+4.163.000"
+      "value": 14738000,
+      "change": 4294000,
+      "sign": "+4.294.000"
     },
     {
       "time": "Un mes",
-      "value": 22803000,
-      "change": -4422000,
-      "sign": "-4.422.000"
+      "value": 22561000,
+      "change": -3529000,
+      "sign": "-3.529.000"
     },
     {
       "time": "Un año",
-      "value": 12355000,
-      "change": 6026000,
-      "sign": "+6.026.000"
+      "value": 12027000,
+      "change": 7005000,
+      "sign": "+7.005.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 12355000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 12027000,
         "date": "18 oct 2025"
@@ -1404,6 +1402,10 @@
       {
         "value": 18381000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 19032000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -1425,12 +1427,12 @@
       "id_away": 8,
       "date": {
         "ts": 1792851300,
-        "text": "24 oct 16:15",
-        "format": "d MMM H:mm",
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "24 oct",
+          "date": "sáb",
           "time": "16:15",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -1447,8 +1449,8 @@
   "home": {
     "53095": {
       "id": 53095,
-      "points": 4,
-      "avg": 2
+      "points": 11,
+      "avg": 3.6667
     }
   },
   "away": {

@@ -3,15 +3,15 @@
     "id": 1762,
     "name": "Álex Berenguer",
     "position": 3,
-    "points": 29,
-    "avg": 4.1,
+    "points": 35,
+    "avg": 4.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/1762.png?version=20251003185228",
     "isFavorite": 0,
-    "value": 18816000,
-    "previousValue": 18072000,
+    "value": 19656000,
+    "previousValue": 18816000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 18816000,
+      "floor": 19656000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 28224000,
+      "value": 29484000,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 18816000,
-      "loanable": null
+      "id": 1879280828,
+      "isPublic": 1,
+      "price": 19656000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 19656000,
       "barter": [],
       "type": null,
       "days": null
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": 70
     },
-    "clausesRanking": 27
+    "clausesRanking": 19
   },
   "id": 1762,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 1,
     "cards": 1
   },
@@ -224,12 +224,12 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -701,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 29,
-      "avg": 4.1429,
+      "points": 35,
+      "avg": 4.375,
       "id_team": 1,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -731,35 +731,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 18072000,
-      "change": 744000,
-      "sign": 744
+      "value": 18816000,
+      "change": 840000,
+      "sign": 840
     },
     {
       "time": "Una semana",
-      "value": 20329000,
-      "change": -1513000,
-      "sign": "-1.513.000"
+      "value": 19981000,
+      "change": -325000,
+      "sign": -325
     },
     {
       "time": "Un mes",
-      "value": 19367000,
-      "change": -551000,
-      "sign": -551
+      "value": 19887000,
+      "change": -231000,
+      "sign": -231
     },
     {
       "time": "Un año",
-      "value": 14694000,
-      "change": 4122000,
-      "sign": "+4.122.000"
+      "value": 14442000,
+      "change": 5214000,
+      "sign": "+5.214.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 14694000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 14442000,
         "date": "18 oct 2025"
@@ -2219,6 +2215,10 @@
       {
         "value": 18816000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 19656000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -2234,27 +2234,27 @@
     "1762": {
       "id": 1762,
       "id_team": 1,
-      "id_match": 38015,
-      "id_gameweek": 4050,
-      "id_home": 19,
+      "id_match": 37992,
+      "id_gameweek": 4047,
+      "id_home": 12,
       "id_away": 1,
       "date": {
-        "ts": 1792263600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792605600,
+        "text": "mié 20:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "mié",
+          "time": "20:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Valencia",
+      "home": "Levante",
       "away": "Athletic Club",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
@@ -2269,8 +2269,8 @@
   "away": {
     "1762": {
       "id": 1762,
-      "points": 15,
-      "avg": 5
+      "points": 21,
+      "avg": 5.25
     }
   },
   "owners": [],

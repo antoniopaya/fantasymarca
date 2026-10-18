@@ -3,15 +3,15 @@
     "id": 5516711,
     "name": "Nizar El Jmili",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 1,
+    "avg": 1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/5516711.png?version=20261016164807",
     "isFavorite": 0,
-    "value": 345000,
-    "previousValue": 360000,
+    "value": 469000,
+    "previousValue": 345000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 345000,
+      "price": 469000,
       "loanable": null
     },
     "bid": {
@@ -60,19 +60,19 @@
     },
     "loan": [],
     "bio": {
-      "age": null,
+      "age": 21,
       "country": {
-        "flag": "",
-        "country": ""
+        "flag": "🇪🇸",
+        "country": "España"
       },
-      "height": null,
+      "height": 172,
       "weight": null
     },
     "clausesRanking": null
   },
   "id": 5516711,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -212,12 +212,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -686,13 +688,21 @@
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   ],
-  "points_history": [],
+  "points_history": [
+    {
+      "season": "26/27",
+      "points": 1,
+      "avg": 1,
+      "id_team": 20,
+      "last_gameweek": 9
+    }
+  ],
   "values": [
     {
       "time": "Un día",
-      "value": 360000,
-      "change": -15000,
-      "sign": -15
+      "value": 345000,
+      "change": 124000,
+      "sign": 124
     }
   ],
   "values_chart": {
@@ -704,11 +714,15 @@
       {
         "value": 345000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 469000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
-      "value": 360000,
-      "date": "16 oct 2026"
+      "value": 469000,
+      "date": "18 oct 2026"
     },
     "min": {
       "value": 345000,
@@ -719,35 +733,36 @@
     "5516711": {
       "id": 5516711,
       "id_team": 20,
-      "id_match": 38016,
-      "id_gameweek": 4050,
-      "id_home": 20,
-      "id_away": 23,
+      "id_match": 38026,
+      "id_gameweek": 4051,
+      "id_home": 19,
+      "id_away": 20,
       "date": {
-        "ts": 1792246500,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1792859400,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Villarreal",
-      "away": "Elche",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+      "home": "Valencia",
+      "away": "Villarreal",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "5516711": {
-      "points": 0,
-      "avg": 0
+      "id": 5516711,
+      "points": 1,
+      "avg": 1
     }
   },
   "away": {

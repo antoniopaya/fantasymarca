@@ -5,17 +5,17 @@
     "position": 4,
     "points": 24,
     "avg": 4,
-    "status": "doubt",
+    "status": "injury",
     "id_competition": 1,
     "injury": {
-      "category": "doubt",
+      "category": "injury",
       "description": "Edema en el sóleo",
-      "duration": "Duda esta jornada"
+      "duration": "Baja esta jornada"
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/51134.png?version=20240718155216",
     "isFavorite": 0,
-    "value": 8540000,
-    "previousValue": 8827000,
+    "value": 8284000,
+    "previousValue": 8540000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -38,26 +38,26 @@
       "price": null
     },
     "clause": {
-      "floor": 8540000,
+      "floor": 8284000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 12810000,
+      "value": 12426000,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 8540000,
-      "loanable": null
+      "id": 1879280831,
+      "isPublic": 1,
+      "price": 8284000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 8284000,
       "barter": [],
       "type": null,
       "days": null
@@ -72,7 +72,7 @@
       "height": 176,
       "weight": null
     },
-    "clausesRanking": 125
+    "clausesRanking": 136
   },
   "id": 51134,
   "player_extra": {
@@ -730,35 +730,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 8827000,
-      "change": -287000,
-      "sign": -287
+      "value": 8540000,
+      "change": -256000,
+      "sign": -256
     },
     {
       "time": "Una semana",
-      "value": 8250000,
-      "change": 290000,
-      "sign": 290
+      "value": 8413000,
+      "change": -129000,
+      "sign": -129
     },
     {
       "time": "Un mes",
-      "value": 3236000,
-      "change": 5304000,
-      "sign": "+5.304.000"
+      "value": 3115000,
+      "change": 5169000,
+      "sign": "+5.169.000"
     },
     {
       "time": "Un año",
-      "value": 5484000,
-      "change": 3056000,
-      "sign": "+3.056.000"
+      "value": 5322000,
+      "change": 2962000,
+      "sign": "+2.962.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 5484000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 5322000,
         "date": "18 oct 2025"
@@ -2218,6 +2214,10 @@
       {
         "value": 8540000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 8284000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -2239,16 +2239,16 @@
       "id_away": 48,
       "date": {
         "ts": 1792332900,
-        "text": "dom 16:15",
-        "format": "EEE H:mm",
+        "text": "Hoy 16:15",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "dom",
+          "date": "Hoy",
           "time": "16:15",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Celta",
       "away": "Alavés",

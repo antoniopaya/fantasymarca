@@ -11,7 +11,7 @@
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68516.png?version=20260120091915",
     "isFavorite": 0,
     "value": 329000,
-    "previousValue": null,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -708,7 +708,14 @@
       "last_gameweek": 20
     }
   ],
-  "values": [],
+  "values": [
+    {
+      "time": "Un día",
+      "value": 329000,
+      "change": 0,
+      "sign": 0
+    }
+  ],
   "values_chart": {
     "points": [
       {
@@ -1250,6 +1257,10 @@
       {
         "value": 329000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 329000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -1271,12 +1282,12 @@
       "id_away": 48,
       "date": {
         "ts": 1792332900,
-        "text": "dom 16:15",
-        "format": "EEE H:mm",
+        "text": "Hoy 16:15",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "dom",
+          "date": "Hoy",
           "time": "16:15",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

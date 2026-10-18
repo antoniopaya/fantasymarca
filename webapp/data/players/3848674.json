@@ -3,15 +3,15 @@
     "id": 3848674,
     "name": "Matteo Prati",
     "position": 3,
-    "points": 10,
-    "avg": 2,
+    "points": 11,
+    "avg": 1.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3848674.png?version=20260826110327",
     "isFavorite": 0,
-    "value": 1278000,
-    "previousValue": 1163000,
+    "value": 1352000,
+    "previousValue": 1278000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1278000,
+      "floor": 1352000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1917000,
+      "value": 2028000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1278000,
+      "price": 1352000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 101
+    "clausesRanking": 106
   },
   "id": 3848674,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 0,
     "cards": 0
   },
@@ -220,8 +220,8 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 1,
+        "isLive": true
       },
       "events": null,
       "injury": null,
@@ -706,21 +706,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1163000,
-      "change": 115000,
-      "sign": 115
+      "value": 1278000,
+      "change": 74000,
+      "sign": 74
     },
     {
       "time": "Una semana",
-      "value": 692000,
-      "change": 586000,
-      "sign": 586
+      "value": 539000,
+      "change": 813000,
+      "sign": 813
     },
     {
       "time": "Un mes",
-      "value": 1347000,
-      "change": -69000,
-      "sign": -69
+      "value": 1286000,
+      "change": 66000,
+      "sign": 66
     }
   ],
   "values_chart": {
@@ -932,6 +932,10 @@
       {
         "value": 1278000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 1352000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -947,28 +951,28 @@
     "3848674": {
       "id": 3848674,
       "id_team": 1490,
-      "id_match": 38012,
-      "id_gameweek": 4050,
-      "id_home": 50,
-      "id_away": 1490,
+      "id_match": 38023,
+      "id_gameweek": 4051,
+      "id_home": 1490,
+      "id_away": 8,
       "date": {
-        "ts": 1792324800,
-        "text": "dom 14:00",
+        "ts": 1792851300,
+        "text": "sáb 16:15",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
+          "date": "sáb",
+          "time": "16:15",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Racing de Santander",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Racing de Santander",
+      "away": "Espanyol",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,

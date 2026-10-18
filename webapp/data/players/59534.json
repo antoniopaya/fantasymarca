@@ -3,15 +3,15 @@
     "id": 59534,
     "name": "David Otorbi",
     "position": 4,
-    "points": 23,
-    "avg": 3.3,
+    "points": 27,
+    "avg": 3.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59534.png?version=20240817233448",
     "isFavorite": 0,
-    "value": 5047000,
-    "previousValue": 4906000,
+    "value": 5219000,
+    "previousValue": 5047000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5047000,
+      "floor": 5219000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7570500,
+      "value": 7828500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5047000,
+      "price": 5219000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 22
+    "clausesRanking": 21
   },
   "id": 59534,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 1,
     "cards": 0
   },
@@ -225,12 +225,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -702,10 +704,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 20,
-      "avg": 2.8571,
+      "points": 24,
+      "avg": 3,
       "id_team": 19,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "24/25",
@@ -718,21 +720,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4906000,
-      "change": 141000,
-      "sign": 141
+      "value": 5047000,
+      "change": 172000,
+      "sign": 172
     },
     {
       "time": "Una semana",
-      "value": 3987000,
-      "change": 1060000,
-      "sign": "+1.060.000"
+      "value": 3950000,
+      "change": 1269000,
+      "sign": "+1.269.000"
     },
     {
       "time": "Un mes",
-      "value": 1994000,
-      "change": 3053000,
-      "sign": "+3.053.000"
+      "value": 2202000,
+      "change": 3017000,
+      "sign": "+3.017.000"
     }
   ],
   "values_chart": {
@@ -900,11 +902,15 @@
       {
         "value": 5047000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 5219000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
-      "value": 5047000,
-      "date": "17 oct 2026"
+      "value": 5219000,
+      "date": "18 oct 2026"
     },
     "min": {
       "value": 504000,
@@ -915,36 +921,36 @@
     "59534": {
       "id": 59534,
       "id_team": 19,
-      "id_match": 38015,
-      "id_gameweek": 4050,
+      "id_match": 38026,
+      "id_gameweek": 4051,
       "id_home": 19,
-      "id_away": 1,
+      "id_away": 20,
       "date": {
-        "ts": 1792263600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792859400,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Valencia",
-      "away": "Athletic Club",
+      "away": "Villarreal",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "59534": {
       "id": 59534,
-      "points": 5,
-      "avg": 1.6667
+      "points": 9,
+      "avg": 2.25
     }
   },
   "away": {

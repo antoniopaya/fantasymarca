@@ -3,15 +3,15 @@
     "id": 60858,
     "name": "Pablo Ramón",
     "position": 2,
-    "points": 22,
-    "avg": 3.7,
+    "points": 24,
+    "avg": 3.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60858.png?version=20250107092428",
     "isFavorite": 0,
-    "value": 5543000,
-    "previousValue": 5718000,
+    "value": 5439000,
+    "previousValue": 5543000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5543000,
+      "floor": 5439000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8314500,
+      "value": 8158500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5543000,
+      "price": 5439000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 203
+    "clausesRanking": 221
   },
   "id": 60858,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 3
   },
@@ -222,8 +222,8 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 2,
+        "isLive": true
       },
       "events": null,
       "injury": null,
@@ -708,21 +708,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5718000,
-      "change": -175000,
-      "sign": -175
+      "value": 5543000,
+      "change": -104000,
+      "sign": -104
     },
     {
       "time": "Una semana",
-      "value": 5789000,
-      "change": -246000,
-      "sign": -246
+      "value": 5847000,
+      "change": -408000,
+      "sign": -408
     },
     {
       "time": "Un mes",
-      "value": 7659000,
-      "change": -2116000,
-      "sign": "-2.116.000"
+      "value": 7850000,
+      "change": -2411000,
+      "sign": "-2.411.000"
     }
   ],
   "values_chart": {
@@ -1206,6 +1206,10 @@
       {
         "value": 5543000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 5439000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -1221,28 +1225,28 @@
     "60858": {
       "id": 60858,
       "id_team": 1490,
-      "id_match": 38012,
-      "id_gameweek": 4050,
-      "id_home": 50,
-      "id_away": 1490,
+      "id_match": 38023,
+      "id_gameweek": 4051,
+      "id_home": 1490,
+      "id_away": 8,
       "date": {
-        "ts": 1792324800,
-        "text": "dom 14:00",
+        "ts": 1792851300,
+        "text": "sáb 16:15",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
+          "date": "sáb",
+          "time": "16:15",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Racing de Santander",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Racing de Santander",
+      "away": "Espanyol",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,

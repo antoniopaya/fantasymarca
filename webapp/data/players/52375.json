@@ -3,15 +3,15 @@
     "id": 52375,
     "name": "Lamine Yamal",
     "position": 4,
-    "points": 114,
-    "avg": 14.3,
+    "points": 131,
+    "avg": 14.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/52375.png?version=20261010190427",
     "isFavorite": 0,
-    "value": 80694000,
-    "previousValue": 80748000,
+    "value": 80710000,
+    "previousValue": 80694000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 80694000,
+      "floor": 80710000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 121041000,
+      "value": 121065000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 80694000,
+      "price": 80710000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 23
+    "clausesRanking": 22
   },
   "id": 52375,
   "player_extra": {
-    "matches": 8,
-    "goals": 7,
-    "cards": 1
+    "matches": 9,
+    "goals": 8,
+    "cards": 2
   },
   "points": [
     {
@@ -235,12 +235,17 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 17,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out",
+        "goal",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -712,10 +717,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 114,
-      "avg": 14.25,
+      "points": 131,
+      "avg": 14.5556,
       "id_team": 3,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -742,35 +747,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 80748000,
-      "change": -54000,
-      "sign": -54
+      "value": 80694000,
+      "change": 16000,
+      "sign": 16
     },
     {
       "time": "Una semana",
       "value": 80612000,
-      "change": 82000,
-      "sign": 82
+      "change": 98000,
+      "sign": 98
     },
     {
       "time": "Un mes",
-      "value": 80091000,
-      "change": 603000,
-      "sign": 603
+      "value": 80128000,
+      "change": 582000,
+      "sign": 582
     },
     {
       "time": "Un año",
-      "value": 79951000,
-      "change": 743000,
-      "sign": 743
+      "value": 79898000,
+      "change": 812000,
+      "sign": 812
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 79951000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 79898000,
         "date": "18 oct 2025"
@@ -2230,6 +2231,10 @@
       {
         "value": 80694000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 80710000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -2245,28 +2250,28 @@
     "52375": {
       "id": 52375,
       "id_team": 3,
-      "id_match": 38013,
-      "id_gameweek": 4050,
-      "id_home": 4,
-      "id_away": 3,
+      "id_match": 38021,
+      "id_gameweek": 4051,
+      "id_home": 3,
+      "id_away": 15,
       "date": {
-        "ts": 1792254600,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1792958400,
+        "text": "25 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "25 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Barcelona",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "home": "Barcelona",
+      "away": "Real Madrid",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
@@ -2280,8 +2285,8 @@
   "away": {
     "52375": {
       "id": 52375,
-      "points": 60,
-      "avg": 15
+      "points": 77,
+      "avg": 15.4
     }
   },
   "owners": [],

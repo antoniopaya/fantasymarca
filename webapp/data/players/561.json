@@ -3,15 +3,15 @@
     "id": 561,
     "name": "Marcos Llorente",
     "position": 2,
-    "points": 45,
-    "avg": 5.6,
+    "points": 48,
+    "avg": 5.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/561.png?version=20260304114121",
     "isFavorite": 0,
-    "value": 39758000,
-    "previousValue": 39913000,
+    "value": 39644000,
+    "previousValue": 39758000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 39758000,
+      "floor": 39644000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 59637000,
+      "value": 59466000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 39758000,
+      "price": 39644000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 184,
       "weight": 71
     },
-    "clausesRanking": 174
+    "clausesRanking": 219
   },
   "id": 561,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
     "cards": 1
   },
@@ -222,12 +222,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -699,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 45,
-      "avg": 5.625,
+      "points": 48,
+      "avg": 5.3333,
       "id_team": 2,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -729,35 +731,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 39913000,
-      "change": -155000,
-      "sign": -155
+      "value": 39758000,
+      "change": -114000,
+      "sign": -114
     },
     {
       "time": "Una semana",
-      "value": 39877000,
-      "change": -119000,
-      "sign": -119
+      "value": 39945000,
+      "change": -301000,
+      "sign": -301
     },
     {
       "time": "Un mes",
-      "value": 30720000,
-      "change": 9038000,
-      "sign": "+9.038.000"
+      "value": 31036000,
+      "change": 8608000,
+      "sign": "+8.608.000"
     },
     {
       "time": "Un año",
-      "value": 32834000,
-      "change": 6924000,
-      "sign": "+6.924.000"
+      "value": 33020000,
+      "change": 6624000,
+      "sign": "+6.624.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 32834000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 33020000,
         "date": "18 oct 2025"
@@ -2217,6 +2215,10 @@
       {
         "value": 39758000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 39644000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -2232,28 +2234,28 @@
     "561": {
       "id": 561,
       "id_team": 2,
-      "id_match": 38009,
-      "id_gameweek": 4050,
-      "id_home": 8,
-      "id_away": 2,
+      "id_match": 38018,
+      "id_gameweek": 4051,
+      "id_home": 2,
+      "id_away": 6,
       "date": {
-        "ts": 1792238400,
-        "text": "Hoy 14:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792868400,
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "14:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
-      "away": "Atlético",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "home": "Atlético",
+      "away": "Deportivo da Coruña",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,
@@ -2267,8 +2269,8 @@
   "away": {
     "561": {
       "id": 561,
-      "points": 26,
-      "avg": 6.5
+      "points": 29,
+      "avg": 5.8
     }
   },
   "owners": [],

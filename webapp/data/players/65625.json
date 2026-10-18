@@ -3,15 +3,15 @@
     "id": 65625,
     "name": "Tani Oluwaseyi",
     "position": 4,
-    "points": 7,
-    "avg": 1.8,
+    "points": 12,
+    "avg": 2.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65625.png?version=20250829164124",
     "isFavorite": 0,
-    "value": 704000,
-    "previousValue": 592000,
+    "value": 852000,
+    "previousValue": 704000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 704000,
+      "floor": 852000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1056000,
+      "value": 1278000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 704000,
+      "price": 852000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 188,
       "weight": null
     },
-    "clausesRanking": 156
+    "clausesRanking": 126
   },
   "id": 65625,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 0
   },
@@ -220,12 +220,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -697,10 +699,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 7,
-      "avg": 1.75,
+      "points": 12,
+      "avg": 2.4,
       "id_team": 20,
-      "last_gameweek": 5
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -713,35 +715,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 592000,
-      "change": 112000,
-      "sign": 112
+      "value": 704000,
+      "change": 148000,
+      "sign": 148
     },
     {
       "time": "Una semana",
-      "value": 486000,
-      "change": 218000,
-      "sign": 218
+      "value": 362000,
+      "change": 490000,
+      "sign": 490
     },
     {
       "time": "Un mes",
-      "value": 1081000,
-      "change": -377000,
-      "sign": -377
+      "value": 1210000,
+      "change": -358000,
+      "sign": -358
     },
     {
       "time": "Un año",
-      "value": 5604000,
-      "change": -4900000,
-      "sign": "-4.900.000"
+      "value": 5659000,
+      "change": -4807000,
+      "sign": "-4.807.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 5604000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 5659000,
         "date": "18 oct 2025"
@@ -2201,6 +2199,10 @@
       {
         "value": 704000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 852000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -2216,36 +2218,36 @@
     "65625": {
       "id": 65625,
       "id_team": 20,
-      "id_match": 38016,
-      "id_gameweek": 4050,
-      "id_home": 20,
-      "id_away": 23,
+      "id_match": 38026,
+      "id_gameweek": 4051,
+      "id_home": 19,
+      "id_away": 20,
       "date": {
-        "ts": 1792246500,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1792859400,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Villarreal",
-      "away": "Elche",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+      "home": "Valencia",
+      "away": "Villarreal",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "65625": {
       "id": 65625,
-      "points": 5,
-      "avg": 2.5
+      "points": 10,
+      "avg": 3.3333
     }
   },
   "away": {

@@ -5,17 +5,13 @@
     "position": 3,
     "points": 15,
     "avg": 2.5,
-    "status": "doubt",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "doubt",
-      "description": "Molestias",
-      "duration": "Duda esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/17614.png?version=20231222184953",
     "isFavorite": 0,
-    "value": 2016000,
-    "previousValue": 2161000,
+    "value": 1814000,
+    "previousValue": 2016000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2016000,
+      "floor": 1814000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 2,
-      "shield2WeeksSku": "shield_t2_2w",
-      "shield1MonthSku": "shield_t2_1m",
-      "value": 3024000,
+      "tier": 1,
+      "shield2WeeksSku": "shield_t1_2w",
+      "shield1MonthSku": "shield_t1_1m",
+      "value": 2721000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2016000,
+      "price": 1814000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +68,7 @@
       "height": 178,
       "weight": 69
     },
-    "clausesRanking": 346
+    "clausesRanking": 349
   },
   "id": 17614,
   "player_extra": {
@@ -227,7 +223,7 @@
         "description": "Molestias",
         "duration": "Duda esta jornada",
         "since": "2026-10-09 16:26:27",
-        "until": null,
+        "until": "2026-10-18 06:31:48",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -241,8 +237,8 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": "?",
+        "isLive": true
       },
       "events": null,
       "injury": null,
@@ -748,35 +744,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2161000,
-      "change": -145000,
-      "sign": -145
+      "value": 2016000,
+      "change": -202000,
+      "sign": -202
     },
     {
       "time": "Una semana",
-      "value": 3632000,
-      "change": -1616000,
-      "sign": "-1.616.000"
+      "value": 3293000,
+      "change": -1479000,
+      "sign": "-1.479.000"
     },
     {
       "time": "Un mes",
-      "value": 3971000,
-      "change": -1955000,
-      "sign": "-1.955.000"
+      "value": 4192000,
+      "change": -2378000,
+      "sign": "-2.378.000"
     },
     {
       "time": "Un año",
-      "value": 421000,
-      "change": 1595000,
-      "sign": "+1.595.000"
+      "value": 337000,
+      "change": 1477000,
+      "sign": "+1.477.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 421000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 337000,
         "date": "18 oct 2025"
@@ -2236,6 +2228,10 @@
       {
         "value": 2016000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 1814000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -2251,28 +2247,28 @@
     "17614": {
       "id": 17614,
       "id_team": 50,
-      "id_match": 38012,
-      "id_gameweek": 4050,
-      "id_home": 50,
-      "id_away": 1490,
+      "id_match": 38025,
+      "id_gameweek": 4051,
+      "id_home": 17,
+      "id_away": 50,
       "date": {
-        "ts": 1792324800,
-        "text": "dom 14:00",
-        "format": "EEE H:mm",
+        "ts": 1793044800,
+        "text": "26 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "26 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Racing de Santander",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Sevilla",
+      "away": "Osasuna",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,

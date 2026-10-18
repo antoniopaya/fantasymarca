@@ -3,15 +3,15 @@
     "id": 51135,
     "name": "Pablo Barrios",
     "position": 3,
-    "points": 25,
-    "avg": 5,
+    "points": 27,
+    "avg": 4.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/51135.png?version=20251003194102",
     "isFavorite": 0,
-    "value": 31268000,
-    "previousValue": 30819000,
+    "value": 31741000,
+    "previousValue": 31268000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 31268000,
+      "floor": 31741000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 46902000,
+      "value": 47611500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 31268000,
+      "price": 31741000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 181,
       "weight": null
     },
-    "clausesRanking": 116
+    "clausesRanking": 110
   },
   "id": 51135,
   "player_extra": {
@@ -227,12 +227,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -704,10 +706,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 25,
-      "avg": 5,
+      "points": 27,
+      "avg": 4.5,
       "id_team": 2,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -734,35 +736,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 30819000,
-      "change": 449000,
-      "sign": 449
+      "value": 31268000,
+      "change": 473000,
+      "sign": 473
     },
     {
       "time": "Una semana",
-      "value": 28172000,
-      "change": 3096000,
-      "sign": "+3.096.000"
+      "value": 28550000,
+      "change": 3191000,
+      "sign": "+3.191.000"
     },
     {
       "time": "Un mes",
-      "value": 33193000,
-      "change": -1925000,
-      "sign": "-1.925.000"
+      "value": 32584000,
+      "change": -843000,
+      "sign": -843
     },
     {
       "time": "Un año",
-      "value": 40707000,
-      "change": -9439000,
-      "sign": "-9.439.000"
+      "value": 40645000,
+      "change": -8904000,
+      "sign": "-8.904.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 40707000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 40645000,
         "date": "18 oct 2025"
@@ -2222,6 +2220,10 @@
       {
         "value": 31268000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 31741000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -2243,12 +2245,12 @@
       "id_away": 6,
       "date": {
         "ts": 1792868400,
-        "text": "24 oct 21:00",
-        "format": "d MMM H:mm",
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "24 oct",
+          "date": "sáb",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2272,8 +2274,8 @@
   "away": {
     "51135": {
       "id": 51135,
-      "points": 15,
-      "avg": 5
+      "points": 17,
+      "avg": 4.25
     }
   },
   "owners": [],

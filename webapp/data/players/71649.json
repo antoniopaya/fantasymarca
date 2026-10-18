@@ -3,15 +3,15 @@
     "id": 71649,
     "name": "Péter Gulácsi",
     "position": 1,
-    "points": 22,
-    "avg": 5.5,
+    "points": 30,
+    "avg": 6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71649.png?version=20260804093816",
     "isFavorite": 0,
-    "value": 13264000,
-    "previousValue": 12847000,
+    "value": 13788000,
+    "previousValue": 13264000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 13264000,
+      "floor": 13788000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 19896000,
+      "value": 20682000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 13264000,
+      "price": 13788000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 190,
       "weight": null
     },
-    "clausesRanking": 18
+    "clausesRanking": 20
   },
   "id": 71649,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 0
   },
@@ -212,12 +212,12 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 8,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -689,30 +689,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 22,
-      "avg": 5.5,
+      "points": 30,
+      "avg": 6,
       "id_team": 20,
-      "last_gameweek": 8
+      "last_gameweek": 9
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 12847000,
-      "change": 417000,
-      "sign": 417
+      "value": 13264000,
+      "change": 524000,
+      "sign": 524
     },
     {
       "time": "Una semana",
-      "value": 10071000,
-      "change": 3193000,
-      "sign": "+3.193.000"
+      "value": 10447000,
+      "change": 3341000,
+      "sign": "+3.341.000"
     },
     {
       "time": "Un mes",
-      "value": 4129000,
-      "change": 9135000,
-      "sign": "+9.135.000"
+      "value": 4308000,
+      "change": 9480000,
+      "sign": "+9.480.000"
     }
   ],
   "values_chart": {
@@ -1012,11 +1012,15 @@
       {
         "value": 13264000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 13788000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
-      "value": 13264000,
-      "date": "17 oct 2026"
+      "value": 13788000,
+      "date": "18 oct 2026"
     },
     "min": {
       "value": 1388000,
@@ -1027,36 +1031,36 @@
     "71649": {
       "id": 71649,
       "id_team": 20,
-      "id_match": 38016,
-      "id_gameweek": 4050,
-      "id_home": 20,
-      "id_away": 23,
+      "id_match": 38026,
+      "id_gameweek": 4051,
+      "id_home": 19,
+      "id_away": 20,
       "date": {
-        "ts": 1792246500,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1792859400,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Villarreal",
-      "away": "Elche",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+      "home": "Valencia",
+      "away": "Villarreal",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "71649": {
       "id": 71649,
-      "points": 14,
-      "avg": 7
+      "points": 22,
+      "avg": 7.3333
     }
   },
   "away": {

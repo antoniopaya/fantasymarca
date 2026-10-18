@@ -5,17 +5,13 @@
     "position": 3,
     "points": 11,
     "avg": 2.2,
-    "status": "doubt",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "doubt",
-      "description": "Lesión en los isquiotibiales",
-      "duration": "Duda esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/58436.png?version=20260122191623",
     "isFavorite": 0,
-    "value": 1277000,
-    "previousValue": 1303000,
+    "value": 1285000,
+    "previousValue": 1277000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1277000,
+      "floor": 1285000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1915500,
+      "value": 1927500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1277000,
+      "price": 1285000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +68,7 @@
       "height": 169,
       "weight": null
     },
-    "clausesRanking": 286
+    "clausesRanking": 247
   },
   "id": 58436,
   "player_extra": {
@@ -236,8 +232,8 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": "?",
+        "isLive": true
       },
       "events": null,
       "injury": null,
@@ -736,21 +732,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1303000,
-      "change": -26000,
-      "sign": -26
+      "value": 1277000,
+      "change": 8000,
+      "sign": 8
     },
     {
       "time": "Una semana",
-      "value": 2278000,
-      "change": -1001000,
-      "sign": "-1.001.000"
+      "value": 2104000,
+      "change": -819000,
+      "sign": -819
     },
     {
       "time": "Un mes",
-      "value": 5860000,
-      "change": -4583000,
-      "sign": "-4.583.000"
+      "value": 5885000,
+      "change": -4600000,
+      "sign": "-4.600.000"
     }
   ],
   "values_chart": {
@@ -1830,6 +1826,10 @@
       {
         "value": 1277000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 1285000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -1845,28 +1845,28 @@
     "58436": {
       "id": 58436,
       "id_team": 50,
-      "id_match": 38012,
-      "id_gameweek": 4050,
-      "id_home": 50,
-      "id_away": 1490,
+      "id_match": 38025,
+      "id_gameweek": 4051,
+      "id_home": 17,
+      "id_away": 50,
       "date": {
-        "ts": 1792324800,
-        "text": "dom 14:00",
-        "format": "EEE H:mm",
+        "ts": 1793044800,
+        "text": "26 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "26 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Racing de Santander",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Sevilla",
+      "away": "Osasuna",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,

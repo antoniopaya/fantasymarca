@@ -3,15 +3,15 @@
     "id": 65476,
     "name": "Clemens Riedel",
     "position": 2,
-    "points": 30,
+    "points": 34,
     "avg": 4.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65476.png?version=20250826090602",
     "isFavorite": 0,
-    "value": 5137000,
-    "previousValue": 5030000,
+    "value": 5282000,
+    "previousValue": 5137000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5137000,
+      "floor": 5282000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7705500,
+      "value": 7923000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5137000,
+      "price": 5282000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 59
+    "clausesRanking": 62
   },
   "id": 65476,
   "player_extra": {
@@ -224,12 +224,12 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 4,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -701,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 30,
-      "avg": 4.2857,
+      "points": 34,
+      "avg": 4.25,
       "id_team": 8,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -717,35 +717,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5030000,
-      "change": 107000,
-      "sign": 107
+      "value": 5137000,
+      "change": 145000,
+      "sign": 145
     },
     {
       "time": "Una semana",
-      "value": 4264000,
-      "change": 873000,
-      "sign": 873
+      "value": 4361000,
+      "change": 921000,
+      "sign": 921
     },
     {
       "time": "Un mes",
-      "value": 5741000,
-      "change": -604000,
-      "sign": -604
+      "value": 5900000,
+      "change": -618000,
+      "sign": -618
     },
     {
       "time": "Un año",
-      "value": 5081000,
-      "change": 56000,
-      "sign": 56
+      "value": 5307000,
+      "change": -25000,
+      "sign": -25
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 5081000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 5307000,
         "date": "18 oct 2025"
@@ -2205,6 +2201,10 @@
       {
         "value": 5137000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 5282000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -2226,12 +2226,12 @@
       "id_away": 8,
       "date": {
         "ts": 1792851300,
-        "text": "24 oct 16:15",
-        "format": "d MMM H:mm",
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "24 oct",
+          "date": "sáb",
           "time": "16:15",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2248,8 +2248,8 @@
   "home": {
     "65476": {
       "id": 65476,
-      "points": 12,
-      "avg": 3
+      "points": 16,
+      "avg": 3.2
     }
   },
   "away": {

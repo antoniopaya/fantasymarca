@@ -3,15 +3,15 @@
     "id": 19527,
     "name": "Jon Moncayola",
     "position": 3,
-    "points": 17,
-    "avg": 2.1,
+    "points": 18,
+    "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/19527.png?version=20231222184833",
     "isFavorite": 0,
-    "value": 19187000,
-    "previousValue": 19931000,
+    "value": 18474000,
+    "previousValue": 19187000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 19187000,
+      "floor": 18474000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 28780500,
+      "value": 27711000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 19187000,
+      "price": 18474000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 19527,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
     "cards": 3
   },
@@ -224,8 +224,8 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 1,
+        "isLive": true
       },
       "events": null,
       "injury": null,
@@ -731,35 +731,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 19931000,
-      "change": -744000,
-      "sign": -744
+      "value": 19187000,
+      "change": -713000,
+      "sign": -713
     },
     {
       "time": "Una semana",
-      "value": 22749000,
-      "change": -3562000,
-      "sign": "-3.562.000"
+      "value": 22465000,
+      "change": -3991000,
+      "sign": "-3.991.000"
     },
     {
       "time": "Un mes",
-      "value": 11925000,
-      "change": 7262000,
-      "sign": "+7.262.000"
+      "value": 11631000,
+      "change": 6843000,
+      "sign": "+6.843.000"
     },
     {
       "time": "Un año",
-      "value": 18418000,
-      "change": 769000,
-      "sign": 769
+      "value": 18074000,
+      "change": 400000,
+      "sign": 400
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 18418000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 18074000,
         "date": "18 oct 2025"
@@ -2219,6 +2215,10 @@
       {
         "value": 19187000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 18474000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -2234,28 +2234,28 @@
     "19527": {
       "id": 19527,
       "id_team": 50,
-      "id_match": 38012,
-      "id_gameweek": 4050,
-      "id_home": 50,
-      "id_away": 1490,
+      "id_match": 38025,
+      "id_gameweek": 4051,
+      "id_home": 17,
+      "id_away": 50,
       "date": {
-        "ts": 1792324800,
-        "text": "dom 14:00",
-        "format": "EEE H:mm",
+        "ts": 1793044800,
+        "text": "26 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "26 oct",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Racing de Santander",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Sevilla",
+      "away": "Osasuna",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,

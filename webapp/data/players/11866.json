@@ -4,14 +4,14 @@
     "name": "Hugo Duro",
     "position": 4,
     "points": 20,
-    "avg": 2.5,
+    "avg": 2.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/11866.png?version=20251006015522",
     "isFavorite": 0,
     "value": 13583000,
-    "previousValue": 13470000,
+    "previousValue": 13583000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -68,11 +68,11 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 134
+    "clausesRanking": 135
   },
   "id": 11866,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
     "cards": 0
   },
@@ -227,12 +227,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -705,9 +707,9 @@
     {
       "season": "26/27",
       "points": 19,
-      "avg": 2.375,
+      "avg": 2.1111,
       "id_team": 19,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -734,35 +736,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 13470000,
-      "change": 113000,
-      "sign": 113
+      "value": 13583000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Una semana",
-      "value": 12067000,
-      "change": 1516000,
-      "sign": "+1.516.000"
+      "value": 12381000,
+      "change": 1202000,
+      "sign": "+1.202.000"
     },
     {
       "time": "Un mes",
-      "value": 10379000,
-      "change": 3204000,
-      "sign": "+3.204.000"
+      "value": 10174000,
+      "change": 3409000,
+      "sign": "+3.409.000"
     },
     {
       "time": "Un año",
-      "value": 21599000,
-      "change": -8016000,
-      "sign": "-8.016.000"
+      "value": 21220000,
+      "change": -7637000,
+      "sign": "-7.637.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 21599000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 21220000,
         "date": "18 oct 2025"
@@ -2222,6 +2220,10 @@
       {
         "value": 13583000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 13583000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -2237,28 +2239,28 @@
     "11866": {
       "id": 11866,
       "id_team": 19,
-      "id_match": 38015,
-      "id_gameweek": 4050,
+      "id_match": 38026,
+      "id_gameweek": 4051,
       "id_home": 19,
-      "id_away": 1,
+      "id_away": 20,
       "date": {
-        "ts": 1792263600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792859400,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Valencia",
-      "away": "Athletic Club",
+      "away": "Villarreal",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
@@ -2266,7 +2268,7 @@
     "11866": {
       "id": 11866,
       "points": 9,
-      "avg": 2.25
+      "avg": 1.8
     }
   },
   "away": {

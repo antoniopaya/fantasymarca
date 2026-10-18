@@ -3,15 +3,15 @@
     "id": 66706,
     "name": "Javi Hernandez",
     "position": 3,
-    "points": 52,
-    "avg": 6.5,
+    "points": 58,
+    "avg": 6.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/66706.png?version=20250910192037",
     "isFavorite": 0,
-    "value": 22747000,
-    "previousValue": 22470000,
+    "value": 23146000,
+    "previousValue": 22747000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 22747000,
+      "floor": 23146000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 34120500,
+      "value": 34719000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 22747000,
+      "price": 23146000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 46
+    "clausesRanking": 47
   },
   "id": 66706,
   "player_extra": {
@@ -231,12 +231,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 6,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -708,44 +710,40 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 52,
-      "avg": 6.5,
+      "points": 58,
+      "avg": 6.4444,
       "id_team": 8,
-      "last_gameweek": 8
+      "last_gameweek": 9
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 22470000,
-      "change": 277000,
-      "sign": 277
+      "value": 22747000,
+      "change": 399000,
+      "sign": 399
     },
     {
       "time": "Una semana",
-      "value": 20289000,
-      "change": 2458000,
-      "sign": "+2.458.000"
+      "value": 20626000,
+      "change": 2520000,
+      "sign": "+2.520.000"
     },
     {
       "time": "Un mes",
-      "value": 9294000,
-      "change": 13453000,
-      "sign": "+13.453.000"
+      "value": 9727000,
+      "change": 13419000,
+      "sign": "+13.419.000"
     },
     {
       "time": "Un año",
-      "value": 529000,
-      "change": 22218000,
-      "sign": "+22.218.000"
+      "value": 449000,
+      "change": 22697000,
+      "sign": "+22.697.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 529000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 449000,
         "date": "18 oct 2025"
@@ -1509,11 +1507,15 @@
       {
         "value": 22747000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 23146000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
-      "value": 22747000,
-      "date": "17 oct 2026"
+      "value": 23146000,
+      "date": "18 oct 2026"
     },
     "min": {
       "value": 329000,
@@ -1530,12 +1532,12 @@
       "id_away": 8,
       "date": {
         "ts": 1792851300,
-        "text": "24 oct 16:15",
-        "format": "d MMM H:mm",
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "24 oct",
+          "date": "sáb",
           "time": "16:15",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -1552,8 +1554,8 @@
   "home": {
     "66706": {
       "id": 66706,
-      "points": 23,
-      "avg": 5.75
+      "points": 29,
+      "avg": 5.8
     }
   },
   "away": {

@@ -3,15 +3,15 @@
     "id": 28791,
     "name": "Jesús Vázquez",
     "position": 2,
-    "points": 12,
-    "avg": 1.7,
+    "points": 13,
+    "avg": 1.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/28791.png?version=20251006015643",
     "isFavorite": 0,
-    "value": 489000,
-    "previousValue": 329000,
+    "value": 442000,
+    "previousValue": 489000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 489000,
+      "price": 442000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 28791,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 0
   },
@@ -220,12 +220,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -697,10 +699,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 13,
-      "avg": 1.8571,
+      "points": 14,
+      "avg": 1.75,
       "id_team": 19,
-      "last_gameweek": 7
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -727,35 +729,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 160000,
-      "sign": 160
+      "value": 489000,
+      "change": -47000,
+      "sign": -47
     },
     {
       "time": "Una semana",
-      "value": 439000,
-      "change": 50000,
-      "sign": 50
+      "value": 433000,
+      "change": 9000,
+      "sign": 9
     },
     {
       "time": "Un mes",
-      "value": 2649000,
-      "change": -2160000,
-      "sign": "-2.160.000"
+      "value": 2611000,
+      "change": -2169000,
+      "sign": "-2.169.000"
     },
     {
       "time": "Un año",
-      "value": 1068000,
-      "change": -579000,
-      "sign": -579
+      "value": 937000,
+      "change": -495000,
+      "sign": -495
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 1068000,
-        "date": "17 oct 2025"
-      },
       {
         "value": 937000,
         "date": "18 oct 2025"
@@ -2215,6 +2213,10 @@
       {
         "value": 489000,
         "date": "17 oct 2026"
+      },
+      {
+        "value": 442000,
+        "date": "18 oct 2026"
       }
     ],
     "max": {
@@ -2230,36 +2232,36 @@
     "28791": {
       "id": 28791,
       "id_team": 19,
-      "id_match": 38015,
-      "id_gameweek": 4050,
+      "id_match": 38026,
+      "id_gameweek": 4051,
       "id_home": 19,
-      "id_away": 1,
+      "id_away": 20,
       "date": {
-        "ts": 1792263600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792859400,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Valencia",
-      "away": "Athletic Club",
+      "away": "Villarreal",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "28791": {
       "id": 28791,
-      "points": 9,
-      "avg": 2.25
+      "points": 10,
+      "avg": 2
     }
   },
   "away": {
