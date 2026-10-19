@@ -3,15 +3,15 @@
     "id": 71616,
     "name": "Yassir Zabiri",
     "position": 4,
-    "points": 52,
-    "avg": 5.8,
+    "points": 53,
+    "avg": 5.9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71616.png?version=20260730085522",
     "isFavorite": 0,
-    "value": 32217000,
-    "previousValue": 31698000,
+    "value": 32680000,
+    "previousValue": 32217000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 32217000,
+      "floor": 32680000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 48325500,
+      "value": 49020000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 32217000,
+      "price": 32680000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 34
+    "clausesRanking": 46
   },
   "id": 71616,
   "player_extra": {
@@ -238,12 +238,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -715,30 +717,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 51,
-      "avg": 6.375,
+      "points": 53,
+      "avg": 5.8889,
       "id_team": 1490,
-      "last_gameweek": 8
+      "last_gameweek": 9
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 31698000,
-      "change": 519000,
-      "sign": 519
+      "value": 32217000,
+      "change": 463000,
+      "sign": 463
     },
     {
       "time": "Una semana",
-      "value": 28355000,
-      "change": 3862000,
-      "sign": "+3.862.000"
+      "value": 28888000,
+      "change": 3792000,
+      "sign": "+3.792.000"
     },
     {
       "time": "Un mes",
-      "value": 17951000,
-      "change": 14266000,
-      "sign": "+14.266.000"
+      "value": 18754000,
+      "change": 13926000,
+      "sign": "+13.926.000"
     }
   ],
   "values_chart": {
@@ -1062,11 +1064,15 @@
       {
         "value": 32217000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 32680000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
-      "value": 32217000,
-      "date": "18 oct 2026"
+      "value": 32680000,
+      "date": "19 oct 2026"
     },
     "min": {
       "value": 7234000,
@@ -1112,7 +1118,7 @@
   "away": {
     "71616": {
       "id": 71616,
-      "points": 8,
+      "points": 10,
       "avg": 2
     }
   },

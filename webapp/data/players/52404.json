@@ -3,15 +3,15 @@
     "id": 52404,
     "name": "Manu Bueno",
     "position": 3,
-    "points": 3,
-    "avg": 1.5,
+    "points": 10,
+    "avg": 3.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/52404.png?version=20251006014022",
     "isFavorite": 0,
-    "value": 379000,
-    "previousValue": 513000,
+    "value": 417000,
+    "previousValue": 379000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 379000,
+      "price": 417000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 378
+    "clausesRanking": 245
   },
   "id": 52404,
   "player_extra": {
-    "matches": 2,
-    "goals": 0,
+    "matches": 3,
+    "goals": 1,
     "cards": 0
   },
   "points": [
@@ -216,12 +216,15 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -693,10 +696,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 3,
-      "avg": 1.5,
+      "points": 10,
+      "avg": 3.3333,
       "id_team": 17,
-      "last_gameweek": 4
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -723,35 +726,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 513000,
-      "change": -134000,
-      "sign": -134
+      "value": 379000,
+      "change": 38000,
+      "sign": 38
     },
     {
       "time": "Una semana",
-      "value": 329000,
-      "change": 50000,
-      "sign": 50
+      "value": 409000,
+      "change": 8000,
+      "sign": 8
     },
     {
       "time": "Un mes",
-      "value": 521000,
-      "change": -142000,
-      "sign": -142
+      "value": 488000,
+      "change": -71000,
+      "sign": -71
     },
     {
       "time": "Un año",
       "value": 329000,
-      "change": 50000,
-      "sign": 50
+      "change": 88000,
+      "sign": 88
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 329000,
-        "date": "18 oct 2025"
-      },
       {
         "value": 329000,
         "date": "19 oct 2025"
@@ -2211,6 +2210,10 @@
       {
         "value": 379000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 417000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -2226,28 +2229,28 @@
     "52404": {
       "id": 52404,
       "id_team": 17,
-      "id_match": 38014,
-      "id_gameweek": 4050,
-      "id_home": 15,
-      "id_away": 17,
+      "id_match": 38025,
+      "id_gameweek": 4051,
+      "id_home": 17,
+      "id_away": 50,
       "date": {
-        "ts": 1792350000,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793044800,
+        "text": "26 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "26 oct",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Madrid",
-      "away": "Sevilla",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Sevilla",
+      "away": "Osasuna",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
@@ -2261,8 +2264,8 @@
   "away": {
     "52404": {
       "id": 52404,
-      "points": 2,
-      "avg": 2
+      "points": 9,
+      "avg": 4.5
     }
   },
   "owners": [],

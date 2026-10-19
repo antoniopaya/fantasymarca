@@ -3,15 +3,15 @@
     "id": 18531,
     "name": "Aleix Febas",
     "position": 3,
-    "points": 13,
-    "avg": 4.3,
+    "points": 15,
+    "avg": 3.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/18531.png?version=20250617223016",
     "isFavorite": 0,
-    "value": 17516000,
-    "previousValue": 17223000,
+    "value": 17580000,
+    "previousValue": 17516000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 17516000,
+      "floor": 17580000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 26274000,
+      "value": 26370000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 17516000,
+      "price": 17580000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 168,
       "weight": 57
     },
-    "clausesRanking": 14
+    "clausesRanking": 17
   },
   "id": 18531,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 1
   },
@@ -235,12 +235,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -712,10 +714,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 13,
-      "avg": 4.3333,
+      "points": 15,
+      "avg": 3.75,
       "id_team": 5,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -728,35 +730,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 17223000,
-      "change": 293000,
-      "sign": 293
+      "value": 17516000,
+      "change": 64000,
+      "sign": 64
     },
     {
       "time": "Una semana",
-      "value": 14540000,
-      "change": 2976000,
-      "sign": "+2.976.000"
+      "value": 15146000,
+      "change": 2434000,
+      "sign": "+2.434.000"
     },
     {
       "time": "Un mes",
-      "value": 20747000,
-      "change": -3231000,
-      "sign": "-3.231.000"
+      "value": 20329000,
+      "change": -2749000,
+      "sign": "-2.749.000"
     },
     {
       "time": "Un año",
-      "value": 25235000,
-      "change": -7719000,
-      "sign": "-7.719.000"
+      "value": 25486000,
+      "change": -7906000,
+      "sign": "-7.906.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 25235000,
-        "date": "18 oct 2025"
-      },
       {
         "value": 25486000,
         "date": "19 oct 2025"
@@ -2216,6 +2214,10 @@
       {
         "value": 17516000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 17580000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -2231,35 +2233,35 @@
     "18531": {
       "id": 18531,
       "id_team": 5,
-      "id_match": 38007,
-      "id_gameweek": 4050,
+      "id_match": 38019,
+      "id_gameweek": 4051,
       "id_home": 5,
-      "id_away": 48,
+      "id_away": 4,
       "date": {
-        "ts": 1792332900,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1792941300,
+        "text": "dom 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "dom",
           "time": "16:15",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Celta",
-      "away": "Alavés",
+      "away": "Betis",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "18531": {
       "id": 18531,
-      "points": 2,
+      "points": 4,
       "avg": 2
     }
   },

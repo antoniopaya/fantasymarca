@@ -3,15 +3,15 @@
     "id": 364,
     "name": "Sergio Canales",
     "position": 3,
-    "points": 30,
-    "avg": 3.3,
+    "points": 32,
+    "avg": 3.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/364.png?version=20260622183248",
     "isFavorite": 0,
-    "value": 21534000,
-    "previousValue": 21562000,
+    "value": 21233000,
+    "previousValue": 21534000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 21534000,
+      "floor": 21233000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 32301000,
+      "value": 31849500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 21534000,
+      "price": 21233000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 176,
       "weight": 65
     },
-    "clausesRanking": 249
+    "clausesRanking": 260
   },
   "id": 364,
   "player_extra": {
@@ -227,12 +227,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 3,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -704,30 +706,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 29,
-      "avg": 3.625,
+      "points": 32,
+      "avg": 3.5556,
       "id_team": 1490,
-      "last_gameweek": 8
+      "last_gameweek": 9
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 21562000,
-      "change": -28000,
-      "sign": -28
+      "value": 21534000,
+      "change": -301000,
+      "sign": -301
     },
     {
       "time": "Una semana",
-      "value": 22337000,
-      "change": -803000,
-      "sign": -803
+      "value": 22066000,
+      "change": -833000,
+      "sign": -833
     },
     {
       "time": "Un mes",
-      "value": 29878000,
-      "change": -8344000,
-      "sign": "-8.344.000"
+      "value": 30019000,
+      "change": -8786000,
+      "sign": "-8.786.000"
     }
   ],
   "values_chart": {
@@ -1207,6 +1209,10 @@
       {
         "value": 21534000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 21233000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -1257,8 +1263,8 @@
   "away": {
     "364": {
       "id": 364,
-      "points": 13,
-      "avg": 3.25
+      "points": 16,
+      "avg": 3.2
     }
   },
   "owners": [],

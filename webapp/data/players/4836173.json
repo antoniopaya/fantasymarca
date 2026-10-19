@@ -4,14 +4,14 @@
     "name": "Félix Correia",
     "position": 3,
     "points": 25,
-    "avg": 6.3,
+    "avg": 5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4836173.png?version=20260901214140",
     "isFavorite": 0,
-    "value": 13224000,
-    "previousValue": 12794000,
+    "value": 13627000,
+    "previousValue": 13224000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 13224000,
+      "floor": 13627000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 19836000,
+      "value": 20440500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 13224000,
+      "price": 13627000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 39
+    "clausesRanking": 38
   },
   "id": 4836173,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 1,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -223,12 +223,15 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -701,29 +704,29 @@
     {
       "season": "26/27",
       "points": 25,
-      "avg": 6.25,
+      "avg": 5,
       "id_team": 17,
-      "last_gameweek": 8
+      "last_gameweek": 9
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 12794000,
-      "change": 430000,
-      "sign": 430
+      "value": 13224000,
+      "change": 403000,
+      "sign": 403
     },
     {
       "time": "Una semana",
-      "value": 10649000,
-      "change": 2575000,
-      "sign": "+2.575.000"
+      "value": 10818000,
+      "change": 2809000,
+      "sign": "+2.809.000"
     },
     {
       "time": "Un mes",
-      "value": 6161000,
-      "change": 7063000,
-      "sign": "+7.063.000"
+      "value": 6313000,
+      "change": 7314000,
+      "sign": "+7.314.000"
     }
   ],
   "values_chart": {
@@ -915,11 +918,15 @@
       {
         "value": 13224000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 13627000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
-      "value": 13224000,
-      "date": "18 oct 2026"
+      "value": 13627000,
+      "date": "19 oct 2026"
     },
     "min": {
       "value": 6040000,
@@ -930,28 +937,28 @@
     "4836173": {
       "id": 4836173,
       "id_team": 17,
-      "id_match": 38014,
-      "id_gameweek": 4050,
-      "id_home": 15,
-      "id_away": 17,
+      "id_match": 38025,
+      "id_gameweek": 4051,
+      "id_home": 17,
+      "id_away": 50,
       "date": {
-        "ts": 1792350000,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793044800,
+        "text": "26 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "26 oct",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Real Madrid",
-      "away": "Sevilla",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Sevilla",
+      "away": "Osasuna",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
@@ -966,7 +973,7 @@
     "4836173": {
       "id": 4836173,
       "points": 15,
-      "avg": 7.5
+      "avg": 5
     }
   },
   "owners": [],

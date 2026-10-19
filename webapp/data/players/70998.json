@@ -3,15 +3,15 @@
     "id": 70998,
     "name": "Izan Merino",
     "position": 3,
-    "points": 19,
-    "avg": 2.7,
+    "points": 20,
+    "avg": 2.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70998.png?version=20260621195729",
     "isFavorite": 0,
-    "value": 838000,
-    "previousValue": 953000,
+    "value": 814000,
+    "previousValue": 838000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 838000,
+      "floor": 814000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1257000,
+      "value": 1221000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 838000,
+      "price": 814000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 305
+    "clausesRanking": 283
   },
   "id": 70998,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 0
   },
@@ -224,12 +224,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -701,30 +703,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 19,
-      "avg": 2.7143,
+      "points": 20,
+      "avg": 2.5,
       "id_team": 13,
-      "last_gameweek": 8
+      "last_gameweek": 9
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 953000,
-      "change": -115000,
-      "sign": -115
+      "value": 838000,
+      "change": -24000,
+      "sign": -24
     },
     {
       "time": "Una semana",
-      "value": 1412000,
-      "change": -574000,
-      "sign": -574
+      "value": 1271000,
+      "change": -457000,
+      "sign": -457
     },
     {
       "time": "Un mes",
-      "value": 4950000,
-      "change": -4112000,
-      "sign": "-4.112.000"
+      "value": 4775000,
+      "change": -3961000,
+      "sign": "-3.961.000"
     }
   ],
   "values_chart": {
@@ -1204,6 +1206,10 @@
       {
         "value": 838000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 814000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -1219,36 +1225,36 @@
     "70998": {
       "id": 70998,
       "id_team": 13,
-      "id_match": 38011,
-      "id_gameweek": 4050,
-      "id_home": 13,
-      "id_away": 16,
+      "id_match": 38020,
+      "id_gameweek": 4051,
+      "id_home": 48,
+      "id_away": 13,
       "date": {
-        "ts": 1792341000,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1792782000,
+        "text": "vie 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "vie",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Real Sociedad",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "home": "Alavés",
+      "away": "Málaga",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,
   "home": {
     "70998": {
       "id": 70998,
-      "points": 11,
-      "avg": 2.75
+      "points": 12,
+      "avg": 2.4
     }
   },
   "away": {

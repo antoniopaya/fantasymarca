@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/11761.png?version=20250717131011",
     "isFavorite": 0,
-    "value": 353000,
-    "previousValue": 329000,
+    "value": 329000,
+    "previousValue": 353000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 353000,
+      "price": 329000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 184,
       "weight": 78
     },
-    "clausesRanking": 326
+    "clausesRanking": 404
   },
   "id": 11761,
   "player_extra": {
@@ -739,35 +739,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 24000,
-      "sign": 24
+      "value": 353000,
+      "change": -24000,
+      "sign": -24
     },
     {
       "time": "Una semana",
-      "value": 449000,
-      "change": -96000,
-      "sign": -96
+      "value": 368000,
+      "change": -39000,
+      "sign": -39
     },
     {
       "time": "Un mes",
-      "value": 741000,
-      "change": -388000,
-      "sign": -388
+      "value": 960000,
+      "change": -631000,
+      "sign": -631
     },
     {
       "time": "Un año",
-      "value": 8130000,
-      "change": -7777000,
-      "sign": "-7.777.000"
+      "value": 7817000,
+      "change": -7488000,
+      "sign": "-7.488.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 8130000,
-        "date": "18 oct 2025"
-      },
       {
         "value": 7817000,
         "date": "19 oct 2025"
@@ -2227,11 +2223,15 @@
       {
         "value": 353000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 329000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
-      "value": 8130000,
-      "date": "18 oct 2025"
+      "value": 7817000,
+      "date": "19 oct 2025"
     },
     "min": {
       "value": 329000,
@@ -2248,12 +2248,12 @@
       "id_away": 4,
       "date": {
         "ts": 1792941300,
-        "text": "25 oct 16:15",
-        "format": "d MMM H:mm",
+        "text": "dom 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "25 oct",
+          "date": "dom",
           "time": "16:15",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",

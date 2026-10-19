@@ -3,15 +3,15 @@
     "id": 31484,
     "name": "Eduardo Camavinga",
     "position": 3,
-    "points": 19,
-    "avg": 2.7,
+    "points": 20,
+    "avg": 2.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/31484.png?version=20251003184013",
     "isFavorite": 0,
-    "value": 6383000,
-    "previousValue": 6513000,
+    "value": 6227000,
+    "previousValue": 6383000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6383000,
+      "floor": 6227000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 9574500,
+      "value": 9340500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6383000,
+      "price": 6227000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 236
+    "clausesRanking": 266
   },
   "id": 31484,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 2
   },
@@ -226,12 +226,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -703,10 +705,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 19,
-      "avg": 2.7143,
+      "points": 20,
+      "avg": 2.5,
       "id_team": 15,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -733,35 +735,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 6513000,
-      "change": -130000,
-      "sign": -130
+      "value": 6383000,
+      "change": -156000,
+      "sign": -156
     },
     {
       "time": "Una semana",
-      "value": 7372000,
-      "change": -989000,
-      "sign": -989
+      "value": 7266000,
+      "change": -1039000,
+      "sign": "-1.039.000"
     },
     {
       "time": "Un mes",
-      "value": 11849000,
-      "change": -5466000,
-      "sign": "-5.466.000"
+      "value": 11342000,
+      "change": -5115000,
+      "sign": "-5.115.000"
     },
     {
       "time": "Un año",
-      "value": 18804000,
-      "change": -12421000,
-      "sign": "-12.421.000"
+      "value": 18553000,
+      "change": -12326000,
+      "sign": "-12.326.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 18804000,
-        "date": "18 oct 2025"
-      },
       {
         "value": 18553000,
         "date": "19 oct 2025"
@@ -2221,6 +2219,10 @@
       {
         "value": 6383000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 6227000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -2236,36 +2238,36 @@
     "31484": {
       "id": 31484,
       "id_team": 15,
-      "id_match": 38014,
-      "id_gameweek": 4050,
-      "id_home": 15,
-      "id_away": 17,
+      "id_match": 38021,
+      "id_gameweek": 4051,
+      "id_home": 3,
+      "id_away": 15,
       "date": {
-        "ts": 1792350000,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792958400,
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "dom",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Madrid",
-      "away": "Sevilla",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Barcelona",
+      "away": "Real Madrid",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
   "home": {
     "31484": {
       "id": 31484,
-      "points": 11,
-      "avg": 2.75
+      "points": 12,
+      "avg": 2.4
     }
   },
   "away": {

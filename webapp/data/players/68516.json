@@ -3,14 +3,14 @@
     "id": 68516,
     "name": "Hugo Burcio",
     "position": 3,
-    "points": 6,
-    "avg": 2,
+    "points": 13,
+    "avg": 3.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68516.png?version=20260120091915",
     "isFavorite": 0,
-    "value": 329000,
+    "value": 383000,
     "previousValue": 329000,
     "videoFrame": null,
     "team": {
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 383000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 68516,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 0
   },
@@ -218,12 +218,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -695,10 +697,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 6,
-      "avg": 2,
+      "points": 13,
+      "avg": 3.25,
       "id_team": 5,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -712,8 +714,8 @@
     {
       "time": "Un día",
       "value": 329000,
-      "change": 0,
-      "sign": 0
+      "change": 54000,
+      "sign": 54
     }
   ],
   "values_chart": {
@@ -1261,6 +1263,10 @@
       {
         "value": 329000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 383000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -1276,36 +1282,36 @@
     "68516": {
       "id": 68516,
       "id_team": 5,
-      "id_match": 38007,
-      "id_gameweek": 4050,
+      "id_match": 38019,
+      "id_gameweek": 4051,
       "id_home": 5,
-      "id_away": 48,
+      "id_away": 4,
       "date": {
-        "ts": 1792332900,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1792941300,
+        "text": "dom 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "dom",
           "time": "16:15",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Celta",
-      "away": "Alavés",
+      "away": "Betis",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "68516": {
       "id": 68516,
-      "points": 4,
-      "avg": 2
+      "points": 11,
+      "avg": 3.6667
     }
   },
   "away": {

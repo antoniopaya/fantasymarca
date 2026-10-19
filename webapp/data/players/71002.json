@@ -3,15 +3,15 @@
     "id": 71002,
     "name": "Ramón Enríquez",
     "position": 3,
-    "points": 8,
+    "points": 9,
     "avg": 1.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71002.png?version=20260621200230",
     "isFavorite": 0,
-    "value": 517000,
-    "previousValue": 329000,
+    "value": 558000,
+    "previousValue": 517000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 517000,
+      "price": 558000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 173,
       "weight": null
     },
-    "clausesRanking": 348
+    "clausesRanking": 263
   },
   "id": 71002,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 3
   },
@@ -229,12 +229,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -706,30 +708,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 8,
-      "avg": 1.1429,
+      "points": 9,
+      "avg": 1.125,
       "id_team": 13,
-      "last_gameweek": 7
+      "last_gameweek": 9
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 188000,
-      "sign": 188
+      "value": 517000,
+      "change": 41000,
+      "sign": 41
     },
     {
       "time": "Una semana",
       "value": 329000,
-      "change": 188000,
-      "sign": 188
+      "change": 229000,
+      "sign": 229
     },
     {
       "time": "Un mes",
-      "value": 591000,
-      "change": -74000,
-      "sign": -74
+      "value": 538000,
+      "change": 20000,
+      "sign": 20
     }
   ],
   "values_chart": {
@@ -1209,6 +1211,10 @@
       {
         "value": 517000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 558000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -1224,36 +1230,36 @@
     "71002": {
       "id": 71002,
       "id_team": 13,
-      "id_match": 38011,
-      "id_gameweek": 4050,
-      "id_home": 13,
-      "id_away": 16,
+      "id_match": 38020,
+      "id_gameweek": 4051,
+      "id_home": 48,
+      "id_away": 13,
       "date": {
-        "ts": 1792341000,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1792782000,
+        "text": "vie 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "vie",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Real Sociedad",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "home": "Alavés",
+      "away": "Málaga",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,
   "home": {
     "71002": {
       "id": 71002,
-      "points": 4,
-      "avg": 1.3333
+      "points": 5,
+      "avg": 1.25
     }
   },
   "away": {

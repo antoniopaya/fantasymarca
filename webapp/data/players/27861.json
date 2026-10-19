@@ -3,15 +3,15 @@
     "id": 27861,
     "name": "Pablo Martínez",
     "position": 3,
-    "points": 21,
-    "avg": 3.5,
+    "points": 36,
+    "avg": 5.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/27861.png?version=20250613152336",
     "isFavorite": 0,
-    "value": 2734000,
-    "previousValue": 2635000,
+    "value": 2966000,
+    "previousValue": 2734000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2734000,
+      "floor": 2966000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 4101000,
+      "value": 4449000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2734000,
+      "price": 2966000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 60
+    "clausesRanking": 31
   },
   "id": 27861,
   "player_extra": {
-    "matches": 6,
-    "goals": 0,
+    "matches": 7,
+    "goals": 1,
     "cards": 1
   },
   "points": [
@@ -223,12 +223,15 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 15,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "goal",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -700,10 +703,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 20,
-      "avg": 3.3333,
+      "points": 35,
+      "avg": 5,
       "id_team": 13,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -716,35 +719,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2635000,
-      "change": 99000,
-      "sign": 99
+      "value": 2734000,
+      "change": 232000,
+      "sign": 232
     },
     {
       "time": "Una semana",
-      "value": 1488000,
-      "change": 1246000,
-      "sign": "+1.246.000"
+      "value": 1678000,
+      "change": 1288000,
+      "sign": "+1.288.000"
     },
     {
       "time": "Un mes",
-      "value": 2439000,
-      "change": 295000,
-      "sign": 295
+      "value": 2467000,
+      "change": 499000,
+      "sign": 499
     },
     {
       "time": "Un año",
-      "value": 3403000,
-      "change": -669000,
-      "sign": -669
+      "value": 3267000,
+      "change": -301000,
+      "sign": -301
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 3403000,
-        "date": "18 oct 2025"
-      },
       {
         "value": 3267000,
         "date": "19 oct 2025"
@@ -1996,6 +1995,10 @@
       {
         "value": 2734000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 2966000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -2011,36 +2014,36 @@
     "27861": {
       "id": 27861,
       "id_team": 13,
-      "id_match": 38011,
-      "id_gameweek": 4050,
-      "id_home": 13,
-      "id_away": 16,
+      "id_match": 38020,
+      "id_gameweek": 4051,
+      "id_home": 48,
+      "id_away": 13,
       "date": {
-        "ts": 1792341000,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1792782000,
+        "text": "vie 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "vie",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Real Sociedad",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "home": "Alavés",
+      "away": "Málaga",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,
   "home": {
     "27861": {
       "id": 27861,
-      "points": 8,
-      "avg": 2.6667
+      "points": 23,
+      "avg": 5.75
     }
   },
   "away": {

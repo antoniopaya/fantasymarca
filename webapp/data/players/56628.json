@@ -3,15 +3,15 @@
     "id": 56628,
     "name": "Lucien Agoumé",
     "position": 3,
-    "points": 37,
-    "avg": 4.6,
+    "points": 38,
+    "avg": 4.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/56628.png?version=20251006013907",
     "isFavorite": 0,
-    "value": 23466000,
-    "previousValue": 23763000,
+    "value": 23218000,
+    "previousValue": 23466000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 23466000,
+      "floor": 23218000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 35199000,
+      "value": 34827000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 23466000,
+      "price": 23218000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 256
+    "clausesRanking": 250
   },
   "id": 56628,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
     "cards": 2
   },
@@ -216,12 +216,12 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -693,10 +693,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 37,
-      "avg": 4.625,
+      "points": 38,
+      "avg": 4.2222,
       "id_team": 17,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -723,35 +723,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 23763000,
-      "change": -297000,
-      "sign": -297
+      "value": 23466000,
+      "change": -248000,
+      "sign": -248
     },
     {
       "time": "Una semana",
-      "value": 23938000,
-      "change": -472000,
-      "sign": -472
+      "value": 24199000,
+      "change": -981000,
+      "sign": -981
     },
     {
       "time": "Un mes",
-      "value": 14977000,
-      "change": 8489000,
-      "sign": "+8.489.000"
+      "value": 15623000,
+      "change": 7595000,
+      "sign": "+7.595.000"
     },
     {
       "time": "Un año",
-      "value": 21839000,
-      "change": 1627000,
-      "sign": "+1.627.000"
+      "value": 21562000,
+      "change": 1656000,
+      "sign": "+1.656.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 21839000,
-        "date": "18 oct 2025"
-      },
       {
         "value": 21562000,
         "date": "19 oct 2025"
@@ -2211,6 +2207,10 @@
       {
         "value": 23466000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 23218000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -2226,28 +2226,28 @@
     "56628": {
       "id": 56628,
       "id_team": 17,
-      "id_match": 38014,
-      "id_gameweek": 4050,
-      "id_home": 15,
-      "id_away": 17,
+      "id_match": 38025,
+      "id_gameweek": 4051,
+      "id_home": 17,
+      "id_away": 50,
       "date": {
-        "ts": 1792350000,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793044800,
+        "text": "26 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "26 oct",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Real Madrid",
-      "away": "Sevilla",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Sevilla",
+      "away": "Osasuna",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
@@ -2261,8 +2261,8 @@
   "away": {
     "56628": {
       "id": 56628,
-      "points": 23,
-      "avg": 5.75
+      "points": 24,
+      "avg": 4.8
     }
   },
   "owners": [],

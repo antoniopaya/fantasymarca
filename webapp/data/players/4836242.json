@@ -3,15 +3,15 @@
     "id": 4836242,
     "name": "Sebastián Cáceres",
     "position": 2,
-    "points": 13,
-    "avg": 6.5,
+    "points": 22,
+    "avg": 7.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4836242.png?version=20260901221433",
     "isFavorite": 0,
-    "value": 2447000,
-    "previousValue": 2492000,
+    "value": 2557000,
+    "previousValue": 2447000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2447000,
+      "floor": 2557000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3670500,
+      "value": 3835500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2447000,
+      "price": 2557000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 284
+    "clausesRanking": 162
   },
   "id": 4836242,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -212,12 +212,15 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 9,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -689,30 +692,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 13,
-      "avg": 6.5,
+      "points": 22,
+      "avg": 7.3333,
       "id_team": 5,
-      "last_gameweek": 7
+      "last_gameweek": 9
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 2492000,
-      "change": -45000,
-      "sign": -45
+      "value": 2447000,
+      "change": 110000,
+      "sign": 110
     },
     {
       "time": "Una semana",
-      "value": 2904000,
-      "change": -457000,
-      "sign": -457
+      "value": 2848000,
+      "change": -291000,
+      "sign": -291
     },
     {
       "time": "Un mes",
-      "value": 1949000,
-      "change": 498000,
-      "sign": 498
+      "value": 1890000,
+      "change": 667000,
+      "sign": 667
     }
   ],
   "values_chart": {
@@ -904,6 +907,10 @@
       {
         "value": 2447000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 2557000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -919,36 +926,36 @@
     "4836242": {
       "id": 4836242,
       "id_team": 5,
-      "id_match": 38007,
-      "id_gameweek": 4050,
+      "id_match": 38019,
+      "id_gameweek": 4051,
       "id_home": 5,
-      "id_away": 48,
+      "id_away": 4,
       "date": {
-        "ts": 1792332900,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1792941300,
+        "text": "dom 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "dom",
           "time": "16:15",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Celta",
-      "away": "Alavés",
+      "away": "Betis",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "4836242": {
       "id": 4836242,
-      "points": 13,
-      "avg": 6.5
+      "points": 22,
+      "avg": 7.3333
     }
   },
   "away": {

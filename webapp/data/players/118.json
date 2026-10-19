@@ -3,15 +3,15 @@
     "id": 118,
     "name": "Jonny Otto",
     "position": 2,
-    "points": 32,
-    "avg": 4.6,
+    "points": 35,
+    "avg": 4.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/118.png?version=20250702181230",
     "isFavorite": 0,
-    "value": 15028000,
-    "previousValue": 15200000,
+    "value": 14897000,
+    "previousValue": 15028000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 15028000,
+      "floor": 14897000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 5,
-      "shield2WeeksSku": "shield_t5_2w",
-      "shield1MonthSku": "shield_t5_1m",
-      "value": 22542000,
+      "tier": 4,
+      "shield2WeeksSku": "shield_t4_2w",
+      "shield1MonthSku": "shield_t4_1m",
+      "value": 22345500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 15028000,
+      "price": 14897000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": 70
     },
-    "clausesRanking": 408
+    "clausesRanking": 361
   },
   "id": 118,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 0
   },
@@ -216,12 +216,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -693,10 +695,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 32,
-      "avg": 4.5714,
+      "points": 35,
+      "avg": 4.375,
       "id_team": 48,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -709,35 +711,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 15200000,
-      "change": -172000,
-      "sign": -172
+      "value": 15028000,
+      "change": -131000,
+      "sign": -131
     },
     {
       "time": "Una semana",
-      "value": 18107000,
-      "change": -3079000,
-      "sign": "-3.079.000"
+      "value": 17379000,
+      "change": -2482000,
+      "sign": "-2.482.000"
     },
     {
       "time": "Un mes",
-      "value": 16137000,
-      "change": -1109000,
-      "sign": "-1.109.000"
+      "value": 15627000,
+      "change": -730000,
+      "sign": -730
     },
     {
       "time": "Un año",
-      "value": 15102000,
-      "change": -74000,
-      "sign": -74
+      "value": 14778000,
+      "change": 119000,
+      "sign": 119
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 15102000,
-        "date": "18 oct 2025"
-      },
       {
         "value": 14778000,
         "date": "19 oct 2025"
@@ -2197,6 +2195,10 @@
       {
         "value": 15028000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 14897000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -2212,28 +2214,28 @@
     "118": {
       "id": 118,
       "id_team": 48,
-      "id_match": 38007,
-      "id_gameweek": 4050,
-      "id_home": 5,
-      "id_away": 48,
+      "id_match": 38020,
+      "id_gameweek": 4051,
+      "id_home": 48,
+      "id_away": 13,
       "date": {
-        "ts": 1792332900,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1792782000,
+        "text": "vie 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "vie",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Alavés",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
+      "home": "Alavés",
+      "away": "Málaga",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,
@@ -2247,8 +2249,8 @@
   "away": {
     "118": {
       "id": 118,
-      "points": 12,
-      "avg": 4
+      "points": 15,
+      "avg": 3.75
     }
   },
   "owners": [],

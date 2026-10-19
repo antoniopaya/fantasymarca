@@ -3,15 +3,15 @@
     "id": 19562,
     "name": "Takefusa Kubo",
     "position": 3,
-    "points": 13,
-    "avg": 2.6,
+    "points": 24,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/19562.png?version=20251004234049",
     "isFavorite": 0,
-    "value": 10831000,
-    "previousValue": 11031000,
+    "value": 11212000,
+    "previousValue": 10831000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 10831000,
+      "floor": 11212000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 16246500,
+      "value": 16818000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 10831000,
+      "price": 11212000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 174,
       "weight": 67
     },
-    "clausesRanking": 376
+    "clausesRanking": 142
   },
   "id": 19562,
   "player_extra": {
-    "matches": 5,
-    "goals": 0,
+    "matches": 6,
+    "goals": 1,
     "cards": 0
   },
   "points": [
@@ -222,12 +222,16 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 11,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "goal",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 13,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
@@ -699,10 +703,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 13,
-      "avg": 2.6,
+      "points": 24,
+      "avg": 4,
       "id_team": 16,
-      "last_gameweek": 6
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -729,35 +733,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 11031000,
-      "change": -200000,
-      "sign": -200
+      "value": 10831000,
+      "change": 381000,
+      "sign": 381
     },
     {
       "time": "Una semana",
-      "value": 13231000,
-      "change": -2400000,
-      "sign": "-2.400.000"
+      "value": 12800000,
+      "change": -1588000,
+      "sign": "-1.588.000"
     },
     {
       "time": "Un mes",
-      "value": 24040000,
-      "change": -13209000,
-      "sign": "-13.209.000"
+      "value": 23639000,
+      "change": -12427000,
+      "sign": "-12.427.000"
     },
     {
       "time": "Un año",
-      "value": 26804000,
-      "change": -15973000,
-      "sign": "-15.973.000"
+      "value": 26430000,
+      "change": -15218000,
+      "sign": "-15.218.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 26804000,
-        "date": "18 oct 2025"
-      },
       {
         "value": 26430000,
         "date": "19 oct 2025"
@@ -2217,6 +2217,10 @@
       {
         "value": 10831000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 11212000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -2232,28 +2236,28 @@
     "19562": {
       "id": 19562,
       "id_team": 16,
-      "id_match": 38011,
-      "id_gameweek": 4050,
-      "id_home": 13,
-      "id_away": 16,
+      "id_match": 38024,
+      "id_gameweek": 4051,
+      "id_home": 16,
+      "id_away": 12,
       "date": {
-        "ts": 1792341000,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1792949400,
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "dom",
           "time": "18:30",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Real Sociedad",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "home": "Real Sociedad",
+      "away": "Levante",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
   "starter": false,
@@ -2267,8 +2271,8 @@
   "away": {
     "19562": {
       "id": 19562,
-      "points": 7,
-      "avg": 3.5
+      "points": 18,
+      "avg": 6
     }
   },
   "owners": [],

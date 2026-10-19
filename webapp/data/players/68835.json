@@ -3,15 +3,15 @@
     "id": 68835,
     "name": "Job Ochieng",
     "position": 3,
-    "points": 22,
-    "avg": 4.4,
+    "points": 24,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68835.png?version=20260323141445",
     "isFavorite": 0,
-    "value": 5422000,
-    "previousValue": 5565000,
+    "value": 5259000,
+    "previousValue": 5422000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5422000,
+      "floor": 5259000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8133000,
+      "value": 7888500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5422000,
+      "price": 5259000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 192
+    "clausesRanking": 255
   },
   "id": 68835,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 1,
     "cards": 0
   },
@@ -225,12 +225,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 13,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
@@ -702,10 +704,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 22,
-      "avg": 4.4,
+      "points": 24,
+      "avg": 4,
       "id_team": 16,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -718,21 +720,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5565000,
-      "change": -143000,
-      "sign": -143
+      "value": 5422000,
+      "change": -163000,
+      "sign": -163
     },
     {
       "time": "Una semana",
-      "value": 6171000,
-      "change": -749000,
-      "sign": -749
+      "value": 6234000,
+      "change": -975000,
+      "sign": -975
     },
     {
       "time": "Un mes",
-      "value": 2910000,
-      "change": 2512000,
-      "sign": "+2.512.000"
+      "value": 3086000,
+      "change": 2173000,
+      "sign": "+2.173.000"
     }
   ],
   "values_chart": {
@@ -1748,6 +1750,10 @@
       {
         "value": 5422000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 5259000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -1763,28 +1769,28 @@
     "68835": {
       "id": 68835,
       "id_team": 16,
-      "id_match": 38011,
-      "id_gameweek": 4050,
-      "id_home": 13,
-      "id_away": 16,
+      "id_match": 38024,
+      "id_gameweek": 4051,
+      "id_home": 16,
+      "id_away": 12,
       "date": {
-        "ts": 1792341000,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1792949400,
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "dom",
           "time": "18:30",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Real Sociedad",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "home": "Real Sociedad",
+      "away": "Levante",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
   "starter": false,
@@ -1798,8 +1804,8 @@
   "away": {
     "68835": {
       "id": 68835,
-      "points": 22,
-      "avg": 7.3333
+      "points": 24,
+      "avg": 6
     }
   },
   "owners": [],

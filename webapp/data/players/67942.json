@@ -3,15 +3,15 @@
     "id": 67942,
     "name": "Íñigo Arguibide",
     "position": 2,
-    "points": 22,
-    "avg": 2.8,
+    "points": 24,
+    "avg": 2.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/67942.png?version=20251123102325",
     "isFavorite": 0,
-    "value": 16453000,
-    "previousValue": 17191000,
+    "value": 15828000,
+    "previousValue": 16453000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 16453000,
+      "floor": 15828000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 24679500,
+      "value": 23742000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 16453000,
+      "price": 15828000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 367
+    "clausesRanking": null
   },
   "id": 67942,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
     "cards": 0
   },
@@ -222,12 +222,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -699,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 22,
-      "avg": 2.75,
+      "points": 24,
+      "avg": 2.6667,
       "id_team": 50,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -715,21 +717,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 17191000,
-      "change": -738000,
-      "sign": -738
+      "value": 16453000,
+      "change": -625000,
+      "sign": -625
     },
     {
       "time": "Una semana",
-      "value": 21111000,
-      "change": -4658000,
-      "sign": "-4.658.000"
+      "value": 20647000,
+      "change": -4819000,
+      "sign": "-4.819.000"
     },
     {
       "time": "Un mes",
-      "value": 9526000,
-      "change": 6927000,
-      "sign": "+6.927.000"
+      "value": 9938000,
+      "change": 5890000,
+      "sign": "+5.890.000"
     }
   ],
   "values_chart": {
@@ -2053,6 +2055,10 @@
       {
         "value": 16453000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 15828000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -2096,8 +2102,8 @@
   "home": {
     "67942": {
       "id": 67942,
-      "points": 17,
-      "avg": 4.25
+      "points": 19,
+      "avg": 3.8
     }
   },
   "away": {

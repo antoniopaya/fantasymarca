@@ -4,14 +4,14 @@
     "name": "Odysseas Vlachodimos",
     "position": 1,
     "points": 37,
-    "avg": 4.6,
+    "avg": 4.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65111.png?version=20250812211744",
     "isFavorite": 0,
-    "value": 23272000,
-    "previousValue": 23381000,
+    "value": 23197000,
+    "previousValue": 23272000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 23272000,
+      "floor": 23197000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 34908000,
+      "value": 34795500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 23272000,
+      "price": 23197000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 191,
       "weight": null
     },
-    "clausesRanking": 144
+    "clausesRanking": 146
   },
   "id": 65111,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
     "cards": 0
   },
@@ -212,12 +212,12 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -690,9 +690,9 @@
     {
       "season": "26/27",
       "points": 37,
-      "avg": 4.625,
+      "avg": 4.1111,
       "id_team": 17,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -705,35 +705,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 23381000,
-      "change": -109000,
-      "sign": -109
+      "value": 23272000,
+      "change": -75000,
+      "sign": -75
     },
     {
       "time": "Una semana",
-      "value": 24259000,
-      "change": -987000,
-      "sign": -987
+      "value": 24204000,
+      "change": -1007000,
+      "sign": "-1.007.000"
     },
     {
       "time": "Un mes",
-      "value": 23180000,
-      "change": 92000,
-      "sign": 92
+      "value": 23476000,
+      "change": -279000,
+      "sign": -279
     },
     {
       "time": "Un año",
-      "value": 11124000,
-      "change": 12148000,
-      "sign": "+12.148.000"
+      "value": 11565000,
+      "change": 11632000,
+      "sign": "+11.632.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 11124000,
-        "date": "18 oct 2025"
-      },
       {
         "value": 11565000,
         "date": "19 oct 2025"
@@ -2145,6 +2141,10 @@
       {
         "value": 23272000,
         "date": "18 oct 2026"
+      },
+      {
+        "value": 23197000,
+        "date": "19 oct 2026"
       }
     ],
     "max": {
@@ -2160,28 +2160,28 @@
     "65111": {
       "id": 65111,
       "id_team": 17,
-      "id_match": 38014,
-      "id_gameweek": 4050,
-      "id_home": 15,
-      "id_away": 17,
+      "id_match": 38025,
+      "id_gameweek": 4051,
+      "id_home": 17,
+      "id_away": 50,
       "date": {
-        "ts": 1792350000,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793044800,
+        "text": "26 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "26 oct",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Real Madrid",
-      "away": "Sevilla",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Sevilla",
+      "away": "Osasuna",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
@@ -2196,7 +2196,7 @@
     "65111": {
       "id": 65111,
       "points": 21,
-      "avg": 5.25
+      "avg": 4.2
     }
   },
   "owners": [],
