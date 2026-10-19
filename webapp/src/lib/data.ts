@@ -217,6 +217,26 @@ export function getPreciosFantastica(): Record<string, number> {
   return preciosFantasticaCache;
 }
 
+let nombresFantasticaCache: Record<string, string> | null = null;
+
+/**
+ * Nombre del jugador tal cual aparece en el Excel de la liga ("Gerard",
+ * "B. Mayoral"...). El organizador pide los cambios con ese nombre para
+ * evitar confusiones. null si no está en el Excel.
+ */
+export function getNombreFantastica(id: number): string | null {
+  if (!nombresFantasticaCache) {
+    try {
+      nombresFantasticaCache = loadJson<Record<string, string>>(
+        "nombres_fantastica.json",
+      );
+    } catch {
+      nombresFantasticaCache = {};
+    }
+  }
+  return nombresFantasticaCache[String(id)] ?? null;
+}
+
 export interface Prediction {
   /** Puntos esperados (sin doblar por capitán). */
   xp: number;

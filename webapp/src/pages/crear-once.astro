@@ -2,6 +2,7 @@
 import Icon from "../components/Icon.astro";
 import Layout from "../layouts/Layout.astro";
 import {
+  getNombreFantastica,
   getAllPlayerSummaries,
   getNextGameweek,
   getMatches,
@@ -53,6 +54,8 @@ const players = getAllPlayerSummaries()
     return {
       id: p.id,
       name: p.name,
+      // Para el mensaje de WhatsApp: el nombre del Excel de la liga.
+      excelName: getNombreFantastica(p.id) ?? p.name,
       teamName: p.team_name,
       id_team: p.id_team,
       position: p.position,
@@ -982,6 +985,10 @@ for (const m of nextGwMatches) {
 
     // Empareja cada jugador que sale con uno que entra (por orden de
     // aparición) para el mensaje de WhatsApp: "jugador viejo - jugador nuevo".
+    // Cambios como parejas "sale - entra", en el orden que pide el
+    // organizador: por posición en el equipo (portero, defensas, medios,
+    // delanteros). Primero se emparejan los de la misma posición; si se ha
+    // cambiado de formación, los que sobran se emparejan entre sí después.
     function computeChangesDiff() {
       if (!changesMode) return [];
       const baseIds = changesMode.base.slots
@@ -992,13 +999,30 @@ for (const m of nextGwMatches) {
         .map((s) => s.playerId);
       const baseSet = new Set(baseIds);
       const currentSet = new Set(currentIds);
-      const removed = baseIds.filter((id) => !currentSet.has(id));
-      const added = currentIds.filter((id) => !baseSet.has(id));
+      const position = (id) => playersById.get(id)?.position ?? 9;
+      const byPosition = (a, b) => position(a) - position(b);
+      const removed = baseIds
+        .filter((id) => !currentSet.has(id))
+        .sort(byPosition);
+      const added = currentIds
+        .filter((id) => !baseSet.has(id))
+        .sort(byPosition);
       const pairs = [];
+      for (const out of [...removed]) {
+        const i = added.findIndex((id) => position(id) === position(out));
+        if (i === -1) continue;
+        pairs.push({ out, in: added[i] });
+        added.splice(i, 1);
+        removed.splice(removed.indexOf(out), 1);
+      }
       for (let i = 0; i < Math.max(removed.length, added.length); i++) {
         pairs.push({ out: removed[i] ?? null, in: added[i] ?? null });
       }
-      return pairs;
+      return pairs.sort(
+        (a, b) =>
+          position(a.out ?? a.in) - position(b.out ?? b.in) ||
+          (a.out === null) - (b.out === null),
+      );
     }
 
     function isNewInChangesMode(playerId) {
@@ -1723,12 +1747,12 @@ for (const m of nextGwMatches) {
     function buildWhatsAppMessage() {
       if (changesMode) {
         const lines = computeChangesDiff().map(({ out, in: inId }) => {
-          const outName = out !== null ? playersById.get(out).name : "—";
-          const inName = inId !== null ? playersById.get(inId).name : "—";
+          const outName = out !== null ? playersById.get(out).excelName : "—";
+          const inName = inId !== null ? playersById.get(inId).excelName : "—";
           return `${outName} - ${inName}`;
         });
         if (state.captainId !== null) {
-          lines.push(`${playersById.get(state.captainId).name} (c)`);
+          lines.push(`${playersById.get(state.captainId).excelName} (c)`);
         }
         return lines.join("\n");
       }
@@ -1739,8 +1763,8 @@ for (const m of nextGwMatches) {
           .map((s) => {
             const player = playersById.get(s.playerId);
             return state.captainId === player.id
-              ? `${player.name} (c)`
-              : player.name;
+              ? `${player.excelName} (c)`
+              : player.excelName;
           });
         return { role: row.role, names };
       }).filter((g) => g.names.length > 0);

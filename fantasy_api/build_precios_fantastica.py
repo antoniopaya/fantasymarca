@@ -186,12 +186,13 @@ def parse_excel(path: str) -> list[dict]:
 MIN_AUTO_MATCH_SCORE = 0.7
 
 
-def match_records(records: list[dict], players: list[dict]) -> tuple[dict, list[dict]]:
+def match_records(records: list[dict], players: list[dict]) -> tuple[dict, dict, list[dict]]:
     players_by_group = {}
     for p in players:
         players_by_group.setdefault((p["id_team"], p["position"]), []).append(p)
 
     price_by_id: dict[int, float] = {}
+    name_by_id: dict[int, str] = {}  # nombre tal cual viene en el Excel
     unmatched: list[dict] = []
     reserved_player_ids: set[int] = set()  # ids ya resueltos a mano, no elegibles para el matching automático
 
@@ -206,6 +207,7 @@ def match_records(records: list[dict], players: list[dict]) -> tuple[dict, list[
                 unmatched.append(rec)
             else:
                 price_by_id[override_id] = rec["price"]
+                name_by_id[override_id] = str(rec["name"]).strip()
                 reserved_player_ids.add(override_id)
         elif rec["price"] is None:
             # Fila con nombre pero sin precio puesto todavía en el Excel: no hay
@@ -239,12 +241,13 @@ def match_records(records: list[dict], players: list[dict]) -> tuple[dict, list[
             claimed_records.add(idx)
             claimed_players.add(player_id)
             price_by_id[player_id] = records[idx]["price"]
+            name_by_id[player_id] = str(records[idx]["name"]).strip()
 
         for idx in rec_indices:
             if idx not in claimed_records:
                 unmatched.append(records[idx])
 
-    return price_by_id, unmatched
+    return price_by_id, name_by_id, unmatched
 
 
 def main() -> None:
@@ -257,7 +260,7 @@ def main() -> None:
     with open(players_path, encoding="utf-8") as f:
         players = json.load(f)
 
-    price_by_id, unmatched = match_records(records, players)
+    price_by_id, name_by_id, unmatched = match_records(records, players)
 
     for player_id, price in EXTRA_PRICES.items():
         if player_id in price_by_id:
@@ -276,6 +279,15 @@ def main() -> None:
         f.write("\n")
 
     print(f"\nGuardado {out_path}: {len(output)} jugadores con precio Fantástica.", file=sys.stderr)
+
+    # El organizador pide los cambios con el nombre del Excel, para evitar
+    # confusiones: la web lo usa en el mensaje de WhatsApp de Mi 11.
+    names_path = os.path.join(DATA_DIR, "nombres_fantastica.json")
+    names = {str(pid): name for pid, name in sorted(name_by_id.items())}
+    with open(names_path, "w", encoding="utf-8") as f:
+        json.dump(names, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+    print(f"Guardado {names_path}: {len(names)} nombres del Excel.", file=sys.stderr)
 
     if unmatched:
         print(f"\n{len(unmatched)} filas del Excel sin match en el catálogo (sin precio asignado):", file=sys.stderr)

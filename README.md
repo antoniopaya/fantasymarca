@@ -80,7 +80,9 @@ de tres fuentes distintas, cada una con su script:
    precio de consenso que pactamos en la liga, mantenido a mano en un Excel
    (`webapp/data/*.xlsx`). El script empareja cada fila del Excel
    contra el catálogo por nombre+equipo+posición (el Excel no trae IDs de
-   Marca) y escribe `precios_fantastica.json`. Vive en un fichero aparte
+   Marca) y escribe `precios_fantastica.json`, y `nombres_fantastica.json`
+   con el nombre tal cual sale en el Excel (el que pide el organizador en los
+   cambios; Mi 11 lo usa en el mensaje de WhatsApp). Vive en un fichero aparte
    porque si estuviera en el mismo sitio que el catálogo, `main.py` lo
    pisaría en su próxima ejecución.
 
