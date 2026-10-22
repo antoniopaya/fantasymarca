@@ -3,19 +3,15 @@
     "id": 56924,
     "name": "Etta Eyong",
     "position": 4,
-    "points": 8,
-    "avg": 2.7,
-    "status": "injury",
+    "points": 13,
+    "avg": 3.3,
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "injury",
-      "description": "Lesión muscular",
-      "duration": "Baja esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/56924.png?version=20251031185323",
     "isFavorite": 0,
-    "value": 1967000,
-    "previousValue": 2154000,
+    "value": 1815000,
+    "previousValue": 1656000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1967000,
+      "floor": 1815000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2950500,
+      "value": 2722500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1967000,
+      "price": 1815000,
       "loanable": null
     },
     "bid": {
@@ -72,13 +68,13 @@
       "height": 181,
       "weight": null
     },
-    "clausesRanking": 336
+    "clausesRanking": 254
   },
   "id": 56924,
   "player_extra": {
-    "matches": 3,
-    "goals": 0,
-    "cards": 0
+    "matches": 4,
+    "goals": 1,
+    "cards": 1
   },
   "points": [
     {
@@ -184,12 +180,16 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-10-21 20:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -234,9 +234,9 @@
         "id_player": 56924,
         "category": "injury",
         "description": "Lesión muscular",
-        "duration": "Baja esta jornada",
+        "duration": "Duda esta jornada",
         "since": "2026-09-29 11:43:52",
-        "until": null,
+        "until": "2026-10-21 22:05:35",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -259,9 +259,9 @@
         "id_player": 56924,
         "category": "injury",
         "description": "Lesión muscular",
-        "duration": "Baja esta jornada",
+        "duration": "Duda esta jornada",
         "since": "2026-09-29 11:43:52",
-        "until": null,
+        "until": "2026-10-21 22:05:35",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -304,7 +304,7 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-07 14:00:00",
+      "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
@@ -320,8 +320,8 @@
       "id": 4054,
       "number": 13,
       "shortName": "J13",
-      "startDate": "2026-11-22 20:00:00",
-      "endDate": "2026-11-22 20:00:00",
+      "startDate": "2026-11-20 21:00:00",
+      "endDate": "2026-11-23 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -736,10 +736,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 8,
-      "avg": 2.6667,
+      "points": 13,
+      "avg": 3.25,
       "id_team": 12,
-      "last_gameweek": 3
+      "last_gameweek": 6
     },
     {
       "season": "25/26",
@@ -773,43 +773,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2154000,
-      "change": -187000,
-      "sign": -187
+      "value": 1656000,
+      "change": 159000,
+      "sign": 159
     },
     {
       "time": "Una semana",
-      "value": 2979000,
-      "change": -1012000,
-      "sign": "-1.012.000"
+      "value": 2495000,
+      "change": -680000,
+      "sign": -680
     },
     {
       "time": "Un mes",
-      "value": 7426000,
-      "change": -5459000,
-      "sign": "-5.459.000"
+      "value": 6752000,
+      "change": -4937000,
+      "sign": "-4.937.000"
     },
     {
       "time": "Un año",
-      "value": 42891000,
-      "change": -40924000,
-      "sign": "-40.924.000"
+      "value": 43970000,
+      "change": -42155000,
+      "sign": "-42.155.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 42891000,
-        "date": "19 oct 2025"
-      },
-      {
-        "value": 43286000,
-        "date": "20 oct 2025"
-      },
-      {
-        "value": 43628000,
-        "date": "21 oct 2025"
-      },
       {
         "value": 43970000,
         "date": "22 oct 2025"
@@ -2261,6 +2249,18 @@
       {
         "value": 1967000,
         "date": "19 oct 2026"
+      },
+      {
+        "value": 1747000,
+        "date": "20 oct 2026"
+      },
+      {
+        "value": 1656000,
+        "date": "21 oct 2026"
+      },
+      {
+        "value": 1815000,
+        "date": "22 oct 2026"
       }
     ],
     "max": {
@@ -2276,35 +2276,35 @@
     "56924": {
       "id": 56924,
       "id_team": 12,
-      "id_match": 37992,
-      "id_gameweek": 4047,
-      "id_home": 12,
-      "id_away": 1,
+      "id_match": 38024,
+      "id_gameweek": 4051,
+      "id_home": 16,
+      "id_away": 12,
       "date": {
-        "ts": 1792605600,
-        "text": "mié 20:00",
+        "ts": 1792949400,
+        "text": "dom 18:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "20:00",
+          "date": "dom",
+          "time": "18:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Athletic Club",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "home": "Real Sociedad",
+      "away": "Levante",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
   "starter": false,
   "home": {
     "56924": {
       "id": 56924,
-      "points": 5,
+      "points": 10,
       "avg": 5
     }
   },

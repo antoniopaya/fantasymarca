@@ -3,15 +3,15 @@
     "id": 1719,
     "name": "Aïssa Mandi",
     "position": 2,
-    "points": 24,
-    "avg": 4,
+    "points": 27,
+    "avg": 3.9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/1719.png?version=20260716122703",
     "isFavorite": 0,
-    "value": 6507000,
-    "previousValue": 6793000,
+    "value": 5856000,
+    "previousValue": 5994000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6507000,
+      "floor": 5856000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 3,
-      "shield2WeeksSku": "shield_t3_2w",
-      "shield1MonthSku": "shield_t3_1m",
-      "value": 9760500,
+      "tier": 2,
+      "shield2WeeksSku": "shield_t2_2w",
+      "shield1MonthSku": "shield_t2_1m",
+      "value": 8784000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6507000,
+      "price": 5856000,
       "loanable": null
     },
     "bid": {
@@ -60,7 +60,7 @@
     },
     "loan": [],
     "bio": {
-      "age": 34,
+      "age": 35,
       "country": {
         "flag": "🇩🇿",
         "country": "Argelia"
@@ -68,13 +68,13 @@
       "height": 186,
       "weight": 78
     },
-    "clausesRanking": null
+    "clausesRanking": 426
   },
   "id": 1719,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
-    "cards": 2
+    "cards": 3
   },
   "points": [
     {
@@ -166,12 +166,14 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-10-21 20:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -262,7 +264,7 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-07 14:00:00",
+      "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
@@ -278,8 +280,8 @@
       "id": 4054,
       "number": 13,
       "shortName": "J13",
-      "startDate": "2026-11-22 20:00:00",
-      "endDate": "2026-11-22 20:00:00",
+      "startDate": "2026-11-20 21:00:00",
+      "endDate": "2026-11-23 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -694,8 +696,8 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 24,
-      "avg": 4,
+      "points": 27,
+      "avg": 3.8571,
       "id_team": 12,
       "last_gameweek": 7
     },
@@ -710,21 +712,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 6793000,
-      "change": -286000,
-      "sign": -286
+      "value": 5994000,
+      "change": -138000,
+      "sign": -138
     },
     {
       "time": "Una semana",
-      "value": 8654000,
-      "change": -2147000,
-      "sign": "-2.147.000"
+      "value": 7680000,
+      "change": -1824000,
+      "sign": "-1.824.000"
     },
     {
       "time": "Un mes",
-      "value": 13038000,
-      "change": -6531000,
-      "sign": "-6.531.000"
+      "value": 13470000,
+      "change": -7614000,
+      "sign": "-7.614.000"
     }
   ],
   "values_chart": {
@@ -1108,6 +1110,18 @@
       {
         "value": 6507000,
         "date": "19 oct 2026"
+      },
+      {
+        "value": 6245000,
+        "date": "20 oct 2026"
+      },
+      {
+        "value": 5994000,
+        "date": "21 oct 2026"
+      },
+      {
+        "value": 5856000,
+        "date": "22 oct 2026"
       }
     ],
     "max": {
@@ -1123,36 +1137,36 @@
     "1719": {
       "id": 1719,
       "id_team": 12,
-      "id_match": 37992,
-      "id_gameweek": 4047,
-      "id_home": 12,
-      "id_away": 1,
+      "id_match": 38024,
+      "id_gameweek": 4051,
+      "id_home": 16,
+      "id_away": 12,
       "date": {
-        "ts": 1792605600,
-        "text": "mié 20:00",
+        "ts": 1792949400,
+        "text": "dom 18:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "20:00",
+          "date": "dom",
+          "time": "18:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Athletic Club",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "home": "Real Sociedad",
+      "away": "Levante",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
   "starter": false,
   "home": {
     "1719": {
       "id": 1719,
-      "points": 4,
-      "avg": 2
+      "points": 7,
+      "avg": 2.3333
     }
   },
   "away": {

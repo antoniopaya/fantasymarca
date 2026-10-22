@@ -5,17 +5,13 @@
     "position": 4,
     "points": 23,
     "avg": 3.3,
-    "status": "double",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "double",
-      "description": "Doble tarjeta",
-      "duration": "Baja esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/56632.png?version=20251006013448",
     "isFavorite": 0,
-    "value": 5272000,
-    "previousValue": 5502000,
+    "value": 4997000,
+    "previousValue": 5050000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5272000,
+      "floor": 4997000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7908000,
+      "value": 7495500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5272000,
+      "price": 4997000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +68,7 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 294
+    "clausesRanking": 280
   },
   "id": 56632,
   "player_extra": {
@@ -249,7 +245,7 @@
         "description": "Doble tarjeta",
         "duration": "Baja esta jornada",
         "since": "2026-10-13 11:29:27",
-        "until": null,
+        "until": "2026-10-20 14:14:36",
         "status": "Sancionado"
       },
       "teamPlayed": true,
@@ -292,7 +288,7 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-07 14:00:00",
+      "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
@@ -308,8 +304,8 @@
       "id": 4054,
       "number": 13,
       "shortName": "J13",
-      "startDate": "2026-11-22 20:00:00",
-      "endDate": "2026-11-22 20:00:00",
+      "startDate": "2026-11-20 21:00:00",
+      "endDate": "2026-11-23 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -754,43 +750,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5502000,
-      "change": -230000,
-      "sign": -230
+      "value": 5050000,
+      "change": -53000,
+      "sign": -53
     },
     {
       "time": "Una semana",
-      "value": 6728000,
-      "change": -1456000,
-      "sign": "-1.456.000"
+      "value": 6175000,
+      "change": -1178000,
+      "sign": "-1.178.000"
     },
     {
       "time": "Un mes",
-      "value": 12031000,
-      "change": -6759000,
-      "sign": "-6.759.000"
+      "value": 11033000,
+      "change": -6036000,
+      "sign": "-6.036.000"
     },
     {
       "time": "Un año",
-      "value": 23668000,
-      "change": -18396000,
-      "sign": "-18.396.000"
+      "value": 23274000,
+      "change": -18277000,
+      "sign": "-18.277.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 23668000,
-        "date": "19 oct 2025"
-      },
-      {
-        "value": 23684000,
-        "date": "20 oct 2025"
-      },
-      {
-        "value": 23562000,
-        "date": "21 oct 2025"
-      },
       {
         "value": 23274000,
         "date": "22 oct 2025"
@@ -2242,11 +2226,23 @@
       {
         "value": 5272000,
         "date": "19 oct 2026"
+      },
+      {
+        "value": 5087000,
+        "date": "20 oct 2026"
+      },
+      {
+        "value": 5050000,
+        "date": "21 oct 2026"
+      },
+      {
+        "value": 4997000,
+        "date": "22 oct 2026"
       }
     ],
     "max": {
-      "value": 23684000,
-      "date": "20 oct 2025"
+      "value": 23274000,
+      "date": "22 oct 2025"
     },
     "min": {
       "value": 329000,
@@ -2263,12 +2259,12 @@
       "id_away": 50,
       "date": {
         "ts": 1793044800,
-        "text": "26 oct 21:00",
-        "format": "d MMM H:mm",
+        "text": "lun 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "26 oct",
+          "date": "lun",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",

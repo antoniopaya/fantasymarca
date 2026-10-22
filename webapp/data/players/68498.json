@@ -5,17 +5,17 @@
     "position": 2,
     "points": 33,
     "avg": 4.7,
-    "status": "injury",
+    "status": "doubt",
     "id_competition": 1,
     "injury": {
-      "category": "injury",
+      "category": "doubt",
       "description": "Molestias",
-      "duration": "Baja esta jornada"
+      "duration": "Duda esta jornada"
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68498.png?version=20260117124556",
     "isFavorite": 0,
-    "value": 16163000,
-    "previousValue": 16477000,
+    "value": 14688000,
+    "previousValue": 15135000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 16163000,
+      "floor": 14688000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 5,
-      "shield2WeeksSku": "shield_t5_2w",
-      "shield1MonthSku": "shield_t5_1m",
-      "value": 24244500,
+      "tier": 4,
+      "shield2WeeksSku": "shield_t4_2w",
+      "shield1MonthSku": "shield_t4_1m",
+      "value": 22032000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 16163000,
+      "price": 14688000,
       "loanable": null
     },
     "bid": {
@@ -234,8 +234,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 309863,
+        "id_player": 68498,
+        "category": "injury",
+        "description": "Molestias",
+        "duration": "Duda esta jornada",
+        "since": "2026-10-16 17:38:28",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -275,7 +284,7 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-07 14:00:00",
+      "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
@@ -291,8 +300,8 @@
       "id": 4054,
       "number": 13,
       "shortName": "J13",
-      "startDate": "2026-11-22 20:00:00",
-      "endDate": "2026-11-22 20:00:00",
+      "startDate": "2026-11-20 21:00:00",
+      "endDate": "2026-11-23 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -723,21 +732,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 16477000,
-      "change": -314000,
-      "sign": -314
+      "value": 15135000,
+      "change": -447000,
+      "sign": -447
     },
     {
       "time": "Una semana",
-      "value": 19865000,
-      "change": -3702000,
-      "sign": "-3.702.000"
+      "value": 18122000,
+      "change": -3434000,
+      "sign": "-3.434.000"
     },
     {
       "time": "Un mes",
-      "value": 16147000,
-      "change": 16000,
-      "sign": 16
+      "value": 17590000,
+      "change": -2902000,
+      "sign": "-2.902.000"
     }
   ],
   "values_chart": {
@@ -1777,6 +1786,18 @@
       {
         "value": 16163000,
         "date": "19 oct 2026"
+      },
+      {
+        "value": 15686000,
+        "date": "20 oct 2026"
+      },
+      {
+        "value": 15135000,
+        "date": "21 oct 2026"
+      },
+      {
+        "value": 14688000,
+        "date": "22 oct 2026"
       }
     ],
     "max": {
@@ -1792,28 +1813,28 @@
     "68498": {
       "id": 68498,
       "id_team": 9,
-      "id_match": 38010,
-      "id_gameweek": 4050,
-      "id_home": 9,
-      "id_away": 14,
+      "id_match": 38017,
+      "id_gameweek": 4051,
+      "id_home": 1,
+      "id_away": 9,
       "date": {
-        "ts": 1792436400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792933200,
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Rayo Vallecano",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Athletic Club",
+      "away": "Getafe",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,

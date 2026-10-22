@@ -3,15 +3,15 @@
     "id": 28779,
     "name": "Iván Romero",
     "position": 4,
-    "points": 42,
-    "avg": 5.3,
+    "points": 46,
+    "avg": 5.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/28779.png?version=20250613151854",
     "isFavorite": 0,
-    "value": 30873000,
-    "previousValue": 30508000,
+    "value": 31915000,
+    "previousValue": 31568000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 30873000,
+      "floor": 31915000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 46309500,
+      "value": 47872500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 30873000,
+      "price": 31915000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 172,
       "weight": null
     },
-    "clausesRanking": 88
+    "clausesRanking": 138
   },
   "id": 28779,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 3,
     "cards": 2
   },
@@ -176,12 +176,14 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-10-21 20:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -276,7 +278,7 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-07 14:00:00",
+      "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
@@ -292,8 +294,8 @@
       "id": 4054,
       "number": 13,
       "shortName": "J13",
-      "startDate": "2026-11-22 20:00:00",
-      "endDate": "2026-11-22 20:00:00",
+      "startDate": "2026-11-20 21:00:00",
+      "endDate": "2026-11-23 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -708,8 +710,8 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 42,
-      "avg": 5.25,
+      "points": 46,
+      "avg": 5.1111,
       "id_team": 12,
       "last_gameweek": 9
     },
@@ -724,43 +726,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 30508000,
-      "change": 365000,
-      "sign": 365
+      "value": 31568000,
+      "change": 347000,
+      "sign": 347
     },
     {
       "time": "Una semana",
-      "value": 27814000,
-      "change": 3059000,
-      "sign": "+3.059.000"
+      "value": 29318000,
+      "change": 2597000,
+      "sign": "+2.597.000"
     },
     {
       "time": "Un mes",
-      "value": 20585000,
-      "change": 10288000,
-      "sign": "+10.288.000"
+      "value": 21198000,
+      "change": 10717000,
+      "sign": "+10.717.000"
     },
     {
       "time": "Un año",
-      "value": 23265000,
-      "change": 7608000,
-      "sign": "+7.608.000"
+      "value": 23742000,
+      "change": 8173000,
+      "sign": "+8.173.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 23265000,
-        "date": "19 oct 2025"
-      },
-      {
-        "value": 23459000,
-        "date": "20 oct 2025"
-      },
-      {
-        "value": 23552000,
-        "date": "21 oct 2025"
-      },
       {
         "value": 23742000,
         "date": "22 oct 2025"
@@ -2212,11 +2202,23 @@
       {
         "value": 30873000,
         "date": "19 oct 2026"
+      },
+      {
+        "value": 31187000,
+        "date": "20 oct 2026"
+      },
+      {
+        "value": 31568000,
+        "date": "21 oct 2026"
+      },
+      {
+        "value": 31915000,
+        "date": "22 oct 2026"
       }
     ],
     "max": {
-      "value": 30873000,
-      "date": "19 oct 2026"
+      "value": 31915000,
+      "date": "22 oct 2026"
     },
     "min": {
       "value": 8067000,
@@ -2227,36 +2229,36 @@
     "28779": {
       "id": 28779,
       "id_team": 12,
-      "id_match": 37992,
-      "id_gameweek": 4047,
-      "id_home": 12,
-      "id_away": 1,
+      "id_match": 38024,
+      "id_gameweek": 4051,
+      "id_home": 16,
+      "id_away": 12,
       "date": {
-        "ts": 1792605600,
-        "text": "mié 20:00",
+        "ts": 1792949400,
+        "text": "dom 18:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "20:00",
+          "date": "dom",
+          "time": "18:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Levante",
-      "away": "Athletic Club",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "home": "Real Sociedad",
+      "away": "Levante",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
   "starter": false,
   "home": {
     "28779": {
       "id": 28779,
-      "points": 21,
-      "avg": 7
+      "points": 25,
+      "avg": 6.25
     }
   },
   "away": {

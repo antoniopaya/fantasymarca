@@ -4,14 +4,14 @@
     "name": "Johaneko Louis-Jean",
     "position": 2,
     "points": 18,
-    "avg": 3,
+    "avg": 2.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3848780.png?version=20260827201004",
     "isFavorite": 0,
-    "value": 452000,
-    "previousValue": 379000,
+    "value": 950000,
+    "previousValue": 743000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 666666.6666666666,
+      "floor": 950000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1000000,
+      "value": 1425000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 452000,
+      "price": 950000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 257
+    "clausesRanking": 155
   },
   "id": 3848780,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 1
   },
@@ -173,12 +173,14 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-10-21 20:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -270,7 +272,7 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-07 14:00:00",
+      "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
@@ -286,8 +288,8 @@
       "id": 4054,
       "number": 13,
       "shortName": "J13",
-      "startDate": "2026-11-22 20:00:00",
-      "endDate": "2026-11-22 20:00:00",
+      "startDate": "2026-11-20 21:00:00",
+      "endDate": "2026-11-23 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -703,7 +705,7 @@
     {
       "season": "26/27",
       "points": 18,
-      "avg": 3,
+      "avg": 2.5714,
       "id_team": 1,
       "last_gameweek": 9
     }
@@ -711,21 +713,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 379000,
-      "change": 73000,
-      "sign": 73
+      "value": 743000,
+      "change": 207000,
+      "sign": 207
     },
     {
       "time": "Una semana",
-      "value": 971000,
-      "change": -519000,
-      "sign": -519
+      "value": 481000,
+      "change": 469000,
+      "sign": 469
     },
     {
       "time": "Un mes",
-      "value": 4113000,
-      "change": -3661000,
-      "sign": "-3.661.000"
+      "value": 3964000,
+      "change": -3014000,
+      "sign": "-3.014.000"
     }
   ],
   "values_chart": {
@@ -941,6 +943,18 @@
       {
         "value": 452000,
         "date": "19 oct 2026"
+      },
+      {
+        "value": 577000,
+        "date": "20 oct 2026"
+      },
+      {
+        "value": 743000,
+        "date": "21 oct 2026"
+      },
+      {
+        "value": 950000,
+        "date": "22 oct 2026"
       }
     ],
     "max": {
@@ -956,28 +970,28 @@
     "3848780": {
       "id": 3848780,
       "id_team": 1,
-      "id_match": 37992,
-      "id_gameweek": 4047,
-      "id_home": 12,
-      "id_away": 1,
+      "id_match": 38017,
+      "id_gameweek": 4051,
+      "id_home": 1,
+      "id_away": 9,
       "date": {
-        "ts": 1792605600,
-        "text": "mié 20:00",
+        "ts": 1792933200,
+        "text": "dom 14:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "20:00",
+          "date": "dom",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Levante",
-      "away": "Athletic Club",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "home": "Athletic Club",
+      "away": "Getafe",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,
@@ -992,7 +1006,7 @@
     "3848780": {
       "id": 3848780,
       "points": 13,
-      "avg": 4.3333
+      "avg": 3.25
     }
   },
   "owners": [],

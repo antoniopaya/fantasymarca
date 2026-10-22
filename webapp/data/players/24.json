@@ -3,15 +3,15 @@
     "id": 24,
     "name": "Unai López",
     "position": 3,
-    "points": 34,
-    "avg": 4.3,
+    "points": 38,
+    "avg": 4.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/24.png?version=20251004230007",
     "isFavorite": 0,
-    "value": 13088000,
-    "previousValue": 12730000,
+    "value": 14240000,
+    "previousValue": 13907000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 13088000,
+      "floor": 14240000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 19632000,
+      "value": 21360000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 13088000,
+      "price": 14240000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 169,
       "weight": 64
     },
-    "clausesRanking": 228
+    "clausesRanking": 170
   },
   "id": 24,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
     "cards": 2
   },
@@ -228,12 +228,14 @@
       "startDate": "2026-10-16 21:00:00",
       "endDate": "2026-10-19 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -273,7 +275,7 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-07 14:00:00",
+      "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
@@ -289,8 +291,8 @@
       "id": 4054,
       "number": 13,
       "shortName": "J13",
-      "startDate": "2026-11-22 20:00:00",
-      "endDate": "2026-11-22 20:00:00",
+      "startDate": "2026-11-20 21:00:00",
+      "endDate": "2026-11-23 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -705,10 +707,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 34,
-      "avg": 4.25,
+      "points": 38,
+      "avg": 4.2222,
       "id_team": 14,
-      "last_gameweek": 8
+      "last_gameweek": 9
     },
     {
       "season": "25/26",
@@ -735,43 +737,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 12730000,
-      "change": 358000,
-      "sign": 358
+      "value": 13907000,
+      "change": 333000,
+      "sign": 333
     },
     {
       "time": "Una semana",
-      "value": 12734000,
-      "change": 354000,
-      "sign": 354
+      "value": 12241000,
+      "change": 1999000,
+      "sign": "+1.999.000"
     },
     {
       "time": "Un mes",
-      "value": 19334000,
-      "change": -6246000,
-      "sign": "-6.246.000"
+      "value": 18856000,
+      "change": -4616000,
+      "sign": "-4.616.000"
     },
     {
       "time": "Un año",
-      "value": 5697000,
-      "change": 7391000,
-      "sign": "+7.391.000"
+      "value": 6138000,
+      "change": 8102000,
+      "sign": "+8.102.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 5697000,
-        "date": "19 oct 2025"
-      },
-      {
-        "value": 5759000,
-        "date": "20 oct 2025"
-      },
-      {
-        "value": 5927000,
-        "date": "21 oct 2025"
-      },
       {
         "value": 6138000,
         "date": "22 oct 2025"
@@ -2223,6 +2213,18 @@
       {
         "value": 13088000,
         "date": "19 oct 2026"
+      },
+      {
+        "value": 13461000,
+        "date": "20 oct 2026"
+      },
+      {
+        "value": 13907000,
+        "date": "21 oct 2026"
+      },
+      {
+        "value": 14240000,
+        "date": "22 oct 2026"
       }
     ],
     "max": {
@@ -2238,28 +2240,28 @@
     "24": {
       "id": 24,
       "id_team": 14,
-      "id_match": 38010,
-      "id_gameweek": 4050,
-      "id_home": 9,
-      "id_away": 14,
+      "id_match": 38022,
+      "id_gameweek": 4051,
+      "id_home": 14,
+      "id_away": 23,
       "date": {
-        "ts": 1792436400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1792843200,
+        "text": "sáb 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Getafe",
-      "away": "Rayo Vallecano",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Elche",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   },
   "starter": false,
@@ -2273,8 +2275,8 @@
   "away": {
     "24": {
       "id": 24,
-      "points": 15,
-      "avg": 3.75
+      "points": 19,
+      "avg": 3.8
     }
   },
   "owners": [],

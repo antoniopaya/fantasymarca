@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/58986.png?version=20251006024745",
     "isFavorite": 0,
-    "value": 6149000,
-    "previousValue": 5976000,
+    "value": 6876000,
+    "previousValue": 6625000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6149000,
+      "floor": 6876000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 9223500,
+      "value": 10314000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6149000,
+      "price": 6876000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 188,
       "weight": null
     },
-    "clausesRanking": 79
+    "clausesRanking": 42
   },
   "id": 58986,
   "player_extra": {
@@ -265,7 +265,7 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-07 14:00:00",
+      "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
@@ -281,8 +281,8 @@
       "id": 4054,
       "number": 13,
       "shortName": "J13",
-      "startDate": "2026-11-22 20:00:00",
-      "endDate": "2026-11-22 20:00:00",
+      "startDate": "2026-11-20 21:00:00",
+      "endDate": "2026-11-23 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -720,43 +720,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5976000,
-      "change": 173000,
-      "sign": 173
+      "value": 6625000,
+      "change": 251000,
+      "sign": 251
     },
     {
       "time": "Una semana",
-      "value": 5308000,
-      "change": 841000,
-      "sign": 841
+      "value": 5633000,
+      "change": 1243000,
+      "sign": "+1.243.000"
     },
     {
       "time": "Un mes",
-      "value": 10342000,
-      "change": -4193000,
-      "sign": "-4.193.000"
+      "value": 9464000,
+      "change": -2588000,
+      "sign": "-2.588.000"
     },
     {
       "time": "Un año",
-      "value": 9770000,
-      "change": -3621000,
-      "sign": "-3.621.000"
+      "value": 10694000,
+      "change": -3818000,
+      "sign": "-3.818.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 9770000,
-        "date": "19 oct 2025"
-      },
-      {
-        "value": 10073000,
-        "date": "20 oct 2025"
-      },
-      {
-        "value": 10372000,
-        "date": "21 oct 2025"
-      },
       {
         "value": 10694000,
         "date": "22 oct 2025"
@@ -2208,6 +2196,18 @@
       {
         "value": 6149000,
         "date": "19 oct 2026"
+      },
+      {
+        "value": 6380000,
+        "date": "20 oct 2026"
+      },
+      {
+        "value": 6625000,
+        "date": "21 oct 2026"
+      },
+      {
+        "value": 6876000,
+        "date": "22 oct 2026"
       }
     ],
     "max": {
@@ -2229,16 +2229,16 @@
       "id_away": 50,
       "date": {
         "ts": 1793044800,
-        "text": "26 oct 21:00",
-        "format": "d MMM H:mm",
+        "text": "lun 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "26 oct",
+          "date": "lun",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Sevilla",
       "away": "Osasuna",

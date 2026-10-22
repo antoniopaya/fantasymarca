@@ -3,15 +3,15 @@
     "id": 68383,
     "name": "Thiago Fernández",
     "position": 3,
-    "points": 23,
-    "avg": 3.8,
+    "points": 29,
+    "avg": 4.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68383.png?version=20260102114636",
     "isFavorite": 0,
-    "value": 2257000,
-    "previousValue": 2188000,
+    "value": 2666000,
+    "previousValue": 2510000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2257000,
+      "floor": 2666000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3385500,
+      "value": 3999000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2257000,
+      "price": 2666000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 143
+    "clausesRanking": 96
   },
   "id": 68383,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 0
   },
@@ -170,12 +170,14 @@
       "startDate": "2026-09-03 21:00:00",
       "endDate": "2026-10-21 20:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -269,7 +271,7 @@
       "id": 4053,
       "number": 12,
       "shortName": "J12",
-      "startDate": "2026-11-07 14:00:00",
+      "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
         "points": null,
@@ -285,8 +287,8 @@
       "id": 4054,
       "number": 13,
       "shortName": "J13",
-      "startDate": "2026-11-22 20:00:00",
-      "endDate": "2026-11-22 20:00:00",
+      "startDate": "2026-11-20 21:00:00",
+      "endDate": "2026-11-23 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -701,8 +703,8 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 23,
-      "avg": 3.8333,
+      "points": 29,
+      "avg": 4.1429,
       "id_team": 12,
       "last_gameweek": 9
     },
@@ -717,21 +719,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2188000,
-      "change": 69000,
-      "sign": 69
+      "value": 2510000,
+      "change": 156000,
+      "sign": 156
     },
     {
       "time": "Una semana",
-      "value": 2445000,
-      "change": -188000,
-      "sign": -188
+      "value": 2288000,
+      "change": 378000,
+      "sign": 378
     },
     {
       "time": "Un mes",
-      "value": 4691000,
-      "change": -2434000,
-      "sign": "-2.434.000"
+      "value": 4730000,
+      "change": -2064000,
+      "sign": "-2.064.000"
     }
   ],
   "values_chart": {
@@ -1899,6 +1901,18 @@
       {
         "value": 2257000,
         "date": "19 oct 2026"
+      },
+      {
+        "value": 2358000,
+        "date": "20 oct 2026"
+      },
+      {
+        "value": 2510000,
+        "date": "21 oct 2026"
+      },
+      {
+        "value": 2666000,
+        "date": "22 oct 2026"
       }
     ],
     "max": {
@@ -1914,36 +1928,36 @@
     "68383": {
       "id": 68383,
       "id_team": 12,
-      "id_match": 37992,
-      "id_gameweek": 4047,
-      "id_home": 12,
-      "id_away": 1,
+      "id_match": 38024,
+      "id_gameweek": 4051,
+      "id_home": 16,
+      "id_away": 12,
       "date": {
-        "ts": 1792605600,
-        "text": "mié 20:00",
+        "ts": 1792949400,
+        "text": "dom 18:30",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "mié",
-          "time": "20:00",
+          "date": "dom",
+          "time": "18:30",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Levante",
-      "away": "Athletic Club",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "home": "Real Sociedad",
+      "away": "Levante",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
   "starter": false,
   "home": {
     "68383": {
       "id": 68383,
-      "points": 5,
-      "avg": 2.5
+      "points": 11,
+      "avg": 3.6667
     }
   },
   "away": {
