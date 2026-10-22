@@ -420,9 +420,13 @@ def evaluate(df: pd.DataFrame, features: list[str]):
         test = df[(df.gw == k) & df.team_played]
         if train.gw.nunique() < MIN_TRAIN_GW or test.empty:
             continue
+        # Las alineaciones solo están guardadas desde la 8: en las jornadas
+        # anteriores esa columna va vacía y el boosting no acepta columnas sin
+        # ningún valor.
+        fold_features = [f for f in features if train[f].notna().any()]
         preds = {}
         for family in MODEL_FAMILIES:
-            p, s = predict(fit(train, features, family), test, features)
+            p, s = predict(fit(train, fold_features, family), test, fold_features)
             preds[family] = p * s
         preds["media_previa"] = baseline_mean(test)
         preds["formula_web"] = baseline_formula(test)
