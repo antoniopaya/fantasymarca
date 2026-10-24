@@ -3,15 +3,15 @@
     "id": 68606,
     "name": "Ángel Pérez",
     "position": 3,
-    "points": 52,
-    "avg": 6.5,
+    "points": 58,
+    "avg": 6.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68606.png?version=20260323141026",
     "isFavorite": 0,
-    "value": 27467000,
-    "previousValue": 27503000,
+    "value": 27333000,
+    "previousValue": 27467000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 27467000,
+      "floor": 27333000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 41200500,
+      "value": 40999500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 27467000,
+      "price": 27333000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 290
+    "clausesRanking": 284
   },
   "id": 68606,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
     "cards": 1
   },
@@ -255,12 +255,12 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 13,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
@@ -716,10 +716,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 52,
-      "avg": 6.5,
+      "points": 58,
+      "avg": 6.4444,
       "id_team": 48,
-      "last_gameweek": 8
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -732,21 +732,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 27503000,
-      "change": -36000,
-      "sign": -36
+      "value": 27467000,
+      "change": -134000,
+      "sign": -134
     },
     {
       "time": "Una semana",
-      "value": 29382000,
-      "change": -1915000,
-      "sign": "-1.915.000"
+      "value": 28854000,
+      "change": -1521000,
+      "sign": "-1.521.000"
     },
     {
       "time": "Un mes",
-      "value": 31103000,
-      "change": -3636000,
-      "sign": "-3.636.000"
+      "value": 31446000,
+      "change": -4113000,
+      "sign": "-4.113.000"
     }
   ],
   "values_chart": {
@@ -1826,6 +1826,10 @@
       {
         "value": 27467000,
         "date": "23 oct 2026"
+      },
+      {
+        "value": 27333000,
+        "date": "24 oct 2026"
       }
     ],
     "max": {
@@ -1841,36 +1845,36 @@
     "68606": {
       "id": 68606,
       "id_team": 48,
-      "id_match": 38020,
-      "id_gameweek": 4051,
-      "id_home": 48,
-      "id_away": 13,
+      "id_match": 38030,
+      "id_gameweek": 4052,
+      "id_home": 3,
+      "id_away": 48,
       "date": {
-        "ts": 1792782000,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793476800,
+        "text": "31 oct 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "31 oct",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Málaga",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "home": "Barcelona",
+      "away": "Alavés",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
   "home": {
     "68606": {
       "id": 68606,
-      "points": 42,
-      "avg": 8.4
+      "points": 48,
+      "avg": 8
     }
   },
   "away": {

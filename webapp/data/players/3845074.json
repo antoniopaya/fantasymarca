@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3845074.png?version=20260826061635",
     "isFavorite": 0,
-    "value": 10751000,
-    "previousValue": 11049000,
+    "value": 10240000,
+    "previousValue": 10751000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 10751000,
+      "floor": 10240000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 16126500,
+      "value": 15360000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 10751000,
+      "price": 10240000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 173,
       "weight": null
     },
-    "clausesRanking": 317
+    "clausesRanking": 314
   },
   "id": 3845074,
   "player_extra": {
@@ -710,21 +710,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 11049000,
-      "change": -298000,
-      "sign": -298
+      "value": 10751000,
+      "change": -511000,
+      "sign": -511
     },
     {
       "time": "Una semana",
-      "value": 13036000,
-      "change": -2285000,
-      "sign": "-2.285.000"
+      "value": 12710000,
+      "change": -2470000,
+      "sign": "-2.470.000"
     },
     {
       "time": "Un mes",
-      "value": 10088000,
-      "change": 663000,
-      "sign": 663
+      "value": 10349000,
+      "change": -109000,
+      "sign": -109
     }
   ],
   "values_chart": {
@@ -964,6 +964,10 @@
       {
         "value": 10751000,
         "date": "23 oct 2026"
+      },
+      {
+        "value": 10240000,
+        "date": "24 oct 2026"
       }
     ],
     "max": {
@@ -985,12 +989,12 @@
       "id_away": 20,
       "date": {
         "ts": 1792859400,
-        "text": "sáb 18:30",
-        "format": "EEE H:mm",
+        "text": "Hoy 18:30",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "sáb",
+          "date": "Hoy",
           "time": "18:30",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

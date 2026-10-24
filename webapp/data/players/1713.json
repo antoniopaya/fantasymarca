@@ -3,15 +3,15 @@
     "id": 1713,
     "name": "Florian Lejeune",
     "position": 2,
-    "points": 25,
-    "avg": 2.8,
+    "points": 24,
+    "avg": 2.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/1713.png?version=20251004225338",
     "isFavorite": 0,
-    "value": 33721000,
-    "previousValue": 34095000,
+    "value": 33236000,
+    "previousValue": 33721000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 33721000,
+      "floor": 33236000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 50581500,
+      "value": 49854000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 33721000,
+      "price": 33236000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 190,
       "weight": 81
     },
-    "clausesRanking": 247
+    "clausesRanking": 251
   },
   "id": 1713,
   "player_extra": {
-    "matches": 9,
+    "matches": 10,
     "goals": 0,
     "cards": 1
   },
@@ -232,8 +232,8 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": -1,
+        "isLive": true
       },
       "events": null,
       "injury": null,
@@ -723,35 +723,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 34095000,
-      "change": -374000,
-      "sign": -374
+      "value": 33721000,
+      "change": -485000,
+      "sign": -485
     },
     {
       "time": "Una semana",
-      "value": 35685000,
-      "change": -1964000,
-      "sign": "-1.964.000"
+      "value": 35841000,
+      "change": -2605000,
+      "sign": "-2.605.000"
     },
     {
       "time": "Un mes",
-      "value": 23027000,
-      "change": 10694000,
-      "sign": "+10.694.000"
+      "value": 23366000,
+      "change": 9870000,
+      "sign": "+9.870.000"
     },
     {
       "time": "Un año",
-      "value": 20872000,
-      "change": 12849000,
-      "sign": "+12.849.000"
+      "value": 21121000,
+      "change": 12115000,
+      "sign": "+12.115.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 20872000,
-        "date": "23 oct 2025"
-      },
       {
         "value": 21121000,
         "date": "24 oct 2025"
@@ -2211,6 +2207,10 @@
       {
         "value": 33721000,
         "date": "23 oct 2026"
+      },
+      {
+        "value": 33236000,
+        "date": "24 oct 2026"
       }
     ],
     "max": {
@@ -2218,36 +2218,36 @@
       "date": "24 may 2026"
     },
     "min": {
-      "value": 20872000,
-      "date": "23 oct 2025"
+      "value": 21121000,
+      "date": "24 oct 2025"
     }
   },
   "next_match": {
     "1713": {
       "id": 1713,
       "id_team": 14,
-      "id_match": 38022,
-      "id_gameweek": 4051,
+      "id_match": 38033,
+      "id_gameweek": 4052,
       "id_home": 14,
-      "id_away": 23,
+      "id_away": 5,
       "date": {
-        "ts": 1792843200,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1793459700,
+        "text": "31 oct 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "31 oct",
+          "time": "16:15",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Rayo Vallecano",
-      "away": "Elche",
+      "away": "Celta",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     }
   },
   "starter": false,

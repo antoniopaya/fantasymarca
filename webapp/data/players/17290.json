@@ -3,15 +3,15 @@
     "id": 17290,
     "name": "Sergio Camello",
     "position": 4,
-    "points": 55,
-    "avg": 6.1,
+    "points": 56,
+    "avg": 5.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/17290.png?version=20251004230141",
     "isFavorite": 0,
-    "value": 46012000,
-    "previousValue": 45971000,
+    "value": 46060000,
+    "previousValue": 46012000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 46012000,
+      "floor": 46060000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 69018000,
+      "value": 69090000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 46012000,
+      "price": 46060000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 177,
       "weight": null
     },
-    "clausesRanking": 113
+    "clausesRanking": 120
   },
   "id": 17290,
   "player_extra": {
-    "matches": 9,
+    "matches": 10,
     "goals": 7,
     "cards": 3
   },
@@ -253,8 +253,8 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 1,
+        "isLive": true
       },
       "events": null,
       "injury": null,
@@ -744,35 +744,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 45971000,
-      "change": 41000,
-      "sign": 41
+      "value": 46012000,
+      "change": 48000,
+      "sign": 48
     },
     {
       "time": "Una semana",
-      "value": 44496000,
-      "change": 1516000,
-      "sign": "+1.516.000"
+      "value": 44774000,
+      "change": 1286000,
+      "sign": "+1.286.000"
     },
     {
       "time": "Un mes",
-      "value": 32546000,
-      "change": 13466000,
-      "sign": "+13.466.000"
+      "value": 33121000,
+      "change": 12939000,
+      "sign": "+12.939.000"
     },
     {
       "time": "Un año",
-      "value": 342000,
-      "change": 45670000,
-      "sign": "+45.670.000"
+      "value": 337000,
+      "change": 45723000,
+      "sign": "+45.723.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 342000,
-        "date": "23 oct 2025"
-      },
       {
         "value": 337000,
         "date": "24 oct 2025"
@@ -2232,11 +2228,15 @@
       {
         "value": 46012000,
         "date": "23 oct 2026"
+      },
+      {
+        "value": 46060000,
+        "date": "24 oct 2026"
       }
     ],
     "max": {
-      "value": 46012000,
-      "date": "23 oct 2026"
+      "value": 46060000,
+      "date": "24 oct 2026"
     },
     "min": {
       "value": 329000,
@@ -2247,28 +2247,28 @@
     "17290": {
       "id": 17290,
       "id_team": 14,
-      "id_match": 38022,
-      "id_gameweek": 4051,
+      "id_match": 38033,
+      "id_gameweek": 4052,
       "id_home": 14,
-      "id_away": 23,
+      "id_away": 5,
       "date": {
-        "ts": 1792843200,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1793459700,
+        "text": "31 oct 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "31 oct",
+          "time": "16:15",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Rayo Vallecano",
-      "away": "Elche",
+      "away": "Celta",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     }
   },
   "starter": false,

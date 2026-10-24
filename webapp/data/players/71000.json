@@ -3,15 +3,15 @@
     "id": 71000,
     "name": "Rafa Rodriguez",
     "position": 3,
-    "points": 15,
-    "avg": 3,
+    "points": 17,
+    "avg": 2.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71000.png?version=20260621195913",
     "isFavorite": 0,
-    "value": 1222000,
-    "previousValue": 1309000,
+    "value": 1000000,
+    "previousValue": 1222000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1222000,
+      "floor": 1000000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1833000,
+      "value": 1500000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1222000,
+      "price": 1000000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 312
+    "clausesRanking": 309
   },
   "id": 71000,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 0,
     "cards": 0
   },
@@ -238,12 +238,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -699,30 +701,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 15,
-      "avg": 3,
+      "points": 17,
+      "avg": 2.8333,
       "id_team": 13,
-      "last_gameweek": 8
+      "last_gameweek": 10
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 1309000,
-      "change": -87000,
-      "sign": -87
+      "value": 1222000,
+      "change": -222000,
+      "sign": -222
     },
     {
       "time": "Una semana",
-      "value": 2142000,
-      "change": -920000,
-      "sign": -920
+      "value": 2199000,
+      "change": -1199000,
+      "sign": "-1.199.000"
     },
     {
       "time": "Un mes",
-      "value": 635000,
-      "change": 587000,
-      "sign": 587
+      "value": 746000,
+      "change": 254000,
+      "sign": 254
     }
   ],
   "values_chart": {
@@ -1222,6 +1224,10 @@
       {
         "value": 1222000,
         "date": "23 oct 2026"
+      },
+      {
+        "value": 1000000,
+        "date": "24 oct 2026"
       }
     ],
     "max": {
@@ -1237,27 +1243,27 @@
     "71000": {
       "id": 71000,
       "id_team": 13,
-      "id_match": 38020,
-      "id_gameweek": 4051,
-      "id_home": 48,
+      "id_match": 38034,
+      "id_gameweek": 4052,
+      "id_home": 4,
       "id_away": 13,
       "date": {
-        "ts": 1792782000,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793467800,
+        "text": "31 oct 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "31 oct",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Alavés",
+      "home": "Betis",
       "away": "Málaga",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
@@ -1272,8 +1278,8 @@
   "away": {
     "71000": {
       "id": 71000,
-      "points": 9,
-      "avg": 3
+      "points": 11,
+      "avg": 2.75
     }
   },
   "owners": [],
