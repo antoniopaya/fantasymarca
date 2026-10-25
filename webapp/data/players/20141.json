@@ -3,15 +3,15 @@
     "id": 20141,
     "name": "Germán Valera",
     "position": 3,
-    "points": 41,
-    "avg": 4.1,
+    "points": 51,
+    "avg": 5.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/20141.png?version=20251006022918",
     "isFavorite": 0,
-    "value": 20307000,
-    "previousValue": 19796000,
+    "value": 20653000,
+    "previousValue": 20307000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 20307000,
+      "floor": 20653000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 30460500,
+      "value": 30979500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 20307000,
+      "price": 20653000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 317
+    "clausesRanking": 165
   },
   "id": 20141,
   "player_extra": {
     "matches": 10,
-    "goals": 1,
+    "goals": 2,
     "cards": 1
   },
   "points": [
@@ -239,12 +239,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 11,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -700,10 +702,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 40,
-      "avg": 4.4444,
+      "points": 51,
+      "avg": 5.1,
       "id_team": 23,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -723,35 +725,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 19796000,
-      "change": 511000,
-      "sign": 511
+      "value": 20307000,
+      "change": 346000,
+      "sign": 346
     },
     {
       "time": "Una semana",
-      "value": 19878000,
-      "change": 429000,
-      "sign": 429
+      "value": 19539000,
+      "change": 1114000,
+      "sign": "+1.114.000"
     },
     {
       "time": "Un mes",
-      "value": 22065000,
-      "change": -1758000,
-      "sign": "-1.758.000"
+      "value": 22362000,
+      "change": -1709000,
+      "sign": "-1.709.000"
     },
     {
       "time": "Un año",
-      "value": 34353000,
-      "change": -14046000,
-      "sign": "-14.046.000"
+      "value": 34805000,
+      "change": -14152000,
+      "sign": "-14.152.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 34353000,
-        "date": "24 oct 2025"
-      },
       {
         "value": 34805000,
         "date": "25 oct 2025"
@@ -2211,6 +2209,10 @@
       {
         "value": 20307000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 20653000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -2261,8 +2263,8 @@
   "away": {
     "20141": {
       "id": 20141,
-      "points": 28,
-      "avg": 5.6
+      "points": 39,
+      "avg": 6.5
     }
   },
   "owners": [],

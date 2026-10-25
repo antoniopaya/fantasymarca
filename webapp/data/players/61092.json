@@ -3,15 +3,15 @@
     "id": 61092,
     "name": "Tajon Buchanan",
     "position": 3,
-    "points": 20,
-    "avg": 2.9,
+    "points": 25,
+    "avg": 3.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/61092.png?version=20250201122704",
     "isFavorite": 0,
-    "value": 8426000,
-    "previousValue": 8622000,
+    "value": 8450000,
+    "previousValue": 8426000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 8426000,
+      "floor": 8450000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 12639000,
+      "value": 12675000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 8426000,
+      "price": 8450000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 312
+    "clausesRanking": 266
   },
   "id": 61092,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
-    "cards": 2
+    "cards": 3
   },
   "points": [
     {
@@ -260,12 +260,15 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -721,10 +724,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 20,
-      "avg": 2.8571,
+      "points": 25,
+      "avg": 3.125,
       "id_team": 20,
-      "last_gameweek": 7
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -744,35 +747,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 8622000,
-      "change": -196000,
-      "sign": -196
+      "value": 8426000,
+      "change": 24000,
+      "sign": 24
     },
     {
       "time": "Una semana",
-      "value": 10292000,
-      "change": -1866000,
-      "sign": "-1.866.000"
+      "value": 9920000,
+      "change": -1470000,
+      "sign": "-1.470.000"
     },
     {
       "time": "Un mes",
-      "value": 19317000,
-      "change": -10891000,
-      "sign": "-10.891.000"
+      "value": 19915000,
+      "change": -11465000,
+      "sign": "-11.465.000"
     },
     {
       "time": "Un año",
-      "value": 25130000,
-      "change": -16704000,
-      "sign": "-16.704.000"
+      "value": 25458000,
+      "change": -17008000,
+      "sign": "-17.008.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 25130000,
-        "date": "24 oct 2025"
-      },
       {
         "value": 25458000,
         "date": "25 oct 2025"
@@ -2232,6 +2231,10 @@
       {
         "value": 8426000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 8450000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -2247,28 +2250,28 @@
     "61092": {
       "id": 61092,
       "id_team": 20,
-      "id_match": 38026,
-      "id_gameweek": 4051,
-      "id_home": 19,
-      "id_away": 20,
+      "id_match": 38036,
+      "id_gameweek": 4052,
+      "id_home": 20,
+      "id_away": 8,
       "date": {
-        "ts": 1792859400,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1793390400,
+        "text": "vie 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "vie",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Villarreal",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+      "home": "Villarreal",
+      "away": "Espanyol",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,
@@ -2282,8 +2285,8 @@
   "away": {
     "61092": {
       "id": 61092,
-      "points": 16,
-      "avg": 4
+      "points": 21,
+      "avg": 4.2
     }
   },
   "owners": [],

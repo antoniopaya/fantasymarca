@@ -4,14 +4,14 @@
     "name": "Urko González",
     "position": 3,
     "points": 24,
-    "avg": 3,
+    "avg": 2.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/23172.png?version=20251003195730",
     "isFavorite": 0,
-    "value": 2955000,
-    "previousValue": 3152000,
+    "value": 2725000,
+    "previousValue": 2955000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2955000,
+      "floor": 2725000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 4432500,
+      "value": 4087500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2955000,
+      "price": 2725000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 189,
       "weight": null
     },
-    "clausesRanking": 417
+    "clausesRanking": 400
   },
   "id": 23172,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
-    "cards": 2
+    "cards": 3
   },
   "points": [
     {
@@ -244,12 +244,15 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -706,9 +709,9 @@
     {
       "season": "26/27",
       "points": 24,
-      "avg": 3,
+      "avg": 2.6667,
       "id_team": 8,
-      "last_gameweek": 8
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -749,35 +752,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 3152000,
-      "change": -197000,
-      "sign": -197
+      "value": 2955000,
+      "change": -230000,
+      "sign": -230
     },
     {
       "time": "Una semana",
-      "value": 4222000,
-      "change": -1267000,
-      "sign": "-1.267.000"
+      "value": 4057000,
+      "change": -1332000,
+      "sign": "-1.332.000"
     },
     {
       "time": "Un mes",
-      "value": 7734000,
-      "change": -4779000,
-      "sign": "-4.779.000"
+      "value": 7541000,
+      "change": -4816000,
+      "sign": "-4.816.000"
     },
     {
       "time": "Un año",
-      "value": 2681000,
-      "change": 274000,
-      "sign": 274
+      "value": 2444000,
+      "change": 281000,
+      "sign": 281
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 2681000,
-        "date": "24 oct 2025"
-      },
       {
         "value": 2444000,
         "date": "25 oct 2025"
@@ -2237,6 +2236,10 @@
       {
         "value": 2955000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 2725000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -2252,27 +2255,27 @@
     "23172": {
       "id": 23172,
       "id_team": 8,
-      "id_match": 38023,
-      "id_gameweek": 4051,
-      "id_home": 1490,
+      "id_match": 38036,
+      "id_gameweek": 4052,
+      "id_home": 20,
       "id_away": 8,
       "date": {
-        "ts": 1792851300,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1793390400,
+        "text": "vie 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "vie",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
+      "home": "Villarreal",
       "away": "Espanyol",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
@@ -2288,7 +2291,7 @@
     "23172": {
       "id": 23172,
       "points": 12,
-      "avg": 3
+      "avg": 2.4
     }
   },
   "owners": [],

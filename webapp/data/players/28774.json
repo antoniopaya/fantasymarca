@@ -3,15 +3,15 @@
     "id": 28774,
     "name": "Julen Agirrezabala",
     "position": 1,
-    "points": 34,
-    "avg": 3.8,
+    "points": 37,
+    "avg": 3.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/28774.png?version=20251006020123",
     "isFavorite": 0,
-    "value": 19759000,
-    "previousValue": 20080000,
+    "value": 19360000,
+    "previousValue": 19759000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 19759000,
+      "floor": 19360000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 29638500,
+      "value": 29040000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 19759000,
+      "price": 19360000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 187,
       "weight": null
     },
-    "clausesRanking": 260
+    "clausesRanking": 262
   },
   "id": 28774,
   "player_extra": {
-    "matches": 9,
+    "matches": 10,
     "goals": 0,
     "cards": 0
   },
@@ -230,12 +230,12 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -691,10 +691,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 34,
-      "avg": 3.7778,
+      "points": 37,
+      "avg": 3.7,
       "id_team": 1490,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -721,35 +721,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 20080000,
-      "change": -321000,
-      "sign": -321
+      "value": 19759000,
+      "change": -399000,
+      "sign": -399
     },
     {
       "time": "Una semana",
-      "value": 21470000,
-      "change": -1711000,
-      "sign": "-1.711.000"
+      "value": 21253000,
+      "change": -1893000,
+      "sign": "-1.893.000"
     },
     {
       "time": "Un mes",
-      "value": 22342000,
-      "change": -2583000,
-      "sign": "-2.583.000"
+      "value": 22652000,
+      "change": -3292000,
+      "sign": "-3.292.000"
     },
     {
       "time": "Un año",
-      "value": 19730000,
-      "change": 29000,
-      "sign": 29
+      "value": 20237000,
+      "change": -877000,
+      "sign": -877
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 19730000,
-        "date": "24 oct 2025"
-      },
       {
         "value": 20237000,
         "date": "25 oct 2025"
@@ -2209,6 +2205,10 @@
       {
         "value": 19759000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 19360000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -2224,36 +2224,36 @@
     "28774": {
       "id": 28774,
       "id_team": 1490,
-      "id_match": 38023,
-      "id_gameweek": 4051,
+      "id_match": 38035,
+      "id_gameweek": 4052,
       "id_home": 1490,
-      "id_away": 8,
+      "id_away": 15,
       "date": {
-        "ts": 1792851300,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1793546100,
+        "text": "1 nov 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "1 nov",
           "time": "16:15",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Racing de Santander",
-      "away": "Espanyol",
+      "away": "Real Madrid",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
   "home": {
     "28774": {
       "id": 28774,
-      "points": 16,
-      "avg": 4
+      "points": 19,
+      "avg": 3.8
     }
   },
   "away": {

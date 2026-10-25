@@ -3,15 +3,15 @@
     "id": 70945,
     "name": "Diego Villares",
     "position": 3,
-    "points": 20,
-    "avg": 4,
+    "points": 22,
+    "avg": 3.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70945.png?version=20260621102017",
     "isFavorite": 0,
-    "value": 4666000,
-    "previousValue": 4656000,
+    "value": 4659000,
+    "previousValue": 4666000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4666000,
+      "floor": 4659000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6999000,
+      "value": 6988500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4666000,
+      "price": 4659000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 93
+    "clausesRanking": 112
   },
   "id": 70945,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 1,
     "cards": 0
   },
@@ -237,12 +237,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -698,30 +700,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 20,
-      "avg": 4,
+      "points": 22,
+      "avg": 3.6667,
       "id_team": 6,
-      "last_gameweek": 9
+      "last_gameweek": 10
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 4656000,
-      "change": 10000,
-      "sign": 10
+      "value": 4666000,
+      "change": -7000,
+      "sign": -7
     },
     {
       "time": "Una semana",
-      "value": 4086000,
-      "change": 580000,
-      "sign": 580
+      "value": 4197000,
+      "change": 462000,
+      "sign": 462
     },
     {
       "time": "Un mes",
-      "value": 1193000,
-      "change": 3473000,
-      "sign": "+3.473.000"
+      "value": 1390000,
+      "change": 3269000,
+      "sign": "+3.269.000"
     }
   ],
   "values_chart": {
@@ -1225,6 +1227,10 @@
       {
         "value": 4666000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 4659000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -1240,28 +1246,28 @@
     "70945": {
       "id": 70945,
       "id_team": 6,
-      "id_match": 38018,
-      "id_gameweek": 4051,
-      "id_home": 2,
-      "id_away": 6,
+      "id_match": 38028,
+      "id_gameweek": 4052,
+      "id_home": 6,
+      "id_away": 50,
       "date": {
-        "ts": 1792868400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793649600,
+        "text": "2 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "2 nov",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Atlético",
-      "away": "Deportivo da Coruña",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Osasuna",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
@@ -1275,7 +1281,7 @@
   "away": {
     "70945": {
       "id": 70945,
-      "points": 4,
+      "points": 6,
       "avg": 2
     }
   },

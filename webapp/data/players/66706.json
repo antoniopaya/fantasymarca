@@ -3,15 +3,15 @@
     "id": 66706,
     "name": "Javi Hernandez",
     "position": 3,
-    "points": 58,
-    "avg": 6.4,
+    "points": 67,
+    "avg": 6.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/66706.png?version=20250910192037",
     "isFavorite": 0,
-    "value": 25704000,
-    "previousValue": 25296000,
+    "value": 26132000,
+    "previousValue": 25704000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 25704000,
+      "floor": 26132000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 38556000,
+      "value": 39198000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 25704000,
+      "price": 26132000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 49
+    "clausesRanking": 47
   },
   "id": 66706,
   "player_extra": {
-    "matches": 9,
+    "matches": 10,
     "goals": 0,
     "cards": 2
   },
@@ -249,12 +249,15 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 9,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -710,44 +713,40 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 58,
-      "avg": 6.4444,
+      "points": 67,
+      "avg": 6.7,
       "id_team": 8,
-      "last_gameweek": 9
+      "last_gameweek": 10
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 25296000,
-      "change": 408000,
-      "sign": 408
+      "value": 25704000,
+      "change": 428000,
+      "sign": 428
     },
     {
       "time": "Una semana",
-      "value": 22747000,
-      "change": 2957000,
-      "sign": "+2.957.000"
+      "value": 23146000,
+      "change": 2986000,
+      "sign": "+2.986.000"
     },
     {
       "time": "Un mes",
-      "value": 12031000,
-      "change": 13673000,
-      "sign": "+13.673.000"
+      "value": 12579000,
+      "change": 13553000,
+      "sign": "+13.553.000"
     },
     {
       "time": "Un año",
       "value": 329000,
-      "change": 25375000,
-      "sign": "+25.375.000"
+      "change": 25803000,
+      "sign": "+25.803.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 329000,
-        "date": "24 oct 2025"
-      },
       {
         "value": 329000,
         "date": "25 oct 2025"
@@ -1511,11 +1510,15 @@
       {
         "value": 25704000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 26132000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
-      "value": 25704000,
-      "date": "24 oct 2026"
+      "value": 26132000,
+      "date": "25 oct 2026"
     },
     "min": {
       "value": 329000,
@@ -1526,27 +1529,27 @@
     "66706": {
       "id": 66706,
       "id_team": 8,
-      "id_match": 38023,
-      "id_gameweek": 4051,
-      "id_home": 1490,
+      "id_match": 38036,
+      "id_gameweek": 4052,
+      "id_home": 20,
       "id_away": 8,
       "date": {
-        "ts": 1792851300,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1793390400,
+        "text": "vie 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "vie",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
+      "home": "Villarreal",
       "away": "Espanyol",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
@@ -1561,8 +1564,8 @@
   "away": {
     "66706": {
       "id": 66706,
-      "points": 29,
-      "avg": 7.25
+      "points": 38,
+      "avg": 7.6
     }
   },
   "owners": [],

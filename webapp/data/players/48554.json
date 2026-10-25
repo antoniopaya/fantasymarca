@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/48554.png?version=20250707130239",
     "isFavorite": 0,
-    "value": 580000,
-    "previousValue": 967000,
+    "value": 348000,
+    "previousValue": 580000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 580000,
+      "price": 348000,
       "loanable": null
     },
     "bid": {
@@ -295,12 +295,21 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": null,
+        "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 309862,
+        "id_player": 48554,
+        "category": "injury",
+        "description": "Rotura de ligamento cruzado",
+        "duration": "Baja indefinida",
+        "since": "2026-10-16 17:08:07",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -772,35 +781,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 967000,
-      "change": -387000,
-      "sign": -387
+      "value": 580000,
+      "change": -232000,
+      "sign": -232
     },
     {
       "time": "Una semana",
-      "value": 2579000,
-      "change": -1999000,
-      "sign": "-1.999.000"
+      "value": 2321000,
+      "change": -1973000,
+      "sign": "-1.973.000"
     },
     {
       "time": "Un mes",
-      "value": 504000,
-      "change": 76000,
-      "sign": 76
+      "value": 691000,
+      "change": -343000,
+      "sign": -343
     },
     {
       "time": "Un año",
-      "value": 336000,
-      "change": 244000,
-      "sign": 244
+      "value": 529000,
+      "change": -181000,
+      "sign": -181
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 336000,
-        "date": "24 oct 2025"
-      },
       {
         "value": 529000,
         "date": "25 oct 2025"
@@ -2228,6 +2233,10 @@
       {
         "value": 580000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 348000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -2249,12 +2258,12 @@
       "id_away": 5,
       "date": {
         "ts": 1793459700,
-        "text": "31 oct 16:15",
-        "format": "d MMM H:mm",
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "31 oct",
+          "date": "sáb",
           "time": "16:15",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",

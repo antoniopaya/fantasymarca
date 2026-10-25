@@ -3,15 +3,15 @@
     "id": 70938,
     "name": "Álvaro Mantilla",
     "position": 2,
-    "points": 14,
-    "avg": 1.8,
+    "points": 22,
+    "avg": 2.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70938.png?version=20260619115216",
     "isFavorite": 0,
-    "value": 3864000,
-    "previousValue": 3968000,
+    "value": 3696000,
+    "previousValue": 3864000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3864000,
+      "floor": 3696000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 5796000,
+      "value": 5544000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3864000,
+      "price": 3696000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 189
+    "clausesRanking": 191
   },
   "id": 70938,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
     "cards": 3
   },
@@ -238,12 +238,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 8,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -699,30 +701,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 14,
-      "avg": 1.75,
+      "points": 22,
+      "avg": 2.4444,
       "id_team": 1490,
-      "last_gameweek": 9
+      "last_gameweek": 10
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 3968000,
-      "change": -104000,
-      "sign": -104
+      "value": 3864000,
+      "change": -168000,
+      "sign": -168
     },
     {
       "time": "Una semana",
-      "value": 4329000,
-      "change": -465000,
-      "sign": -465
+      "value": 4217000,
+      "change": -521000,
+      "sign": -521
     },
     {
       "time": "Un mes",
-      "value": 4928000,
-      "change": -1064000,
-      "sign": "-1.064.000"
+      "value": 4881000,
+      "change": -1185000,
+      "sign": "-1.185.000"
     }
   ],
   "values_chart": {
@@ -1234,6 +1236,10 @@
       {
         "value": 3864000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 3696000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -1249,36 +1255,36 @@
     "70938": {
       "id": 70938,
       "id_team": 1490,
-      "id_match": 38023,
-      "id_gameweek": 4051,
+      "id_match": 38035,
+      "id_gameweek": 4052,
       "id_home": 1490,
-      "id_away": 8,
+      "id_away": 15,
       "date": {
-        "ts": 1792851300,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1793546100,
+        "text": "1 nov 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "1 nov",
           "time": "16:15",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Racing de Santander",
-      "away": "Espanyol",
+      "away": "Real Madrid",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
   "home": {
     "70938": {
       "id": 70938,
-      "points": 8,
-      "avg": 2
+      "points": 16,
+      "avg": 3.2
     }
   },
   "away": {

@@ -3,15 +3,15 @@
     "id": 925296,
     "name": "Giorgi Tsitaishvili ",
     "position": 3,
-    "points": 11,
+    "points": 13,
     "avg": 2.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/925296.png?version=20260813101752",
     "isFavorite": 0,
-    "value": 525000,
-    "previousValue": 554000,
+    "value": 436000,
+    "previousValue": 525000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 525000,
+      "price": 436000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 171,
       "weight": null
     },
-    "clausesRanking": 296
+    "clausesRanking": 273
   },
   "id": 925296,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 0,
     "cards": 1
   },
@@ -237,12 +237,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -698,30 +700,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 11,
-      "avg": 2.2,
+      "points": 13,
+      "avg": 2.1667,
       "id_team": 14,
-      "last_gameweek": 9
+      "last_gameweek": 10
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 554000,
-      "change": -29000,
-      "sign": -29
+      "value": 525000,
+      "change": -89000,
+      "sign": -89
     },
     {
       "time": "Una semana",
-      "value": 458000,
-      "change": 67000,
-      "sign": 67
+      "value": 357000,
+      "change": 79000,
+      "sign": 79
     },
     {
       "time": "Un mes",
-      "value": 2033000,
-      "change": -1508000,
-      "sign": "-1.508.000"
+      "value": 2096000,
+      "change": -1660000,
+      "sign": "-1.660.000"
     }
   ],
   "values_chart": {
@@ -1013,6 +1015,10 @@
       {
         "value": 525000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 436000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -1034,12 +1040,12 @@
       "id_away": 5,
       "date": {
         "ts": 1793459700,
-        "text": "31 oct 16:15",
-        "format": "d MMM H:mm",
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "31 oct",
+          "date": "sáb",
           "time": "16:15",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -1056,8 +1062,8 @@
   "home": {
     "925296": {
       "id": 925296,
-      "points": 5,
-      "avg": 2.5
+      "points": 7,
+      "avg": 2.3333
     }
   },
   "away": {

@@ -3,15 +3,15 @@
     "id": 6034,
     "name": "Edu Expósito",
     "position": 3,
-    "points": 46,
-    "avg": 5.1,
+    "points": 54,
+    "avg": 5.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/6034.png?version=20240626191824",
     "isFavorite": 0,
-    "value": 29683000,
-    "previousValue": 29447000,
+    "value": 30083000,
+    "previousValue": 29683000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 29683000,
+      "floor": 30083000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 44524500,
+      "value": 45124500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 29683000,
+      "price": 30083000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 214
+    "clausesRanking": 155
   },
   "id": 6034,
   "player_extra": {
-    "matches": 9,
-    "goals": 0,
-    "cards": 2
+    "matches": 10,
+    "goals": 1,
+    "cards": 3
   },
   "points": [
     {
@@ -245,12 +245,15 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 8,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -706,10 +709,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 46,
-      "avg": 5.1111,
+      "points": 54,
+      "avg": 5.4,
       "id_team": 8,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -729,35 +732,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 29447000,
-      "change": 236000,
-      "sign": 236
+      "value": 29683000,
+      "change": 400000,
+      "sign": 400
     },
     {
       "time": "Una semana",
-      "value": 27935000,
-      "change": 1748000,
-      "sign": "+1.748.000"
+      "value": 28205000,
+      "change": 1878000,
+      "sign": "+1.878.000"
     },
     {
       "time": "Un mes",
-      "value": 24361000,
-      "change": 5322000,
-      "sign": "+5.322.000"
+      "value": 24679000,
+      "change": 5404000,
+      "sign": "+5.404.000"
     },
     {
       "time": "Un año",
-      "value": 28148000,
-      "change": 1535000,
-      "sign": "+1.535.000"
+      "value": 28485000,
+      "change": 1598000,
+      "sign": "+1.598.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 28148000,
-        "date": "24 oct 2025"
-      },
       {
         "value": 28485000,
         "date": "25 oct 2025"
@@ -2217,6 +2216,10 @@
       {
         "value": 29683000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 30083000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -2232,27 +2235,27 @@
     "6034": {
       "id": 6034,
       "id_team": 8,
-      "id_match": 38023,
-      "id_gameweek": 4051,
-      "id_home": 1490,
+      "id_match": 38036,
+      "id_gameweek": 4052,
+      "id_home": 20,
       "id_away": 8,
       "date": {
-        "ts": 1792851300,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1793390400,
+        "text": "vie 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "vie",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
+      "home": "Villarreal",
       "away": "Espanyol",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
@@ -2267,8 +2270,8 @@
   "away": {
     "6034": {
       "id": 6034,
-      "points": 20,
-      "avg": 5
+      "points": 28,
+      "avg": 5.6
     }
   },
   "owners": [],

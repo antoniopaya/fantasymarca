@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/61009.png?version=20251003194240",
     "isFavorite": 0,
-    "value": 411000,
-    "previousValue": 421000,
+    "value": 441000,
+    "previousValue": 411000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 411000,
+      "price": 441000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 167,
       "weight": null
     },
-    "clausesRanking": 233
+    "clausesRanking": 249
   },
   "id": 61009,
   "player_extra": {
@@ -719,35 +719,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 421000,
-      "change": -10000,
-      "sign": -10
+      "value": 411000,
+      "change": 30000,
+      "sign": 30
     },
     {
       "time": "Una semana",
-      "value": 499000,
-      "change": -88000,
-      "sign": -88
+      "value": 449000,
+      "change": -8000,
+      "sign": -8
     },
     {
       "time": "Un mes",
-      "value": 661000,
-      "change": -250000,
-      "sign": -250
+      "value": 482000,
+      "change": -41000,
+      "sign": -41
     },
     {
       "time": "Un año",
-      "value": 329000,
-      "change": 82000,
-      "sign": 82
+      "value": 437000,
+      "change": 4000,
+      "sign": 4
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 329000,
-        "date": "24 oct 2025"
-      },
       {
         "value": 437000,
         "date": "25 oct 2025"
@@ -2207,6 +2203,10 @@
       {
         "value": 411000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 441000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -2228,12 +2228,12 @@
       "id_away": 4,
       "date": {
         "ts": 1792941300,
-        "text": "dom 16:15",
-        "format": "EEE H:mm",
+        "text": "Hoy 16:15",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "dom",
+          "date": "Hoy",
           "time": "16:15",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

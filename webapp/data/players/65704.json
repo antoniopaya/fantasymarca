@@ -3,15 +3,15 @@
     "id": 65704,
     "name": "Georges Mikautadze",
     "position": 4,
-    "points": 44,
-    "avg": 4.9,
+    "points": 51,
+    "avg": 5.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65704.png?version=20250901204540",
     "isFavorite": 0,
-    "value": 29852000,
-    "previousValue": 30198000,
+    "value": 29911000,
+    "previousValue": 29852000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 29852000,
+      "floor": 29911000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 44778000,
+      "value": 44866500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 29852000,
+      "price": 29911000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 176,
       "weight": null
     },
-    "clausesRanking": 354
+    "clausesRanking": 276
   },
   "id": 65704,
   "player_extra": {
-    "matches": 9,
-    "goals": 2,
+    "matches": 10,
+    "goals": 3,
     "cards": 0
   },
   "points": [
@@ -246,12 +246,15 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -707,10 +710,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 44,
-      "avg": 4.8889,
+      "points": 51,
+      "avg": 5.1,
       "id_team": 20,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -723,35 +726,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 30198000,
-      "change": -346000,
-      "sign": -346
+      "value": 29852000,
+      "change": 59000,
+      "sign": 59
     },
     {
       "time": "Una semana",
-      "value": 32331000,
-      "change": -2479000,
-      "sign": "-2.479.000"
+      "value": 31858000,
+      "change": -1947000,
+      "sign": "-1.947.000"
     },
     {
       "time": "Un mes",
-      "value": 39147000,
-      "change": -9295000,
-      "sign": "-9.295.000"
+      "value": 39430000,
+      "change": -9519000,
+      "sign": "-9.519.000"
     },
     {
       "time": "Un año",
-      "value": 38076000,
-      "change": -8224000,
-      "sign": "-8.224.000"
+      "value": 38293000,
+      "change": -8382000,
+      "sign": "-8.382.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 38076000,
-        "date": "24 oct 2025"
-      },
       {
         "value": 38293000,
         "date": "25 oct 2025"
@@ -2211,6 +2210,10 @@
       {
         "value": 29852000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 29911000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -2226,28 +2229,28 @@
     "65704": {
       "id": 65704,
       "id_team": 20,
-      "id_match": 38026,
-      "id_gameweek": 4051,
-      "id_home": 19,
-      "id_away": 20,
+      "id_match": 38036,
+      "id_gameweek": 4052,
+      "id_home": 20,
+      "id_away": 8,
       "date": {
-        "ts": 1792859400,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1793390400,
+        "text": "vie 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "vie",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Villarreal",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+      "home": "Villarreal",
+      "away": "Espanyol",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,
@@ -2261,8 +2264,8 @@
   "away": {
     "65704": {
       "id": 65704,
-      "points": 27,
-      "avg": 5.4
+      "points": 34,
+      "avg": 5.6667
     }
   },
   "owners": [],

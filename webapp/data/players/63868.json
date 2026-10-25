@@ -3,15 +3,15 @@
     "id": 63868,
     "name": "Rodrigo Mendoza",
     "position": 3,
-    "points": 7,
-    "avg": 1.8,
+    "points": 8,
+    "avg": 1.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/63868.png?version=20250617095638",
     "isFavorite": 0,
     "value": 329000,
-    "previousValue": 350000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -68,11 +68,11 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 270
+    "clausesRanking": 289
   },
   "id": 63868,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 1
   },
@@ -237,12 +237,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -698,10 +700,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 7,
-      "avg": 1.75,
+      "points": 8,
+      "avg": 1.6,
       "id_team": 2,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -721,35 +723,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 350000,
-      "change": -21000,
-      "sign": -21
-    },
-    {
-      "time": "Una semana",
-      "value": 487000,
-      "change": -158000,
-      "sign": -158
-    },
-    {
-      "time": "Un mes",
       "value": 329000,
       "change": 0,
       "sign": 0
     },
     {
+      "time": "Una semana",
+      "value": 364000,
+      "change": -35000,
+      "sign": -35
+    },
+    {
+      "time": "Un mes",
+      "value": 357000,
+      "change": -28000,
+      "sign": -28
+    },
+    {
       "time": "Un año",
-      "value": 18999000,
-      "change": -18670000,
-      "sign": "-18.670.000"
+      "value": 19421000,
+      "change": -19092000,
+      "sign": "-19.092.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 18999000,
-        "date": "24 oct 2025"
-      },
       {
         "value": 19421000,
         "date": "25 oct 2025"
@@ -2209,6 +2207,10 @@
       {
         "value": 329000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 329000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -2224,36 +2226,36 @@
     "63868": {
       "id": 63868,
       "id_team": 2,
-      "id_match": 38018,
-      "id_gameweek": 4051,
-      "id_home": 2,
-      "id_away": 6,
+      "id_match": 38032,
+      "id_gameweek": 4052,
+      "id_home": 12,
+      "id_away": 2,
       "date": {
-        "ts": 1792868400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793451600,
+        "text": "sáb 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Atlético",
-      "away": "Deportivo da Coruña",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Levante",
+      "away": "Atlético",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     }
   },
   "starter": false,
   "home": {
     "63868": {
       "id": 63868,
-      "points": 5,
-      "avg": 2.5
+      "points": 6,
+      "avg": 2
     }
   },
   "away": {

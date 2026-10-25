@@ -3,15 +3,15 @@
     "id": 71154,
     "name": "Lorenzo Amatucci",
     "position": 3,
-    "points": 24,
-    "avg": 3.4,
+    "points": 28,
+    "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71154.png?version=20260709090853",
     "isFavorite": 0,
-    "value": 11882000,
-    "previousValue": 12161000,
+    "value": 11498000,
+    "previousValue": 11882000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 11882000,
+      "floor": 11498000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 17823000,
+      "value": 17247000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 11882000,
+      "price": 11498000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 172,
       "weight": null
     },
-    "clausesRanking": 366
+    "clausesRanking": 362
   },
   "id": 71154,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 4
   },
@@ -247,12 +247,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -708,30 +710,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 24,
-      "avg": 3.4286,
+      "points": 28,
+      "avg": 3.5,
       "id_team": 6,
-      "last_gameweek": 8
+      "last_gameweek": 10
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 12161000,
-      "change": -279000,
-      "sign": -279
+      "value": 11882000,
+      "change": -384000,
+      "sign": -384
     },
     {
       "time": "Una semana",
-      "value": 14784000,
-      "change": -2902000,
-      "sign": "-2.902.000"
+      "value": 14152000,
+      "change": -2654000,
+      "sign": "-2.654.000"
     },
     {
       "time": "Un mes",
-      "value": 27911000,
-      "change": -16029000,
-      "sign": "-16.029.000"
+      "value": 27443000,
+      "change": -15945000,
+      "sign": "-15.945.000"
     }
   ],
   "values_chart": {
@@ -1163,6 +1165,10 @@
       {
         "value": 11882000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 11498000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -1178,28 +1184,28 @@
     "71154": {
       "id": 71154,
       "id_team": 6,
-      "id_match": 38018,
-      "id_gameweek": 4051,
-      "id_home": 2,
-      "id_away": 6,
+      "id_match": 38028,
+      "id_gameweek": 4052,
+      "id_home": 6,
+      "id_away": 50,
       "date": {
-        "ts": 1792868400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793649600,
+        "text": "2 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "2 nov",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Atlético",
-      "away": "Deportivo da Coruña",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Osasuna",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
@@ -1213,8 +1219,8 @@
   "away": {
     "71154": {
       "id": 71154,
-      "points": 11,
-      "avg": 2.75
+      "points": 15,
+      "avg": 3
     }
   },
   "owners": [],

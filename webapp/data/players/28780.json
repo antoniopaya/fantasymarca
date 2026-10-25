@@ -3,15 +3,15 @@
     "id": 28780,
     "name": "Luismi Cruz",
     "position": 3,
-    "points": 44,
-    "avg": 4.9,
+    "points": 46,
+    "avg": 4.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/28780.png?version=20260621103122",
     "isFavorite": 0,
-    "value": 16193000,
-    "previousValue": 16533000,
+    "value": 15833000,
+    "previousValue": 16193000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 16193000,
+      "floor": 15833000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 24289500,
+      "value": 23749500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 16193000,
+      "price": 15833000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 166,
       "weight": null
     },
-    "clausesRanking": 322
+    "clausesRanking": 300
   },
   "id": 28780,
   "player_extra": {
-    "matches": 9,
+    "matches": 10,
     "goals": 1,
     "cards": 1
   },
@@ -249,12 +249,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -710,30 +712,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 44,
-      "avg": 4.8889,
+      "points": 46,
+      "avg": 4.6,
       "id_team": 6,
-      "last_gameweek": 9
+      "last_gameweek": 10
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 16533000,
-      "change": -340000,
-      "sign": -340
+      "value": 16193000,
+      "change": -360000,
+      "sign": -360
     },
     {
       "time": "Una semana",
-      "value": 18970000,
-      "change": -2777000,
-      "sign": "-2.777.000"
+      "value": 18459000,
+      "change": -2626000,
+      "sign": "-2.626.000"
     },
     {
       "time": "Un mes",
-      "value": 16797000,
-      "change": -604000,
-      "sign": -604
+      "value": 17428000,
+      "change": -1595000,
+      "sign": "-1.595.000"
     }
   ],
   "values_chart": {
@@ -1237,6 +1239,10 @@
       {
         "value": 16193000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 15833000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -1252,28 +1258,28 @@
     "28780": {
       "id": 28780,
       "id_team": 6,
-      "id_match": 38018,
-      "id_gameweek": 4051,
-      "id_home": 2,
-      "id_away": 6,
+      "id_match": 38028,
+      "id_gameweek": 4052,
+      "id_home": 6,
+      "id_away": 50,
       "date": {
-        "ts": 1792868400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793649600,
+        "text": "2 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "2 nov",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Atlético",
-      "away": "Deportivo da Coruña",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Osasuna",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
@@ -1287,8 +1293,8 @@
   "away": {
     "28780": {
       "id": 28780,
-      "points": 27,
-      "avg": 6.75
+      "points": 29,
+      "avg": 5.8
     }
   },
   "owners": [],

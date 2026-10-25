@@ -5,13 +5,17 @@
     "position": 2,
     "points": 0,
     "avg": 0,
-    "status": null,
+    "status": "other",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "other",
+      "description": "No convocado",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/63869.png?version=20250617095415",
     "isFavorite": 0,
     "value": 329000,
-    "previousValue": 401000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -246,12 +250,12 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": null,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -716,9 +720,9 @@
   "values": [
     {
       "time": "Un día",
-      "value": 401000,
-      "change": -72000,
-      "sign": -72
+      "value": 329000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Una semana",
@@ -728,23 +732,19 @@
     },
     {
       "time": "Un mes",
-      "value": 501000,
-      "change": -172000,
-      "sign": -172
+      "value": 420000,
+      "change": -91000,
+      "sign": -91
     },
     {
       "time": "Un año",
-      "value": 385000,
-      "change": -56000,
-      "sign": -56
+      "value": 329000,
+      "change": 0,
+      "sign": 0
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 385000,
-        "date": "24 oct 2025"
-      },
       {
         "value": 329000,
         "date": "25 oct 2025"
@@ -1588,6 +1588,10 @@
       {
         "value": 329000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 329000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {

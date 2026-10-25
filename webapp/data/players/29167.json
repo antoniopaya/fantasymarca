@@ -3,15 +3,15 @@
     "id": 29167,
     "name": "Ángel Fortuño",
     "position": 1,
-    "points": 11,
-    "avg": 5.5,
+    "points": 15,
+    "avg": 5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/29167.png?version=20250805082651",
     "isFavorite": 0,
-    "value": 4298000,
-    "previousValue": 3977000,
+    "value": 4484000,
+    "previousValue": 4298000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4298000,
+      "floor": 4484000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6447000,
+      "value": 6726000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4298000,
+      "price": 4484000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 18
+    "clausesRanking": 19
   },
   "id": 29167,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 0
   },
@@ -228,12 +228,12 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -689,10 +689,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 11,
-      "avg": 5.5,
+      "points": 15,
+      "avg": 5,
       "id_team": 8,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -705,35 +705,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 3977000,
-      "change": 321000,
-      "sign": 321
+      "value": 4298000,
+      "change": 186000,
+      "sign": 186
     },
     {
       "time": "Una semana",
-      "value": 2382000,
-      "change": 1916000,
-      "sign": "+1.916.000"
+      "value": 2603000,
+      "change": 1881000,
+      "sign": "+1.881.000"
     },
     {
       "time": "Un mes",
-      "value": 343000,
-      "change": 3955000,
-      "sign": "+3.955.000"
+      "value": 335000,
+      "change": 4149000,
+      "sign": "+4.149.000"
     },
     {
       "time": "Un año",
-      "value": 329000,
-      "change": 3969000,
-      "sign": "+3.969.000"
+      "value": 505000,
+      "change": 3979000,
+      "sign": "+3.979.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 329000,
-        "date": "24 oct 2025"
-      },
       {
         "value": 505000,
         "date": "25 oct 2025"
@@ -2193,11 +2189,15 @@
       {
         "value": 4298000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 4484000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
-      "value": 4298000,
-      "date": "24 oct 2026"
+      "value": 4484000,
+      "date": "25 oct 2026"
     },
     "min": {
       "value": 329000,
@@ -2208,27 +2208,27 @@
     "29167": {
       "id": 29167,
       "id_team": 8,
-      "id_match": 38023,
-      "id_gameweek": 4051,
-      "id_home": 1490,
+      "id_match": 38036,
+      "id_gameweek": 4052,
+      "id_home": 20,
       "id_away": 8,
       "date": {
-        "ts": 1792851300,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1793390400,
+        "text": "vie 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "vie",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
+      "home": "Villarreal",
       "away": "Espanyol",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
@@ -2243,8 +2243,8 @@
   "away": {
     "29167": {
       "id": 29167,
-      "points": 5,
-      "avg": 5
+      "points": 9,
+      "avg": 4.5
     }
   },
   "owners": [],

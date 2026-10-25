@@ -3,15 +3,15 @@
     "id": 55966,
     "name": "Adrià Altimira",
     "position": 2,
-    "points": 13,
-    "avg": 2.2,
+    "points": 17,
+    "avg": 2.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/55966.png?version=20240617154112",
     "isFavorite": 0,
-    "value": 340000,
-    "previousValue": 372000,
+    "value": 367000,
+    "previousValue": 340000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 340000,
+      "price": 367000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 281
+    "clausesRanking": 234
   },
   "id": 55966,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 3
   },
@@ -250,12 +250,12 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -711,10 +711,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 13,
-      "avg": 2.1667,
+      "points": 17,
+      "avg": 2.4286,
       "id_team": 6,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -741,35 +741,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 372000,
-      "change": -32000,
-      "sign": -32
+      "value": 340000,
+      "change": 27000,
+      "sign": 27
     },
     {
       "time": "Una semana",
-      "value": 505000,
-      "change": -165000,
-      "sign": -165
+      "value": 417000,
+      "change": -50000,
+      "sign": -50
     },
     {
       "time": "Un mes",
-      "value": 4226000,
-      "change": -3886000,
-      "sign": "-3.886.000"
+      "value": 4015000,
+      "change": -3648000,
+      "sign": "-3.648.000"
     },
     {
       "time": "Un año",
-      "value": 329000,
-      "change": 11000,
-      "sign": 11
+      "value": 449000,
+      "change": -82000,
+      "sign": -82
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 329000,
-        "date": "24 oct 2025"
-      },
       {
         "value": 449000,
         "date": "25 oct 2025"
@@ -1533,6 +1529,10 @@
       {
         "value": 340000,
         "date": "24 oct 2026"
+      },
+      {
+        "value": 367000,
+        "date": "25 oct 2026"
       }
     ],
     "max": {
@@ -1548,28 +1548,28 @@
     "55966": {
       "id": 55966,
       "id_team": 6,
-      "id_match": 38018,
-      "id_gameweek": 4051,
-      "id_home": 2,
-      "id_away": 6,
+      "id_match": 38028,
+      "id_gameweek": 4052,
+      "id_home": 6,
+      "id_away": 50,
       "date": {
-        "ts": 1792868400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793649600,
+        "text": "2 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "2 nov",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Atlético",
-      "away": "Deportivo da Coruña",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Osasuna",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
   "starter": false,
@@ -1583,8 +1583,8 @@
   "away": {
     "55966": {
       "id": 55966,
-      "points": 5,
-      "avg": 2.5
+      "points": 9,
+      "avg": 3
     }
   },
   "owners": [],
