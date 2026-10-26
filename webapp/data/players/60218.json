@@ -3,15 +3,15 @@
     "id": 60218,
     "name": "Peio Canales",
     "position": 3,
-    "points": 19,
-    "avg": 2.7,
+    "points": 25,
+    "avg": 3.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60218.png?version=20260619120854",
     "isFavorite": 0,
-    "value": 5422000,
-    "previousValue": 5459000,
+    "value": 5487000,
+    "previousValue": 5422000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5422000,
+      "floor": 5487000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8133000,
+      "value": 8230500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5422000,
+      "price": 5487000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 168
+    "clausesRanking": 131
   },
   "id": 60218,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 0
   },
@@ -252,12 +252,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 6,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -713,10 +715,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 19,
-      "avg": 2.7143,
+      "points": 25,
+      "avg": 3.125,
       "id_team": 1,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "24/25",
@@ -729,21 +731,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5459000,
-      "change": -37000,
-      "sign": -37
+      "value": 5422000,
+      "change": 65000,
+      "sign": 65
     },
     {
       "time": "Una semana",
-      "value": 5486000,
-      "change": -64000,
-      "sign": -64
+      "value": 5473000,
+      "change": 14000,
+      "sign": 14
     },
     {
       "time": "Un mes",
-      "value": 4779000,
-      "change": 643000,
-      "sign": 643
+      "value": 4866000,
+      "change": 621000,
+      "sign": 621
     }
   ],
   "values_chart": {
@@ -1263,6 +1265,10 @@
       {
         "value": 5422000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 5487000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -1284,12 +1290,12 @@
       "id_away": 16,
       "date": {
         "ts": 1793563200,
-        "text": "1 nov 21:00",
-        "format": "d MMM H:mm",
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "1 nov",
+          "date": "dom",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -1306,8 +1312,8 @@
   "home": {
     "60218": {
       "id": 60218,
-      "points": 10,
-      "avg": 5
+      "points": 16,
+      "avg": 5.3333
     }
   },
   "away": {

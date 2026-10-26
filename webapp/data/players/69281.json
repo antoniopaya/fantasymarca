@@ -3,15 +3,15 @@
     "id": 69281,
     "name": "Nacho Pérez",
     "position": 2,
-    "points": 28,
-    "avg": 3.5,
+    "points": 37,
+    "avg": 4.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/69281.png?version=20260323141534",
     "isFavorite": 0,
-    "value": 2092000,
-    "previousValue": 1974000,
+    "value": 2216000,
+    "previousValue": 2092000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2092000,
+      "floor": 2216000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3138000,
+      "value": 3324000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2092000,
+      "price": 2216000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 238
+    "clausesRanking": 158
   },
   "id": 69281,
   "player_extra": {
-    "matches": 8,
-    "goals": 0,
+    "matches": 9,
+    "goals": 1,
     "cards": 0
   },
   "points": [
@@ -244,12 +244,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 9,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -705,10 +707,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 26,
-      "avg": 3.25,
+      "points": 35,
+      "avg": 3.8889,
       "id_team": 12,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -721,21 +723,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1974000,
-      "change": 118000,
-      "sign": 118
+      "value": 2092000,
+      "change": 124000,
+      "sign": 124
     },
     {
       "time": "Una semana",
-      "value": 2016000,
-      "change": 76000,
-      "sign": 76
+      "value": 1920000,
+      "change": 296000,
+      "sign": 296
     },
     {
       "time": "Un mes",
-      "value": 5156000,
-      "change": -3064000,
-      "sign": "-3.064.000"
+      "value": 4990000,
+      "change": -2774000,
+      "sign": "-2.774.000"
     }
   ],
   "values_chart": {
@@ -1751,6 +1753,10 @@
       {
         "value": 2092000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 2216000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -1766,28 +1772,28 @@
     "69281": {
       "id": 69281,
       "id_team": 12,
-      "id_match": 38024,
-      "id_gameweek": 4051,
-      "id_home": 16,
-      "id_away": 12,
+      "id_match": 38032,
+      "id_gameweek": 4052,
+      "id_home": 12,
+      "id_away": 2,
       "date": {
-        "ts": 1792949400,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1793451600,
+        "text": "sáb 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Real Sociedad",
-      "away": "Levante",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Levante",
+      "away": "Atlético",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     }
   },
   "starter": false,
@@ -1801,8 +1807,8 @@
   "away": {
     "69281": {
       "id": 69281,
-      "points": 19,
-      "avg": 4.75
+      "points": 28,
+      "avg": 5.6
     }
   },
   "owners": [],

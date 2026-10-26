@@ -3,15 +3,15 @@
     "id": 68677,
     "name": "Álvaro Fidalgo",
     "position": 3,
-    "points": 5,
-    "avg": 1.7,
+    "points": 7,
+    "avg": 1.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68677.png?version=20260323141215",
     "isFavorite": 0,
-    "value": 384000,
-    "previousValue": 457000,
+    "value": 329000,
+    "previousValue": 384000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -45,15 +45,15 @@
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 384000,
-      "loanable": null
+      "id": 1904313033,
+      "isPublic": 1,
+      "price": 329000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 329000,
       "barter": [],
       "type": null,
       "days": null
@@ -68,11 +68,11 @@
       "height": 174,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 415
   },
   "id": 68677,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 0
   },
@@ -234,12 +234,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -695,10 +697,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 5,
-      "avg": 1.6667,
+      "points": 7,
+      "avg": 1.75,
       "id_team": 4,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -711,21 +713,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 457000,
-      "change": -73000,
-      "sign": -73
+      "value": 384000,
+      "change": -55000,
+      "sign": -55
     },
     {
       "time": "Una semana",
       "value": 329000,
-      "change": 55000,
-      "sign": 55
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Un mes",
-      "value": 329000,
-      "change": 55000,
-      "sign": 55
+      "value": 493000,
+      "change": -164000,
+      "sign": -164
     }
   ],
   "values_chart": {
@@ -1793,6 +1795,10 @@
       {
         "value": 384000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 329000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -1808,28 +1814,28 @@
     "68677": {
       "id": 68677,
       "id_team": 4,
-      "id_match": 38019,
-      "id_gameweek": 4051,
-      "id_home": 5,
-      "id_away": 4,
+      "id_match": 38034,
+      "id_gameweek": 4052,
+      "id_home": 4,
+      "id_away": 13,
       "date": {
-        "ts": 1792941300,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1793467800,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Betis",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Betis",
+      "away": "Málaga",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,
@@ -1842,8 +1848,9 @@
   },
   "away": {
     "68677": {
-      "points": 0,
-      "avg": 0
+      "id": 68677,
+      "points": 2,
+      "avg": 2
     }
   },
   "owners": [],

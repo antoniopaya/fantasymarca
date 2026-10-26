@@ -3,15 +3,15 @@
     "id": 54817,
     "name": "Arda Güler",
     "position": 3,
-    "points": 76,
-    "avg": 8.4,
+    "points": 85,
+    "avg": 8.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/54817.png?version=20260823083059",
     "isFavorite": 0,
-    "value": 58838000,
-    "previousValue": 58550000,
+    "value": 59321000,
+    "previousValue": 58838000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 58838000,
+      "floor": 59321000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 88257000,
+      "value": 88981500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 58838000,
+      "price": 59321000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 54817,
   "player_extra": {
-    "matches": 9,
+    "matches": 10,
     "goals": 2,
     "cards": 1
   },
@@ -251,12 +251,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 9,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 3,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     },
@@ -712,10 +714,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 76,
-      "avg": 8.4444,
+      "points": 85,
+      "avg": 8.5,
       "id_team": 15,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -742,35 +744,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 58550000,
-      "change": 288000,
-      "sign": 288
+      "value": 58838000,
+      "change": 483000,
+      "sign": 483
     },
     {
       "time": "Una semana",
-      "value": 55901000,
-      "change": 2937000,
-      "sign": "+2.937.000"
+      "value": 56365000,
+      "change": 2956000,
+      "sign": "+2.956.000"
     },
     {
       "time": "Un mes",
-      "value": 50486000,
-      "change": 8352000,
-      "sign": "+8.352.000"
+      "value": 50808000,
+      "change": 8513000,
+      "sign": "+8.513.000"
     },
     {
       "time": "Un año",
-      "value": 60590000,
-      "change": -1752000,
-      "sign": "-1.752.000"
+      "value": 60604000,
+      "change": -1283000,
+      "sign": "-1.283.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 60590000,
-        "date": "25 oct 2025"
-      },
       {
         "value": 60604000,
         "date": "26 oct 2025"
@@ -2230,6 +2228,10 @@
       {
         "value": 58838000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 59321000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -2245,27 +2247,27 @@
     "54817": {
       "id": 54817,
       "id_team": 15,
-      "id_match": 38021,
-      "id_gameweek": 4051,
-      "id_home": 3,
+      "id_match": 38035,
+      "id_gameweek": 4052,
+      "id_home": 1490,
       "id_away": 15,
       "date": {
-        "ts": 1792958400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793546100,
+        "text": "dom 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "16:15",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Barcelona",
+      "home": "Racing de Santander",
       "away": "Real Madrid",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
@@ -2280,8 +2282,8 @@
   "away": {
     "54817": {
       "id": 54817,
-      "points": 32,
-      "avg": 8
+      "points": 41,
+      "avg": 8.2
     }
   },
   "owners": [],

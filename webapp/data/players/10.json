@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/10.png?version=20250912080149",
     "isFavorite": 0,
-    "value": 33077000,
-    "previousValue": 33674000,
+    "value": 32560000,
+    "previousValue": 33077000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 33077000,
+      "floor": 32560000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 49615500,
+      "value": 48840000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 33077000,
+      "price": 32560000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 191,
       "weight": 86
     },
-    "clausesRanking": 181
+    "clausesRanking": 205
   },
   "id": 10,
   "player_extra": {
@@ -251,8 +251,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 310502,
+        "id_player": 10,
+        "category": "red",
+        "description": "Roja directa",
+        "duration": "Baja esta jornada",
+        "since": "2026-10-22 11:15:54",
+        "until": null,
+        "status": "Sancionado"
+      },
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -724,35 +733,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 33674000,
-      "change": -597000,
-      "sign": -597
+      "value": 33077000,
+      "change": -517000,
+      "sign": -517
     },
     {
       "time": "Una semana",
-      "value": 33584000,
-      "change": -507000,
-      "sign": -507
+      "value": 33655000,
+      "change": -1095000,
+      "sign": "-1.095.000"
     },
     {
       "time": "Un mes",
-      "value": 34894000,
-      "change": -1817000,
-      "sign": "-1.817.000"
+      "value": 35275000,
+      "change": -2715000,
+      "sign": "-2.715.000"
     },
     {
       "time": "Un año",
-      "value": 25817000,
-      "change": 7260000,
-      "sign": "+7.260.000"
+      "value": 26005000,
+      "change": 6555000,
+      "sign": "+6.555.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 25817000,
-        "date": "25 oct 2025"
-      },
       {
         "value": 26005000,
         "date": "26 oct 2025"
@@ -2212,6 +2217,10 @@
       {
         "value": 33077000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 32560000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -2227,28 +2236,28 @@
     "10": {
       "id": 10,
       "id_team": 1,
-      "id_match": 38017,
-      "id_gameweek": 4051,
+      "id_match": 38027,
+      "id_gameweek": 4052,
       "id_home": 1,
-      "id_away": 9,
+      "id_away": 16,
       "date": {
-        "ts": 1792933200,
-        "text": "Hoy 14:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793563200,
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "14:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Athletic Club",
-      "away": "Getafe",
+      "away": "Real Sociedad",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   },
   "starter": false,

@@ -4,14 +4,14 @@
     "name": "Andrés García",
     "position": 2,
     "points": 32,
-    "avg": 4,
+    "avg": 3.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71502.png?version=20260716123021",
     "isFavorite": 0,
-    "value": 10846000,
-    "previousValue": 11034000,
+    "value": 10472000,
+    "previousValue": 10846000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 10846000,
+      "floor": 10472000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 16269000,
+      "value": 15708000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 10846000,
+      "price": 10472000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 418
+    "clausesRanking": 411
   },
   "id": 71502,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
     "cards": 0
   },
@@ -242,12 +242,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 0,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -704,29 +706,29 @@
     {
       "season": "26/27",
       "points": 32,
-      "avg": 4,
+      "avg": 3.5556,
       "id_team": 9,
-      "last_gameweek": 9
+      "last_gameweek": 10
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 11034000,
-      "change": -188000,
-      "sign": -188
+      "value": 10846000,
+      "change": -374000,
+      "sign": -374
     },
     {
       "time": "Una semana",
-      "value": 12585000,
-      "change": -1739000,
-      "sign": "-1.739.000"
+      "value": 12185000,
+      "change": -1713000,
+      "sign": "-1.713.000"
     },
     {
       "time": "Un mes",
-      "value": 19522000,
-      "change": -8676000,
-      "sign": "-8.676.000"
+      "value": 20043000,
+      "change": -9571000,
+      "sign": "-9.571.000"
     }
   ],
   "values_chart": {
@@ -1134,6 +1136,10 @@
       {
         "value": 10846000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 10472000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -1185,7 +1191,7 @@
     "71502": {
       "id": 71502,
       "points": 11,
-      "avg": 2.75
+      "avg": 2.2
     }
   },
   "owners": [],

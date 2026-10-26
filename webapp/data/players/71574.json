@@ -4,14 +4,14 @@
     "name": "Karim Adeyemi",
     "position": 4,
     "points": 52,
-    "avg": 5.8,
+    "avg": 5.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71574.png?version=20260723170252",
     "isFavorite": 0,
-    "value": 39104000,
-    "previousValue": 39291000,
+    "value": 38961000,
+    "previousValue": 39104000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 39104000,
+      "floor": 38961000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 58656000,
+      "value": 58441500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 39104000,
+      "price": 38961000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 206
+    "clausesRanking": 239
   },
   "id": 71574,
   "player_extra": {
-    "matches": 9,
+    "matches": 10,
     "goals": 2,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -250,12 +250,15 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -712,29 +715,29 @@
     {
       "season": "26/27",
       "points": 52,
-      "avg": 5.7778,
+      "avg": 5.2,
       "id_team": 3,
-      "last_gameweek": 9
+      "last_gameweek": 10
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 39291000,
-      "change": -187000,
-      "sign": -187
+      "value": 39104000,
+      "change": -143000,
+      "sign": -143
     },
     {
       "time": "Una semana",
-      "value": 39901000,
-      "change": -797000,
-      "sign": -797
+      "value": 39839000,
+      "change": -878000,
+      "sign": -878
     },
     {
       "time": "Un mes",
-      "value": 41721000,
-      "change": -2617000,
-      "sign": "-2.617.000"
+      "value": 41848000,
+      "change": -2887000,
+      "sign": "-2.887.000"
     }
   ],
   "values_chart": {
@@ -1114,6 +1117,10 @@
       {
         "value": 39104000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 38961000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -1129,28 +1136,28 @@
     "71574": {
       "id": 71574,
       "id_team": 3,
-      "id_match": 38021,
-      "id_gameweek": 4051,
+      "id_match": 38030,
+      "id_gameweek": 4052,
       "id_home": 3,
-      "id_away": 15,
+      "id_away": 48,
       "date": {
-        "ts": 1792958400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793476800,
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "sáb",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Barcelona",
-      "away": "Real Madrid",
+      "away": "Alavés",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
@@ -1158,7 +1165,7 @@
     "71574": {
       "id": 71574,
       "points": 29,
-      "avg": 7.25
+      "avg": 5.8
     }
   },
   "away": {

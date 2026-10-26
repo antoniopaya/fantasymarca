@@ -3,15 +3,15 @@
     "id": 59371,
     "name": "Luka Sučić",
     "position": 3,
-    "points": 41,
-    "avg": 5.1,
+    "points": 47,
+    "avg": 5.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59371.png?version=20240802114718",
     "isFavorite": 0,
-    "value": 30175000,
-    "previousValue": 30199000,
+    "value": 30233000,
+    "previousValue": 30175000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 30175000,
+      "floor": 30233000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 45262500,
+      "value": 45349500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 30175000,
+      "price": 30233000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 254
+    "clausesRanking": 251
   },
   "id": 59371,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 3,
     "cards": 2
   },
@@ -243,12 +243,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -704,10 +706,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 41,
-      "avg": 5.125,
+      "points": 47,
+      "avg": 5.2222,
       "id_team": 16,
-      "last_gameweek": 8
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -727,35 +729,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 30199000,
-      "change": -24000,
-      "sign": -24
+      "value": 30175000,
+      "change": 58000,
+      "sign": 58
     },
     {
       "time": "Una semana",
-      "value": 30695000,
-      "change": -520000,
-      "sign": -520
+      "value": 30951000,
+      "change": -718000,
+      "sign": -718
     },
     {
       "time": "Un mes",
-      "value": 21125000,
-      "change": 9050000,
-      "sign": "+9.050.000"
+      "value": 21561000,
+      "change": 8672000,
+      "sign": "+8.672.000"
     },
     {
       "time": "Un año",
-      "value": 333000,
-      "change": 29842000,
-      "sign": "+29.842.000"
+      "value": 329000,
+      "change": 29904000,
+      "sign": "+29.904.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 333000,
-        "date": "25 oct 2025"
-      },
       {
         "value": 329000,
         "date": "26 oct 2025"
@@ -2215,6 +2213,10 @@
       {
         "value": 30175000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 30233000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -2230,36 +2232,36 @@
     "59371": {
       "id": 59371,
       "id_team": 16,
-      "id_match": 38024,
-      "id_gameweek": 4051,
-      "id_home": 16,
-      "id_away": 12,
+      "id_match": 38027,
+      "id_gameweek": 4052,
+      "id_home": 1,
+      "id_away": 16,
       "date": {
-        "ts": 1792949400,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1793563200,
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Sociedad",
-      "away": "Levante",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Athletic Club",
+      "away": "Real Sociedad",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   },
   "starter": false,
   "home": {
     "59371": {
       "id": 59371,
-      "points": 12,
-      "avg": 3
+      "points": 18,
+      "avg": 3.6
     }
   },
   "away": {

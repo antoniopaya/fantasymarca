@@ -3,15 +3,15 @@
     "id": 2196106,
     "name": "Francho Serrano",
     "position": 3,
-    "points": 23,
-    "avg": 3.3,
+    "points": 25,
+    "avg": 3.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/2196106.png?version=20260818164522",
     "isFavorite": 0,
-    "value": 1784000,
-    "previousValue": 1704000,
+    "value": 1855000,
+    "previousValue": 1784000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1784000,
+      "floor": 1855000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2676000,
+      "value": 2782500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1784000,
+      "price": 1855000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 177,
       "weight": null
     },
-    "clausesRanking": 114
+    "clausesRanking": 122
   },
   "id": 2196106,
   "player_extra": {
@@ -240,12 +240,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -701,30 +703,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 23,
-      "avg": 3.2857,
+      "points": 25,
+      "avg": 3.125,
       "id_team": 9,
-      "last_gameweek": 9
+      "last_gameweek": 10
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 1704000,
-      "change": 80000,
-      "sign": 80
+      "value": 1784000,
+      "change": 71000,
+      "sign": 71
     },
     {
       "time": "Una semana",
-      "value": 1080000,
-      "change": 704000,
-      "sign": 704
+      "value": 1166000,
+      "change": 689000,
+      "sign": 689
     },
     {
       "time": "Un mes",
-      "value": 1232000,
-      "change": 552000,
-      "sign": 552
+      "value": 1336000,
+      "change": 519000,
+      "sign": 519
     }
   ],
   "values_chart": {
@@ -1000,6 +1002,10 @@
       {
         "value": 1784000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 1855000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -1050,7 +1056,7 @@
   "away": {
     "2196106": {
       "id": 2196106,
-      "points": 6,
+      "points": 8,
       "avg": 2
     }
   },

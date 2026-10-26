@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/31496.png?version=20251003194443",
     "isFavorite": 0,
-    "value": 19334000,
-    "previousValue": 19587000,
+    "value": 18685000,
+    "previousValue": 19334000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 19334000,
+      "floor": 18685000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 29001000,
+      "value": 28027500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 19334000,
+      "price": 18685000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 178,
       "weight": 74
     },
-    "clausesRanking": 317
+    "clausesRanking": 314
   },
   "id": 31496,
   "player_extra": {
@@ -244,7 +244,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -730,35 +730,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 19587000,
-      "change": -253000,
-      "sign": -253
+      "value": 19334000,
+      "change": -649000,
+      "sign": -649
     },
     {
       "time": "Una semana",
-      "value": 18966000,
-      "change": 368000,
-      "sign": 368
+      "value": 19129000,
+      "change": -444000,
+      "sign": -444
     },
     {
       "time": "Un mes",
-      "value": 20536000,
-      "change": -1202000,
-      "sign": "-1.202.000"
+      "value": 20279000,
+      "change": -1594000,
+      "sign": "-1.594.000"
     },
     {
       "time": "Un año",
-      "value": 29026000,
-      "change": -9692000,
-      "sign": "-9.692.000"
+      "value": 29203000,
+      "change": -10518000,
+      "sign": "-10.518.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 29026000,
-        "date": "25 oct 2025"
-      },
       {
         "value": 29203000,
         "date": "26 oct 2025"
@@ -2218,6 +2214,10 @@
       {
         "value": 19334000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 18685000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -2233,28 +2233,28 @@
     "31496": {
       "id": 31496,
       "id_team": 4,
-      "id_match": 38019,
-      "id_gameweek": 4051,
-      "id_home": 5,
-      "id_away": 4,
+      "id_match": 38034,
+      "id_gameweek": 4052,
+      "id_home": 4,
+      "id_away": 13,
       "date": {
-        "ts": 1792941300,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1793467800,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Betis",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Betis",
+      "away": "Málaga",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,

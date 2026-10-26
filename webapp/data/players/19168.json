@@ -3,15 +3,15 @@
     "id": 19168,
     "name": "Nemanja Gudelj",
     "position": 3,
-    "points": 24,
-    "avg": 3.4,
+    "points": 26,
+    "avg": 3.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/19168.png?version=20260831085448",
     "isFavorite": 0,
-    "value": 6215000,
-    "previousValue": 6126000,
+    "value": 6256000,
+    "previousValue": 6215000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6215000,
+      "floor": 6256000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 9322500,
+      "value": 9384000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6215000,
+      "price": 6256000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 187,
       "weight": 73
     },
-    "clausesRanking": 99
+    "clausesRanking": 113
   },
   "id": 19168,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 3
   },
@@ -236,12 +236,12 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -697,10 +697,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 24,
-      "avg": 3.4286,
+      "points": 26,
+      "avg": 3.25,
       "id_team": 9,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -727,35 +727,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 6126000,
-      "change": 89000,
-      "sign": 89
+      "value": 6215000,
+      "change": 41000,
+      "sign": 41
     },
     {
       "time": "Una semana",
-      "value": 5458000,
-      "change": 757000,
-      "sign": 757
+      "value": 5604000,
+      "change": 652000,
+      "sign": 652
     },
     {
       "time": "Un mes",
-      "value": 5797000,
-      "change": 418000,
-      "sign": 418
+      "value": 5882000,
+      "change": 374000,
+      "sign": 374
     },
     {
       "time": "Un año",
-      "value": 2439000,
-      "change": 3776000,
-      "sign": "+3.776.000"
+      "value": 2577000,
+      "change": 3679000,
+      "sign": "+3.679.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 2439000,
-        "date": "25 oct 2025"
-      },
       {
         "value": 2577000,
         "date": "26 oct 2025"
@@ -1907,11 +1903,15 @@
       {
         "value": 6215000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 6256000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
-      "value": 6215000,
-      "date": "25 oct 2026"
+      "value": 6256000,
+      "date": "26 oct 2026"
     },
     "min": {
       "value": 736000,
@@ -1922,28 +1922,28 @@
     "19168": {
       "id": 19168,
       "id_team": 9,
-      "id_match": 38017,
-      "id_gameweek": 4051,
-      "id_home": 1,
-      "id_away": 9,
+      "id_match": 38031,
+      "id_gameweek": 4052,
+      "id_home": 9,
+      "id_away": 17,
       "date": {
-        "ts": 1792933200,
-        "text": "Hoy 14:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793538000,
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "dom",
           "time": "14:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Getafe",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Getafe",
+      "away": "Sevilla",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,
@@ -1957,8 +1957,8 @@
   "away": {
     "19168": {
       "id": 19168,
-      "points": 8,
-      "avg": 2.6667
+      "points": 10,
+      "avg": 2.5
     }
   },
   "owners": [],

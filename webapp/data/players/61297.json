@@ -14,7 +14,7 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/61297.png?version=20250225085005",
     "isFavorite": 0,
-    "value": 329000,
+    "value": 417000,
     "previousValue": 329000,
     "videoFrame": null,
     "team": {
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 417000,
       "loanable": null
     },
     "bid": {
@@ -249,8 +249,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 310514,
+        "id_player": 61297,
+        "category": "injury",
+        "description": "Esguince de tobillo",
+        "duration": "Baja esta jornada",
+        "since": "2026-10-22 11:33:01",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -730,20 +739,20 @@
     {
       "time": "Un día",
       "value": 329000,
-      "change": 0,
-      "sign": 0
+      "change": 88000,
+      "sign": 88
     },
     {
       "time": "Una semana",
-      "value": 599000,
-      "change": -270000,
-      "sign": -270
+      "value": 376000,
+      "change": 41000,
+      "sign": 41
     },
     {
       "time": "Un mes",
-      "value": 484000,
-      "change": -155000,
-      "sign": -155
+      "value": 521000,
+      "change": -104000,
+      "sign": -104
     }
   ],
   "values_chart": {
@@ -1195,6 +1204,10 @@
       {
         "value": 329000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 417000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -1210,28 +1223,28 @@
     "61297": {
       "id": 61297,
       "id_team": 16,
-      "id_match": 38024,
-      "id_gameweek": 4051,
-      "id_home": 16,
-      "id_away": 12,
+      "id_match": 38027,
+      "id_gameweek": 4052,
+      "id_home": 1,
+      "id_away": 16,
       "date": {
-        "ts": 1792949400,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1793563200,
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Sociedad",
-      "away": "Levante",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Athletic Club",
+      "away": "Real Sociedad",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   },
   "starter": false,

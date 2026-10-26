@@ -14,7 +14,7 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/58383.png?version=20260619095827",
     "isFavorite": 0,
-    "value": 329000,
+    "value": 517000,
     "previousValue": 329000,
     "videoFrame": null,
     "team": {
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 517000,
       "loanable": null
     },
     "bid": {
@@ -313,12 +313,21 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": null,
+        "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302614,
+        "id_player": 58383,
+        "category": "injury",
+        "description": "Rotura de ligamento y menisco",
+        "duration": "Baja indefinida",
+        "since": "2026-08-07 18:35:20",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -791,20 +800,20 @@
     {
       "time": "Un día",
       "value": 329000,
-      "change": 0,
-      "sign": 0
+      "change": 188000,
+      "sign": 188
     },
     {
       "time": "Una semana",
-      "value": 370000,
-      "change": -41000,
-      "sign": -41
+      "value": 329000,
+      "change": 188000,
+      "sign": 188
     },
     {
       "time": "Un mes",
-      "value": 3804000,
-      "change": -3475000,
-      "sign": "-3.475.000"
+      "value": 3424000,
+      "change": -2907000,
+      "sign": "-2.907.000"
     }
   ],
   "values_chart": {
@@ -1320,6 +1329,10 @@
       {
         "value": 329000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 517000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {

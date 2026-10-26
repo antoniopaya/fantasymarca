@@ -3,15 +3,15 @@
     "id": 96,
     "name": "Dani Ceballos",
     "position": 3,
-    "points": 10,
-    "avg": 2,
+    "points": 15,
+    "avg": 2.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/96.png?version=20251003183552",
     "isFavorite": 0,
-    "value": 10178000,
-    "previousValue": 10025000,
+    "value": 10620000,
+    "previousValue": 10178000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 10178000,
+      "floor": 10620000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 15267000,
+      "value": 15930000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 10178000,
+      "price": 10620000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 179,
       "weight": 65
     },
-    "clausesRanking": 102
+    "clausesRanking": 26
   },
   "id": 96,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 0,
     "cards": 0
   },
@@ -247,12 +247,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -708,10 +710,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 10,
-      "avg": 2,
+      "points": 15,
+      "avg": 2.5,
       "id_team": 4,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -738,35 +740,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 10025000,
-      "change": 153000,
-      "sign": 153
+      "value": 10178000,
+      "change": 442000,
+      "sign": 442
     },
     {
       "time": "Una semana",
-      "value": 9018000,
-      "change": 1160000,
-      "sign": "+1.160.000"
+      "value": 9132000,
+      "change": 1488000,
+      "sign": "+1.488.000"
     },
     {
       "time": "Un mes",
-      "value": 5250000,
-      "change": 4928000,
-      "sign": "+4.928.000"
+      "value": 5411000,
+      "change": 5209000,
+      "sign": "+5.209.000"
     },
     {
       "time": "Un año",
-      "value": 8781000,
-      "change": 1397000,
-      "sign": "+1.397.000"
+      "value": 8638000,
+      "change": 1982000,
+      "sign": "+1.982.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 8781000,
-        "date": "25 oct 2025"
-      },
       {
         "value": 8638000,
         "date": "26 oct 2025"
@@ -1958,11 +1956,15 @@
       {
         "value": 10178000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 10620000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
-      "value": 10178000,
-      "date": "25 oct 2026"
+      "value": 10620000,
+      "date": "26 oct 2026"
     },
     "min": {
       "value": 329000,
@@ -1973,28 +1975,28 @@
     "96": {
       "id": 96,
       "id_team": 4,
-      "id_match": 38019,
-      "id_gameweek": 4051,
-      "id_home": 5,
-      "id_away": 4,
+      "id_match": 38034,
+      "id_gameweek": 4052,
+      "id_home": 4,
+      "id_away": 13,
       "date": {
-        "ts": 1792941300,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1793467800,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Betis",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Betis",
+      "away": "Málaga",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,
@@ -2008,8 +2010,8 @@
   "away": {
     "96": {
       "id": 96,
-      "points": 4,
-      "avg": 2
+      "points": 9,
+      "avg": 3
     }
   },
   "owners": [],

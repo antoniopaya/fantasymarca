@@ -3,15 +3,15 @@
     "id": 1762,
     "name": "Álex Berenguer",
     "position": 3,
-    "points": 46,
-    "avg": 5.1,
+    "points": 67,
+    "avg": 6.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/1762.png?version=20251003185228",
     "isFavorite": 0,
-    "value": 23339000,
-    "previousValue": 22840000,
+    "value": 23883000,
+    "previousValue": 23339000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 23339000,
+      "floor": 23883000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 35008500,
+      "value": 35824500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 23339000,
+      "price": 23883000,
       "loanable": null
     },
     "bid": {
@@ -72,8 +72,8 @@
   },
   "id": 1762,
   "player_extra": {
-    "matches": 9,
-    "goals": 2,
+    "matches": 10,
+    "goals": 3,
     "cards": 1
   },
   "points": [
@@ -242,12 +242,17 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 21,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "goal",
+        "assist",
+        "assist",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -703,10 +708,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 46,
-      "avg": 5.1111,
+      "points": 67,
+      "avg": 6.7,
       "id_team": 1,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -733,35 +738,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 22840000,
-      "change": 499000,
-      "sign": 499
+      "value": 23339000,
+      "change": 544000,
+      "sign": 544
     },
     {
       "time": "Una semana",
-      "value": 19656000,
-      "change": 3683000,
-      "sign": "+3.683.000"
+      "value": 20534000,
+      "change": 3349000,
+      "sign": "+3.349.000"
     },
     {
       "time": "Un mes",
-      "value": 20942000,
-      "change": 2397000,
-      "sign": "+2.397.000"
+      "value": 20979000,
+      "change": 2904000,
+      "sign": "+2.904.000"
     },
     {
       "time": "Un año",
-      "value": 14800000,
-      "change": 8539000,
-      "sign": "+8.539.000"
+      "value": 15189000,
+      "change": 8694000,
+      "sign": "+8.694.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 14800000,
-        "date": "25 oct 2025"
-      },
       {
         "value": 15189000,
         "date": "26 oct 2025"
@@ -2221,6 +2222,10 @@
       {
         "value": 23339000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 23883000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -2236,36 +2241,36 @@
     "1762": {
       "id": 1762,
       "id_team": 1,
-      "id_match": 38017,
-      "id_gameweek": 4051,
+      "id_match": 38027,
+      "id_gameweek": 4052,
       "id_home": 1,
-      "id_away": 9,
+      "id_away": 16,
       "date": {
-        "ts": 1792933200,
-        "text": "Hoy 14:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793563200,
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "14:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
       "home": "Athletic Club",
-      "away": "Getafe",
+      "away": "Real Sociedad",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   },
   "starter": false,
   "home": {
     "1762": {
       "id": 1762,
-      "points": 14,
-      "avg": 3.5
+      "points": 35,
+      "avg": 7
     }
   },
   "away": {

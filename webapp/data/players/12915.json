@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/12915.png?version=20251003194337",
     "isFavorite": 0,
-    "value": 33185000,
-    "previousValue": 34036000,
+    "value": 32455000,
+    "previousValue": 33185000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 33185000,
+      "floor": 32455000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 49777500,
+      "value": 48682500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 33185000,
+      "price": 32455000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 175,
       "weight": 73
     },
-    "clausesRanking": 287
+    "clausesRanking": 335
   },
   "id": 12915,
   "player_extra": {
@@ -258,8 +258,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 310313,
+        "id_player": 12915,
+        "category": "injury",
+        "description": "Lesión en el sóleo  Desde 19/10 (1 dí",
+        "duration": "Baja hasta mediados de Noviembre",
+        "since": "2026-10-20 08:59:59",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -738,35 +747,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 34036000,
-      "change": -851000,
-      "sign": -851
+      "value": 33185000,
+      "change": -730000,
+      "sign": -730
     },
     {
       "time": "Una semana",
-      "value": 36490000,
-      "change": -3305000,
-      "sign": "-3.305.000"
+      "value": 36837000,
+      "change": -4382000,
+      "sign": "-4.382.000"
     },
     {
       "time": "Un mes",
-      "value": 31304000,
-      "change": 1881000,
-      "sign": "+1.881.000"
+      "value": 31770000,
+      "change": 685000,
+      "sign": 685
     },
     {
       "time": "Un año",
-      "value": 39931000,
-      "change": -6746000,
-      "sign": "-6.746.000"
+      "value": 40145000,
+      "change": -7690000,
+      "sign": "-7.690.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 39931000,
-        "date": "25 oct 2025"
-      },
       {
         "value": 40145000,
         "date": "26 oct 2025"
@@ -2226,6 +2231,10 @@
       {
         "value": 33185000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 32455000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -2241,28 +2250,28 @@
     "12915": {
       "id": 12915,
       "id_team": 4,
-      "id_match": 38019,
-      "id_gameweek": 4051,
-      "id_home": 5,
-      "id_away": 4,
+      "id_match": 38034,
+      "id_gameweek": 4052,
+      "id_home": 4,
+      "id_away": 13,
       "date": {
-        "ts": 1792941300,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1793467800,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Betis",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Betis",
+      "away": "Málaga",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,

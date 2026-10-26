@@ -3,15 +3,15 @@
     "id": 361,
     "name": "Yuri Berchiche",
     "position": 2,
-    "points": 26,
-    "avg": 3.7,
+    "points": 39,
+    "avg": 4.9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/361.png?version=20251003193357",
     "isFavorite": 0,
-    "value": 16835000,
-    "previousValue": 17089000,
+    "value": 17168000,
+    "previousValue": 16835000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 16835000,
+      "floor": 17168000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 25252500,
+      "value": 25752000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 16835000,
+      "price": 17168000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 181,
       "weight": 77
     },
-    "clausesRanking": 268
+    "clausesRanking": 250
   },
   "id": 361,
   "player_extra": {
-    "matches": 7,
-    "goals": 0,
+    "matches": 8,
+    "goals": 1,
     "cards": 4
   },
   "points": [
@@ -238,12 +238,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 13,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -699,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 26,
-      "avg": 3.7143,
+      "points": 39,
+      "avg": 4.875,
       "id_team": 1,
-      "last_gameweek": 8
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -729,35 +731,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 17089000,
-      "change": -254000,
-      "sign": -254
+      "value": 16835000,
+      "change": 333000,
+      "sign": 333
     },
     {
       "time": "Una semana",
-      "value": 18051000,
-      "change": -1216000,
-      "sign": "-1.216.000"
+      "value": 17767000,
+      "change": -599000,
+      "sign": -599
     },
     {
       "time": "Un mes",
-      "value": 20238000,
-      "change": -3403000,
-      "sign": "-3.403.000"
+      "value": 20518000,
+      "change": -3350000,
+      "sign": "-3.350.000"
     },
     {
       "time": "Un año",
-      "value": 13810000,
-      "change": 3025000,
-      "sign": "+3.025.000"
+      "value": 14257000,
+      "change": 2911000,
+      "sign": "+2.911.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 13810000,
-        "date": "25 oct 2025"
-      },
       {
         "value": 14257000,
         "date": "26 oct 2025"
@@ -2217,6 +2215,10 @@
       {
         "value": 16835000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 17168000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -2232,36 +2234,36 @@
     "361": {
       "id": 361,
       "id_team": 1,
-      "id_match": 38017,
-      "id_gameweek": 4051,
+      "id_match": 38027,
+      "id_gameweek": 4052,
       "id_home": 1,
-      "id_away": 9,
+      "id_away": 16,
       "date": {
-        "ts": 1792933200,
-        "text": "Hoy 14:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793563200,
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "14:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
       "home": "Athletic Club",
-      "away": "Getafe",
+      "away": "Real Sociedad",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   },
   "starter": false,
   "home": {
     "361": {
       "id": 361,
-      "points": 15,
-      "avg": 3.75
+      "points": 28,
+      "avg": 5.6
     }
   },
   "away": {

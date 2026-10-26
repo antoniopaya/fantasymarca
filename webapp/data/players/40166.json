@@ -3,15 +3,15 @@
     "id": 40166,
     "name": "Aurélien Tchouaméni",
     "position": 3,
-    "points": 20,
+    "points": 24,
     "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/40166.png?version=20251003183451",
     "isFavorite": 0,
-    "value": 21462000,
-    "previousValue": 21323000,
+    "value": 21735000,
+    "previousValue": 21462000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 21462000,
+      "floor": 21735000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 32193000,
+      "value": 32602500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 21462000,
+      "price": 21735000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 188,
       "weight": null
     },
-    "clausesRanking": 124
+    "clausesRanking": 109
   },
   "id": 40166,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 0,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -256,12 +256,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 3,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     },
@@ -717,10 +719,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 20,
+      "points": 24,
       "avg": 4,
       "id_team": 15,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -747,35 +749,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 21323000,
-      "change": 139000,
-      "sign": 139
+      "value": 21462000,
+      "change": 273000,
+      "sign": 273
     },
     {
       "time": "Una semana",
-      "value": 21072000,
-      "change": 390000,
-      "sign": 390
+      "value": 21019000,
+      "change": 716000,
+      "sign": 716
     },
     {
       "time": "Un mes",
-      "value": 22017000,
-      "change": -555000,
-      "sign": -555
+      "value": 21745000,
+      "change": -10000,
+      "sign": -10
     },
     {
       "time": "Un año",
-      "value": 40177000,
-      "change": -18715000,
-      "sign": "-18.715.000"
+      "value": 40245000,
+      "change": -18510000,
+      "sign": "-18.510.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 40177000,
-        "date": "25 oct 2025"
-      },
       {
         "value": 40245000,
         "date": "26 oct 2025"
@@ -2235,6 +2233,10 @@
       {
         "value": 21462000,
         "date": "25 oct 2026"
+      },
+      {
+        "value": 21735000,
+        "date": "26 oct 2026"
       }
     ],
     "max": {
@@ -2250,27 +2252,27 @@
     "40166": {
       "id": 40166,
       "id_team": 15,
-      "id_match": 38021,
-      "id_gameweek": 4051,
-      "id_home": 3,
+      "id_match": 38035,
+      "id_gameweek": 4052,
+      "id_home": 1490,
       "id_away": 15,
       "date": {
-        "ts": 1792958400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793546100,
+        "text": "dom 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "16:15",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Barcelona",
+      "home": "Racing de Santander",
       "away": "Real Madrid",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
@@ -2285,8 +2287,8 @@
   "away": {
     "40166": {
       "id": 40166,
-      "points": 5,
-      "avg": 2.5
+      "points": 9,
+      "avg": 3
     }
   },
   "owners": [],
