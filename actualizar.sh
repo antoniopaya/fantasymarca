@@ -90,7 +90,11 @@ estado_runner() {
     -q ".runners[] | select(.name == \"$RUNNER_NAME\") | .status" 2>/dev/null
 }
 
-if [ "$(estado_runner)" = "online" ]; then
+# GitHub tarda en marcar offline un runner recién desconectado: si se relanza
+# el script justo después, saldría "online" sin que corra nada aquí y el
+# refresco se quedaría en cola para siempre. Solo se reutiliza si de verdad
+# hay un Runner.Listener de este directorio en marcha.
+if [ "$(estado_runner)" = "online" ] && pgrep -f "$RUNNER_DIR/bin/Runner.Listener" >/dev/null; then
   aviso "El runner ya estaba conectado (otro ./actualizar.sh en marcha?); se usa ese."
 else
   paso "Conectando el runner de este ordenador"
