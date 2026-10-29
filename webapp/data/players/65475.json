@@ -3,15 +3,15 @@
     "id": 65475,
     "name": "Asier Osambela",
     "position": 3,
-    "points": 24,
-    "avg": 3.4,
+    "points": 26,
+    "avg": 3.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65475.png?version=20250826151727",
     "isFavorite": 0,
-    "value": 2506000,
-    "previousValue": 2356000,
+    "value": 2906000,
+    "previousValue": 2780000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2506000,
+      "floor": 2906000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3759000,
+      "value": 4359000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2506000,
+      "price": 2906000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 48
+    "clausesRanking": 85
   },
   "id": 65475,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 1,
     "cards": 1
   },
@@ -241,12 +241,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -702,10 +704,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 24,
-      "avg": 3.4286,
+      "points": 26,
+      "avg": 3.25,
       "id_team": 50,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -718,29 +720,25 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2356000,
-      "change": 150000,
-      "sign": 150
+      "value": 2780000,
+      "change": 126000,
+      "sign": 126
     },
     {
       "time": "Una semana",
-      "value": 1166000,
-      "change": 1340000,
-      "sign": "+1.340.000"
+      "value": 1826000,
+      "change": 1080000,
+      "sign": "+1.080.000"
     },
     {
       "time": "Un mes",
-      "value": 975000,
-      "change": 1531000,
-      "sign": "+1.531.000"
+      "value": 1621000,
+      "change": 1285000,
+      "sign": "+1.285.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 640000,
-        "date": "28 oct 2025"
-      },
       {
         "value": 640000,
         "date": "30 oct 2025"
@@ -2188,11 +2186,23 @@
       {
         "value": 2506000,
         "date": "26 oct 2026"
+      },
+      {
+        "value": 2635000,
+        "date": "27 oct 2026"
+      },
+      {
+        "value": 2780000,
+        "date": "28 oct 2026"
+      },
+      {
+        "value": 2906000,
+        "date": "29 oct 2026"
       }
     ],
     "max": {
-      "value": 2506000,
-      "date": "26 oct 2026"
+      "value": 2906000,
+      "date": "29 oct 2026"
     },
     "min": {
       "value": 329000,
@@ -2203,27 +2213,27 @@
     "65475": {
       "id": 65475,
       "id_team": 50,
-      "id_match": 38025,
-      "id_gameweek": 4051,
-      "id_home": 17,
+      "id_match": 38028,
+      "id_gameweek": 4052,
+      "id_home": 6,
       "id_away": 50,
       "date": {
-        "ts": 1793044800,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793649600,
+        "text": "lun 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "lun",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
+      "home": "Deportivo da Coruña",
       "away": "Osasuna",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
@@ -2238,8 +2248,8 @@
   "away": {
     "65475": {
       "id": 65475,
-      "points": 10,
-      "avg": 2.5
+      "points": 12,
+      "avg": 2.4
     }
   },
   "owners": [],

@@ -3,15 +3,15 @@
     "id": 4836173,
     "name": "Félix Correia",
     "position": 3,
-    "points": 25,
-    "avg": 5,
+    "points": 36,
+    "avg": 6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4836173.png?version=20260901214140",
     "isFavorite": 0,
-    "value": 16476000,
-    "previousValue": 16058000,
+    "value": 18548000,
+    "previousValue": 17798000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 16476000,
+      "floor": 18548000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 24714000,
+      "value": 27822000,
       "percentage": 50
     },
     "market": {
-      "id": 1904313039,
-      "isPublic": 1,
-      "price": 16476000,
-      "loanable": 0
+      "id": null,
+      "isPublic": null,
+      "price": 18548000,
+      "loanable": null
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": 16476000,
+      "input": null,
       "barter": [],
       "type": null,
       "days": null
@@ -68,12 +68,12 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 96
+    "clausesRanking": 47
   },
   "id": 4836173,
   "player_extra": {
-    "matches": 5,
-    "goals": 1,
+    "matches": 6,
+    "goals": 2,
     "cards": 2
   },
   "points": [
@@ -242,12 +242,15 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 11,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -703,30 +706,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 25,
-      "avg": 5,
+      "points": 36,
+      "avg": 6,
       "id_team": 17,
-      "last_gameweek": 9
+      "last_gameweek": 10
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 16058000,
-      "change": 418000,
-      "sign": 418
+      "value": 17798000,
+      "change": 750000,
+      "sign": 750
     },
     {
       "time": "Una semana",
-      "value": 13627000,
-      "change": 2849000,
-      "sign": "+2.849.000"
+      "value": 14874000,
+      "change": 3674000,
+      "sign": "+3.674.000"
     },
     {
       "time": "Un mes",
-      "value": 7614000,
-      "change": 8862000,
-      "sign": "+8.862.000"
+      "value": 8331000,
+      "change": 10217000,
+      "sign": "+10.217.000"
     }
   ],
   "values_chart": {
@@ -950,11 +953,23 @@
       {
         "value": 16476000,
         "date": "26 oct 2026"
+      },
+      {
+        "value": 17099000,
+        "date": "27 oct 2026"
+      },
+      {
+        "value": 17798000,
+        "date": "28 oct 2026"
+      },
+      {
+        "value": 18548000,
+        "date": "29 oct 2026"
       }
     ],
     "max": {
-      "value": 16476000,
-      "date": "26 oct 2026"
+      "value": 18548000,
+      "date": "29 oct 2026"
     },
     "min": {
       "value": 6040000,
@@ -965,36 +980,36 @@
     "4836173": {
       "id": 4836173,
       "id_team": 17,
-      "id_match": 38025,
-      "id_gameweek": 4051,
-      "id_home": 17,
-      "id_away": 50,
+      "id_match": 38031,
+      "id_gameweek": 4052,
+      "id_home": 9,
+      "id_away": 17,
       "date": {
-        "ts": 1793044800,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793538000,
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Osasuna",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "home": "Getafe",
+      "away": "Sevilla",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,
   "home": {
     "4836173": {
       "id": 4836173,
-      "points": 10,
-      "avg": 5
+      "points": 21,
+      "avg": 7
     }
   },
   "away": {

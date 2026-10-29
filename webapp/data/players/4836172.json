@@ -3,15 +3,15 @@
     "id": 4836172,
     "name": "Lucas Stassin",
     "position": 4,
-    "points": 22,
-    "avg": 5.5,
+    "points": 25,
+    "avg": 5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4836172.png?version=20260901214106",
     "isFavorite": 0,
-    "value": 10713000,
-    "previousValue": 10479000,
+    "value": 11561000,
+    "previousValue": 11293000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 10713000,
+      "floor": 11561000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 16069500,
+      "value": 17341500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 10713000,
+      "price": 11561000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 198
+    "clausesRanking": 166
   },
   "id": 4836172,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 1,
     "cards": 0
   },
@@ -256,12 +256,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -717,30 +719,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 22,
-      "avg": 5.5,
+      "points": 25,
+      "avg": 5,
       "id_team": 17,
-      "last_gameweek": 9
+      "last_gameweek": 10
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 10479000,
-      "change": 234000,
-      "sign": 234
+      "value": 11293000,
+      "change": 268000,
+      "sign": 268
     },
     {
       "time": "Una semana",
-      "value": 9338000,
-      "change": 1375000,
-      "sign": "+1.375.000"
+      "value": 9887000,
+      "change": 1674000,
+      "sign": "+1.674.000"
     },
     {
       "time": "Un mes",
-      "value": 16041000,
-      "change": -5328000,
-      "sign": "-5.328.000"
+      "value": 15013000,
+      "change": -3452000,
+      "sign": "-3.452.000"
     }
   ],
   "values_chart": {
@@ -964,6 +966,18 @@
       {
         "value": 10713000,
         "date": "26 oct 2026"
+      },
+      {
+        "value": 10991000,
+        "date": "27 oct 2026"
+      },
+      {
+        "value": 11293000,
+        "date": "28 oct 2026"
+      },
+      {
+        "value": 11561000,
+        "date": "29 oct 2026"
       }
     ],
     "max": {
@@ -979,36 +993,36 @@
     "4836172": {
       "id": 4836172,
       "id_team": 17,
-      "id_match": 38025,
-      "id_gameweek": 4051,
-      "id_home": 17,
-      "id_away": 50,
+      "id_match": 38031,
+      "id_gameweek": 4052,
+      "id_home": 9,
+      "id_away": 17,
       "date": {
-        "ts": 1793044800,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793538000,
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Osasuna",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "home": "Getafe",
+      "away": "Sevilla",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,
   "home": {
     "4836172": {
       "id": 4836172,
-      "points": 4,
-      "avg": 4
+      "points": 7,
+      "avg": 3.5
     }
   },
   "away": {

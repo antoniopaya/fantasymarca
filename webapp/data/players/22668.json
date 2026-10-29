@@ -3,15 +3,15 @@
     "id": 22668,
     "name": "Lucas Torró",
     "position": 3,
-    "points": 12,
-    "avg": 1.7,
+    "points": 16,
+    "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22668.png?version=20251006025249",
     "isFavorite": 0,
-    "value": 1488000,
-    "previousValue": 1602000,
+    "value": 1777000,
+    "previousValue": 1594000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1488000,
+      "floor": 1777000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2232000,
+      "value": 2665500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1488000,
+      "price": 1777000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 190,
       "weight": 77
     },
-    "clausesRanking": 307
+    "clausesRanking": 209
   },
   "id": 22668,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 1
   },
@@ -238,12 +238,14 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -699,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 12,
-      "avg": 1.7143,
+      "points": 16,
+      "avg": 2,
       "id_team": 50,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -729,43 +731,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1602000,
-      "change": -114000,
-      "sign": -114
+      "value": 1594000,
+      "change": 183000,
+      "sign": 183
     },
     {
       "time": "Una semana",
-      "value": 1993000,
-      "change": -505000,
-      "sign": -505
+      "value": 2012000,
+      "change": -235000,
+      "sign": -235
     },
     {
       "time": "Un mes",
-      "value": 857000,
-      "change": 631000,
-      "sign": 631
+      "value": 617000,
+      "change": 1160000,
+      "sign": "+1.160.000"
     },
     {
       "time": "Un año",
-      "value": 14090000,
-      "change": -12602000,
-      "sign": "-12.602.000"
+      "value": 14961000,
+      "change": -13184000,
+      "sign": "-13.184.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 14090000,
-        "date": "26 oct 2025"
-      },
-      {
-        "value": 14394000,
-        "date": "27 oct 2025"
-      },
-      {
-        "value": 14659000,
-        "date": "28 oct 2025"
-      },
       {
         "value": 14961000,
         "date": "29 oct 2025"
@@ -2217,6 +2207,18 @@
       {
         "value": 1488000,
         "date": "26 oct 2026"
+      },
+      {
+        "value": 1494000,
+        "date": "27 oct 2026"
+      },
+      {
+        "value": 1594000,
+        "date": "28 oct 2026"
+      },
+      {
+        "value": 1777000,
+        "date": "29 oct 2026"
       }
     ],
     "max": {
@@ -2232,27 +2234,27 @@
     "22668": {
       "id": 22668,
       "id_team": 50,
-      "id_match": 38025,
-      "id_gameweek": 4051,
-      "id_home": 17,
+      "id_match": 38028,
+      "id_gameweek": 4052,
+      "id_home": 6,
       "id_away": 50,
       "date": {
-        "ts": 1793044800,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793649600,
+        "text": "lun 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "lun",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
-      "home": "Sevilla",
+      "home": "Deportivo da Coruña",
       "away": "Osasuna",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     }
   },
@@ -2267,8 +2269,8 @@
   "away": {
     "22668": {
       "id": 22668,
-      "points": 4,
-      "avg": 1.3333
+      "points": 8,
+      "avg": 2
     }
   },
   "owners": [],

@@ -3,15 +3,15 @@
     "id": 24792,
     "name": "Juan Iglesias",
     "position": 2,
-    "points": 43,
-    "avg": 4.8,
+    "points": 50,
+    "avg": 5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/24792.png?version=20251003200157",
     "isFavorite": 0,
-    "value": 26552000,
-    "previousValue": 26400000,
+    "value": 27656000,
+    "previousValue": 27263000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 26552000,
+      "floor": 27656000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 39828000,
+      "value": 41484000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 26552000,
+      "price": 27656000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 220
+    "clausesRanking": 155
   },
   "id": 24792,
   "player_extra": {
-    "matches": 9,
+    "matches": 10,
     "goals": 1,
     "cards": 3
   },
@@ -237,12 +237,12 @@
       "startDate": "2026-10-23 21:00:00",
       "endDate": "2026-10-26 21:00:00",
       "points": {
-        "points": null,
+        "points": 8,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -698,10 +698,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 43,
-      "avg": 4.7778,
+      "points": 51,
+      "avg": 5.1,
       "id_team": 17,
-      "last_gameweek": 9
+      "last_gameweek": 10
     },
     {
       "season": "25/26",
@@ -728,43 +728,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 26400000,
-      "change": 152000,
-      "sign": 152
+      "value": 27263000,
+      "change": 393000,
+      "sign": 393
     },
     {
       "time": "Una semana",
-      "value": 25209000,
-      "change": 1343000,
-      "sign": "+1.343.000"
+      "value": 25691000,
+      "change": 1965000,
+      "sign": "+1.965.000"
     },
     {
       "time": "Un mes",
-      "value": 22765000,
-      "change": 3787000,
-      "sign": "+3.787.000"
+      "value": 23737000,
+      "change": 3919000,
+      "sign": "+3.919.000"
     },
     {
       "time": "Un año",
-      "value": 9421000,
-      "change": 17131000,
-      "sign": "+17.131.000"
+      "value": 10334000,
+      "change": 17322000,
+      "sign": "+17.322.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 9421000,
-        "date": "26 oct 2025"
-      },
-      {
-        "value": 9647000,
-        "date": "27 oct 2025"
-      },
-      {
-        "value": 9972000,
-        "date": "28 oct 2025"
-      },
       {
         "value": 10334000,
         "date": "29 oct 2025"
@@ -2216,6 +2204,18 @@
       {
         "value": 26552000,
         "date": "26 oct 2026"
+      },
+      {
+        "value": 26830000,
+        "date": "27 oct 2026"
+      },
+      {
+        "value": 27263000,
+        "date": "28 oct 2026"
+      },
+      {
+        "value": 27656000,
+        "date": "29 oct 2026"
       }
     ],
     "max": {
@@ -2231,36 +2231,36 @@
     "24792": {
       "id": 24792,
       "id_team": 17,
-      "id_match": 38025,
-      "id_gameweek": 4051,
-      "id_home": 17,
-      "id_away": 50,
+      "id_match": 38031,
+      "id_gameweek": 4052,
+      "id_home": 9,
+      "id_away": 17,
       "date": {
-        "ts": 1793044800,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1793538000,
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Osasuna",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "home": "Getafe",
+      "away": "Sevilla",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,
   "home": {
     "24792": {
       "id": 24792,
-      "points": 22,
-      "avg": 5.5
+      "points": 30,
+      "avg": 6
     }
   },
   "away": {
