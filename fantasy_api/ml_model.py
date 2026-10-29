@@ -19,18 +19,17 @@ asistencias previas, fuerza del equipo y del rival (puntos, goles a favor
 y en contra por partido), si juega en casa, cruces posición × rival (no
 es lo mismo un rival goleador para un portero que para un delantero) y el
 valor de mercado de Marca la víspera de la jornada y su cambio en la última
-semana (el mercado reacciona a noticias que la forma aún no refleja). La
+semana (el mercado reacciona a noticias que la forma aún no refleja), y del
+desglose de player_stats/: minutos, xG/xA y nota de Sofascore previos. La
 temporada pasada no se usa: no mejoraba la validación.
 
 Los puntos si juega se encogen hacia la media de su posición: la regresión
 sola prometía ~7,7 pts al top-20 y daba ~6,4.
 
-Alineaciones probables (scrape_alineaciones.py): para la jornada a predecir
-se combinan con P(juega) del modelo (pasando antes su probabilidad de
-titular a probabilidad de jugar, que incluye salir desde el banquillo).
-Cuando haya al menos 2 jornadas con alineaciones guardadas en
-alineaciones_hist/, la probabilidad de titular entra además como variable
-del modelo y aprende su peso sola.
+Alineaciones probables (scrape_alineaciones.py): para la jornada a predecir,
+P(juega) sale de su probabilidad de titular, pasada a probabilidad de jugar
+con lo que de verdad jugó cada probabilidad en las jornadas guardadas en
+alineaciones_hist/ (ver lineup_p_play).
 
 Validación: "origen móvil". Para cada jornada k ya jugada (desde la 4), se
 entrena con las anteriores y se predice k; se compara con dos referencias
@@ -53,6 +52,7 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import HistGradientBoostingClassifier, HistGradientBoostingRegressor
 from sklearn.impute import SimpleImputer
+from sklearn.isotonic import IsotonicRegression
 from sklearn.linear_model import LogisticRegression, Ridge
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
@@ -115,6 +115,11 @@ FEATURES = [
     "market_value",
     "market_value_chg7",
 ]
+# Del desglose de player_stats/: los minutos dicen mejor que los puntos quién
+# es fijo, y el xG/xA quién genera aunque aún no haya marcado. Con J1-J10
+# bajaban el error y subían los puntos reales del 11 de 180M.
+PLAYER_STATS_FEATURES = ["min_avg", "min_last3", "min_last1", "min60_rate", "xg_pg", "xa_pg", "xgi90", "ss_mean"]
+FEATURES += PLAYER_STATS_FEATURES
 FF_FEATURE = "ff_prob"
 
 
@@ -219,6 +224,15 @@ def load_players(current_season: str, matches: pd.DataFrame):
     return players
 
 
+def load_player_stats() -> dict[int, dict[int, dict]]:
+    """jornada -> {id Marca: desglose} de player_stats/ (solo los que jugaron)."""
+    out: dict[int, dict[int, dict]] = {}
+    for path in glob.glob(os.path.join(DATA_DIR, "player_stats", "*.json")):
+        gw = int(os.path.basename(path).split(".")[0])
+        out[gw] = {int(k): v for k, v in load_json("player_stats", os.path.basename(path)).items()}
+    return out
+
+
 def load_ff_history() -> dict[int, dict[int, int]]:
     """jornada -> {id Marca: probabilidad de titular (0-100)}."""
     out: dict[int, dict[int, int]] = {}
@@ -236,8 +250,9 @@ def load_ff_history() -> dict[int, dict[int, int]]:
 # --- Variables ------------------------------------------------------------------
 
 
-def player_history_features(pl: dict, gw: int) -> dict:
-    prev = [pl["gws"][g] for g in sorted(pl["gws"]) if g < gw and pl["gws"][g]["team_played"]]
+def player_history_features(pl: dict, gw: int, stats: dict) -> dict:
+    prev_gws = [g for g in sorted(pl["gws"]) if g < gw and pl["gws"][g]["team_played"]]
+    prev = [pl["gws"][g] for g in prev_gws]
     played = [g for g in prev if g["points"] is not None]
     pts_all = [g["points"] or 0 for g in prev]
     pts_played = [g["points"] for g in played]
@@ -257,6 +272,38 @@ def player_history_features(pl: dict, gw: int) -> dict:
         "std_played": float(np.std(pts_played)) if len(pts_played) > 1 else np.nan,
         "goals_pg": goals / len(played) if played else np.nan,
         "assists_pg": assists / len(played) if played else np.nan,
+        **player_stats_features(pl, prev_gws, stats),
+    }
+
+
+def player_stats_features(pl: dict, prev_gws: list[int], stats: dict) -> dict:
+    """Minutos, xG/xA y nota de Sofascore en las jornadas previas. Quien no sale
+    en el desglose de una jornada no jugó (0 minutos); se saltan las jornadas
+    sin desglose (player_stats.py puede fallar sin parar el refresco) y las que
+    no traen a alguien que sí jugó."""
+    rows = []
+    for g in prev_gws:
+        if g not in stats:
+            continue
+        entry = stats[g].get(pl["id"])
+        if entry is None and pl["gws"][g]["points"] is not None:
+            continue
+        rows.append(entry or {"min": 0})
+    if not rows:
+        return dict.fromkeys(PLAYER_STATS_FEATURES, np.nan)
+    mins = np.array([r.get("min") or 0 for r in rows], dtype=float)
+    xg = sum(r.get("xg") or 0 for r in rows)
+    xa = sum(r.get("xa") or 0 for r in rows)
+    ratings = [r["ss"] for r in rows if r.get("ss") is not None]
+    return {
+        "min_avg": float(mins.mean()),
+        "min_last3": float(mins[-3:].mean()),
+        "min_last1": float(mins[-1]),
+        "min60_rate": float((mins >= 60).mean()),
+        "xg_pg": xg / len(rows),
+        "xa_pg": xa / len(rows),
+        "xgi90": (xg + xa) / mins.sum() * 90 if mins.sum() >= 90 else np.nan,
+        "ss_mean": float(np.mean(ratings)) if ratings else np.nan,
     }
 
 
@@ -301,7 +348,7 @@ def market_value_features(pl: dict, ts: float) -> dict:
     }
 
 
-def build_rows(players, matches, gws, ff_hist):
+def build_rows(players, matches, gws, ff_hist, stats):
     rows = []
     for gw in gws:
         gw_matches = matches[matches.gw == gw]
@@ -325,7 +372,7 @@ def build_rows(players, matches, gws, ff_hist):
                 "price": pl["price"] if pl["price"] is not None else np.nan,
                 "ls_avg": pl["ls_avg"],
                 "ls_points": pl["ls_points"],
-                **player_history_features(pl, gw),
+                **player_history_features(pl, gw, stats),
                 "team_ppg": strength[pl["team"]]["ppg"],
                 "team_gf": strength[pl["team"]]["gf"],
                 "team_ga": strength[pl["team"]]["ga"],
@@ -420,14 +467,15 @@ def evaluate(df: pd.DataFrame, features: list[str]):
         test = df[(df.gw == k) & df.team_played]
         if train.gw.nunique() < MIN_TRAIN_GW or test.empty:
             continue
-        # Las alineaciones solo están guardadas desde la 8: en las jornadas
-        # anteriores esa columna va vacía y el boosting no acepta columnas sin
-        # ningún valor.
+        # El boosting no acepta columnas sin ningún valor en el entrenamiento.
         fold_features = [f for f in features if train[f].notna().any()]
+        ff_prob = test[FF_FEATURE].to_numpy(dtype=float)
         preds = {}
         for family in MODEL_FAMILIES:
             p, s = predict(fit(train, fold_features, family), test, fold_features)
-            preds[family] = p * s
+            # Igual que en la predicción real: con alineaciones guardadas de
+            # esa jornada (desde la 8), P(juega) sale de ellas.
+            preds[family] = lineup_p_play(train, p, ff_prob) * s
         preds["media_previa"] = baseline_mean(test)
         preds["formula_web"] = baseline_formula(test)
         y = test.y_total.to_numpy()
@@ -454,12 +502,29 @@ def summarize(results):
     return out
 
 
+def lineup_p_play(train: pd.DataFrame, p_model: np.ndarray, ff_prob: np.ndarray) -> np.ndarray:
+    """P(juega) con las alineaciones probables (media de futbolfantasy y
+    analiticafantasy, que saben de lesiones y rotaciones de esta semana).
+
+    Con jornadas guardadas en alineaciones_hist/ se aprende directamente
+    cuánto juega de verdad quien tiene cada probabilidad de titular
+    (regresión isotónica: a más probabilidad, más juega). Incluye salir desde
+    el banquillo: en J8-J10, con 0-20% de titular jugó 1 de cada 4. Con J8-J10
+    acertaba más que meter la probabilidad como variable del modelo (Brier
+    0,126 frente a 0,141). Quien no sale en las alineaciones se queda con lo
+    del modelo."""
+    hist = train[train[FF_FEATURE].notna()]
+    if hist.empty:
+        return blend_with_lineups(p_model, ff_prob)
+    iso = IsotonicRegression(out_of_bounds="clip", y_min=0.02, y_max=0.99)
+    iso.fit(hist[FF_FEATURE], hist.y_played)
+    return np.where(np.isnan(ff_prob), p_model, iso.predict(np.nan_to_num(ff_prob)))
+
+
 def blend_with_lineups(p_model: np.ndarray, ff_prob: np.ndarray) -> np.ndarray:
-    """Mientras el modelo no tenga historia de alineaciones para aprender su
-    peso: 70% alineaciones probables (media de futbolfantasy y
-    analiticafantasy, que saben de lesiones y rotaciones de esta semana),
-    30% lo que dice la historia del jugador. Un 0% en las alineaciones (baja,
-    descartado) manda casi del todo.
+    """Sin historia de alineaciones de la que aprender: 70% alineaciones
+    probables, 30% lo que dice la historia del jugador. Un 0% en las
+    alineaciones (baja, descartado) manda casi del todo.
 
     Las alineaciones dan la probabilidad de ser titular, y P(juega) incluye
     salir desde el banquillo: en la J8, de los que tenían un 10-40% de
@@ -504,13 +569,12 @@ def main() -> None:
     # importa el calendario de varias jornadas, no solo el de esta.
     last_gw = int(matches.gw.max())
     horizon = [g for g in range(next_gw, next_gw + HORIZON) if g <= last_gw]
-    df = build_rows(players, matches, range(1, horizon[-1] + 1), ff_hist)
-    history_gws = df[(df.gw < next_gw) & df[FF_FEATURE].notna()].gw.nunique()
-    use_ff_feature = history_gws >= 2
-    features = FEATURES + ([FF_FEATURE] if use_ff_feature else [])
+    df = build_rows(players, matches, range(1, horizon[-1] + 1), ff_hist, load_player_stats())
+    history_gws = df[(df.gw < next_gw) & df.team_played & df[FF_FEATURE].notna()].gw.nunique()
+    features = FEATURES
     print(
         f"Filas: {len(df)} · jornada a predecir: {next_gw} · "
-        f"alineaciones como variable: {'sí' if use_ff_feature else f'no ({history_gws} jornadas de historia)'}",
+        f"jornadas con alineaciones para calibrar P(juega): {history_gws}",
         file=sys.stderr,
     )
 
@@ -535,7 +599,7 @@ def main() -> None:
         status = rows["id"].map(status_by_id)
         if g == next_gw:
             ff_prob = rows["id"].map(lambda i: ff_now[i]["prob"] if i in ff_now else np.nan).to_numpy(dtype=float)
-            p_play = p_model if use_ff_feature else blend_with_lineups(p_model, ff_prob)
+            p_play = lineup_p_play(train, p_model, ff_prob)
             # Sin alineación probable, el estado de Marca (lesión/sanción) manda.
             out_status = status.isin(["injury", "red", "other"]).to_numpy() & np.isnan(ff_prob)
             p_play = np.where(out_status, 0.0, p_play)
@@ -573,7 +637,7 @@ def main() -> None:
         "model": family,
         "n_train": int(len(train)),
         "train_gameweeks": int(train.gw.nunique()),
-        "uses_lineups_as_feature": use_ff_feature,
+        "lineups_history_gameweeks": int(history_gws),
         "lineups_jornada": lineups.get("jornada") if lineups else None,
         "validation": validation,
         "validation_summary": summary,

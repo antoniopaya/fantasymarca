@@ -262,7 +262,7 @@ export interface Predictions {
   model: string;
   n_train: number;
   train_gameweeks: number;
-  uses_lineups_as_feature: boolean;
+  lineups_history_gameweeks: number;
   lineups_jornada: number | null;
   validation_summary: Record<string, { mae: number; top50: number }>;
   players: Record<string, Prediction>;

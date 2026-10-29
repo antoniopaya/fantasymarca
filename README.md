@@ -120,13 +120,15 @@ mano; ver `MANUAL_OVERRIDES` dentro del script para los casos ya resueltos.
    titularidades, goles/asistencias, precio, valor de mercado de Marca y su
    cambio en la última semana, fuerza del rival y de su equipo, casa/fuera, y
    cruces posición × rival: un rival goleador no afecta igual a un portero que
-   a un delantero). Los puntos si juega se encogen hacia la media de su
+   a un delantero; y del desglose de puntos, minutos, xG/xA y nota de
+   Sofascore). Los puntos si juega se encogen hacia la media de su
    posición, porque sin eso prometía de más a los de arriba. Predice la próxima jornada y las dos
    siguientes, para fichar pensando en varias semanas. Prueba un modelo lineal y uno de boosting, valida cada jornada
    pasada entrenando solo con las anteriores y se queda el mejor; para la
-   jornada a predecir combina su P(juega) con las alineaciones probables,
-   pasando su probabilidad de titular a probabilidad de jugar (cuando haya 2+ jornadas guardadas, las usa como variable y aprende su
-   peso). Escribe `predicciones.json`, que la web usa para los puntos
+   jornada a predecir saca P(juega) de las alineaciones probables, pasando
+   su probabilidad de titular a probabilidad de jugar con lo que de verdad
+   jugó cada probabilidad en las jornadas guardadas (si aún no hay ninguna,
+   una mezcla a ojo con lo que dice el modelo). Escribe `predicciones.json`, que la web usa para los puntos
    esperados y la pestaña Jugadores → Recomendados (incluido el 11 de 180M
    que más puntos espera). Si falta, la web vuelve a la fórmula sencilla.
 
@@ -137,8 +139,8 @@ mano; ver `MANUAL_OVERRIDES` dentro del script para los casos ya resueltos.
    Sofascore, del endpoint `/ajax/player-gameweek`. Incremental: solo pide
    lo que falta o ha cambiado (~280 peticiones por jornada nueva). Escribe
    `player_stats/<n>.json`, que usan Jugadores → Puntos por estadística y la
-   ficha de cada jugador. Probado como variables del modelo con J1–J8: no
-   mejoraba la validación; se guarda para volver a probar con más jornadas.
+   ficha de cada jugador, y el modelo como variables (con J1–J8 no mejoraban
+   la validación; con J1–J10 sí).
 
 `refresh-data.yml` ejecuta todo seguido: `main.py`, el desglose (si falla,
 sigue), el scraper (si falla, se sigue sin alineaciones) y el modelo. El modelo ajusta además los
