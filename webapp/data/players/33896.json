@@ -5,17 +5,17 @@
     "position": 3,
     "points": 46,
     "avg": 5.1,
-    "status": "doubt",
+    "status": "injury",
     "id_competition": 1,
     "injury": {
-      "category": "doubt",
+      "category": "injury",
       "description": "Molestias",
-      "duration": "Duda esta jornada"
+      "duration": "Baja esta jornada"
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/33896.png?version=20260212075508",
     "isFavorite": 0,
-    "value": 15639000,
-    "previousValue": 15241000,
+    "value": 15850000,
+    "previousValue": 15639000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 15639000,
+      "floor": 15850000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 23458500,
+      "value": 23775000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 15639000,
+      "price": 15850000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 38
+    "clausesRanking": 61
   },
   "id": 33896,
   "player_extra": {
@@ -751,35 +751,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 15241000,
-      "change": 398000,
-      "sign": 398
+      "value": 15639000,
+      "change": 211000,
+      "sign": 211
     },
     {
       "time": "Una semana",
-      "value": 11896000,
-      "change": 3743000,
-      "sign": "+3.743.000"
+      "value": 12447000,
+      "change": 3403000,
+      "sign": "+3.403.000"
     },
     {
       "time": "Un mes",
-      "value": 4648000,
-      "change": 10991000,
-      "sign": "+10.991.000"
+      "value": 4841000,
+      "change": 11009000,
+      "sign": "+11.009.000"
     },
     {
       "time": "Un año",
-      "value": 422000,
-      "change": 15217000,
-      "sign": "+15.217.000"
+      "value": 333000,
+      "change": 15517000,
+      "sign": "+15.517.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 422000,
-        "date": "29 oct 2025"
-      },
       {
         "value": 333000,
         "date": "30 oct 2025"
@@ -2239,11 +2235,15 @@
       {
         "value": 15639000,
         "date": "29 oct 2026"
+      },
+      {
+        "value": 15850000,
+        "date": "30 oct 2026"
       }
     ],
     "max": {
-      "value": 15639000,
-      "date": "29 oct 2026"
+      "value": 15850000,
+      "date": "30 oct 2026"
     },
     "min": {
       "value": 329000,
@@ -2260,16 +2260,16 @@
       "id_away": 8,
       "date": {
         "ts": 1793390400,
-        "text": "vie 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "vie",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Villarreal",
       "away": "Espanyol",
