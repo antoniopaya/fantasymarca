@@ -3,15 +3,15 @@
     "id": 22502,
     "name": "Alex Baena",
     "position": 3,
-    "points": 75,
+    "points": 83,
     "avg": 7.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22502.png?version=20251228214026",
     "isFavorite": 0,
-    "value": 54193000,
-    "previousValue": 53769000,
+    "value": 54490000,
+    "previousValue": 54193000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 54193000,
+      "floor": 54490000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 81289500,
+      "value": 81735000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 54193000,
+      "price": 54490000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 174,
       "weight": null
     },
-    "clausesRanking": 50
+    "clausesRanking": 54
   },
   "id": 22502,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 5,
     "cards": 3
   },
@@ -272,10 +272,12 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 8,
+        "isLive": true
       },
-      "events": null,
+      "events": [
+        "assist"
+      ],
       "injury": null,
       "teamPlayed": false,
       "rivalId": 12,
@@ -747,35 +749,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 53769000,
-      "change": 424000,
-      "sign": 424
+      "value": 54193000,
+      "change": 297000,
+      "sign": 297
     },
     {
       "time": "Una semana",
-      "value": 51556000,
-      "change": 2637000,
-      "sign": "+2.637.000"
+      "value": 51868000,
+      "change": 2622000,
+      "sign": "+2.622.000"
     },
     {
       "time": "Un mes",
       "value": 47401000,
-      "change": 6792000,
-      "sign": "+6.792.000"
+      "change": 7089000,
+      "sign": "+7.089.000"
     },
     {
       "time": "Un año",
-      "value": 44701000,
-      "change": 9492000,
-      "sign": "+9.492.000"
+      "value": 45063000,
+      "change": 9427000,
+      "sign": "+9.427.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 44701000,
-        "date": "30 oct 2025"
-      },
       {
         "value": 45063000,
         "date": "31 oct 2025"
@@ -2235,11 +2233,15 @@
       {
         "value": 54193000,
         "date": "30 oct 2026"
+      },
+      {
+        "value": 54490000,
+        "date": "31 oct 2026"
       }
     ],
     "max": {
-      "value": 54407000,
-      "date": "4 dic 2025"
+      "value": 54490000,
+      "date": "31 oct 2026"
     },
     "min": {
       "value": 21848000,
@@ -2250,28 +2252,28 @@
     "22502": {
       "id": 22502,
       "id_team": 2,
-      "id_match": 38032,
-      "id_gameweek": 4052,
-      "id_home": 12,
-      "id_away": 2,
+      "id_match": 38037,
+      "id_gameweek": 4053,
+      "id_home": 2,
+      "id_away": 3,
       "date": {
-        "ts": 1793451600,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1794168000,
+        "text": "8 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "8 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Atlético",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "home": "Atlético",
+      "away": "Barcelona",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,

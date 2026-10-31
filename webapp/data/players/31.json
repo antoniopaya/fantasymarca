@@ -3,15 +3,15 @@
     "id": 31,
     "name": "Jan Oblak",
     "position": 1,
-    "points": 62,
-    "avg": 6.2,
+    "points": 69,
+    "avg": 6.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/31.png?version=20251003193809",
     "isFavorite": 0,
-    "value": 40361000,
-    "previousValue": 40371000,
+    "value": 40185000,
+    "previousValue": 40361000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 40361000,
+      "floor": 40185000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 60541500,
+      "value": 60277500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 40361000,
+      "price": 40185000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 189,
       "weight": 84
     },
-    "clausesRanking": 146
+    "clausesRanking": 147
   },
   "id": 31,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 0,
     "cards": 0
   },
@@ -244,8 +244,8 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 7,
+        "isLive": true
       },
       "events": null,
       "injury": null,
@@ -719,35 +719,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 40371000,
-      "change": -10000,
-      "sign": -10
+      "value": 40361000,
+      "change": -176000,
+      "sign": -176
     },
     {
       "time": "Una semana",
-      "value": 40171000,
-      "change": 190000,
-      "sign": 190
+      "value": 40026000,
+      "change": 159000,
+      "sign": 159
     },
     {
       "time": "Un mes",
       "value": 40137000,
-      "change": 224000,
-      "sign": 224
+      "change": 48000,
+      "sign": 48
     },
     {
       "time": "Un año",
-      "value": 31477000,
-      "change": 8884000,
-      "sign": "+8.884.000"
+      "value": 31873000,
+      "change": 8312000,
+      "sign": "+8.312.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 31477000,
-        "date": "30 oct 2025"
-      },
       {
         "value": 31873000,
         "date": "31 oct 2025"
@@ -2207,6 +2203,10 @@
       {
         "value": 40361000,
         "date": "30 oct 2026"
+      },
+      {
+        "value": 40185000,
+        "date": "31 oct 2026"
       }
     ],
     "max": {
@@ -2222,28 +2222,28 @@
     "31": {
       "id": 31,
       "id_team": 2,
-      "id_match": 38032,
-      "id_gameweek": 4052,
-      "id_home": 12,
-      "id_away": 2,
+      "id_match": 38037,
+      "id_gameweek": 4053,
+      "id_home": 2,
+      "id_away": 3,
       "date": {
-        "ts": 1793451600,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1794168000,
+        "text": "8 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "8 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Atlético",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "home": "Atlético",
+      "away": "Barcelona",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,

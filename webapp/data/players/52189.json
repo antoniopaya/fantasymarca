@@ -3,15 +3,15 @@
     "id": 52189,
     "name": "Ayoze Pérez",
     "position": 4,
-    "points": 46,
-    "avg": 4.6,
+    "points": 48,
+    "avg": 4.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/52189.png?version=20251006020741",
     "isFavorite": 0,
-    "value": 33308000,
-    "previousValue": 32997000,
+    "value": 33332000,
+    "previousValue": 33308000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 33308000,
+      "floor": 33332000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 49962000,
+      "value": 49998000,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 33308000,
-      "loanable": null
+      "id": 1919943404,
+      "isPublic": 1,
+      "price": 33332000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 33332000,
       "barter": [],
       "type": null,
       "days": null
@@ -68,11 +68,11 @@
       "height": 180,
       "weight": 66
     },
-    "clausesRanking": 175
+    "clausesRanking": 178
   },
   "id": 52189,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 1,
     "cards": 1
   },
@@ -266,12 +266,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -711,10 +713,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 46,
-      "avg": 4.6,
+      "points": 48,
+      "avg": 4.3636,
       "id_team": 20,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -741,35 +743,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 32997000,
-      "change": 311000,
-      "sign": 311
+      "value": 33308000,
+      "change": 24000,
+      "sign": 24
     },
     {
       "time": "Una semana",
-      "value": 31900000,
-      "change": 1408000,
-      "sign": "+1.408.000"
+      "value": 32209000,
+      "change": 1123000,
+      "sign": "+1.123.000"
     },
     {
       "time": "Un mes",
       "value": 23609000,
-      "change": 9699000,
-      "sign": "+9.699.000"
+      "change": 9723000,
+      "sign": "+9.723.000"
     },
     {
       "time": "Un año",
-      "value": 27791000,
-      "change": 5517000,
-      "sign": "+5.517.000"
+      "value": 27890000,
+      "change": 5442000,
+      "sign": "+5.442.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 27791000,
-        "date": "30 oct 2025"
-      },
       {
         "value": 27890000,
         "date": "31 oct 2025"
@@ -2229,6 +2227,10 @@
       {
         "value": 33308000,
         "date": "30 oct 2026"
+      },
+      {
+        "value": 33332000,
+        "date": "31 oct 2026"
       }
     ],
     "max": {
@@ -2244,36 +2246,36 @@
     "52189": {
       "id": 52189,
       "id_team": 20,
-      "id_match": 38036,
-      "id_gameweek": 4052,
+      "id_match": 38046,
+      "id_gameweek": 4053,
       "id_home": 20,
-      "id_away": 8,
+      "id_away": 9,
       "date": {
-        "ts": 1793390400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1794159000,
+        "text": "8 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "8 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Villarreal",
-      "away": "Espanyol",
+      "away": "Getafe",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,
   "home": {
     "52189": {
       "id": 52189,
-      "points": 24,
-      "avg": 6
+      "points": 26,
+      "avg": 5.2
     }
   },
   "away": {

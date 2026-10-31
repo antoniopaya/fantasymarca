@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/52162.png?version=20260312150047",
     "isFavorite": 0,
-    "value": 30214000,
-    "previousValue": 30918000,
+    "value": 29632000,
+    "previousValue": 30214000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -38,26 +38,26 @@
       "price": null
     },
     "clause": {
-      "floor": 30214000,
+      "floor": 29632000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 45321000,
+      "value": 44448000,
       "percentage": 50
     },
     "market": {
-      "id": 1916830056,
-      "isPublic": 1,
-      "price": 30214000,
-      "loanable": 0
+      "id": null,
+      "isPublic": null,
+      "price": 29632000,
+      "loanable": null
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": 30214000,
+      "input": null,
       "barter": [],
       "type": null,
       "days": null
@@ -269,8 +269,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 311197,
+        "id_player": 52162,
+        "category": "red",
+        "description": "Roja directa",
+        "duration": "Baja esta jornada",
+        "since": "2026-10-27 12:05:47",
+        "until": null,
+        "status": "Sancionado"
+      },
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -733,35 +742,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 30918000,
-      "change": -704000,
-      "sign": -704
+      "value": 30214000,
+      "change": -582000,
+      "sign": -582
     },
     {
       "time": "Una semana",
-      "value": 34504000,
-      "change": -4290000,
-      "sign": "-4.290.000"
+      "value": 34295000,
+      "change": -4663000,
+      "sign": "-4.663.000"
     },
     {
       "time": "Un mes",
       "value": 39506000,
-      "change": -9292000,
-      "sign": "-9.292.000"
+      "change": -9874000,
+      "sign": "-9.874.000"
     },
     {
       "time": "Un año",
-      "value": 37551000,
-      "change": -7337000,
-      "sign": "-7.337.000"
+      "value": 37909000,
+      "change": -8277000,
+      "sign": "-8.277.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 37551000,
-        "date": "30 oct 2025"
-      },
       {
         "value": 37909000,
         "date": "31 oct 2025"
@@ -2221,6 +2226,10 @@
       {
         "value": 30214000,
         "date": "30 oct 2026"
+      },
+      {
+        "value": 29632000,
+        "date": "31 oct 2026"
       }
     ],
     "max": {
@@ -2236,28 +2245,28 @@
     "52162": {
       "id": 52162,
       "id_team": 20,
-      "id_match": 38036,
-      "id_gameweek": 4052,
+      "id_match": 38046,
+      "id_gameweek": 4053,
       "id_home": 20,
-      "id_away": 8,
+      "id_away": 9,
       "date": {
-        "ts": 1793390400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1794159000,
+        "text": "8 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "8 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Villarreal",
-      "away": "Espanyol",
+      "away": "Getafe",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,

@@ -3,15 +3,15 @@
     "id": 12946,
     "name": "Santi Comesaña",
     "position": 3,
-    "points": 19,
-    "avg": 2.1,
+    "points": 22,
+    "avg": 2.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/12946.png?version=20251006021320",
     "isFavorite": 0,
-    "value": 8795000,
-    "previousValue": 8548000,
+    "value": 8928000,
+    "previousValue": 8795000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 8795000,
+      "floor": 8928000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 13192500,
+      "value": 13392000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 8795000,
+      "price": 8928000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 187,
       "weight": null
     },
-    "clausesRanking": 116
+    "clausesRanking": 113
   },
   "id": 12946,
   "player_extra": {
-    "matches": 9,
+    "matches": 10,
     "goals": 0,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -270,12 +270,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -715,10 +717,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 19,
-      "avg": 2.1111,
+      "points": 22,
+      "avg": 2.2,
       "id_team": 20,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -745,35 +747,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 8548000,
-      "change": 247000,
-      "sign": 247
+      "value": 8795000,
+      "change": 133000,
+      "sign": 133
     },
     {
       "time": "Una semana",
-      "value": 7815000,
-      "change": 980000,
-      "sign": 980
+      "value": 7920000,
+      "change": 1008000,
+      "sign": "+1.008.000"
     },
     {
       "time": "Un mes",
       "value": 10202000,
-      "change": -1407000,
-      "sign": "-1.407.000"
+      "change": -1274000,
+      "sign": "-1.274.000"
     },
     {
       "time": "Un año",
-      "value": 18194000,
-      "change": -9399000,
-      "sign": "-9.399.000"
+      "value": 18954000,
+      "change": -10026000,
+      "sign": "-10.026.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 18194000,
-        "date": "30 oct 2025"
-      },
       {
         "value": 18954000,
         "date": "31 oct 2025"
@@ -2233,6 +2231,10 @@
       {
         "value": 8795000,
         "date": "30 oct 2026"
+      },
+      {
+        "value": 8928000,
+        "date": "31 oct 2026"
       }
     ],
     "max": {
@@ -2248,35 +2250,35 @@
     "12946": {
       "id": 12946,
       "id_team": 20,
-      "id_match": 38036,
-      "id_gameweek": 4052,
+      "id_match": 38046,
+      "id_gameweek": 4053,
       "id_home": 20,
-      "id_away": 8,
+      "id_away": 9,
       "date": {
-        "ts": 1793390400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1794159000,
+        "text": "8 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "8 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
       "home": "Villarreal",
-      "away": "Espanyol",
+      "away": "Getafe",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,
   "home": {
     "12946": {
       "id": 12946,
-      "points": 9,
+      "points": 12,
       "avg": 3
     }
   },

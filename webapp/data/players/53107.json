@@ -3,15 +3,15 @@
     "id": 53107,
     "name": "Sergi Cardona",
     "position": 2,
-    "points": 30,
-    "avg": 5,
+    "points": 32,
+    "avg": 4.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/53107.png?version=20251006021432",
     "isFavorite": 0,
-    "value": 10671000,
-    "previousValue": 10237000,
+    "value": 11037000,
+    "previousValue": 10671000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 10671000,
+      "floor": 11037000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 16006500,
+      "value": 16555500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 10671000,
+      "price": 11037000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 31
+    "clausesRanking": 30
   },
   "id": 53107,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -249,12 +249,15 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -694,10 +697,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 30,
-      "avg": 5,
+      "points": 32,
+      "avg": 4.5714,
       "id_team": 20,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -724,35 +727,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 10237000,
-      "change": 434000,
-      "sign": 434
+      "value": 10671000,
+      "change": 366000,
+      "sign": 366
     },
     {
       "time": "Una semana",
-      "value": 8144000,
-      "change": 2527000,
-      "sign": "+2.527.000"
+      "value": 8357000,
+      "change": 2680000,
+      "sign": "+2.680.000"
     },
     {
       "time": "Un mes",
       "value": 4808000,
-      "change": 5863000,
-      "sign": "+5.863.000"
+      "change": 6229000,
+      "sign": "+6.229.000"
     },
     {
       "time": "Un año",
-      "value": 28587000,
-      "change": -17916000,
-      "sign": "-17.916.000"
+      "value": 28660000,
+      "change": -17623000,
+      "sign": "-17.623.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 28587000,
-        "date": "30 oct 2025"
-      },
       {
         "value": 28660000,
         "date": "31 oct 2025"
@@ -2212,6 +2211,10 @@
       {
         "value": 10671000,
         "date": "30 oct 2026"
+      },
+      {
+        "value": 11037000,
+        "date": "31 oct 2026"
       }
     ],
     "max": {
@@ -2227,36 +2230,36 @@
     "53107": {
       "id": 53107,
       "id_team": 20,
-      "id_match": 38036,
-      "id_gameweek": 4052,
+      "id_match": 38046,
+      "id_gameweek": 4053,
       "id_home": 20,
-      "id_away": 8,
+      "id_away": 9,
       "date": {
-        "ts": 1793390400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1794159000,
+        "text": "8 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "8 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
       "home": "Villarreal",
-      "away": "Espanyol",
+      "away": "Getafe",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,
   "home": {
     "53107": {
       "id": 53107,
-      "points": 16,
-      "avg": 5.3333
+      "points": 18,
+      "avg": 4.5
     }
   },
   "away": {

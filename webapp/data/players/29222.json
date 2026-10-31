@@ -3,15 +3,15 @@
     "id": 29222,
     "name": "Giuliano Simeone",
     "position": 3,
-    "points": 58,
-    "avg": 5.8,
+    "points": 66,
+    "avg": 6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/29222.png?version=20251003193744",
     "isFavorite": 0,
-    "value": 40893000,
-    "previousValue": 41024000,
+    "value": 40710000,
+    "previousValue": 40893000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 40893000,
+      "floor": 40710000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 61339500,
+      "value": 61065000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 40893000,
+      "price": 40710000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 173,
       "weight": null
     },
-    "clausesRanking": 152
+    "clausesRanking": 154
   },
   "id": 29222,
   "player_extra": {
-    "matches": 10,
-    "goals": 2,
+    "matches": 11,
+    "goals": 3,
     "cards": 1
   },
   "points": [
@@ -262,10 +262,12 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 8,
+        "isLive": true
       },
-      "events": null,
+      "events": [
+        "goal"
+      ],
       "injury": null,
       "teamPlayed": false,
       "rivalId": 12,
@@ -737,35 +739,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 41024000,
-      "change": -131000,
-      "sign": -131
+      "value": 40893000,
+      "change": -183000,
+      "sign": -183
     },
     {
       "time": "Una semana",
-      "value": 41217000,
-      "change": -324000,
-      "sign": -324
+      "value": 41307000,
+      "change": -597000,
+      "sign": -597
     },
     {
       "time": "Un mes",
       "value": 35667000,
-      "change": 5226000,
-      "sign": "+5.226.000"
+      "change": 5043000,
+      "sign": "+5.043.000"
     },
     {
       "time": "Un año",
-      "value": 41036000,
-      "change": -143000,
-      "sign": -143
+      "value": 41346000,
+      "change": -636000,
+      "sign": -636
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 41036000,
-        "date": "30 oct 2025"
-      },
       {
         "value": 41346000,
         "date": "31 oct 2025"
@@ -2225,6 +2223,10 @@
       {
         "value": 40893000,
         "date": "30 oct 2026"
+      },
+      {
+        "value": 40710000,
+        "date": "31 oct 2026"
       }
     ],
     "max": {
@@ -2240,28 +2242,28 @@
     "29222": {
       "id": 29222,
       "id_team": 2,
-      "id_match": 38032,
-      "id_gameweek": 4052,
-      "id_home": 12,
-      "id_away": 2,
+      "id_match": 38037,
+      "id_gameweek": 4053,
+      "id_home": 2,
+      "id_away": 3,
       "date": {
-        "ts": 1793451600,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1794168000,
+        "text": "8 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "8 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Atlético",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "home": "Atlético",
+      "away": "Barcelona",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,

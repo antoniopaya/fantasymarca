@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70181.png?version=20260819215249",
     "isFavorite": 0,
-    "value": 438000,
-    "previousValue": 497000,
+    "value": 329000,
+    "previousValue": 438000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 438000,
+      "price": 329000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 330
+    "clausesRanking": 329
   },
   "id": 70181,
   "player_extra": {
@@ -246,8 +246,8 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": "?",
+        "isLive": true
       },
       "events": null,
       "injury": null,
@@ -707,21 +707,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 497000,
-      "change": -59000,
-      "sign": -59
+      "value": 438000,
+      "change": -109000,
+      "sign": -109
     },
     {
       "time": "Una semana",
-      "value": 388000,
-      "change": 50000,
-      "sign": 50
+      "value": 329000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Un mes",
       "value": 381000,
-      "change": 57000,
-      "sign": 57
+      "change": -52000,
+      "sign": -52
     }
   ],
   "values_chart": {
@@ -1229,6 +1229,10 @@
       {
         "value": 438000,
         "date": "30 oct 2026"
+      },
+      {
+        "value": 329000,
+        "date": "31 oct 2026"
       }
     ],
     "max": {
@@ -1244,28 +1248,28 @@
     "70181": {
       "id": 70181,
       "id_team": 2,
-      "id_match": 38032,
-      "id_gameweek": 4052,
-      "id_home": 12,
-      "id_away": 2,
+      "id_match": 38037,
+      "id_gameweek": 4053,
+      "id_home": 2,
+      "id_away": 3,
       "date": {
-        "ts": 1793451600,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1794168000,
+        "text": "8 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "8 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Atlético",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "home": "Atlético",
+      "away": "Barcelona",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,

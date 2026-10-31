@@ -3,15 +3,15 @@
     "id": 65347,
     "name": "Renato Veiga",
     "position": 2,
-    "points": 31,
-    "avg": 3.4,
+    "points": 36,
+    "avg": 3.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65347.png?version=20250822133320",
     "isFavorite": 0,
-    "value": 23547000,
-    "previousValue": 23727000,
+    "value": 23243000,
+    "previousValue": 23547000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 23547000,
+      "floor": 23243000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 35320500,
+      "value": 34864500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 23547000,
+      "price": 23243000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 190,
       "weight": null
     },
-    "clausesRanking": 259
+    "clausesRanking": 258
   },
   "id": 65347,
   "player_extra": {
-    "matches": 9,
+    "matches": 10,
     "goals": 0,
     "cards": 3
   },
@@ -251,12 +251,12 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -696,10 +696,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 31,
-      "avg": 3.4444,
+      "points": 36,
+      "avg": 3.6,
       "id_team": 20,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -712,35 +712,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 23727000,
-      "change": -180000,
-      "sign": -180
+      "value": 23547000,
+      "change": -304000,
+      "sign": -304
     },
     {
       "time": "Una semana",
-      "value": 24458000,
-      "change": -911000,
-      "sign": -911
+      "value": 24486000,
+      "change": -1243000,
+      "sign": "-1.243.000"
     },
     {
       "time": "Un mes",
       "value": 22454000,
-      "change": 1093000,
-      "sign": "+1.093.000"
+      "change": 789000,
+      "sign": 789
     },
     {
       "time": "Un año",
-      "value": 17885000,
-      "change": 5662000,
-      "sign": "+5.662.000"
+      "value": 18396000,
+      "change": 4847000,
+      "sign": "+4.847.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 17885000,
-        "date": "30 oct 2025"
-      },
       {
         "value": 18396000,
         "date": "31 oct 2025"
@@ -2200,6 +2196,10 @@
       {
         "value": 23547000,
         "date": "30 oct 2026"
+      },
+      {
+        "value": 23243000,
+        "date": "31 oct 2026"
       }
     ],
     "max": {
@@ -2215,36 +2215,36 @@
     "65347": {
       "id": 65347,
       "id_team": 20,
-      "id_match": 38036,
-      "id_gameweek": 4052,
+      "id_match": 38046,
+      "id_gameweek": 4053,
       "id_home": 20,
-      "id_away": 8,
+      "id_away": 9,
       "date": {
-        "ts": 1793390400,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1794159000,
+        "text": "8 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "8 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
       "home": "Villarreal",
-      "away": "Espanyol",
+      "away": "Getafe",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,
   "home": {
     "65347": {
       "id": 65347,
-      "points": 13,
-      "avg": 4.3333
+      "points": 18,
+      "avg": 4.5
     }
   },
   "away": {
