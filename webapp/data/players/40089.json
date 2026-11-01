@@ -5,17 +5,13 @@
     "position": 4,
     "points": 10,
     "avg": 3.3,
-    "status": "doubt",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "doubt",
-      "description": "Lesión en los isquiotibiales",
-      "duration": "Duda esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/40089.png?version=20251004234421",
     "isFavorite": 0,
-    "value": 1167000,
-    "previousValue": 1090000,
+    "value": 1237000,
+    "previousValue": 1167000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1167000,
+      "floor": 1237000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1750500,
+      "value": 1855500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1167000,
+      "price": 1237000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +68,7 @@
       "height": 192,
       "weight": 75
     },
-    "clausesRanking": 171
+    "clausesRanking": 158
   },
   "id": 40089,
   "player_extra": {
@@ -294,7 +290,7 @@
         "description": "Lesión en los isquiotibiales",
         "duration": "Duda esta jornada",
         "since": "2026-10-22 11:33:48",
-        "until": null,
+        "until": "2026-10-31 17:43:01",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -797,35 +793,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1090000,
-      "change": 77000,
-      "sign": 77
+      "value": 1167000,
+      "change": 70000,
+      "sign": 70
     },
     {
       "time": "Una semana",
-      "value": 679000,
-      "change": 488000,
-      "sign": 488
+      "value": 611000,
+      "change": 626000,
+      "sign": 626
     },
     {
       "time": "Un mes",
-      "value": 3031000,
-      "change": -1864000,
-      "sign": "-1.864.000"
+      "value": 2846000,
+      "change": -1609000,
+      "sign": "-1.609.000"
     },
     {
       "time": "Un año",
-      "value": 466000,
-      "change": 701000,
-      "sign": 701
+      "value": 329000,
+      "change": 908000,
+      "sign": 908
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 466000,
-        "date": "31 oct 2025"
-      },
       {
         "value": 329000,
         "date": "1 nov 2025"
@@ -2285,6 +2277,10 @@
       {
         "value": 1167000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 1237000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
@@ -2306,12 +2302,12 @@
       "id_away": 19,
       "date": {
         "ts": 1793554200,
-        "text": "dom 18:30",
-        "format": "EEE H:mm",
+        "text": "Hoy 18:30",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "dom",
+          "date": "Hoy",
           "time": "18:30",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

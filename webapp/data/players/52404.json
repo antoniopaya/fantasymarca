@@ -4,14 +4,14 @@
     "name": "Manu Bueno",
     "position": 3,
     "points": 12,
-    "avg": 3,
+    "avg": 2.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/52404.png?version=20251006014022",
     "isFavorite": 0,
-    "value": 2054000,
-    "previousValue": 2072000,
+    "value": 1930000,
+    "previousValue": 2054000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2054000,
+      "floor": 1930000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 2,
-      "shield2WeeksSku": "shield_t2_2w",
-      "shield1MonthSku": "shield_t2_1m",
-      "value": 3081000,
+      "tier": 1,
+      "shield2WeeksSku": "shield_t1_2w",
+      "shield1MonthSku": "shield_t1_1m",
+      "value": 2895000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2054000,
+      "price": 1930000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 133
+    "clausesRanking": 136
   },
   "id": 52404,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 1,
     "cards": 0
   },
@@ -253,10 +253,12 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 1,
+        "isLive": true
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
       "teamPlayed": false,
       "rivalId": 9,
@@ -728,35 +730,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2072000,
-      "change": -18000,
-      "sign": -18
+      "value": 2054000,
+      "change": -124000,
+      "sign": -124
     },
     {
       "time": "Una semana",
-      "value": 1189000,
-      "change": 865000,
-      "sign": 865
+      "value": 1307000,
+      "change": 623000,
+      "sign": 623
     },
     {
       "time": "Un mes",
-      "value": 405000,
-      "change": 1649000,
-      "sign": "+1.649.000"
+      "value": 449000,
+      "change": 1481000,
+      "sign": "+1.481.000"
     },
     {
       "time": "Un año",
-      "value": 369000,
-      "change": 1685000,
-      "sign": "+1.685.000"
+      "value": 445000,
+      "change": 1485000,
+      "sign": "+1.485.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 369000,
-        "date": "31 oct 2025"
-      },
       {
         "value": 445000,
         "date": "1 nov 2025"
@@ -2216,6 +2214,10 @@
       {
         "value": 2054000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 1930000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
@@ -2231,28 +2233,28 @@
     "52404": {
       "id": 52404,
       "id_team": 17,
-      "id_match": 38031,
-      "id_gameweek": 4052,
-      "id_home": 9,
-      "id_away": 17,
+      "id_match": 38044,
+      "id_gameweek": 4053,
+      "id_home": 17,
+      "id_away": 48,
       "date": {
-        "ts": 1793538000,
-        "text": "dom 14:00",
+        "ts": 1793995200,
+        "text": "vie 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
+          "date": "vie",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Sevilla",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Sevilla",
+      "away": "Alavés",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,

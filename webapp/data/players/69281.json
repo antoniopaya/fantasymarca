@@ -3,15 +3,15 @@
     "id": 69281,
     "name": "Nacho Pérez",
     "position": 2,
-    "points": 37,
-    "avg": 3.7,
+    "points": 38,
+    "avg": 3.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/69281.png?version=20260323141534",
     "isFavorite": 0,
-    "value": 3106000,
-    "previousValue": 2943000,
+    "value": 3256000,
+    "previousValue": 3106000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3106000,
+      "floor": 3256000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 4659000,
+      "value": 4884000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3106000,
+      "price": 3256000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 62
+    "clausesRanking": 66
   },
   "id": 69281,
   "player_extra": {
@@ -262,12 +262,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -707,10 +709,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 35,
-      "avg": 3.8889,
+      "points": 36,
+      "avg": 3.6,
       "id_team": 12,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -723,21 +725,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2943000,
-      "change": 163000,
-      "sign": 163
+      "value": 3106000,
+      "change": 150000,
+      "sign": 150
     },
     {
       "time": "Una semana",
-      "value": 1974000,
-      "change": 1132000,
-      "sign": "+1.132.000"
+      "value": 2092000,
+      "change": 1164000,
+      "sign": "+1.164.000"
     },
     {
       "time": "Un mes",
-      "value": 4374000,
-      "change": -1268000,
-      "sign": "-1.268.000"
+      "value": 4236000,
+      "change": -980000,
+      "sign": -980
     }
   ],
   "values_chart": {
@@ -1777,6 +1779,10 @@
       {
         "value": 3106000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 3256000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
@@ -1820,8 +1826,8 @@
   "home": {
     "69281": {
       "id": 69281,
-      "points": 7,
-      "avg": 1.75
+      "points": 8,
+      "avg": 1.6
     }
   },
   "away": {

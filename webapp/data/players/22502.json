@@ -3,15 +3,15 @@
     "id": 22502,
     "name": "Alex Baena",
     "position": 3,
-    "points": 83,
-    "avg": 7.5,
+    "points": 85,
+    "avg": 7.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22502.png?version=20251228214026",
     "isFavorite": 0,
-    "value": 54490000,
-    "previousValue": 54193000,
+    "value": 54896000,
+    "previousValue": 54490000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 54490000,
+      "floor": 54896000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 81735000,
+      "value": 82344000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 54490000,
+      "price": 54896000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 174,
       "weight": null
     },
-    "clausesRanking": 54
+    "clausesRanking": 55
   },
   "id": 22502,
   "player_extra": {
@@ -272,14 +272,15 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": 8,
-        "isLive": true
+        "points": 10,
+        "isLive": false
       },
       "events": [
+        "sub_out",
         "assist"
       ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -719,10 +720,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 75,
-      "avg": 7.5,
+      "points": 85,
+      "avg": 7.7273,
       "id_team": 2,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -749,35 +750,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 54193000,
-      "change": 297000,
-      "sign": 297
+      "value": 54490000,
+      "change": 406000,
+      "sign": 406
     },
     {
       "time": "Una semana",
-      "value": 51868000,
-      "change": 2622000,
-      "sign": "+2.622.000"
+      "value": 52201000,
+      "change": 2695000,
+      "sign": "+2.695.000"
     },
     {
       "time": "Un mes",
-      "value": 47401000,
-      "change": 7089000,
-      "sign": "+7.089.000"
+      "value": 47460000,
+      "change": 7436000,
+      "sign": "+7.436.000"
     },
     {
       "time": "Un año",
-      "value": 45063000,
-      "change": 9427000,
-      "sign": "+9.427.000"
+      "value": 45282000,
+      "change": 9614000,
+      "sign": "+9.614.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 45063000,
-        "date": "31 oct 2025"
-      },
       {
         "value": 45282000,
         "date": "1 nov 2025"
@@ -2237,11 +2234,15 @@
       {
         "value": 54490000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 54896000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
-      "value": 54490000,
-      "date": "31 oct 2026"
+      "value": 54896000,
+      "date": "1 nov 2026"
     },
     "min": {
       "value": 21848000,
@@ -2287,8 +2288,8 @@
   "away": {
     "22502": {
       "id": 22502,
-      "points": 40,
-      "avg": 8
+      "points": 50,
+      "avg": 8.3333
     }
   },
   "owners": [],

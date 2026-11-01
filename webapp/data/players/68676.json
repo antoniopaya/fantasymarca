@@ -3,15 +3,15 @@
     "id": 68676,
     "name": "Ademola Lookman",
     "position": 4,
-    "points": 28,
-    "avg": 2.8,
+    "points": 30,
+    "avg": 2.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68676.png?version=20260323141155",
     "isFavorite": 0,
-    "value": 17328000,
-    "previousValue": 17632000,
+    "value": 16737000,
+    "previousValue": 17328000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 17328000,
+      "floor": 16737000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 25992000,
+      "value": 25105500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 17328000,
+      "price": 16737000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 174,
       "weight": null
     },
-    "clausesRanking": 321
+    "clausesRanking": 395
   },
   "id": 68676,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 1,
     "cards": 2
   },
@@ -265,12 +265,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -710,10 +712,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 28,
-      "avg": 2.8,
+      "points": 30,
+      "avg": 2.7273,
       "id_team": 2,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -726,21 +728,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 17632000,
-      "change": -304000,
-      "sign": -304
+      "value": 17328000,
+      "change": -591000,
+      "sign": -591
     },
     {
       "time": "Una semana",
-      "value": 20343000,
-      "change": -3015000,
-      "sign": "-3.015.000"
+      "value": 20036000,
+      "change": -3299000,
+      "sign": "-3.299.000"
     },
     {
       "time": "Un mes",
-      "value": 28767000,
-      "change": -11439000,
-      "sign": "-11.439.000"
+      "value": 28351000,
+      "change": -11614000,
+      "sign": "-11.614.000"
     }
   ],
   "values_chart": {
@@ -1832,6 +1834,10 @@
       {
         "value": 17328000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 16737000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
@@ -1839,8 +1845,8 @@
       "date": "6 mar 2026"
     },
     "min": {
-      "value": 17328000,
-      "date": "31 oct 2026"
+      "value": 16737000,
+      "date": "1 nov 2026"
     }
   },
   "next_match": {
@@ -1882,8 +1888,8 @@
   "away": {
     "68676": {
       "id": 68676,
-      "points": 12,
-      "avg": 2.4
+      "points": 14,
+      "avg": 2.3333
     }
   },
   "owners": [],

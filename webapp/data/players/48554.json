@@ -324,8 +324,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 309862,
+        "id_player": 48554,
+        "category": "injury",
+        "description": "Rotura de ligamento cruzado",
+        "duration": "Baja indefinida",
+        "since": "2026-10-16 17:08:07",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -787,29 +796,25 @@
     },
     {
       "time": "Una semana",
-      "value": 580000,
-      "change": -251000,
-      "sign": -251
+      "value": 348000,
+      "change": -19000,
+      "sign": -19
     },
     {
       "time": "Un mes",
-      "value": 2160000,
-      "change": -1831000,
-      "sign": "-1.831.000"
+      "value": 2356000,
+      "change": -2027000,
+      "sign": "-2.027.000"
     },
     {
       "time": "Un año",
-      "value": 645000,
-      "change": -316000,
-      "sign": -316
+      "value": 629000,
+      "change": -300000,
+      "sign": -300
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 645000,
-        "date": "31 oct 2025"
-      },
       {
         "value": 629000,
         "date": "1 nov 2025"
@@ -2237,6 +2242,10 @@
       {
         "value": 329000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 329000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
@@ -2252,28 +2261,28 @@
     "48554": {
       "id": 48554,
       "id_team": 14,
-      "id_match": 38033,
-      "id_gameweek": 4052,
-      "id_home": 14,
-      "id_away": 5,
+      "id_match": 38043,
+      "id_gameweek": 4053,
+      "id_home": 16,
+      "id_away": 14,
       "date": {
-        "ts": 1793459700,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1794150900,
+        "text": "8 nov 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "8 nov",
           "time": "16:15",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Celta",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "home": "Real Sociedad",
+      "away": "Rayo Vallecano",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,

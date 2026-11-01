@@ -3,15 +3,15 @@
     "id": 4947927,
     "name": "Youssouf Fofana",
     "position": 3,
-    "points": 48,
-    "avg": 6.9,
+    "points": 50,
+    "avg": 6.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4947927.png?version=20260902084430",
     "isFavorite": 0,
-    "value": 39565000,
-    "previousValue": 38944000,
+    "value": 40173000,
+    "previousValue": 39565000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 39565000,
+      "floor": 40173000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 59347500,
+      "value": 60259500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 39565000,
+      "price": 40173000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 56
+    "clausesRanking": 57
   },
   "id": 4947927,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 1,
     "cards": 0
   },
@@ -256,10 +256,12 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 2,
+        "isLive": true
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
       "teamPlayed": false,
       "rivalId": 9,
@@ -710,21 +712,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 38944000,
-      "change": 621000,
-      "sign": 621
+      "value": 39565000,
+      "change": 608000,
+      "sign": 608
     },
     {
       "time": "Una semana",
-      "value": 35080000,
-      "change": 4485000,
-      "sign": "+4.485.000"
+      "value": 35540000,
+      "change": 4633000,
+      "sign": "+4.633.000"
     },
     {
       "time": "Un mes",
-      "value": 24688000,
-      "change": 14877000,
-      "sign": "+14.877.000"
+      "value": 25092000,
+      "change": 15081000,
+      "sign": "+15.081.000"
     }
   ],
   "values_chart": {
@@ -964,11 +966,15 @@
       {
         "value": 39565000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 40173000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
-      "value": 39565000,
-      "date": "31 oct 2026"
+      "value": 40173000,
+      "date": "1 nov 2026"
     },
     "min": {
       "value": 16324000,
@@ -979,28 +985,28 @@
     "4947927": {
       "id": 4947927,
       "id_team": 17,
-      "id_match": 38031,
-      "id_gameweek": 4052,
-      "id_home": 9,
-      "id_away": 17,
+      "id_match": 38044,
+      "id_gameweek": 4053,
+      "id_home": 17,
+      "id_away": 48,
       "date": {
-        "ts": 1793538000,
-        "text": "dom 14:00",
+        "ts": 1793995200,
+        "text": "vie 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
+          "date": "vie",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Sevilla",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Sevilla",
+      "away": "Alavés",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,

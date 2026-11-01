@@ -3,15 +3,15 @@
     "id": 31496,
     "name": "Héctor Bellerín",
     "position": 2,
-    "points": 27,
+    "points": 30,
     "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/31496.png?version=20251003194443",
     "isFavorite": 0,
-    "value": 16096000,
-    "previousValue": 16655000,
+    "value": 15652000,
+    "previousValue": 16096000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 16096000,
+      "floor": 15652000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 24144000,
+      "value": 23478000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 16096000,
+      "price": 15652000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 178,
       "weight": 74
     },
-    "clausesRanking": 404
+    "clausesRanking": 318
   },
   "id": 31496,
   "player_extra": {
-    "matches": 9,
+    "matches": 10,
     "goals": 0,
     "cards": 2
   },
@@ -255,12 +255,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 13,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
@@ -700,10 +702,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 27,
+      "points": 30,
       "avg": 3,
       "id_team": 4,
-      "last_gameweek": 9
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -730,35 +732,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 16655000,
-      "change": -559000,
-      "sign": -559
+      "value": 16096000,
+      "change": -444000,
+      "sign": -444
     },
     {
       "time": "Una semana",
-      "value": 19587000,
-      "change": -3491000,
-      "sign": "-3.491.000"
+      "value": 19334000,
+      "change": -3682000,
+      "sign": "-3.682.000"
     },
     {
       "time": "Un mes",
-      "value": 19025000,
-      "change": -2929000,
-      "sign": "-2.929.000"
+      "value": 18629000,
+      "change": -2977000,
+      "sign": "-2.977.000"
     },
     {
       "time": "Un año",
-      "value": 30087000,
-      "change": -13991000,
-      "sign": "-13.991.000"
+      "value": 30351000,
+      "change": -14699000,
+      "sign": "-14.699.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 30087000,
-        "date": "31 oct 2025"
-      },
       {
         "value": 30351000,
         "date": "1 nov 2025"
@@ -2218,6 +2216,10 @@
       {
         "value": 16096000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 15652000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
@@ -2233,36 +2235,36 @@
     "31496": {
       "id": 31496,
       "id_team": 4,
-      "id_match": 38034,
-      "id_gameweek": 4052,
-      "id_home": 4,
-      "id_away": 13,
+      "id_match": 38039,
+      "id_gameweek": 4053,
+      "id_home": 23,
+      "id_away": 4,
       "date": {
-        "ts": 1793467800,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1794142800,
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Málaga",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "home": "Elche",
+      "away": "Betis",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "31496": {
       "id": 31496,
-      "points": 16,
-      "avg": 3.2
+      "points": 19,
+      "avg": 3.1667
     }
   },
   "away": {

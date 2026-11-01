@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70917.png?version=20260616153146",
     "isFavorite": 0,
-    "value": 329000,
-    "previousValue": 450000,
+    "value": 341000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 341000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 189,
       "weight": null
     },
-    "clausesRanking": 357
+    "clausesRanking": null
   },
   "id": 70917,
   "player_extra": {
@@ -259,10 +259,12 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": "?",
+        "isLive": true
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
       "teamPlayed": false,
       "rivalId": 9,
@@ -713,21 +715,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 450000,
-      "change": -121000,
-      "sign": -121
+      "value": 329000,
+      "change": 12000,
+      "sign": 12
     },
     {
       "time": "Una semana",
-      "value": 346000,
-      "change": -17000,
-      "sign": -17
+      "value": 329000,
+      "change": 12000,
+      "sign": 12
     },
     {
       "time": "Un mes",
-      "value": 1886000,
-      "change": -1557000,
-      "sign": "-1.557.000"
+      "value": 1700000,
+      "change": -1359000,
+      "sign": "-1.359.000"
     }
   ],
   "values_chart": {
@@ -1279,6 +1281,10 @@
       {
         "value": 329000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 341000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
@@ -1294,28 +1300,28 @@
     "70917": {
       "id": 70917,
       "id_team": 17,
-      "id_match": 38031,
-      "id_gameweek": 4052,
-      "id_home": 9,
-      "id_away": 17,
+      "id_match": 38044,
+      "id_gameweek": 4053,
+      "id_home": 17,
+      "id_away": 48,
       "date": {
-        "ts": 1793538000,
-        "text": "dom 14:00",
+        "ts": 1793995200,
+        "text": "vie 21:00",
         "format": "EEE H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
+          "date": "vie",
+          "time": "21:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Sevilla",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Sevilla",
+      "away": "Alavés",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,

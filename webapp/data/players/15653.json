@@ -3,15 +3,15 @@
     "id": 15653,
     "name": "Kang-In Lee",
     "position": 3,
-    "points": 70,
-    "avg": 6.4,
+    "points": 71,
+    "avg": 6.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/15653.png?version=20260725160628",
     "isFavorite": 0,
-    "value": 42569000,
-    "previousValue": 42504000,
+    "value": 42476000,
+    "previousValue": 42569000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 42569000,
+      "floor": 42476000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 63853500,
+      "value": 63714000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 42569000,
+      "price": 42476000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 173,
       "weight": 68
     },
-    "clausesRanking": 100
+    "clausesRanking": 94
   },
   "id": 15653,
   "player_extra": {
@@ -268,12 +268,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": 3,
-        "isLive": true
+        "points": 4,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -713,30 +715,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 67,
-      "avg": 6.7,
+      "points": 71,
+      "avg": 6.4545,
       "id_team": 2,
-      "last_gameweek": 10
+      "last_gameweek": 11
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 42504000,
-      "change": 65000,
-      "sign": 65
+      "value": 42569000,
+      "change": -93000,
+      "sign": -93
     },
     {
       "time": "Una semana",
-      "value": 42177000,
-      "change": 392000,
-      "sign": 392
+      "value": 42014000,
+      "change": 462000,
+      "sign": 462
     },
     {
       "time": "Un mes",
-      "value": 44419000,
-      "change": -1850000,
-      "sign": "-1.850.000"
+      "value": 44584000,
+      "change": -2108000,
+      "sign": "-2.108.000"
     }
   ],
   "values_chart": {
@@ -1136,6 +1138,10 @@
       {
         "value": 42569000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 42476000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
@@ -1186,8 +1192,8 @@
   "away": {
     "15653": {
       "id": 15653,
-      "points": 23,
-      "avg": 4.6
+      "points": 27,
+      "avg": 4.5
     }
   },
   "owners": [],

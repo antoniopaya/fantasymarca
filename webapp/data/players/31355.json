@@ -3,15 +3,15 @@
     "id": 31355,
     "name": "Alexander Sørloth",
     "position": 4,
-    "points": 2,
-    "avg": 1,
+    "points": 4,
+    "avg": 1.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/31355.png?version=20251003193614",
     "isFavorite": 0,
-    "value": 7769000,
-    "previousValue": 7911000,
+    "value": 7628000,
+    "previousValue": 7769000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 7769000,
+      "floor": 7628000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 11653500,
+      "value": 11442000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 7769000,
+      "price": 7628000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 195,
       "weight": 90
     },
-    "clausesRanking": 272
+    "clausesRanking": 294
   },
   "id": 31355,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 1
   },
@@ -303,12 +303,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -748,10 +750,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 2,
-      "avg": 1,
+      "points": 4,
+      "avg": 1.3333,
       "id_team": 2,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -778,35 +780,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 7911000,
-      "change": -142000,
-      "sign": -142
+      "value": 7769000,
+      "change": -141000,
+      "sign": -141
     },
     {
       "time": "Una semana",
-      "value": 8737000,
-      "change": -968000,
-      "sign": -968
+      "value": 8579000,
+      "change": -951000,
+      "sign": -951
     },
     {
       "time": "Un mes",
-      "value": 10036000,
-      "change": -2267000,
-      "sign": "-2.267.000"
+      "value": 9852000,
+      "change": -2224000,
+      "sign": "-2.224.000"
     },
     {
       "time": "Un año",
-      "value": 14869000,
-      "change": -7100000,
-      "sign": "-7.100.000"
+      "value": 14610000,
+      "change": -6982000,
+      "sign": "-6.982.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 14869000,
-        "date": "31 oct 2025"
-      },
       {
         "value": 14610000,
         "date": "1 nov 2025"
@@ -2266,6 +2264,10 @@
       {
         "value": 7769000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 7628000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
@@ -2273,8 +2275,8 @@
       "date": "14 mar 2026"
     },
     "min": {
-      "value": 7769000,
-      "date": "31 oct 2026"
+      "value": 7628000,
+      "date": "1 nov 2026"
     }
   },
   "next_match": {
@@ -2316,8 +2318,8 @@
   "away": {
     "31355": {
       "id": 31355,
-      "points": 1,
-      "avg": 1
+      "points": 3,
+      "avg": 1.5
     }
   },
   "owners": [],

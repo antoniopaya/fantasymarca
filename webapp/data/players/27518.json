@@ -3,15 +3,15 @@
     "id": 27518,
     "name": "Óscar Valentín",
     "position": 3,
-    "points": 23,
-    "avg": 2.9,
+    "points": 29,
+    "avg": 3.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/27518.png?version=20251004225843",
     "isFavorite": 0,
-    "value": 2084000,
-    "previousValue": 2238000,
+    "value": 1942000,
+    "previousValue": 2084000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2084000,
+      "floor": 1942000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 2,
-      "shield2WeeksSku": "shield_t2_2w",
-      "shield1MonthSku": "shield_t2_1m",
-      "value": 3126000,
+      "tier": 1,
+      "shield2WeeksSku": "shield_t1_2w",
+      "shield1MonthSku": "shield_t1_1m",
+      "value": 2913000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2084000,
+      "price": 1942000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 177,
       "weight": null
     },
-    "clausesRanking": 324
+    "clausesRanking": 382
   },
   "id": 27518,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
     "cards": 1
   },
@@ -259,12 +259,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -704,10 +706,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 23,
-      "avg": 2.875,
+      "points": 29,
+      "avg": 3.2222,
       "id_team": 14,
-      "last_gameweek": 9
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -734,35 +736,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2238000,
-      "change": -154000,
-      "sign": -154
+      "value": 2084000,
+      "change": -142000,
+      "sign": -142
     },
     {
       "time": "Una semana",
-      "value": 2969000,
-      "change": -885000,
-      "sign": -885
+      "value": 2937000,
+      "change": -995000,
+      "sign": -995
     },
     {
       "time": "Un mes",
-      "value": 3685000,
-      "change": -1601000,
-      "sign": "-1.601.000"
+      "value": 3515000,
+      "change": -1573000,
+      "sign": "-1.573.000"
     },
     {
       "time": "Un año",
-      "value": 6980000,
-      "change": -4896000,
-      "sign": "-4.896.000"
+      "value": 7174000,
+      "change": -5232000,
+      "sign": "-5.232.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 6980000,
-        "date": "31 oct 2025"
-      },
       {
         "value": 7174000,
         "date": "1 nov 2025"
@@ -2222,6 +2220,10 @@
       {
         "value": 2084000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 1942000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
@@ -2237,36 +2239,36 @@
     "27518": {
       "id": 27518,
       "id_team": 14,
-      "id_match": 38033,
-      "id_gameweek": 4052,
-      "id_home": 14,
-      "id_away": 5,
+      "id_match": 38043,
+      "id_gameweek": 4053,
+      "id_home": 16,
+      "id_away": 14,
       "date": {
-        "ts": 1793459700,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1794150900,
+        "text": "8 nov 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "8 nov",
           "time": "16:15",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Celta",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "home": "Real Sociedad",
+      "away": "Rayo Vallecano",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,
   "home": {
     "27518": {
       "id": 27518,
-      "points": 6,
-      "avg": 2
+      "points": 12,
+      "avg": 3
     }
   },
   "away": {

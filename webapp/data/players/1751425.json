@@ -3,15 +3,15 @@
     "id": 1751425,
     "name": "Marc Santos",
     "position": 2,
-    "points": 3,
-    "avg": 3,
+    "points": 7,
+    "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/1751425.png?version=20260816205258",
     "isFavorite": 0,
-    "value": 453000,
-    "previousValue": 329000,
+    "value": 456000,
+    "previousValue": 453000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 453000,
+      "price": 456000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 411
   },
   "id": 1751425,
   "player_extra": {
-    "matches": 1,
+    "matches": 2,
     "goals": 0,
     "cards": 0
   },
@@ -255,12 +255,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 4,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -700,30 +702,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 3,
-      "avg": 3,
+      "points": 7,
+      "avg": 3.5,
       "id_team": 12,
-      "last_gameweek": 1
+      "last_gameweek": 11
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 124000,
-      "sign": 124
+      "value": 453000,
+      "change": 3000,
+      "sign": 3
     },
     {
       "time": "Una semana",
-      "value": 329000,
-      "change": 124000,
-      "sign": 124
+      "value": 373000,
+      "change": 83000,
+      "sign": 83
     },
     {
       "time": "Un mes",
-      "value": 513000,
-      "change": -60000,
-      "sign": -60
+      "value": 431000,
+      "change": 25000,
+      "sign": 25
     }
   ],
   "values_chart": {
@@ -1031,6 +1033,10 @@
       {
         "value": 453000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 456000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
@@ -1073,8 +1079,9 @@
   "starter": false,
   "home": {
     "1751425": {
-      "points": 0,
-      "avg": 0
+      "id": 1751425,
+      "points": 4,
+      "avg": 4
     }
   },
   "away": {

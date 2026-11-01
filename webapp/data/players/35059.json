@@ -3,15 +3,15 @@
     "id": 35059,
     "name": "Ferran Jutglà",
     "position": 4,
-    "points": 42,
-    "avg": 4.2,
+    "points": 44,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/35059.png?version=20250624204756",
     "isFavorite": 0,
-    "value": 20411000,
-    "previousValue": 20729000,
+    "value": 20083000,
+    "previousValue": 20411000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 20411000,
+      "floor": 20083000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 30616500,
+      "value": 30124500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 20411000,
+      "price": 20083000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 242
+    "clausesRanking": 268
   },
   "id": 35059,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 2,
     "cards": 0
   },
@@ -263,12 +263,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -708,10 +710,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 42,
-      "avg": 4.2,
+      "points": 44,
+      "avg": 4,
       "id_team": 5,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -724,35 +726,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 20729000,
-      "change": -318000,
-      "sign": -318
+      "value": 20411000,
+      "change": -328000,
+      "sign": -328
     },
     {
       "time": "Una semana",
-      "value": 21360000,
-      "change": -949000,
-      "sign": -949
+      "value": 21508000,
+      "change": -1425000,
+      "sign": "-1.425.000"
     },
     {
       "time": "Un mes",
-      "value": 17561000,
-      "change": 2850000,
-      "sign": "+2.850.000"
+      "value": 17398000,
+      "change": 2685000,
+      "sign": "+2.685.000"
     },
     {
       "time": "Un año",
-      "value": 6353000,
-      "change": 14058000,
-      "sign": "+14.058.000"
+      "value": 6583000,
+      "change": 13500000,
+      "sign": "+13.500.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 6353000,
-        "date": "31 oct 2025"
-      },
       {
         "value": 6583000,
         "date": "1 nov 2025"
@@ -2212,6 +2210,10 @@
       {
         "value": 20411000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 20083000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
@@ -2227,28 +2229,28 @@
     "35059": {
       "id": 35059,
       "id_team": 5,
-      "id_match": 38033,
-      "id_gameweek": 4052,
-      "id_home": 14,
-      "id_away": 5,
+      "id_match": 38038,
+      "id_gameweek": 4053,
+      "id_home": 5,
+      "id_away": 12,
       "date": {
-        "ts": 1793459700,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1794159000,
+        "text": "8 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "8 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Celta",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "home": "Celta",
+      "away": "Levante",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
   "starter": false,
@@ -2262,8 +2264,8 @@
   "away": {
     "35059": {
       "id": 35059,
-      "points": 13,
-      "avg": 3.25
+      "points": 15,
+      "avg": 3
     }
   },
   "owners": [],

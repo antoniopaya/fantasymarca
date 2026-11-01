@@ -3,15 +3,15 @@
     "id": 19168,
     "name": "Nemanja Gudelj",
     "position": 3,
-    "points": 26,
-    "avg": 3.3,
+    "points": 29,
+    "avg": 3.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/19168.png?version=20260831085448",
     "isFavorite": 0,
-    "value": 6017000,
-    "previousValue": 6081000,
+    "value": 5891000,
+    "previousValue": 6017000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6017000,
+      "floor": 5891000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 3,
-      "shield2WeeksSku": "shield_t3_2w",
-      "shield1MonthSku": "shield_t3_1m",
-      "value": 9025500,
+      "tier": 2,
+      "shield2WeeksSku": "shield_t2_2w",
+      "shield1MonthSku": "shield_t2_1m",
+      "value": 8836500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6017000,
+      "price": 5891000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 187,
       "weight": 73
     },
-    "clausesRanking": 177
+    "clausesRanking": 216
   },
   "id": 19168,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
-    "cards": 3
+    "cards": 4
   },
   "points": [
     {
@@ -252,10 +252,12 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 2,
+        "isLive": true
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
       "teamPlayed": false,
       "rivalId": 17,
@@ -727,35 +729,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 6081000,
-      "change": -64000,
-      "sign": -64
+      "value": 6017000,
+      "change": -126000,
+      "sign": -126
     },
     {
       "time": "Una semana",
-      "value": 6126000,
-      "change": -109000,
-      "sign": -109
+      "value": 6215000,
+      "change": -324000,
+      "sign": -324
     },
     {
       "time": "Un mes",
-      "value": 6067000,
-      "change": -50000,
-      "sign": -50
+      "value": 6061000,
+      "change": -170000,
+      "sign": -170
     },
     {
       "time": "Un año",
-      "value": 3472000,
-      "change": 2545000,
-      "sign": "+2.545.000"
+      "value": 3633000,
+      "change": 2258000,
+      "sign": "+2.258.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 3472000,
-        "date": "31 oct 2025"
-      },
       {
         "value": 3633000,
         "date": "1 nov 2025"
@@ -1907,6 +1905,10 @@
       {
         "value": 6017000,
         "date": "31 oct 2026"
+      },
+      {
+        "value": 5891000,
+        "date": "1 nov 2026"
       }
     ],
     "max": {
@@ -1922,28 +1924,28 @@
     "19168": {
       "id": 19168,
       "id_team": 9,
-      "id_match": 38031,
-      "id_gameweek": 4052,
-      "id_home": 9,
-      "id_away": 17,
+      "id_match": 38046,
+      "id_gameweek": 4053,
+      "id_home": 20,
+      "id_away": 9,
       "date": {
-        "ts": 1793538000,
-        "text": "dom 14:00",
-        "format": "EEE H:mm",
+        "ts": 1794159000,
+        "text": "8 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "8 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Sevilla",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
+      "home": "Villarreal",
+      "away": "Getafe",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,
