@@ -3,15 +3,15 @@
     "id": 68716,
     "name": "Buba Sangaré",
     "position": 2,
-    "points": 32,
-    "avg": 3.6,
+    "points": 37,
+    "avg": 3.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68716.png?version=20260323141411",
     "isFavorite": 0,
-    "value": 4583000,
-    "previousValue": 4481000,
+    "value": 4706000,
+    "previousValue": 4583000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4583000,
+      "floor": 4706000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6874500,
+      "value": 7059000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4583000,
+      "price": 4706000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 61
+    "clausesRanking": 60
   },
   "id": 68716,
   "player_extra": {
-    "matches": 9,
+    "matches": 10,
     "goals": 1,
     "cards": 0
   },
@@ -264,12 +264,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -709,10 +711,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 32,
-      "avg": 3.5556,
+      "points": 37,
+      "avg": 3.7,
       "id_team": 23,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -725,21 +727,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4481000,
-      "change": 102000,
-      "sign": 102
+      "value": 4583000,
+      "change": 123000,
+      "sign": 123
     },
     {
       "time": "Una semana",
-      "value": 3113000,
-      "change": 1470000,
-      "sign": "+1.470.000"
+      "value": 3346000,
+      "change": 1360000,
+      "sign": "+1.360.000"
     },
     {
       "time": "Un mes",
-      "value": 4887000,
-      "change": -304000,
-      "sign": -304
+      "value": 4661000,
+      "change": 45000,
+      "sign": 45
     }
   ],
   "values_chart": {
@@ -1831,6 +1833,10 @@
       {
         "value": 4583000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 4706000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {
@@ -1846,36 +1852,36 @@
     "68716": {
       "id": 68716,
       "id_team": 23,
-      "id_match": 38029,
-      "id_gameweek": 4052,
+      "id_match": 38039,
+      "id_gameweek": 4053,
       "id_home": 23,
-      "id_away": 19,
+      "id_away": 4,
       "date": {
-        "ts": 1793554200,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1794142800,
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Elche",
-      "away": "Valencia",
+      "away": "Betis",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "68716": {
       "id": 68716,
-      "points": -1,
-      "avg": -0.3333
+      "points": 4,
+      "avg": 1
     }
   },
   "away": {

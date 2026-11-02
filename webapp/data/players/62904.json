@@ -3,15 +3,15 @@
     "id": 62904,
     "name": "Yan Diomande",
     "position": 4,
-    "points": 58,
-    "avg": 5.8,
+    "points": 68,
+    "avg": 6.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/62904.png?version=20260806211455",
     "isFavorite": 0,
-    "value": 61886000,
-    "previousValue": 61788000,
+    "value": 62090000,
+    "previousValue": 61886000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 61886000,
+      "floor": 62090000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 92829000,
+      "value": 93135000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 61886000,
+      "price": 62090000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 39
+    "clausesRanking": 31
   },
   "id": 62904,
   "player_extra": {
-    "matches": 10,
-    "goals": 2,
+    "matches": 11,
+    "goals": 3,
     "cards": 1
   },
   "points": [
@@ -268,12 +268,15 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 10,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -713,10 +716,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 58,
-      "avg": 5.8,
+      "points": 68,
+      "avg": 6.1818,
       "id_team": 15,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "24/25",
@@ -729,21 +732,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 61788000,
-      "change": 98000,
-      "sign": 98
+      "value": 61886000,
+      "change": 204000,
+      "sign": 204
     },
     {
       "time": "Una semana",
-      "value": 60873000,
-      "change": 1013000,
-      "sign": "+1.013.000"
+      "value": 60967000,
+      "change": 1123000,
+      "sign": "+1.123.000"
     },
     {
       "time": "Un mes",
-      "value": 63271000,
-      "change": -1385000,
-      "sign": "-1.385.000"
+      "value": 62993000,
+      "change": -903000,
+      "sign": -903
     }
   ],
   "values_chart": {
@@ -1099,6 +1102,10 @@
       {
         "value": 61886000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 62090000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {
@@ -1114,27 +1121,27 @@
     "62904": {
       "id": 62904,
       "id_team": 15,
-      "id_match": 38035,
-      "id_gameweek": 4052,
-      "id_home": 1490,
+      "id_match": 38045,
+      "id_gameweek": 4053,
+      "id_home": 19,
       "id_away": 15,
       "date": {
-        "ts": 1793546100,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1794081600,
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
+      "home": "Valencia",
       "away": "Real Madrid",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
@@ -1149,8 +1156,8 @@
   "away": {
     "62904": {
       "id": 62904,
-      "points": 25,
-      "avg": 5
+      "points": 35,
+      "avg": 5.8333
     }
   },
   "owners": [],

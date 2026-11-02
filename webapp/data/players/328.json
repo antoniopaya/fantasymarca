@@ -3,15 +3,15 @@
     "id": 328,
     "name": "Dani Carvajal",
     "position": 2,
-    "points": 4,
-    "avg": 1.3,
+    "points": 6,
+    "avg": 2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/328.png?version=20251003183531",
     "isFavorite": 0,
-    "value": 7478000,
-    "previousValue": 7244000,
+    "value": 7765000,
+    "previousValue": 7478000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 7478000,
+      "floor": 7765000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 11217000,
+      "value": 11647500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 7478000,
+      "price": 7765000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 173,
       "weight": 73
     },
-    "clausesRanking": 92
+    "clausesRanking": 88
   },
   "id": 328,
   "player_extra": {
@@ -249,12 +249,12 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": 3,
-        "isLive": true
+        "points": 5,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -694,10 +694,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 1,
-      "avg": 0.5,
+      "points": 6,
+      "avg": 2,
       "id_team": 9,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -724,29 +724,25 @@
   "values": [
     {
       "time": "Un día",
-      "value": 7244000,
-      "change": 234000,
-      "sign": 234
+      "value": 7478000,
+      "change": 287000,
+      "sign": 287
     },
     {
       "time": "Una semana",
-      "value": 5885000,
-      "change": 1593000,
-      "sign": "+1.593.000"
+      "value": 6103000,
+      "change": 1662000,
+      "sign": "+1.662.000"
     },
     {
       "time": "Un año",
-      "value": 13648000,
-      "change": -6170000,
-      "sign": "-6.170.000"
+      "value": 12966000,
+      "change": -5201000,
+      "sign": "-5.201.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 13648000,
-        "date": "1 nov 2025"
-      },
       {
         "value": 12966000,
         "date": "2 nov 2025"
@@ -1726,6 +1722,10 @@
       {
         "value": 7478000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 7765000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {
@@ -1747,12 +1747,12 @@
       "id_away": 9,
       "date": {
         "ts": 1794159000,
-        "text": "8 nov 18:30",
-        "format": "d MMM H:mm",
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "8 nov",
+          "date": "dom",
           "time": "18:30",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -1769,8 +1769,8 @@
   "home": {
     "328": {
       "id": 328,
-      "points": 2,
-      "avg": 2
+      "points": 7,
+      "avg": 3.5
     }
   },
   "away": {

@@ -3,15 +3,15 @@
     "id": 8171,
     "name": "Dakonam Djené",
     "position": 2,
-    "points": 34,
-    "avg": 3.4,
+    "points": 37,
+    "avg": 3.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/8171.png?version=20251003195924",
     "isFavorite": 0,
-    "value": 13552000,
-    "previousValue": 13861000,
+    "value": 13311000,
+    "previousValue": 13552000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 13552000,
+      "floor": 13311000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 20328000,
+      "value": 19966500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 13552000,
+      "price": 13311000,
       "loanable": null
     },
     "bid": {
@@ -263,12 +263,12 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": 3,
-        "isLive": true
+        "points": 6,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -708,10 +708,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 31,
-      "avg": 3.4444,
+      "points": 37,
+      "avg": 3.7,
       "id_team": 9,
-      "last_gameweek": 9
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -738,35 +738,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 13861000,
-      "change": -309000,
-      "sign": -309
+      "value": 13552000,
+      "change": -241000,
+      "sign": -241
     },
     {
       "time": "Una semana",
-      "value": 17166000,
-      "change": -3614000,
-      "sign": "-3.614.000"
+      "value": 16386000,
+      "change": -3075000,
+      "sign": "-3.075.000"
     },
     {
       "time": "Un mes",
-      "value": 22064000,
-      "change": -8512000,
-      "sign": "-8.512.000"
+      "value": 21777000,
+      "change": -8466000,
+      "sign": "-8.466.000"
     },
     {
       "time": "Un año",
-      "value": 12301000,
-      "change": 1251000,
-      "sign": "+1.251.000"
+      "value": 12541000,
+      "change": 770000,
+      "sign": 770
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 12301000,
-        "date": "1 nov 2025"
-      },
       {
         "value": 12541000,
         "date": "2 nov 2025"
@@ -2226,6 +2222,10 @@
       {
         "value": 13552000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 13311000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {
@@ -2247,12 +2247,12 @@
       "id_away": 9,
       "date": {
         "ts": 1794159000,
-        "text": "8 nov 18:30",
-        "format": "d MMM H:mm",
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "8 nov",
+          "date": "dom",
           "time": "18:30",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2269,8 +2269,8 @@
   "home": {
     "8171": {
       "id": 8171,
-      "points": 24,
-      "avg": 4.8
+      "points": 30,
+      "avg": 5
     }
   },
   "away": {

@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71640.png?version=20260803092954",
     "isFavorite": 0,
-    "value": 16240000,
-    "previousValue": 16887000,
+    "value": 15729000,
+    "previousValue": 16240000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 16240000,
+      "floor": 15729000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 24360000,
+      "value": 23593500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 16240000,
+      "price": 15729000,
       "loanable": null
     },
     "bid": {
@@ -286,12 +286,21 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": null,
+        "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 309554,
+        "id_player": 71640,
+        "category": "injury",
+        "description": "Luxación de clavícula",
+        "duration": "Pendiente de evolución",
+        "since": "2026-10-13 18:06:24",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -740,21 +749,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 16887000,
-      "change": -647000,
-      "sign": -647
+      "value": 16240000,
+      "change": -511000,
+      "sign": -511
     },
     {
       "time": "Una semana",
-      "value": 20485000,
-      "change": -4245000,
-      "sign": "-4.245.000"
+      "value": 20061000,
+      "change": -4332000,
+      "sign": "-4.332.000"
     },
     {
       "time": "Un mes",
-      "value": 20428000,
-      "change": -4188000,
-      "sign": "-4.188.000"
+      "value": 20854000,
+      "change": -5125000,
+      "sign": "-5.125.000"
     }
   ],
   "values_chart": {
@@ -1118,6 +1127,10 @@
       {
         "value": 16240000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 15729000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {

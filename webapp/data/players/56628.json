@@ -3,15 +3,15 @@
     "id": 56628,
     "name": "Lucien Agoumé",
     "position": 3,
-    "points": 43,
-    "avg": 3.9,
+    "points": 44,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/56628.png?version=20251006013907",
     "isFavorite": 0,
-    "value": 22041000,
-    "previousValue": 21964000,
+    "value": 21942000,
+    "previousValue": 22041000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 22041000,
+      "floor": 21942000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 33061500,
+      "value": 32913000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 22041000,
+      "price": 21942000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 219
+    "clausesRanking": 251
   },
   "id": 56628,
   "player_extra": {
@@ -248,14 +248,15 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
       "events": [
-        "yellow"
+        "yellow",
+        "sub_out"
       ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -695,10 +696,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 42,
-      "avg": 4.2,
+      "points": 44,
+      "avg": 4,
       "id_team": 17,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -725,35 +726,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 21964000,
-      "change": 77000,
-      "sign": 77
+      "value": 22041000,
+      "change": -99000,
+      "sign": -99
     },
     {
       "time": "Una semana",
       "value": 21730000,
-      "change": 311000,
-      "sign": 311
+      "change": 212000,
+      "sign": 212
     },
     {
       "time": "Un mes",
-      "value": 22012000,
-      "change": 29000,
-      "sign": 29
+      "value": 22245000,
+      "change": -303000,
+      "sign": -303
     },
     {
       "time": "Un año",
-      "value": 14257000,
-      "change": 7784000,
-      "sign": "+7.784.000"
+      "value": 13810000,
+      "change": 8132000,
+      "sign": "+8.132.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 14257000,
-        "date": "1 nov 2025"
-      },
       {
         "value": 13810000,
         "date": "2 nov 2025"
@@ -2213,6 +2210,10 @@
       {
         "value": 22041000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 21942000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {
@@ -2263,8 +2264,8 @@
   "away": {
     "56628": {
       "id": 56628,
-      "points": 24,
-      "avg": 4.8
+      "points": 26,
+      "avg": 4.3333
     }
   },
   "owners": [],

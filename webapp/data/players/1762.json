@@ -3,15 +3,15 @@
     "id": 1762,
     "name": "Álex Berenguer",
     "position": 3,
-    "points": 67,
-    "avg": 6.7,
+    "points": 75,
+    "avg": 6.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/1762.png?version=20251003185228",
     "isFavorite": 0,
-    "value": 27388000,
-    "previousValue": 26783000,
+    "value": 28019000,
+    "previousValue": 27388000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 27388000,
+      "floor": 28019000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 41082000,
+      "value": 42028500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 27388000,
+      "price": 28019000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 175,
       "weight": 70
     },
-    "clausesRanking": 1
+    "clausesRanking": 3
   },
   "id": 1762,
   "player_extra": {
-    "matches": 10,
-    "goals": 3,
+    "matches": 11,
+    "goals": 4,
     "cards": 1
   },
   "points": [
@@ -263,12 +263,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 8,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "penalty"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -708,10 +710,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 67,
-      "avg": 6.7,
+      "points": 75,
+      "avg": 6.8182,
       "id_team": 1,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -738,35 +740,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 26783000,
-      "change": 605000,
-      "sign": 605
+      "value": 27388000,
+      "change": 631000,
+      "sign": 631
     },
     {
       "time": "Una semana",
-      "value": 23339000,
-      "change": 4049000,
-      "sign": "+4.049.000"
+      "value": 23883000,
+      "change": 4136000,
+      "sign": "+4.136.000"
     },
     {
       "time": "Un mes",
-      "value": 19974000,
-      "change": 7414000,
-      "sign": "+7.414.000"
+      "value": 19767000,
+      "change": 8252000,
+      "sign": "+8.252.000"
     },
     {
       "time": "Un año",
-      "value": 17368000,
-      "change": 10020000,
-      "sign": "+10.020.000"
+      "value": 17602000,
+      "change": 10417000,
+      "sign": "+10.417.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 17368000,
-        "date": "1 nov 2025"
-      },
       {
         "value": 17602000,
         "date": "2 nov 2025"
@@ -2226,11 +2224,15 @@
       {
         "value": 27388000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 28019000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {
-      "value": 27388000,
-      "date": "1 nov 2026"
+      "value": 28019000,
+      "date": "2 nov 2026"
     },
     "min": {
       "value": 2418000,
@@ -2241,36 +2243,36 @@
     "1762": {
       "id": 1762,
       "id_team": 1,
-      "id_match": 38027,
-      "id_gameweek": 4052,
-      "id_home": 1,
-      "id_away": 16,
+      "id_match": 38042,
+      "id_gameweek": 4053,
+      "id_home": 50,
+      "id_away": 1,
       "date": {
-        "ts": 1793563200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1794072600,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Real Sociedad",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "home": "Osasuna",
+      "away": "Athletic Club",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
   "home": {
     "1762": {
       "id": 1762,
-      "points": 35,
-      "avg": 7
+      "points": 43,
+      "avg": 7.1667
     }
   },
   "away": {

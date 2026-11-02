@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70935.png?version=20260619115458",
     "isFavorite": 0,
-    "value": 24242000,
-    "previousValue": 23797000,
+    "value": 24698000,
+    "previousValue": 24242000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 24242000,
+      "floor": 24698000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 36363000,
+      "value": 37047000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 24242000,
+      "price": 24698000,
       "loanable": null
     },
     "bid": {
@@ -266,8 +266,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 311194,
+        "id_player": 70935,
+        "category": "five",
+        "description": "Acumulación de tarjetas",
+        "duration": "Baja esta jornada",
+        "since": "2026-10-27 12:05:16",
+        "until": null,
+        "status": "Sancionado"
+      },
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -716,21 +725,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 23797000,
-      "change": 445000,
-      "sign": 445
+      "value": 24242000,
+      "change": 456000,
+      "sign": 456
     },
     {
       "time": "Una semana",
-      "value": 21238000,
-      "change": 3004000,
-      "sign": "+3.004.000"
+      "value": 21642000,
+      "change": 3056000,
+      "sign": "+3.056.000"
     },
     {
       "time": "Un mes",
-      "value": 16110000,
-      "change": 8132000,
-      "sign": "+8.132.000"
+      "value": 15750000,
+      "change": 8948000,
+      "sign": "+8.948.000"
     }
   ],
   "values_chart": {
@@ -1274,11 +1283,15 @@
       {
         "value": 24242000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 24698000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {
-      "value": 24242000,
-      "date": "1 nov 2026"
+      "value": 24698000,
+      "date": "2 nov 2026"
     },
     "min": {
       "value": 3011000,
@@ -1289,28 +1302,28 @@
     "70935": {
       "id": 70935,
       "id_team": 1490,
-      "id_match": 38035,
-      "id_gameweek": 4052,
-      "id_home": 1490,
-      "id_away": 15,
+      "id_match": 38041,
+      "id_gameweek": 4053,
+      "id_home": 13,
+      "id_away": 1490,
       "date": {
-        "ts": 1793546100,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1794056400,
+        "text": "sáb 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
-      "away": "Real Madrid",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Málaga",
+      "away": "Racing de Santander",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,

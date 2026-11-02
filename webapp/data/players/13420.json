@@ -3,15 +3,15 @@
     "id": 13420,
     "name": "Mouctar Diakhaby",
     "position": 2,
-    "points": 9,
-    "avg": 1.8,
+    "points": 10,
+    "avg": 1.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/13420.png?version=20251006020255",
     "isFavorite": 0,
     "value": 329000,
-    "previousValue": 349000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -68,11 +68,11 @@
       "height": 192,
       "weight": 74
     },
-    "clausesRanking": null
+    "clausesRanking": 422
   },
   "id": 13420,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 0,
     "cards": 2
   },
@@ -273,12 +273,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -718,10 +720,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 9,
-      "avg": 1.8,
+      "points": 10,
+      "avg": 1.6667,
       "id_team": 19,
-      "last_gameweek": 8
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -748,35 +750,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 349000,
-      "change": -20000,
-      "sign": -20
+      "value": 329000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Una semana",
-      "value": 974000,
-      "change": -645000,
-      "sign": -645
+      "value": 649000,
+      "change": -320000,
+      "sign": -320
     },
     {
       "time": "Un mes",
-      "value": 366000,
-      "change": -37000,
-      "sign": -37
+      "value": 340000,
+      "change": -11000,
+      "sign": -11
     },
     {
       "time": "Un año",
-      "value": 7500000,
-      "change": -7171000,
-      "sign": "-7.171.000"
+      "value": 7177000,
+      "change": -6848000,
+      "sign": "-6.848.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 7500000,
-        "date": "1 nov 2025"
-      },
       {
         "value": 7177000,
         "date": "2 nov 2025"
@@ -2236,11 +2234,15 @@
       {
         "value": 329000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 329000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {
-      "value": 7500000,
-      "date": "1 nov 2025"
+      "value": 7177000,
+      "date": "2 nov 2025"
     },
     "min": {
       "value": 329000,
@@ -2251,28 +2253,28 @@
     "13420": {
       "id": 13420,
       "id_team": 19,
-      "id_match": 38029,
-      "id_gameweek": 4052,
-      "id_home": 23,
-      "id_away": 19,
+      "id_match": 38045,
+      "id_gameweek": 4053,
+      "id_home": 19,
+      "id_away": 15,
       "date": {
-        "ts": 1793554200,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1794081600,
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Elche",
-      "away": "Valencia",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
+      "home": "Valencia",
+      "away": "Real Madrid",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
@@ -2286,7 +2288,7 @@
   "away": {
     "13420": {
       "id": 13420,
-      "points": 2,
+      "points": 3,
       "avg": 1
     }
   },

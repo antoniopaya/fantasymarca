@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71176.png?version=20260711172059",
     "isFavorite": 0,
-    "value": 9895000,
-    "previousValue": 9672000,
+    "value": 10175000,
+    "previousValue": 9895000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9895000,
+      "floor": 10175000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 3,
-      "shield2WeeksSku": "shield_t3_2w",
-      "shield1MonthSku": "shield_t3_1m",
-      "value": 14842500,
+      "tier": 4,
+      "shield2WeeksSku": "shield_t4_2w",
+      "shield1MonthSku": "shield_t4_1m",
+      "value": 15262500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9895000,
+      "price": 10175000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 154
+    "clausesRanking": 147
   },
   "id": 71176,
   "player_extra": {
@@ -714,21 +714,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 9672000,
-      "change": 223000,
-      "sign": 223
+      "value": 9895000,
+      "change": 280000,
+      "sign": 280
     },
     {
       "time": "Una semana",
-      "value": 8833000,
-      "change": 1062000,
-      "sign": "+1.062.000"
+      "value": 8931000,
+      "change": 1244000,
+      "sign": "+1.244.000"
     },
     {
       "time": "Un mes",
-      "value": 15517000,
-      "change": -5622000,
-      "sign": "-5.622.000"
+      "value": 14868000,
+      "change": -4693000,
+      "sign": "-4.693.000"
     }
   ],
   "values_chart": {
@@ -1184,6 +1184,10 @@
       {
         "value": 9895000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 10175000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {
@@ -1205,12 +1209,12 @@
       "id_away": 3,
       "date": {
         "ts": 1794168000,
-        "text": "8 nov 21:00",
-        "format": "d MMM H:mm",
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "8 nov",
+          "date": "dom",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",

@@ -3,15 +3,15 @@
     "id": 64031,
     "name": "Hugo Rincón",
     "position": 2,
-    "points": 23,
-    "avg": 4.6,
+    "points": 30,
+    "avg": 5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/64031.png?version=20250623150347",
     "isFavorite": 0,
-    "value": 3287000,
-    "previousValue": 3042000,
+    "value": 3574000,
+    "previousValue": 3287000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3287000,
+      "floor": 3574000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 4930500,
+      "value": 5361000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3287000,
+      "price": 3574000,
       "loanable": null
     },
     "bid": {
@@ -72,9 +72,9 @@
   },
   "id": 64031,
   "player_extra": {
-    "matches": 5,
+    "matches": 6,
     "goals": 0,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -248,12 +248,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -693,10 +695,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 23,
-      "avg": 4.6,
+      "points": 30,
+      "avg": 5,
       "id_team": 1,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -709,35 +711,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 3042000,
-      "change": 245000,
-      "sign": 245
+      "value": 3287000,
+      "change": 287000,
+      "sign": 287
     },
     {
       "time": "Una semana",
-      "value": 1595000,
-      "change": 1692000,
-      "sign": "+1.692.000"
+      "value": 1864000,
+      "change": 1710000,
+      "sign": "+1.710.000"
     },
     {
       "time": "Un mes",
-      "value": 377000,
-      "change": 2910000,
-      "sign": "+2.910.000"
+      "value": 529000,
+      "change": 3045000,
+      "sign": "+3.045.000"
     },
     {
       "time": "Un año",
-      "value": 2652000,
-      "change": 635000,
-      "sign": 635
+      "value": 2466000,
+      "change": 1108000,
+      "sign": "+1.108.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 2652000,
-        "date": "1 nov 2025"
-      },
       {
         "value": 2466000,
         "date": "2 nov 2025"
@@ -2197,6 +2195,10 @@
       {
         "value": 3287000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 3574000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {
@@ -2212,36 +2214,36 @@
     "64031": {
       "id": 64031,
       "id_team": 1,
-      "id_match": 38027,
-      "id_gameweek": 4052,
-      "id_home": 1,
-      "id_away": 16,
+      "id_match": 38042,
+      "id_gameweek": 4053,
+      "id_home": 50,
+      "id_away": 1,
       "date": {
-        "ts": 1793563200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1794072600,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Real Sociedad",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "home": "Osasuna",
+      "away": "Athletic Club",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
   "home": {
     "64031": {
       "id": 64031,
-      "points": 9,
-      "avg": 4.5
+      "points": 16,
+      "avg": 5.3333
     }
   },
   "away": {

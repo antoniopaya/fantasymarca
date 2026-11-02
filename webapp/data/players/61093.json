@@ -3,15 +3,15 @@
     "id": 61093,
     "name": "Maroan Sannadi",
     "position": 4,
-    "points": 15,
-    "avg": 2.5,
+    "points": 16,
+    "avg": 2.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/61093.png?version=20251003185515",
     "isFavorite": 0,
-    "value": 2351000,
-    "previousValue": 2304000,
+    "value": 2412000,
+    "previousValue": 2351000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2351000,
+      "floor": 2412000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3526500,
+      "value": 3618000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2351000,
+      "price": 2412000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 192,
       "weight": null
     },
-    "clausesRanking": 93
+    "clausesRanking": 107
   },
   "id": 61093,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 0
   },
@@ -254,12 +254,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -699,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 15,
-      "avg": 2.5,
+      "points": 16,
+      "avg": 2.2857,
       "id_team": 1,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -722,35 +724,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2304000,
-      "change": 47000,
-      "sign": 47
+      "value": 2351000,
+      "change": 61000,
+      "sign": 61
     },
     {
       "time": "Una semana",
-      "value": 1420000,
-      "change": 931000,
-      "sign": 931
+      "value": 1561000,
+      "change": 851000,
+      "sign": 851
     },
     {
       "time": "Un mes",
-      "value": 520000,
-      "change": 1831000,
-      "sign": "+1.831.000"
+      "value": 422000,
+      "change": 1990000,
+      "sign": "+1.990.000"
     },
     {
       "time": "Un año",
-      "value": 2516000,
-      "change": -165000,
-      "sign": -165
+      "value": 2278000,
+      "change": 134000,
+      "sign": 134
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 2516000,
-        "date": "1 nov 2025"
-      },
       {
         "value": 2278000,
         "date": "2 nov 2025"
@@ -2210,11 +2208,15 @@
       {
         "value": 2351000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 2412000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {
-      "value": 2516000,
-      "date": "1 nov 2025"
+      "value": 2412000,
+      "date": "2 nov 2026"
     },
     "min": {
       "value": 329000,
@@ -2225,36 +2227,36 @@
     "61093": {
       "id": 61093,
       "id_team": 1,
-      "id_match": 38027,
-      "id_gameweek": 4052,
-      "id_home": 1,
-      "id_away": 16,
+      "id_match": 38042,
+      "id_gameweek": 4053,
+      "id_home": 50,
+      "id_away": 1,
       "date": {
-        "ts": 1793563200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1794072600,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Real Sociedad",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "home": "Osasuna",
+      "away": "Athletic Club",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
   "home": {
     "61093": {
       "id": 61093,
-      "points": 8,
-      "avg": 2
+      "points": 9,
+      "avg": 1.8
     }
   },
   "away": {

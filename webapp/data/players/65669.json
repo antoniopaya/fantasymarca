@@ -3,15 +3,15 @@
     "id": 65669,
     "name": "Grady Diangana",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 1,
+    "avg": 1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65669.png?version=20250831090633",
     "isFavorite": 0,
-    "value": 382000,
-    "previousValue": 529000,
+    "value": 329000,
+    "previousValue": 382000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 382000,
+      "price": 329000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 65669,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -244,12 +244,14 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -688,6 +690,13 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 1,
+      "avg": 1,
+      "id_team": 23,
+      "last_gameweek": 11
+    },
+    {
       "season": "25/26",
       "points": 53,
       "avg": 2.65,
@@ -698,35 +707,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 529000,
-      "change": -147000,
-      "sign": -147
+      "value": 382000,
+      "change": -53000,
+      "sign": -53
     },
     {
       "time": "Una semana",
-      "value": 521000,
-      "change": -139000,
-      "sign": -139
+      "value": 359000,
+      "change": -30000,
+      "sign": -30
     },
     {
       "time": "Un mes",
-      "value": 529000,
-      "change": -147000,
-      "sign": -147
+      "value": 431000,
+      "change": -102000,
+      "sign": -102
     },
     {
       "time": "Un año",
-      "value": 445000,
-      "change": -63000,
-      "sign": -63
+      "value": 473000,
+      "change": -144000,
+      "sign": -144
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 445000,
-        "date": "1 nov 2025"
-      },
       {
         "value": 473000,
         "date": "2 nov 2025"
@@ -2186,6 +2191,10 @@
       {
         "value": 382000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 329000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {
@@ -2201,35 +2210,36 @@
     "65669": {
       "id": 65669,
       "id_team": 23,
-      "id_match": 38029,
-      "id_gameweek": 4052,
+      "id_match": 38039,
+      "id_gameweek": 4053,
       "id_home": 23,
-      "id_away": 19,
+      "id_away": 4,
       "date": {
-        "ts": 1793554200,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1794142800,
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "dom",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Elche",
-      "away": "Valencia",
+      "away": "Betis",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "65669": {
-      "points": 0,
-      "avg": 0
+      "id": 65669,
+      "points": 1,
+      "avg": 1
     }
   },
   "away": {

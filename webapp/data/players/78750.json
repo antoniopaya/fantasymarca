@@ -3,15 +3,15 @@
     "id": 78750,
     "name": "Orel Mangala",
     "position": 3,
-    "points": 27,
-    "avg": 3.4,
+    "points": 34,
+    "avg": 4.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/78750.png?version=20260807223509",
     "isFavorite": 0,
-    "value": 920000,
-    "previousValue": 930000,
+    "value": 1145000,
+    "previousValue": 920000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 920000,
+      "floor": 1145000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1380000,
+      "value": 1717500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 920000,
+      "price": 1145000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 290
+    "clausesRanking": 159
   },
   "id": 78750,
   "player_extra": {
     "matches": 8,
-    "goals": 0,
+    "goals": 1,
     "cards": 1
   },
   "points": [
@@ -272,14 +272,15 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 8,
+        "isLive": false
       },
       "events": [
-        "sub_in"
+        "sub_in",
+        "goal"
       ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -719,30 +720,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 26,
-      "avg": 3.7143,
+      "points": 34,
+      "avg": 4.25,
       "id_team": 9,
-      "last_gameweek": 7
+      "last_gameweek": 11
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 930000,
-      "change": -10000,
-      "sign": -10
+      "value": 920000,
+      "change": 225000,
+      "sign": 225
     },
     {
       "time": "Una semana",
-      "value": 1878000,
-      "change": -958000,
-      "sign": -958
+      "value": 1554000,
+      "change": -409000,
+      "sign": -409
     },
     {
       "time": "Un mes",
-      "value": 6896000,
-      "change": -5976000,
-      "sign": "-5.976.000"
+      "value": 6668000,
+      "change": -5523000,
+      "sign": "-5.523.000"
     }
   ],
   "values_chart": {
@@ -1086,6 +1087,10 @@
       {
         "value": 920000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 1145000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {
@@ -1107,12 +1112,12 @@
       "id_away": 9,
       "date": {
         "ts": 1794159000,
-        "text": "8 nov 18:30",
-        "format": "d MMM H:mm",
+        "text": "dom 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "8 nov",
+          "date": "dom",
           "time": "18:30",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -1129,8 +1134,8 @@
   "home": {
     "78750": {
       "id": 78750,
-      "points": 16,
-      "avg": 4
+      "points": 24,
+      "avg": 4.8
     }
   },
   "away": {

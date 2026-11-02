@@ -3,15 +3,15 @@
     "id": 22601,
     "name": "Pepelu",
     "position": 3,
-    "points": 47,
-    "avg": 4.7,
+    "points": 54,
+    "avg": 4.9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22601.png?version=20260413101012",
     "isFavorite": 0,
-    "value": 17052000,
-    "previousValue": 16462000,
+    "value": 17712000,
+    "previousValue": 17052000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 17052000,
+      "floor": 17712000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 25578000,
+      "value": 26568000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 17052000,
+      "price": 17712000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": 73
     },
-    "clausesRanking": 40
+    "clausesRanking": 43
   },
   "id": 22601,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 1,
     "cards": 2
   },
@@ -256,12 +256,12 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -701,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 47,
-      "avg": 4.7,
+      "points": 54,
+      "avg": 4.9091,
       "id_team": 19,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -731,35 +731,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 16462000,
-      "change": 590000,
-      "sign": 590
+      "value": 17052000,
+      "change": 660000,
+      "sign": 660
     },
     {
       "time": "Una semana",
-      "value": 12871000,
-      "change": 4181000,
-      "sign": "+4.181.000"
+      "value": 13423000,
+      "change": 4289000,
+      "sign": "+4.289.000"
     },
     {
       "time": "Un mes",
-      "value": 10160000,
-      "change": 6892000,
-      "sign": "+6.892.000"
+      "value": 10212000,
+      "change": 7500000,
+      "sign": "+7.500.000"
     },
     {
       "time": "Un año",
-      "value": 6816000,
-      "change": 10236000,
-      "sign": "+10.236.000"
+      "value": 6685000,
+      "change": 11027000,
+      "sign": "+11.027.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 6816000,
-        "date": "1 nov 2025"
-      },
       {
         "value": 6685000,
         "date": "2 nov 2025"
@@ -2219,6 +2215,10 @@
       {
         "value": 17052000,
         "date": "1 nov 2026"
+      },
+      {
+        "value": 17712000,
+        "date": "2 nov 2026"
       }
     ],
     "max": {
@@ -2234,28 +2234,28 @@
     "22601": {
       "id": 22601,
       "id_team": 19,
-      "id_match": 38029,
-      "id_gameweek": 4052,
-      "id_home": 23,
-      "id_away": 19,
+      "id_match": 38045,
+      "id_gameweek": 4053,
+      "id_home": 19,
+      "id_away": 15,
       "date": {
-        "ts": 1793554200,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1794081600,
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "21:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Elche",
-      "away": "Valencia",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
+      "home": "Valencia",
+      "away": "Real Madrid",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
@@ -2269,8 +2269,8 @@
   "away": {
     "22601": {
       "id": 22601,
-      "points": 19,
-      "avg": 4.75
+      "points": 26,
+      "avg": 5.2
     }
   },
   "owners": [],
