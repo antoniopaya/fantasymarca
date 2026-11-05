@@ -5,13 +5,17 @@
     "position": 4,
     "points": 16,
     "avg": 2.3,
-    "status": null,
+    "status": "injury",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "injury",
+      "description": "Lesión en los isquiotibiales",
+      "duration": "Baja hasta mediados de Diciembre"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/61093.png?version=20251003185515",
     "isFavorite": 0,
-    "value": 2412000,
-    "previousValue": 2351000,
+    "value": 1968000,
+    "previousValue": 2187000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2412000,
+      "floor": 1968000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 2,
-      "shield2WeeksSku": "shield_t2_2w",
-      "shield1MonthSku": "shield_t2_1m",
-      "value": 3618000,
+      "tier": 1,
+      "shield2WeeksSku": "shield_t1_2w",
+      "shield1MonthSku": "shield_t1_1m",
+      "value": 2952000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2412000,
+      "price": 1968000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 192,
       "weight": null
     },
-    "clausesRanking": 107
+    "clausesRanking": 148
   },
   "id": 61093,
   "player_extra": {
@@ -200,7 +204,7 @@
       "number": 8,
       "shortName": "J8",
       "startDate": "2026-10-09 21:00:00",
-      "endDate": "2026-10-12 21:00:00",
+      "endDate": "2026-12-09 20:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -724,43 +728,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2351000,
-      "change": 61000,
-      "sign": 61
+      "value": 2187000,
+      "change": -219000,
+      "sign": -219
     },
     {
       "time": "Una semana",
-      "value": 1561000,
-      "change": 851000,
-      "sign": 851
+      "value": 2144000,
+      "change": -176000,
+      "sign": -176
     },
     {
       "time": "Un mes",
-      "value": 422000,
-      "change": 1990000,
-      "sign": "+1.990.000"
+      "value": 521000,
+      "change": 1447000,
+      "sign": "+1.447.000"
     },
     {
       "time": "Un año",
-      "value": 2278000,
-      "change": 134000,
-      "sign": 134
+      "value": 1494000,
+      "change": 474000,
+      "sign": 474
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 2278000,
-        "date": "2 nov 2025"
-      },
-      {
-        "value": 2074000,
-        "date": "3 nov 2025"
-      },
-      {
-        "value": 1867000,
-        "date": "4 nov 2025"
-      },
       {
         "value": 1494000,
         "date": "5 nov 2025"
@@ -2212,6 +2204,18 @@
       {
         "value": 2412000,
         "date": "2 nov 2026"
+      },
+      {
+        "value": 2302000,
+        "date": "3 nov 2026"
+      },
+      {
+        "value": 2187000,
+        "date": "4 nov 2026"
+      },
+      {
+        "value": 1968000,
+        "date": "5 nov 2026"
       }
     ],
     "max": {

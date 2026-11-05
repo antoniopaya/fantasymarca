@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68495.png?version=20260116190325",
     "isFavorite": 0,
-    "value": 27560000,
-    "previousValue": 27141000,
+    "value": 29050000,
+    "previousValue": 28543000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 27560000,
+      "floor": 29050000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 41340000,
+      "value": 43575000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 27560000,
+      "price": 29050000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 187,
       "weight": null
     },
-    "clausesRanking": 127
+    "clausesRanking": 91
   },
   "id": 68495,
   "player_extra": {
@@ -210,7 +210,7 @@
       "number": 8,
       "shortName": "J8",
       "startDate": "2026-10-09 21:00:00",
-      "endDate": "2026-10-12 21:00:00",
+      "endDate": "2026-12-09 20:00:00",
       "points": {
         "points": 2,
         "isLive": false
@@ -218,16 +218,7 @@
       "events": [
         "sub_in"
       ],
-      "injury": {
-        "id": 308822,
-        "id_player": 68495,
-        "category": "injury",
-        "description": "Molestias",
-        "duration": "Duda esta jornada",
-        "since": "2026-10-05 15:01:58",
-        "until": "2026-10-15 11:31:51",
-        "status": "Lesionado"
-      },
+      "injury": null,
       "teamPlayed": true,
       "rivalId": 3,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
@@ -737,21 +728,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 27141000,
-      "change": 419000,
-      "sign": 419
+      "value": 28543000,
+      "change": 507000,
+      "sign": 507
     },
     {
       "time": "Una semana",
-      "value": 26059000,
-      "change": 1501000,
-      "sign": "+1.501.000"
+      "value": 26698000,
+      "change": 2352000,
+      "sign": "+2.352.000"
     },
     {
       "time": "Un mes",
-      "value": 27545000,
-      "change": 15000,
-      "sign": 15
+      "value": 28098000,
+      "change": 952000,
+      "sign": 952
     }
   ],
   "values_chart": {
@@ -1919,11 +1910,23 @@
       {
         "value": 27560000,
         "date": "2 nov 2026"
+      },
+      {
+        "value": 28037000,
+        "date": "3 nov 2026"
+      },
+      {
+        "value": 28543000,
+        "date": "4 nov 2026"
+      },
+      {
+        "value": 29050000,
+        "date": "5 nov 2026"
       }
     ],
     "max": {
-      "value": 28118000,
-      "date": "3 may 2026"
+      "value": 29050000,
+      "date": "5 nov 2026"
     },
     "min": {
       "value": 3818000,
@@ -1949,7 +1952,7 @@
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Villarreal",
       "away": "Getafe",

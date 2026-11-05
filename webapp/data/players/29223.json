@@ -3,15 +3,15 @@
     "id": 29223,
     "name": "Mario Soriano",
     "position": 3,
-    "points": 55,
-    "avg": 5.5,
+    "points": 66,
+    "avg": 6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/29223.png?version=20260621102316",
     "isFavorite": 0,
-    "value": 34909000,
-    "previousValue": 34650000,
+    "value": 36824000,
+    "previousValue": 36145000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 34909000,
+      "floor": 36824000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 52363500,
+      "value": 55236000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 34909000,
+      "price": 36824000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 163,
       "weight": null
     },
-    "clausesRanking": 199
+    "clausesRanking": 120
   },
   "id": 29223,
   "player_extra": {
-    "matches": 10,
-    "goals": 1,
+    "matches": 11,
+    "goals": 2,
     "cards": 1
   },
   "points": [
@@ -208,7 +208,7 @@
       "number": 8,
       "shortName": "J8",
       "startDate": "2026-10-09 21:00:00",
-      "endDate": "2026-10-12 21:00:00",
+      "endDate": "2026-12-09 20:00:00",
       "points": {
         "points": 11,
         "isLive": false
@@ -260,12 +260,15 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 11,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -705,30 +708,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 55,
-      "avg": 5.5,
+      "points": 66,
+      "avg": 6,
       "id_team": 6,
-      "last_gameweek": 10
+      "last_gameweek": 11
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 34650000,
-      "change": 259000,
-      "sign": 259
+      "value": 36145000,
+      "change": 679000,
+      "sign": 679
     },
     {
       "time": "Una semana",
-      "value": 33120000,
-      "change": 1789000,
-      "sign": "+1.789.000"
+      "value": 34087000,
+      "change": 2737000,
+      "sign": "+2.737.000"
     },
     {
       "time": "Un mes",
-      "value": 26900000,
-      "change": 8009000,
-      "sign": "+8.009.000"
+      "value": 27744000,
+      "change": 9080000,
+      "sign": "+9.080.000"
     }
   ],
   "values_chart": {
@@ -1272,11 +1275,23 @@
       {
         "value": 34909000,
         "date": "2 nov 2026"
+      },
+      {
+        "value": 35464000,
+        "date": "3 nov 2026"
+      },
+      {
+        "value": 36145000,
+        "date": "4 nov 2026"
+      },
+      {
+        "value": 36824000,
+        "date": "5 nov 2026"
       }
     ],
     "max": {
-      "value": 34909000,
-      "date": "2 nov 2026"
+      "value": 36824000,
+      "date": "5 nov 2026"
     },
     "min": {
       "value": 2274000,
@@ -1287,36 +1302,36 @@
     "29223": {
       "id": 29223,
       "id_team": 6,
-      "id_match": 38028,
-      "id_gameweek": 4052,
-      "id_home": 6,
-      "id_away": 50,
+      "id_match": 38040,
+      "id_gameweek": 4053,
+      "id_home": 8,
+      "id_away": 6,
       "date": {
-        "ts": 1793649600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1794064500,
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "16:15",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Osasuna",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "home": "Espanyol",
+      "away": "Deportivo da Coruña",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,
   "home": {
     "29223": {
       "id": 29223,
-      "points": 29,
-      "avg": 5.8
+      "points": 40,
+      "avg": 6.6667
     }
   },
   "away": {

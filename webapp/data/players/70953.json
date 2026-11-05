@@ -3,15 +3,15 @@
     "id": 70953,
     "name": "Miguel Loureiro",
     "position": 2,
-    "points": 25,
-    "avg": 4.2,
+    "points": 32,
+    "avg": 4.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70953.png?version=20260621102344",
     "isFavorite": 0,
-    "value": 1301000,
-    "previousValue": 1161000,
+    "value": 2015000,
+    "previousValue": 1740000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1301000,
+      "floor": 2015000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 1,
-      "shield2WeeksSku": "shield_t1_2w",
-      "shield1MonthSku": "shield_t1_1m",
-      "value": 1951500,
+      "tier": 2,
+      "shield2WeeksSku": "shield_t2_2w",
+      "shield1MonthSku": "shield_t2_1m",
+      "value": 3022500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1301000,
+      "price": 2015000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 134
+    "clausesRanking": 58
   },
   "id": 70953,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 0
   },
@@ -200,7 +200,7 @@
       "number": 8,
       "shortName": "J8",
       "startDate": "2026-10-09 21:00:00",
-      "endDate": "2026-10-12 21:00:00",
+      "endDate": "2026-12-09 20:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -252,12 +252,12 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -697,30 +697,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 25,
-      "avg": 4.1667,
+      "points": 32,
+      "avg": 4.5714,
       "id_team": 6,
-      "last_gameweek": 10
+      "last_gameweek": 11
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 1161000,
-      "change": 140000,
-      "sign": 140
+      "value": 1740000,
+      "change": 275000,
+      "sign": 275
     },
     {
       "time": "Una semana",
-      "value": 385000,
-      "change": 916000,
-      "sign": 916
+      "value": 706000,
+      "change": 1309000,
+      "sign": "+1.309.000"
     },
     {
       "time": "Un mes",
-      "value": 2949000,
-      "change": -1648000,
-      "sign": "-1.648.000"
+      "value": 2604000,
+      "change": -589000,
+      "sign": -589
     }
   ],
   "values_chart": {
@@ -1260,6 +1260,18 @@
       {
         "value": 1301000,
         "date": "2 nov 2026"
+      },
+      {
+        "value": 1500000,
+        "date": "3 nov 2026"
+      },
+      {
+        "value": 1740000,
+        "date": "4 nov 2026"
+      },
+      {
+        "value": 2015000,
+        "date": "5 nov 2026"
       }
     ],
     "max": {
@@ -1275,36 +1287,36 @@
     "70953": {
       "id": 70953,
       "id_team": 6,
-      "id_match": 38028,
-      "id_gameweek": 4052,
-      "id_home": 6,
-      "id_away": 50,
+      "id_match": 38040,
+      "id_gameweek": 4053,
+      "id_home": 8,
+      "id_away": 6,
       "date": {
-        "ts": 1793649600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1794064500,
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "16:15",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Osasuna",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "home": "Espanyol",
+      "away": "Deportivo da Coruña",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,
   "home": {
     "70953": {
       "id": 70953,
-      "points": 13,
-      "avg": 4.3333
+      "points": 20,
+      "avg": 5
     }
   },
   "away": {

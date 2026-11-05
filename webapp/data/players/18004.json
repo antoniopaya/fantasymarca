@@ -3,15 +3,15 @@
     "id": 18004,
     "name": "Ante Budimir",
     "position": 4,
-    "points": 73,
-    "avg": 7.3,
+    "points": 82,
+    "avg": 7.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/18004.png?version=20251006024916",
     "isFavorite": 0,
-    "value": 55888000,
-    "previousValue": 55861000,
+    "value": 56886000,
+    "previousValue": 56485000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 55888000,
+      "floor": 56886000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 83832000,
+      "value": 85329000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 55888000,
+      "price": 56886000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 190,
       "weight": 75
     },
-    "clausesRanking": 90
+    "clausesRanking": 53
   },
   "id": 18004,
   "player_extra": {
-    "matches": 10,
-    "goals": 7,
+    "matches": 11,
+    "goals": 8,
     "cards": 1
   },
   "points": [
@@ -208,7 +208,7 @@
       "number": 8,
       "shortName": "J8",
       "startDate": "2026-10-09 21:00:00",
-      "endDate": "2026-10-12 21:00:00",
+      "endDate": "2026-12-09 20:00:00",
       "points": {
         "points": 7,
         "isLive": false
@@ -263,12 +263,15 @@
       "startDate": "2026-10-30 21:00:00",
       "endDate": "2026-11-02 21:00:00",
       "points": {
-        "points": null,
+        "points": 9,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -708,10 +711,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 73,
-      "avg": 7.3,
+      "points": 82,
+      "avg": 7.4545,
       "id_team": 50,
-      "last_gameweek": 10
+      "last_gameweek": 11
     },
     {
       "season": "25/26",
@@ -738,43 +741,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 55861000,
-      "change": 27000,
-      "sign": 27
+      "value": 56485000,
+      "change": 401000,
+      "sign": 401
     },
     {
       "time": "Una semana",
-      "value": 54406000,
-      "change": 1482000,
-      "sign": "+1.482.000"
+      "value": 55270000,
+      "change": 1616000,
+      "sign": "+1.616.000"
     },
     {
       "time": "Un mes",
-      "value": 52025000,
-      "change": 3863000,
-      "sign": "+3.863.000"
+      "value": 51651000,
+      "change": 5235000,
+      "sign": "+5.235.000"
     },
     {
       "time": "Un año",
-      "value": 35207000,
-      "change": 20681000,
-      "sign": "+20.681.000"
+      "value": 36453000,
+      "change": 20433000,
+      "sign": "+20.433.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 35207000,
-        "date": "2 nov 2025"
-      },
-      {
-        "value": 35665000,
-        "date": "3 nov 2025"
-      },
-      {
-        "value": 36097000,
-        "date": "4 nov 2025"
-      },
       {
         "value": 36453000,
         "date": "5 nov 2025"
@@ -2226,6 +2217,18 @@
       {
         "value": 55888000,
         "date": "2 nov 2026"
+      },
+      {
+        "value": 56164000,
+        "date": "3 nov 2026"
+      },
+      {
+        "value": 56485000,
+        "date": "4 nov 2026"
+      },
+      {
+        "value": 56886000,
+        "date": "5 nov 2026"
       }
     ],
     "max": {
@@ -2241,28 +2244,28 @@
     "18004": {
       "id": 18004,
       "id_team": 50,
-      "id_match": 38028,
-      "id_gameweek": 4052,
-      "id_home": 6,
-      "id_away": 50,
+      "id_match": 38042,
+      "id_gameweek": 4053,
+      "id_home": 50,
+      "id_away": 1,
       "date": {
-        "ts": 1793649600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1794072600,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": 0,
       "minute": null,
-      "home": "Deportivo da Coruña",
-      "away": "Osasuna",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
+      "home": "Osasuna",
+      "away": "Athletic Club",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
@@ -2276,8 +2279,8 @@
   "away": {
     "18004": {
       "id": 18004,
-      "points": 34,
-      "avg": 6.8
+      "points": 43,
+      "avg": 7.1667
     }
   },
   "owners": [],
