@@ -5,13 +5,17 @@
     "position": 2,
     "points": 34,
     "avg": 3.4,
-    "status": null,
+    "status": "doubt",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "doubt",
+      "description": "Lesión en los isquiotibiales",
+      "duration": "Duda esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/20131.png?version=20251004223947",
     "isFavorite": 0,
-    "value": 5757000,
-    "previousValue": 5900000,
+    "value": 5600000,
+    "previousValue": 5757000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5757000,
+      "floor": 5600000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8635500,
+      "value": 8400000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5757000,
+      "price": 5600000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 179,
       "weight": null
     },
-    "clausesRanking": 273
+    "clausesRanking": 289
   },
   "id": 20131,
   "player_extra": {
@@ -723,35 +727,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5900000,
-      "change": -143000,
-      "sign": -143
+      "value": 5757000,
+      "change": -157000,
+      "sign": -157
     },
     {
       "time": "Una semana",
-      "value": 7103000,
-      "change": -1346000,
-      "sign": "-1.346.000"
+      "value": 7111000,
+      "change": -1511000,
+      "sign": "-1.511.000"
     },
     {
       "time": "Un mes",
-      "value": 7364000,
-      "change": -1607000,
-      "sign": "-1.607.000"
+      "value": 7293000,
+      "change": -1693000,
+      "sign": "-1.693.000"
     },
     {
       "time": "Un año",
-      "value": 11292000,
-      "change": -5535000,
-      "sign": "-5.535.000"
+      "value": 10931000,
+      "change": -5331000,
+      "sign": "-5.331.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 11292000,
-        "date": "5 nov 2025"
-      },
       {
         "value": 10931000,
         "date": "6 nov 2025"
@@ -2211,6 +2211,10 @@
       {
         "value": 5757000,
         "date": "5 nov 2026"
+      },
+      {
+        "value": 5600000,
+        "date": "6 nov 2026"
       }
     ],
     "max": {

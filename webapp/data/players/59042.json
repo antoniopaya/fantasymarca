@@ -5,13 +5,17 @@
     "position": 3,
     "points": 17,
     "avg": 4.3,
-    "status": null,
+    "status": "injury",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "injury",
+      "description": "Lesión en los isquiotibiales",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59042.png?version=20251006014424",
     "isFavorite": 0,
-    "value": 393000,
-    "previousValue": 384000,
+    "value": 346000,
+    "previousValue": 393000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -47,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 393000,
+      "price": 346000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 168,
       "weight": null
     },
-    "clausesRanking": 363
+    "clausesRanking": 352
   },
   "id": 59042,
   "player_extra": {
@@ -722,35 +726,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 384000,
-      "change": 9000,
-      "sign": 9
+      "value": 393000,
+      "change": -47000,
+      "sign": -47
     },
     {
       "time": "Una semana",
-      "value": 1159000,
-      "change": -766000,
-      "sign": -766
+      "value": 965000,
+      "change": -619000,
+      "sign": -619
     },
     {
       "time": "Un mes",
-      "value": 1401000,
-      "change": -1008000,
-      "sign": "-1.008.000"
+      "value": 1231000,
+      "change": -885000,
+      "sign": -885
     },
     {
       "time": "Un año",
-      "value": 438000,
-      "change": -45000,
-      "sign": -45
+      "value": 455000,
+      "change": -109000,
+      "sign": -109
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 438000,
-        "date": "5 nov 2025"
-      },
       {
         "value": 455000,
         "date": "6 nov 2025"
@@ -2210,6 +2210,10 @@
       {
         "value": 393000,
         "date": "5 nov 2026"
+      },
+      {
+        "value": 346000,
+        "date": "6 nov 2026"
       }
     ],
     "max": {
@@ -2231,12 +2235,12 @@
       "id_away": 48,
       "date": {
         "ts": 1793995200,
-        "text": "vie 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "vie",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
