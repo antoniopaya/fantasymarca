@@ -3,15 +3,15 @@
     "id": 70992,
     "name": "Chupete",
     "position": 4,
-    "points": 26,
-    "avg": 2.4,
+    "points": 27,
+    "avg": 2.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70992.png?version=20260621195421",
     "isFavorite": 0,
-    "value": 9504000,
-    "previousValue": 9832000,
+    "value": 9079000,
+    "previousValue": 9504000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9504000,
+      "floor": 9079000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 14256000,
+      "value": 13618500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9504000,
+      "price": 9079000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 351
+    "clausesRanking": 347
   },
   "id": 70992,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 1,
-    "cards": 3
+    "cards": 4
   },
   "points": [
     {
@@ -276,10 +276,12 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 1,
+        "isLive": true
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
       "teamPlayed": false,
       "rivalId": 1490,
@@ -305,7 +307,7 @@
       "id": 4055,
       "number": 14,
       "shortName": "J14",
-      "startDate": "2026-11-28 14:00:00",
+      "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
         "points": null,
@@ -449,7 +451,7 @@
       "id": 4064,
       "number": 23,
       "shortName": "J23",
-      "startDate": "2027-02-07 20:00:00",
+      "startDate": "2026-12-02 19:00:00",
       "endDate": "2027-02-07 20:00:00",
       "points": {
         "points": null,
@@ -714,21 +716,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 9832000,
-      "change": -328000,
-      "sign": -328
+      "value": 9504000,
+      "change": -425000,
+      "sign": -425
     },
     {
       "time": "Una semana",
-      "value": 11477000,
-      "change": -1973000,
-      "sign": "-1.973.000"
+      "value": 11127000,
+      "change": -2048000,
+      "sign": "-2.048.000"
     },
     {
       "time": "Un mes",
-      "value": 22633000,
-      "change": -13129000,
-      "sign": "-13.129.000"
+      "value": 22270000,
+      "change": -13191000,
+      "sign": "-13.191.000"
     }
   ],
   "values_chart": {
@@ -1284,6 +1286,10 @@
       {
         "value": 9504000,
         "date": "6 nov 2026"
+      },
+      {
+        "value": 9079000,
+        "date": "7 nov 2026"
       }
     ],
     "max": {
@@ -1299,28 +1305,28 @@
     "70992": {
       "id": 70992,
       "id_team": 13,
-      "id_match": 38041,
-      "id_gameweek": 4053,
-      "id_home": 13,
-      "id_away": 1490,
+      "id_match": 38052,
+      "id_gameweek": 4054,
+      "id_home": 50,
+      "id_away": 13,
       "date": {
-        "ts": 1794056400,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1795368600,
+        "text": "22 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "22 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Racing de Santander",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Osasuna",
+      "away": "Málaga",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,

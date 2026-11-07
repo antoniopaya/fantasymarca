@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71640.png?version=20260803092954",
     "isFavorite": 0,
-    "value": 13702000,
-    "previousValue": 14114000,
+    "value": 13167000,
+    "previousValue": 13702000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 13702000,
+      "floor": 13167000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 20553000,
+      "value": 19750500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 13702000,
+      "price": 13167000,
       "loanable": null
     },
     "bid": {
@@ -311,12 +311,21 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": null,
+        "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 309554,
+        "id_player": 71640,
+        "category": "injury",
+        "description": "Luxación de clavícula",
+        "duration": "Pendiente de evolución",
+        "since": "2026-10-13 18:06:24",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -340,7 +349,7 @@
       "id": 4055,
       "number": 14,
       "shortName": "J14",
-      "startDate": "2026-11-28 14:00:00",
+      "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
         "points": null,
@@ -484,7 +493,7 @@
       "id": 4064,
       "number": 23,
       "shortName": "J23",
-      "startDate": "2027-02-07 20:00:00",
+      "startDate": "2026-12-02 19:00:00",
       "endDate": "2027-02-07 20:00:00",
       "points": {
         "points": null,
@@ -749,21 +758,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 14114000,
-      "change": -412000,
-      "sign": -412
+      "value": 13702000,
+      "change": -535000,
+      "sign": -535
     },
     {
       "time": "Una semana",
-      "value": 17405000,
-      "change": -3703000,
-      "sign": "-3.703.000"
+      "value": 16887000,
+      "change": -3720000,
+      "sign": "-3.720.000"
     },
     {
       "time": "Un mes",
-      "value": 22506000,
-      "change": -8804000,
-      "sign": "-8.804.000"
+      "value": 22906000,
+      "change": -9739000,
+      "sign": "-9.739.000"
     }
   ],
   "values_chart": {
@@ -1147,6 +1156,10 @@
       {
         "value": 13702000,
         "date": "6 nov 2026"
+      },
+      {
+        "value": 13167000,
+        "date": "7 nov 2026"
       }
     ],
     "max": {

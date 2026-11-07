@@ -3,15 +3,15 @@
     "id": 16868,
     "name": "Ander Guevara",
     "position": 3,
-    "points": 12,
-    "avg": 1.7,
+    "points": 16,
+    "avg": 2.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/16868.png?version=20251006023721",
     "isFavorite": 0,
-    "value": 353000,
-    "previousValue": 388000,
+    "value": 329000,
+    "previousValue": 353000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 353000,
+      "price": 329000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 301
+    "clausesRanking": 302
   },
   "id": 16868,
   "player_extra": {
@@ -268,12 +268,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 5,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -297,7 +299,7 @@
       "id": 4055,
       "number": 14,
       "shortName": "J14",
-      "startDate": "2026-11-28 14:00:00",
+      "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
         "points": null,
@@ -441,7 +443,7 @@
       "id": 4064,
       "number": 23,
       "shortName": "J23",
-      "startDate": "2027-02-07 20:00:00",
+      "startDate": "2026-12-02 19:00:00",
       "endDate": "2027-02-07 20:00:00",
       "points": {
         "points": null,
@@ -697,10 +699,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 11,
-      "avg": 1.8333,
+      "points": 16,
+      "avg": 2.2857,
       "id_team": 48,
-      "last_gameweek": 11
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -727,35 +729,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 388000,
-      "change": -35000,
-      "sign": -35
+      "value": 353000,
+      "change": -24000,
+      "sign": -24
     },
     {
       "time": "Una semana",
       "value": 329000,
-      "change": 24000,
-      "sign": 24
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Un mes",
-      "value": 2206000,
-      "change": -1853000,
-      "sign": "-1.853.000"
+      "value": 2200000,
+      "change": -1871000,
+      "sign": "-1.871.000"
     },
     {
       "time": "Un año",
-      "value": 953000,
-      "change": -600000,
-      "sign": -600
+      "value": 1192000,
+      "change": -863000,
+      "sign": -863
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 953000,
-        "date": "6 nov 2025"
-      },
       {
         "value": 1192000,
         "date": "7 nov 2025"
@@ -2215,6 +2213,10 @@
       {
         "value": 353000,
         "date": "6 nov 2026"
+      },
+      {
+        "value": 329000,
+        "date": "7 nov 2026"
       }
     ],
     "max": {
@@ -2265,8 +2267,8 @@
   "away": {
     "16868": {
       "id": 16868,
-      "points": 7,
-      "avg": 2.3333
+      "points": 12,
+      "avg": 3
     }
   },
   "owners": [],

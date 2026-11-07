@@ -3,15 +3,15 @@
     "id": 78394,
     "name": "Nicolás Valentini",
     "position": 2,
-    "points": 21,
-    "avg": 2.6,
+    "points": 30,
+    "avg": 3.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/78394.png?version=20260807143729",
     "isFavorite": 0,
-    "value": 3538000,
-    "previousValue": 3730000,
+    "value": 3559000,
+    "previousValue": 3538000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3538000,
+      "floor": 3559000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 5307000,
+      "value": 5338500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3538000,
+      "price": 3559000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 251
   },
   "id": 78394,
   "player_extra": {
     "matches": 8,
     "goals": 0,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -269,12 +269,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": 2,
-        "isLive": true
+        "points": 11,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -298,7 +300,7 @@
       "id": 4055,
       "number": 14,
       "shortName": "J14",
-      "startDate": "2026-11-28 14:00:00",
+      "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
         "points": null,
@@ -442,7 +444,7 @@
       "id": 4064,
       "number": 23,
       "shortName": "J23",
-      "startDate": "2027-02-07 20:00:00",
+      "startDate": "2026-12-02 19:00:00",
       "endDate": "2027-02-07 20:00:00",
       "points": {
         "points": null,
@@ -698,30 +700,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 19,
-      "avg": 2.7143,
+      "points": 30,
+      "avg": 3.75,
       "id_team": 48,
-      "last_gameweek": 10
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 3730000,
-      "change": -192000,
-      "sign": -192
+      "value": 3538000,
+      "change": 21000,
+      "sign": 21
     },
     {
       "time": "Una semana",
-      "value": 4836000,
-      "change": -1298000,
-      "sign": "-1.298.000"
+      "value": 4659000,
+      "change": -1100000,
+      "sign": "-1.100.000"
     },
     {
       "time": "Un mes",
-      "value": 4231000,
-      "change": -693000,
-      "sign": -693
+      "value": 4363000,
+      "change": -804000,
+      "sign": -804
     }
   ],
   "values_chart": {
@@ -1089,6 +1091,10 @@
       {
         "value": 3538000,
         "date": "6 nov 2026"
+      },
+      {
+        "value": 3559000,
+        "date": "7 nov 2026"
       }
     ],
     "max": {
@@ -1139,8 +1145,8 @@
   "away": {
     "78394": {
       "id": 78394,
-      "points": 11,
-      "avg": 2.75
+      "points": 22,
+      "avg": 4.4
     }
   },
   "owners": [],

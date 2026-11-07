@@ -3,15 +3,15 @@
     "id": 3060,
     "name": "Mariano Díaz",
     "position": 4,
-    "points": 61,
-    "avg": 5.5,
+    "points": 63,
+    "avg": 5.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3060.png?version=20231221112719",
     "isFavorite": 0,
-    "value": 21133000,
-    "previousValue": 21127000,
+    "value": 21082000,
+    "previousValue": 21133000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 21133000,
+      "floor": 21082000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 31699500,
+      "value": 31623000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 21133000,
+      "price": 21082000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 180,
       "weight": 79
     },
-    "clausesRanking": 215
+    "clausesRanking": 214
   },
   "id": 3060,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 4,
     "cards": 2
   },
@@ -292,12 +292,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -321,7 +323,7 @@
       "id": 4055,
       "number": 14,
       "shortName": "J14",
-      "startDate": "2026-11-28 14:00:00",
+      "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
         "points": null,
@@ -465,7 +467,7 @@
       "id": 4064,
       "number": 23,
       "shortName": "J23",
-      "startDate": "2027-02-07 20:00:00",
+      "startDate": "2026-12-02 19:00:00",
       "endDate": "2027-02-07 20:00:00",
       "points": {
         "points": null,
@@ -721,10 +723,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 61,
-      "avg": 5.5455,
+      "points": 63,
+      "avg": 5.25,
       "id_team": 48,
-      "last_gameweek": 11
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -744,35 +746,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 21127000,
-      "change": 6000,
-      "sign": 6
+      "value": 21133000,
+      "change": -51000,
+      "sign": -51
     },
     {
       "time": "Una semana",
-      "value": 22043000,
-      "change": -910000,
-      "sign": -910
+      "value": 21705000,
+      "change": -623000,
+      "sign": -623
     },
     {
       "time": "Un mes",
-      "value": 26156000,
-      "change": -5023000,
-      "sign": "-5.023.000"
+      "value": 26756000,
+      "change": -5674000,
+      "sign": "-5.674.000"
     },
     {
       "time": "Un año",
-      "value": 404000,
-      "change": 20729000,
-      "sign": "+20.729.000"
+      "value": 384000,
+      "change": 20698000,
+      "sign": "+20.698.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 404000,
-        "date": "6 nov 2025"
-      },
       {
         "value": 384000,
         "date": "7 nov 2025"
@@ -2232,6 +2230,10 @@
       {
         "value": 21133000,
         "date": "6 nov 2026"
+      },
+      {
+        "value": 21082000,
+        "date": "7 nov 2026"
       }
     ],
     "max": {
@@ -2282,8 +2284,8 @@
   "away": {
     "3060": {
       "id": 3060,
-      "points": 27,
-      "avg": 5.4
+      "points": 29,
+      "avg": 4.8333
     }
   },
   "owners": [],

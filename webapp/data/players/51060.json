@@ -5,17 +5,17 @@
     "position": 3,
     "points": 14,
     "avg": 2,
-    "status": "doubt",
+    "status": "injury",
     "id_competition": 1,
     "injury": {
-      "category": "doubt",
+      "category": "injury",
       "description": "Molestias",
-      "duration": "Duda esta jornada"
+      "duration": "Baja esta jornada"
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/51060.png?version=20260719140022",
     "isFavorite": 0,
-    "value": 513000,
-    "previousValue": 329000,
+    "value": 471000,
+    "previousValue": 513000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 513000,
+      "price": 471000,
       "loanable": null
     },
     "bid": {
@@ -291,7 +291,7 @@
         "id_player": 51060,
         "category": "injury",
         "description": "Molestias",
-        "duration": "Duda esta jornada",
+        "duration": "Baja esta jornada",
         "since": "2026-10-30 14:49:38",
         "until": null,
         "status": "Lesionado"
@@ -307,8 +307,8 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": "?",
+        "isLive": true
       },
       "events": null,
       "injury": null,
@@ -336,7 +336,7 @@
       "id": 4055,
       "number": 14,
       "shortName": "J14",
-      "startDate": "2026-11-28 14:00:00",
+      "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
         "points": null,
@@ -480,7 +480,7 @@
       "id": 4064,
       "number": 23,
       "shortName": "J23",
-      "startDate": "2027-02-07 20:00:00",
+      "startDate": "2026-12-02 19:00:00",
       "endDate": "2027-02-07 20:00:00",
       "points": {
         "points": null,
@@ -759,21 +759,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 184000,
-      "sign": 184
+      "value": 513000,
+      "change": -42000,
+      "sign": -42
     },
     {
       "time": "Una semana",
-      "value": 392000,
-      "change": 121000,
-      "sign": 121
+      "value": 329000,
+      "change": 142000,
+      "sign": 142
     },
     {
       "time": "Un mes",
-      "value": 4665000,
-      "change": -4152000,
-      "sign": "-4.152.000"
+      "value": 4432000,
+      "change": -3961000,
+      "sign": "-3.961.000"
     }
   ],
   "values_chart": {
@@ -1221,6 +1221,10 @@
       {
         "value": 513000,
         "date": "6 nov 2026"
+      },
+      {
+        "value": 471000,
+        "date": "7 nov 2026"
       }
     ],
     "max": {
@@ -1236,28 +1240,28 @@
     "51060": {
       "id": 51060,
       "id_team": 13,
-      "id_match": 38041,
-      "id_gameweek": 4053,
-      "id_home": 13,
-      "id_away": 1490,
+      "id_match": 38052,
+      "id_gameweek": 4054,
+      "id_home": 50,
+      "id_away": 13,
       "date": {
-        "ts": 1794056400,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1795368600,
+        "text": "22 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "22 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Racing de Santander",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Osasuna",
+      "away": "Málaga",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     }
   },
   "starter": false,

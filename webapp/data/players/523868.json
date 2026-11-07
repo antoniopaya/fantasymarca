@@ -3,15 +3,15 @@
     "id": 523868,
     "name": "Robbie Ure",
     "position": 4,
-    "points": 37,
-    "avg": 3.4,
+    "points": 39,
+    "avg": 3.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/523868.png?version=20260811120619",
     "isFavorite": 0,
-    "value": 8438000,
-    "previousValue": 8574000,
+    "value": 8142000,
+    "previousValue": 8438000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 8438000,
+      "floor": 8142000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 12657000,
+      "value": 12213000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 8438000,
+      "price": 8142000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 189,
       "weight": null
     },
-    "clausesRanking": 242
+    "clausesRanking": 240
   },
   "id": 523868,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 1,
     "cards": 1
   },
@@ -281,12 +281,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -310,7 +312,7 @@
       "id": 4055,
       "number": 14,
       "shortName": "J14",
-      "startDate": "2026-11-28 14:00:00",
+      "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
         "points": null,
@@ -454,7 +456,7 @@
       "id": 4064,
       "number": 23,
       "shortName": "J23",
-      "startDate": "2027-02-07 20:00:00",
+      "startDate": "2026-12-02 19:00:00",
       "endDate": "2027-02-07 20:00:00",
       "points": {
         "points": null,
@@ -710,30 +712,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 37,
-      "avg": 3.3636,
+      "points": 39,
+      "avg": 3.25,
       "id_team": 17,
-      "last_gameweek": 11
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 8574000,
-      "change": -136000,
-      "sign": -136
+      "value": 8438000,
+      "change": -296000,
+      "sign": -296
     },
     {
       "time": "Una semana",
-      "value": 10091000,
-      "change": -1653000,
-      "sign": "-1.653.000"
+      "value": 9750000,
+      "change": -1608000,
+      "sign": "-1.608.000"
     },
     {
       "time": "Un mes",
-      "value": 7053000,
-      "change": 1385000,
-      "sign": "+1.385.000"
+      "value": 6960000,
+      "change": 1182000,
+      "sign": "+1.182.000"
     }
   ],
   "values_chart": {
@@ -1085,6 +1087,10 @@
       {
         "value": 8438000,
         "date": "6 nov 2026"
+      },
+      {
+        "value": 8142000,
+        "date": "7 nov 2026"
       }
     ],
     "max": {
@@ -1128,8 +1134,8 @@
   "home": {
     "523868": {
       "id": 523868,
-      "points": 16,
-      "avg": 3.2
+      "points": 18,
+      "avg": 3
     }
   },
   "away": {

@@ -3,15 +3,15 @@
     "id": 60872,
     "name": "Rubén Vargas",
     "position": 3,
-    "points": 6,
-    "avg": 1.2,
+    "points": 5,
+    "avg": 1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60872.png?version=20250110103914",
     "isFavorite": 0,
-    "value": 5665000,
-    "previousValue": 5596000,
+    "value": 5752000,
+    "previousValue": 5665000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5665000,
+      "floor": 5752000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8497500,
+      "value": 8628000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5665000,
+      "price": 5752000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 179,
       "weight": null
     },
-    "clausesRanking": 172
+    "clausesRanking": 139
   },
   "id": 60872,
   "player_extra": {
@@ -304,14 +304,15 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": -1,
         "isLive": false
       },
       "events": [
+        "sub_out",
         "missed_penalty"
       ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -335,7 +336,7 @@
       "id": 4055,
       "number": 14,
       "shortName": "J14",
-      "startDate": "2026-11-28 14:00:00",
+      "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
         "points": null,
@@ -479,7 +480,7 @@
       "id": 4064,
       "number": 23,
       "shortName": "J23",
-      "startDate": "2027-02-07 20:00:00",
+      "startDate": "2026-12-02 19:00:00",
       "endDate": "2027-02-07 20:00:00",
       "points": {
         "points": null,
@@ -735,10 +736,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 6,
-      "avg": 1.5,
+      "points": 5,
+      "avg": 1,
       "id_team": 17,
-      "last_gameweek": 11
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -758,35 +759,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5596000,
-      "change": 69000,
-      "sign": 69
+      "value": 5665000,
+      "change": 87000,
+      "sign": 87
     },
     {
       "time": "Una semana",
-      "value": 5680000,
-      "change": -15000,
-      "sign": -15
+      "value": 5732000,
+      "change": 20000,
+      "sign": 20
     },
     {
       "time": "Un mes",
-      "value": 4624000,
-      "change": 1041000,
-      "sign": "+1.041.000"
+      "value": 4526000,
+      "change": 1226000,
+      "sign": "+1.226.000"
     },
     {
       "time": "Un año",
-      "value": 39957000,
+      "value": 40044000,
       "change": -34292000,
       "sign": "-34.292.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 39957000,
-        "date": "6 nov 2025"
-      },
       {
         "value": 40044000,
         "date": "7 nov 2025"
@@ -2246,6 +2243,10 @@
       {
         "value": 5665000,
         "date": "6 nov 2026"
+      },
+      {
+        "value": 5752000,
+        "date": "7 nov 2026"
       }
     ],
     "max": {
@@ -2289,8 +2290,8 @@
   "home": {
     "60872": {
       "id": 60872,
-      "points": 5,
-      "avg": 2.5
+      "points": 4,
+      "avg": 1.3333
     }
   },
   "away": {

@@ -3,15 +3,15 @@
     "id": 70917,
     "name": "Arouna Sangante",
     "position": 2,
-    "points": 11,
-    "avg": 2.2,
+    "points": 15,
+    "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70917.png?version=20260616153146",
     "isFavorite": 0,
-    "value": 329000,
-    "previousValue": 401000,
+    "value": 445000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 445000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 189,
       "weight": null
     },
-    "clausesRanking": null
+    "clausesRanking": 417
   },
   "id": 70917,
   "player_extra": {
     "matches": 5,
     "goals": 0,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -277,12 +277,15 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 5,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -306,7 +309,7 @@
       "id": 4055,
       "number": 14,
       "shortName": "J14",
-      "startDate": "2026-11-28 14:00:00",
+      "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
         "points": null,
@@ -450,7 +453,7 @@
       "id": 4064,
       "number": 23,
       "shortName": "J23",
-      "startDate": "2027-02-07 20:00:00",
+      "startDate": "2026-12-02 19:00:00",
       "endDate": "2027-02-07 20:00:00",
       "points": {
         "points": null,
@@ -706,30 +709,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 10,
-      "avg": 2.5,
+      "points": 15,
+      "avg": 3,
       "id_team": 17,
-      "last_gameweek": 7
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 401000,
-      "change": -72000,
-      "sign": -72
+      "value": 329000,
+      "change": 116000,
+      "sign": 116
     },
     {
       "time": "Una semana",
-      "value": 450000,
-      "change": -121000,
-      "sign": -121
+      "value": 329000,
+      "change": 116000,
+      "sign": 116
     },
     {
       "time": "Un mes",
-      "value": 1210000,
-      "change": -881000,
-      "sign": -881
+      "value": 1191000,
+      "change": -746000,
+      "sign": -746
     }
   ],
   "values_chart": {
@@ -1305,6 +1308,10 @@
       {
         "value": 329000,
         "date": "6 nov 2026"
+      },
+      {
+        "value": 445000,
+        "date": "7 nov 2026"
       }
     ],
     "max": {
@@ -1348,8 +1355,8 @@
   "home": {
     "70917": {
       "id": 70917,
-      "points": 4,
-      "avg": 2
+      "points": 9,
+      "avg": 3
     }
   },
   "away": {
