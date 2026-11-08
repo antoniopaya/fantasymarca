@@ -4,14 +4,14 @@
     "name": "Justin De Haas",
     "position": 2,
     "points": 33,
-    "avg": 5.5,
+    "avg": 4.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71038.png?version=20260701170915",
     "isFavorite": 0,
-    "value": 18249000,
-    "previousValue": 18839000,
+    "value": 17685000,
+    "previousValue": 18249000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 18249000,
+      "floor": 17685000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 27373500,
+      "value": 26527500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 18249000,
+      "price": 17685000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 192,
       "weight": null
     },
-    "clausesRanking": 211
+    "clausesRanking": 248
   },
   "id": 71038,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 2
   },
@@ -291,12 +291,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -721,29 +723,29 @@
     {
       "season": "26/27",
       "points": 33,
-      "avg": 5.5,
+      "avg": 4.7143,
       "id_team": 19,
-      "last_gameweek": 10
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 18839000,
-      "change": -590000,
-      "sign": -590
+      "value": 18249000,
+      "change": -564000,
+      "sign": -564
     },
     {
       "time": "Una semana",
-      "value": 19425000,
-      "change": -1176000,
-      "sign": "-1.176.000"
+      "value": 19907000,
+      "change": -2222000,
+      "sign": "-2.222.000"
     },
     {
       "time": "Un mes",
-      "value": 9205000,
-      "change": 9044000,
-      "sign": "+9.044.000"
+      "value": 9475000,
+      "change": 8210000,
+      "sign": "+8.210.000"
     }
   ],
   "values_chart": {
@@ -1267,6 +1269,10 @@
       {
         "value": 18249000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 17685000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -1282,28 +1288,28 @@
     "71038": {
       "id": 71038,
       "id_team": 19,
-      "id_match": 38045,
-      "id_gameweek": 4053,
-      "id_home": 19,
-      "id_away": 15,
+      "id_match": 38053,
+      "id_gameweek": 4054,
+      "id_home": 14,
+      "id_away": 19,
       "date": {
-        "ts": 1794081600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795274100,
+        "text": "21 nov 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "21 nov",
+          "time": "16:15",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Real Madrid",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Valencia",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
@@ -1311,7 +1317,7 @@
     "71038": {
       "id": 71038,
       "points": 20,
-      "avg": 5
+      "avg": 4
     }
   },
   "away": {

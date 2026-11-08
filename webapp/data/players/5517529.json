@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/5517529.png?version=20261025171714",
     "isFavorite": 0,
-    "value": 329000,
-    "previousValue": 349000,
+    "value": 525000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 525000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 190,
       "weight": null
     },
-    "clausesRanking": 360
+    "clausesRanking": null
   },
   "id": 5517529,
   "player_extra": {
@@ -267,7 +267,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -700,15 +700,15 @@
   "values": [
     {
       "time": "Un día",
-      "value": 349000,
-      "change": -20000,
-      "sign": -20
+      "value": 329000,
+      "change": 196000,
+      "sign": 196
     },
     {
       "time": "Una semana",
       "value": 329000,
-      "change": 0,
-      "sign": 0
+      "change": 196000,
+      "sign": 196
     }
   ],
   "values_chart": {
@@ -764,11 +764,15 @@
       {
         "value": 329000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 525000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
-      "value": 489000,
-      "date": "4 nov 2026"
+      "value": 525000,
+      "date": "8 nov 2026"
     },
     "min": {
       "value": 329000,
@@ -779,28 +783,28 @@
     "5517529": {
       "id": 5517529,
       "id_team": 1,
-      "id_match": 38042,
-      "id_gameweek": 4053,
-      "id_home": 50,
-      "id_away": 1,
+      "id_match": 38047,
+      "id_gameweek": 4054,
+      "id_home": 1,
+      "id_away": 8,
       "date": {
-        "ts": 1794072600,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795204800,
+        "text": "20 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "20 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Athletic Club",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "home": "Athletic Club",
+      "away": "Espanyol",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,

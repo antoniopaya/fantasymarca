@@ -3,15 +3,15 @@
     "id": 61013,
     "name": "Antony Santos",
     "position": 4,
-    "points": 42,
-    "avg": 4.2,
+    "points": 44,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/61013.png?version=20251228214253",
     "isFavorite": 0,
-    "value": 58745000,
-    "previousValue": 59071000,
+    "value": 58265000,
+    "previousValue": 58745000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 58745000,
+      "floor": 58265000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 88117500,
+      "value": 87397500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 58745000,
+      "price": 58265000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 172,
       "weight": null
     },
-    "clausesRanking": 16
+    "clausesRanking": 18
   },
   "id": 61013,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 0,
     "cards": 0
   },
@@ -274,10 +274,12 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 2,
+        "isLive": true
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
       "teamPlayed": false,
       "rivalId": 23,
@@ -726,35 +728,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 59071000,
-      "change": -326000,
-      "sign": -326
+      "value": 58745000,
+      "change": -480000,
+      "sign": -480
     },
     {
       "time": "Una semana",
-      "value": 57134000,
-      "change": 1611000,
-      "sign": "+1.611.000"
+      "value": 57430000,
+      "change": 835000,
+      "sign": 835
     },
     {
       "time": "Un mes",
-      "value": 48763000,
-      "change": 9982000,
-      "sign": "+9.982.000"
+      "value": 49136000,
+      "change": 9129000,
+      "sign": "+9.129.000"
     },
     {
       "time": "Un año",
-      "value": 54412000,
-      "change": 4333000,
-      "sign": "+4.333.000"
+      "value": 54774000,
+      "change": 3491000,
+      "sign": "+3.491.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 54412000,
-        "date": "7 nov 2025"
-      },
       {
         "value": 54774000,
         "date": "8 nov 2025"
@@ -2214,6 +2212,10 @@
       {
         "value": 58745000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 58265000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -2229,27 +2231,27 @@
     "61013": {
       "id": 61013,
       "id_team": 4,
-      "id_match": 38039,
-      "id_gameweek": 4053,
-      "id_home": 23,
+      "id_match": 38056,
+      "id_gameweek": 4054,
+      "id_home": 17,
       "id_away": 4,
       "date": {
-        "ts": 1794142800,
-        "text": "dom 14:00",
-        "format": "EEE H:mm",
+        "ts": 1795282200,
+        "text": "21 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "21 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Elche",
+      "home": "Sevilla",
       "away": "Betis",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },

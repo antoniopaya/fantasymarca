@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/217.png?version=20251006015048",
     "isFavorite": 0,
-    "value": 329000,
-    "previousValue": 353000,
+    "value": 513000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 513000,
       "loanable": null
     },
     "bid": {
@@ -331,8 +331,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 312304,
+        "id_player": 217,
+        "category": "injury",
+        "description": "Rotura de menisco",
+        "duration": "Baja esta jornada",
+        "since": "2026-11-05 17:24:25",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -779,35 +788,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 353000,
-      "change": -24000,
-      "sign": -24
+      "value": 329000,
+      "change": 184000,
+      "sign": 184
     },
     {
       "time": "Una semana",
-      "value": 429000,
-      "change": -100000,
-      "sign": -100
+      "value": 329000,
+      "change": 184000,
+      "sign": 184
     },
     {
       "time": "Un mes",
-      "value": 329000,
-      "change": 0,
-      "sign": 0
+      "value": 525000,
+      "change": -12000,
+      "sign": -12
     },
     {
       "time": "Un año",
-      "value": 505000,
-      "change": -176000,
-      "sign": -176
+      "value": 374000,
+      "change": 139000,
+      "sign": 139
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 505000,
-        "date": "7 nov 2025"
-      },
       {
         "value": 374000,
         "date": "8 nov 2025"
@@ -2267,6 +2272,10 @@
       {
         "value": 329000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 513000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -2282,28 +2291,28 @@
     "217": {
       "id": 217,
       "id_team": 19,
-      "id_match": 38045,
-      "id_gameweek": 4053,
-      "id_home": 19,
-      "id_away": 15,
+      "id_match": 38053,
+      "id_gameweek": 4054,
+      "id_home": 14,
+      "id_away": 19,
       "date": {
-        "ts": 1794081600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795274100,
+        "text": "21 nov 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "21 nov",
+          "time": "16:15",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Real Madrid",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Valencia",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,

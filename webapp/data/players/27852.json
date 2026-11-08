@@ -3,15 +3,15 @@
     "id": 27852,
     "name": "Daniel Vivian",
     "position": 2,
-    "points": 15,
-    "avg": 7.5,
+    "points": 23,
+    "avg": 7.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/27852.png?version=20250204170236",
     "isFavorite": 0,
-    "value": 11233000,
-    "previousValue": 10768000,
+    "value": 11753000,
+    "previousValue": 11233000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 11233000,
+      "floor": 11753000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 16849500,
+      "value": 17629500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 11233000,
+      "price": 11753000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 21
+    "clausesRanking": 17
   },
   "id": 27852,
   "player_extra": {
-    "matches": 2,
+    "matches": 3,
     "goals": 0,
     "cards": 0
   },
@@ -314,12 +314,12 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 8,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -743,10 +743,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 15,
-      "avg": 7.5,
+      "points": 23,
+      "avg": 7.6667,
       "id_team": 1,
-      "last_gameweek": 11
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -773,35 +773,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 10768000,
-      "change": 465000,
-      "sign": 465
+      "value": 11233000,
+      "change": 520000,
+      "sign": 520
     },
     {
       "time": "Una semana",
-      "value": 8262000,
-      "change": 2971000,
-      "sign": "+2.971.000"
+      "value": 8589000,
+      "change": 3164000,
+      "sign": "+3.164.000"
     },
     {
       "time": "Un mes",
-      "value": 4851000,
-      "change": 6382000,
-      "sign": "+6.382.000"
+      "value": 4981000,
+      "change": 6772000,
+      "sign": "+6.772.000"
     },
     {
       "time": "Un año",
-      "value": 28104000,
-      "change": -16871000,
-      "sign": "-16.871.000"
+      "value": 28457000,
+      "change": -16704000,
+      "sign": "-16.704.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 28104000,
-        "date": "7 nov 2025"
-      },
       {
         "value": 28457000,
         "date": "8 nov 2025"
@@ -2261,6 +2257,10 @@
       {
         "value": 11233000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 11753000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -2276,28 +2276,28 @@
     "27852": {
       "id": 27852,
       "id_team": 1,
-      "id_match": 38042,
-      "id_gameweek": 4053,
-      "id_home": 50,
-      "id_away": 1,
+      "id_match": 38047,
+      "id_gameweek": 4054,
+      "id_home": 1,
+      "id_away": 8,
       "date": {
-        "ts": 1794072600,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795204800,
+        "text": "20 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "20 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Athletic Club",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "home": "Athletic Club",
+      "away": "Espanyol",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,
@@ -2310,8 +2310,9 @@
   },
   "away": {
     "27852": {
-      "points": 0,
-      "avg": 0
+      "id": 27852,
+      "points": 8,
+      "avg": 8
     }
   },
   "owners": [],

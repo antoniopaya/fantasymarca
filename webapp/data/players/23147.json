@@ -4,14 +4,14 @@
     "name": "Tete Morente",
     "position": 3,
     "points": 34,
-    "avg": 3.1,
+    "avg": 2.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/23147.png?version=20260203085617",
     "isFavorite": 0,
-    "value": 4311000,
-    "previousValue": 4398000,
+    "value": 4239000,
+    "previousValue": 4311000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4311000,
+      "floor": 4239000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6466500,
+      "value": 6358500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4311000,
+      "price": 4239000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 180,
       "weight": 76
     },
-    "clausesRanking": 238
+    "clausesRanking": 216
   },
   "id": 23147,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 0,
     "cards": 2
   },
@@ -289,7 +289,9 @@
         "points": null,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
       "teamPlayed": false,
       "rivalId": 4,
@@ -731,21 +733,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4398000,
-      "change": -87000,
-      "sign": -87
+      "value": 4311000,
+      "change": -72000,
+      "sign": -72
     },
     {
       "time": "Una semana",
-      "value": 5177000,
-      "change": -866000,
-      "sign": -866
+      "value": 4988000,
+      "change": -749000,
+      "sign": -749
     },
     {
       "time": "Un mes",
-      "value": 7428000,
-      "change": -3117000,
-      "sign": "-3.117.000"
+      "value": 7317000,
+      "change": -3078000,
+      "sign": "-3.078.000"
     }
   ],
   "values_chart": {
@@ -1857,6 +1859,10 @@
       {
         "value": 4311000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 4239000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -1872,28 +1878,28 @@
     "23147": {
       "id": 23147,
       "id_team": 23,
-      "id_match": 38039,
-      "id_gameweek": 4053,
-      "id_home": 23,
-      "id_away": 4,
+      "id_match": 38051,
+      "id_gameweek": 4054,
+      "id_home": 12,
+      "id_away": 23,
       "date": {
-        "ts": 1794142800,
-        "text": "dom 14:00",
-        "format": "EEE H:mm",
+        "ts": 1795464000,
+        "text": "23 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "23 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Elche",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Levante",
+      "away": "Elche",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   },
   "starter": false,

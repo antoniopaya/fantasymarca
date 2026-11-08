@@ -3,15 +3,15 @@
     "id": 65188,
     "name": "Thiago Pitarch",
     "position": 3,
-    "points": 0,
-    "avg": 0,
+    "points": 1,
+    "avg": 1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65188.png?version=20250818161450",
     "isFavorite": 0,
-    "value": 465000,
-    "previousValue": 329000,
+    "value": 451000,
+    "previousValue": 465000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 465000,
+      "price": 451000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 179,
       "weight": null
     },
-    "clausesRanking": 332
+    "clausesRanking": 380
   },
   "id": 65188,
   "player_extra": {
-    "matches": 0,
+    "matches": 1,
     "goals": 0,
     "cards": 0
   },
@@ -296,12 +296,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -724,6 +726,13 @@
   ],
   "points_history": [
     {
+      "season": "26/27",
+      "points": 1,
+      "avg": 1,
+      "id_team": 15,
+      "last_gameweek": 12
+    },
+    {
       "season": "25/26",
       "points": 44,
       "avg": 4.4,
@@ -734,35 +743,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 136000,
-      "sign": 136
+      "value": 465000,
+      "change": -14000,
+      "sign": -14
     },
     {
       "time": "Una semana",
-      "value": 357000,
-      "change": 108000,
-      "sign": 108
+      "value": 345000,
+      "change": 106000,
+      "sign": 106
     },
     {
       "time": "Un mes",
-      "value": 509000,
-      "change": -44000,
-      "sign": -44
+      "value": 511000,
+      "change": -60000,
+      "sign": -60
     },
     {
       "time": "Un año",
-      "value": 365000,
-      "change": 100000,
-      "sign": 100
+      "value": 329000,
+      "change": 122000,
+      "sign": 122
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 365000,
-        "date": "7 nov 2025"
-      },
       {
         "value": 329000,
         "date": "8 nov 2025"
@@ -1826,6 +1831,10 @@
       {
         "value": 465000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 451000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -1841,28 +1850,28 @@
     "65188": {
       "id": 65188,
       "id_team": 15,
-      "id_match": 38045,
-      "id_gameweek": 4053,
-      "id_home": 19,
-      "id_away": 15,
+      "id_match": 38054,
+      "id_gameweek": 4054,
+      "id_home": 15,
+      "id_away": 5,
       "date": {
-        "ts": 1794081600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795291200,
+        "text": "21 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "21 nov",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Real Madrid",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Real Madrid",
+      "away": "Celta",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     }
   },
   "starter": false,
@@ -1874,8 +1883,9 @@
   },
   "away": {
     "65188": {
-      "points": 0,
-      "avg": 0
+      "id": 65188,
+      "points": 1,
+      "avg": 1
     }
   },
   "owners": [],

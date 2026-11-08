@@ -3,15 +3,15 @@
     "id": 28780,
     "name": "Luismi Cruz",
     "position": 3,
-    "points": 53,
-    "avg": 4.8,
+    "points": 55,
+    "avg": 4.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/28780.png?version=20260621103122",
     "isFavorite": 0,
-    "value": 13173000,
-    "previousValue": 12868000,
+    "value": 13462000,
+    "previousValue": 13173000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 13173000,
+      "floor": 13462000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 19759500,
+      "value": 20193000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 13173000,
+      "price": 13462000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 166,
       "weight": null
     },
-    "clausesRanking": 210
+    "clausesRanking": 200
   },
   "id": 28780,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 1,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -286,12 +286,15 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -715,30 +718,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 53,
-      "avg": 4.8182,
+      "points": 55,
+      "avg": 4.5833,
       "id_team": 6,
-      "last_gameweek": 11
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 12868000,
-      "change": 305000,
-      "sign": 305
+      "value": 13173000,
+      "change": 289000,
+      "sign": 289
     },
     {
       "time": "Una semana",
-      "value": 13117000,
-      "change": 56000,
-      "sign": 56
+      "value": 12723000,
+      "change": 739000,
+      "sign": 739
     },
     {
       "time": "Un mes",
-      "value": 20421000,
-      "change": -7248000,
-      "sign": "-7.248.000"
+      "value": 20234000,
+      "change": -6772000,
+      "sign": "-6.772.000"
     }
   ],
   "values_chart": {
@@ -1298,6 +1301,10 @@
       {
         "value": 13173000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 13462000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -1313,27 +1320,27 @@
     "28780": {
       "id": 28780,
       "id_team": 6,
-      "id_match": 38040,
-      "id_gameweek": 4053,
-      "id_home": 8,
+      "id_match": 38048,
+      "id_gameweek": 4054,
+      "id_home": 48,
       "id_away": 6,
       "date": {
-        "ts": 1794064500,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1795266000,
+        "text": "21 nov 14:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "21 nov",
+          "time": "14:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
+      "home": "Alavés",
       "away": "Deportivo da Coruña",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
@@ -1348,8 +1355,8 @@
   "away": {
     "28780": {
       "id": 28780,
-      "points": 29,
-      "avg": 5.8
+      "points": 31,
+      "avg": 5.1667
     }
   },
   "owners": [],

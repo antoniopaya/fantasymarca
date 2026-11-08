@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/23172.png?version=20251003195730",
     "isFavorite": 0,
-    "value": 486000,
-    "previousValue": 691000,
+    "value": 425000,
+    "previousValue": 486000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 486000,
+      "price": 425000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 189,
       "weight": null
     },
-    "clausesRanking": 337
+    "clausesRanking": 323
   },
   "id": 23172,
   "player_extra": {
@@ -296,8 +296,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 312546,
+        "id_player": 23172,
+        "category": "injury",
+        "description": "Molestias",
+        "duration": "Baja esta jornada",
+        "since": "2026-11-06 19:30:42",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -765,35 +774,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 691000,
-      "change": -205000,
-      "sign": -205
+      "value": 486000,
+      "change": -61000,
+      "sign": -61
     },
     {
       "time": "Una semana",
-      "value": 1742000,
-      "change": -1256000,
-      "sign": "-1.256.000"
+      "value": 1427000,
+      "change": -1002000,
+      "sign": "-1.002.000"
     },
     {
       "time": "Un mes",
-      "value": 5375000,
-      "change": -4889000,
-      "sign": "-4.889.000"
+      "value": 5245000,
+      "change": -4820000,
+      "sign": "-4.820.000"
     },
     {
       "time": "Un año",
-      "value": 709000,
-      "change": -223000,
-      "sign": -223
+      "value": 651000,
+      "change": -226000,
+      "sign": -226
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 709000,
-        "date": "7 nov 2025"
-      },
       {
         "value": 651000,
         "date": "8 nov 2025"
@@ -2253,6 +2258,10 @@
       {
         "value": 486000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 425000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -2268,28 +2277,28 @@
     "23172": {
       "id": 23172,
       "id_team": 8,
-      "id_match": 38040,
-      "id_gameweek": 4053,
-      "id_home": 8,
-      "id_away": 6,
+      "id_match": 38047,
+      "id_gameweek": 4054,
+      "id_home": 1,
+      "id_away": 8,
       "date": {
-        "ts": 1794064500,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1795204800,
+        "text": "20 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "20 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
-      "away": "Deportivo da Coruña",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Athletic Club",
+      "away": "Espanyol",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,

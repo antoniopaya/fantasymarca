@@ -3,15 +3,15 @@
     "id": 68593,
     "name": "Lucas Cepeda",
     "position": 4,
-    "points": 41,
+    "points": 44,
     "avg": 3.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68593.png?version=20260323140945",
     "isFavorite": 0,
-    "value": 16538000,
-    "previousValue": 16169000,
+    "value": 17038000,
+    "previousValue": 16538000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 16538000,
+      "floor": 17038000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 24807000,
+      "value": 25557000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 16538000,
+      "price": 17038000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 177,
       "weight": null
     },
-    "clausesRanking": 82
+    "clausesRanking": 85
   },
   "id": 68593,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 0,
     "cards": 2
   },
@@ -285,10 +285,12 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 3,
+        "isLive": true
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
       "teamPlayed": false,
       "rivalId": 4,
@@ -730,21 +732,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 16169000,
-      "change": 369000,
-      "sign": 369
+      "value": 16538000,
+      "change": 500000,
+      "sign": 500
     },
     {
       "time": "Una semana",
-      "value": 13396000,
-      "change": 3142000,
-      "sign": "+3.142.000"
+      "value": 13811000,
+      "change": 3227000,
+      "sign": "+3.227.000"
     },
     {
       "time": "Un mes",
-      "value": 7071000,
-      "change": 9467000,
-      "sign": "+9.467.000"
+      "value": 7260000,
+      "change": 9778000,
+      "sign": "+9.778.000"
     }
   ],
   "values_chart": {
@@ -1888,11 +1890,15 @@
       {
         "value": 16538000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 17038000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
-      "value": 16538000,
-      "date": "7 nov 2026"
+      "value": 17038000,
+      "date": "8 nov 2026"
     },
     "min": {
       "value": 329000,
@@ -1903,28 +1909,28 @@
     "68593": {
       "id": 68593,
       "id_team": 23,
-      "id_match": 38039,
-      "id_gameweek": 4053,
-      "id_home": 23,
-      "id_away": 4,
+      "id_match": 38051,
+      "id_gameweek": 4054,
+      "id_home": 12,
+      "id_away": 23,
       "date": {
-        "ts": 1794142800,
-        "text": "dom 14:00",
-        "format": "EEE H:mm",
+        "ts": 1795464000,
+        "text": "23 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "23 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Elche",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Levante",
+      "away": "Elche",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   },
   "starter": false,

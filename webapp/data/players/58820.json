@@ -3,8 +3,8 @@
     "id": 58820,
     "name": "Marc Casadó",
     "position": 3,
-    "points": 9,
-    "avg": 3,
+    "points": 11,
+    "avg": 2.8,
     "status": "doubt",
     "id_competition": 1,
     "injury": {
@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/58820.png?version=20260217184708",
     "isFavorite": 0,
-    "value": 1635000,
-    "previousValue": 1443000,
+    "value": 1899000,
+    "previousValue": 1635000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1635000,
+      "floor": 1899000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2452500,
+      "value": 2848500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1635000,
+      "price": 1899000,
       "loanable": null
     },
     "bid": {
@@ -72,11 +72,11 @@
       "height": 172,
       "weight": null
     },
-    "clausesRanking": 143
+    "clausesRanking": 92
   },
   "id": 58820,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 0,
     "cards": 0
   },
@@ -297,12 +297,23 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "events": [
+        "sub_in"
+      ],
+      "injury": {
+        "id": 311470,
+        "id_player": 58820,
+        "category": "injury",
+        "description": "Fractura de clavícula",
+        "duration": "Duda esta jornada",
+        "since": "2026-10-29 20:10:10",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -726,10 +737,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 9,
-      "avg": 3,
+      "points": 11,
+      "avg": 2.75,
       "id_team": 6,
-      "last_gameweek": 7
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -749,35 +760,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1443000,
-      "change": 192000,
-      "sign": 192
+      "value": 1635000,
+      "change": 264000,
+      "sign": 264
     },
     {
       "time": "Una semana",
-      "value": 456000,
-      "change": 1179000,
-      "sign": "+1.179.000"
+      "value": 564000,
+      "change": 1335000,
+      "sign": "+1.335.000"
     },
     {
       "time": "Un mes",
-      "value": 2445000,
-      "change": -810000,
-      "sign": -810
+      "value": 2252000,
+      "change": -353000,
+      "sign": -353
     },
     {
       "time": "Un año",
-      "value": 8961000,
-      "change": -7326000,
-      "sign": "-7.326.000"
+      "value": 9290000,
+      "change": -7391000,
+      "sign": "-7.391.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 8961000,
-        "date": "7 nov 2025"
-      },
       {
         "value": 9290000,
         "date": "8 nov 2025"
@@ -2237,6 +2244,10 @@
       {
         "value": 1635000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 1899000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -2252,27 +2263,27 @@
     "58820": {
       "id": 58820,
       "id_team": 6,
-      "id_match": 38040,
-      "id_gameweek": 4053,
-      "id_home": 8,
+      "id_match": 38048,
+      "id_gameweek": 4054,
+      "id_home": 48,
       "id_away": 6,
       "date": {
-        "ts": 1794064500,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1795266000,
+        "text": "21 nov 14:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "21 nov",
+          "time": "14:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
+      "home": "Alavés",
       "away": "Deportivo da Coruña",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
@@ -2287,8 +2298,8 @@
   "away": {
     "58820": {
       "id": 58820,
-      "points": 7,
-      "avg": 3.5
+      "points": 9,
+      "avg": 3
     }
   },
   "owners": [],

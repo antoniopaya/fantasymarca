@@ -3,15 +3,15 @@
     "id": 40166,
     "name": "Aurélien Tchouaméni",
     "position": 3,
-    "points": 31,
-    "avg": 4.4,
+    "points": 37,
+    "avg": 4.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/40166.png?version=20251003183451",
     "isFavorite": 0,
-    "value": 26256000,
-    "previousValue": 25901000,
+    "value": 26638000,
+    "previousValue": 26256000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 26256000,
+      "floor": 26638000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 39384000,
+      "value": 39957000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 26256000,
+      "price": 26638000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 40166,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 2
   },
@@ -290,12 +290,12 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -719,10 +719,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 31,
-      "avg": 4.4286,
+      "points": 37,
+      "avg": 4.625,
       "id_team": 15,
-      "last_gameweek": 11
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -749,35 +749,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 25901000,
-      "change": 355000,
-      "sign": 355
+      "value": 26256000,
+      "change": 382000,
+      "sign": 382
     },
     {
       "time": "Una semana",
-      "value": 23428000,
-      "change": 2828000,
-      "sign": "+2.828.000"
+      "value": 23721000,
+      "change": 2917000,
+      "sign": "+2.917.000"
     },
     {
       "time": "Un mes",
-      "value": 20223000,
-      "change": 6033000,
-      "sign": "+6.033.000"
+      "value": 20411000,
+      "change": 6227000,
+      "sign": "+6.227.000"
     },
     {
       "time": "Un año",
-      "value": 41870000,
-      "change": -15614000,
-      "sign": "-15.614.000"
+      "value": 41395000,
+      "change": -14757000,
+      "sign": "-14.757.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 41870000,
-        "date": "7 nov 2025"
-      },
       {
         "value": 41395000,
         "date": "8 nov 2025"
@@ -2237,6 +2233,10 @@
       {
         "value": 26256000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 26638000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -2252,28 +2252,28 @@
     "40166": {
       "id": 40166,
       "id_team": 15,
-      "id_match": 38045,
-      "id_gameweek": 4053,
-      "id_home": 19,
-      "id_away": 15,
+      "id_match": 38054,
+      "id_gameweek": 4054,
+      "id_home": 15,
+      "id_away": 5,
       "date": {
-        "ts": 1794081600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795291200,
+        "text": "21 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "21 nov",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Real Madrid",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Real Madrid",
+      "away": "Celta",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     }
   },
   "starter": false,
@@ -2287,8 +2287,8 @@
   "away": {
     "40166": {
       "id": 40166,
-      "points": 16,
-      "avg": 4
+      "points": 22,
+      "avg": 4.4
     }
   },
   "owners": [],

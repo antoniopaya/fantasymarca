@@ -3,15 +3,15 @@
     "id": 70945,
     "name": "Diego Villares",
     "position": 3,
-    "points": 22,
-    "avg": 3.7,
+    "points": 24,
+    "avg": 3.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70945.png?version=20260621102017",
     "isFavorite": 0,
-    "value": 4475000,
-    "previousValue": 4623000,
+    "value": 4347000,
+    "previousValue": 4475000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4475000,
+      "floor": 4347000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6712500,
+      "value": 6520500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4475000,
+      "price": 4347000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 188
+    "clausesRanking": 197
   },
   "id": 70945,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 1,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -271,12 +271,15 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -700,30 +703,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 22,
-      "avg": 3.6667,
+      "points": 24,
+      "avg": 3.4286,
       "id_team": 6,
-      "last_gameweek": 10
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 4623000,
-      "change": -148000,
-      "sign": -148
+      "value": 4475000,
+      "change": -128000,
+      "sign": -128
     },
     {
       "time": "Una semana",
-      "value": 4768000,
-      "change": -293000,
-      "sign": -293
+      "value": 4805000,
+      "change": -458000,
+      "sign": -458
     },
     {
       "time": "Un mes",
-      "value": 3006000,
-      "change": 1469000,
-      "sign": "+1.469.000"
+      "value": 3028000,
+      "change": 1319000,
+      "sign": "+1.319.000"
     }
   ],
   "values_chart": {
@@ -1283,6 +1286,10 @@
       {
         "value": 4475000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 4347000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -1298,27 +1305,27 @@
     "70945": {
       "id": 70945,
       "id_team": 6,
-      "id_match": 38040,
-      "id_gameweek": 4053,
-      "id_home": 8,
+      "id_match": 38048,
+      "id_gameweek": 4054,
+      "id_home": 48,
       "id_away": 6,
       "date": {
-        "ts": 1794064500,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1795266000,
+        "text": "21 nov 14:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "21 nov",
+          "time": "14:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
+      "home": "Alavés",
       "away": "Deportivo da Coruña",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
@@ -1333,7 +1340,7 @@
   "away": {
     "70945": {
       "id": 70945,
-      "points": 6,
+      "points": 8,
       "avg": 2
     }
   },

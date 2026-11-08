@@ -3,15 +3,15 @@
     "id": 54900,
     "name": "Carlos Dotor",
     "position": 3,
-    "points": 45,
-    "avg": 4.1,
+    "points": 46,
+    "avg": 4.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/54900.png?version=20260621195143",
     "isFavorite": 0,
-    "value": 6325000,
-    "previousValue": 6284000,
+    "value": 6501000,
+    "previousValue": 6325000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6325000,
+      "floor": 6501000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 9487500,
+      "value": 9751500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6325000,
+      "price": 6501000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 180,
       "weight": 68
     },
-    "clausesRanking": 172
+    "clausesRanking": 143
   },
   "id": 54900,
   "player_extra": {
     "matches": 11,
     "goals": 2,
-    "cards": 2
+    "cards": 3
   },
   "points": [
     {
@@ -279,15 +279,16 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": 8,
-        "isLive": true
+        "points": 9,
+        "isLive": false
       },
       "events": [
+        "yellow",
         "sub_out",
         "goal"
       ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -711,10 +712,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 37,
-      "avg": 3.7,
+      "points": 46,
+      "avg": 4.1818,
       "id_team": 13,
-      "last_gameweek": 11
+      "last_gameweek": 12
     },
     {
       "season": "23/24",
@@ -727,21 +728,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 6284000,
-      "change": 41000,
-      "sign": 41
+      "value": 6325000,
+      "change": 176000,
+      "sign": 176
     },
     {
       "time": "Una semana",
-      "value": 6542000,
-      "change": -217000,
-      "sign": -217
+      "value": 6405000,
+      "change": 96000,
+      "sign": 96
     },
     {
       "time": "Un mes",
-      "value": 9544000,
-      "change": -3219000,
-      "sign": "-3.219.000"
+      "value": 9703000,
+      "change": -3202000,
+      "sign": "-3.202.000"
     }
   ],
   "values_chart": {
@@ -1301,6 +1302,10 @@
       {
         "value": 6325000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 6501000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -1344,8 +1349,8 @@
   "home": {
     "54900": {
       "id": 54900,
-      "points": 19,
-      "avg": 3.8
+      "points": 28,
+      "avg": 4.6667
     }
   },
   "away": {

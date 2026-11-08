@@ -3,15 +3,15 @@
     "id": 36410,
     "name": "Pierre-Emerick Aubameyang",
     "position": 4,
-    "points": 61,
-    "avg": 7.6,
+    "points": 62,
+    "avg": 6.9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/36410.png?version=20260718091305",
     "isFavorite": 0,
-    "value": 25428000,
-    "previousValue": 24890000,
+    "value": 25971000,
+    "previousValue": 25428000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 25428000,
+      "floor": 25971000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 38142000,
+      "value": 38956500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 25428000,
+      "price": 25971000,
       "loanable": null
     },
     "bid": {
@@ -72,9 +72,9 @@
   },
   "id": 36410,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 5,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -295,12 +295,15 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -724,30 +727,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 61,
-      "avg": 7.625,
+      "points": 62,
+      "avg": 6.8889,
       "id_team": 6,
-      "last_gameweek": 11
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 24890000,
-      "change": 538000,
-      "sign": 538
+      "value": 25428000,
+      "change": 543000,
+      "sign": 543
     },
     {
       "time": "Una semana",
-      "value": 21930000,
-      "change": 3498000,
-      "sign": "+3.498.000"
+      "value": 22332000,
+      "change": 3639000,
+      "sign": "+3.639.000"
     },
     {
       "time": "Un mes",
-      "value": 27460000,
-      "change": -2032000,
-      "sign": "-2.032.000"
+      "value": 26978000,
+      "change": -1007000,
+      "sign": "-1.007.000"
     }
   ],
   "values_chart": {
@@ -1203,6 +1206,10 @@
       {
         "value": 25428000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 25971000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -1218,27 +1225,27 @@
     "36410": {
       "id": 36410,
       "id_team": 6,
-      "id_match": 38040,
-      "id_gameweek": 4053,
-      "id_home": 8,
+      "id_match": 38048,
+      "id_gameweek": 4054,
+      "id_home": 48,
       "id_away": 6,
       "date": {
-        "ts": 1794064500,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1795266000,
+        "text": "21 nov 14:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "21 nov",
+          "time": "14:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
+      "home": "Alavés",
       "away": "Deportivo da Coruña",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
@@ -1253,8 +1260,8 @@
   "away": {
     "36410": {
       "id": 36410,
-      "points": 33,
-      "avg": 11
+      "points": 34,
+      "avg": 8.5
     }
   },
   "owners": [],

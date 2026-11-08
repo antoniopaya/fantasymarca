@@ -3,15 +3,15 @@
     "id": 70922,
     "name": "Ibrahima Konaté",
     "position": 2,
-    "points": 40,
-    "avg": 4,
+    "points": 48,
+    "avg": 4.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70922.png?version=20260618121720",
     "isFavorite": 0,
-    "value": 26218000,
-    "previousValue": 25863000,
+    "value": 26618000,
+    "previousValue": 26218000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 26218000,
+      "floor": 26618000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 39327000,
+      "value": 39927000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 26218000,
+      "price": 26618000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 195,
       "weight": null
     },
-    "clausesRanking": 67
+    "clausesRanking": 59
   },
   "id": 70922,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 0,
     "cards": 4
   },
@@ -268,12 +268,12 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 8,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -697,30 +697,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 40,
-      "avg": 4,
+      "points": 48,
+      "avg": 4.3636,
       "id_team": 15,
-      "last_gameweek": 11
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 25863000,
-      "change": 355000,
-      "sign": 355
+      "value": 26218000,
+      "change": 400000,
+      "sign": 400
     },
     {
       "time": "Una semana",
-      "value": 23665000,
-      "change": 2553000,
-      "sign": "+2.553.000"
+      "value": 23912000,
+      "change": 2706000,
+      "sign": "+2.706.000"
     },
     {
       "time": "Un mes",
-      "value": 21768000,
-      "change": 4450000,
-      "sign": "+4.450.000"
+      "value": 21375000,
+      "change": 5243000,
+      "sign": "+5.243.000"
     }
   ],
   "values_chart": {
@@ -1292,6 +1292,10 @@
       {
         "value": 26218000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 26618000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -1307,28 +1311,28 @@
     "70922": {
       "id": 70922,
       "id_team": 15,
-      "id_match": 38045,
-      "id_gameweek": 4053,
-      "id_home": 19,
-      "id_away": 15,
+      "id_match": 38054,
+      "id_gameweek": 4054,
+      "id_home": 15,
+      "id_away": 5,
       "date": {
-        "ts": 1794081600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795291200,
+        "text": "21 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "21 nov",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Real Madrid",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Real Madrid",
+      "away": "Celta",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     }
   },
   "starter": false,
@@ -1342,8 +1346,8 @@
   "away": {
     "70922": {
       "id": 70922,
-      "points": 23,
-      "avg": 3.8333
+      "points": 31,
+      "avg": 4.4286
     }
   },
   "owners": [],

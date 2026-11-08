@@ -3,15 +3,15 @@
     "id": 62904,
     "name": "Yan Diomande",
     "position": 4,
-    "points": 68,
-    "avg": 6.2,
+    "points": 75,
+    "avg": 6.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/62904.png?version=20260806211455",
     "isFavorite": 0,
-    "value": 63078000,
-    "previousValue": 62950000,
+    "value": 63240000,
+    "previousValue": 63078000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 63078000,
+      "floor": 63240000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 94617000,
+      "value": 94860000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 63078000,
+      "price": 63240000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 31
+    "clausesRanking": 32
   },
   "id": 62904,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 3,
-    "cards": 1
+    "cards": 2
   },
   "points": [
     {
@@ -287,12 +287,15 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -716,10 +719,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 68,
-      "avg": 6.1818,
+      "points": 75,
+      "avg": 6.25,
       "id_team": 15,
-      "last_gameweek": 11
+      "last_gameweek": 12
     },
     {
       "season": "24/25",
@@ -732,21 +735,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 62950000,
-      "change": 128000,
-      "sign": 128
+      "value": 63078000,
+      "change": 162000,
+      "sign": 162
     },
     {
       "time": "Una semana",
-      "value": 61788000,
-      "change": 1290000,
-      "sign": "+1.290.000"
+      "value": 61886000,
+      "change": 1354000,
+      "sign": "+1.354.000"
     },
     {
       "time": "Un mes",
-      "value": 61569000,
-      "change": 1509000,
-      "sign": "+1.509.000"
+      "value": 61273000,
+      "change": 1967000,
+      "sign": "+1.967.000"
     }
   ],
   "values_chart": {
@@ -1126,6 +1129,10 @@
       {
         "value": 63078000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 63240000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -1141,28 +1148,28 @@
     "62904": {
       "id": 62904,
       "id_team": 15,
-      "id_match": 38045,
-      "id_gameweek": 4053,
-      "id_home": 19,
-      "id_away": 15,
+      "id_match": 38054,
+      "id_gameweek": 4054,
+      "id_home": 15,
+      "id_away": 5,
       "date": {
-        "ts": 1794081600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795291200,
+        "text": "21 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "21 nov",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Real Madrid",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Real Madrid",
+      "away": "Celta",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     }
   },
   "starter": false,
@@ -1176,8 +1183,8 @@
   "away": {
     "62904": {
       "id": 62904,
-      "points": 35,
-      "avg": 5.8333
+      "points": 42,
+      "avg": 6
     }
   },
   "owners": [],

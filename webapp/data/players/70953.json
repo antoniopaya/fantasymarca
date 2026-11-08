@@ -3,15 +3,15 @@
     "id": 70953,
     "name": "Miguel Loureiro",
     "position": 2,
-    "points": 32,
-    "avg": 4.6,
+    "points": 42,
+    "avg": 5.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70953.png?version=20260621102344",
     "isFavorite": 0,
-    "value": 2286000,
-    "previousValue": 2172000,
+    "value": 2475000,
+    "previousValue": 2286000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2286000,
+      "floor": 2475000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3429000,
+      "value": 3712500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2286000,
+      "price": 2475000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 53
+    "clausesRanking": 42
   },
   "id": 70953,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 0
   },
@@ -268,12 +268,12 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 10,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -697,30 +697,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 32,
-      "avg": 4.5714,
+      "points": 42,
+      "avg": 5.25,
       "id_team": 6,
-      "last_gameweek": 11
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 2172000,
-      "change": 114000,
-      "sign": 114
+      "value": 2286000,
+      "change": 189000,
+      "sign": 189
     },
     {
       "time": "Una semana",
-      "value": 1062000,
-      "change": 1224000,
-      "sign": "+1.224.000"
+      "value": 1161000,
+      "change": 1314000,
+      "sign": "+1.314.000"
     },
     {
       "time": "Un mes",
-      "value": 2450000,
-      "change": -164000,
-      "sign": -164
+      "value": 2366000,
+      "change": 109000,
+      "sign": 109
     }
   ],
   "values_chart": {
@@ -1280,6 +1280,10 @@
       {
         "value": 2286000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 2475000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -1295,27 +1299,27 @@
     "70953": {
       "id": 70953,
       "id_team": 6,
-      "id_match": 38040,
-      "id_gameweek": 4053,
-      "id_home": 8,
+      "id_match": 38048,
+      "id_gameweek": 4054,
+      "id_home": 48,
       "id_away": 6,
       "date": {
-        "ts": 1794064500,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1795266000,
+        "text": "21 nov 14:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "21 nov",
+          "time": "14:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
+      "home": "Alavés",
       "away": "Deportivo da Coruña",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
@@ -1330,8 +1334,8 @@
   "away": {
     "70953": {
       "id": 70953,
-      "points": 12,
-      "avg": 4
+      "points": 22,
+      "avg": 5.5
     }
   },
   "owners": [],

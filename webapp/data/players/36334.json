@@ -3,15 +3,15 @@
     "id": 36334,
     "name": "Adama Traoré",
     "position": 4,
-    "points": 27,
-    "avg": 3.4,
+    "points": 30,
+    "avg": 3.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/36334.png?version=20260826224813",
     "isFavorite": 0,
-    "value": 7516000,
-    "previousValue": 7269000,
+    "value": 7760000,
+    "previousValue": 7516000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 7516000,
+      "floor": 7760000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 11274000,
+      "value": 11640000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 7516000,
+      "price": 7760000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 36334,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
     "cards": 0
   },
@@ -277,12 +277,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -706,30 +708,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 27,
-      "avg": 3.375,
+      "points": 30,
+      "avg": 3.3333,
       "id_team": 6,
-      "last_gameweek": 11
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 7269000,
-      "change": 247000,
-      "sign": 247
+      "value": 7516000,
+      "change": 244000,
+      "sign": 244
     },
     {
       "time": "Una semana",
-      "value": 6067000,
-      "change": 1449000,
-      "sign": "+1.449.000"
+      "value": 6154000,
+      "change": 1606000,
+      "sign": "+1.606.000"
     },
     {
       "time": "Un mes",
-      "value": 6635000,
-      "change": 881000,
-      "sign": 881
+      "value": 6462000,
+      "change": 1298000,
+      "sign": "+1.298.000"
     }
   ],
   "values_chart": {
@@ -1025,6 +1027,10 @@
       {
         "value": 7516000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 7760000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -1040,27 +1046,27 @@
     "36334": {
       "id": 36334,
       "id_team": 6,
-      "id_match": 38040,
-      "id_gameweek": 4053,
-      "id_home": 8,
+      "id_match": 38048,
+      "id_gameweek": 4054,
+      "id_home": 48,
       "id_away": 6,
       "date": {
-        "ts": 1794064500,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1795266000,
+        "text": "21 nov 14:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "21 nov",
+          "time": "14:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
+      "home": "Alavés",
       "away": "Deportivo da Coruña",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
@@ -1075,7 +1081,7 @@
   "away": {
     "36334": {
       "id": 36334,
-      "points": 12,
+      "points": 15,
       "avg": 3
     }
   },

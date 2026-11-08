@@ -3,15 +3,15 @@
     "id": 64468,
     "name": "Tyrhys Dolan",
     "position": 3,
-    "points": 34,
-    "avg": 4.3,
+    "points": 41,
+    "avg": 4.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/64468.png?version=20250725131445",
     "isFavorite": 0,
-    "value": 7360000,
-    "previousValue": 7552000,
+    "value": 7338000,
+    "previousValue": 7360000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 7360000,
+      "floor": 7338000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 11040000,
+      "value": 11007000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 7360000,
+      "price": 7338000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 247
+    "clausesRanking": 214
   },
   "id": 64468,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 1,
     "cards": 0
   },
@@ -273,12 +273,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -702,10 +704,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 34,
-      "avg": 4.25,
+      "points": 41,
+      "avg": 4.5556,
       "id_team": 8,
-      "last_gameweek": 10
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -718,35 +720,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 7552000,
-      "change": -192000,
-      "sign": -192
+      "value": 7360000,
+      "change": -22000,
+      "sign": -22
     },
     {
       "time": "Una semana",
-      "value": 8985000,
-      "change": -1625000,
-      "sign": "-1.625.000"
+      "value": 8692000,
+      "change": -1354000,
+      "sign": "-1.354.000"
     },
     {
       "time": "Un mes",
-      "value": 11654000,
-      "change": -4294000,
-      "sign": "-4.294.000"
+      "value": 11483000,
+      "change": -4145000,
+      "sign": "-4.145.000"
     },
     {
       "time": "Un año",
-      "value": 21966000,
-      "change": -14606000,
-      "sign": "-14.606.000"
+      "value": 21615000,
+      "change": -14277000,
+      "sign": "-14.277.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 21966000,
-        "date": "7 nov 2025"
-      },
       {
         "value": 21615000,
         "date": "8 nov 2025"
@@ -2206,6 +2204,10 @@
       {
         "value": 7360000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 7338000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -2221,36 +2223,36 @@
     "64468": {
       "id": 64468,
       "id_team": 8,
-      "id_match": 38040,
-      "id_gameweek": 4053,
-      "id_home": 8,
-      "id_away": 6,
+      "id_match": 38047,
+      "id_gameweek": 4054,
+      "id_home": 1,
+      "id_away": 8,
       "date": {
-        "ts": 1794064500,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1795204800,
+        "text": "20 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "20 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
-      "away": "Deportivo da Coruña",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Athletic Club",
+      "away": "Espanyol",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,
   "home": {
     "64468": {
       "id": 64468,
-      "points": 18,
-      "avg": 4.5
+      "points": 25,
+      "avg": 5
     }
   },
   "away": {

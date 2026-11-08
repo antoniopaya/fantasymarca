@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71623.png?version=20260801091126",
     "isFavorite": 0,
-    "value": 3130000,
-    "previousValue": 3414000,
+    "value": 2941000,
+    "previousValue": 3130000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3130000,
+      "floor": 2941000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 4695000,
+      "value": 4411500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3130000,
+      "price": 2941000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 279
+    "clausesRanking": 276
   },
   "id": 71623,
   "player_extra": {
@@ -286,8 +286,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 312031,
+        "id_player": 71623,
+        "category": "five",
+        "description": "Acumulación de tarjetas",
+        "duration": "Baja esta jornada",
+        "since": "2026-11-03 11:43:25",
+        "until": null,
+        "status": "Sancionado"
+      },
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -720,21 +729,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 3414000,
-      "change": -284000,
-      "sign": -284
+      "value": 3130000,
+      "change": -189000,
+      "sign": -189
     },
     {
       "time": "Una semana",
-      "value": 4183000,
-      "change": -1053000,
-      "sign": "-1.053.000"
+      "value": 4077000,
+      "change": -1136000,
+      "sign": "-1.136.000"
     },
     {
       "time": "Un mes",
-      "value": 5691000,
-      "change": -2561000,
-      "sign": "-2.561.000"
+      "value": 5618000,
+      "change": -2677000,
+      "sign": "-2.677.000"
     }
   ],
   "values_chart": {
@@ -1130,6 +1139,10 @@
       {
         "value": 3130000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 2941000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -1145,28 +1158,28 @@
     "71623": {
       "id": 71623,
       "id_team": 8,
-      "id_match": 38040,
-      "id_gameweek": 4053,
-      "id_home": 8,
-      "id_away": 6,
+      "id_match": 38047,
+      "id_gameweek": 4054,
+      "id_home": 1,
+      "id_away": 8,
       "date": {
-        "ts": 1794064500,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1795204800,
+        "text": "20 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "16:15",
-          "format": "'Hoy'"
+          "date": "20 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Espanyol",
-      "away": "Deportivo da Coruña",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Athletic Club",
+      "away": "Espanyol",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     }
   },
   "starter": false,

@@ -3,15 +3,15 @@
     "id": 31226,
     "name": "Arnaut Danjuma",
     "position": 4,
-    "points": 35,
-    "avg": 3.2,
+    "points": 36,
+    "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/31226.png?version=20240702124019",
     "isFavorite": 0,
-    "value": 13107000,
-    "previousValue": 12872000,
+    "value": 13308000,
+    "previousValue": 13107000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 13107000,
+      "floor": 13308000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 19660500,
+      "value": 19962000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 13107000,
+      "price": 13308000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 176
+    "clausesRanking": 170
   },
   "id": 31226,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 0,
     "cards": 0
   },
@@ -273,12 +273,12 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -702,10 +702,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 35,
-      "avg": 3.1818,
+      "points": 36,
+      "avg": 3,
       "id_team": 19,
-      "last_gameweek": 11
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -732,35 +732,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 12872000,
-      "change": 235000,
-      "sign": 235
+      "value": 13107000,
+      "change": 201000,
+      "sign": 201
     },
     {
       "time": "Una semana",
-      "value": 12413000,
-      "change": 694000,
-      "sign": 694
+      "value": 12263000,
+      "change": 1045000,
+      "sign": "+1.045.000"
     },
     {
       "time": "Un mes",
-      "value": 15203000,
-      "change": -2096000,
-      "sign": "-2.096.000"
+      "value": 15456000,
+      "change": -2148000,
+      "sign": "-2.148.000"
     },
     {
       "time": "Un año",
-      "value": 23739000,
-      "change": -10632000,
-      "sign": "-10.632.000"
+      "value": 23519000,
+      "change": -10211000,
+      "sign": "-10.211.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 23739000,
-        "date": "7 nov 2025"
-      },
       {
         "value": 23519000,
         "date": "8 nov 2025"
@@ -2220,6 +2216,10 @@
       {
         "value": 13107000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 13308000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
@@ -2235,36 +2235,36 @@
     "31226": {
       "id": 31226,
       "id_team": 19,
-      "id_match": 38045,
-      "id_gameweek": 4053,
-      "id_home": 19,
-      "id_away": 15,
+      "id_match": 38053,
+      "id_gameweek": 4054,
+      "id_home": 14,
+      "id_away": 19,
       "date": {
-        "ts": 1794081600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795274100,
+        "text": "21 nov 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "21 nov",
+          "time": "16:15",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Valencia",
-      "away": "Real Madrid",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Valencia",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
   "home": {
     "31226": {
       "id": 31226,
-      "points": 17,
-      "avg": 2.8333
+      "points": 18,
+      "avg": 2.5714
     }
   },
   "away": {

@@ -3,15 +3,15 @@
     "id": 96,
     "name": "Dani Ceballos",
     "position": 3,
-    "points": 18,
+    "points": 21,
     "avg": 2.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/96.png?version=20251003183552",
     "isFavorite": 0,
-    "value": 17537000,
-    "previousValue": 16807000,
+    "value": 18305000,
+    "previousValue": 17537000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 17537000,
+      "floor": 18305000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 26305500,
+      "value": 27457500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 17537000,
+      "price": 18305000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 96,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 0
   },
@@ -283,10 +283,13 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 7,
+        "isLive": true
       },
-      "events": null,
+      "events": [
+        "sub_in",
+        "assist"
+      ],
       "injury": null,
       "teamPlayed": false,
       "rivalId": 23,
@@ -742,35 +745,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 16807000,
-      "change": 730000,
-      "sign": 730
+      "value": 17537000,
+      "change": 768000,
+      "sign": 768
     },
     {
       "time": "Una semana",
-      "value": 13242000,
-      "change": 4295000,
-      "sign": "+4.295.000"
+      "value": 13835000,
+      "change": 4470000,
+      "sign": "+4.470.000"
     },
     {
       "time": "Un mes",
-      "value": 7457000,
-      "change": 10080000,
-      "sign": "+10.080.000"
+      "value": 7576000,
+      "change": 10729000,
+      "sign": "+10.729.000"
     },
     {
       "time": "Un año",
-      "value": 7136000,
-      "change": 10401000,
-      "sign": "+10.401.000"
+      "value": 7184000,
+      "change": 11121000,
+      "sign": "+11.121.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 7136000,
-        "date": "7 nov 2025"
-      },
       {
         "value": 7184000,
         "date": "8 nov 2025"
@@ -1962,11 +1961,15 @@
       {
         "value": 17537000,
         "date": "7 nov 2026"
+      },
+      {
+        "value": 18305000,
+        "date": "8 nov 2026"
       }
     ],
     "max": {
-      "value": 17537000,
-      "date": "7 nov 2026"
+      "value": 18305000,
+      "date": "8 nov 2026"
     },
     "min": {
       "value": 329000,
@@ -1977,27 +1980,27 @@
     "96": {
       "id": 96,
       "id_team": 4,
-      "id_match": 38039,
-      "id_gameweek": 4053,
-      "id_home": 23,
+      "id_match": 38056,
+      "id_gameweek": 4054,
+      "id_home": 17,
       "id_away": 4,
       "date": {
-        "ts": 1794142800,
-        "text": "dom 14:00",
-        "format": "EEE H:mm",
+        "ts": 1795282200,
+        "text": "21 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "21 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Elche",
+      "home": "Sevilla",
       "away": "Betis",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
