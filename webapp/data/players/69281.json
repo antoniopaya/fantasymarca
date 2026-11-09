@@ -3,15 +3,15 @@
     "id": 69281,
     "name": "Nacho Pérez",
     "position": 2,
-    "points": 38,
-    "avg": 3.8,
+    "points": 44,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/69281.png?version=20260323141534",
     "isFavorite": 0,
-    "value": 4292000,
-    "previousValue": 4254000,
+    "value": 4367000,
+    "previousValue": 4292000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4292000,
+      "floor": 4367000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6438000,
+      "value": 6550500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4292000,
+      "price": 4367000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 147
+    "clausesRanking": 120
   },
   "id": 69281,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 1,
     "cards": 0
   },
@@ -280,12 +280,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 6,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -709,10 +711,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 36,
-      "avg": 3.6,
+      "points": 42,
+      "avg": 3.8182,
       "id_team": 12,
-      "last_gameweek": 11
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -725,21 +727,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4254000,
-      "change": 38000,
-      "sign": 38
+      "value": 4292000,
+      "change": 75000,
+      "sign": 75
     },
     {
       "time": "Una semana",
-      "value": 3256000,
-      "change": 1036000,
-      "sign": "+1.036.000"
+      "value": 3418000,
+      "change": 949000,
+      "sign": 949
     },
     {
       "time": "Un mes",
-      "value": 2955000,
-      "change": 1337000,
-      "sign": "+1.337.000"
+      "value": 2893000,
+      "change": 1474000,
+      "sign": "+1.474.000"
     }
   ],
   "values_chart": {
@@ -1811,6 +1813,10 @@
       {
         "value": 4292000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 4367000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -1826,28 +1832,28 @@
     "69281": {
       "id": 69281,
       "id_team": 12,
-      "id_match": 38038,
-      "id_gameweek": 4053,
-      "id_home": 5,
-      "id_away": 12,
+      "id_match": 38051,
+      "id_gameweek": 4054,
+      "id_home": 12,
+      "id_away": 23,
       "date": {
-        "ts": 1794159000,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795464000,
+        "text": "23 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "23 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Levante",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Levante",
+      "away": "Elche",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   },
   "starter": false,
@@ -1861,8 +1867,8 @@
   "away": {
     "69281": {
       "id": 69281,
-      "points": 28,
-      "avg": 5.6
+      "points": 34,
+      "avg": 5.6667
     }
   },
   "owners": [],

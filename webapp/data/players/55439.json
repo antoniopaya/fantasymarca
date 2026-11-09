@@ -3,15 +3,15 @@
     "id": 55439,
     "name": "Hugo González",
     "position": 3,
-    "points": 35,
-    "avg": 5.8,
+    "points": 37,
+    "avg": 5.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/55439.png?version=20260805081935",
     "isFavorite": 0,
     "value": 8853000,
-    "previousValue": 8786000,
+    "previousValue": 8853000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -68,11 +68,11 @@
       "height": 181,
       "weight": null
     },
-    "clausesRanking": 250
+    "clausesRanking": 232
   },
   "id": 55439,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 1,
     "cards": 0
   },
@@ -275,12 +275,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -704,10 +706,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 35,
-      "avg": 5.8333,
+      "points": 37,
+      "avg": 5.2857,
       "id_team": 5,
-      "last_gameweek": 11
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -727,21 +729,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 8786000,
-      "change": 67000,
-      "sign": 67
+      "value": 8853000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Una semana",
-      "value": 9468000,
-      "change": -615000,
-      "sign": -615
+      "value": 9314000,
+      "change": -461000,
+      "sign": -461
     },
     {
       "time": "Un mes",
-      "value": 7776000,
-      "change": 1077000,
-      "sign": "+1.077.000"
+      "value": 8038000,
+      "change": 815000,
+      "sign": 815
     }
   ],
   "values_chart": {
@@ -1125,6 +1127,10 @@
       {
         "value": 8853000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 8853000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -1140,36 +1146,36 @@
     "55439": {
       "id": 55439,
       "id_team": 5,
-      "id_match": 38038,
-      "id_gameweek": 4053,
-      "id_home": 5,
-      "id_away": 12,
+      "id_match": 38054,
+      "id_gameweek": 4054,
+      "id_home": 15,
+      "id_away": 5,
       "date": {
-        "ts": 1794159000,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795291200,
+        "text": "21 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "21 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Levante",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Real Madrid",
+      "away": "Celta",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     }
   },
   "starter": false,
   "home": {
     "55439": {
       "id": 55439,
-      "points": 22,
-      "avg": 5.5
+      "points": 24,
+      "avg": 4.8
     }
   },
   "away": {

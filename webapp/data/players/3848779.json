@@ -3,15 +3,15 @@
     "id": 3848779,
     "name": "Gnangoro Bouare",
     "position": 3,
-    "points": 16,
-    "avg": 2.3,
+    "points": 17,
+    "avg": 2.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3848779.png?version=20260827165009",
     "isFavorite": 0,
-    "value": 381000,
-    "previousValue": 329000,
+    "value": 329000,
+    "previousValue": 381000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 381000,
+      "price": 329000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 307
+    "clausesRanking": 311
   },
   "id": 3848779,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
-    "cards": 2
+    "cards": 3
   },
   "points": [
     {
@@ -277,12 +277,15 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -706,30 +709,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 16,
-      "avg": 2.2857,
+      "points": 17,
+      "avg": 2.125,
       "id_team": 14,
-      "last_gameweek": 11
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 52000,
-      "sign": 52
+      "value": 381000,
+      "change": -52000,
+      "sign": -52
     },
     {
       "time": "Una semana",
       "value": 329000,
-      "change": 52000,
-      "sign": 52
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Un mes",
-      "value": 383000,
-      "change": -2000,
-      "sign": -2
+      "value": 408000,
+      "change": -79000,
+      "sign": -79
     }
   ],
   "values_chart": {
@@ -1025,6 +1028,10 @@
       {
         "value": 381000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 329000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -1040,28 +1047,28 @@
     "3848779": {
       "id": 3848779,
       "id_team": 14,
-      "id_match": 38043,
-      "id_gameweek": 4053,
-      "id_home": 16,
-      "id_away": 14,
+      "id_match": 38053,
+      "id_gameweek": 4054,
+      "id_home": 14,
+      "id_away": 19,
       "date": {
-        "ts": 1794150900,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1795274100,
+        "text": "21 nov 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "21 nov",
           "time": "16:15",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Sociedad",
-      "away": "Rayo Vallecano",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Valencia",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
@@ -1075,8 +1082,8 @@
   "away": {
     "3848779": {
       "id": 3848779,
-      "points": 6,
-      "avg": 2
+      "points": 7,
+      "avg": 1.75
     }
   },
   "owners": [],

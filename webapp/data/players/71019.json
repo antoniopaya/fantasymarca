@@ -5,17 +5,13 @@
     "position": 2,
     "points": 0,
     "avg": 0,
-    "status": "other",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "other",
-      "description": "No convocado",
-      "duration": "Baja esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71019.png?version=20260630155354",
     "isFavorite": 0,
-    "value": 338000,
-    "previousValue": 509000,
+    "value": 329000,
+    "previousValue": 338000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -51,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 338000,
+      "price": 329000,
       "loanable": null
     },
     "bid": {
@@ -278,7 +274,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -703,21 +699,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 509000,
-      "change": -171000,
-      "sign": -171
+      "value": 338000,
+      "change": -9000,
+      "sign": -9
     },
     {
       "time": "Una semana",
       "value": 329000,
-      "change": 9000,
-      "sign": 9
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Un mes",
-      "value": 453000,
-      "change": -115000,
-      "sign": -115
+      "value": 397000,
+      "change": -68000,
+      "sign": -68
     }
   ],
   "values_chart": {
@@ -1245,6 +1241,10 @@
       {
         "value": 338000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 329000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -1260,28 +1260,28 @@
     "71019": {
       "id": 71019,
       "id_team": 16,
-      "id_match": 38043,
-      "id_gameweek": 4053,
-      "id_home": 16,
-      "id_away": 14,
+      "id_match": 38055,
+      "id_gameweek": 4054,
+      "id_home": 1490,
+      "id_away": 16,
       "date": {
-        "ts": 1794150900,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1795360500,
+        "text": "22 nov 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "22 nov",
           "time": "16:15",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Sociedad",
-      "away": "Rayo Vallecano",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Racing de Santander",
+      "away": "Real Sociedad",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   },
   "starter": false,

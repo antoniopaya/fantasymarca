@@ -3,15 +3,15 @@
     "id": 65269,
     "name": "Ali Houary",
     "position": 3,
-    "points": 6,
-    "avg": 1.5,
+    "points": 7,
+    "avg": 1.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65269.png?version=20250818204307",
     "isFavorite": 0,
-    "value": 329000,
-    "previousValue": 381000,
+    "value": 505000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 505000,
       "loanable": null
     },
     "bid": {
@@ -276,14 +276,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
       "events": [
         "sub_out"
       ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -707,10 +707,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 6,
-      "avg": 2,
+      "points": 7,
+      "avg": 1.75,
       "id_team": 23,
-      "last_gameweek": 3
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -723,35 +723,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 381000,
-      "change": -52000,
-      "sign": -52
+      "value": 329000,
+      "change": 176000,
+      "sign": 176
     },
     {
       "time": "Una semana",
-      "value": 378000,
-      "change": -49000,
-      "sign": -49
+      "value": 365000,
+      "change": 140000,
+      "sign": 140
     },
     {
       "time": "Un mes",
-      "value": 489000,
-      "change": -160000,
-      "sign": -160
+      "value": 393000,
+      "change": 112000,
+      "sign": 112
     },
     {
       "time": "Un año",
-      "value": 421000,
-      "change": -92000,
-      "sign": -92
+      "value": 329000,
+      "change": 176000,
+      "sign": 176
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 421000,
-        "date": "8 nov 2025"
-      },
       {
         "value": 329000,
         "date": "9 nov 2025"
@@ -1571,6 +1567,10 @@
       {
         "value": 329000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 505000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -1614,8 +1614,8 @@
   "home": {
     "65269": {
       "id": 65269,
-      "points": 0,
-      "avg": 0
+      "points": 1,
+      "avg": 0.5
     }
   },
   "away": {

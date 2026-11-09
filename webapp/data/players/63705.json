@@ -3,15 +3,15 @@
     "id": 63705,
     "name": "Ionuț Radu",
     "position": 1,
-    "points": 69,
+    "points": 76,
     "avg": 6.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/63705.png?version=20250610102418",
     "isFavorite": 0,
-    "value": 43452000,
-    "previousValue": 43090000,
+    "value": 43814000,
+    "previousValue": 43452000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 43452000,
+      "floor": 43814000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 65178000,
+      "value": 65721000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 43452000,
+      "price": 43814000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
   },
   "id": 63705,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 0,
     "cards": 1
   },
@@ -262,12 +262,12 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -691,10 +691,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 69,
-      "avg": 6.2727,
+      "points": 76,
+      "avg": 6.3333,
       "id_team": 5,
-      "last_gameweek": 11
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -707,35 +707,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 43090000,
+      "value": 43452000,
       "change": 362000,
       "sign": 362
     },
     {
       "time": "Una semana",
-      "value": 40924000,
-      "change": 2528000,
-      "sign": "+2.528.000"
+      "value": 41258000,
+      "change": 2556000,
+      "sign": "+2.556.000"
     },
     {
       "time": "Un mes",
-      "value": 32684000,
-      "change": 10768000,
-      "sign": "+10.768.000"
+      "value": 32159000,
+      "change": 11655000,
+      "sign": "+11.655.000"
     },
     {
       "time": "Un año",
-      "value": 32385000,
-      "change": 11067000,
-      "sign": "+11.067.000"
+      "value": 31961000,
+      "change": 11853000,
+      "sign": "+11.853.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 32385000,
-        "date": "8 nov 2025"
-      },
       {
         "value": 31961000,
         "date": "9 nov 2025"
@@ -2195,11 +2191,15 @@
       {
         "value": 43452000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 43814000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
-      "value": 43452000,
-      "date": "8 nov 2026"
+      "value": 43814000,
+      "date": "9 nov 2026"
     },
     "min": {
       "value": 25186000,
@@ -2210,36 +2210,36 @@
     "63705": {
       "id": 63705,
       "id_team": 5,
-      "id_match": 38038,
-      "id_gameweek": 4053,
-      "id_home": 5,
-      "id_away": 12,
+      "id_match": 38054,
+      "id_gameweek": 4054,
+      "id_home": 15,
+      "id_away": 5,
       "date": {
-        "ts": 1794159000,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795291200,
+        "text": "21 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "21 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Levante",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Real Madrid",
+      "away": "Celta",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     }
   },
   "starter": false,
   "home": {
     "63705": {
       "id": 63705,
-      "points": 34,
-      "avg": 5.6667
+      "points": 41,
+      "avg": 5.8571
     }
   },
   "away": {

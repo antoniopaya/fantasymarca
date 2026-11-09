@@ -3,15 +3,15 @@
     "id": 71649,
     "name": "Péter Gulácsi",
     "position": 1,
-    "points": 39,
-    "avg": 5.6,
+    "points": 46,
+    "avg": 5.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71649.png?version=20260804093816",
     "isFavorite": 0,
-    "value": 21352000,
-    "previousValue": 21478000,
+    "value": 21097000,
+    "previousValue": 21352000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 21352000,
+      "floor": 21097000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 32028000,
+      "value": 31645500,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 21352000,
-      "loanable": null
+      "id": 1948129993,
+      "isPublic": 1,
+      "price": 21097000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 21097000,
       "barter": [],
       "type": null,
       "days": null
@@ -68,11 +68,11 @@
       "height": 190,
       "weight": null
     },
-    "clausesRanking": 144
+    "clausesRanking": 159
   },
   "id": 71649,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 0
   },
@@ -260,12 +260,12 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -689,30 +689,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 39,
-      "avg": 5.5714,
+      "points": 46,
+      "avg": 5.75,
       "id_team": 20,
-      "last_gameweek": 11
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 21478000,
-      "change": -126000,
-      "sign": -126
+      "value": 21352000,
+      "change": -255000,
+      "sign": -255
     },
     {
       "time": "Una semana",
-      "value": 20962000,
-      "change": 390000,
-      "sign": 390
+      "value": 20950000,
+      "change": 147000,
+      "sign": 147
     },
     {
       "time": "Un mes",
-      "value": 9419000,
-      "change": 11933000,
-      "sign": "+11.933.000"
+      "value": 9751000,
+      "change": 11346000,
+      "sign": "+11.346.000"
     }
   ],
   "values_chart": {
@@ -1100,6 +1100,10 @@
       {
         "value": 21352000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 21097000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -1115,36 +1119,36 @@
     "71649": {
       "id": 71649,
       "id_team": 20,
-      "id_match": 38046,
-      "id_gameweek": 4053,
-      "id_home": 20,
-      "id_away": 9,
+      "id_match": 38049,
+      "id_gameweek": 4054,
+      "id_home": 3,
+      "id_away": 20,
       "date": {
-        "ts": 1794159000,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795352400,
+        "text": "22 nov 14:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "22 nov",
+          "time": "14:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Villarreal",
-      "away": "Getafe",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Barcelona",
+      "away": "Villarreal",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "71649": {
       "id": 71649,
-      "points": 26,
-      "avg": 6.5
+      "points": 33,
+      "avg": 6.6
     }
   },
   "away": {

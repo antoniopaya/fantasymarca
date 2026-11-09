@@ -3,15 +3,15 @@
     "id": 5515298,
     "name": "José Morante",
     "position": 3,
-    "points": 3,
-    "avg": 1.5,
+    "points": 5,
+    "avg": 2.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/5515298.png?version=20261011214240",
     "isFavorite": 0,
-    "value": 329000,
-    "previousValue": 384000,
+    "value": 347000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 347000,
       "loanable": null
     },
     "bid": {
@@ -263,14 +263,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 3,
+        "isLive": false
       },
       "events": [
         "sub_in"
       ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -694,24 +694,24 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 8,
-      "avg": 8,
+      "points": 11,
+      "avg": 5.5,
       "id_team": 4,
-      "last_gameweek": 8
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 384000,
-      "change": -55000,
-      "sign": -55
+      "value": 329000,
+      "change": 18000,
+      "sign": 18
     },
     {
       "time": "Una semana",
-      "value": 1117000,
-      "change": -788000,
-      "sign": -788
+      "value": 910000,
+      "change": -563000,
+      "sign": -563
     }
   ],
   "values_chart": {
@@ -827,6 +827,10 @@
       {
         "value": 329000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 347000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -876,8 +880,9 @@
   },
   "away": {
     "5515298": {
-      "points": 0,
-      "avg": 0
+      "id": 5515298,
+      "points": 3,
+      "avg": 3
     }
   },
   "owners": [],

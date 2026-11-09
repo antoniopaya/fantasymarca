@@ -3,15 +3,15 @@
     "id": 48657,
     "name": "Raphinha",
     "position": 4,
-    "points": 138,
-    "avg": 13.8,
+    "points": 140,
+    "avg": 12.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/48657.png?version=20261104102126",
     "isFavorite": 0,
-    "value": 76370000,
-    "previousValue": 76140000,
+    "value": 76616000,
+    "previousValue": 76370000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 76370000,
+      "floor": 76616000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 114555000,
+      "value": 114924000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 76370000,
+      "price": 76616000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 176,
       "weight": 68
     },
-    "clausesRanking": 30
+    "clausesRanking": 29
   },
   "id": 48657,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 15,
     "cards": 0
   },
@@ -296,12 +296,12 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -725,10 +725,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 137,
-      "avg": 13.7,
+      "points": 139,
+      "avg": 12.6364,
       "id_team": 3,
-      "last_gameweek": 11
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -755,35 +755,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 76140000,
-      "change": 230000,
-      "sign": 230
+      "value": 76370000,
+      "change": 246000,
+      "sign": 246
     },
     {
       "time": "Una semana",
-      "value": 74337000,
-      "change": 2033000,
-      "sign": "+2.033.000"
+      "value": 74589000,
+      "change": 2027000,
+      "sign": "+2.027.000"
     },
     {
       "time": "Un mes",
-      "value": 70124000,
-      "change": 6246000,
-      "sign": "+6.246.000"
+      "value": 70336000,
+      "change": 6280000,
+      "sign": "+6.280.000"
     },
     {
       "time": "Un año",
-      "value": 60761000,
-      "change": 15609000,
-      "sign": "+15.609.000"
+      "value": 60642000,
+      "change": 15974000,
+      "sign": "+15.974.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 60761000,
-        "date": "8 nov 2025"
-      },
       {
         "value": 60642000,
         "date": "9 nov 2025"
@@ -2243,6 +2239,10 @@
       {
         "value": 76370000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 76616000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -2258,28 +2258,28 @@
     "48657": {
       "id": 48657,
       "id_team": 3,
-      "id_match": 38037,
-      "id_gameweek": 4053,
-      "id_home": 2,
-      "id_away": 3,
+      "id_match": 38049,
+      "id_gameweek": 4054,
+      "id_home": 3,
+      "id_away": 20,
       "date": {
-        "ts": 1794168000,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795352400,
+        "text": "22 nov 14:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "22 nov",
+          "time": "14:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Atlético",
-      "away": "Barcelona",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "home": "Barcelona",
+      "away": "Villarreal",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
@@ -2293,8 +2293,8 @@
   "away": {
     "48657": {
       "id": 48657,
-      "points": 66,
-      "avg": 13.2
+      "points": 68,
+      "avg": 11.3333
     }
   },
   "owners": [],

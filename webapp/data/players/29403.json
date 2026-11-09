@@ -3,15 +3,15 @@
     "id": 29403,
     "name": "Pathé Ciss",
     "position": 3,
-    "points": 32,
-    "avg": 3.2,
+    "points": 37,
+    "avg": 3.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/29403.png?version=20251004225713",
     "isFavorite": 0,
-    "value": 8585000,
-    "previousValue": 8735000,
+    "value": 8361000,
+    "previousValue": 8585000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 8585000,
+      "floor": 8361000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 12877500,
+      "value": 12541500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 8585000,
+      "price": 8361000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": 71
     },
-    "clausesRanking": 342
+    "clausesRanking": 339
   },
   "id": 29403,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 0,
     "cards": 5
   },
@@ -280,12 +280,12 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -709,10 +709,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 32,
-      "avg": 3.2,
+      "points": 37,
+      "avg": 3.3636,
       "id_team": 14,
-      "last_gameweek": 10
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -739,35 +739,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 8735000,
-      "change": -150000,
-      "sign": -150
+      "value": 8585000,
+      "change": -224000,
+      "sign": -224
     },
     {
       "time": "Una semana",
-      "value": 10186000,
-      "change": -1601000,
-      "sign": "-1.601.000"
+      "value": 9716000,
+      "change": -1355000,
+      "sign": "-1.355.000"
     },
     {
       "time": "Un mes",
-      "value": 16803000,
-      "change": -8218000,
-      "sign": "-8.218.000"
+      "value": 16249000,
+      "change": -7888000,
+      "sign": "-7.888.000"
     },
     {
       "time": "Un año",
-      "value": 12771000,
-      "change": -4186000,
-      "sign": "-4.186.000"
+      "value": 12443000,
+      "change": -4082000,
+      "sign": "-4.082.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 12771000,
-        "date": "8 nov 2025"
-      },
       {
         "value": 12443000,
         "date": "9 nov 2025"
@@ -2227,6 +2223,10 @@
       {
         "value": 8585000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 8361000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -2242,28 +2242,28 @@
     "29403": {
       "id": 29403,
       "id_team": 14,
-      "id_match": 38043,
-      "id_gameweek": 4053,
-      "id_home": 16,
-      "id_away": 14,
+      "id_match": 38053,
+      "id_gameweek": 4054,
+      "id_home": 14,
+      "id_away": 19,
       "date": {
-        "ts": 1794150900,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1795274100,
+        "text": "21 nov 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "21 nov",
           "time": "16:15",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
-      "home": "Real Sociedad",
-      "away": "Rayo Vallecano",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Valencia",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
@@ -2277,8 +2277,8 @@
   "away": {
     "29403": {
       "id": 29403,
-      "points": 16,
-      "avg": 3.2
+      "points": 21,
+      "avg": 3.5
     }
   },
   "owners": [],

@@ -3,15 +3,15 @@
     "id": 71176,
     "name": "Morten Hjulmand",
     "position": 3,
-    "points": 38,
-    "avg": 3.8,
+    "points": 39,
+    "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71176.png?version=20260711172059",
     "isFavorite": 0,
-    "value": 11949000,
-    "previousValue": 11659000,
+    "value": 12133000,
+    "previousValue": 11949000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 11949000,
+      "floor": 12133000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 17923500,
+      "value": 18199500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 11949000,
+      "price": 12133000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 118
+    "clausesRanking": 125
   },
   "id": 71176,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 0,
-    "cards": 2
+    "cards": 3
   },
   "points": [
     {
@@ -276,12 +276,15 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 3,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     },
@@ -705,30 +708,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 38,
-      "avg": 3.8,
+      "points": 39,
+      "avg": 3.5455,
       "id_team": 2,
-      "last_gameweek": 11
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 11659000,
-      "change": 290000,
-      "sign": 290
+      "value": 11949000,
+      "change": 184000,
+      "sign": 184
     },
     {
       "time": "Una semana",
-      "value": 9895000,
-      "change": 2054000,
-      "sign": "+2.054.000"
+      "value": 10175000,
+      "change": 1958000,
+      "sign": "+1.958.000"
     },
     {
       "time": "Un mes",
-      "value": 11975000,
-      "change": -26000,
-      "sign": -26
+      "value": 11597000,
+      "change": 536000,
+      "sign": 536
     }
   ],
   "values_chart": {
@@ -1212,6 +1215,10 @@
       {
         "value": 11949000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 12133000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -1227,36 +1234,36 @@
     "71176": {
       "id": 71176,
       "id_team": 2,
-      "id_match": 38037,
-      "id_gameweek": 4053,
-      "id_home": 2,
-      "id_away": 3,
+      "id_match": 38050,
+      "id_gameweek": 4054,
+      "id_home": 9,
+      "id_away": 2,
       "date": {
-        "ts": 1794168000,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795377600,
+        "text": "22 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "22 nov",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Atlético",
-      "away": "Barcelona",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "home": "Getafe",
+      "away": "Atlético",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     }
   },
   "starter": false,
   "home": {
     "71176": {
       "id": 71176,
-      "points": 10,
-      "avg": 2
+      "points": 11,
+      "avg": 1.8333
     }
   },
   "away": {

@@ -3,15 +3,15 @@
     "id": 431,
     "name": "João Cancelo",
     "position": 2,
-    "points": 29,
-    "avg": 3.6,
+    "points": 31,
+    "avg": 3.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/431.png?version=20260113140939",
     "isFavorite": 0,
-    "value": 39123000,
-    "previousValue": 38405000,
+    "value": 39867000,
+    "previousValue": 39123000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 39123000,
+      "floor": 39867000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 58684500,
+      "value": 59800500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 39123000,
+      "price": 39867000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 182,
       "weight": 74
     },
-    "clausesRanking": 19
+    "clausesRanking": 18
   },
   "id": 431,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 1,
     "cards": 2
   },
@@ -276,12 +276,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -705,10 +707,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 29,
-      "avg": 3.625,
+      "points": 31,
+      "avg": 3.4444,
       "id_team": 3,
-      "last_gameweek": 11
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -728,21 +730,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 38405000,
-      "change": 718000,
-      "sign": 718
+      "value": 39123000,
+      "change": 744000,
+      "sign": 744
     },
     {
       "time": "Una semana",
-      "value": 35414000,
-      "change": 3709000,
-      "sign": "+3.709.000"
+      "value": 35699000,
+      "change": 4168000,
+      "sign": "+4.168.000"
     },
     {
       "time": "Un mes",
-      "value": 38299000,
-      "change": 824000,
-      "sign": 824
+      "value": 38334000,
+      "change": 1533000,
+      "sign": "+1.533.000"
     }
   ],
   "values_chart": {
@@ -1750,6 +1752,10 @@
       {
         "value": 39123000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 39867000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -1765,28 +1771,28 @@
     "431": {
       "id": 431,
       "id_team": 3,
-      "id_match": 38037,
-      "id_gameweek": 4053,
-      "id_home": 2,
-      "id_away": 3,
+      "id_match": 38049,
+      "id_gameweek": 4054,
+      "id_home": 3,
+      "id_away": 20,
       "date": {
-        "ts": 1794168000,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795352400,
+        "text": "22 nov 14:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "22 nov",
+          "time": "14:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Atlético",
-      "away": "Barcelona",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "home": "Barcelona",
+      "away": "Villarreal",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
@@ -1800,8 +1806,8 @@
   "away": {
     "431": {
       "id": 431,
-      "points": 7,
-      "avg": 2.3333
+      "points": 9,
+      "avg": 2.25
     }
   },
   "owners": [],

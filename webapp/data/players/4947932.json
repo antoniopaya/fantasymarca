@@ -3,15 +3,15 @@
     "id": 4947932,
     "name": "Mujaid Sadick",
     "position": 2,
-    "points": 26,
-    "avg": 3.7,
+    "points": 29,
+    "avg": 3.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4947932.png?version=20260902085435",
     "isFavorite": 0,
-    "value": 4831000,
-    "previousValue": 4750000,
+    "value": 4898000,
+    "previousValue": 4831000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4831000,
+      "floor": 4898000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7246500,
+      "value": 7347000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4831000,
+      "price": 4898000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 114
+    "clausesRanking": 119
   },
   "id": 4947932,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 0
   },
@@ -264,12 +264,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -693,30 +695,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 26,
-      "avg": 3.7143,
+      "points": 29,
+      "avg": 3.625,
       "id_team": 14,
-      "last_gameweek": 11
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 4750000,
-      "change": 81000,
-      "sign": 81
+      "value": 4831000,
+      "change": 67000,
+      "sign": 67
     },
     {
       "time": "Una semana",
-      "value": 4197000,
-      "change": 634000,
-      "sign": 634
+      "value": 4231000,
+      "change": 667000,
+      "sign": 667
     },
     {
       "time": "Un mes",
-      "value": 4542000,
-      "change": 289000,
-      "sign": 289
+      "value": 4654000,
+      "change": 244000,
+      "sign": 244
     }
   ],
   "values_chart": {
@@ -988,6 +990,10 @@
       {
         "value": 4831000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 4898000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -1003,28 +1009,28 @@
     "4947932": {
       "id": 4947932,
       "id_team": 14,
-      "id_match": 38043,
-      "id_gameweek": 4053,
-      "id_home": 16,
-      "id_away": 14,
+      "id_match": 38053,
+      "id_gameweek": 4054,
+      "id_home": 14,
+      "id_away": 19,
       "date": {
-        "ts": 1794150900,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1795274100,
+        "text": "21 nov 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "21 nov",
           "time": "16:15",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
-      "home": "Real Sociedad",
-      "away": "Rayo Vallecano",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Valencia",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     }
   },
   "starter": false,
@@ -1038,8 +1044,8 @@
   "away": {
     "4947932": {
       "id": 4947932,
-      "points": 12,
-      "avg": 4
+      "points": 15,
+      "avg": 3.75
     }
   },
   "owners": [],

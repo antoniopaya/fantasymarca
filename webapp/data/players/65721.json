@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65721.png?version=20260827164543",
     "isFavorite": 0,
-    "value": 550000,
-    "previousValue": 525000,
+    "value": 491000,
+    "previousValue": 550000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 550000,
+      "price": 491000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 373
+    "clausesRanking": 374
   },
   "id": 65721,
   "player_extra": {
@@ -265,7 +265,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -698,35 +698,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 525000,
-      "change": 25000,
-      "sign": 25
+      "value": 550000,
+      "change": -59000,
+      "sign": -59
     },
     {
       "time": "Una semana",
-      "value": 406000,
-      "change": 144000,
-      "sign": 144
+      "value": 354000,
+      "change": 137000,
+      "sign": 137
     },
     {
       "time": "Un mes",
-      "value": 4409000,
-      "change": -3859000,
-      "sign": "-3.859.000"
+      "value": 4437000,
+      "change": -3946000,
+      "sign": "-3.946.000"
     },
     {
       "time": "Un año",
-      "value": 529000,
-      "change": 21000,
-      "sign": 21
+      "value": 488000,
+      "change": 3000,
+      "sign": 3
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 529000,
-        "date": "8 nov 2025"
-      },
       {
         "value": 488000,
         "date": "9 nov 2025"
@@ -1350,6 +1346,10 @@
       {
         "value": 550000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 491000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -1365,28 +1365,28 @@
     "65721": {
       "id": 65721,
       "id_team": 3,
-      "id_match": 38037,
-      "id_gameweek": 4053,
-      "id_home": 2,
-      "id_away": 3,
+      "id_match": 38049,
+      "id_gameweek": 4054,
+      "id_home": 3,
+      "id_away": 20,
       "date": {
-        "ts": 1794168000,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795352400,
+        "text": "22 nov 14:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "22 nov",
+          "time": "14:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Atlético",
-      "away": "Barcelona",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
+      "home": "Barcelona",
+      "away": "Villarreal",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,

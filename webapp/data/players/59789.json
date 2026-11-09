@@ -3,15 +3,15 @@
     "id": 59789,
     "name": "Orri Óskarsson",
     "position": 4,
-    "points": 28,
-    "avg": 3.1,
+    "points": 39,
+    "avg": 3.9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59789.png?version=20251004234219",
     "isFavorite": 0,
-    "value": 14057000,
-    "previousValue": 13759000,
+    "value": 14647000,
+    "previousValue": 14057000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 14057000,
+      "floor": 14647000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 21085500,
+      "value": 21970500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 14057000,
+      "price": 14647000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 135
+    "clausesRanking": 65
   },
   "id": 59789,
   "player_extra": {
-    "matches": 9,
-    "goals": 3,
+    "matches": 10,
+    "goals": 4,
     "cards": 2
   },
   "points": [
@@ -281,12 +281,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 11,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -710,10 +712,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 28,
-      "avg": 3.1111,
+      "points": 39,
+      "avg": 3.9,
       "id_team": 16,
-      "last_gameweek": 11
+      "last_gameweek": 12
     },
     {
       "season": "25/26",
@@ -733,35 +735,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 13759000,
-      "change": 298000,
-      "sign": 298
+      "value": 14057000,
+      "change": 590000,
+      "sign": 590
     },
     {
       "time": "Una semana",
-      "value": 11721000,
-      "change": 2336000,
-      "sign": "+2.336.000"
+      "value": 12093000,
+      "change": 2554000,
+      "sign": "+2.554.000"
     },
     {
       "time": "Un mes",
-      "value": 9796000,
-      "change": 4261000,
-      "sign": "+4.261.000"
+      "value": 9475000,
+      "change": 5172000,
+      "sign": "+5.172.000"
     },
     {
       "time": "Un año",
-      "value": 449000,
-      "change": 13608000,
-      "sign": "+13.608.000"
+      "value": 395000,
+      "change": 14252000,
+      "sign": "+14.252.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 449000,
-        "date": "8 nov 2025"
-      },
       {
         "value": 395000,
         "date": "9 nov 2025"
@@ -2221,6 +2219,10 @@
       {
         "value": 14057000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 14647000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -2236,36 +2238,36 @@
     "59789": {
       "id": 59789,
       "id_team": 16,
-      "id_match": 38043,
-      "id_gameweek": 4053,
-      "id_home": 16,
-      "id_away": 14,
+      "id_match": 38055,
+      "id_gameweek": 4054,
+      "id_home": 1490,
+      "id_away": 16,
       "date": {
-        "ts": 1794150900,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1795360500,
+        "text": "22 nov 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "22 nov",
           "time": "16:15",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": null,
       "minute": null,
-      "home": "Real Sociedad",
-      "away": "Rayo Vallecano",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Racing de Santander",
+      "away": "Real Sociedad",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     }
   },
   "starter": false,
   "home": {
     "59789": {
       "id": 59789,
-      "points": 19,
-      "avg": 4.75
+      "points": 30,
+      "avg": 6
     }
   },
   "away": {

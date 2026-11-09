@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/63871.png?version=20250617095502",
     "isFavorite": 0,
-    "value": 384000,
-    "previousValue": 529000,
+    "value": 329000,
+    "previousValue": 384000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -51,7 +51,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 384000,
+      "price": 329000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 365
+    "clausesRanking": null
   },
   "id": 63871,
   "player_extra": {
@@ -295,12 +295,21 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": null,
+        "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 310387,
+        "id_player": 63871,
+        "category": "injury",
+        "description": "Lesión de tobillo",
+        "duration": "Baja hasta mediados de Noviembre",
+        "since": "2026-10-21 15:18:59",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -740,35 +749,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 529000,
-      "change": -145000,
-      "sign": -145
+      "value": 384000,
+      "change": -55000,
+      "sign": -55
     },
     {
       "time": "Una semana",
-      "value": 389000,
-      "change": -5000,
-      "sign": -5
+      "value": 329000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Un mes",
-      "value": 609000,
-      "change": -225000,
-      "sign": -225
+      "value": 555000,
+      "change": -226000,
+      "sign": -226
     },
     {
       "time": "Un año",
-      "value": 2383000,
-      "change": -1999000,
-      "sign": "-1.999.000"
+      "value": 2445000,
+      "change": -2116000,
+      "sign": "-2.116.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 2383000,
-        "date": "8 nov 2025"
-      },
       {
         "value": 2445000,
         "date": "9 nov 2025"
@@ -2228,6 +2233,10 @@
       {
         "value": 384000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 329000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {

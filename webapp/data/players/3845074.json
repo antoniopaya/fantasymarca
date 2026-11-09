@@ -3,15 +3,15 @@
     "id": 3845074,
     "name": "Nathan Saliba",
     "position": 3,
-    "points": 20,
-    "avg": 3.3,
+    "points": 21,
+    "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3845074.png?version=20260826061635",
     "isFavorite": 0,
-    "value": 5903000,
-    "previousValue": 6036000,
+    "value": 5671000,
+    "previousValue": 5903000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5903000,
+      "floor": 5671000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8854500,
+      "value": 8506500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5903000,
+      "price": 5671000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 173,
       "weight": null
     },
-    "clausesRanking": 318
+    "clausesRanking": 321
   },
   "id": 3845074,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 0
   },
@@ -286,12 +286,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -715,30 +717,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 21,
-      "avg": 3.5,
+      "points": 22,
+      "avg": 3.1429,
       "id_team": 20,
-      "last_gameweek": 9
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 6036000,
-      "change": -133000,
-      "sign": -133
+      "value": 5903000,
+      "change": -232000,
+      "sign": -232
     },
     {
       "time": "Una semana",
-      "value": 7256000,
-      "change": -1353000,
-      "sign": "-1.353.000"
+      "value": 6940000,
+      "change": -1269000,
+      "sign": "-1.269.000"
     },
     {
       "time": "Un mes",
-      "value": 14652000,
-      "change": -8749000,
-      "sign": "-8.749.000"
+      "value": 14680000,
+      "change": -9009000,
+      "sign": "-9.009.000"
     }
   ],
   "values_chart": {
@@ -1042,6 +1044,10 @@
       {
         "value": 5903000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 5671000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
@@ -1049,44 +1055,44 @@
       "date": "9 oct 2026"
     },
     "min": {
-      "value": 5903000,
-      "date": "8 nov 2026"
+      "value": 5671000,
+      "date": "9 nov 2026"
     }
   },
   "next_match": {
     "3845074": {
       "id": 3845074,
       "id_team": 20,
-      "id_match": 38046,
-      "id_gameweek": 4053,
-      "id_home": 20,
-      "id_away": 9,
+      "id_match": 38049,
+      "id_gameweek": 4054,
+      "id_home": 3,
+      "id_away": 20,
       "date": {
-        "ts": 1794159000,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795352400,
+        "text": "22 nov 14:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "22 nov",
+          "time": "14:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Villarreal",
-      "away": "Getafe",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
+      "home": "Barcelona",
+      "away": "Villarreal",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
   "home": {
     "3845074": {
       "id": 3845074,
-      "points": 14,
-      "avg": 3.5
+      "points": 15,
+      "avg": 3
     }
   },
   "away": {

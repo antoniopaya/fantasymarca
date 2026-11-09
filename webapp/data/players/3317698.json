@@ -3,15 +3,15 @@
     "id": 3317698,
     "name": "Ifeanyi Ndukwe",
     "position": 2,
-    "points": 32,
-    "avg": 4.6,
+    "points": 35,
+    "avg": 4.4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/3317698.png?version=20260823083029",
     "isFavorite": 0,
-    "value": 5147000,
-    "previousValue": 5081000,
+    "value": 5255000,
+    "previousValue": 5147000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5147000,
+      "floor": 5255000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7720500,
+      "value": 7882500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5147000,
+      "price": 5255000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 198,
       "weight": null
     },
-    "clausesRanking": 105
+    "clausesRanking": 94
   },
   "id": 3317698,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 1,
     "cards": 0
   },
@@ -266,12 +266,14 @@
       "startDate": "2026-11-06 21:00:00",
       "endDate": "2026-11-08 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -695,30 +697,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 32,
-      "avg": 4.5714,
+      "points": 35,
+      "avg": 4.375,
       "id_team": 12,
-      "last_gameweek": 11
+      "last_gameweek": 12
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 5081000,
-      "change": 66000,
-      "sign": 66
+      "value": 5147000,
+      "change": 108000,
+      "sign": 108
     },
     {
       "time": "Una semana",
-      "value": 4516000,
-      "change": 631000,
-      "sign": 631
+      "value": 4564000,
+      "change": 691000,
+      "sign": 691
     },
     {
       "time": "Un mes",
-      "value": 329000,
-      "change": 4818000,
-      "sign": "+4.818.000"
+      "value": 449000,
+      "change": 4806000,
+      "sign": "+4.806.000"
     }
   ],
   "values_chart": {
@@ -1030,11 +1032,15 @@
       {
         "value": 5147000,
         "date": "8 nov 2026"
+      },
+      {
+        "value": 5255000,
+        "date": "9 nov 2026"
       }
     ],
     "max": {
-      "value": 5147000,
-      "date": "8 nov 2026"
+      "value": 5255000,
+      "date": "9 nov 2026"
     },
     "min": {
       "value": 329000,
@@ -1045,28 +1051,28 @@
     "3317698": {
       "id": 3317698,
       "id_team": 12,
-      "id_match": 38038,
-      "id_gameweek": 4053,
-      "id_home": 5,
-      "id_away": 12,
+      "id_match": 38051,
+      "id_gameweek": 4054,
+      "id_home": 12,
+      "id_away": 23,
       "date": {
-        "ts": 1794159000,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795464000,
+        "text": "23 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "23 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Celta",
-      "away": "Levante",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
+      "home": "Levante",
+      "away": "Elche",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     }
   },
   "starter": false,
@@ -1080,8 +1086,8 @@
   "away": {
     "3317698": {
       "id": 3317698,
-      "points": 10,
-      "avg": 3.3333
+      "points": 13,
+      "avg": 3.25
     }
   },
   "owners": [],
