@@ -5,13 +5,17 @@
     "position": 3,
     "points": 37,
     "avg": 4.6,
-    "status": null,
+    "status": "doubt",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "doubt",
+      "description": "Molestias",
+      "duration": "Duda esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/40166.png?version=20251003183451",
     "isFavorite": 0,
-    "value": 27056000,
-    "previousValue": 26638000,
+    "value": 28230000,
+    "previousValue": 27915000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 27056000,
+      "floor": 28230000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 40584000,
+      "value": 42345000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 27056000,
+      "price": 28230000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 188,
       "weight": null
     },
-    "clausesRanking": 56
+    "clausesRanking": 88
   },
   "id": 40166,
   "player_extra": {
@@ -749,43 +753,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 26638000,
-      "change": 418000,
-      "sign": 418
+      "value": 27915000,
+      "change": 315000,
+      "sign": 315
     },
     {
       "time": "Una semana",
-      "value": 24102000,
-      "change": 2954000,
-      "sign": "+2.954.000"
+      "value": 25458000,
+      "change": 2772000,
+      "sign": "+2.772.000"
     },
     {
       "time": "Un mes",
-      "value": 20436000,
-      "change": 6620000,
-      "sign": "+6.620.000"
+      "value": 20772000,
+      "change": 7458000,
+      "sign": "+7.458.000"
     },
     {
       "time": "Un año",
-      "value": 40973000,
-      "change": -13917000,
-      "sign": "-13.917.000"
+      "value": 39873000,
+      "change": -11643000,
+      "sign": "-11.643.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 40973000,
-        "date": "9 nov 2025"
-      },
-      {
-        "value": 40569000,
-        "date": "10 nov 2025"
-      },
-      {
-        "value": 40220000,
-        "date": "11 nov 2025"
-      },
       {
         "value": 39873000,
         "date": "12 nov 2025"
@@ -2237,6 +2229,18 @@
       {
         "value": 27056000,
         "date": "9 nov 2026"
+      },
+      {
+        "value": 27489000,
+        "date": "10 nov 2026"
+      },
+      {
+        "value": 27915000,
+        "date": "11 nov 2026"
+      },
+      {
+        "value": 28230000,
+        "date": "12 nov 2026"
       }
     ],
     "max": {
@@ -2267,7 +2271,7 @@
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Real Madrid",
       "away": "Celta",
