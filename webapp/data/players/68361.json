@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68361.png?version=20251223093636",
     "isFavorite": 0,
-    "value": 753000,
-    "previousValue": 770000,
+    "value": 530000,
+    "previousValue": 753000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 753000,
+      "floor": 666666.6666666666,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1129500,
+      "value": 1000000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 753000,
+      "price": 530000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 389
+    "clausesRanking": 388
   },
   "id": 68361,
   "player_extra": {
@@ -734,21 +734,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 770000,
-      "change": -17000,
-      "sign": -17
+      "value": 753000,
+      "change": -223000,
+      "sign": -223
     },
     {
       "time": "Una semana",
-      "value": 1621000,
-      "change": -868000,
-      "sign": -868
+      "value": 1590000,
+      "change": -1060000,
+      "sign": "-1.060.000"
     },
     {
       "time": "Un mes",
-      "value": 468000,
-      "change": 285000,
-      "sign": 285
+      "value": 329000,
+      "change": 201000,
+      "sign": 201
     }
   ],
   "values_chart": {
@@ -2056,6 +2056,10 @@
       {
         "value": 753000,
         "date": "13 nov 2026"
+      },
+      {
+        "value": 530000,
+        "date": "14 nov 2026"
       }
     ],
     "max": {
@@ -2077,12 +2081,12 @@
       "id_away": 6,
       "date": {
         "ts": 1795266000,
-        "text": "21 nov 14:00",
-        "format": "d MMM H:mm",
+        "text": "sáb 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "21 nov",
+          "date": "sáb",
           "time": "14:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
