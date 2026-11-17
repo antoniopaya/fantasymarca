@@ -62,6 +62,8 @@ DATA_DIR = os.path.join(ROOT, "webapp", "data")
 SHRINK = 3  # partidos "de media" con los que se encoge la fuerza de cada equipo
 MIN_TRAIN_GW = 3  # jornadas mínimas de historia antes de validar
 SEED = 0
+# Fracción de las veces que los puntos reales deben caer dentro del rango "entre X y Y".
+SPREAD_COVERAGE = 0.68
 HORIZON = 3  # jornadas que se predicen: la próxima y las dos siguientes
 # Cuánto se queda de la diferencia entre los puntos si juega predichos y la
 # media de su posición (1 = nada de encogido). Con 0,75 lo prometido al top-20
@@ -464,6 +466,7 @@ def evaluate(df: pd.DataFrame, features: list[str]):
     familia y posición: sirven para el margen +- de cada predicción)."""
     results = []
     residuals: dict[str, dict[int, list[float]]] = {f: {} for f in MODEL_FAMILIES}
+    records: dict[str, list[tuple]] = {f: [] for f in MODEL_FAMILIES}
     played_gws = sorted(df[df.team_played].gw.unique())
     for k in played_gws:
         train = df[(df.gw < k) & df.team_played]
@@ -478,7 +481,9 @@ def evaluate(df: pd.DataFrame, features: list[str]):
             p, s = predict(fit(train, fold_features, family), test, fold_features)
             # Igual que en la predicción real: con alineaciones guardadas de
             # esa jornada (desde la 8), P(juega) sale de ellas.
-            preds[family] = lineup_p_play(train, p, ff_prob) * s
+            p_play = lineup_p_play(train, p, ff_prob)
+            preds[family] = p_play * s
+            records[family].append((test.position.to_numpy(), test.y_total.to_numpy(), p_play, s))
             played = test.y_played.to_numpy()
             for pos, err in zip(test.position.to_numpy()[played], (test.y_total.to_numpy() - s)[played]):
                 residuals[family].setdefault(int(pos), []).append(float(err))
@@ -493,7 +498,7 @@ def evaluate(df: pd.DataFrame, features: list[str]):
                 "top50": round(float(np.mean(y[top])), 2),
             }
         results.append(row)
-    return results, residuals
+    return results, residuals, records
 
 
 def residual_sd(residuals: dict[int, list[float]]) -> dict[int, float]:
@@ -501,6 +506,19 @@ def residual_sd(residuals: dict[int, list[float]]) -> dict[int, float]:
     allv = [e for v in residuals.values() for e in v]
     fallback = float(np.std(allv)) if allv else 3.0
     return {pos: (float(np.std(residuals[pos])) if len(residuals.get(pos, [])) >= 30 else fallback) for pos in (1, 2, 3, 4)}
+
+
+def calibrate_spread(records: list[tuple], sd_by_pos: dict[int, float], coverage: float = SPREAD_COVERAGE) -> float:
+    """Factor por el que multiplicar el margen para que, en la validación, los
+    puntos reales caigan dentro de [xp - margen, xp + margen] `coverage` de las
+    veces. Con la desviación típica a secas caía dentro ~84%: los puntos son
+    muy asimétricos (muchos 0-2 y pocos 10+) y la fórmula sale ancha."""
+    ratios = []
+    for position, y, p_play, if_plays in records:
+        sd = spread(p_play, if_plays, pd.Series(position), sd_by_pos)
+        err = np.abs(y - p_play * if_plays)
+        ratios.append(err / np.maximum(sd, 1e-6))
+    return float(np.quantile(np.concatenate(ratios), coverage)) if ratios else 1.0
 
 
 def spread(p_play: np.ndarray, if_plays: np.ndarray, position: pd.Series, sd_by_pos: dict[int, float]) -> np.ndarray:
@@ -599,7 +617,7 @@ def main() -> None:
         file=sys.stderr,
     )
 
-    validation, residuals = evaluate(df, features)
+    validation, residuals, records = evaluate(df, features)
     summary = summarize(validation)
     # Se queda la familia con menor error medio en la validación.
     family = min(MODEL_FAMILIES, key=lambda f: summary[f]["mae"]) if summary else "lineal"
@@ -608,6 +626,8 @@ def main() -> None:
     print(f"  -> modelo elegido: {family}", file=sys.stderr)
 
     sd_by_pos = residual_sd(residuals[family])
+    sd_scale = calibrate_spread(records[family], sd_by_pos)
+    print(f"  margen calibrado: x{sd_scale:.2f} sobre la desviación típica", file=sys.stderr)
     train = df[(df.gw < next_gw) & df.team_played]
     models = fit(train, features, family)
     status_by_id = {p["id"]: p["status"] for p in players}
@@ -632,7 +652,7 @@ def main() -> None:
             p_play = np.where(status.eq("injury").to_numpy(), p_model * 0.5, p_model)
         rows["p_play"] = p_play
         rows["xp"] = p_play * rows["if_plays"]
-        rows["sd"] = spread(p_play, if_plays, rows["position"], sd_by_pos)
+        rows["sd"] = sd_scale * spread(p_play, if_plays, rows["position"], sd_by_pos)
         for r in rows.itertuples():
             entry = players_out.setdefault(str(r.id), {"next": {}})
             entry["next"][str(g)] = round(float(r.xp), 2)
@@ -665,6 +685,8 @@ def main() -> None:
         "lineups_jornada": lineups.get("jornada") if lineups else None,
         "validation": validation,
         "validation_summary": summary,
+        "sd_scale": round(sd_scale, 3),
+        "sd_coverage": SPREAD_COVERAGE,
         "sd_if_plays": {str(k): round(v, 2) for k, v in sd_by_pos.items()},
         "players": players_out,
     }

@@ -113,3 +113,17 @@ def test_emparejado_de_nombres(excel, catalog, expected_best):
 def test_normaliza_abreviaturas_y_tildes():
     assert name_matching.normalize_tokens("Fermín L.") == ["fermin", "l"]
     assert name_matching.normalize_tokens("Javi Hdez.") == ["javi", "hernandez"]
+
+
+def test_calibracion_del_margen_cubre_lo_pedido():
+    rng = np.random.default_rng(0)
+    n = 4000
+    position = np.full(n, 3)
+    p_play = np.full(n, 0.9)
+    if_plays = np.full(n, 5.0)
+    y = np.where(rng.random(n) < 0.9, 5.0 + rng.normal(0, 3.0, n), 0.0)
+    sd_by_pos = {1: 3.0, 2: 3.0, 3: 3.0, 4: 3.0}
+    scale = ml_model.calibrate_spread([(position, y, p_play, if_plays)], sd_by_pos, coverage=0.68)
+    sd = scale * ml_model.spread(p_play, if_plays, pd.Series(position), sd_by_pos)
+    covered = float(np.mean(np.abs(y - p_play * if_plays) <= sd))
+    assert covered == pytest.approx(0.68, abs=0.02)
