@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/15338.png?version=20251228214158",
     "isFavorite": 0,
-    "value": 2787000,
-    "previousValue": 3000000,
+    "value": 2680000,
+    "previousValue": 2700000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2787000,
+      "floor": 2680000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 4180500,
+      "value": 4020000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2787000,
+      "price": 2680000,
       "loanable": null
     },
     "bid": {
@@ -327,8 +327,8 @@
       "id": 4056,
       "number": 15,
       "shortName": "J15",
-      "startDate": "2026-12-06 20:00:00",
-      "endDate": "2026-12-06 20:00:00",
+      "startDate": "2026-12-05 14:00:00",
+      "endDate": "2026-12-07 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -741,39 +741,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 3000000,
-      "change": -213000,
-      "sign": -213
+      "value": 2700000,
+      "change": -20000,
+      "sign": -20
     },
     {
       "time": "Una semana",
-      "value": 4323000,
-      "change": -1536000,
-      "sign": "-1.536.000"
+      "value": 3990000,
+      "change": -1310000,
+      "sign": "-1.310.000"
     },
     {
       "time": "Un mes",
-      "value": 8203000,
-      "change": -5416000,
-      "sign": "-5.416.000"
+      "value": 7692000,
+      "change": -5012000,
+      "sign": "-5.012.000"
     },
     {
       "time": "Un año",
-      "value": 27168000,
-      "change": -24381000,
-      "sign": "-24.381.000"
+      "value": 25931000,
+      "change": -23251000,
+      "sign": "-23.251.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 27168000,
-        "date": "15 nov 2025"
-      },
-      {
-        "value": 26551000,
-        "date": "16 nov 2025"
-      },
       {
         "value": 25931000,
         "date": "17 nov 2025"
@@ -2229,15 +2221,23 @@
       {
         "value": 2787000,
         "date": "15 nov 2026"
+      },
+      {
+        "value": 2700000,
+        "date": "16 nov 2026"
+      },
+      {
+        "value": 2680000,
+        "date": "17 nov 2026"
       }
     ],
     "max": {
-      "value": 27168000,
-      "date": "15 nov 2025"
+      "value": 25931000,
+      "date": "17 nov 2025"
     },
     "min": {
-      "value": 2787000,
-      "date": "15 nov 2026"
+      "value": 2680000,
+      "date": "17 nov 2026"
     }
   },
   "next_match": {
@@ -2250,16 +2250,16 @@
       "id_away": 2,
       "date": {
         "ts": 1795377600,
-        "text": "22 nov 21:00",
-        "format": "d MMM H:mm",
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "22 nov",
+          "date": "dom",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Getafe",
       "away": "Atlético",
