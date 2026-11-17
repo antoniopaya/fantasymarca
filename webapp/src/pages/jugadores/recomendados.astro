@@ -20,6 +20,7 @@ import {
   difficulty,
   expectedPoints,
   expectedSd,
+  rangeText,
   expectedPointsHorizon,
   fixtureIn,
   horizonGameweeks,
@@ -193,13 +194,14 @@ const baseline = summary?.media_previa;
       {
         usingModel && preds?.sd_if_plays && (
           <p class="mt-2 text-slate-400">
-            El <b class="text-white">±</b> es el margen típico (una desviación
-            típica) de los puntos de esa jornada: mezcla la duda de si juega con
-            lo que varía un jugador cuando juega (unos ±
-            {fmt(Number(preds.sd_if_plays["3"] ?? 3))} pts). En la validación
-            (J8–J12) los puntos reales quedaron dentro unas 8 de cada 10 veces;
-            un jugador con el mismo ≈ pero más ± es más arriesgado, y un ±
-            grande en el capitán se dobla.
+            Debajo de los puntos esperados,{" "}
+            <b class="text-white">entre X y Y</b> es lo que suele sumar: los
+            esperados menos y más un margen que mezcla la duda de si juega con
+            lo que varía cuando juega (unos{" "}
+            {fmt(Number(preds.sd_if_plays["3"] ?? 3))} pts). Un fijo con el
+            mismo ≈ tiene un rango más estrecho que uno dudoso. En la validación
+            (J8–J12) los puntos reales cayeron dentro del rango unas 8 de cada
+            10 veces. Al capitán, el rango se dobla.
           </p>
         )
       }
@@ -343,13 +345,12 @@ const baseline = summary?.media_previa;
                     <span class="shrink-0 text-right">
                       <span class="block font-bold text-emerald-300">
                         ≈{fmt(r.xp)}
-                        {r.sd !== null && (
-                          <span class="text-[11px] font-normal text-slate-500">
-                            {" "}
-                            ±{fmt(r.sd)}
-                          </span>
-                        )}
                       </span>
+                      {r.sd !== null && (
+                        <span class="block text-[11px] text-slate-400">
+                          {rangeText(r.xp, r.sd)}
+                        </span>
+                      )}
                       <span class="block text-[11px] text-slate-500">
                         3 jornadas ≈{fmt(r.xp3)}
                       </span>

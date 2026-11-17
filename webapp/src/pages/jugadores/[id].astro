@@ -24,6 +24,7 @@ import {
   DIFFICULTY_LABELS,
   expectedPoints,
   expectedSd,
+  rangeText,
   upcomingFor,
 } from "../../lib/forecast";
 import { FAMILIA } from "../../lib/yo";
@@ -349,7 +350,7 @@ const vsFantasticaPct = precioFantastica
           <h2 class="mb-1 text-xl font-bold text-white">Próximos partidos</h2>
           <p class="mb-4 text-sm text-slate-400">
             {nextXp !== null && nextFixtures[0]?.gameweek === nextGwNumber
-              ? `≈${nextXp.toFixed(1).replace(".", ",")}${nextSd !== null ? ` ±${nextSd.toFixed(1).replace(".", ",")}` : ""} pts esperados en la Jornada ${nextGwNumber}. `
+              ? `≈${nextXp.toFixed(1).replace(".", ",")}pts esperados en la Jornada ${nextGwNumber}${nextSd !== null ? ` (${rangeText(nextXp, nextSd)})` : ""}. `
               : ""}
             Dificultad del 1 (muy fácil) al 5 (muy difícil) según el rival, en
             casa o fuera.
@@ -384,9 +385,15 @@ const vsFantasticaPct = precioFantastica
                       {expectedPoints(summary, f.gameweek)
                         .toFixed(1)
                         .replace(".", ",")}{" "}
-                      {expectedSd(summary.id, f.gameweek) !== null &&
-                        `±${expectedSd(summary.id, f.gameweek)?.toFixed(1).replace(".", ",")} `}
                       pts
+                    </span>
+                  )}
+                  {summary && expectedSd(summary.id, f.gameweek) !== null && (
+                    <span class="text-[11px] text-slate-400">
+                      {rangeText(
+                        expectedPoints(summary, f.gameweek),
+                        expectedSd(summary.id, f.gameweek),
+                      )}
                     </span>
                   )}
                 </div>

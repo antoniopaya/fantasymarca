@@ -6,7 +6,12 @@ import {
   getAllPlayerSummaries,
 } from "../src/lib/data";
 import { bestEleven, idealEleven } from "../src/lib/liga";
-import { combinedSd, expectedSd, expectedPoints } from "../src/lib/forecast";
+import {
+  combinedSd,
+  rangeText,
+  expectedSd,
+  expectedPoints,
+} from "../src/lib/forecast";
 
 describe("datos de la liga", () => {
   it("cada 11 con puntos coherentes: suma de los 11 + capitán doble = puntos de la jornada", () => {
@@ -80,6 +85,12 @@ describe("margen de los puntos esperados", () => {
     expect(combinedSd([3, 4])).toBeCloseTo(5);
     expect(combinedSd([3, null, 4])).toBeCloseTo(5);
     expect(combinedSd([null])).toBeNull();
+  });
+
+  it("rangeText: menos y más el margen, sin bajar de 0", () => {
+    expect(rangeText(7.1, 3.4)).toBe("entre 4 y 11");
+    expect(rangeText(2, 3.5)).toBe("entre 0 y 6");
+    expect(rangeText(5, null)).toBeNull();
   });
 
   it("todo jugador con predicción tiene un margen positivo", () => {

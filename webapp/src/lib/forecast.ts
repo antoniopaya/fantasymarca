@@ -258,6 +258,18 @@ export function expectedSd(
   return value === undefined ? null : value;
 }
 
+/**
+ * El margen como un rango que se entiende de un vistazo: "entre 2 y 10". Son
+ * los puntos esperados menos y más una desviación típica, redondeados y sin
+ * bajar de 0. `scale` doble al capitán o a la suma de varios jugadores.
+ */
+export function rangeText(xp: number, sd: number | null): string | null {
+  if (sd === null) return null;
+  const low = Math.max(0, Math.round(xp - sd));
+  const high = Math.round(xp + sd);
+  return `entre ${low} y ${high}`;
+}
+
 /** Margen de una suma de jugadores (se supone que son independientes). */
 export function combinedSd(sds: (number | null)[]): number | null {
   const known = sds.filter((x): x is number => x !== null);

@@ -970,8 +970,12 @@ for (const m of nextGwMatches) {
         const sd = p.sd * (p.id === state.captainId ? 2 : 1);
         return sum + sd * sd;
       }, 0);
-      const margin = variance > 0 ? ` ±${Math.round(Math.sqrt(variance))}` : "";
-      label.textContent = `≈ ${total.toFixed(0)}${margin} pts esperados en la ${NEXT_GW_NAME}`;
+      const sd = Math.sqrt(variance);
+      const margin =
+        variance > 0
+          ? ` (entre ${Math.max(0, Math.round(total - sd))} y ${Math.round(total + sd)})`
+          : "";
+      label.textContent = `≈ ${total.toFixed(0)} pts esperados en la ${NEXT_GW_NAME}${margin}`;
     }
 
     // --- Cambios entre jornada y jornada (3, 6 u 11) ------------------------
@@ -1397,7 +1401,7 @@ for (const m of nextGwMatches) {
             ${rival ? `vs ${rival.name} ${player.home ? "(casa)" : "(fuera)"} ${diffChip(player)}` : `Sin partido en la ${NEXT_GW_NAME}`}
           </p>
           <p class="text-sm text-slate-400">
-            <b class="text-emerald-300">≈${formatXp(player.xp)}${player.sd !== null ? ` ±${formatXp(player.sd)}` : ""} pts</b> esperados${player.ffProb !== null ? ` · titular ${player.ffProb}%${player.probFf !== null && player.probAf !== null ? ` (futbolfantasy ${player.probFf}%, analiticafantasy ${player.probAf}%)` : ""}` : ""} · J anterior: ${player.lastGwPoints ?? "–"} · forma ${player.form}
+            <b class="text-emerald-300">≈${formatXp(player.xp)} pts</b> esperados${player.sd !== null ? ` (entre ${Math.max(0, Math.round(player.xp - player.sd))} y ${Math.round(player.xp + player.sd)})` : ""}${player.ffProb !== null ? ` · titular ${player.ffProb}%${player.probFf !== null && player.probAf !== null ? ` (futbolfantasy ${player.probFf}%, analiticafantasy ${player.probAf}%)` : ""}` : ""} · J anterior: ${player.lastGwPoints ?? "–"} · forma ${player.form}
           </p>
           <p class="text-sm text-slate-400">
             Próximas: ${player.xpByGw.map((x) => `J${x.gw} ≈${formatXp(x.xp)}`).join(" · ")} = <b class="text-slate-200">≈${formatXp(player.xp3)}</b>
