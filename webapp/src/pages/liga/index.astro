@@ -126,7 +126,12 @@ const STICKY_YO = "group-data-[yo=true]:bg-[#0b212c]";
                     </abbr>
                   </th>
                   <th class="px-3 py-2 text-right font-medium">
-                    Cambios {nextGameweek.name.replace("Jornada ", "J")}
+                    <abbr
+                      title={`Cambios disponibles en la ${nextGameweek.name}`}
+                      class="no-underline"
+                    >
+                      Camb. {nextGameweek.name.replace("Jornada ", "J")}
+                    </abbr>
                   </th>
                   <th class="hidden px-3 py-2 text-right font-medium sm:table-cell">
                     Premio

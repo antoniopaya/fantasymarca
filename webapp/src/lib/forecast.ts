@@ -253,9 +253,8 @@ export function expectedSd(
   playerId: number,
   gameweek = getNextGameweek().number,
 ): number | null {
-  const value = getPredictions()?.players[String(playerId)]?.sd?.[
-    String(gameweek)
-  ];
+  const value =
+    getPredictions()?.players[String(playerId)]?.sd?.[String(gameweek)];
   return value === undefined ? null : value;
 }
 

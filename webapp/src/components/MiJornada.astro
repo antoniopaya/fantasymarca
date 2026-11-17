@@ -122,7 +122,8 @@ const fmtM = (euros: number) =>
                 {entry.changes ?? 11} cambios · tu 11 actual ≈
                 {Math.round(plan.expectedTotal)}
                 {plan.expectedSdTotal !== null &&
-                  ` ±${Math.round(plan.expectedSdTotal)}`} pts esperados
+                  ` ±${Math.round(plan.expectedSdTotal)}`}{" "}
+                pts esperados
               </span>
             </span>
             <Icon name="arrowRight" class="h-6 w-6" />
@@ -155,6 +156,32 @@ const fmtM = (euros: number) =>
               </a>
             ))}
           </nav>
+
+          <dl class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div class="rounded-xl bg-slate-900/60 p-3">
+              <dt class="text-xs text-slate-500">Puesto</dt>
+              <dd class="text-xl font-bold text-white">
+                {rank}º{" "}
+                <span class="text-sm text-slate-500">
+                  de {jornada.entries.length}
+                </span>
+              </dd>
+            </div>
+            <div class="rounded-xl bg-slate-900/60 p-3">
+              <dt class="text-xs text-slate-500">Total</dt>
+              <dd class="text-xl font-bold text-white">{entry.total} pts</dd>
+            </div>
+            <div class="rounded-xl bg-slate-900/60 p-3">
+              <dt class="text-xs text-slate-500">Jornada {jornada.number}</dt>
+              <dd class="text-xl font-bold text-white">{entry.points} pts</dd>
+            </div>
+            <div class="rounded-xl bg-slate-900/60 p-3">
+              <dt class="text-xs text-slate-500">Al líder</dt>
+              <dd class="text-xl font-bold text-white">
+                {entry.dif ? `-${entry.dif}` : "Líder"}
+              </dd>
+            </div>
+          </dl>
 
           {plan.alerts.length > 0 && (
             <div class="rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4">
@@ -205,7 +232,8 @@ const fmtM = (euros: number) =>
                       ≈{fmt(c.xp * 2)}
                       {c.sd !== null && (
                         <span class="text-[11px] font-normal text-slate-400">
-                          {" "}±{fmt(c.sd * 2)}
+                          {" "}
+                          ±{fmt(c.sd * 2)}
                         </span>
                       )}
                     </span>
@@ -269,32 +297,6 @@ const fmtM = (euros: number) =>
               )}
             </div>
           </div>
-
-          <dl class="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <div class="rounded-xl bg-slate-900/60 p-3">
-              <dt class="text-xs text-slate-500">Puesto</dt>
-              <dd class="text-xl font-bold text-white">
-                {rank}º{" "}
-                <span class="text-sm text-slate-500">
-                  de {jornada.entries.length}
-                </span>
-              </dd>
-            </div>
-            <div class="rounded-xl bg-slate-900/60 p-3">
-              <dt class="text-xs text-slate-500">Total</dt>
-              <dd class="text-xl font-bold text-white">{entry.total} pts</dd>
-            </div>
-            <div class="rounded-xl bg-slate-900/60 p-3">
-              <dt class="text-xs text-slate-500">Jornada {jornada.number}</dt>
-              <dd class="text-xl font-bold text-white">{entry.points} pts</dd>
-            </div>
-            <div class="rounded-xl bg-slate-900/60 p-3">
-              <dt class="text-xs text-slate-500">Al líder</dt>
-              <dd class="text-xl font-bold text-white">
-                {entry.dif ? `-${entry.dif}` : "Líder"}
-              </dd>
-            </div>
-          </dl>
 
           <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
             <h2 class="mb-2 text-sm font-semibold text-white">Los Payás</h2>
@@ -389,6 +391,12 @@ const fmtM = (euros: number) =>
           ? `${hours} h`
           : `${Math.round(hours / 24)} días`
     }`;
+    // Más de día y medio sin refrescar: lesiones y dudas pueden estar viejas.
+    if (hours >= 36) {
+      ago.textContent += ". Pueden estar desactualizados";
+      ago.classList.replace("text-slate-500", "text-amber-400");
+      ago.classList.add("font-semibold");
+    }
   }
 
   const el = document.querySelector<HTMLElement>("[data-countdown]");

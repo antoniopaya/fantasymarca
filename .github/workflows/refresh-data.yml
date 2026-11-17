@@ -10,6 +10,8 @@ on:
     - cron: "0 7 * * 1,4,5"
     - cron: "0 15 * * 5"
     - cron: "0 8 * * 6,0"
+    # Jornadas entre semana (martes y miércoles): resultados y bajas.
+    - cron: "0 15 * * 2,3"
   workflow_dispatch:
     inputs:
       force_deploy:
@@ -28,6 +30,8 @@ on:
 
 permissions:
   contents: write
+  # Para abrir un issue si el refresco falla (ver el último paso).
+  issues: write
   # Para disparar deploy.yml al final (ver el último paso).
   actions: write
 
@@ -36,11 +40,11 @@ jobs:
     runs-on: ${{ inputs.runner == 'local' && fromJSON('["self-hosted", "fantasymarca-local"]') || 'ubuntu-latest' }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Python
         if: inputs.runner != 'local'
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.13"
 
@@ -123,3 +127,20 @@ jobs:
         # En el runner local el directorio de trabajo se queda en disco.
         if: always()
         run: rm -f fantasy_api/auth_store.json
+
+      - name: Avisar si el refresco ha fallado
+        # Un fallo (p. ej. Marca cortando la conexión) pasaba desapercibido
+        # hasta ver la web desactualizada. Un issue abierto manda un correo y
+        # no se duplica: si ya hay uno abierto, solo se le añade un comentario.
+        if: failure() && github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          open=$(gh issue list --label refresh-fallido --state open --json number --jq '.[0].number // empty')
+          if [ -n "$open" ]; then
+            gh issue comment "$open" --body "Ha vuelto a fallar: $url"
+          else
+            gh label create refresh-fallido --color B60205 --description "Falló el refresco automático de datos" 2>/dev/null || true
+            gh issue create --label refresh-fallido --title "Falló el refresco de datos" --body "El refresco automático ha fallado: $url"
+          fi

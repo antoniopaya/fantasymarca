@@ -89,7 +89,8 @@ function layout(
   const endLabels = paths
     .filter((p) => p.end)
     .map((p) => ({
-      label: p.label,
+      // La referencia ("Media de la liga") no cabe en el margen derecho.
+      label: p.reference ? "Media" : p.label,
       y: (p.end as { y: number }).y,
       x: (p.end as { x: number }).x,
     }))

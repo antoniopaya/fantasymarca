@@ -116,6 +116,20 @@ def fetch_all_players(teams) -> list:
     return catalog
 
 
+def remove_orphan_players(valid_ids: set) -> None:
+    """Borra las fichas de jugadores que ya no están en el catálogo (bajas de
+    plantilla): si no, se acumulan para siempre en webapp/data/players/."""
+    folder = os.path.join(WEBAPP_DATA_DIR, "players")
+    removed = 0
+    for name in os.listdir(folder):
+        stem, ext = os.path.splitext(name)
+        if ext == ".json" and stem.isdigit() and int(stem) not in valid_ids:
+            os.remove(os.path.join(folder, name))
+            removed += 1
+    if removed:
+        print(f"  {removed} fichas huérfanas borradas", file=sys.stderr)
+
+
 def main() -> None:
     print("Obteniendo jornadas y equipos...", file=sys.stderr)
     gameweeks, teams = fetch_gameweeks_and_teams()
@@ -127,6 +141,7 @@ def main() -> None:
 
     players = fetch_all_players(teams)
     write_json("players.json", players)
+    remove_orphan_players({p["id"] for p in players})
 
     # Para que la web pueda decir "Datos de Marca de hace X horas".
     write_json("meta.json", {"marca_updated_at": datetime.now(timezone.utc).isoformat(timespec="minutes")})

@@ -809,7 +809,7 @@ for (const m of nextGwMatches) {
             <img src="${player.teamLogoUrl}" alt="" class="absolute -bottom-0.5 -right-1 h-5 w-5 rounded-full bg-slate-950 p-0.5" />
             ${player.status ? '<span class="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-rose-500 text-[11px] font-black text-white ring-2 ring-slate-950">!</span>' : ""}
           </span>
-          <span class="mt-1 block w-full truncate text-xs font-semibold leading-tight text-white">${player.shortName}</span>
+          <span class="mt-1 line-clamp-2 w-full text-[11px] font-semibold leading-tight break-words text-white">${player.shortName}</span>
           <span class="mt-0.5 flex items-center gap-1 text-[11px] leading-none text-slate-400">
             ${rival ? `<img src="${rival.logoUrl}" alt="" class="h-3.5 w-3.5 rounded-full" style="box-shadow:0 0 0 2px ${DIFFICULTY_COLORS[player.difficulty] ?? "transparent"}" />` : noMatch ? "—" : ""}
             ${formatMillions(player.price)}

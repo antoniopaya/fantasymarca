@@ -128,7 +128,7 @@ mano; ver `MANUAL_OVERRIDES` dentro del script para los casos ya resueltos.
    jornada a predecir saca P(juega) de las alineaciones probables, pasando
    su probabilidad de titular a probabilidad de jugar con lo que de verdad
    jugó cada probabilidad en las jornadas guardadas (si aún no hay ninguna,
-   una mezcla a ojo con lo que dice el modelo). Escribe `predicciones.json`, que la web usa para los puntos
+   una mezcla a ojo con lo que dice el modelo). Además de los puntos esperados guarda su margen (`sd`, desviación típica): mezcla la duda de si juega con lo que varía por posición cuando juega, medido con los errores de la validación (J8–J12: ~8 de cada 10 veces los puntos reales caen dentro de ±1 sd). La web lo muestra como "≈7,1 ±3,4". Escribe `predicciones.json`, que la web usa para los puntos
    esperados y la pestaña Jugadores → Recomendados (incluido el 11 de 180M
    que más puntos espera). Si falta, la web vuelve a la fórmula sencilla.
 
@@ -179,6 +179,7 @@ npm run dev       # http://localhost:4321
 npm run lint      # ESLint
 npm run format    # Prettier
 npm run build     # build de producción a webapp/dist/
+npm test          # tests (vitest) con los datos de webapp/data/
 ```
 
 **fantasy_api** (Python 3.13+, solo hace falta si quieres regenerar datos):
@@ -190,6 +191,7 @@ pip install -r fantasy_api/requirements.txt
 # no está en el repo, es un secreto y va en .gitignore.
 cd fantasy_api
 python main.py
+python -m pytest tests   # tests (hace falta pip install pytest)
 ```
 
 ## Despliegue

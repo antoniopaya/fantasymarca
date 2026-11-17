@@ -139,7 +139,9 @@ export function weekPlan(entry: LigaEntry) {
   // El capitán cuenta doble: su margen también.
   const captainId = entry.players.find((x) => x.captain)?.id;
   const expectedSdTotal = combinedSd(
-    mine.map((p) => (p.sd === null ? null : p.sd * (p.summary.id === captainId ? 2 : 1))),
+    mine.map((p) =>
+      p.sd === null ? null : p.sd * (p.summary.id === captainId ? 2 : 1),
+    ),
   );
 
   return {

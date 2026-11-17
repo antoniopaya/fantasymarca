@@ -197,8 +197,9 @@ const baseline = summary?.media_previa;
             típica) de los puntos de esa jornada: mezcla la duda de si juega con
             lo que varía un jugador cuando juega (unos ±
             {fmt(Number(preds.sd_if_plays["3"] ?? 3))} pts). En la validación
-            (J8–J12) los puntos reales quedaron dentro unas 8 de cada 10 veces; un jugador con el mismo ≈ pero más ±
-            es más arriesgado, y un ± grande en el capitán se dobla.
+            (J8–J12) los puntos reales quedaron dentro unas 8 de cada 10 veces;
+            un jugador con el mismo ≈ pero más ± es más arriesgado, y un ±
+            grande en el capitán se dobla.
           </p>
         )
       }
@@ -213,10 +214,32 @@ const baseline = summary?.media_previa;
     </details>
   </section>
 
+  <nav
+    aria-label="Secciones de la página"
+    class="-mx-4 mb-8 flex [scrollbar-width:none] gap-2 overflow-x-auto px-4 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden"
+  >
+    {
+      [
+        ...(eleven ? [["#once-modelo", "11 del modelo"]] : []),
+        ["#por-posicion", "Por posición"],
+        ["#proximas-3", "Próximas 3"],
+        ["#por-millon", "Por millón"],
+        ["#diferenciales", "Diferenciales"],
+      ].map(([href, label]) => (
+        <a
+          href={href}
+          class="shrink-0 rounded-full border border-white/10 px-4 py-2.5 text-sm font-medium whitespace-nowrap text-slate-300 hover:bg-white/5 hover:text-white"
+        >
+          {label}
+        </a>
+      ))
+    }
+  </nav>
+
   {
     eleven && (
       <section class="mb-10" aria-labelledby="once-modelo">
-        <h2 id="once-modelo" class="text-xl font-bold text-white">
+        <h2 id="once-modelo" class="scroll-mt-20 text-xl font-bold text-white">
           El 11 del modelo
         </h2>
         <div class="mb-4 flex flex-wrap items-end justify-between gap-3">
@@ -275,7 +298,10 @@ const baseline = summary?.media_previa;
   }
 
   <section class="mb-10" aria-labelledby="por-posicion">
-    <h2 id="por-posicion" class="mb-4 text-xl font-bold text-white">
+    <h2
+      id="por-posicion"
+      class="mb-4 scroll-mt-20 text-xl font-bold text-white"
+    >
       Los mejores para la {gw.name}
     </h2>
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -319,7 +345,8 @@ const baseline = summary?.media_previa;
                         ≈{fmt(r.xp)}
                         {r.sd !== null && (
                           <span class="text-[11px] font-normal text-slate-500">
-                            {" "}±{fmt(r.sd)}
+                            {" "}
+                            ±{fmt(r.sd)}
                           </span>
                         )}
                       </span>
@@ -338,7 +365,7 @@ const baseline = summary?.media_previa;
   </section>
 
   <section class="mb-10" aria-labelledby="proximas-3">
-    <h2 id="proximas-3" class="text-xl font-bold text-white">
+    <h2 id="proximas-3" class="scroll-mt-20 text-xl font-bold text-white">
       Para las próximas {horizon.length} jornadas
     </h2>
     <p class="mb-4 text-sm text-slate-400">
@@ -394,7 +421,9 @@ const baseline = summary?.media_previa;
 
   <section class="grid grid-cols-1 gap-8 lg:grid-cols-2">
     <div>
-      <h2 class="text-xl font-bold text-white">Más puntos por millón</h2>
+      <h2 id="por-millon" class="scroll-mt-20 text-xl font-bold text-white">
+        Más puntos por millón
+      </h2>
       <p class="mb-4 text-sm text-slate-400">
         Para cuadrar el presupuesto: los que más se espera que sumen por cada
         millón (con al menos 3 pts esperados).
@@ -430,7 +459,9 @@ const baseline = summary?.media_previa;
       </ol>
     </div>
     <div>
-      <h2 class="text-xl font-bold text-white">Diferenciales</h2>
+      <h2 id="diferenciales" class="scroll-mt-20 text-xl font-bold text-white">
+        Diferenciales
+      </h2>
       <p class="mb-4 text-sm text-slate-400">
         Muchos puntos esperados y en el 10% o menos de los equipos de la liga:
         si salen bien, recortas a casi todos.
