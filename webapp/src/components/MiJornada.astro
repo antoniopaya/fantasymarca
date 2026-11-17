@@ -120,7 +120,9 @@ const fmtM = (euros: number) =>
               <span class="block text-lg font-black">Preparar mi 11</span>
               <span class="block text-sm font-medium text-slate-900/80">
                 {entry.changes ?? 11} cambios · tu 11 actual ≈
-                {Math.round(plan.expectedTotal)} pts esperados
+                {Math.round(plan.expectedTotal)}
+                {plan.expectedSdTotal !== null &&
+                  ` ±${Math.round(plan.expectedSdTotal)}`} pts esperados
               </span>
             </span>
             <Icon name="arrowRight" class="h-6 w-6" />
@@ -201,6 +203,11 @@ const fmtM = (euros: number) =>
                     </span>
                     <span class="shrink-0 font-bold text-emerald-300">
                       ≈{fmt(c.xp * 2)}
+                      {c.sd !== null && (
+                        <span class="text-[11px] font-normal text-slate-400">
+                          {" "}±{fmt(c.sd * 2)}
+                        </span>
+                      )}
                     </span>
                   </li>
                 ))}

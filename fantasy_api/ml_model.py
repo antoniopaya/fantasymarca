@@ -460,7 +460,10 @@ def baseline_formula(df):
 
 
 def evaluate(df: pd.DataFrame, features: list[str]):
+    """Devuelve (resultados por jornada, residuos de los puntos si juega por
+    familia y posición: sirven para el margen +- de cada predicción)."""
     results = []
+    residuals: dict[str, dict[int, list[float]]] = {f: {} for f in MODEL_FAMILIES}
     played_gws = sorted(df[df.team_played].gw.unique())
     for k in played_gws:
         train = df[(df.gw < k) & df.team_played]
@@ -476,6 +479,9 @@ def evaluate(df: pd.DataFrame, features: list[str]):
             # Igual que en la predicción real: con alineaciones guardadas de
             # esa jornada (desde la 8), P(juega) sale de ellas.
             preds[family] = lineup_p_play(train, p, ff_prob) * s
+            played = test.y_played.to_numpy()
+            for pos, err in zip(test.position.to_numpy()[played], (test.y_total.to_numpy() - s)[played]):
+                residuals[family].setdefault(int(pos), []).append(float(err))
         preds["media_previa"] = baseline_mean(test)
         preds["formula_web"] = baseline_formula(test)
         y = test.y_total.to_numpy()
@@ -487,7 +493,22 @@ def evaluate(df: pd.DataFrame, features: list[str]):
                 "top50": round(float(np.mean(y[top])), 2),
             }
         results.append(row)
-    return results
+    return results, residuals
+
+
+def residual_sd(residuals: dict[int, list[float]]) -> dict[int, float]:
+    """Desviación típica del error en los puntos si juega, por posición."""
+    allv = [e for v in residuals.values() for e in v]
+    fallback = float(np.std(allv)) if allv else 3.0
+    return {pos: (float(np.std(residuals[pos])) if len(residuals.get(pos, [])) >= 30 else fallback) for pos in (1, 2, 3, 4)}
+
+
+def spread(p_play: np.ndarray, if_plays: np.ndarray, position: pd.Series, sd_by_pos: dict[int, float]) -> np.ndarray:
+    """Desviación típica de los puntos de la jornada. Con probabilidad p juega
+    y suma if_plays +- sd de su posición; si no, 0. Varianza de esa mezcla:
+    p*sd^2 + p*(1-p)*if_plays^2."""
+    sd = position.map(sd_by_pos).to_numpy(dtype=float)
+    return np.sqrt(p_play * sd**2 + p_play * (1 - p_play) * np.clip(if_plays, 0, None) ** 2)
 
 
 def summarize(results):
@@ -578,7 +599,7 @@ def main() -> None:
         file=sys.stderr,
     )
 
-    validation = evaluate(df, features)
+    validation, residuals = evaluate(df, features)
     summary = summarize(validation)
     # Se queda la familia con menor error medio en la validación.
     family = min(MODEL_FAMILIES, key=lambda f: summary[f]["mae"]) if summary else "lineal"
@@ -586,6 +607,7 @@ def main() -> None:
         print(f"  {name:13} MAE {m['mae']:.3f} · top-50 {m['top50']:.2f}", file=sys.stderr)
     print(f"  -> modelo elegido: {family}", file=sys.stderr)
 
+    sd_by_pos = residual_sd(residuals[family])
     train = df[(df.gw < next_gw) & df.team_played]
     models = fit(train, features, family)
     status_by_id = {p["id"]: p["status"] for p in players}
@@ -610,9 +632,11 @@ def main() -> None:
             p_play = np.where(status.eq("injury").to_numpy(), p_model * 0.5, p_model)
         rows["p_play"] = p_play
         rows["xp"] = p_play * rows["if_plays"]
+        rows["sd"] = spread(p_play, if_plays, rows["position"], sd_by_pos)
         for r in rows.itertuples():
             entry = players_out.setdefault(str(r.id), {"next": {}})
             entry["next"][str(g)] = round(float(r.xp), 2)
+            entry.setdefault("sd", {})[str(g)] = round(float(r.sd), 2)
             if g == next_gw:
                 ff = ff_now.get(r.id)
                 entry.update(
@@ -641,6 +665,7 @@ def main() -> None:
         "lineups_jornada": lineups.get("jornada") if lineups else None,
         "validation": validation,
         "validation_summary": summary,
+        "sd_if_plays": {str(k): round(v, 2) for k, v in sd_by_pos.items()},
         "players": players_out,
     }
     with open(os.path.join(DATA_DIR, "predicciones.json"), "w", encoding="utf-8") as f:

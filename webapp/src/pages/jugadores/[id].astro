@@ -23,6 +23,7 @@ import {
   DIFFICULTY_COLORS,
   DIFFICULTY_LABELS,
   expectedPoints,
+  expectedSd,
   upcomingFor,
 } from "../../lib/forecast";
 import { FAMILIA } from "../../lib/yo";
@@ -58,6 +59,7 @@ const recent =
 const summary = getAllPlayerSummaries().find((s) => s.id === playerId);
 const nextFixtures = summary ? upcomingFor(summary, 5) : [];
 const nextXp = summary ? expectedPoints(summary) : null;
+const nextSd = summary ? expectedSd(summary.id) : null;
 
 const valueDiff = player ? player.value - player.previousValue : 0;
 
@@ -347,7 +349,7 @@ const vsFantasticaPct = precioFantastica
           <h2 class="mb-1 text-xl font-bold text-white">Próximos partidos</h2>
           <p class="mb-4 text-sm text-slate-400">
             {nextXp !== null && nextFixtures[0]?.gameweek === nextGwNumber
-              ? `≈${nextXp.toFixed(1).replace(".", ",")} pts esperados en la Jornada ${nextGwNumber}. `
+              ? `≈${nextXp.toFixed(1).replace(".", ",")}${nextSd !== null ? ` ±${nextSd.toFixed(1).replace(".", ",")}` : ""} pts esperados en la Jornada ${nextGwNumber}. `
               : ""}
             Dificultad del 1 (muy fácil) al 5 (muy difícil) según el rival, en
             casa o fuera.
@@ -382,6 +384,8 @@ const vsFantasticaPct = precioFantastica
                       {expectedPoints(summary, f.gameweek)
                         .toFixed(1)
                         .replace(".", ",")}{" "}
+                      {expectedSd(summary.id, f.gameweek) !== null &&
+                        `±${expectedSd(summary.id, f.gameweek)?.toFixed(1).replace(".", ",")} `}
                       pts
                     </span>
                   )}

@@ -13,14 +13,18 @@ import {
 } from "./data";
 import {
   difficulty,
+  combinedSd,
   expectedPoints,
   expectedPointsHorizon,
+  expectedSd,
   fixtureIn,
 } from "./forecast";
 
 export interface WeekPlayer {
   summary: PlayerSummary;
   xp: number;
+  /** Margen (desviación típica) de xp; null sin modelo. */
+  sd: number | null;
   /** Puntos esperados sumando la próxima jornada y las dos siguientes. */
   xp3: number;
   rivalName: string | null;
@@ -33,6 +37,7 @@ function toWeekPlayer(s: PlayerSummary, gameweek: number): WeekPlayer {
   return {
     summary: s,
     xp: expectedPoints(s, gameweek),
+    sd: expectedSd(s.id, gameweek),
     xp3: expectedPointsHorizon(s).total,
     rivalName: f?.rivalName ?? null,
     home: f?.home ?? null,
@@ -131,5 +136,19 @@ export function weekPlan(entry: LigaEntry) {
     (mine.find((p) => entry.players.find((x) => x.id === p.summary.id)?.captain)
       ?.xp ?? 0);
 
-  return { mine, alerts, captains, changes, expectedTotal, horizon };
+  // El capitán cuenta doble: su margen también.
+  const captainId = entry.players.find((x) => x.captain)?.id;
+  const expectedSdTotal = combinedSd(
+    mine.map((p) => (p.sd === null ? null : p.sd * (p.summary.id === captainId ? 2 : 1))),
+  );
+
+  return {
+    mine,
+    alerts,
+    captains,
+    changes,
+    expectedTotal,
+    expectedSdTotal,
+    horizon,
+  };
 }

@@ -243,6 +243,29 @@ function modelXp(playerId: number, gameweek: number): number | null {
   return value === undefined ? null : value;
 }
 
+/**
+ * Margen (desviación típica) de los puntos esperados de un jugador en una
+ * jornada, del modelo; null si no hay predicción (la fórmula sencilla no lo
+ * tiene). Mezcla "juega o no" con lo que se desvía cuando juega, así que un
+ * dudoso tiene más margen que un fijo con los mismos puntos esperados.
+ */
+export function expectedSd(
+  playerId: number,
+  gameweek = getNextGameweek().number,
+): number | null {
+  const value = getPredictions()?.players[String(playerId)]?.sd?.[
+    String(gameweek)
+  ];
+  return value === undefined ? null : value;
+}
+
+/** Margen de una suma de jugadores (se supone que son independientes). */
+export function combinedSd(sds: (number | null)[]): number | null {
+  const known = sds.filter((x): x is number => x !== null);
+  if (known.length === 0) return null;
+  return Math.sqrt(known.reduce((s, x) => s + x * x, 0));
+}
+
 /** Jornadas para las que se calcula el "próximas 3": la próxima y 2 más. */
 export function horizonGameweeks(): number[] {
   const next = getNextGameweek().number;

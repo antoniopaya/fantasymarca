@@ -19,6 +19,7 @@ import {
 import {
   difficulty,
   expectedPoints,
+  expectedSd,
   expectedPointsHorizon,
   fixtureIn,
   horizonGameweeks,
@@ -35,6 +36,7 @@ const scrapedAt = getLineupsScrapedAt();
 interface Rec {
   s: PlayerSummary;
   xp: number;
+  sd: number | null;
   rival: string | null;
   home: boolean | null;
   diff: number | null;
@@ -61,6 +63,7 @@ const recs: Rec[] = getAllPlayerSummaries()
     return {
       s,
       xp: expectedPoints(s, gw.number),
+      sd: expectedSd(s.id, gw.number),
       rival: f?.rivalName ?? null,
       home: f?.home ?? null,
       diff: f ? difficulty(f.rivalId, s.position, f.home) : null,
@@ -188,6 +191,18 @@ const baseline = summary?.media_previa;
         )
       }
       {
+        usingModel && preds?.sd_if_plays && (
+          <p class="mt-2 text-slate-400">
+            El <b class="text-white">±</b> es el margen típico (una desviación
+            típica) de los puntos de esa jornada: mezcla la duda de si juega con
+            lo que varía un jugador cuando juega (unos ±
+            {fmt(Number(preds.sd_if_plays["3"] ?? 3))} pts). En la validación
+            (J8–J12) los puntos reales quedaron dentro unas 8 de cada 10 veces; un jugador con el mismo ≈ pero más ±
+            es más arriesgado, y un ± grande en el capitán se dobla.
+          </p>
+        )
+      }
+      {
         scrapedAt && (
           <p class="mt-2 text-xs text-slate-500">
             Alineaciones probables (futbolfantasy.com y analiticafantasy.com,
@@ -302,6 +317,11 @@ const baseline = summary?.media_previa;
                     <span class="shrink-0 text-right">
                       <span class="block font-bold text-emerald-300">
                         ≈{fmt(r.xp)}
+                        {r.sd !== null && (
+                          <span class="text-[11px] font-normal text-slate-500">
+                            {" "}±{fmt(r.sd)}
+                          </span>
+                        )}
                       </span>
                       <span class="block text-[11px] text-slate-500">
                         3 jornadas ≈{fmt(r.xp3)}

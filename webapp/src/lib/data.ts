@@ -252,6 +252,8 @@ export interface Prediction {
   discrepancy: boolean;
   /** Puntos esperados en cada jornada del horizonte ("8": 6.4, "9": ...). */
   next: Record<string, number>;
+  /** Desviación típica de los puntos en cada jornada del horizonte. */
+  sd?: Record<string, number>;
 }
 
 export interface Predictions {
@@ -265,6 +267,8 @@ export interface Predictions {
   lineups_history_gameweeks: number;
   lineups_jornada: number | null;
   validation_summary: Record<string, { mae: number; top50: number }>;
+  /** Desviación típica del error de los puntos si juega, por posición. */
+  sd_if_plays?: Record<string, number>;
   players: Record<string, Prediction>;
 }
 

@@ -26,6 +26,7 @@ import {
   DIFFICULTY_LABELS,
   difficulty,
   expectedPoints,
+  expectedSd,
   expectedPointsHorizon,
   fixtureIn,
   prediction,
@@ -72,6 +73,7 @@ const players = getAllPlayerSummaries()
         ? Math.round(((ownership.get(p.id) ?? 0) / ligaSize) * 100)
         : 0,
       xp: expectedPoints(p, nextGameweek.number),
+      sd: expectedSd(p.id, nextGameweek.number),
       difficulty: fixture
         ? difficulty(fixture.rivalId, p.position, fixture.home)
         : null,
@@ -962,7 +964,14 @@ for (const m of nextGwMatches) {
         (sum, p) => sum + p.xp * (p.id === state.captainId ? 2 : 1),
         0,
       );
-      label.textContent = `≈ ${total.toFixed(0)} pts esperados en la ${NEXT_GW_NAME}`;
+      // Margen de la suma: los de cada jugador (el capitán, doble) en cuadratura.
+      const variance = filled.reduce((sum, p) => {
+        if (p.sd === null) return sum;
+        const sd = p.sd * (p.id === state.captainId ? 2 : 1);
+        return sum + sd * sd;
+      }, 0);
+      const margin = variance > 0 ? ` ±${Math.round(Math.sqrt(variance))}` : "";
+      label.textContent = `≈ ${total.toFixed(0)}${margin} pts esperados en la ${NEXT_GW_NAME}`;
     }
 
     // --- Cambios entre jornada y jornada (3, 6 u 11) ------------------------
@@ -1388,7 +1397,7 @@ for (const m of nextGwMatches) {
             ${rival ? `vs ${rival.name} ${player.home ? "(casa)" : "(fuera)"} ${diffChip(player)}` : `Sin partido en la ${NEXT_GW_NAME}`}
           </p>
           <p class="text-sm text-slate-400">
-            <b class="text-emerald-300">≈${formatXp(player.xp)} pts</b> esperados${player.ffProb !== null ? ` · titular ${player.ffProb}%${player.probFf !== null && player.probAf !== null ? ` (futbolfantasy ${player.probFf}%, analiticafantasy ${player.probAf}%)` : ""}` : ""} · J anterior: ${player.lastGwPoints ?? "–"} · forma ${player.form}
+            <b class="text-emerald-300">≈${formatXp(player.xp)}${player.sd !== null ? ` ±${formatXp(player.sd)}` : ""} pts</b> esperados${player.ffProb !== null ? ` · titular ${player.ffProb}%${player.probFf !== null && player.probAf !== null ? ` (futbolfantasy ${player.probFf}%, analiticafantasy ${player.probAf}%)` : ""}` : ""} · J anterior: ${player.lastGwPoints ?? "–"} · forma ${player.form}
           </p>
           <p class="text-sm text-slate-400">
             Próximas: ${player.xpByGw.map((x) => `J${x.gw} ≈${formatXp(x.xp)}`).join(" · ")} = <b class="text-slate-200">≈${formatXp(player.xp3)}</b>
