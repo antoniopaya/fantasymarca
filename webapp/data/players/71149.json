@@ -3,8 +3,8 @@
     "id": 71149,
     "name": "Gabriel Moscardo",
     "position": 3,
-    "points": 10,
-    "avg": 1.4,
+    "points": 12,
+    "avg": 1.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
@@ -72,7 +72,7 @@
   },
   "id": 71149,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 2
   },
@@ -292,12 +292,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -705,10 +707,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 10,
-      "avg": 1.4286,
+      "points": 12,
+      "avg": 1.5,
       "id_team": 8,
-      "last_gameweek": 12
+      "last_gameweek": 13
     }
   ],
   "values": [
@@ -1287,28 +1289,28 @@
     "71149": {
       "id": 71149,
       "id_team": 8,
-      "id_match": 38047,
-      "id_gameweek": 4054,
-      "id_home": 1,
-      "id_away": 8,
+      "id_match": 38060,
+      "id_gameweek": 4055,
+      "id_home": 8,
+      "id_away": 9,
       "date": {
-        "ts": 1795204800,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1796068800,
+        "text": "30 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "30 nov",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Espanyol",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "home": "Espanyol",
+      "away": "Getafe",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,
@@ -1322,8 +1324,8 @@
   "away": {
     "71149": {
       "id": 71149,
-      "points": 6,
-      "avg": 1.5
+      "points": 8,
+      "avg": 1.6
     }
   },
   "owners": [],

@@ -317,8 +317,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 313227,
+        "id_player": 71061,
+        "category": "injury",
+        "description": "Rotura de ligamento cruzado",
+        "duration": "Se pierde el resto de la temporada",
+        "since": "2026-11-18 18:08:38",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -1332,28 +1341,28 @@
     "71061": {
       "id": 71061,
       "id_team": 8,
-      "id_match": 38047,
-      "id_gameweek": 4054,
-      "id_home": 1,
-      "id_away": 8,
+      "id_match": 38060,
+      "id_gameweek": 4055,
+      "id_home": 8,
+      "id_away": 9,
       "date": {
-        "ts": 1795204800,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1796068800,
+        "text": "30 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "30 nov",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Athletic Club",
-      "away": "Espanyol",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
+      "home": "Espanyol",
+      "away": "Getafe",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,
