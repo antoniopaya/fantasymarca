@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/14432.png?version=20240626192042",
     "isFavorite": 0,
-    "value": 5309000,
-    "previousValue": 5416000,
+    "value": 5214000,
+    "previousValue": 5309000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5309000,
+      "floor": 5214000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7963500,
+      "value": 7821000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5309000,
+      "price": 5214000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 178,
       "weight": 69
     },
-    "clausesRanking": 202
+    "clausesRanking": 229
   },
   "id": 14432,
   "player_extra": {
@@ -337,14 +337,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
       "events": [
         "sub_in"
       ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     },
@@ -752,8 +752,8 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 4,
-      "avg": 1.3333,
+      "points": 5,
+      "avg": 1.25,
       "id_team": 8,
       "last_gameweek": 13
     },
@@ -775,35 +775,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5416000,
-      "change": -107000,
-      "sign": -107
+      "value": 5309000,
+      "change": -95000,
+      "sign": -95
     },
     {
       "time": "Una semana",
-      "value": 6074000,
-      "change": -765000,
-      "sign": -765
+      "value": 6007000,
+      "change": -793000,
+      "sign": -793
     },
     {
       "time": "Un mes",
-      "value": 5254000,
-      "change": 55000,
-      "sign": 55
+      "value": 5409000,
+      "change": -195000,
+      "sign": -195
     },
     {
       "time": "Un año",
-      "value": 10980000,
-      "change": -5671000,
-      "sign": "-5.671.000"
+      "value": 10880000,
+      "change": -5666000,
+      "sign": "-5.666.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 10980000,
-        "date": "20 nov 2025"
-      },
       {
         "value": 10880000,
         "date": "21 nov 2025"
@@ -2263,6 +2259,10 @@
       {
         "value": 5309000,
         "date": "20 nov 2026"
+      },
+      {
+        "value": 5214000,
+        "date": "21 nov 2026"
       }
     ],
     "max": {
@@ -2313,8 +2313,8 @@
   "away": {
     "14432": {
       "id": 14432,
-      "points": 3,
-      "avg": 1.5
+      "points": 4,
+      "avg": 1.3333
     }
   },
   "owners": [],

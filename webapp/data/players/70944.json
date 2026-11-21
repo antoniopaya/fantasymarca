@@ -3,14 +3,14 @@
     "id": 70944,
     "name": "Riki Rodríguez",
     "position": 3,
-    "points": 25,
-    "avg": 2.8,
+    "points": 27,
+    "avg": 2.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70944.png?version=20260621102552",
     "isFavorite": 0,
-    "value": 329000,
+    "value": 381000,
     "previousValue": 329000,
     "videoFrame": null,
     "team": {
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 381000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 331
+    "clausesRanking": 235
   },
   "id": 70944,
   "player_extra": {
-    "matches": 9,
+    "matches": 10,
     "goals": 0,
     "cards": 0
   },
@@ -295,12 +295,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -708,30 +710,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 25,
-      "avg": 2.7778,
+      "points": 27,
+      "avg": 2.7,
       "id_team": 6,
-      "last_gameweek": 12
+      "last_gameweek": 13
     }
   ],
   "values": [
     {
       "time": "Un día",
       "value": 329000,
-      "change": 0,
-      "sign": 0
+      "change": 52000,
+      "sign": 52
     },
     {
       "time": "Una semana",
-      "value": 329000,
-      "change": 0,
-      "sign": 0
+      "value": 393000,
+      "change": -12000,
+      "sign": -12
     },
     {
       "time": "Un mes",
-      "value": 2151000,
-      "change": -1822000,
-      "sign": "-1.822.000"
+      "value": 2271000,
+      "change": -1890000,
+      "sign": "-1.890.000"
     }
   ],
   "values_chart": {
@@ -1343,6 +1345,10 @@
       {
         "value": 329000,
         "date": "20 nov 2026"
+      },
+      {
+        "value": 381000,
+        "date": "21 nov 2026"
       }
     ],
     "max": {
@@ -1358,28 +1364,28 @@
     "70944": {
       "id": 70944,
       "id_team": 6,
-      "id_match": 38048,
-      "id_gameweek": 4054,
-      "id_home": 48,
-      "id_away": 6,
+      "id_match": 38058,
+      "id_gameweek": 4055,
+      "id_home": 6,
+      "id_away": 3,
       "date": {
-        "ts": 1795266000,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1795965300,
+        "text": "29 nov 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "29 nov",
+          "time": "16:15",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Deportivo da Coruña",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Barcelona",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,
@@ -1393,8 +1399,8 @@
   "away": {
     "70944": {
       "id": 70944,
-      "points": 11,
-      "avg": 2.75
+      "points": 13,
+      "avg": 2.6
     }
   },
   "owners": [],

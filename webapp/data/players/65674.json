@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65674.png?version=20250831165937",
     "isFavorite": 0,
-    "value": 1942000,
-    "previousValue": 2099000,
+    "value": 1735000,
+    "previousValue": 1942000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -38,26 +38,26 @@
       "price": null
     },
     "clause": {
-      "floor": 1942000,
+      "floor": 1735000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2913000,
+      "value": 2602500,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 1942000,
-      "loanable": null
+      "id": 1985745606,
+      "isPublic": 1,
+      "price": 1735000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 1735000,
       "barter": [],
       "type": null,
       "days": null
@@ -72,7 +72,7 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 286
+    "clausesRanking": null
   },
   "id": 65674,
   "player_extra": {
@@ -753,35 +753,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2099000,
-      "change": -157000,
-      "sign": -157
+      "value": 1942000,
+      "change": -207000,
+      "sign": -207
     },
     {
       "time": "Una semana",
-      "value": 1460000,
-      "change": 482000,
-      "sign": 482
+      "value": 1588000,
+      "change": 147000,
+      "sign": 147
     },
     {
       "time": "Un mes",
-      "value": 6239000,
-      "change": -4297000,
-      "sign": "-4.297.000"
+      "value": 5974000,
+      "change": -4239000,
+      "sign": "-4.239.000"
     },
     {
       "time": "Un año",
-      "value": 341000,
-      "change": 1601000,
-      "sign": "+1.601.000"
+      "value": 350000,
+      "change": 1385000,
+      "sign": "+1.385.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 341000,
-        "date": "20 nov 2025"
-      },
       {
         "value": 350000,
         "date": "21 nov 2025"
@@ -2241,6 +2237,10 @@
       {
         "value": 1942000,
         "date": "20 nov 2026"
+      },
+      {
+        "value": 1735000,
+        "date": "21 nov 2026"
       }
     ],
     "max": {
@@ -2262,12 +2262,12 @@
       "id_away": 5,
       "date": {
         "ts": 1795291200,
-        "text": "sáb 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "sáb",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

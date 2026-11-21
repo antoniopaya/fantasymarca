@@ -3,15 +3,15 @@
     "id": 24,
     "name": "Unai López",
     "position": 3,
-    "points": 58,
-    "avg": 4.8,
+    "points": 59,
+    "avg": 4.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/24.png?version=20251004230007",
     "isFavorite": 0,
-    "value": 30338000,
-    "previousValue": 29691000,
+    "value": 30973000,
+    "previousValue": 30338000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 30338000,
+      "floor": 30973000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 45507000,
+      "value": 46459500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 30338000,
+      "price": 30973000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 169,
       "weight": 64
     },
-    "clausesRanking": 1
+    "clausesRanking": 4
   },
   "id": 24,
   "player_extra": {
-    "matches": 12,
+    "matches": 13,
     "goals": 1,
     "cards": 3
   },
@@ -300,8 +300,8 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": 1,
+        "isLive": true
       },
       "events": null,
       "injury": null,
@@ -743,35 +743,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 29691000,
-      "change": 647000,
-      "sign": 647
+      "value": 30338000,
+      "change": 635000,
+      "sign": 635
     },
     {
       "time": "Una semana",
-      "value": 26022000,
-      "change": 4316000,
-      "sign": "+4.316.000"
+      "value": 26608000,
+      "change": 4365000,
+      "sign": "+4.365.000"
     },
     {
       "time": "Un mes",
-      "value": 13461000,
-      "change": 16877000,
-      "sign": "+16.877.000"
+      "value": 13907000,
+      "change": 17066000,
+      "sign": "+17.066.000"
     },
     {
       "time": "Un año",
-      "value": 9317000,
-      "change": 21021000,
-      "sign": "+21.021.000"
+      "value": 9573000,
+      "change": 21400000,
+      "sign": "+21.400.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 9317000,
-        "date": "20 nov 2025"
-      },
       {
         "value": 9573000,
         "date": "21 nov 2025"
@@ -2231,11 +2227,15 @@
       {
         "value": 30338000,
         "date": "20 nov 2026"
+      },
+      {
+        "value": 30973000,
+        "date": "21 nov 2026"
       }
     ],
     "max": {
-      "value": 30338000,
-      "date": "20 nov 2026"
+      "value": 30973000,
+      "date": "21 nov 2026"
     },
     "min": {
       "value": 329000,
@@ -2246,28 +2246,28 @@
     "24": {
       "id": 24,
       "id_team": 14,
-      "id_match": 38053,
-      "id_gameweek": 4054,
-      "id_home": 14,
-      "id_away": 19,
+      "id_match": 38063,
+      "id_gameweek": 4055,
+      "id_home": 4,
+      "id_away": 14,
       "date": {
-        "ts": 1795274100,
-        "text": "sáb 16:15",
+        "ts": 1795870800,
+        "text": "sáb 14:00",
         "format": "EEE H:mm",
         "splitted": {
           "date": "sáb",
-          "time": "16:15",
+          "time": "14:00",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Rayo Vallecano",
-      "away": "Valencia",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
+      "home": "Betis",
+      "away": "Rayo Vallecano",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,

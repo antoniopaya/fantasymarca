@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/15693.png?version=20251003193832",
     "isFavorite": 0,
-    "value": 5343000,
-    "previousValue": 5423000,
+    "value": 5181000,
+    "previousValue": 5343000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5343000,
+      "floor": 5181000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 8014500,
+      "value": 7771500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5343000,
+      "price": 5181000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 172,
       "weight": 70
     },
-    "clausesRanking": 228
+    "clausesRanking": 252
   },
   "id": 15693,
   "player_extra": {
@@ -752,35 +752,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5423000,
-      "change": -80000,
-      "sign": -80
+      "value": 5343000,
+      "change": -162000,
+      "sign": -162
     },
     {
       "time": "Una semana",
-      "value": 6093000,
-      "change": -750000,
-      "sign": -750
+      "value": 5917000,
+      "change": -736000,
+      "sign": -736
     },
     {
       "time": "Un mes",
-      "value": 5281000,
-      "change": 62000,
-      "sign": 62
+      "value": 5159000,
+      "change": 22000,
+      "sign": 22
     },
     {
       "time": "Un año",
-      "value": 330000,
-      "change": 5013000,
-      "sign": "+5.013.000"
+      "value": 329000,
+      "change": 4852000,
+      "sign": "+4.852.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 330000,
-        "date": "20 nov 2025"
-      },
       {
         "value": 329000,
         "date": "21 nov 2025"
@@ -2196,6 +2192,10 @@
       {
         "value": 5343000,
         "date": "20 nov 2026"
+      },
+      {
+        "value": 5181000,
+        "date": "21 nov 2026"
       }
     ],
     "max": {
@@ -2217,12 +2217,12 @@
       "id_away": 5,
       "date": {
         "ts": 1795291200,
-        "text": "sáb 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "sáb",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

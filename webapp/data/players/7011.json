@@ -4,14 +4,14 @@
     "name": "Ximo Navarro",
     "position": 2,
     "points": 32,
-    "avg": 3.6,
+    "avg": 3.2,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/7011.png?version=20260621103033",
     "isFavorite": 0,
-    "value": 2500000,
-    "previousValue": 2651000,
+    "value": 2306000,
+    "previousValue": 2500000,
     "videoFrame": null,
     "team": {
       "id": 6,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2500000,
+      "floor": 2306000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3750000,
+      "value": 3459000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2500000,
+      "price": 2306000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 176,
       "weight": 70
     },
-    "clausesRanking": null
+    "clausesRanking": 363
   },
   "id": 7011,
   "player_extra": {
-    "matches": 9,
+    "matches": 10,
     "goals": 0,
-    "cards": 2
+    "cards": 3
   },
   "points": [
     {
@@ -288,12 +288,15 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 48,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     },
@@ -702,29 +705,29 @@
     {
       "season": "26/27",
       "points": 32,
-      "avg": 3.5556,
+      "avg": 3.2,
       "id_team": 6,
-      "last_gameweek": 11
+      "last_gameweek": 13
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 2651000,
-      "change": -151000,
-      "sign": -151
+      "value": 2500000,
+      "change": -194000,
+      "sign": -194
     },
     {
       "time": "Una semana",
-      "value": 4042000,
-      "change": -1542000,
-      "sign": "-1.542.000"
+      "value": 3884000,
+      "change": -1578000,
+      "sign": "-1.578.000"
     },
     {
       "time": "Un mes",
-      "value": 8298000,
-      "change": -5798000,
-      "sign": "-5.798.000"
+      "value": 8255000,
+      "change": -5949000,
+      "sign": "-5.949.000"
     }
   ],
   "values_chart": {
@@ -1336,6 +1339,10 @@
       {
         "value": 2500000,
         "date": "20 nov 2026"
+      },
+      {
+        "value": 2306000,
+        "date": "21 nov 2026"
       }
     ],
     "max": {
@@ -1351,28 +1358,28 @@
     "7011": {
       "id": 7011,
       "id_team": 6,
-      "id_match": 38048,
-      "id_gameweek": 4054,
-      "id_home": 48,
-      "id_away": 6,
+      "id_match": 38058,
+      "id_gameweek": 4055,
+      "id_home": 6,
+      "id_away": 3,
       "date": {
-        "ts": 1795266000,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1795965300,
+        "text": "29 nov 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "29 nov",
+          "time": "16:15",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Deportivo da Coruña",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Barcelona",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,
@@ -1387,7 +1394,7 @@
     "7011": {
       "id": 7011,
       "points": 14,
-      "avg": 3.5
+      "avg": 2.8
     }
   },
   "owners": [],

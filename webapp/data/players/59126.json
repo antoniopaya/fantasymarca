@@ -3,15 +3,15 @@
     "id": 59126,
     "name": "Hugo Novoa",
     "position": 2,
-    "points": 17,
-    "avg": 5.7,
+    "points": 18,
+    "avg": 4.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59126.png?version=20240723082427",
     "isFavorite": 0,
-    "value": 3026000,
-    "previousValue": 3072000,
+    "value": 2846000,
+    "previousValue": 3026000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3026000,
+      "floor": 2846000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 4539000,
+      "value": 4269000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3026000,
+      "price": 2846000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 203
+    "clausesRanking": 236
   },
   "id": 59126,
   "player_extra": {
-    "matches": 3,
+    "matches": 4,
     "goals": 1,
     "cards": 0
   },
@@ -283,12 +283,15 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 6,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     },
@@ -696,10 +699,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 17,
-      "avg": 5.6667,
+      "points": 18,
+      "avg": 4.5,
       "id_team": 48,
-      "last_gameweek": 11
+      "last_gameweek": 13
     },
     {
       "season": "24/25",
@@ -712,21 +715,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 3072000,
-      "change": -46000,
-      "sign": -46
+      "value": 3026000,
+      "change": -180000,
+      "sign": -180
     },
     {
       "time": "Una semana",
-      "value": 3092000,
-      "change": -66000,
-      "sign": -66
+      "value": 3148000,
+      "change": -302000,
+      "sign": -302
     },
     {
       "time": "Un mes",
-      "value": 568000,
-      "change": 2458000,
-      "sign": "+2.458.000"
+      "value": 759000,
+      "change": 2087000,
+      "sign": "+2.087.000"
     }
   ],
   "values_chart": {
@@ -1294,6 +1297,10 @@
       {
         "value": 3026000,
         "date": "20 nov 2026"
+      },
+      {
+        "value": 2846000,
+        "date": "21 nov 2026"
       }
     ],
     "max": {
@@ -1309,36 +1316,36 @@
     "59126": {
       "id": 59126,
       "id_team": 48,
-      "id_match": 38048,
-      "id_gameweek": 4054,
-      "id_home": 48,
-      "id_away": 6,
+      "id_match": 38064,
+      "id_gameweek": 4055,
+      "id_home": 15,
+      "id_away": 48,
       "date": {
-        "ts": 1795266000,
-        "text": "sáb 14:00",
-        "format": "EEE H:mm",
+        "ts": 1795896000,
+        "text": "28 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "sáb",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "28 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Alavés",
-      "away": "Deportivo da Coruña",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
+      "home": "Real Madrid",
+      "away": "Alavés",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
   "home": {
     "59126": {
       "id": 59126,
-      "points": 4,
-      "avg": 4
+      "points": 5,
+      "avg": 2.5
     }
   },
   "away": {

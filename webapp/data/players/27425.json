@@ -3,15 +3,15 @@
     "id": 27425,
     "name": "Iñigo Ruiz De Galarreta",
     "position": 3,
-    "points": 38,
+    "points": 39,
     "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/27425.png?version=20251003185435",
     "isFavorite": 0,
-    "value": 7595000,
-    "previousValue": 7724000,
+    "value": 7316000,
+    "previousValue": 7595000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 7595000,
+      "floor": 7316000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 11392500,
+      "value": 10974000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 7595000,
+      "price": 7316000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 174,
       "weight": 64
     },
-    "clausesRanking": 332
+    "clausesRanking": 330
   },
   "id": 27425,
   "player_extra": {
@@ -306,7 +306,7 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
       "events": [
@@ -314,7 +314,7 @@
         "sub_in"
       ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -722,8 +722,8 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 36,
-      "avg": 3.6,
+      "points": 39,
+      "avg": 3.5455,
       "id_team": 1,
       "last_gameweek": 13
     },
@@ -752,35 +752,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 7724000,
-      "change": -129000,
-      "sign": -129
+      "value": 7595000,
+      "change": -279000,
+      "sign": -279
     },
     {
       "time": "Una semana",
-      "value": 8856000,
-      "change": -1261000,
-      "sign": "-1.261.000"
+      "value": 8593000,
+      "change": -1277000,
+      "sign": "-1.277.000"
     },
     {
       "time": "Un mes",
-      "value": 15511000,
-      "change": -7916000,
-      "sign": "-7.916.000"
+      "value": 15565000,
+      "change": -8249000,
+      "sign": "-8.249.000"
     },
     {
       "time": "Un año",
-      "value": 18958000,
-      "change": -11363000,
-      "sign": "-11.363.000"
+      "value": 18452000,
+      "change": -11136000,
+      "sign": "-11.136.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 18958000,
-        "date": "20 nov 2025"
-      },
       {
         "value": 18452000,
         "date": "21 nov 2025"
@@ -2240,6 +2236,10 @@
       {
         "value": 7595000,
         "date": "20 nov 2026"
+      },
+      {
+        "value": 7316000,
+        "date": "21 nov 2026"
       }
     ],
     "max": {
@@ -2261,12 +2261,12 @@
       "id_away": 1,
       "date": {
         "ts": 1795878900,
-        "text": "28 nov 16:15",
-        "format": "d MMM H:mm",
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "28 nov",
+          "date": "sáb",
           "time": "16:15",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2283,8 +2283,8 @@
   "home": {
     "27425": {
       "id": 27425,
-      "points": 17,
-      "avg": 3.4
+      "points": 20,
+      "avg": 3.3333
     }
   },
   "away": {

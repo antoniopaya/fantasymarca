@@ -3,15 +3,15 @@
     "id": 24789,
     "name": "Nico Williams",
     "position": 4,
-    "points": 59,
-    "avg": 5.4,
+    "points": 60,
+    "avg": 5.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/24789.png?version=20260414174608",
     "isFavorite": 0,
-    "value": 41534000,
-    "previousValue": 41321000,
+    "value": 41646000,
+    "previousValue": 41534000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 41534000,
+      "floor": 41646000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 62301000,
+      "value": 62469000,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 41534000,
-      "loanable": null
+      "id": 1985745609,
+      "isPublic": 1,
+      "price": 41646000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 41646000,
       "barter": [],
       "type": null,
       "days": null
@@ -68,7 +68,7 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 30
+    "clausesRanking": 26
   },
   "id": 24789,
   "player_extra": {
@@ -304,12 +304,12 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -717,8 +717,8 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 53,
-      "avg": 5.3,
+      "points": 60,
+      "avg": 5.4545,
       "id_team": 1,
       "last_gameweek": 13
     },
@@ -747,35 +747,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 41321000,
-      "change": 213000,
-      "sign": 213
+      "value": 41534000,
+      "change": 112000,
+      "sign": 112
     },
     {
       "time": "Una semana",
-      "value": 38476000,
-      "change": 3058000,
-      "sign": "+3.058.000"
+      "value": 39246000,
+      "change": 2400000,
+      "sign": "+2.400.000"
     },
     {
       "time": "Un mes",
-      "value": 26973000,
-      "change": 14561000,
-      "sign": "+14.561.000"
+      "value": 26817000,
+      "change": 14829000,
+      "sign": "+14.829.000"
     },
     {
       "time": "Un año",
-      "value": 48045000,
-      "change": -6511000,
-      "sign": "-6.511.000"
+      "value": 48039000,
+      "change": -6393000,
+      "sign": "-6.393.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 48045000,
-        "date": "20 nov 2025"
-      },
       {
         "value": 48039000,
         "date": "21 nov 2025"
@@ -2235,6 +2231,10 @@
       {
         "value": 41534000,
         "date": "20 nov 2026"
+      },
+      {
+        "value": 41646000,
+        "date": "21 nov 2026"
       }
     ],
     "max": {
@@ -2256,12 +2256,12 @@
       "id_away": 1,
       "date": {
         "ts": 1795878900,
-        "text": "28 nov 16:15",
-        "format": "d MMM H:mm",
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "28 nov",
+          "date": "sáb",
           "time": "16:15",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2278,8 +2278,8 @@
   "home": {
     "24789": {
       "id": 24789,
-      "points": 36,
-      "avg": 6
+      "points": 43,
+      "avg": 6.1429
     }
   },
   "away": {

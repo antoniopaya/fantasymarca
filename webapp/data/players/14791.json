@@ -49,15 +49,15 @@
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
+      "id": 1985745610,
+      "isPublic": 1,
       "price": 329000,
-      "loanable": null
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 329000,
       "barter": [],
       "type": null,
       "days": null
@@ -72,7 +72,7 @@
       "height": 188,
       "weight": null
     },
-    "clausesRanking": 355
+    "clausesRanking": null
   },
   "id": 14791,
   "player_extra": {
@@ -333,8 +333,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 310307,
+        "id_player": 14791,
+        "category": "injury",
+        "description": "Rotura de ligamento cruzado",
+        "duration": "Baja hasta Mayo",
+        "since": "2026-10-19 17:08:06",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 8,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version="
     },
@@ -784,23 +793,19 @@
     },
     {
       "time": "Un mes",
-      "value": 4753000,
-      "change": -4424000,
-      "sign": "-4.424.000"
+      "value": 4533000,
+      "change": -4204000,
+      "sign": "-4.204.000"
     },
     {
       "time": "Un año",
-      "value": 17588000,
-      "change": -17259000,
-      "sign": "-17.259.000"
+      "value": 17814000,
+      "change": -17485000,
+      "sign": "-17.485.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 17588000,
-        "date": "20 nov 2025"
-      },
       {
         "value": 17814000,
         "date": "21 nov 2025"
@@ -2260,6 +2265,10 @@
       {
         "value": 329000,
         "date": "20 nov 2026"
+      },
+      {
+        "value": 329000,
+        "date": "21 nov 2026"
       }
     ],
     "max": {
@@ -2281,12 +2290,12 @@
       "id_away": 1,
       "date": {
         "ts": 1795878900,
-        "text": "28 nov 16:15",
-        "format": "d MMM H:mm",
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "28 nov",
+          "date": "sáb",
           "time": "16:15",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
