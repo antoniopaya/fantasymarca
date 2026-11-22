@@ -3,15 +3,15 @@
     "id": 29403,
     "name": "Pathé Ciss",
     "position": 3,
-    "points": 38,
-    "avg": 3.2,
+    "points": 40,
+    "avg": 3.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/29403.png?version=20251004225713",
     "isFavorite": 0,
-    "value": 8660000,
-    "previousValue": 8627000,
+    "value": 8549000,
+    "previousValue": 8660000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 8660000,
+      "floor": 8549000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 12990000,
+      "value": 12823500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 8660000,
+      "price": 8549000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 183,
       "weight": 71
     },
-    "clausesRanking": 127
+    "clausesRanking": 169
   },
   "id": 29403,
   "player_extra": {
@@ -296,12 +296,12 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 3,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -709,10 +709,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 37,
-      "avg": 3.3636,
+      "points": 40,
+      "avg": 3.3333,
       "id_team": 14,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -739,35 +739,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 8627000,
-      "change": 33000,
-      "sign": 33
+      "value": 8660000,
+      "change": -111000,
+      "sign": -111
     },
     {
       "time": "Una semana",
-      "value": 7979000,
-      "change": 681000,
-      "sign": 681
+      "value": 8048000,
+      "change": 501000,
+      "sign": 501
     },
     {
       "time": "Un mes",
-      "value": 13883000,
-      "change": -5223000,
-      "sign": "-5.223.000"
+      "value": 13946000,
+      "change": -5397000,
+      "sign": "-5.397.000"
     },
     {
       "time": "Un año",
-      "value": 16554000,
-      "change": -7894000,
-      "sign": "-7.894.000"
+      "value": 16849000,
+      "change": -8300000,
+      "sign": "-8.300.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 16554000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 16849000,
         "date": "22 nov 2025"
@@ -2227,6 +2223,10 @@
       {
         "value": 8660000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 8549000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2270,8 +2270,8 @@
   "home": {
     "29403": {
       "id": 29403,
-      "points": 16,
-      "avg": 3.2
+      "points": 19,
+      "avg": 3.1667
     }
   },
   "away": {

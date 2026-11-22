@@ -5,17 +5,13 @@
     "position": 4,
     "points": 3,
     "avg": 1.5,
-    "status": "doubt",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "doubt",
-      "description": "Lesión en el aductor",
-      "duration": "Duda esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4733614.png?version=20260901110930",
     "isFavorite": 0,
-    "value": 505000,
-    "previousValue": 329000,
+    "value": 330000,
+    "previousValue": 505000,
     "videoFrame": null,
     "team": {
       "id": 50,
@@ -51,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 505000,
+      "price": 330000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +68,7 @@
       "height": 172,
       "weight": null
     },
-    "clausesRanking": 414
+    "clausesRanking": 411
   },
   "id": 4733614,
   "player_extra": {
@@ -256,7 +252,7 @@
         "description": "Lesión en el aductor",
         "duration": "Duda esta jornada",
         "since": "2026-10-22 11:31:11",
-        "until": null,
+        "until": "2026-11-21 22:22:27",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -281,7 +277,7 @@
         "description": "Lesión en el aductor",
         "duration": "Duda esta jornada",
         "since": "2026-10-22 11:31:11",
-        "until": null,
+        "until": "2026-11-21 22:22:27",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -306,7 +302,7 @@
         "description": "Lesión en el aductor",
         "duration": "Duda esta jornada",
         "since": "2026-10-22 11:31:11",
-        "until": null,
+        "until": "2026-11-21 22:22:27",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -742,21 +738,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 176000,
-      "sign": 176
+      "value": 505000,
+      "change": -175000,
+      "sign": -175
     },
     {
       "time": "Una semana",
-      "value": 329000,
-      "change": 176000,
-      "sign": 176
+      "value": 401000,
+      "change": -71000,
+      "sign": -71
     },
     {
       "time": "Un mes",
-      "value": 369000,
-      "change": 136000,
-      "sign": 136
+      "value": 329000,
+      "change": 1000,
+      "sign": 1
     }
   ],
   "values_chart": {
@@ -1084,6 +1080,10 @@
       {
         "value": 505000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 330000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -1105,12 +1105,12 @@
       "id_away": 13,
       "date": {
         "ts": 1795368600,
-        "text": "dom 18:30",
-        "format": "EEE H:mm",
+        "text": "Hoy 18:30",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "dom",
+          "date": "Hoy",
           "time": "18:30",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

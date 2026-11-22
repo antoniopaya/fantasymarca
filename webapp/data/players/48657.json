@@ -4,13 +4,13 @@
     "name": "Raphinha",
     "position": 4,
     "points": 140,
-    "avg": 12.7,
+    "avg": 11.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/48657.png?version=20261104102126",
     "isFavorite": 0,
-    "value": 78593000,
+    "value": 78716000,
     "previousValue": 78593000,
     "videoFrame": null,
     "team": {
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 78593000,
+      "floor": 78716000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 117889500,
+      "value": 118074000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 78593000,
+      "price": 78716000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 176,
       "weight": 68
     },
-    "clausesRanking": 31
+    "clausesRanking": 30
   },
   "id": 48657,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 15,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -312,12 +312,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 20,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     },
@@ -726,9 +728,9 @@
     {
       "season": "26/27",
       "points": 139,
-      "avg": 12.6364,
+      "avg": 11.5833,
       "id_team": 3,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -756,34 +758,30 @@
     {
       "time": "Un día",
       "value": 78593000,
-      "change": 0,
-      "sign": 0
+      "change": 123000,
+      "sign": 123
     },
     {
       "time": "Una semana",
-      "value": 77594000,
-      "change": 999000,
-      "sign": 999
+      "value": 77680000,
+      "change": 1036000,
+      "sign": "+1.036.000"
     },
     {
       "time": "Un mes",
-      "value": 71792000,
-      "change": 6801000,
-      "sign": "+6.801.000"
+      "value": 72011000,
+      "change": 6705000,
+      "sign": "+6.705.000"
     },
     {
       "time": "Un año",
-      "value": 60110000,
-      "change": 18483000,
-      "sign": "+18.483.000"
+      "value": 60072000,
+      "change": 18644000,
+      "sign": "+18.644.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 60110000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 60072000,
         "date": "22 nov 2025"
@@ -2243,11 +2241,15 @@
       {
         "value": 78593000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 78716000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
-      "value": 78675000,
-      "date": "27 mar 2026"
+      "value": 78716000,
+      "date": "22 nov 2026"
     },
     "min": {
       "value": 59833000,
@@ -2258,28 +2260,28 @@
     "48657": {
       "id": 48657,
       "id_team": 3,
-      "id_match": 38049,
-      "id_gameweek": 4054,
-      "id_home": 3,
-      "id_away": 20,
+      "id_match": 38058,
+      "id_gameweek": 4055,
+      "id_home": 6,
+      "id_away": 3,
       "date": {
-        "ts": 1795352400,
-        "text": "dom 14:00",
+        "ts": 1795965300,
+        "text": "dom 16:15",
         "format": "EEE H:mm",
         "splitted": {
           "date": "dom",
-          "time": "14:00",
+          "time": "16:15",
           "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Barcelona",
-      "away": "Villarreal",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
+      "home": "Deportivo da Coruña",
+      "away": "Barcelona",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     }
   },
   "starter": false,
@@ -2287,7 +2289,7 @@
     "48657": {
       "id": 48657,
       "points": 71,
-      "avg": 14.2
+      "avg": 11.8333
     }
   },
   "away": {

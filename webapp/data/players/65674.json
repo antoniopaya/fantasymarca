@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/65674.png?version=20250831165937",
     "isFavorite": 0,
-    "value": 1735000,
-    "previousValue": 1942000,
+    "value": 1472000,
+    "previousValue": 1735000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -38,26 +38,26 @@
       "price": null
     },
     "clause": {
-      "floor": 1735000,
+      "floor": 1472000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2602500,
+      "value": 2208000,
       "percentage": 50
     },
     "market": {
-      "id": 1985745606,
-      "isPublic": 1,
-      "price": 1735000,
-      "loanable": 0
+      "id": null,
+      "isPublic": null,
+      "price": 1472000,
+      "loanable": null
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": 1735000,
+      "input": null,
       "barter": [],
       "type": null,
       "days": null
@@ -328,8 +328,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 313212,
+        "id_player": 65674,
+        "category": "injury",
+        "description": "Lesión de rodilla",
+        "duration": "Baja esta jornada",
+        "since": "2026-11-18 17:20:36",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -753,35 +762,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1942000,
-      "change": -207000,
-      "sign": -207
+      "value": 1735000,
+      "change": -263000,
+      "sign": -263
     },
     {
       "time": "Una semana",
-      "value": 1588000,
-      "change": 147000,
-      "sign": 147
+      "value": 1741000,
+      "change": -269000,
+      "sign": -269
     },
     {
       "time": "Un mes",
-      "value": 5974000,
-      "change": -4239000,
-      "sign": "-4.239.000"
+      "value": 5747000,
+      "change": -4275000,
+      "sign": "-4.275.000"
     },
     {
       "time": "Un año",
-      "value": 350000,
-      "change": 1385000,
-      "sign": "+1.385.000"
+      "value": 329000,
+      "change": 1143000,
+      "sign": "+1.143.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 350000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 329000,
         "date": "22 nov 2025"
@@ -2241,6 +2246,10 @@
       {
         "value": 1735000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 1472000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2256,28 +2265,28 @@
     "65674": {
       "id": 65674,
       "id_team": 5,
-      "id_match": 38054,
-      "id_gameweek": 4054,
-      "id_home": 15,
-      "id_away": 5,
+      "id_match": 38057,
+      "id_gameweek": 4055,
+      "id_home": 5,
+      "id_away": 20,
       "date": {
-        "ts": 1795291200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795973400,
+        "text": "29 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "29 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Madrid",
-      "away": "Celta",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "home": "Celta",
+      "away": "Villarreal",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,

@@ -3,15 +3,15 @@
     "id": 59506,
     "name": "Javi Rodríguez",
     "position": 2,
-    "points": 40,
-    "avg": 5,
+    "points": 41,
+    "avg": 4.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59506.png?version=20251003195248",
     "isFavorite": 0,
-    "value": 10995000,
-    "previousValue": 10644000,
+    "value": 11389000,
+    "previousValue": 10995000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 10995000,
+      "floor": 11389000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 16492500,
+      "value": 17083500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 10995000,
+      "price": 11389000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 49
+    "clausesRanking": 45
   },
   "id": 59506,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 1,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -285,12 +285,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -698,10 +700,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 40,
-      "avg": 5,
+      "points": 41,
+      "avg": 4.5556,
       "id_team": 5,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -721,35 +723,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 10644000,
-      "change": 351000,
-      "sign": 351
+      "value": 10995000,
+      "change": 394000,
+      "sign": 394
     },
     {
       "time": "Una semana",
-      "value": 8479000,
-      "change": 2516000,
-      "sign": "+2.516.000"
+      "value": 8822000,
+      "change": 2567000,
+      "sign": "+2.567.000"
     },
     {
       "time": "Un mes",
-      "value": 2407000,
-      "change": 8588000,
-      "sign": "+8.588.000"
+      "value": 2607000,
+      "change": 8782000,
+      "sign": "+8.782.000"
     },
     {
       "time": "Un año",
-      "value": 4066000,
-      "change": 6929000,
-      "sign": "+6.929.000"
+      "value": 4021000,
+      "change": 7368000,
+      "sign": "+7.368.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 4066000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 4021000,
         "date": "22 nov 2025"
@@ -2209,6 +2207,10 @@
       {
         "value": 10995000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 11389000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2224,28 +2226,28 @@
     "59506": {
       "id": 59506,
       "id_team": 5,
-      "id_match": 38054,
-      "id_gameweek": 4054,
-      "id_home": 15,
-      "id_away": 5,
+      "id_match": 38057,
+      "id_gameweek": 4055,
+      "id_home": 5,
+      "id_away": 20,
       "date": {
-        "ts": 1795291200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795973400,
+        "text": "29 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "29 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Real Madrid",
-      "away": "Celta",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "home": "Celta",
+      "away": "Villarreal",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
@@ -2259,8 +2261,8 @@
   "away": {
     "59506": {
       "id": 59506,
-      "points": 10,
-      "avg": 3.3333
+      "points": 11,
+      "avg": 2.75
     }
   },
   "owners": [],

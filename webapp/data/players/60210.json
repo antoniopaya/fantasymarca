@@ -3,15 +3,15 @@
     "id": 60210,
     "name": "Pau Navarro",
     "position": 2,
-    "points": 19,
-    "avg": 3.2,
+    "points": 15,
+    "avg": 2.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60210.png?version=20240929093251",
     "isFavorite": 0,
-    "value": 1539000,
-    "previousValue": 1857000,
+    "value": 1395000,
+    "previousValue": 1539000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1539000,
+      "floor": 1395000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 2308500,
+      "value": 2092500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1539000,
+      "price": 1395000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 345
+    "clausesRanking": 268
   },
   "id": 60210,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
-    "cards": 1
+    "cards": 3
   },
   "points": [
     {
@@ -284,12 +284,16 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": -4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "own_goal",
+        "double"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 3,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     },
@@ -697,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 19,
-      "avg": 3.1667,
+      "points": 15,
+      "avg": 2.1429,
       "id_team": 20,
-      "last_gameweek": 11
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -720,35 +724,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1857000,
-      "change": -318000,
-      "sign": -318
+      "value": 1539000,
+      "change": -144000,
+      "sign": -144
     },
     {
       "time": "Una semana",
-      "value": 2611000,
-      "change": -1072000,
-      "sign": "-1.072.000"
+      "value": 2470000,
+      "change": -1075000,
+      "sign": "-1.075.000"
     },
     {
       "time": "Un mes",
-      "value": 4210000,
-      "change": -2671000,
-      "sign": "-2.671.000"
+      "value": 4095000,
+      "change": -2700000,
+      "sign": "-2.700.000"
     },
     {
       "time": "Un año",
-      "value": 1613000,
-      "change": -74000,
-      "sign": -74
+      "value": 1711000,
+      "change": -316000,
+      "sign": -316
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 1613000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 1711000,
         "date": "22 nov 2025"
@@ -2208,6 +2208,10 @@
       {
         "value": 1539000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 1395000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2223,27 +2227,27 @@
     "60210": {
       "id": 60210,
       "id_team": 20,
-      "id_match": 38049,
-      "id_gameweek": 4054,
-      "id_home": 3,
+      "id_match": 38057,
+      "id_gameweek": 4055,
+      "id_home": 5,
       "id_away": 20,
       "date": {
-        "ts": 1795352400,
-        "text": "dom 14:00",
-        "format": "EEE H:mm",
+        "ts": 1795973400,
+        "text": "29 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "29 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Barcelona",
+      "home": "Celta",
       "away": "Villarreal",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
@@ -2258,8 +2262,8 @@
   "away": {
     "60210": {
       "id": 60210,
-      "points": 9,
-      "avg": 3
+      "points": 5,
+      "avg": 1.25
     }
   },
   "owners": [],

@@ -10,7 +10,7 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/217.png?version=20251006015048",
     "isFavorite": 0,
-    "value": 329000,
+    "value": 377000,
     "previousValue": 329000,
     "videoFrame": null,
     "team": {
@@ -45,15 +45,15 @@
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 329000,
-      "loanable": null
+      "id": 1988866996,
+      "isPublic": 1,
+      "price": 377000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 377000,
       "barter": [],
       "type": null,
       "days": null
@@ -348,12 +348,12 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": null,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -785,34 +785,30 @@
     {
       "time": "Un día",
       "value": 329000,
-      "change": 0,
-      "sign": 0
+      "change": 48000,
+      "sign": 48
     },
     {
       "time": "Una semana",
-      "value": 329000,
-      "change": 0,
-      "sign": 0
+      "value": 429000,
+      "change": -52000,
+      "sign": -52
     },
     {
       "time": "Un mes",
-      "value": 375000,
-      "change": -46000,
-      "sign": -46
+      "value": 329000,
+      "change": 48000,
+      "sign": 48
     },
     {
       "time": "Un año",
-      "value": 589000,
-      "change": -260000,
-      "sign": -260
+      "value": 623000,
+      "change": -246000,
+      "sign": -246
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 589000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 623000,
         "date": "22 nov 2025"
@@ -2272,6 +2268,10 @@
       {
         "value": 329000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 377000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2293,12 +2293,12 @@
       "id_away": 50,
       "date": {
         "ts": 1795957200,
-        "text": "29 nov 14:00",
-        "format": "d MMM H:mm",
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "29 nov",
+          "date": "dom",
           "time": "14:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",

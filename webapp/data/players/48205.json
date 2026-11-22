@@ -3,15 +3,15 @@
     "id": 48205,
     "name": "Arnau Martínez",
     "position": 2,
-    "points": 18,
-    "avg": 2,
+    "points": 24,
+    "avg": 2.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/48205.png?version=20231220225819",
     "isFavorite": 0,
-    "value": 2172000,
-    "previousValue": 2159000,
+    "value": 2257000,
+    "previousValue": 2172000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2172000,
+      "floor": 2257000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3258000,
+      "value": 3385500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2172000,
+      "price": 2257000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 181,
       "weight": null
     },
-    "clausesRanking": 107
+    "clausesRanking": 80
   },
   "id": 48205,
   "player_extra": {
@@ -290,12 +290,12 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 7,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -703,10 +703,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 17,
-      "avg": 2.125,
+      "points": 24,
+      "avg": 2.6667,
       "id_team": 19,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -733,35 +733,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 2159000,
-      "change": 13000,
-      "sign": 13
+      "value": 2172000,
+      "change": 85000,
+      "sign": 85
     },
     {
       "time": "Una semana",
-      "value": 1403000,
-      "change": 769000,
-      "sign": 769
+      "value": 1533000,
+      "change": 724000,
+      "sign": 724
     },
     {
       "time": "Un mes",
-      "value": 2746000,
-      "change": -574000,
-      "sign": -574
+      "value": 2498000,
+      "change": -241000,
+      "sign": -241
     },
     {
       "time": "Un año",
-      "value": 10497000,
-      "change": -8325000,
-      "sign": "-8.325.000"
+      "value": 10698000,
+      "change": -8441000,
+      "sign": "-8.441.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 10497000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 10698000,
         "date": "22 nov 2025"
@@ -2005,6 +2001,10 @@
       {
         "value": 2172000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 2257000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2026,12 +2026,12 @@
       "id_away": 50,
       "date": {
         "ts": 1795957200,
-        "text": "29 nov 14:00",
-        "format": "d MMM H:mm",
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "29 nov",
+          "date": "dom",
           "time": "14:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2055,8 +2055,8 @@
   "away": {
     "48205": {
       "id": 48205,
-      "points": 16,
-      "avg": 3.2
+      "points": 23,
+      "avg": 3.8333
     }
   },
   "owners": [],

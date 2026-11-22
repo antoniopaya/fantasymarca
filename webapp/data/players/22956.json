@@ -3,15 +3,15 @@
     "id": 22956,
     "name": "Sergio Gómez",
     "position": 2,
-    "points": 28,
-    "avg": 2.3,
+    "points": 27,
+    "avg": 2.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22956.png?version=20251004234305",
     "isFavorite": 0,
-    "value": 12799000,
-    "previousValue": 13305000,
+    "value": 12401000,
+    "previousValue": 12799000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 12799000,
+      "floor": 12401000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 19198500,
+      "value": 18601500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 12799000,
+      "price": 12401000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 171,
       "weight": 68
     },
-    "clausesRanking": 297
+    "clausesRanking": 325
   },
   "id": 22956,
   "player_extra": {
-    "matches": 12,
+    "matches": 13,
     "goals": 0,
     "cards": 1
   },
@@ -285,8 +285,8 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
-        "isLive": false
+        "points": -1,
+        "isLive": true
       },
       "events": null,
       "injury": null,
@@ -721,35 +721,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 13305000,
-      "change": -506000,
-      "sign": -506
+      "value": 12799000,
+      "change": -398000,
+      "sign": -398
     },
     {
       "time": "Una semana",
-      "value": 15318000,
-      "change": -2519000,
-      "sign": "-2.519.000"
+      "value": 14705000,
+      "change": -2304000,
+      "sign": "-2.304.000"
     },
     {
       "time": "Un mes",
-      "value": 19695000,
-      "change": -6896000,
-      "sign": "-6.896.000"
+      "value": 19676000,
+      "change": -7275000,
+      "sign": "-7.275.000"
     },
     {
       "time": "Un año",
-      "value": 9985000,
-      "change": 2814000,
-      "sign": "+2.814.000"
+      "value": 9807000,
+      "change": 2594000,
+      "sign": "+2.594.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 9985000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 9807000,
         "date": "22 nov 2025"
@@ -2209,6 +2205,10 @@
       {
         "value": 12799000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 12401000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2224,28 +2224,28 @@
     "22956": {
       "id": 22956,
       "id_team": 16,
-      "id_match": 38055,
-      "id_gameweek": 4054,
-      "id_home": 1490,
-      "id_away": 16,
+      "id_match": 39691,
+      "id_gameweek": 4055,
+      "id_home": 16,
+      "id_away": 17,
       "date": {
-        "ts": 1795360500,
-        "text": "dom 16:15",
-        "format": "EEE H:mm",
+        "ts": 1795982400,
+        "text": "29 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "16:15",
-          "format": "EEE"
+          "date": "29 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Racing de Santander",
-      "away": "Real Sociedad",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
+      "home": "Real Sociedad",
+      "away": "Sevilla",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,

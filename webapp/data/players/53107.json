@@ -3,15 +3,15 @@
     "id": 53107,
     "name": "Sergi Cardona",
     "position": 2,
-    "points": 32,
-    "avg": 4.6,
+    "points": 34,
+    "avg": 4.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/53107.png?version=20251006021432",
     "isFavorite": 0,
-    "value": 15218000,
-    "previousValue": 15846000,
+    "value": 14663000,
+    "previousValue": 15218000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 15218000,
+      "floor": 14663000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
-      "tier": 5,
-      "shield2WeeksSku": "shield_t5_2w",
-      "shield1MonthSku": "shield_t5_1m",
-      "value": 22827000,
+      "tier": 4,
+      "shield2WeeksSku": "shield_t4_2w",
+      "shield1MonthSku": "shield_t4_1m",
+      "value": 21994500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 15218000,
+      "price": 14663000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 312
+    "clausesRanking": 320
   },
   "id": 53107,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 1
   },
@@ -284,12 +284,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 3,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     },
@@ -697,10 +699,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 32,
-      "avg": 4.5714,
+      "points": 34,
+      "avg": 4.25,
       "id_team": 20,
-      "last_gameweek": 11
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -727,35 +729,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 15846000,
-      "change": -628000,
-      "sign": -628
+      "value": 15218000,
+      "change": -555000,
+      "sign": -555
     },
     {
       "time": "Una semana",
-      "value": 16628000,
-      "change": -1410000,
-      "sign": "-1.410.000"
+      "value": 16898000,
+      "change": -2235000,
+      "sign": "-2.235.000"
     },
     {
       "time": "Un mes",
-      "value": 7565000,
-      "change": 7653000,
-      "sign": "+7.653.000"
+      "value": 7843000,
+      "change": 6820000,
+      "sign": "+6.820.000"
     },
     {
       "time": "Un año",
-      "value": 22299000,
-      "change": -7081000,
-      "sign": "-7.081.000"
+      "value": 21907000,
+      "change": -7244000,
+      "sign": "-7.244.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 22299000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 21907000,
         "date": "22 nov 2025"
@@ -2215,11 +2213,15 @@
       {
         "value": 15218000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 14663000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
-      "value": 22299000,
-      "date": "21 nov 2025"
+      "value": 21907000,
+      "date": "22 nov 2025"
     },
     "min": {
       "value": 3528000,
@@ -2230,27 +2232,27 @@
     "53107": {
       "id": 53107,
       "id_team": 20,
-      "id_match": 38049,
-      "id_gameweek": 4054,
-      "id_home": 3,
+      "id_match": 38057,
+      "id_gameweek": 4055,
+      "id_home": 5,
       "id_away": 20,
       "date": {
-        "ts": 1795352400,
-        "text": "dom 14:00",
-        "format": "EEE H:mm",
+        "ts": 1795973400,
+        "text": "29 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "29 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Barcelona",
+      "home": "Celta",
       "away": "Villarreal",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
@@ -2265,8 +2267,8 @@
   "away": {
     "53107": {
       "id": 53107,
-      "points": 14,
-      "avg": 4.6667
+      "points": 16,
+      "avg": 4
     }
   },
   "owners": [],

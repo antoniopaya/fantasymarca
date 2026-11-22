@@ -3,15 +3,15 @@
     "id": 12900,
     "name": "Vinícius Júnior",
     "position": 4,
-    "points": 46,
-    "avg": 5.8,
+    "points": 51,
+    "avg": 5.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/12900.png?version=20261102170230",
     "isFavorite": 0,
-    "value": 47338000,
-    "previousValue": 47165000,
+    "value": 47502000,
+    "previousValue": 47338000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 47338000,
+      "floor": 47502000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 71007000,
+      "value": 71253000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 47338000,
+      "price": 47502000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 176,
       "weight": 62
     },
-    "clausesRanking": 48
+    "clausesRanking": 35
   },
   "id": 12900,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 1,
     "cards": 3
   },
@@ -332,12 +332,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -745,10 +747,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 46,
-      "avg": 5.75,
+      "points": 51,
+      "avg": 5.6667,
       "id_team": 15,
-      "last_gameweek": 8
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -775,35 +777,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 47165000,
-      "change": 173000,
-      "sign": 173
+      "value": 47338000,
+      "change": 164000,
+      "sign": 164
     },
     {
       "time": "Una semana",
-      "value": 46156000,
-      "change": 1182000,
-      "sign": "+1.182.000"
+      "value": 46307000,
+      "change": 1195000,
+      "sign": "+1.195.000"
     },
     {
       "time": "Un mes",
-      "value": 52261000,
-      "change": -4923000,
-      "sign": "-4.923.000"
+      "value": 51769000,
+      "change": -4267000,
+      "sign": "-4.267.000"
     },
     {
       "time": "Un año",
-      "value": 62369000,
-      "change": -15031000,
-      "sign": "-15.031.000"
+      "value": 62259000,
+      "change": -14757000,
+      "sign": "-14.757.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 62369000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 62259000,
         "date": "22 nov 2025"
@@ -2263,6 +2261,10 @@
       {
         "value": 47338000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 47502000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2278,36 +2280,36 @@
     "12900": {
       "id": 12900,
       "id_team": 15,
-      "id_match": 38054,
-      "id_gameweek": 4054,
+      "id_match": 38064,
+      "id_gameweek": 4055,
       "id_home": 15,
-      "id_away": 5,
+      "id_away": 48,
       "date": {
-        "ts": 1795291200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795896000,
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "sáb",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Real Madrid",
-      "away": "Celta",
+      "away": "Alavés",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
   "home": {
     "12900": {
       "id": 12900,
-      "points": 32,
-      "avg": 8
+      "points": 37,
+      "avg": 7.4
     }
   },
   "away": {

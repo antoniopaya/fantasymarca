@@ -3,15 +3,15 @@
     "id": 59042,
     "name": "Peque Fernández",
     "position": 3,
-    "points": 17,
-    "avg": 4.3,
+    "points": 19,
+    "avg": 3.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59042.png?version=20251006014424",
     "isFavorite": 0,
-    "value": 329000,
-    "previousValue": 433000,
+    "value": 425000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 329000,
+      "price": 425000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 168,
       "weight": null
     },
-    "clausesRanking": 419
+    "clausesRanking": 373
   },
   "id": 59042,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 1,
     "cards": 1
   },
@@ -295,12 +295,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -708,10 +710,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 17,
-      "avg": 4.25,
+      "points": 19,
+      "avg": 3.8,
       "id_team": 17,
-      "last_gameweek": 9
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -731,35 +733,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 433000,
-      "change": -104000,
-      "sign": -104
+      "value": 329000,
+      "change": 96000,
+      "sign": 96
     },
     {
       "time": "Una semana",
-      "value": 365000,
-      "change": -36000,
-      "sign": -36
+      "value": 329000,
+      "change": 96000,
+      "sign": 96
     },
     {
       "time": "Un mes",
-      "value": 584000,
-      "change": -255000,
-      "sign": -255
+      "value": 709000,
+      "change": -284000,
+      "sign": -284
     },
     {
       "time": "Un año",
-      "value": 3152000,
-      "change": -2823000,
-      "sign": "-2.823.000"
+      "value": 3308000,
+      "change": -2883000,
+      "sign": "-2.883.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 3152000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 3308000,
         "date": "22 nov 2025"
@@ -2219,6 +2217,10 @@
       {
         "value": 329000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 425000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2234,36 +2236,36 @@
     "59042": {
       "id": 59042,
       "id_team": 17,
-      "id_match": 38056,
-      "id_gameweek": 4054,
-      "id_home": 17,
-      "id_away": 4,
+      "id_match": 39691,
+      "id_gameweek": 4055,
+      "id_home": 16,
+      "id_away": 17,
       "date": {
-        "ts": 1795282200,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795982400,
+        "text": "29 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "29 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Real Sociedad",
+      "away": "Sevilla",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,
   "home": {
     "59042": {
       "id": 59042,
-      "points": 13,
-      "avg": 6.5
+      "points": 15,
+      "avg": 5
     }
   },
   "away": {

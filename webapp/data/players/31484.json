@@ -3,8 +3,8 @@
     "id": 31484,
     "name": "Eduardo Camavinga",
     "position": 3,
-    "points": 29,
-    "avg": 2.6,
+    "points": 33,
+    "avg": 2.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
@@ -68,11 +68,11 @@
       "height": 182,
       "weight": null
     },
-    "clausesRanking": 142
+    "clausesRanking": 132
   },
   "id": 31484,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 0,
     "cards": 2
   },
@@ -299,12 +299,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -712,10 +714,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 29,
-      "avg": 2.6364,
+      "points": 33,
+      "avg": 2.75,
       "id_team": 15,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -748,29 +750,25 @@
     },
     {
       "time": "Una semana",
-      "value": 9529000,
-      "change": 351000,
-      "sign": 351
+      "value": 9536000,
+      "change": 344000,
+      "sign": 344
     },
     {
       "time": "Un mes",
-      "value": 5875000,
-      "change": 4005000,
-      "sign": "+4.005.000"
+      "value": 5683000,
+      "change": 4197000,
+      "sign": "+4.197.000"
     },
     {
       "time": "Un año",
-      "value": 24317000,
-      "change": -14437000,
-      "sign": "-14.437.000"
+      "value": 24026000,
+      "change": -14146000,
+      "sign": "-14.146.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 24317000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 24026000,
         "date": "22 nov 2025"
@@ -2230,6 +2228,10 @@
       {
         "value": 9880000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 9880000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2245,36 +2247,36 @@
     "31484": {
       "id": 31484,
       "id_team": 15,
-      "id_match": 38054,
-      "id_gameweek": 4054,
+      "id_match": 38064,
+      "id_gameweek": 4055,
       "id_home": 15,
-      "id_away": 5,
+      "id_away": 48,
       "date": {
-        "ts": 1795291200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795896000,
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "sáb",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Real Madrid",
-      "away": "Celta",
+      "away": "Alavés",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
   "home": {
     "31484": {
       "id": 31484,
-      "points": 12,
-      "avg": 2.4
+      "points": 16,
+      "avg": 2.6667
     }
   },
   "away": {

@@ -3,15 +3,15 @@
     "id": 7024,
     "name": "Fede Valverde",
     "position": 3,
-    "points": 59,
-    "avg": 5.4,
+    "points": 61,
+    "avg": 5.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/7024.png?version=20251003183927",
     "isFavorite": 0,
-    "value": 44259000,
-    "previousValue": 44072000,
+    "value": 44412000,
+    "previousValue": 44259000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 44259000,
+      "floor": 44412000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 66388500,
+      "value": 66618000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 44259000,
+      "price": 44412000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 181,
       "weight": 67
     },
-    "clausesRanking": 33
+    "clausesRanking": 38
   },
   "id": 7024,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 1,
     "cards": 0
   },
@@ -301,12 +301,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -714,10 +716,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 59,
-      "avg": 5.3636,
+      "points": 61,
+      "avg": 5.0833,
       "id_team": 15,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -744,35 +746,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 44072000,
-      "change": 187000,
-      "sign": 187
+      "value": 44259000,
+      "change": 153000,
+      "sign": 153
     },
     {
       "time": "Una semana",
-      "value": 42793000,
-      "change": 1466000,
-      "sign": "+1.466.000"
+      "value": 43002000,
+      "change": 1410000,
+      "sign": "+1.410.000"
     },
     {
       "time": "Un mes",
-      "value": 39927000,
-      "change": 4332000,
-      "sign": "+4.332.000"
+      "value": 40471000,
+      "change": 3941000,
+      "sign": "+3.941.000"
     },
     {
       "time": "Un año",
-      "value": 49142000,
-      "change": -4883000,
-      "sign": "-4.883.000"
+      "value": 48826000,
+      "change": -4414000,
+      "sign": "-4.414.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 49142000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 48826000,
         "date": "22 nov 2025"
@@ -2232,6 +2230,10 @@
       {
         "value": 44259000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 44412000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2247,36 +2249,36 @@
     "7024": {
       "id": 7024,
       "id_team": 15,
-      "id_match": 38054,
-      "id_gameweek": 4054,
+      "id_match": 38064,
+      "id_gameweek": 4055,
       "id_home": 15,
-      "id_away": 5,
+      "id_away": 48,
       "date": {
-        "ts": 1795291200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795896000,
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "sáb",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Real Madrid",
-      "away": "Celta",
+      "away": "Alavés",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
   "home": {
     "7024": {
       "id": 7024,
-      "points": 32,
-      "avg": 6.4
+      "points": 34,
+      "avg": 5.6667
     }
   },
   "away": {

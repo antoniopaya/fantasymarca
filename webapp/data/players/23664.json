@@ -3,15 +3,15 @@
     "id": 23664,
     "name": "Sergio Carreira",
     "position": 2,
-    "points": 44,
-    "avg": 3.7,
+    "points": 45,
+    "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/23664.png?version=20251003195345",
     "isFavorite": 0,
-    "value": 13869000,
-    "previousValue": 14272000,
+    "value": 13746000,
+    "previousValue": 13869000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 13869000,
+      "floor": 13746000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 20803500,
+      "value": 20619000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 13869000,
+      "price": 13746000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 275
+    "clausesRanking": 257
   },
   "id": 23664,
   "player_extra": {
-    "matches": 12,
+    "matches": 13,
     "goals": 0,
     "cards": 2
   },
@@ -291,12 +291,12 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -704,10 +704,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 44,
-      "avg": 3.6667,
+      "points": 45,
+      "avg": 3.4615,
       "id_team": 5,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -727,35 +727,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 14272000,
-      "change": -403000,
-      "sign": -403
+      "value": 13869000,
+      "change": -123000,
+      "sign": -123
     },
     {
       "time": "Una semana",
-      "value": 13179000,
-      "change": 690000,
-      "sign": 690
+      "value": 13576000,
+      "change": 170000,
+      "sign": 170
     },
     {
       "time": "Un mes",
-      "value": 13704000,
-      "change": 165000,
-      "sign": 165
+      "value": 13932000,
+      "change": -186000,
+      "sign": -186
     },
     {
       "time": "Un año",
-      "value": 5125000,
-      "change": 8744000,
-      "sign": "+8.744.000"
+      "value": 5208000,
+      "change": 8538000,
+      "sign": "+8.538.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 5125000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 5208000,
         "date": "22 nov 2025"
@@ -2215,6 +2211,10 @@
       {
         "value": 13869000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 13746000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2230,28 +2230,28 @@
     "23664": {
       "id": 23664,
       "id_team": 5,
-      "id_match": 38054,
-      "id_gameweek": 4054,
-      "id_home": 15,
-      "id_away": 5,
+      "id_match": 38057,
+      "id_gameweek": 4055,
+      "id_home": 5,
+      "id_away": 20,
       "date": {
-        "ts": 1795291200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795973400,
+        "text": "29 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "29 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Real Madrid",
-      "away": "Celta",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "home": "Celta",
+      "away": "Villarreal",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
@@ -2265,8 +2265,8 @@
   "away": {
     "23664": {
       "id": 23664,
-      "points": 19,
-      "avg": 3.8
+      "points": 20,
+      "avg": 3.3333
     }
   },
   "owners": [],

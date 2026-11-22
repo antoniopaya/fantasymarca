@@ -365,8 +365,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 308569,
+        "id_player": 60290,
+        "category": "injury",
+        "description": "Operado de la tibia",
+        "duration": "Baja hasta Diciembre",
+        "since": "2026-09-30 13:54:29",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -796,29 +805,25 @@
     },
     {
       "time": "Una semana",
-      "value": 399000,
-      "change": -70000,
-      "sign": -70
+      "value": 413000,
+      "change": -84000,
+      "sign": -84
     },
     {
       "time": "Un mes",
-      "value": 354000,
-      "change": -25000,
-      "sign": -25
+      "value": 485000,
+      "change": -156000,
+      "sign": -156
     },
     {
       "time": "Un año",
-      "value": 8538000,
-      "change": -8209000,
-      "sign": "-8.209.000"
+      "value": 8839000,
+      "change": -8510000,
+      "sign": "-8.510.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 8538000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 8839000,
         "date": "22 nov 2025"
@@ -2278,6 +2283,10 @@
       {
         "value": 329000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 329000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2293,28 +2302,28 @@
     "60290": {
       "id": 60290,
       "id_team": 15,
-      "id_match": 38054,
-      "id_gameweek": 4054,
+      "id_match": 38064,
+      "id_gameweek": 4055,
       "id_home": 15,
-      "id_away": 5,
+      "id_away": 48,
       "date": {
-        "ts": 1795291200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795896000,
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "sáb",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Real Madrid",
-      "away": "Celta",
+      "away": "Alavés",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,

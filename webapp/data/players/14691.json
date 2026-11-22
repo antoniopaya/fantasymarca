@@ -3,15 +3,15 @@
     "id": 14691,
     "name": "Adrià Pedrosa",
     "position": 2,
-    "points": 45,
-    "avg": 4.5,
+    "points": 47,
+    "avg": 4.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/14691.png?version=20251006022606",
     "isFavorite": 0,
-    "value": 18535000,
-    "previousValue": 19037000,
+    "value": 17882000,
+    "previousValue": 18535000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 18535000,
+      "floor": 17882000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 27802500,
+      "value": 26823000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 18535000,
+      "price": 17882000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 176,
       "weight": 69
     },
-    "clausesRanking": 411
+    "clausesRanking": 409
   },
   "id": 14691,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 1,
     "cards": 2
   },
@@ -294,12 +294,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -707,10 +709,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 45,
-      "avg": 4.5,
+      "points": 47,
+      "avg": 4.2727,
       "id_team": 14,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -744,35 +746,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 19037000,
-      "change": -502000,
-      "sign": -502
+      "value": 18535000,
+      "change": -653000,
+      "sign": -653
     },
     {
       "time": "Una semana",
-      "value": 20830000,
-      "change": -2295000,
-      "sign": "-2.295.000"
+      "value": 20613000,
+      "change": -2731000,
+      "sign": "-2.731.000"
     },
     {
       "time": "Un mes",
-      "value": 17512000,
-      "change": 1023000,
-      "sign": "+1.023.000"
+      "value": 18126000,
+      "change": -244000,
+      "sign": -244
     },
     {
       "time": "Un año",
-      "value": 3388000,
-      "change": 15147000,
-      "sign": "+15.147.000"
+      "value": 3260000,
+      "change": 14622000,
+      "sign": "+14.622.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 3388000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 3260000,
         "date": "22 nov 2025"
@@ -2232,6 +2230,10 @@
       {
         "value": 18535000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 17882000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2275,8 +2277,8 @@
   "home": {
     "14691": {
       "id": 14691,
-      "points": 20,
-      "avg": 4
+      "points": 22,
+      "avg": 3.6667
     }
   },
   "away": {

@@ -11,7 +11,7 @@
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/69744.png?version=20260227153903",
     "isFavorite": 0,
     "value": 329000,
-    "previousValue": 341000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -293,7 +293,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -717,15 +717,15 @@
   "values": [
     {
       "time": "Un día",
-      "value": 341000,
-      "change": -12000,
-      "sign": -12
+      "value": 329000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Una semana",
-      "value": 505000,
-      "change": -176000,
-      "sign": -176
+      "value": 405000,
+      "change": -76000,
+      "sign": -76
     },
     {
       "time": "Un mes",
@@ -1807,6 +1807,10 @@
       {
         "value": 329000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 329000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -1822,28 +1826,28 @@
     "69744": {
       "id": 69744,
       "id_team": 17,
-      "id_match": 38056,
-      "id_gameweek": 4054,
-      "id_home": 17,
-      "id_away": 4,
+      "id_match": 39691,
+      "id_gameweek": 4055,
+      "id_home": 16,
+      "id_away": 17,
       "date": {
-        "ts": 1795282200,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795982400,
+        "text": "29 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "29 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Real Sociedad",
+      "away": "Sevilla",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,

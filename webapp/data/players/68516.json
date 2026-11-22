@@ -3,15 +3,15 @@
     "id": 68516,
     "name": "Hugo Burcio",
     "position": 3,
-    "points": 17,
-    "avg": 2.8,
+    "points": 20,
+    "avg": 2.9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68516.png?version=20260120091915",
     "isFavorite": 0,
-    "value": 449000,
-    "previousValue": 416000,
+    "value": 486000,
+    "previousValue": 449000,
     "videoFrame": null,
     "team": {
       "id": 5,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 449000,
+      "price": 486000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 187,
       "weight": null
     },
-    "clausesRanking": 369
+    "clausesRanking": 274
   },
   "id": 68516,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 0
   },
@@ -288,12 +288,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 15,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     },
@@ -701,10 +703,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 17,
-      "avg": 2.8333,
+      "points": 20,
+      "avg": 2.8571,
       "id_team": 5,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -717,21 +719,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 416000,
-      "change": 33000,
-      "sign": 33
+      "value": 449000,
+      "change": 37000,
+      "sign": 37
     },
     {
       "time": "Una semana",
-      "value": 509000,
-      "change": -60000,
-      "sign": -60
+      "value": 484000,
+      "change": 2000,
+      "sign": 2
     },
     {
       "time": "Un mes",
-      "value": 586000,
-      "change": -137000,
-      "sign": -137
+      "value": 744000,
+      "change": -258000,
+      "sign": -258
     }
   ],
   "values_chart": {
@@ -1415,6 +1417,10 @@
       {
         "value": 449000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 486000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -1430,28 +1436,28 @@
     "68516": {
       "id": 68516,
       "id_team": 5,
-      "id_match": 38054,
-      "id_gameweek": 4054,
-      "id_home": 15,
-      "id_away": 5,
+      "id_match": 38057,
+      "id_gameweek": 4055,
+      "id_home": 5,
+      "id_away": 20,
       "date": {
-        "ts": 1795291200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795973400,
+        "text": "29 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "29 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Real Madrid",
-      "away": "Celta",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "home": "Celta",
+      "away": "Villarreal",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
   "starter": false,
@@ -1465,8 +1471,8 @@
   "away": {
     "68516": {
       "id": 68516,
-      "points": 2,
-      "avg": 2
+      "points": 5,
+      "avg": 2.5
     }
   },
   "owners": [],

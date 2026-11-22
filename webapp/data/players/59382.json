@@ -3,15 +3,15 @@
     "id": 59382,
     "name": "Nicolas Pépé",
     "position": 4,
-    "points": 40,
-    "avg": 5,
+    "points": 42,
+    "avg": 4.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/59382.png?version=20251006021201",
     "isFavorite": 0,
-    "value": 28164000,
-    "previousValue": 28530000,
+    "value": 27964000,
+    "previousValue": 28164000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 28164000,
+      "floor": 27964000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 42246000,
+      "value": 41946000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 28164000,
+      "price": 27964000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 247
+    "clausesRanking": 261
   },
   "id": 59382,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 2,
     "cards": 1
   },
@@ -312,12 +312,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 3,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version="
     },
@@ -725,10 +727,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 40,
-      "avg": 5,
+      "points": 42,
+      "avg": 4.6667,
       "id_team": 20,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -748,35 +750,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 28530000,
-      "change": -366000,
-      "sign": -366
+      "value": 28164000,
+      "change": -200000,
+      "sign": -200
     },
     {
       "time": "Una semana",
-      "value": 28667000,
-      "change": -503000,
-      "sign": -503
+      "value": 28914000,
+      "change": -950000,
+      "sign": -950
     },
     {
       "time": "Un mes",
-      "value": 32005000,
-      "change": -3841000,
-      "sign": "-3.841.000"
+      "value": 31421000,
+      "change": -3457000,
+      "sign": "-3.457.000"
     },
     {
       "time": "Un año",
-      "value": 40569000,
-      "change": -12405000,
-      "sign": "-12.405.000"
+      "value": 40345000,
+      "change": -12381000,
+      "sign": "-12.381.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 40569000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 40345000,
         "date": "22 nov 2025"
@@ -2236,6 +2234,10 @@
       {
         "value": 28164000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 27964000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2251,27 +2253,27 @@
     "59382": {
       "id": 59382,
       "id_team": 20,
-      "id_match": 38049,
-      "id_gameweek": 4054,
-      "id_home": 3,
+      "id_match": 38057,
+      "id_gameweek": 4055,
+      "id_home": 5,
       "id_away": 20,
       "date": {
-        "ts": 1795352400,
-        "text": "dom 14:00",
-        "format": "EEE H:mm",
+        "ts": 1795973400,
+        "text": "29 nov 18:30",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "dom",
-          "time": "14:00",
-          "format": "EEE"
+          "date": "29 nov",
+          "time": "18:30",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Barcelona",
+      "home": "Celta",
       "away": "Villarreal",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/3.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/20.png?version="
     }
   },
@@ -2286,8 +2288,8 @@
   "away": {
     "59382": {
       "id": 59382,
-      "points": 22,
-      "avg": 7.3333
+      "points": 24,
+      "avg": 6
     }
   },
   "owners": [],

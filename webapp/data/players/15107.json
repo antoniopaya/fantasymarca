@@ -3,15 +3,15 @@
     "id": 15107,
     "name": "Marc Cucurella",
     "position": 2,
-    "points": 48,
-    "avg": 4,
+    "points": 50,
+    "avg": 3.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/15107.png?version=20261112113404",
     "isFavorite": 0,
-    "value": 40235000,
-    "previousValue": 40249000,
+    "value": 40074000,
+    "previousValue": 40235000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 40235000,
+      "floor": 40074000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 60352500,
+      "value": 60111000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 40235000,
+      "price": 40074000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": 67
     },
-    "clausesRanking": 86
+    "clausesRanking": 103
   },
   "id": 15107,
   "player_extra": {
-    "matches": 12,
+    "matches": 13,
     "goals": 0,
     "cards": 1
   },
@@ -288,12 +288,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -701,30 +703,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 48,
-      "avg": 4,
+      "points": 50,
+      "avg": 3.8462,
       "id_team": 15,
-      "last_gameweek": 12
+      "last_gameweek": 13
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 40249000,
-      "change": -14000,
-      "sign": -14
+      "value": 40235000,
+      "change": -161000,
+      "sign": -161
     },
     {
       "time": "Una semana",
-      "value": 37254000,
-      "change": 2981000,
-      "sign": "+2.981.000"
+      "value": 37913000,
+      "change": 2161000,
+      "sign": "+2.161.000"
     },
     {
       "time": "Un mes",
-      "value": 27892000,
-      "change": 12343000,
-      "sign": "+12.343.000"
+      "value": 27593000,
+      "change": 12481000,
+      "sign": "+12.481.000"
     }
   ],
   "values_chart": {
@@ -1368,6 +1370,10 @@
       {
         "value": 40235000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 40074000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -1383,36 +1389,36 @@
     "15107": {
       "id": 15107,
       "id_team": 15,
-      "id_match": 38054,
-      "id_gameweek": 4054,
+      "id_match": 38064,
+      "id_gameweek": 4055,
       "id_home": 15,
-      "id_away": 5,
+      "id_away": 48,
       "date": {
-        "ts": 1795291200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795896000,
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "sáb",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
       "home": "Real Madrid",
-      "away": "Celta",
+      "away": "Alavés",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
   "home": {
     "15107": {
       "id": 15107,
-      "points": 18,
-      "avg": 3.6
+      "points": 20,
+      "avg": 3.3333
     }
   },
   "away": {

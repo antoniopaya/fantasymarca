@@ -3,15 +3,15 @@
     "id": 24,
     "name": "Unai López",
     "position": 3,
-    "points": 59,
-    "avg": 4.5,
+    "points": 62,
+    "avg": 4.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/24.png?version=20251004230007",
     "isFavorite": 0,
-    "value": 30973000,
-    "previousValue": 30338000,
+    "value": 31626000,
+    "previousValue": 30973000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 30973000,
+      "floor": 31626000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 46459500,
+      "value": 47439000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 30973000,
+      "price": 31626000,
       "loanable": null
     },
     "bid": {
@@ -300,12 +300,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 4,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -713,10 +715,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 58,
-      "avg": 4.8333,
+      "points": 62,
+      "avg": 4.7692,
       "id_team": 14,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -743,35 +745,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 30338000,
-      "change": 635000,
-      "sign": 635
+      "value": 30973000,
+      "change": 653000,
+      "sign": 653
     },
     {
       "time": "Una semana",
-      "value": 26608000,
-      "change": 4365000,
-      "sign": "+4.365.000"
+      "value": 27200000,
+      "change": 4426000,
+      "sign": "+4.426.000"
     },
     {
       "time": "Un mes",
-      "value": 13907000,
-      "change": 17066000,
-      "sign": "+17.066.000"
+      "value": 14240000,
+      "change": 17386000,
+      "sign": "+17.386.000"
     },
     {
       "time": "Un año",
-      "value": 9573000,
-      "change": 21400000,
-      "sign": "+21.400.000"
+      "value": 9751000,
+      "change": 21875000,
+      "sign": "+21.875.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 9573000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 9751000,
         "date": "22 nov 2025"
@@ -2231,11 +2229,15 @@
       {
         "value": 30973000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 31626000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
-      "value": 30973000,
-      "date": "21 nov 2026"
+      "value": 31626000,
+      "date": "22 nov 2026"
     },
     "min": {
       "value": 329000,
@@ -2274,8 +2276,8 @@
   "home": {
     "24": {
       "id": 24,
-      "points": 33,
-      "avg": 5.5
+      "points": 37,
+      "avg": 5.2857
     }
   },
   "away": {

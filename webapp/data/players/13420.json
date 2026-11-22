@@ -3,15 +3,15 @@
     "id": 13420,
     "name": "Mouctar Diakhaby",
     "position": 2,
-    "points": 10,
-    "avg": 1.7,
+    "points": 13,
+    "avg": 1.9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/13420.png?version=20251006020255",
     "isFavorite": 0,
-    "value": 445000,
-    "previousValue": 521000,
+    "value": 336000,
+    "previousValue": 445000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 445000,
+      "price": 336000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 192,
       "weight": 74
     },
-    "clausesRanking": 336
+    "clausesRanking": 309
   },
   "id": 13420,
   "player_extra": {
-    "matches": 6,
+    "matches": 7,
     "goals": 0,
     "cards": 2
   },
@@ -307,12 +307,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 3,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -720,10 +722,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 10,
-      "avg": 1.6667,
+      "points": 13,
+      "avg": 1.8571,
       "id_team": 19,
-      "last_gameweek": 11
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -750,35 +752,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 521000,
-      "change": -76000,
-      "sign": -76
+      "value": 445000,
+      "change": -109000,
+      "sign": -109
     },
     {
       "time": "Una semana",
-      "value": 452000,
-      "change": -7000,
-      "sign": -7
+      "value": 389000,
+      "change": -53000,
+      "sign": -53
     },
     {
       "time": "Un mes",
-      "value": 1502000,
-      "change": -1057000,
-      "sign": "-1.057.000"
+      "value": 1335000,
+      "change": -999000,
+      "sign": -999
     },
     {
       "time": "Un año",
-      "value": 3870000,
-      "change": -3425000,
-      "sign": "-3.425.000"
+      "value": 3622000,
+      "change": -3286000,
+      "sign": "-3.286.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 3870000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 3622000,
         "date": "22 nov 2025"
@@ -2238,6 +2236,10 @@
       {
         "value": 445000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 336000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2259,12 +2261,12 @@
       "id_away": 50,
       "date": {
         "ts": 1795957200,
-        "text": "29 nov 14:00",
-        "format": "d MMM H:mm",
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "29 nov",
+          "date": "dom",
           "time": "14:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2288,8 +2290,8 @@
   "away": {
     "13420": {
       "id": 13420,
-      "points": 3,
-      "avg": 1
+      "points": 6,
+      "avg": 1.5
     }
   },
   "owners": [],

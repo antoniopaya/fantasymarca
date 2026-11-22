@@ -3,15 +3,15 @@
     "id": 63406,
     "name": "Trent Alexander-Arnold",
     "position": 2,
-    "points": 30,
-    "avg": 4.3,
+    "points": 31,
+    "avg": 3.9,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/63406.png?version=20251003184213",
     "isFavorite": 0,
-    "value": 4510000,
-    "previousValue": 4653000,
+    "value": 4428000,
+    "previousValue": 4510000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4510000,
+      "floor": 4428000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6765000,
+      "value": 6642000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4510000,
+      "price": 4428000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 337
+    "clausesRanking": 282
   },
   "id": 63406,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 0
   },
@@ -288,12 +288,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -701,10 +703,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 30,
-      "avg": 4.2857,
+      "points": 31,
+      "avg": 3.875,
       "id_team": 15,
-      "last_gameweek": 11
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -717,35 +719,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4653000,
-      "change": -143000,
-      "sign": -143
+      "value": 4510000,
+      "change": -82000,
+      "sign": -82
     },
     {
       "time": "Una semana",
-      "value": 5562000,
-      "change": -1052000,
-      "sign": "-1.052.000"
+      "value": 5391000,
+      "change": -963000,
+      "sign": -963
     },
     {
       "time": "Un mes",
-      "value": 9214000,
-      "change": -4704000,
-      "sign": "-4.704.000"
+      "value": 8856000,
+      "change": -4428000,
+      "sign": "-4.428.000"
     },
     {
       "time": "Un año",
-      "value": 23642000,
-      "change": -19132000,
-      "sign": "-19.132.000"
+      "value": 23791000,
+      "change": -19363000,
+      "sign": "-19.363.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 23642000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 23791000,
         "date": "22 nov 2025"
@@ -2205,6 +2203,10 @@
       {
         "value": 4510000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 4428000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2212,44 +2214,44 @@
       "date": "4 dic 2025"
     },
     "min": {
-      "value": 4510000,
-      "date": "21 nov 2026"
+      "value": 4428000,
+      "date": "22 nov 2026"
     }
   },
   "next_match": {
     "63406": {
       "id": 63406,
       "id_team": 15,
-      "id_match": 38054,
-      "id_gameweek": 4054,
+      "id_match": 38064,
+      "id_gameweek": 4055,
       "id_home": 15,
-      "id_away": 5,
+      "id_away": 48,
       "date": {
-        "ts": 1795291200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795896000,
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "sáb",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Real Madrid",
-      "away": "Celta",
+      "away": "Alavés",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,
   "home": {
     "63406": {
       "id": 63406,
-      "points": 14,
-      "avg": 7
+      "points": 15,
+      "avg": 5
     }
   },
   "away": {

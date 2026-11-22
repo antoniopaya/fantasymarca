@@ -3,15 +3,15 @@
     "id": 18109,
     "name": "Luis Rioja",
     "position": 3,
-    "points": 26,
-    "avg": 2.9,
+    "points": 33,
+    "avg": 3.7,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/18109.png?version=20251006020204",
     "isFavorite": 0,
-    "value": 4639000,
-    "previousValue": 4679000,
+    "value": 4690000,
+    "previousValue": 4639000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4639000,
+      "floor": 4690000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6958500,
+      "value": 7035000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4639000,
+      "price": 4690000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 173,
       "weight": null
     },
-    "clausesRanking": 178
+    "clausesRanking": 119
   },
   "id": 18109,
   "player_extra": {
@@ -320,12 +320,12 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 8,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -733,10 +733,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 25,
-      "avg": 3.125,
+      "points": 33,
+      "avg": 3.6667,
       "id_team": 19,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -770,35 +770,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4679000,
-      "change": -40000,
-      "sign": -40
+      "value": 4639000,
+      "change": 51000,
+      "sign": 51
     },
     {
       "time": "Una semana",
-      "value": 4864000,
-      "change": -225000,
-      "sign": -225
+      "value": 4847000,
+      "change": -157000,
+      "sign": -157
     },
     {
       "time": "Un mes",
-      "value": 4121000,
-      "change": 518000,
-      "sign": 518
+      "value": 4168000,
+      "change": 522000,
+      "sign": 522
     },
     {
       "time": "Un año",
-      "value": 20446000,
-      "change": -15807000,
-      "sign": "-15.807.000"
+      "value": 20134000,
+      "change": -15444000,
+      "sign": "-15.444.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 20446000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 20134000,
         "date": "22 nov 2025"
@@ -2258,6 +2254,10 @@
       {
         "value": 4639000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 4690000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2279,12 +2279,12 @@
       "id_away": 50,
       "date": {
         "ts": 1795957200,
-        "text": "29 nov 14:00",
-        "format": "d MMM H:mm",
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "29 nov",
+          "date": "dom",
           "time": "14:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2308,8 +2308,8 @@
   "away": {
     "18109": {
       "id": 18109,
-      "points": 14,
-      "avg": 4.6667
+      "points": 22,
+      "avg": 5.5
     }
   },
   "owners": [],

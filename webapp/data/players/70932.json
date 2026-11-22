@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/70932.png?version=20260619115800",
     "isFavorite": 0,
-    "value": 449000,
-    "previousValue": 341000,
+    "value": 329000,
+    "previousValue": 449000,
     "videoFrame": null,
     "team": {
       "id": 15,
@@ -49,15 +49,15 @@
       "percentage": 50
     },
     "market": {
-      "id": 1985745604,
-      "isPublic": 1,
-      "price": 449000,
-      "loanable": 0
+      "id": null,
+      "isPublic": null,
+      "price": 329000,
+      "loanable": null
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": 449000,
+      "input": null,
       "barter": [],
       "type": null,
       "days": null
@@ -307,8 +307,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 313313,
+        "id_player": 70932,
+        "category": "other",
+        "description": "No convocado",
+        "duration": "Baja esta jornada",
+        "since": "2026-11-20 16:21:07",
+        "until": null,
+        "status": "No convocado"
+      },
+      "teamPlayed": true,
       "rivalId": 5,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
     },
@@ -725,21 +734,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 341000,
-      "change": 108000,
-      "sign": 108
+      "value": 449000,
+      "change": -120000,
+      "sign": -120
     },
     {
       "time": "Una semana",
-      "value": 329000,
-      "change": 120000,
-      "sign": 120
+      "value": 433000,
+      "change": -104000,
+      "sign": -104
     },
     {
       "time": "Un mes",
       "value": 329000,
-      "change": 120000,
-      "sign": 120
+      "change": 0,
+      "sign": 0
     }
   ],
   "values_chart": {
@@ -1363,6 +1372,10 @@
       {
         "value": 449000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 329000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -1378,28 +1391,28 @@
     "70932": {
       "id": 70932,
       "id_team": 15,
-      "id_match": 38054,
-      "id_gameweek": 4054,
+      "id_match": 38064,
+      "id_gameweek": 4055,
       "id_home": 15,
-      "id_away": 5,
+      "id_away": 48,
       "date": {
-        "ts": 1795291200,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795896000,
+        "text": "sáb 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "sáb",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Real Madrid",
-      "away": "Celta",
+      "away": "Alavés",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/5.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/48.png?version="
     }
   },
   "starter": false,

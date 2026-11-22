@@ -3,8 +3,8 @@
     "id": 14911,
     "name": "Álvaro García",
     "position": 3,
-    "points": 44,
-    "avg": 4,
+    "points": 46,
+    "avg": 3.8,
     "status": "doubt",
     "id_competition": 1,
     "injury": {
@@ -14,8 +14,8 @@
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/14911.png?version=20251004224331",
     "isFavorite": 0,
-    "value": 16719000,
-    "previousValue": 17133000,
+    "value": 16399000,
+    "previousValue": 16719000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 16719000,
+      "floor": 16399000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 25078500,
+      "value": 24598500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 16719000,
+      "price": 16399000,
       "loanable": null
     },
     "bid": {
@@ -72,11 +72,11 @@
       "height": 168,
       "weight": 58
     },
-    "clausesRanking": null
+    "clausesRanking": 422
   },
   "id": 14911,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 3,
     "cards": 2
   },
@@ -312,12 +312,23 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "events": [
+        "sub_in"
+      ],
+      "injury": {
+        "id": 313307,
+        "id_player": 14911,
+        "category": "injury",
+        "description": "Molestias",
+        "duration": "Duda esta jornada",
+        "since": "2026-11-20 14:01:16",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 19,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/19.png?version="
     },
@@ -725,10 +736,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 44,
-      "avg": 4,
+      "points": 46,
+      "avg": 3.8333,
       "id_team": 14,
-      "last_gameweek": 11
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -755,35 +766,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 17133000,
-      "change": -414000,
-      "sign": -414
+      "value": 16719000,
+      "change": -320000,
+      "sign": -320
     },
     {
       "time": "Una semana",
-      "value": 21133000,
-      "change": -4414000,
-      "sign": "-4.414.000"
+      "value": 20628000,
+      "change": -4229000,
+      "sign": "-4.229.000"
     },
     {
       "time": "Un mes",
-      "value": 26450000,
-      "change": -9731000,
-      "sign": "-9.731.000"
+      "value": 26861000,
+      "change": -10462000,
+      "sign": "-10.462.000"
     },
     {
       "time": "Un año",
-      "value": 39479000,
-      "change": -22760000,
-      "sign": "-22.760.000"
+      "value": 39218000,
+      "change": -22819000,
+      "sign": "-22.819.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 39479000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 39218000,
         "date": "22 nov 2025"
@@ -2243,6 +2250,10 @@
       {
         "value": 16719000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 16399000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2286,8 +2297,8 @@
   "home": {
     "14911": {
       "id": 14911,
-      "points": 20,
-      "avg": 3.3333
+      "points": 22,
+      "avg": 3.1429
     }
   },
   "away": {

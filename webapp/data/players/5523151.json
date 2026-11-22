@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/5523151.png?version=20261108093451",
     "isFavorite": 0,
-    "value": 505000,
-    "previousValue": 413000,
+    "value": 377000,
+    "previousValue": 505000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 505000,
+      "price": 377000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 194,
       "weight": null
     },
-    "clausesRanking": 343
+    "clausesRanking": 349
   },
   "id": 5523151,
   "player_extra": {
@@ -278,12 +278,12 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": null,
+        "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -700,15 +700,15 @@
   "values": [
     {
       "time": "Un día",
-      "value": 413000,
-      "change": 92000,
-      "sign": 92
+      "value": 505000,
+      "change": -128000,
+      "sign": -128
     },
     {
       "time": "Una semana",
-      "value": 329000,
-      "change": 176000,
-      "sign": 176
+      "value": 385000,
+      "change": -8000,
+      "sign": -8
     }
   ],
   "values_chart": {
@@ -768,6 +768,10 @@
       {
         "value": 505000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 377000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -789,12 +793,12 @@
       "id_away": 50,
       "date": {
         "ts": 1795957200,
-        "text": "29 nov 14:00",
-        "format": "d MMM H:mm",
+        "text": "dom 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "29 nov",
+          "date": "dom",
           "time": "14:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",

@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/27855.png?version=20251006021002",
     "isFavorite": 0,
-    "value": 481000,
-    "previousValue": 329000,
+    "value": 386000,
+    "previousValue": 481000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 481000,
+      "price": 386000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 188,
       "weight": null
     },
-    "clausesRanking": 356
+    "clausesRanking": 362
   },
   "id": 27855,
   "player_extra": {
@@ -308,7 +308,7 @@
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 17,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     },
@@ -725,35 +725,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 152000,
-      "sign": 152
+      "value": 481000,
+      "change": -95000,
+      "sign": -95
     },
     {
       "time": "Una semana",
-      "value": 387000,
-      "change": 94000,
-      "sign": 94
+      "value": 429000,
+      "change": -43000,
+      "sign": -43
     },
     {
       "time": "Un mes",
-      "value": 459000,
-      "change": 22000,
-      "sign": 22
+      "value": 378000,
+      "change": 8000,
+      "sign": 8
     },
     {
       "time": "Un año",
-      "value": 426000,
-      "change": 55000,
-      "sign": 55
+      "value": 329000,
+      "change": 57000,
+      "sign": 57
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 426000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 329000,
         "date": "22 nov 2025"
@@ -2213,6 +2209,10 @@
       {
         "value": 481000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 386000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2228,28 +2228,28 @@
     "27855": {
       "id": 27855,
       "id_team": 4,
-      "id_match": 38056,
-      "id_gameweek": 4054,
-      "id_home": 17,
-      "id_away": 4,
+      "id_match": 38063,
+      "id_gameweek": 4055,
+      "id_home": 4,
+      "id_away": 14,
       "date": {
-        "ts": 1795282200,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795870800,
+        "text": "sáb 14:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "14:00",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Betis",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Betis",
+      "away": "Rayo Vallecano",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     }
   },
   "starter": false,

@@ -3,15 +3,15 @@
     "id": 49424,
     "name": "Kike Salas",
     "position": 2,
-    "points": 61,
-    "avg": 6.1,
+    "points": 73,
+    "avg": 6.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/49424.png?version=20251006013823",
     "isFavorite": 0,
-    "value": 32377000,
-    "previousValue": 32044000,
+    "value": 32981000,
+    "previousValue": 32377000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 32377000,
+      "floor": 32981000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 48565500,
+      "value": 49471500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 32377000,
+      "price": 32981000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 106
+    "clausesRanking": 43
   },
   "id": 49424,
   "player_extra": {
-    "matches": 10,
-    "goals": 1,
-    "cards": 2
+    "matches": 11,
+    "goals": 2,
+    "cards": 3
   },
   "points": [
     {
@@ -291,12 +291,15 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 12,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -704,10 +707,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 61,
-      "avg": 6.1,
+      "points": 73,
+      "avg": 6.6364,
       "id_team": 17,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -734,35 +737,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 32044000,
-      "change": 333000,
-      "sign": 333
+      "value": 32377000,
+      "change": 604000,
+      "sign": 604
     },
     {
       "time": "Una semana",
-      "value": 29577000,
-      "change": 2800000,
-      "sign": "+2.800.000"
+      "value": 30024000,
+      "change": 2957000,
+      "sign": "+2.957.000"
     },
     {
       "time": "Un mes",
-      "value": 21331000,
-      "change": 11046000,
-      "sign": "+11.046.000"
+      "value": 21474000,
+      "change": 11507000,
+      "sign": "+11.507.000"
     },
     {
       "time": "Un año",
-      "value": 3223000,
-      "change": 29154000,
-      "sign": "+29.154.000"
+      "value": 3182000,
+      "change": 29799000,
+      "sign": "+29.799.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 3223000,
-        "date": "21 nov 2025"
-      },
       {
         "value": 3182000,
         "date": "22 nov 2025"
@@ -2222,6 +2221,10 @@
       {
         "value": 32377000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 32981000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -2237,36 +2240,36 @@
     "49424": {
       "id": 49424,
       "id_team": 17,
-      "id_match": 38056,
-      "id_gameweek": 4054,
-      "id_home": 17,
-      "id_away": 4,
+      "id_match": 39691,
+      "id_gameweek": 4055,
+      "id_home": 16,
+      "id_away": 17,
       "date": {
-        "ts": 1795282200,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795982400,
+        "text": "29 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "29 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Real Sociedad",
+      "away": "Sevilla",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,
   "home": {
     "49424": {
       "id": 49424,
-      "points": 30,
-      "avg": 6
+      "points": 42,
+      "avg": 7
     }
   },
   "away": {

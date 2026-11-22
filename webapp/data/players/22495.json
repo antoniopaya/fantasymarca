@@ -3,15 +3,15 @@
     "id": 22495,
     "name": "Giorgi Kochorashvili",
     "position": 3,
-    "points": 19,
-    "avg": 2.7,
+    "points": 22,
+    "avg": 2.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22495.png?version=20260821132838",
     "isFavorite": 0,
-    "value": 531000,
-    "previousValue": 505000,
+    "value": 599000,
+    "previousValue": 531000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -47,7 +47,7 @@
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 531000,
+      "price": 599000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 176,
       "weight": null
     },
-    "clausesRanking": 417
+    "clausesRanking": 300
   },
   "id": 22495,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 1
   },
@@ -301,12 +301,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -714,30 +716,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 19,
-      "avg": 2.7143,
+      "points": 22,
+      "avg": 2.75,
       "id_team": 17,
-      "last_gameweek": 11
+      "last_gameweek": 13
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 505000,
-      "change": 26000,
-      "sign": 26
+      "value": 531000,
+      "change": 68000,
+      "sign": 68
     },
     {
       "time": "Una semana",
       "value": 329000,
-      "change": 202000,
-      "sign": 202
+      "change": 270000,
+      "sign": 270
     },
     {
       "time": "Un mes",
-      "value": 3015000,
-      "change": -2484000,
-      "sign": "-2.484.000"
+      "value": 2923000,
+      "change": -2324000,
+      "sign": "-2.324.000"
     }
   ],
   "values_chart": {
@@ -1113,6 +1115,10 @@
       {
         "value": 531000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 599000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -1128,36 +1134,36 @@
     "22495": {
       "id": 22495,
       "id_team": 17,
-      "id_match": 38056,
-      "id_gameweek": 4054,
-      "id_home": 17,
-      "id_away": 4,
+      "id_match": 39691,
+      "id_gameweek": 4055,
+      "id_home": 16,
+      "id_away": 17,
       "date": {
-        "ts": 1795282200,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795982400,
+        "text": "29 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "29 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Real Sociedad",
+      "away": "Sevilla",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,
   "home": {
     "22495": {
       "id": 22495,
-      "points": 10,
-      "avg": 3.3333
+      "points": 13,
+      "avg": 3.25
     }
   },
   "away": {

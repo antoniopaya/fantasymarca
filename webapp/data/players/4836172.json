@@ -3,15 +3,15 @@
     "id": 4836172,
     "name": "Lucas Stassin",
     "position": 4,
-    "points": 32,
-    "avg": 4.6,
+    "points": 36,
+    "avg": 4.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/4836172.png?version=20260901214106",
     "isFavorite": 0,
-    "value": 14222000,
-    "previousValue": 14727000,
+    "value": 13679000,
+    "previousValue": 14222000,
     "videoFrame": null,
     "team": {
       "id": 17,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 14222000,
+      "floor": 13679000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 21333000,
+      "value": 20518500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 14222000,
+      "price": 13679000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 183
+    "clausesRanking": 232
   },
   "id": 4836172,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 1,
     "cards": 0
   },
@@ -297,12 +297,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -710,30 +712,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 32,
-      "avg": 4.5714,
+      "points": 36,
+      "avg": 4.5,
       "id_team": 17,
-      "last_gameweek": 12
+      "last_gameweek": 13
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 14727000,
-      "change": -505000,
-      "sign": -505
+      "value": 14222000,
+      "change": -543000,
+      "sign": -543
     },
     {
       "time": "Una semana",
-      "value": 14622000,
-      "change": -400000,
-      "sign": -400
+      "value": 14886000,
+      "change": -1207000,
+      "sign": "-1.207.000"
     },
     {
       "time": "Un mes",
-      "value": 9667000,
-      "change": 4555000,
-      "sign": "+4.555.000"
+      "value": 9887000,
+      "change": 3792000,
+      "sign": "+3.792.000"
     }
   ],
   "values_chart": {
@@ -1061,6 +1063,10 @@
       {
         "value": 14222000,
         "date": "21 nov 2026"
+      },
+      {
+        "value": 13679000,
+        "date": "22 nov 2026"
       }
     ],
     "max": {
@@ -1076,35 +1082,35 @@
     "4836172": {
       "id": 4836172,
       "id_team": 17,
-      "id_match": 38056,
-      "id_gameweek": 4054,
-      "id_home": 17,
-      "id_away": 4,
+      "id_match": 39691,
+      "id_gameweek": 4055,
+      "id_home": 16,
+      "id_away": 17,
       "date": {
-        "ts": 1795282200,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795982400,
+        "text": "29 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "29 nov",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Sevilla",
-      "away": "Betis",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
+      "home": "Real Sociedad",
+      "away": "Sevilla",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/17.png?version="
     }
   },
   "starter": false,
   "home": {
     "4836172": {
       "id": 4836172,
-      "points": 12,
+      "points": 16,
       "avg": 4
     }
   },
