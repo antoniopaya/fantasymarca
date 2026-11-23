@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68716.png?version=20260323141411",
     "isFavorite": 0,
-    "value": 4074000,
-    "previousValue": 4099000,
+    "value": 4100000,
+    "previousValue": 4074000,
     "videoFrame": null,
     "team": {
       "id": 23,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 4074000,
+      "floor": 4100000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 6111000,
+      "value": 6150000,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 4074000,
-      "loanable": null
+      "id": 1992003436,
+      "isPublic": 1,
+      "price": 4100000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 4100000,
       "barter": [],
       "type": null,
       "days": null
@@ -68,7 +68,7 @@
       "height": 184,
       "weight": null
     },
-    "clausesRanking": 334
+    "clausesRanking": 238
   },
   "id": 68716,
   "player_extra": {
@@ -334,8 +334,8 @@
       "id": 4057,
       "number": 16,
       "shortName": "J16",
-      "startDate": "2026-12-13 20:00:00",
-      "endDate": "2026-12-13 20:00:00",
+      "startDate": "2026-12-11 21:00:00",
+      "endDate": "2026-12-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -718,21 +718,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4099000,
-      "change": -25000,
-      "sign": -25
+      "value": 4074000,
+      "change": 26000,
+      "sign": 26
     },
     {
       "time": "Una semana",
-      "value": 4863000,
-      "change": -789000,
-      "sign": -789
+      "value": 4750000,
+      "change": -650000,
+      "sign": -650
     },
     {
       "time": "Un mes",
-      "value": 2655000,
-      "change": 1419000,
-      "sign": "+1.419.000"
+      "value": 2835000,
+      "change": 1265000,
+      "sign": "+1.265.000"
     }
   ],
   "values_chart": {
@@ -1908,6 +1908,10 @@
       {
         "value": 4074000,
         "date": "22 nov 2026"
+      },
+      {
+        "value": 4100000,
+        "date": "23 nov 2026"
       }
     ],
     "max": {
@@ -1929,16 +1933,16 @@
       "id_away": 23,
       "date": {
         "ts": 1795464000,
-        "text": "lun 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "lun",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": 1,
       "minute": null,
       "home": "Levante",
       "away": "Elche",

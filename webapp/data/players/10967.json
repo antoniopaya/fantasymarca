@@ -3,15 +3,15 @@
     "id": 10967,
     "name": "Gonçalo Guedes",
     "position": 4,
-    "points": 41,
-    "avg": 3.4,
+    "points": 51,
+    "avg": 4.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/10967.png?version=20250805081800",
     "isFavorite": 0,
-    "value": 24897000,
-    "previousValue": 25113000,
+    "value": 24934000,
+    "previousValue": 24897000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 24897000,
+      "floor": 24934000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 37345500,
+      "value": 37401000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 24897000,
+      "price": 24934000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 179,
       "weight": 68
     },
-    "clausesRanking": 332
+    "clausesRanking": 254
   },
   "id": 10967,
   "player_extra": {
     "matches": 12,
-    "goals": 2,
+    "goals": 3,
     "cards": 0
   },
   "points": [
@@ -308,12 +308,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 11,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -353,8 +355,8 @@
       "id": 4057,
       "number": 16,
       "shortName": "J16",
-      "startDate": "2026-12-13 20:00:00",
-      "endDate": "2026-12-13 20:00:00",
+      "startDate": "2026-12-11 21:00:00",
+      "endDate": "2026-12-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -721,10 +723,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 40,
-      "avg": 3.6364,
+      "points": 51,
+      "avg": 4.25,
       "id_team": 16,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -744,35 +746,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 25113000,
-      "change": -216000,
-      "sign": -216
+      "value": 24897000,
+      "change": 37000,
+      "sign": 37
     },
     {
       "time": "Una semana",
-      "value": 27201000,
-      "change": -2304000,
-      "sign": "-2.304.000"
+      "value": 26870000,
+      "change": -1936000,
+      "sign": "-1.936.000"
     },
     {
       "time": "Un mes",
-      "value": 22956000,
-      "change": 1941000,
-      "sign": "+1.941.000"
+      "value": 23263000,
+      "change": 1671000,
+      "sign": "+1.671.000"
     },
     {
       "time": "Un año",
-      "value": 16007000,
-      "change": 8890000,
-      "sign": "+8.890.000"
+      "value": 16511000,
+      "change": 8423000,
+      "sign": "+8.423.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 16007000,
-        "date": "22 nov 2025"
-      },
       {
         "value": 16511000,
         "date": "23 nov 2025"
@@ -2232,6 +2230,10 @@
       {
         "value": 24897000,
         "date": "22 nov 2026"
+      },
+      {
+        "value": 24934000,
+        "date": "23 nov 2026"
       }
     ],
     "max": {
@@ -2253,12 +2255,12 @@
       "id_away": 17,
       "date": {
         "ts": 1795982400,
-        "text": "29 nov 21:00",
-        "format": "d MMM H:mm",
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "29 nov",
+          "date": "dom",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2282,8 +2284,8 @@
   "away": {
     "10967": {
       "id": 10967,
-      "points": 12,
-      "avg": 2.4
+      "points": 23,
+      "avg": 3.8333
     }
   },
   "owners": [],

@@ -5,17 +5,17 @@
     "position": 2,
     "points": 50,
     "avg": 5,
-    "status": "doubt",
+    "status": "injury",
     "id_competition": 1,
     "injury": {
-      "category": "doubt",
+      "category": "injury",
       "description": "Molestias",
-      "duration": "Duda esta jornada"
+      "duration": "Baja esta jornada"
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/35434.png?version=20250722235600",
     "isFavorite": 0,
-    "value": 50137000,
-    "previousValue": 50616000,
+    "value": 49628000,
+    "previousValue": 50137000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -38,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 50137000,
+      "floor": 49628000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 75205500,
+      "value": 74442000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 50137000,
+      "price": 49628000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +72,7 @@
       "height": 190,
       "weight": null
     },
-    "clausesRanking": 426
+    "clausesRanking": 378
   },
   "id": 35434,
   "player_extra": {
@@ -298,8 +298,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 313140,
+        "id_player": 35434,
+        "category": "injury",
+        "description": "Molestias",
+        "duration": "Baja esta jornada",
+        "since": "2026-11-15 21:20:45",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -339,8 +348,8 @@
       "id": 4057,
       "number": 16,
       "shortName": "J16",
-      "startDate": "2026-12-13 20:00:00",
-      "endDate": "2026-12-13 20:00:00",
+      "startDate": "2026-12-11 21:00:00",
+      "endDate": "2026-12-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -730,35 +739,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 50616000,
-      "change": -479000,
-      "sign": -479
+      "value": 50137000,
+      "change": -509000,
+      "sign": -509
     },
     {
       "time": "Una semana",
-      "value": 54068000,
-      "change": -3931000,
-      "sign": "-3.931.000"
+      "value": 53486000,
+      "change": -3858000,
+      "sign": "-3.858.000"
     },
     {
       "time": "Un mes",
-      "value": 49342000,
-      "change": 795000,
-      "sign": 795
+      "value": 49642000,
+      "change": -14000,
+      "sign": -14
     },
     {
       "time": "Un año",
-      "value": 334000,
-      "change": 49803000,
-      "sign": "+49.803.000"
+      "value": 329000,
+      "change": 49299000,
+      "sign": "+49.299.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 334000,
-        "date": "22 nov 2025"
-      },
       {
         "value": 329000,
         "date": "23 nov 2025"
@@ -2218,6 +2223,10 @@
       {
         "value": 50137000,
         "date": "22 nov 2026"
+      },
+      {
+        "value": 49628000,
+        "date": "23 nov 2026"
       }
     ],
     "max": {
@@ -2233,27 +2242,27 @@
     "35434": {
       "id": 35434,
       "id_team": 2,
-      "id_match": 38050,
-      "id_gameweek": 4054,
-      "id_home": 9,
+      "id_match": 38059,
+      "id_gameweek": 4055,
+      "id_home": 23,
       "id_away": 2,
       "date": {
-        "ts": 1795377600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795887000,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Getafe",
+      "home": "Elche",
       "away": "Atlético",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     }
   },

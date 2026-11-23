@@ -3,15 +3,15 @@
     "id": 22956,
     "name": "Sergio Gómez",
     "position": 2,
-    "points": 27,
-    "avg": 2.1,
+    "points": 37,
+    "avg": 2.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22956.png?version=20251004234305",
     "isFavorite": 0,
-    "value": 12401000,
-    "previousValue": 12799000,
+    "value": 12379000,
+    "previousValue": 12401000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 12401000,
+      "floor": 12379000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 18601500,
+      "value": 18568500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 12401000,
+      "price": 12379000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 171,
       "weight": 68
     },
-    "clausesRanking": 325
+    "clausesRanking": 248
   },
   "id": 22956,
   "player_extra": {
@@ -285,12 +285,15 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": -1,
-        "isLive": true
+        "points": 9,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -330,8 +333,8 @@
       "id": 4057,
       "number": 16,
       "shortName": "J16",
-      "startDate": "2026-12-13 20:00:00",
-      "endDate": "2026-12-13 20:00:00",
+      "startDate": "2026-12-11 21:00:00",
+      "endDate": "2026-12-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -698,10 +701,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 28,
-      "avg": 2.3333,
+      "points": 37,
+      "avg": 2.8462,
       "id_team": 16,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -721,35 +724,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 12799000,
-      "change": -398000,
-      "sign": -398
+      "value": 12401000,
+      "change": -22000,
+      "sign": -22
     },
     {
       "time": "Una semana",
-      "value": 14705000,
-      "change": -2304000,
-      "sign": "-2.304.000"
+      "value": 14452000,
+      "change": -2073000,
+      "sign": "-2.073.000"
     },
     {
       "time": "Un mes",
-      "value": 19676000,
-      "change": -7275000,
-      "sign": "-7.275.000"
+      "value": 19706000,
+      "change": -7327000,
+      "sign": "-7.327.000"
     },
     {
       "time": "Un año",
-      "value": 9807000,
-      "change": 2594000,
-      "sign": "+2.594.000"
+      "value": 9469000,
+      "change": 2910000,
+      "sign": "+2.910.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 9807000,
-        "date": "22 nov 2025"
-      },
       {
         "value": 9469000,
         "date": "23 nov 2025"
@@ -2209,6 +2208,10 @@
       {
         "value": 12401000,
         "date": "22 nov 2026"
+      },
+      {
+        "value": 12379000,
+        "date": "23 nov 2026"
       }
     ],
     "max": {
@@ -2230,12 +2233,12 @@
       "id_away": 17,
       "date": {
         "ts": 1795982400,
-        "text": "29 nov 21:00",
-        "format": "d MMM H:mm",
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "29 nov",
+          "date": "dom",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2259,8 +2262,8 @@
   "away": {
     "22956": {
       "id": 22956,
-      "points": 12,
-      "avg": 2
+      "points": 21,
+      "avg": 3
     }
   },
   "owners": [],

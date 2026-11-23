@@ -3,15 +3,15 @@
     "id": 68498,
     "name": "Zaid Romero",
     "position": 2,
-    "points": 33,
-    "avg": 4.7,
+    "points": 36,
+    "avg": 4.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/68498.png?version=20260117124556",
     "isFavorite": 0,
-    "value": 6531000,
-    "previousValue": 6513000,
+    "value": 6659000,
+    "previousValue": 6531000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 6531000,
+      "floor": 6659000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 9796500,
+      "value": 9988500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 6531000,
+      "price": 6659000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 192,
       "weight": null
     },
-    "clausesRanking": 219
+    "clausesRanking": 156
   },
   "id": 68498,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 2
   },
@@ -326,12 +326,12 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -371,8 +371,8 @@
       "id": 4057,
       "number": 16,
       "shortName": "J16",
-      "startDate": "2026-12-13 20:00:00",
-      "endDate": "2026-12-13 20:00:00",
+      "startDate": "2026-12-11 21:00:00",
+      "endDate": "2026-12-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -739,10 +739,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 33,
-      "avg": 4.7143,
+      "points": 36,
+      "avg": 4.5,
       "id_team": 9,
-      "last_gameweek": 8
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -755,21 +755,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 6513000,
-      "change": 18000,
-      "sign": 18
+      "value": 6531000,
+      "change": 128000,
+      "sign": 128
     },
     {
       "time": "Una semana",
-      "value": 7323000,
-      "change": -792000,
-      "sign": -792
+      "value": 7186000,
+      "change": -527000,
+      "sign": -527
     },
     {
       "time": "Un mes",
-      "value": 14688000,
-      "change": -8157000,
-      "sign": "-8.157.000"
+      "value": 14071000,
+      "change": -7412000,
+      "sign": "-7.412.000"
     }
   ],
   "values_chart": {
@@ -1945,6 +1945,10 @@
       {
         "value": 6531000,
         "date": "22 nov 2026"
+      },
+      {
+        "value": 6659000,
+        "date": "23 nov 2026"
       }
     ],
     "max": {
@@ -1960,36 +1964,36 @@
     "68498": {
       "id": 68498,
       "id_team": 9,
-      "id_match": 38050,
-      "id_gameweek": 4054,
-      "id_home": 9,
-      "id_away": 2,
+      "id_match": 38060,
+      "id_gameweek": 4055,
+      "id_home": 8,
+      "id_away": 9,
       "date": {
-        "ts": 1795377600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1796068800,
+        "text": "30 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "30 nov",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Atlético",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "home": "Espanyol",
+      "away": "Getafe",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,
   "home": {
     "68498": {
       "id": 68498,
-      "points": 19,
-      "avg": 6.3333
+      "points": 22,
+      "avg": 5.5
     }
   },
   "away": {

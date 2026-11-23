@@ -15,7 +15,7 @@
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/1034.png?version=20240201121646",
     "isFavorite": 0,
     "value": 329000,
-    "previousValue": 377000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -392,8 +392,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 302503,
+        "id_player": 1034,
+        "category": "injury",
+        "description": "Lesión de rodilla",
+        "duration": "Baja hasta Noviembre",
+        "since": "2026-07-30 18:12:02",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 2,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     },
@@ -433,8 +442,8 @@
       "id": 4057,
       "number": 16,
       "shortName": "J16",
-      "startDate": "2026-12-13 20:00:00",
-      "endDate": "2026-12-13 20:00:00",
+      "startDate": "2026-12-11 21:00:00",
+      "endDate": "2026-12-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -831,35 +840,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 377000,
-      "change": -48000,
-      "sign": -48
-    },
-    {
-      "time": "Una semana",
-      "value": 473000,
-      "change": -144000,
-      "sign": -144
-    },
-    {
-      "time": "Un mes",
-      "value": 405000,
-      "change": -76000,
-      "sign": -76
-    },
-    {
-      "time": "Un año",
       "value": 329000,
       "change": 0,
       "sign": 0
+    },
+    {
+      "time": "Una semana",
+      "value": 375000,
+      "change": -46000,
+      "sign": -46
+    },
+    {
+      "time": "Un mes",
+      "value": 329000,
+      "change": 0,
+      "sign": 0
+    },
+    {
+      "time": "Un año",
+      "value": 517000,
+      "change": -188000,
+      "sign": -188
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 329000,
-        "date": "22 nov 2025"
-      },
       {
         "value": 517000,
         "date": "23 nov 2025"
@@ -2319,6 +2324,10 @@
       {
         "value": 329000,
         "date": "22 nov 2026"
+      },
+      {
+        "value": 329000,
+        "date": "23 nov 2026"
       }
     ],
     "max": {
@@ -2334,28 +2343,28 @@
     "1034": {
       "id": 1034,
       "id_team": 9,
-      "id_match": 38050,
-      "id_gameweek": 4054,
-      "id_home": 9,
-      "id_away": 2,
+      "id_match": 38060,
+      "id_gameweek": 4055,
+      "id_home": 8,
+      "id_away": 9,
       "date": {
-        "ts": 1795377600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1796068800,
+        "text": "30 nov 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "30 nov",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Getafe",
-      "away": "Atlético",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
+      "home": "Espanyol",
+      "away": "Getafe",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/8.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     }
   },
   "starter": false,

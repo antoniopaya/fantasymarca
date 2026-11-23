@@ -3,15 +3,15 @@
     "id": 22604,
     "name": "Iñigo Vicente",
     "position": 3,
-    "points": 52,
-    "avg": 4,
+    "points": 56,
+    "avg": 4.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/22604.png?version=20260619115857",
     "isFavorite": 0,
-    "value": 32765000,
-    "previousValue": 32983000,
+    "value": 32563000,
+    "previousValue": 32765000,
     "videoFrame": null,
     "team": {
       "id": 1490,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 32765000,
+      "floor": 32563000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 49147500,
+      "value": 48844500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 32765000,
+      "price": 32563000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 359
+    "clausesRanking": 253
   },
   "id": 22604,
   "player_extra": {
     "matches": 13,
     "goals": 0,
-    "cards": 3
+    "cards": 4
   },
   "points": [
     {
@@ -297,12 +297,15 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 16,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/16.png?version="
     },
@@ -342,8 +345,8 @@
       "id": 4057,
       "number": 16,
       "shortName": "J16",
-      "startDate": "2026-12-13 20:00:00",
-      "endDate": "2026-12-13 20:00:00",
+      "startDate": "2026-12-11 21:00:00",
+      "endDate": "2026-12-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -710,30 +713,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 52,
-      "avg": 4.3333,
+      "points": 56,
+      "avg": 4.3077,
       "id_team": 1490,
-      "last_gameweek": 12
+      "last_gameweek": 13
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 32983000,
-      "change": -218000,
-      "sign": -218
+      "value": 32765000,
+      "change": -202000,
+      "sign": -202
     },
     {
       "time": "Una semana",
-      "value": 35843000,
-      "change": -3078000,
-      "sign": "-3.078.000"
+      "value": 35408000,
+      "change": -2845000,
+      "sign": "-2.845.000"
     },
     {
       "time": "Un mes",
-      "value": 31924000,
-      "change": 841000,
-      "sign": 841
+      "value": 32205000,
+      "change": 358000,
+      "sign": 358
     }
   ],
   "values_chart": {
@@ -1365,6 +1368,10 @@
       {
         "value": 32765000,
         "date": "22 nov 2026"
+      },
+      {
+        "value": 32563000,
+        "date": "23 nov 2026"
       }
     ],
     "max": {
@@ -1408,8 +1415,8 @@
   "home": {
     "22604": {
       "id": 22604,
-      "points": 41,
-      "avg": 6.8333
+      "points": 45,
+      "avg": 6.4286
     }
   },
   "away": {

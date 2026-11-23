@@ -3,15 +3,19 @@
     "id": 52375,
     "name": "Lamine Yamal",
     "position": 4,
-    "points": 174,
-    "avg": 13.4,
-    "status": null,
+    "points": 173,
+    "avg": 13.3,
+    "status": "doubt",
     "id_competition": 1,
-    "injury": [],
-    "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/52375.png?version=20261010190427",
+    "injury": {
+      "category": "doubt",
+      "description": "Molestias",
+      "duration": "Duda esta jornada"
+    },
+    "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/52375.png?version=20261123174001",
     "isFavorite": 0,
-    "value": 82809000,
-    "previousValue": 82823000,
+    "value": 82869000,
+    "previousValue": 82809000,
     "videoFrame": null,
     "team": {
       "id": 3,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 82809000,
+      "floor": 82869000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 124213500,
+      "value": 124303500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 82809000,
+      "price": 82869000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 183,
       "weight": null
     },
-    "clausesRanking": 26
+    "clausesRanking": 28
   },
   "id": 52375,
   "player_extra": {
@@ -311,7 +315,7 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": 9,
+        "points": 8,
         "isLive": false
       },
       "events": [
@@ -359,8 +363,8 @@
       "id": 4057,
       "number": 16,
       "shortName": "J16",
-      "startDate": "2026-12-13 20:00:00",
-      "endDate": "2026-12-13 20:00:00",
+      "startDate": "2026-12-11 21:00:00",
+      "endDate": "2026-12-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -727,8 +731,8 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 174,
-      "avg": 13.3846,
+      "points": 173,
+      "avg": 13.3077,
       "id_team": 3,
       "last_gameweek": 13
     },
@@ -757,35 +761,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 82823000,
-      "change": -14000,
-      "sign": -14
+      "value": 82809000,
+      "change": 60000,
+      "sign": 60
     },
     {
       "time": "Una semana",
-      "value": 82723000,
-      "change": 86000,
-      "sign": 86
+      "value": 82755000,
+      "change": 114000,
+      "sign": 114
     },
     {
       "time": "Un mes",
-      "value": 81053000,
-      "change": 1756000,
-      "sign": "+1.756.000"
+      "value": 81107000,
+      "change": 1762000,
+      "sign": "+1.762.000"
     },
     {
       "time": "Un año",
-      "value": 79577000,
-      "change": 3232000,
-      "sign": "+3.232.000"
+      "value": 79684000,
+      "change": 3185000,
+      "sign": "+3.185.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 79577000,
-        "date": "22 nov 2025"
-      },
       {
         "value": 79684000,
         "date": "23 nov 2025"
@@ -2245,6 +2245,10 @@
       {
         "value": 82809000,
         "date": "22 nov 2026"
+      },
+      {
+        "value": 82869000,
+        "date": "23 nov 2026"
       }
     ],
     "max": {
@@ -2288,8 +2292,8 @@
   "home": {
     "52375": {
       "id": 52375,
-      "points": 84,
-      "avg": 12
+      "points": 83,
+      "avg": 11.8571
     }
   },
   "away": {

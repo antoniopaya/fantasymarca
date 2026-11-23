@@ -379,8 +379,8 @@
       "id": 4057,
       "number": 16,
       "shortName": "J16",
-      "startDate": "2026-12-13 20:00:00",
-      "endDate": "2026-12-13 20:00:00",
+      "startDate": "2026-12-11 21:00:00",
+      "endDate": "2026-12-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -774,17 +774,13 @@
     },
     {
       "time": "Un año",
-      "value": 341000,
-      "change": -12000,
-      "sign": -12
+      "value": 365000,
+      "change": -36000,
+      "sign": -36
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 341000,
-        "date": "22 nov 2025"
-      },
       {
         "value": 365000,
         "date": "23 nov 2025"
@@ -2244,6 +2240,10 @@
       {
         "value": 329000,
         "date": "22 nov 2026"
+      },
+      {
+        "value": 329000,
+        "date": "23 nov 2026"
       }
     ],
     "max": {
@@ -2265,12 +2265,12 @@
       "id_away": 23,
       "date": {
         "ts": 1795464000,
-        "text": "lun 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "lun",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",

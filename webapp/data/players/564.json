@@ -3,15 +3,15 @@
     "id": 564,
     "name": "Mikel Oyarzabal",
     "position": 4,
-    "points": 54,
-    "avg": 4.5,
+    "points": 61,
+    "avg": 5.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/564.png?version=20251004234014",
     "isFavorite": 0,
     "value": 46451000,
-    "previousValue": 46534000,
+    "previousValue": 46451000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -68,12 +68,12 @@
       "height": 181,
       "weight": 75
     },
-    "clausesRanking": 168
+    "clausesRanking": 149
   },
   "id": 564,
   "player_extra": {
     "matches": 12,
-    "goals": 2,
+    "goals": 3,
     "cards": 2
   },
   "points": [
@@ -298,12 +298,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": 1,
-        "isLive": true
+        "points": 8,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -343,8 +345,8 @@
       "id": 4057,
       "number": 16,
       "shortName": "J16",
-      "startDate": "2026-12-13 20:00:00",
-      "endDate": "2026-12-13 20:00:00",
+      "startDate": "2026-12-11 21:00:00",
+      "endDate": "2026-12-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -711,10 +713,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 53,
-      "avg": 4.8182,
+      "points": 61,
+      "avg": 5.0833,
       "id_team": 16,
-      "last_gameweek": 11
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -741,35 +743,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 46534000,
-      "change": -83000,
-      "sign": -83
+      "value": 46451000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Una semana",
-      "value": 46931000,
-      "change": -480000,
-      "sign": -480
+      "value": 46822000,
+      "change": -371000,
+      "sign": -371
     },
     {
       "time": "Un mes",
-      "value": 45573000,
-      "change": 878000,
-      "sign": 878
+      "value": 45757000,
+      "change": 694000,
+      "sign": 694
     },
     {
       "time": "Un año",
-      "value": 50389000,
-      "change": -3938000,
-      "sign": "-3.938.000"
+      "value": 50728000,
+      "change": -4277000,
+      "sign": "-4.277.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 50389000,
-        "date": "22 nov 2025"
-      },
       {
         "value": 50728000,
         "date": "23 nov 2025"
@@ -2229,6 +2227,10 @@
       {
         "value": 46451000,
         "date": "22 nov 2026"
+      },
+      {
+        "value": 46451000,
+        "date": "23 nov 2026"
       }
     ],
     "max": {
@@ -2250,12 +2252,12 @@
       "id_away": 17,
       "date": {
         "ts": 1795982400,
-        "text": "29 nov 21:00",
-        "format": "d MMM H:mm",
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "29 nov",
+          "date": "dom",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2279,8 +2281,8 @@
   "away": {
     "564": {
       "id": 564,
-      "points": 28,
-      "avg": 4.6667
+      "points": 36,
+      "avg": 5.1429
     }
   },
   "owners": [],

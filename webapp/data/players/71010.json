@@ -3,15 +3,15 @@
     "id": 71010,
     "name": "Ángel Recio",
     "position": 2,
-    "points": 33,
-    "avg": 3.3,
+    "points": 38,
+    "avg": 3.5,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71010.png?version=20260621195317",
     "isFavorite": 0,
-    "value": 3041000,
-    "previousValue": 3290000,
+    "value": 2985000,
+    "previousValue": 3041000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3041000,
+      "floor": 2985000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 4561500,
+      "value": 4477500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3041000,
+      "price": 2985000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 337
+    "clausesRanking": 342
   },
   "id": 71010,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 0,
     "cards": 0
   },
@@ -285,12 +285,12 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -330,8 +330,8 @@
       "id": 4057,
       "number": 16,
       "shortName": "J16",
-      "startDate": "2026-12-13 20:00:00",
-      "endDate": "2026-12-13 20:00:00",
+      "startDate": "2026-12-11 21:00:00",
+      "endDate": "2026-12-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -698,30 +698,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 33,
-      "avg": 3.3,
+      "points": 38,
+      "avg": 3.4545,
       "id_team": 13,
-      "last_gameweek": 10
+      "last_gameweek": 13
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 3290000,
-      "change": -249000,
-      "sign": -249
+      "value": 3041000,
+      "change": -56000,
+      "sign": -56
     },
     {
       "time": "Una semana",
-      "value": 4408000,
-      "change": -1367000,
-      "sign": "-1.367.000"
+      "value": 4274000,
+      "change": -1289000,
+      "sign": "-1.289.000"
     },
     {
       "time": "Un mes",
-      "value": 10284000,
-      "change": -7243000,
-      "sign": "-7.243.000"
+      "value": 10136000,
+      "change": -7151000,
+      "sign": "-7.151.000"
     }
   ],
   "values_chart": {
@@ -1341,6 +1341,10 @@
       {
         "value": 3041000,
         "date": "22 nov 2026"
+      },
+      {
+        "value": 2985000,
+        "date": "23 nov 2026"
       }
     ],
     "max": {
@@ -1356,28 +1360,28 @@
     "71010": {
       "id": 71010,
       "id_team": 13,
-      "id_match": 38052,
-      "id_gameweek": 4054,
-      "id_home": 50,
-      "id_away": 13,
+      "id_match": 38062,
+      "id_gameweek": 4055,
+      "id_home": 13,
+      "id_away": 1,
       "date": {
-        "ts": 1795368600,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795878900,
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "16:15",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Málaga",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "home": "Málaga",
+      "away": "Athletic Club",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
@@ -1391,8 +1395,8 @@
   "away": {
     "71010": {
       "id": 71010,
-      "points": 16,
-      "avg": 3.2
+      "points": 21,
+      "avg": 3.5
     }
   },
   "owners": [],

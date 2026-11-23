@@ -3,15 +3,15 @@
     "id": 15345,
     "name": "Aihen Muñoz",
     "position": 2,
-    "points": 13,
-    "avg": 3.3,
+    "points": 15,
+    "avg": 3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/15345.png?version=20251004232955",
     "isFavorite": 0,
-    "value": 2141000,
-    "previousValue": 1995000,
+    "value": 2149000,
+    "previousValue": 2141000,
     "videoFrame": null,
     "team": {
       "id": 16,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2141000,
+      "floor": 2149000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3211500,
+      "value": 3223500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2141000,
+      "price": 2149000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 175,
       "weight": 72
     },
-    "clausesRanking": 75
+    "clausesRanking": 109
   },
   "id": 15345,
   "player_extra": {
-    "matches": 4,
+    "matches": 5,
     "goals": 0,
     "cards": 0
   },
@@ -284,12 +284,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": "?",
-        "isLive": true
+        "points": 2,
+        "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 1490,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     },
@@ -329,8 +331,8 @@
       "id": 4057,
       "number": 16,
       "shortName": "J16",
-      "startDate": "2026-12-13 20:00:00",
-      "endDate": "2026-12-13 20:00:00",
+      "startDate": "2026-12-11 21:00:00",
+      "endDate": "2026-12-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -697,10 +699,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 13,
-      "avg": 3.25,
+      "points": 15,
+      "avg": 3,
       "id_team": 16,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -727,35 +729,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1995000,
-      "change": 146000,
-      "sign": 146
+      "value": 2141000,
+      "change": 8000,
+      "sign": 8
     },
     {
       "time": "Una semana",
-      "value": 1118000,
-      "change": 1023000,
-      "sign": "+1.023.000"
+      "value": 1243000,
+      "change": 906000,
+      "sign": 906
     },
     {
       "time": "Un mes",
-      "value": 449000,
-      "change": 1692000,
-      "sign": "+1.692.000"
+      "value": 515000,
+      "change": 1634000,
+      "sign": "+1.634.000"
     },
     {
       "time": "Un año",
-      "value": 580000,
-      "change": 1561000,
-      "sign": "+1.561.000"
+      "value": 603000,
+      "change": 1546000,
+      "sign": "+1.546.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 580000,
-        "date": "22 nov 2025"
-      },
       {
         "value": 603000,
         "date": "23 nov 2025"
@@ -2215,11 +2213,15 @@
       {
         "value": 2141000,
         "date": "22 nov 2026"
+      },
+      {
+        "value": 2149000,
+        "date": "23 nov 2026"
       }
     ],
     "max": {
-      "value": 2141000,
-      "date": "22 nov 2026"
+      "value": 2149000,
+      "date": "23 nov 2026"
     },
     "min": {
       "value": 329000,
@@ -2236,12 +2238,12 @@
       "id_away": 17,
       "date": {
         "ts": 1795982400,
-        "text": "29 nov 21:00",
-        "format": "d MMM H:mm",
+        "text": "dom 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "29 nov",
+          "date": "dom",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
@@ -2265,7 +2267,7 @@
   "away": {
     "15345": {
       "id": 15345,
-      "points": 6,
+      "points": 8,
       "avg": 2
     }
   },

@@ -3,15 +3,15 @@
     "id": 56578,
     "name": "Johnny Cardoso",
     "position": 3,
-    "points": 26,
-    "avg": 3.7,
+    "points": 33,
+    "avg": 4.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/56578.png?version=20250818184253",
     "isFavorite": 0,
-    "value": 4699000,
-    "previousValue": 4720000,
+    "value": 4844000,
+    "previousValue": 4699000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 4699000,
+      "floor": 4844000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7048500,
+      "value": 7266000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 4699000,
+      "price": 4844000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 186,
       "weight": null
     },
-    "clausesRanking": 307
+    "clausesRanking": 71
   },
   "id": 56578,
   "player_extra": {
-    "matches": 7,
-    "goals": 0,
-    "cards": 2
+    "matches": 8,
+    "goals": 1,
+    "cards": 3
   },
   "points": [
     {
@@ -326,12 +326,16 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow",
+        "sub_out",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 9,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version="
     },
@@ -371,8 +375,8 @@
       "id": 4057,
       "number": 16,
       "shortName": "J16",
-      "startDate": "2026-12-13 20:00:00",
-      "endDate": "2026-12-13 20:00:00",
+      "startDate": "2026-12-11 21:00:00",
+      "endDate": "2026-12-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -739,10 +743,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 26,
-      "avg": 3.7143,
+      "points": 33,
+      "avg": 4.125,
       "id_team": 2,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -769,35 +773,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 4720000,
-      "change": -21000,
-      "sign": -21
+      "value": 4699000,
+      "change": 145000,
+      "sign": 145
     },
     {
       "time": "Una semana",
-      "value": 4988000,
-      "change": -289000,
-      "sign": -289
+      "value": 4985000,
+      "change": -141000,
+      "sign": -141
     },
     {
       "time": "Un mes",
-      "value": 8286000,
-      "change": -3587000,
-      "sign": "-3.587.000"
+      "value": 8500000,
+      "change": -3656000,
+      "sign": "-3.656.000"
     },
     {
       "time": "Un año",
-      "value": 9664000,
-      "change": -4965000,
-      "sign": "-4.965.000"
+      "value": 9467000,
+      "change": -4623000,
+      "sign": "-4.623.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 9664000,
-        "date": "22 nov 2025"
-      },
       {
         "value": 9467000,
         "date": "23 nov 2025"
@@ -2257,6 +2257,10 @@
       {
         "value": 4699000,
         "date": "22 nov 2026"
+      },
+      {
+        "value": 4844000,
+        "date": "23 nov 2026"
       }
     ],
     "max": {
@@ -2272,27 +2276,27 @@
     "56578": {
       "id": 56578,
       "id_team": 2,
-      "id_match": 38050,
-      "id_gameweek": 4054,
-      "id_home": 9,
+      "id_match": 38059,
+      "id_gameweek": 4055,
+      "id_home": 23,
       "id_away": 2,
       "date": {
-        "ts": 1795377600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795887000,
+        "text": "sáb 18:30",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "18:30",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Getafe",
+      "home": "Elche",
       "away": "Atlético",
       "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/9.png?version=",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version=",
       "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version="
     }
   },
@@ -2307,8 +2311,8 @@
   "away": {
     "56578": {
       "id": 56578,
-      "points": 9,
-      "avg": 2.25
+      "points": 16,
+      "avg": 3.2
     }
   },
   "owners": [],

@@ -3,15 +3,15 @@
     "id": 71002,
     "name": "Ramón Enríquez",
     "position": 3,
-    "points": 26,
-    "avg": 2.4,
+    "points": 28,
+    "avg": 2.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/71002.png?version=20260621200230",
     "isFavorite": 0,
-    "value": 3466000,
-    "previousValue": 3384000,
+    "value": 3559000,
+    "previousValue": 3466000,
     "videoFrame": null,
     "team": {
       "id": 13,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 3466000,
+      "floor": 3559000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 5199000,
+      "value": 5338500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 3466000,
+      "price": 3559000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 173,
       "weight": null
     },
-    "clausesRanking": 116
+    "clausesRanking": 132
   },
   "id": 71002,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 0,
     "cards": 3
   },
@@ -302,12 +302,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 50,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version="
     },
@@ -347,8 +349,8 @@
       "id": 4057,
       "number": 16,
       "shortName": "J16",
-      "startDate": "2026-12-13 20:00:00",
-      "endDate": "2026-12-13 20:00:00",
+      "startDate": "2026-12-11 21:00:00",
+      "endDate": "2026-12-14 21:00:00",
       "points": {
         "points": null,
         "isLive": false
@@ -715,30 +717,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 26,
-      "avg": 2.3636,
+      "points": 28,
+      "avg": 2.3333,
       "id_team": 13,
-      "last_gameweek": 12
+      "last_gameweek": 13
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 3384000,
-      "change": 82000,
-      "sign": 82
+      "value": 3466000,
+      "change": 93000,
+      "sign": 93
     },
     {
       "time": "Una semana",
-      "value": 2971000,
-      "change": 495000,
-      "sign": 495
+      "value": 3021000,
+      "change": 538000,
+      "sign": 538
     },
     {
       "time": "Un mes",
-      "value": 388000,
-      "change": 3078000,
-      "sign": "+3.078.000"
+      "value": 362000,
+      "change": 3197000,
+      "sign": "+3.197.000"
     }
   ],
   "values_chart": {
@@ -1358,11 +1360,15 @@
       {
         "value": 3466000,
         "date": "22 nov 2026"
+      },
+      {
+        "value": 3559000,
+        "date": "23 nov 2026"
       }
     ],
     "max": {
-      "value": 3466000,
-      "date": "22 nov 2026"
+      "value": 3559000,
+      "date": "23 nov 2026"
     },
     "min": {
       "value": 329000,
@@ -1373,28 +1379,28 @@
     "71002": {
       "id": 71002,
       "id_team": 13,
-      "id_match": 38052,
-      "id_gameweek": 4054,
-      "id_home": 50,
-      "id_away": 13,
+      "id_match": 38062,
+      "id_gameweek": 4055,
+      "id_home": 13,
+      "id_away": 1,
       "date": {
-        "ts": 1795368600,
-        "text": "Hoy 18:30",
-        "format": "'Hoy' H:mm",
+        "ts": 1795878900,
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "18:30",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "16:15",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Osasuna",
-      "away": "Málaga",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/50.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
+      "home": "Málaga",
+      "away": "Athletic Club",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
     }
   },
   "starter": false,
@@ -1408,8 +1414,8 @@
   "away": {
     "71002": {
       "id": 71002,
-      "points": 16,
-      "avg": 2.6667
+      "points": 18,
+      "avg": 2.5714
     }
   },
   "owners": [],
