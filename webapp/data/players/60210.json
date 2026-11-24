@@ -5,13 +5,17 @@
     "position": 2,
     "points": 15,
     "avg": 2.1,
-    "status": null,
+    "status": "double",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "double",
+      "description": "Doble tarjeta",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/60210.png?version=20240929093251",
     "isFavorite": 0,
-    "value": 1316000,
-    "previousValue": 1395000,
+    "value": 1075000,
+    "previousValue": 1316000,
     "videoFrame": null,
     "team": {
       "id": 20,
@@ -34,20 +38,20 @@
       "price": null
     },
     "clause": {
-      "floor": 1316000,
+      "floor": 1075000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1974000,
+      "value": 1612500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 1316000,
+      "price": 1075000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +72,7 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 291
+    "clausesRanking": 286
   },
   "id": 60210,
   "player_extra": {
@@ -724,35 +728,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1395000,
-      "change": -79000,
-      "sign": -79
+      "value": 1316000,
+      "change": -241000,
+      "sign": -241
     },
     {
       "time": "Una semana",
-      "value": 2262000,
-      "change": -946000,
-      "sign": -946
+      "value": 2111000,
+      "change": -1036000,
+      "sign": "-1.036.000"
     },
     {
       "time": "Un mes",
-      "value": 3987000,
-      "change": -2671000,
-      "sign": "-2.671.000"
+      "value": 3723000,
+      "change": -2648000,
+      "sign": "-2.648.000"
     },
     {
       "time": "Un año",
-      "value": 1823000,
-      "change": -507000,
-      "sign": -507
+      "value": 2000000,
+      "change": -925000,
+      "sign": -925
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 1823000,
-        "date": "23 nov 2025"
-      },
       {
         "value": 2000000,
         "date": "24 nov 2025"
@@ -2212,6 +2212,10 @@
       {
         "value": 1316000,
         "date": "23 nov 2026"
+      },
+      {
+        "value": 1075000,
+        "date": "24 nov 2026"
       }
     ],
     "max": {

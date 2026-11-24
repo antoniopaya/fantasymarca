@@ -3,15 +3,15 @@
     "id": 52117,
     "name": "Jon Ander Olasagasti",
     "position": 3,
-    "points": 53,
-    "avg": 4.4,
+    "points": 60,
+    "avg": 4.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/52117.png?version=20251004223453",
     "isFavorite": 0,
-    "value": 16819000,
-    "previousValue": 16376000,
+    "value": 17377000,
+    "previousValue": 16819000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 16819000,
+      "floor": 17377000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 25228500,
+      "value": 26065500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 16819000,
+      "price": 17377000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 176,
       "weight": null
     },
-    "clausesRanking": 170
+    "clausesRanking": 121
   },
   "id": 52117,
   "player_extra": {
-    "matches": 12,
+    "matches": 13,
     "goals": 1,
     "cards": 0
   },
@@ -287,12 +287,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 7,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -700,10 +702,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 53,
-      "avg": 4.4167,
+      "points": 60,
+      "avg": 4.6154,
       "id_team": 12,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -730,35 +732,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 16376000,
-      "change": 443000,
-      "sign": 443
+      "value": 16819000,
+      "change": 558000,
+      "sign": 558
     },
     {
       "time": "Una semana",
-      "value": 13952000,
-      "change": 2867000,
-      "sign": "+2.867.000"
+      "value": 14422000,
+      "change": 2955000,
+      "sign": "+2.955.000"
     },
     {
       "time": "Un mes",
-      "value": 12559000,
-      "change": 4260000,
-      "sign": "+4.260.000"
+      "value": 12129000,
+      "change": 5248000,
+      "sign": "+5.248.000"
     },
     {
       "time": "Un año",
-      "value": 1863000,
-      "change": 14956000,
-      "sign": "+14.956.000"
+      "value": 1687000,
+      "change": 15690000,
+      "sign": "+15.690.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 1863000,
-        "date": "23 nov 2025"
-      },
       {
         "value": 1687000,
         "date": "24 nov 2025"
@@ -2218,6 +2216,10 @@
       {
         "value": 16819000,
         "date": "23 nov 2026"
+      },
+      {
+        "value": 17377000,
+        "date": "24 nov 2026"
       }
     ],
     "max": {
@@ -2233,36 +2235,36 @@
     "52117": {
       "id": 52117,
       "id_team": 12,
-      "id_match": 38051,
-      "id_gameweek": 4054,
+      "id_match": 38061,
+      "id_gameweek": 4055,
       "id_home": 12,
-      "id_away": 23,
+      "id_away": 1490,
       "date": {
-        "ts": 1795464000,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795809600,
+        "text": "vie 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "vie",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 1,
+      "confirmed": 0,
       "minute": null,
       "home": "Levante",
-      "away": "Elche",
+      "away": "Racing de Santander",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,
   "home": {
     "52117": {
       "id": 52117,
-      "points": 24,
-      "avg": 4.8
+      "points": 31,
+      "avg": 5.1667
     }
   },
   "away": {

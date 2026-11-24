@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/17568.png?version=20250218133011",
     "isFavorite": 0,
-    "value": 2132000,
-    "previousValue": 1870000,
+    "value": 2275000,
+    "previousValue": 2132000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 2132000,
+      "floor": 2275000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 3198000,
+      "value": 3412500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 2132000,
+      "price": 2275000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 176,
       "weight": null
     },
-    "clausesRanking": 59
+    "clausesRanking": 50
   },
   "id": 17568,
   "player_extra": {
@@ -724,35 +724,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 1870000,
-      "change": 262000,
-      "sign": 262
+      "value": 2132000,
+      "change": 143000,
+      "sign": 143
     },
     {
       "time": "Una semana",
-      "value": 1060000,
-      "change": 1072000,
-      "sign": "+1.072.000"
+      "value": 1171000,
+      "change": 1104000,
+      "sign": "+1.104.000"
     },
     {
       "time": "Un mes",
-      "value": 1336000,
-      "change": 796000,
-      "sign": 796
+      "value": 1334000,
+      "change": 941000,
+      "sign": 941
     },
     {
       "time": "Un año",
-      "value": 10400000,
-      "change": -8268000,
-      "sign": "-8.268.000"
+      "value": 10566000,
+      "change": -8291000,
+      "sign": "-8.291.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 10400000,
-        "date": "23 nov 2025"
-      },
       {
         "value": 10566000,
         "date": "24 nov 2025"
@@ -2212,6 +2208,10 @@
       {
         "value": 2132000,
         "date": "23 nov 2026"
+      },
+      {
+        "value": 2275000,
+        "date": "24 nov 2026"
       }
     ],
     "max": {
@@ -2233,16 +2233,16 @@
       "id_away": 9,
       "date": {
         "ts": 1796068800,
-        "text": "30 nov 21:00",
-        "format": "d MMM H:mm",
+        "text": "lun 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "30 nov",
+          "date": "lun",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Espanyol",
       "away": "Getafe",

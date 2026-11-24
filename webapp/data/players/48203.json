@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/48203.png?version=20250204152625",
     "isFavorite": 0,
-    "value": 16390000,
-    "previousValue": 16803000,
+    "value": 16204000,
+    "previousValue": 16390000,
     "videoFrame": null,
     "team": {
       "id": 9,
@@ -34,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 16390000,
+      "floor": 16204000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 24585000,
+      "value": 24306000,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 16390000,
-      "loanable": null
+      "id": 1995134495,
+      "isPublic": 1,
+      "price": 16204000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 16204000,
       "barter": [],
       "type": null,
       "days": null
@@ -68,7 +68,7 @@
       "height": 179,
       "weight": null
     },
-    "clausesRanking": 301
+    "clausesRanking": 284
   },
   "id": 48203,
   "player_extra": {
@@ -749,35 +749,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 16803000,
-      "change": -413000,
-      "sign": -413
+      "value": 16390000,
+      "change": -186000,
+      "sign": -186
     },
     {
       "time": "Una semana",
-      "value": 18667000,
-      "change": -2277000,
-      "sign": "-2.277.000"
+      "value": 18566000,
+      "change": -2362000,
+      "sign": "-2.362.000"
     },
     {
       "time": "Un mes",
-      "value": 26387000,
-      "change": -9997000,
-      "sign": "-9.997.000"
+      "value": 26087000,
+      "change": -9883000,
+      "sign": "-9.883.000"
     },
     {
       "time": "Un año",
-      "value": 329000,
-      "change": 16061000,
-      "sign": "+16.061.000"
+      "value": 429000,
+      "change": 15775000,
+      "sign": "+15.775.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 329000,
-        "date": "23 nov 2025"
-      },
       {
         "value": 429000,
         "date": "24 nov 2025"
@@ -2237,6 +2233,10 @@
       {
         "value": 16390000,
         "date": "23 nov 2026"
+      },
+      {
+        "value": 16204000,
+        "date": "24 nov 2026"
       }
     ],
     "max": {
@@ -2258,16 +2258,16 @@
       "id_away": 9,
       "date": {
         "ts": 1796068800,
-        "text": "30 nov 21:00",
-        "format": "d MMM H:mm",
+        "text": "lun 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "30 nov",
+          "date": "lun",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Espanyol",
       "away": "Getafe",

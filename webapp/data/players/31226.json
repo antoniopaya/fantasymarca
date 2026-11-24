@@ -5,17 +5,13 @@
     "position": 4,
     "points": 36,
     "avg": 3,
-    "status": "other",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "other",
-      "description": "Motivos personales",
-      "duration": "Baja esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/31226.png?version=20240702124019",
     "isFavorite": 0,
-    "value": 13693000,
-    "previousValue": 14068000,
+    "value": 13228000,
+    "previousValue": 13693000,
     "videoFrame": null,
     "team": {
       "id": 19,
@@ -38,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 13693000,
+      "floor": 13228000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 20539500,
+      "value": 19842000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 13693000,
+      "price": 13228000,
       "loanable": null
     },
     "bid": {
@@ -72,7 +68,7 @@
       "height": 178,
       "weight": null
     },
-    "clausesRanking": 271
+    "clausesRanking": 274
   },
   "id": 31226,
   "player_extra": {
@@ -736,35 +732,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 14068000,
-      "change": -375000,
-      "sign": -375
+      "value": 13693000,
+      "change": -465000,
+      "sign": -465
     },
     {
       "time": "Una semana",
-      "value": 15477000,
-      "change": -1784000,
-      "sign": "-1.784.000"
+      "value": 15620000,
+      "change": -2392000,
+      "sign": "-2.392.000"
     },
     {
       "time": "Un mes",
-      "value": 12351000,
-      "change": 1342000,
-      "sign": "+1.342.000"
+      "value": 12578000,
+      "change": 650000,
+      "sign": 650
     },
     {
       "time": "Un año",
-      "value": 26051000,
-      "change": -12358000,
-      "sign": "-12.358.000"
+      "value": 25650000,
+      "change": -12422000,
+      "sign": "-12.422.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 26051000,
-        "date": "23 nov 2025"
-      },
       {
         "value": 25650000,
         "date": "24 nov 2025"
@@ -2224,11 +2216,15 @@
       {
         "value": 13693000,
         "date": "23 nov 2026"
+      },
+      {
+        "value": 13228000,
+        "date": "24 nov 2026"
       }
     ],
     "max": {
-      "value": 26051000,
-      "date": "23 nov 2025"
+      "value": 25650000,
+      "date": "24 nov 2025"
     },
     "min": {
       "value": 329000,
@@ -2254,7 +2250,7 @@
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Valencia",
       "away": "Osasuna",

@@ -3,15 +3,15 @@
     "id": 56924,
     "name": "Etta Eyong",
     "position": 4,
-    "points": 19,
-    "avg": 2.7,
+    "points": 21,
+    "avg": 2.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/56924.png?version=20251031185323",
     "isFavorite": 0,
-    "value": 5316000,
-    "previousValue": 5295000,
+    "value": 5328000,
+    "previousValue": 5316000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 5316000,
+      "floor": 5328000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 2,
       "shield2WeeksSku": "shield_t2_2w",
       "shield1MonthSku": "shield_t2_1m",
-      "value": 7974000,
+      "value": 7992000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 5316000,
+      "price": 5328000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 181,
       "weight": null
     },
-    "clausesRanking": 90
+    "clausesRanking": 104
   },
   "id": 56924,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 1,
     "cards": 1
   },
@@ -320,12 +320,14 @@
       "startDate": "2026-11-20 21:00:00",
       "endDate": "2026-11-23 21:00:00",
       "points": {
-        "points": null,
+        "points": 2,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 23,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
     },
@@ -733,10 +735,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 19,
-      "avg": 2.7143,
+      "points": 21,
+      "avg": 2.625,
       "id_team": 12,
-      "last_gameweek": 12
+      "last_gameweek": 13
     },
     {
       "season": "25/26",
@@ -770,35 +772,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 5295000,
-      "change": 21000,
-      "sign": 21
+      "value": 5316000,
+      "change": 12000,
+      "sign": 12
     },
     {
       "time": "Una semana",
-      "value": 5059000,
-      "change": 257000,
-      "sign": 257
+      "value": 5142000,
+      "change": 186000,
+      "sign": 186
     },
     {
       "time": "Un mes",
-      "value": 2092000,
-      "change": 3224000,
-      "sign": "+3.224.000"
+      "value": 2242000,
+      "change": 3086000,
+      "sign": "+3.086.000"
     },
     {
       "time": "Un año",
-      "value": 51523000,
-      "change": -46207000,
-      "sign": "-46.207.000"
+      "value": 51332000,
+      "change": -46004000,
+      "sign": "-46.004.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 51523000,
-        "date": "23 nov 2025"
-      },
       {
         "value": 51332000,
         "date": "24 nov 2025"
@@ -2258,11 +2256,15 @@
       {
         "value": 5316000,
         "date": "23 nov 2026"
+      },
+      {
+        "value": 5328000,
+        "date": "24 nov 2026"
       }
     ],
     "max": {
-      "value": 51523000,
-      "date": "23 nov 2025"
+      "value": 51332000,
+      "date": "24 nov 2025"
     },
     "min": {
       "value": 1578000,
@@ -2273,36 +2275,36 @@
     "56924": {
       "id": 56924,
       "id_team": 12,
-      "id_match": 38051,
-      "id_gameweek": 4054,
+      "id_match": 38061,
+      "id_gameweek": 4055,
       "id_home": 12,
-      "id_away": 23,
+      "id_away": 1490,
       "date": {
-        "ts": 1795464000,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1795809600,
+        "text": "vie 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "vie",
           "time": "21:00",
-          "format": "'Hoy'"
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
       "home": "Levante",
-      "away": "Elche",
+      "away": "Racing de Santander",
       "place": "En casa",
       "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/23.png?version="
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
     }
   },
   "starter": false,
   "home": {
     "56924": {
       "id": 56924,
-      "points": 12,
-      "avg": 4
+      "points": 14,
+      "avg": 3.5
     }
   },
   "away": {

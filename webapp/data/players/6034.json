@@ -5,17 +5,17 @@
     "position": 3,
     "points": 64,
     "avg": 5.3,
-    "status": "injury",
+    "status": "doubt",
     "id_competition": 1,
     "injury": {
-      "category": "injury",
+      "category": "doubt",
       "description": "Molestias",
-      "duration": "Baja esta jornada"
+      "duration": "Duda esta jornada"
     },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/6034.png?version=20240626191824",
     "isFavorite": 0,
-    "value": 45263000,
-    "previousValue": 44941000,
+    "value": 45609000,
+    "previousValue": 45263000,
     "videoFrame": null,
     "team": {
       "id": 8,
@@ -38,26 +38,26 @@
       "price": null
     },
     "clause": {
-      "floor": 45263000,
+      "floor": 45609000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 67894500,
+      "value": 68413500,
       "percentage": 50
     },
     "market": {
-      "id": 1992003432,
-      "isPublic": 1,
-      "price": 45263000,
-      "loanable": 0
+      "id": null,
+      "isPublic": null,
+      "price": 45609000,
+      "loanable": null
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": 45263000,
+      "input": null,
       "barter": [],
       "type": null,
       "days": null
@@ -72,7 +72,7 @@
       "height": 175,
       "weight": null
     },
-    "clausesRanking": 3
+    "clausesRanking": 12
   },
   "id": 6034,
   "player_extra": {
@@ -311,7 +311,7 @@
         "id_player": 6034,
         "category": "injury",
         "description": "Molestias",
-        "duration": "Baja esta jornada",
+        "duration": "Duda esta jornada",
         "since": "2026-11-20 13:56:48",
         "until": null,
         "status": "Lesionado"
@@ -747,35 +747,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 44941000,
-      "change": 322000,
-      "sign": 322
+      "value": 45263000,
+      "change": 346000,
+      "sign": 346
     },
     {
       "time": "Una semana",
-      "value": 42737000,
-      "change": 2526000,
-      "sign": "+2.526.000"
+      "value": 43145000,
+      "change": 2464000,
+      "sign": "+2.464.000"
     },
     {
       "time": "Un mes",
-      "value": 29447000,
-      "change": 15816000,
-      "sign": "+15.816.000"
+      "value": 29683000,
+      "change": 15926000,
+      "sign": "+15.926.000"
     },
     {
       "time": "Un año",
-      "value": 36711000,
-      "change": 8552000,
-      "sign": "+8.552.000"
+      "value": 36378000,
+      "change": 9231000,
+      "sign": "+9.231.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 36711000,
-        "date": "23 nov 2025"
-      },
       {
         "value": 36378000,
         "date": "24 nov 2025"
@@ -2235,11 +2231,15 @@
       {
         "value": 45263000,
         "date": "23 nov 2026"
+      },
+      {
+        "value": 45609000,
+        "date": "24 nov 2026"
       }
     ],
     "max": {
-      "value": 45263000,
-      "date": "23 nov 2026"
+      "value": 45609000,
+      "date": "24 nov 2026"
     },
     "min": {
       "value": 21456000,
@@ -2256,16 +2256,16 @@
       "id_away": 9,
       "date": {
         "ts": 1796068800,
-        "text": "30 nov 21:00",
-        "format": "d MMM H:mm",
+        "text": "lun 21:00",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "30 nov",
+          "date": "lun",
           "time": "21:00",
-          "format": "d MMM"
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Espanyol",
       "away": "Getafe",
