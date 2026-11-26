@@ -5,17 +5,13 @@
     "position": 2,
     "points": 50,
     "avg": 5,
-    "status": "doubt",
+    "status": null,
     "id_competition": 1,
-    "injury": {
-      "category": "doubt",
-      "description": "Molestias",
-      "duration": "Duda esta jornada"
-    },
+    "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/35434.png?version=20250722235600",
     "isFavorite": 0,
-    "value": 48548000,
-    "previousValue": 49082000,
+    "value": 48057000,
+    "previousValue": 48548000,
     "videoFrame": null,
     "team": {
       "id": 2,
@@ -38,26 +34,26 @@
       "price": null
     },
     "clause": {
-      "floor": 48548000,
+      "floor": 48057000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 72822000,
+      "value": 72085500,
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 48548000,
-      "loanable": null
+      "id": 2001392599,
+      "isPublic": 1,
+      "price": 48057000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 48057000,
       "barter": [],
       "type": null,
       "days": null
@@ -72,7 +68,7 @@
       "height": 190,
       "weight": null
     },
-    "clausesRanking": 376
+    "clausesRanking": 368
   },
   "id": 35434,
   "player_extra": {
@@ -305,7 +301,7 @@
         "description": "Molestias",
         "duration": "Duda esta jornada",
         "since": "2026-11-15 21:20:45",
-        "until": null,
+        "until": "2026-11-26 18:12:12",
         "status": "Lesionado"
       },
       "teamPlayed": true,
@@ -739,35 +735,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 49082000,
-      "change": -534000,
-      "sign": -534
+      "value": 48548000,
+      "change": -491000,
+      "sign": -491
     },
     {
       "time": "Una semana",
-      "value": 52259000,
-      "change": -3711000,
-      "sign": "-3.711.000"
+      "value": 51675000,
+      "change": -3618000,
+      "sign": "-3.618.000"
     },
     {
       "time": "Un mes",
-      "value": 50187000,
-      "change": -1639000,
-      "sign": "-1.639.000"
+      "value": 50466000,
+      "change": -2409000,
+      "sign": "-2.409.000"
     },
     {
       "time": "Un año",
-      "value": 329000,
-      "change": 48219000,
-      "sign": "+48.219.000"
+      "value": 457000,
+      "change": 47600000,
+      "sign": "+47.600.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 329000,
-        "date": "25 nov 2025"
-      },
       {
         "value": 457000,
         "date": "26 nov 2025"
@@ -2227,6 +2219,10 @@
       {
         "value": 48548000,
         "date": "25 nov 2026"
+      },
+      {
+        "value": 48057000,
+        "date": "26 nov 2026"
       }
     ],
     "max": {
@@ -2234,8 +2230,8 @@
       "date": "11 nov 2026"
     },
     "min": {
-      "value": 329000,
-      "date": "25 nov 2025"
+      "value": 457000,
+      "date": "26 nov 2025"
     }
   },
   "next_match": {
@@ -2257,7 +2253,7 @@
         }
       },
       "status": "fixture",
-      "confirmed": null,
+      "confirmed": 0,
       "minute": null,
       "home": "Elche",
       "away": "Atlético",

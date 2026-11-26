@@ -5,13 +5,17 @@
     "position": 3,
     "points": 15,
     "avg": 2.5,
-    "status": null,
+    "status": "injury",
     "id_competition": 1,
-    "injury": [],
+    "injury": {
+      "category": "injury",
+      "description": "Molestias",
+      "duration": "Baja esta jornada"
+    },
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/53144.png?version=20251006024142",
     "isFavorite": 0,
-    "value": 381000,
-    "previousValue": 329000,
+    "value": 329000,
+    "previousValue": 381000,
     "videoFrame": null,
     "team": {
       "id": 48,
@@ -45,15 +49,15 @@
       "percentage": 50
     },
     "market": {
-      "id": null,
-      "isPublic": null,
-      "price": 381000,
-      "loanable": null
+      "id": 2001392605,
+      "isPublic": 1,
+      "price": 329000,
+      "loanable": 0
     },
     "bid": {
       "isActive": 0,
       "amount": null,
-      "input": null,
+      "input": 329000,
       "barter": [],
       "type": null,
       "days": null
@@ -732,35 +736,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 329000,
-      "change": 52000,
-      "sign": 52
+      "value": 381000,
+      "change": -52000,
+      "sign": -52
     },
     {
       "time": "Una semana",
-      "value": 332000,
-      "change": 49000,
-      "sign": 49
+      "value": 329000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Un mes",
-      "value": 329000,
-      "change": 52000,
-      "sign": 52
+      "value": 477000,
+      "change": -148000,
+      "sign": -148
     },
     {
       "time": "Un año",
-      "value": 457000,
-      "change": -76000,
-      "sign": -76
+      "value": 384000,
+      "change": -55000,
+      "sign": -55
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 457000,
-        "date": "25 nov 2025"
-      },
       {
         "value": 384000,
         "date": "26 nov 2025"
@@ -2220,6 +2220,10 @@
       {
         "value": 381000,
         "date": "25 nov 2026"
+      },
+      {
+        "value": 329000,
+        "date": "26 nov 2026"
       }
     ],
     "max": {
