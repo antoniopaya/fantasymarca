@@ -3,8 +3,8 @@
     "id": 71616,
     "name": "Yassir Zabiri",
     "position": 4,
-    "points": 90,
-    "avg": 6.9,
+    "points": 99,
+    "avg": 7.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
@@ -72,8 +72,8 @@
   },
   "id": 71616,
   "player_extra": {
-    "matches": 13,
-    "goals": 11,
+    "matches": 14,
+    "goals": 12,
     "cards": 4
   },
   "points": [
@@ -330,12 +330,15 @@
       "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
-        "points": null,
+        "points": 9,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "goal"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -727,10 +730,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 90,
-      "avg": 6.9231,
+      "points": 99,
+      "avg": 7.0714,
       "id_team": 1490,
-      "last_gameweek": 13
+      "last_gameweek": 14
     }
   ],
   "values": [
@@ -1249,28 +1252,28 @@
     "71616": {
       "id": 71616,
       "id_team": 1490,
-      "id_match": 38061,
-      "id_gameweek": 4055,
-      "id_home": 12,
-      "id_away": 1490,
+      "id_match": 39700,
+      "id_gameweek": 4056,
+      "id_home": 1490,
+      "id_away": 6,
       "date": {
-        "ts": 1795809600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1796475600,
+        "text": "5 dic 14:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "5 dic",
+          "time": "14:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Racing de Santander",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Racing de Santander",
+      "away": "Deportivo da Coruña",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,
@@ -1284,8 +1287,8 @@
   "away": {
     "71616": {
       "id": 71616,
-      "points": 22,
-      "avg": 3.6667
+      "points": 31,
+      "avg": 4.4286
     }
   },
   "owners": [],

@@ -3,8 +3,8 @@
     "id": 4886,
     "name": "Asier Villalibre",
     "position": 4,
-    "points": 11,
-    "avg": 1.4,
+    "points": 14,
+    "avg": 1.6,
     "status": null,
     "id_competition": 1,
     "injury": [],
@@ -72,7 +72,7 @@
   },
   "id": 4886,
   "player_extra": {
-    "matches": 8,
+    "matches": 9,
     "goals": 0,
     "cards": 0
   },
@@ -310,12 +310,14 @@
       "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
-        "points": null,
+        "points": 3,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 12,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     },
@@ -707,10 +709,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 11,
-      "avg": 1.375,
+      "points": 14,
+      "avg": 1.5556,
       "id_team": 1490,
-      "last_gameweek": 9
+      "last_gameweek": 14
     },
     {
       "season": "24/25",
@@ -1411,28 +1413,28 @@
     "4886": {
       "id": 4886,
       "id_team": 1490,
-      "id_match": 38061,
-      "id_gameweek": 4055,
-      "id_home": 12,
-      "id_away": 1490,
+      "id_match": 39700,
+      "id_gameweek": 4056,
+      "id_home": 1490,
+      "id_away": 6,
       "date": {
-        "ts": 1795809600,
-        "text": "Hoy 21:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1796475600,
+        "text": "5 dic 14:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "21:00",
-          "format": "'Hoy'"
+          "date": "5 dic",
+          "time": "14:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Levante",
-      "away": "Racing de Santander",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version="
+      "home": "Racing de Santander",
+      "away": "Deportivo da Coruña",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1490.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/6.png?version="
     }
   },
   "starter": false,
@@ -1446,8 +1448,8 @@
   "away": {
     "4886": {
       "id": 4886,
-      "points": 7,
-      "avg": 1.75
+      "points": 10,
+      "avg": 2
     }
   },
   "owners": [],
