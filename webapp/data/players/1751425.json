@@ -10,8 +10,8 @@
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/1751425.png?version=20260816205258",
     "isFavorite": 0,
-    "value": 641000,
-    "previousValue": 512000,
+    "value": 823000,
+    "previousValue": 641000,
     "videoFrame": null,
     "team": {
       "id": 12,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 666666.6666666666,
+      "floor": 823000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 1,
       "shield2WeeksSku": "shield_t1_2w",
       "shield1MonthSku": "shield_t1_1m",
-      "value": 1000000,
+      "value": 1234500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 641000,
+      "price": 823000,
       "loanable": null
     },
     "bid": {
@@ -68,7 +68,7 @@
       "height": 170,
       "weight": null
     },
-    "clausesRanking": 79
+    "clausesRanking": 71
   },
   "id": 1751425,
   "player_extra": {
@@ -715,21 +715,21 @@
   "values": [
     {
       "time": "Un día",
-      "value": 512000,
-      "change": 129000,
-      "sign": 129
+      "value": 641000,
+      "change": 182000,
+      "sign": 182
     },
     {
       "time": "Una semana",
-      "value": 442000,
-      "change": 199000,
-      "sign": 199
+      "value": 470000,
+      "change": 353000,
+      "sign": 353
     },
     {
       "time": "Un mes",
-      "value": 329000,
-      "change": 312000,
-      "sign": 312
+      "value": 509000,
+      "change": 314000,
+      "sign": 314
     }
   ],
   "values_chart": {
@@ -1141,6 +1141,10 @@
       {
         "value": 641000,
         "date": "26 nov 2026"
+      },
+      {
+        "value": 823000,
+        "date": "27 nov 2026"
       }
     ],
     "max": {
@@ -1162,12 +1166,12 @@
       "id_away": 1490,
       "date": {
         "ts": 1795809600,
-        "text": "vie 21:00",
-        "format": "EEE H:mm",
+        "text": "Hoy 21:00",
+        "format": "'Hoy' H:mm",
         "splitted": {
-          "date": "vie",
+          "date": "Hoy",
           "time": "21:00",
-          "format": "EEE"
+          "format": "'Hoy'"
         }
       },
       "status": "fixture",
