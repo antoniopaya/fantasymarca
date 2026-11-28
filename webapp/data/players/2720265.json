@@ -3,15 +3,15 @@
     "id": 2720265,
     "name": "Troy Parrott",
     "position": 4,
-    "points": 35,
-    "avg": 3.5,
+    "points": 36,
+    "avg": 3.3,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/2720265.png?version=20260820222948",
     "isFavorite": 0,
-    "value": 11834000,
-    "previousValue": 12044000,
+    "value": 11416000,
+    "previousValue": 11834000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 11834000,
+      "floor": 11416000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 4,
       "shield2WeeksSku": "shield_t4_2w",
       "shield1MonthSku": "shield_t4_1m",
-      "value": 17751000,
+      "value": 17124000,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 11834000,
+      "price": 11416000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 185,
       "weight": null
     },
-    "clausesRanking": 380
+    "clausesRanking": 374
   },
   "id": 2720265,
   "player_extra": {
-    "matches": 10,
+    "matches": 11,
     "goals": 1,
     "cards": 0
   },
@@ -314,12 +314,14 @@
       "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
-        "points": null,
+        "points": 1,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_in"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -711,30 +713,30 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 35,
-      "avg": 3.5,
+      "points": 36,
+      "avg": 3.2727,
       "id_team": 4,
-      "last_gameweek": 13
+      "last_gameweek": 14
     }
   ],
   "values": [
     {
       "time": "Un día",
-      "value": 12044000,
-      "change": -210000,
-      "sign": -210
+      "value": 11834000,
+      "change": -418000,
+      "sign": -418
     },
     {
       "time": "Una semana",
-      "value": 13924000,
-      "change": -2090000,
-      "sign": "-2.090.000"
+      "value": 13764000,
+      "change": -2348000,
+      "sign": "-2.348.000"
     },
     {
       "time": "Un mes",
-      "value": 20348000,
-      "change": -8514000,
-      "sign": "-8.514.000"
+      "value": 20201000,
+      "change": -8785000,
+      "sign": "-8.785.000"
     }
   ],
   "values_chart": {
@@ -1134,6 +1136,10 @@
       {
         "value": 11834000,
         "date": "27 nov 2026"
+      },
+      {
+        "value": 11416000,
+        "date": "28 nov 2026"
       }
     ],
     "max": {
@@ -1141,44 +1147,44 @@
       "date": "16 sept 2026"
     },
     "min": {
-      "value": 11834000,
-      "date": "27 nov 2026"
+      "value": 11416000,
+      "date": "28 nov 2026"
     }
   },
   "next_match": {
     "2720265": {
       "id": 2720265,
       "id_team": 4,
-      "id_match": 38063,
-      "id_gameweek": 4055,
-      "id_home": 4,
-      "id_away": 14,
+      "id_match": 39694,
+      "id_gameweek": 4056,
+      "id_home": 2,
+      "id_away": 4,
       "date": {
-        "ts": 1795870800,
-        "text": "Hoy 14:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1796587200,
+        "text": "6 dic 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "14:00",
-          "format": "'Hoy'"
+          "date": "6 dic",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Rayo Vallecano",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Atlético",
+      "away": "Betis",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "2720265": {
       "id": 2720265,
-      "points": 23,
-      "avg": 4.6
+      "points": 24,
+      "avg": 4
     }
   },
   "away": {

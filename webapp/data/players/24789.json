@@ -3,15 +3,15 @@
     "id": 24789,
     "name": "Nico Williams",
     "position": 4,
-    "points": 60,
-    "avg": 5.5,
+    "points": 70,
+    "avg": 5.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/24789.png?version=20260414174608",
     "isFavorite": 0,
-    "value": 43251000,
-    "previousValue": 42958000,
+    "value": 43393000,
+    "previousValue": 43251000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 43251000,
+      "floor": 43393000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 64876500,
+      "value": 65089500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 43251000,
+      "price": 43393000,
       "loanable": null
     },
     "bid": {
@@ -68,12 +68,12 @@
       "height": 180,
       "weight": null
     },
-    "clausesRanking": 30
+    "clausesRanking": 33
   },
   "id": 24789,
   "player_extra": {
-    "matches": 11,
-    "goals": 2,
+    "matches": 12,
+    "goals": 3,
     "cards": 0
   },
   "points": [
@@ -320,12 +320,15 @@
       "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "goal",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 13,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
@@ -718,9 +721,9 @@
     {
       "season": "26/27",
       "points": 60,
-      "avg": 5.4545,
+      "avg": 5,
       "id_team": 1,
-      "last_gameweek": 13
+      "last_gameweek": 14
     },
     {
       "season": "25/26",
@@ -747,35 +750,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 42958000,
-      "change": 293000,
-      "sign": 293
+      "value": 43251000,
+      "change": 142000,
+      "sign": 142
     },
     {
       "time": "Una semana",
-      "value": 41534000,
-      "change": 1717000,
-      "sign": "+1.717.000"
+      "value": 41646000,
+      "change": 1747000,
+      "sign": "+1.747.000"
     },
     {
       "time": "Un mes",
-      "value": 28680000,
-      "change": 14571000,
-      "sign": "+14.571.000"
+      "value": 29166000,
+      "change": 14227000,
+      "sign": "+14.227.000"
     },
     {
       "time": "Un año",
-      "value": 47137000,
-      "change": -3886000,
-      "sign": "-3.886.000"
+      "value": 47026000,
+      "change": -3633000,
+      "sign": "-3.633.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 47137000,
-        "date": "27 nov 2025"
-      },
       {
         "value": 47026000,
         "date": "28 nov 2025"
@@ -2235,6 +2234,10 @@
       {
         "value": 43251000,
         "date": "27 nov 2026"
+      },
+      {
+        "value": 43393000,
+        "date": "28 nov 2026"
       }
     ],
     "max": {
@@ -2250,28 +2253,28 @@
     "24789": {
       "id": 24789,
       "id_team": 1,
-      "id_match": 38062,
-      "id_gameweek": 4055,
-      "id_home": 13,
-      "id_away": 1,
+      "id_match": 39693,
+      "id_gameweek": 4056,
+      "id_home": 1,
+      "id_away": 15,
       "date": {
-        "ts": 1795878900,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1796570100,
+        "text": "6 dic 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "6 dic",
           "time": "16:15",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Athletic Club",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "home": "Athletic Club",
+      "away": "Real Madrid",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
@@ -2286,7 +2289,7 @@
     "24789": {
       "id": 24789,
       "points": 17,
-      "avg": 4.25
+      "avg": 3.4
     }
   },
   "owners": [],

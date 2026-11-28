@@ -15,7 +15,7 @@
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/48554.png?version=20250707130239",
     "isFavorite": 0,
     "value": 329000,
-    "previousValue": 429000,
+    "previousValue": 329000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -390,8 +390,17 @@
         "isLive": false
       },
       "events": null,
-      "injury": null,
-      "teamPlayed": false,
+      "injury": {
+        "id": 309862,
+        "id_player": 48554,
+        "category": "injury",
+        "description": "Rotura de ligamento cruzado",
+        "duration": "Baja indefinida",
+        "since": "2026-10-16 17:08:07",
+        "until": null,
+        "status": "Lesionado"
+      },
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -799,9 +808,9 @@
   "values": [
     {
       "time": "Un día",
-      "value": 429000,
-      "change": -100000,
-      "sign": -100
+      "value": 329000,
+      "change": 0,
+      "sign": 0
     },
     {
       "time": "Una semana",
@@ -817,17 +826,13 @@
     },
     {
       "time": "Un año",
-      "value": 415000,
-      "change": -86000,
-      "sign": -86
+      "value": 477000,
+      "change": -148000,
+      "sign": -148
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 415000,
-        "date": "27 nov 2025"
-      },
       {
         "value": 477000,
         "date": "28 nov 2025"
@@ -2255,6 +2260,10 @@
       {
         "value": 329000,
         "date": "27 nov 2026"
+      },
+      {
+        "value": 329000,
+        "date": "28 nov 2026"
       }
     ],
     "max": {
@@ -2270,28 +2279,28 @@
     "48554": {
       "id": 48554,
       "id_team": 14,
-      "id_match": 38063,
-      "id_gameweek": 4055,
-      "id_home": 4,
-      "id_away": 14,
+      "id_match": 39699,
+      "id_gameweek": 4056,
+      "id_home": 14,
+      "id_away": 12,
       "date": {
-        "ts": 1795870800,
-        "text": "Hoy 14:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1796483700,
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "14:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "16:15",
+          "format": "EEE"
         }
       },
       "status": "fixture",
       "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Rayo Vallecano",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Levante",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
   "starter": false,

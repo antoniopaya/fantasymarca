@@ -3,15 +3,15 @@
     "id": 340,
     "name": "Isco",
     "position": 3,
-    "points": 83,
-    "avg": 6.9,
+    "points": 88,
+    "avg": 6.8,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/340.png?version=20251003194510",
     "isFavorite": 0,
-    "value": 64132000,
-    "previousValue": 63917000,
+    "value": 64027000,
+    "previousValue": 64132000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 64132000,
+      "floor": 64027000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 96198000,
+      "value": 96040500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 64132000,
+      "price": 64027000,
       "loanable": null
     },
     "bid": {
@@ -68,13 +68,13 @@
       "height": 176,
       "weight": 74
     },
-    "clausesRanking": 9
+    "clausesRanking": 7
   },
   "id": 340,
   "player_extra": {
-    "matches": 12,
+    "matches": 13,
     "goals": 2,
-    "cards": 0
+    "cards": 1
   },
   "points": [
     {
@@ -319,12 +319,14 @@
       "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
-        "points": null,
+        "points": 5,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "yellow"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -716,10 +718,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 83,
-      "avg": 6.9167,
+      "points": 88,
+      "avg": 6.7692,
       "id_team": 4,
-      "last_gameweek": 13
+      "last_gameweek": 14
     },
     {
       "season": "25/26",
@@ -746,35 +748,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 63917000,
-      "change": 215000,
-      "sign": 215
+      "value": 64132000,
+      "change": -105000,
+      "sign": -105
     },
     {
       "time": "Una semana",
-      "value": 62711000,
-      "change": 1421000,
-      "sign": "+1.421.000"
+      "value": 62903000,
+      "change": 1124000,
+      "sign": "+1.124.000"
     },
     {
       "time": "Un mes",
-      "value": 53399000,
-      "change": 10733000,
-      "sign": "+10.733.000"
+      "value": 53891000,
+      "change": 10136000,
+      "sign": "+10.136.000"
     },
     {
       "time": "Un año",
-      "value": 41971000,
-      "change": 22161000,
-      "sign": "+22.161.000"
+      "value": 42335000,
+      "change": 21692000,
+      "sign": "+21.692.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 41971000,
-        "date": "27 nov 2025"
-      },
       {
         "value": 42335000,
         "date": "28 nov 2025"
@@ -2234,6 +2232,10 @@
       {
         "value": 64132000,
         "date": "27 nov 2026"
+      },
+      {
+        "value": 64027000,
+        "date": "28 nov 2026"
       }
     ],
     "max": {
@@ -2249,36 +2251,36 @@
     "340": {
       "id": 340,
       "id_team": 4,
-      "id_match": 38063,
-      "id_gameweek": 4055,
-      "id_home": 4,
-      "id_away": 14,
+      "id_match": 39694,
+      "id_gameweek": 4056,
+      "id_home": 2,
+      "id_away": 4,
       "date": {
-        "ts": 1795870800,
-        "text": "Hoy 14:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1796587200,
+        "text": "6 dic 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "14:00",
-          "format": "'Hoy'"
+          "date": "6 dic",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Rayo Vallecano",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Atlético",
+      "away": "Betis",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "340": {
       "id": 340,
-      "points": 46,
-      "avg": 9.2
+      "points": 51,
+      "avg": 8.5
     }
   },
   "away": {

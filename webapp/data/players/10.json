@@ -3,15 +3,15 @@
     "id": 10,
     "name": "Aymeric Laporte",
     "position": 2,
-    "points": 47,
-    "avg": 4.3,
+    "points": 49,
+    "avg": 4.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/10.png?version=20250912080149",
     "isFavorite": 0,
-    "value": 27230000,
-    "previousValue": 27116000,
+    "value": 27253000,
+    "previousValue": 27230000,
     "videoFrame": null,
     "team": {
       "id": 1,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 27230000,
+      "floor": 27253000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 40845000,
+      "value": 40879500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 27230000,
+      "price": 27253000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 191,
       "weight": 86
     },
-    "clausesRanking": 228
+    "clausesRanking": 254
   },
   "id": 10,
   "player_extra": {
-    "matches": 11,
+    "matches": 12,
     "goals": 0,
     "cards": 2
   },
@@ -309,12 +309,12 @@
       "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
-        "points": null,
+        "points": 0,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 13,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version="
     },
@@ -707,9 +707,9 @@
     {
       "season": "26/27",
       "points": 47,
-      "avg": 4.2727,
+      "avg": 3.9167,
       "id_team": 1,
-      "last_gameweek": 13
+      "last_gameweek": 14
     },
     {
       "season": "25/26",
@@ -722,35 +722,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 27116000,
-      "change": 114000,
-      "sign": 114
+      "value": 27230000,
+      "change": 23000,
+      "sign": 23
     },
     {
       "time": "Una semana",
-      "value": 26641000,
-      "change": 589000,
-      "sign": 589
+      "value": 26660000,
+      "change": 593000,
+      "sign": 593
     },
     {
       "time": "Un mes",
-      "value": 32077000,
-      "change": -4847000,
-      "sign": "-4.847.000"
+      "value": 31817000,
+      "change": -4564000,
+      "sign": "-4.564.000"
     },
     {
       "time": "Un año",
-      "value": 34494000,
-      "change": -7264000,
-      "sign": "-7.264.000"
+      "value": 34859000,
+      "change": -7606000,
+      "sign": "-7.606.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 34494000,
-        "date": "27 nov 2025"
-      },
       {
         "value": 34859000,
         "date": "28 nov 2025"
@@ -2210,6 +2206,10 @@
       {
         "value": 27230000,
         "date": "27 nov 2026"
+      },
+      {
+        "value": 27253000,
+        "date": "28 nov 2026"
       }
     ],
     "max": {
@@ -2225,28 +2225,28 @@
     "10": {
       "id": 10,
       "id_team": 1,
-      "id_match": 38062,
-      "id_gameweek": 4055,
-      "id_home": 13,
-      "id_away": 1,
+      "id_match": 39693,
+      "id_gameweek": 4056,
+      "id_home": 1,
+      "id_away": 15,
       "date": {
-        "ts": 1795878900,
-        "text": "Hoy 16:15",
-        "format": "'Hoy' H:mm",
+        "ts": 1796570100,
+        "text": "6 dic 16:15",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
+          "date": "6 dic",
           "time": "16:15",
-          "format": "'Hoy'"
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Málaga",
-      "away": "Athletic Club",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/13.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version="
+      "home": "Athletic Club",
+      "away": "Real Madrid",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/1.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/15.png?version="
     }
   },
   "starter": false,
@@ -2261,7 +2261,7 @@
     "10": {
       "id": 10,
       "points": 18,
-      "avg": 3.6
+      "avg": 3
     }
   },
   "owners": [],

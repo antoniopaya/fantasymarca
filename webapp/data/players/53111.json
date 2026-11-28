@@ -3,15 +3,15 @@
     "id": 53111,
     "name": "Álvaro Valles",
     "position": 1,
-    "points": 96,
-    "avg": 7.4,
+    "points": 100,
+    "avg": 7.1,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/53111.png?version=20251003194305",
     "isFavorite": 0,
-    "value": 47723000,
-    "previousValue": 47597000,
+    "value": 47701000,
+    "previousValue": 47723000,
     "videoFrame": null,
     "team": {
       "id": 4,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 47723000,
+      "floor": 47701000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 5,
       "shield2WeeksSku": "shield_t5_2w",
       "shield1MonthSku": "shield_t5_1m",
-      "value": 71584500,
+      "value": 71551500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 47723000,
+      "price": 47701000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 192,
       "weight": null
     },
-    "clausesRanking": 123
+    "clausesRanking": 119
   },
   "id": 53111,
   "player_extra": {
-    "matches": 13,
+    "matches": 14,
     "goals": 0,
     "cards": 0
   },
@@ -294,12 +294,12 @@
       "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
-        "points": null,
+        "points": 4,
         "isLive": false
       },
       "events": null,
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 14,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
     },
@@ -691,10 +691,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 96,
-      "avg": 7.3846,
+      "points": 100,
+      "avg": 7.1429,
       "id_team": 4,
-      "last_gameweek": 13
+      "last_gameweek": 14
     },
     {
       "season": "25/26",
@@ -714,35 +714,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 47597000,
-      "change": 126000,
-      "sign": 126
+      "value": 47723000,
+      "change": -22000,
+      "sign": -22
     },
     {
       "time": "Una semana",
-      "value": 47994000,
-      "change": -271000,
-      "sign": -271
+      "value": 47927000,
+      "change": -226000,
+      "sign": -226
     },
     {
       "time": "Un mes",
-      "value": 44190000,
-      "change": 3533000,
-      "sign": "+3.533.000"
+      "value": 44436000,
+      "change": 3265000,
+      "sign": "+3.265.000"
     },
     {
       "time": "Un año",
-      "value": 9370000,
-      "change": 38353000,
-      "sign": "+38.353.000"
+      "value": 9714000,
+      "change": 37987000,
+      "sign": "+37.987.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 9370000,
-        "date": "27 nov 2025"
-      },
       {
         "value": 9714000,
         "date": "28 nov 2025"
@@ -2202,6 +2198,10 @@
       {
         "value": 47723000,
         "date": "27 nov 2026"
+      },
+      {
+        "value": 47701000,
+        "date": "28 nov 2026"
       }
     ],
     "max": {
@@ -2209,44 +2209,44 @@
       "date": "18 nov 2026"
     },
     "min": {
-      "value": 9370000,
-      "date": "27 nov 2025"
+      "value": 9714000,
+      "date": "28 nov 2025"
     }
   },
   "next_match": {
     "53111": {
       "id": 53111,
       "id_team": 4,
-      "id_match": 38063,
-      "id_gameweek": 4055,
-      "id_home": 4,
-      "id_away": 14,
+      "id_match": 39694,
+      "id_gameweek": 4056,
+      "id_home": 2,
+      "id_away": 4,
       "date": {
-        "ts": 1795870800,
-        "text": "Hoy 14:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1796587200,
+        "text": "6 dic 21:00",
+        "format": "d MMM H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "14:00",
-          "format": "'Hoy'"
+          "date": "6 dic",
+          "time": "21:00",
+          "format": "d MMM"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Rayo Vallecano",
-      "place": "En casa",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Atlético",
+      "away": "Betis",
+      "place": "Fuera",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/2.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     }
   },
   "starter": false,
   "home": {
     "53111": {
       "id": 53111,
-      "points": 46,
-      "avg": 7.6667
+      "points": 50,
+      "avg": 7.1429
     }
   },
   "away": {

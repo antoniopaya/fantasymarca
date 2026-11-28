@@ -3,15 +3,15 @@
     "id": 27517,
     "name": "Isi Palazón",
     "position": 3,
-    "points": 18,
-    "avg": 2.6,
+    "points": 32,
+    "avg": 4,
     "status": null,
     "id_competition": 1,
     "injury": [],
     "photoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/players/27517.png?version=20251004225449",
     "isFavorite": 0,
-    "value": 9541000,
-    "previousValue": 9391000,
+    "value": 9681000,
+    "previousValue": 9541000,
     "videoFrame": null,
     "team": {
       "id": 14,
@@ -34,20 +34,20 @@
       "price": null
     },
     "clause": {
-      "floor": 9541000,
+      "floor": 9681000,
       "multiplier": 1.5,
       "default": 0,
       "shield": 0,
       "tier": 3,
       "shield2WeeksSku": "shield_t3_2w",
       "shield1MonthSku": "shield_t3_1m",
-      "value": 14311500,
+      "value": 14521500,
       "percentage": 50
     },
     "market": {
       "id": null,
       "isPublic": null,
-      "price": 9541000,
+      "price": 9681000,
       "loanable": null
     },
     "bid": {
@@ -68,11 +68,11 @@
       "height": 169,
       "weight": 71
     },
-    "clausesRanking": 173
+    "clausesRanking": 147
   },
   "id": 27517,
   "player_extra": {
-    "matches": 7,
+    "matches": 8,
     "goals": 0,
     "cards": 0
   },
@@ -342,12 +342,15 @@
       "startDate": "2026-11-27 21:00:00",
       "endDate": "2026-11-30 21:00:00",
       "points": {
-        "points": null,
+        "points": 14,
         "isLive": false
       },
-      "events": null,
+      "events": [
+        "sub_out",
+        "assist"
+      ],
       "injury": null,
-      "teamPlayed": false,
+      "teamPlayed": true,
       "rivalId": 4,
       "rivalLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version="
     },
@@ -739,10 +742,10 @@
   "points_history": [
     {
       "season": "26/27",
-      "points": 18,
-      "avg": 2.5714,
+      "points": 32,
+      "avg": 4,
       "id_team": 14,
-      "last_gameweek": 13
+      "last_gameweek": 14
     },
     {
       "season": "25/26",
@@ -769,35 +772,31 @@
   "values": [
     {
       "time": "Un día",
-      "value": 9391000,
-      "change": 150000,
-      "sign": 150
+      "value": 9541000,
+      "change": 140000,
+      "sign": 140
     },
     {
       "time": "Una semana",
-      "value": 9828000,
-      "change": -287000,
-      "sign": -287
+      "value": 9619000,
+      "change": 62000,
+      "sign": 62
     },
     {
       "time": "Un mes",
-      "value": 18361000,
-      "change": -8820000,
-      "sign": "-8.820.000"
+      "value": 17749000,
+      "change": -8068000,
+      "sign": "-8.068.000"
     },
     {
       "time": "Un año",
-      "value": 21980000,
-      "change": -12439000,
-      "sign": "-12.439.000"
+      "value": 21617000,
+      "change": -11936000,
+      "sign": "-11.936.000"
     }
   ],
   "values_chart": {
     "points": [
-      {
-        "value": 21980000,
-        "date": "27 nov 2025"
-      },
       {
         "value": 21617000,
         "date": "28 nov 2025"
@@ -2257,6 +2256,10 @@
       {
         "value": 9541000,
         "date": "27 nov 2026"
+      },
+      {
+        "value": 9681000,
+        "date": "28 nov 2026"
       }
     ],
     "max": {
@@ -2272,28 +2275,28 @@
     "27517": {
       "id": 27517,
       "id_team": 14,
-      "id_match": 38063,
-      "id_gameweek": 4055,
-      "id_home": 4,
-      "id_away": 14,
+      "id_match": 39699,
+      "id_gameweek": 4056,
+      "id_home": 14,
+      "id_away": 12,
       "date": {
-        "ts": 1795870800,
-        "text": "Hoy 14:00",
-        "format": "'Hoy' H:mm",
+        "ts": 1796483700,
+        "text": "sáb 16:15",
+        "format": "EEE H:mm",
         "splitted": {
-          "date": "Hoy",
-          "time": "14:00",
-          "format": "'Hoy'"
+          "date": "sáb",
+          "time": "16:15",
+          "format": "EEE"
         }
       },
       "status": "fixture",
-      "confirmed": 0,
+      "confirmed": null,
       "minute": null,
-      "home": "Betis",
-      "away": "Rayo Vallecano",
-      "place": "Fuera",
-      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/4.png?version=",
-      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version="
+      "home": "Rayo Vallecano",
+      "away": "Levante",
+      "place": "En casa",
+      "homeLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/14.png?version=",
+      "awayLogoUrl": "https://cdn-fantasy.marca.com/file/cdn-common/teams/12.png?version="
     }
   },
   "starter": false,
@@ -2307,8 +2310,8 @@
   "away": {
     "27517": {
       "id": 27517,
-      "points": 9,
-      "avg": 3
+      "points": 23,
+      "avg": 5.75
     }
   },
   "owners": [],
